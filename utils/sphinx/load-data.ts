@@ -7,17 +7,10 @@ import {
   questionBytesLength,
 } from "./form-utils.ts";
 import { loadSphinxForm } from "./load-form.ts";
-import {
-  getOptionSet,
-  getOptionValue,
-  isOptionsScalar,
-} from "./options-set.ts";
-import { readYamlFile } from "../yaml.ts";
 
 const closedQuestionValue = (
   question: SphinxQuestion,
   rawValue: Uint8Array,
-  optionsSet?: SphinxOptionsSet,
 ) => {
   if (question.type === "code") {
     return new TextDecoder("ascii").decode(rawValue).replace(/\0/g, "") ||
@@ -33,10 +26,7 @@ const closedQuestionValue = (
       );
     }
   }
-  if (question.type === "open") {
-    // TODO not in here. Do nothing in this function
-    return undefined;
-  }
+  if (question.type === "open") return;
   if (question.type === "date") {
     // TODO
     // console.log(dataView, new Date(dataView.getInt32(4)));
@@ -44,41 +34,22 @@ const closedQuestionValue = (
   }
   if (question.type === "options") {
     const index = dataView.getInt8(0);
-    const value = question.options[index - 1];
-    if (optionsSet) {
-      const options = getOptionSet(optionsSet, question.options);
-      if (options) {
-        return getOptionValue(options, value);
-      }
-    }
-    return value;
+    return question.options[index - 1];
   }
-  if (question.type === "multipleOptions") {
-    // TODO
-    console.warn(`closedQuestionValue: multipleOptions is not implemented`);
-    return undefined;
-  }
+  // if (question.type === "multipleOptions") {
+  //   // TODO
+  //   return undefined;
+  // }
   console.warn(`closedQuestionValue: ${question.type} is not implemented`);
   return undefined;
 };
 
-export const loadSphinxData = async (
+export async function* loadRawSphinxData(
   form: SphinxForm | string,
   repPath: string,
   ouvPath: string,
-  options?: SphinxOptionsSet | string,
-): Promise<void> => {
-  if (typeof form === "string") {
-    return await loadSphinxData(
-      await loadSphinxForm(form),
-      repPath,
-      ouvPath,
-      options,
-    );
-  }
-  if (typeof options === "string") {
-    options = await readYamlFile<SphinxOptionsSet>(options);
-  }
+) {
+  if (typeof form === "string") form = await loadSphinxForm(form);
   console.log("Record bytes length:", recordBytesLength(form));
 
   const rep = await Deno.open(repPath);
@@ -101,11 +72,12 @@ export const loadSphinxData = async (
       await rep.read(rawResponse);
       record[question.variable] = question.type === "open"
         ? openValues[openValueIndex++]
-        : closedQuestionValue(question, rawResponse, options);
+        : closedQuestionValue(question, rawResponse);
     }
-    console.log(record);
+    // console.log(record);
+    yield record;
     ++cursor;
   }
   rep.close();
   ouv.close();
-};
+}
