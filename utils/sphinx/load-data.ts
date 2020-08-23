@@ -7,10 +7,16 @@ import {
   questionBytesLength,
 } from "./form-utils.ts";
 import { loadSphinxForm } from "./load-form.ts";
+import {
+  getOptionSet,
+  getOptionValue,
+} from "./options-set.ts";
+import { readYamlFile } from "../yaml.ts";
 
 const closedQuestionValue = (
   question: SphinxQuestion,
   rawValue: Uint8Array,
+  optionsSet?: SphinxOptionsSet,
 ) => {
   if (question.type === "code") {
     return new TextDecoder("ascii").decode(rawValue).replace(/\0/g, "") ||
@@ -34,7 +40,14 @@ const closedQuestionValue = (
   }
   if (question.type === "options") {
     const index = dataView.getInt8(0);
-    return question.options[index - 1];
+    const value = question.options[index - 1];
+    if (optionsSet) {
+      const options = getOptionSet(optionsSet, question.options);
+      if (options) {
+        return getOptionValue(options, value);
+      }
+    }
+    return value;
   }
   // if (question.type === "multipleOptions") {
   //   // TODO
@@ -44,12 +57,17 @@ const closedQuestionValue = (
   return undefined;
 };
 
-export async function* loadRawSphinxData(
+export async function* loadSphinxData(
   form: SphinxForm | string,
   repPath: string,
   ouvPath: string,
+  options?: SphinxOptionsSet | string,
 ) {
   if (typeof form === "string") form = await loadSphinxForm(form);
+  if (typeof options === "string") {
+    options = await readYamlFile<SphinxOptionsSet>(options);
+  }
+
   console.log("Record bytes length:", recordBytesLength(form));
 
   const rep = await Deno.open(repPath);
@@ -72,7 +90,7 @@ export async function* loadRawSphinxData(
       await rep.read(rawResponse);
       record[question.variable] = question.type === "open"
         ? openValues[openValueIndex++]
-        : closedQuestionValue(question, rawResponse);
+        : closedQuestionValue(question, rawResponse, options);
     }
     // console.log(record);
     yield record;
