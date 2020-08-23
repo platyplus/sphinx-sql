@@ -14,7 +14,7 @@ questions:
   - label: MDM location
     variable: MDMlocation
     type: code
-    codesFile: Sys/Dic_Lists/LIST_A1_MDMlocation.dic
+    codesFile: LIST_A1_MDMlocation.dic
     nbCharCode: 25
     plan: true
     attributes: 33056
@@ -164,7 +164,7 @@ questions:
   - label: A07. Patient target
     variable: A07_PatientTarget
     type: code
-    codesFile: Sys/Dic_Lists/LIST_A3_Target.dic
+    codesFile: LIST_A3_Target.dic
     nbCharCode: 25
     plan: true
     attributes: 33057
@@ -218,7 +218,7 @@ questions:
   - label: A10. Address (Township)
     variable: A10_AddressTownship
     type: code
-    codesFile: Sys/Dic_Lists/LIST_A5_Township.dic
+    codesFile: LIST_A5_Township.dic
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.

@@ -76,7 +76,10 @@ const valueTransformers: Record<string, (value: string) => any> = {
   controls: zeroOneToBoolean,
   plan: zeroOneToBoolean, // ? Not sure of it
   isNumber: zeroOneToBoolean,
-  codesFile: (value) => value.replaceAll("\\", "/"),
+  codesFile: (value) =>
+    value.substring(
+      value.lastIndexOf("\\") + 1,
+    ),
   type: (type) => {
     if (type === "0") return "label";
     if (type === "1") return "options";

@@ -93,9 +93,7 @@ questions:
   - label: A07. Patient target
     variable: A07_PatientTarget
     type: code
-    codesFile: >-
-      D:/2012 Data/Error for ADH in MGG/24.5.12 ART
-      ADH/Sys/Dic_Lists/LIST_A3_Target.dic
+    codesFile: LIST_A3_Target.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -200,7 +198,7 @@ questions:
   - label: Counselor
     variable: ADH_Counselor
     type: code
-    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/LIST_A2_MDMstaff.dic'
+    codesFile: LIST_A2_MDMstaff.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -209,7 +207,7 @@ questions:
   - label: Marital Status
     variable: A07a_MaritalStatus
     type: code
-    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/LIST_A4_MaritalStatus.dic'
+    codesFile: LIST_A4_MaritalStatus.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -1146,7 +1144,7 @@ questions:
   - label: Way of use
     variable: ADH_AlcoholWayOfUse
     type: code
-    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/WayOfUse.dic'
+    codesFile: WayOfUse.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -1183,7 +1181,7 @@ questions:
   - label: Way of use
     variable: ADH_AmpheatamineWayOfUse
     type: code
-    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/WayOfUse.dic'
+    codesFile: WayOfUse.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -1220,7 +1218,7 @@ questions:
   - label: Way of use
     variable: ADH_DiazepineWayOfUse
     type: code
-    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/WayOfUse.dic'
+    codesFile: WayOfUse.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -1257,7 +1255,7 @@ questions:
   - label: Way of use
     variable: ADH_CannabisWayOfUse
     type: code
-    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/WayOfUse.dic'
+    codesFile: WayOfUse.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -1294,7 +1292,7 @@ questions:
   - label: Way of use
     variable: ADH_EsctasyWayOfUse
     type: code
-    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/WayOfUse.dic'
+    codesFile: WayOfUse.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -1331,7 +1329,7 @@ questions:
   - label: Way of use
     variable: ADH_HerionWayOfUse
     type: code
-    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/WayOfUse.dic'
+    codesFile: WayOfUse.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -1368,7 +1366,7 @@ questions:
   - label: Way of use
     variable: ADH_OpiumWayOfUse
     type: code
-    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/WayOfUse.dic'
+    codesFile: WayOfUse.dic
     nbCharCode: 25
     plan: true
     attributes: 32

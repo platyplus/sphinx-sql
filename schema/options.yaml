@@ -19,9 +19,6 @@
 '5':
   - With Family
   - With Friends
-'6':
-  - 'Yes'
-  - 'No'
 '7':
   - OK
   - Difficult
@@ -163,9 +160,6 @@
   - To change treatment plan
   - To continue current treatment
   - To stop treatment
-'38':
-  - Accept
-  - Refused
 '39':
   - Positive
   - Negative
@@ -181,7 +175,13 @@
   - 3 mths
   - 6 mths
   - Other
-'41':
+yesNoQuestion:
+  - 'Yes'
+  - 'No'
+acceptQuestion:
+  - Accept
+  - Refused
+hivStatus:
   - HIV Positive
   - HIV Negative
   - Inconclusive

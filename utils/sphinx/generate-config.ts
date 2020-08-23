@@ -12,6 +12,7 @@ export const generateConfig = async (
   sphinxPath: string,
 ) => {
   let optionSets: Record<string, string[]> = {};
+  const codes: string[] = [];
 
   console.log("[*] Generating table files...");
   const tablesPath = path.join(yamlPath, "tables");
@@ -25,10 +26,17 @@ export const generateConfig = async (
       const oldFile = await readYamlFile<SphinxQuestions>(yamlFile);
       form = merge(oldFile, form);
     }
-    form.questions.forEach((question) =>
-      (question.type === "options") &&
-      addOptionSet(optionSets, question.options)
-    );
+    form.questions.forEach((question) => {
+      if (question.type === "options") {
+        addOptionSet(optionSets, question.options);
+      }
+      if (
+        question.type === "code" && question.codesFile &&
+        !codes.includes(question.codesFile)
+      ) {
+        codes.push(question.codesFile);
+      }
+    });
     await writeYamlFile(yamlFile, form);
   }
 
@@ -42,6 +50,10 @@ export const generateConfig = async (
     optionSets = previousSet;
   }
   await writeYamlFile(optionsFile, optionSets);
+
+  console.log("[*] Generating codes file...");
+  // TODO
+  console.log(codes);
 
   console.log("[*] Config generated.");
 };

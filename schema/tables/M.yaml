@@ -93,7 +93,7 @@ questions:
   - label: A07. Patient target
     variable: A07_PatientTarget
     type: code
-    codesFile: Sys/Dic_Lists/LIST_A3_Target.dic
+    codesFile: LIST_A3_Target.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -135,7 +135,7 @@ questions:
   - label: Marital Status
     variable: A07a_MaritalStatus
     type: code
-    codesFile: Sys/Dic_Lists/LIST_A4_MaritalStatus.dic
+    codesFile: LIST_A4_MaritalStatus.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -144,7 +144,7 @@ questions:
   - label: Current work place
     variable: B04_CurrentWorkPlace
     type: code
-    codesFile: Sys/Dic_Lists/LIST_A7_WorkPlace.dic
+    codesFile: LIST_A7_WorkPlace.dic
     nbCharCode: 25
     plan: true
     attributes: 32

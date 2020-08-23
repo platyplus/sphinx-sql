@@ -62,7 +62,7 @@ questions:
   - label: A07. Patient target
     variable: A07_PatientTarget
     type: code
-    codesFile: Sys/Dic_Lists/LIST_A3_Target.dic
+    codesFile: LIST_A3_Target.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -127,7 +127,7 @@ questions:
   - label: MDM staff
     variable: GHC_MDMstaff
     type: code
-    codesFile: Sys/Dic_Lists/LIST_A2_MDMstaff.dic
+    codesFile: LIST_A2_MDMstaff.dic
     nbCharCode: 25
     plan: true
     attributes: 33
@@ -757,7 +757,7 @@ questions:
   - label: Category
     variable: GHC_Category1
     type: code
-    codesFile: Sys/Dic_Lists/LIST_I011_Diagnosis.dic
+    codesFile: LIST_I011_Diagnosis.dic
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -782,7 +782,7 @@ questions:
   - label: Category
     variable: GHC_Category2
     type: code
-    codesFile: Sys/Dic_Lists/LIST_I011_Diagnosis.dic
+    codesFile: LIST_I011_Diagnosis.dic
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -807,7 +807,7 @@ questions:
   - label: Category
     variable: GHC_Category3
     type: code
-    codesFile: Sys/Dic_Lists/LIST_I011_Diagnosis.dic
+    codesFile: LIST_I011_Diagnosis.dic
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -832,7 +832,7 @@ questions:
   - label: Category
     variable: GHC_Category4
     type: code
-    codesFile: Sys/Dic_Lists/LIST_I011_Diagnosis.dic
+    codesFile: LIST_I011_Diagnosis.dic
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -885,7 +885,7 @@ questions:
   - label: Medicine name
     variable: GHC_MedicineName1
     type: code
-    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -930,7 +930,7 @@ questions:
   - label: Medicine name
     variable: GHC_MedicineName2
     type: code
-    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -975,7 +975,7 @@ questions:
   - label: Medicine name
     variable: GHC_MedicineName3
     type: code
-    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -1020,7 +1020,7 @@ questions:
   - label: Medicine name
     variable: GHC_MedicineName4
     type: code
-    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -1065,7 +1065,7 @@ questions:
   - label: Medicine name
     variable: GHC_MedicineName5
     type: code
-    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -1110,7 +1110,7 @@ questions:
   - label: Medicine name
     variable: GHC_MedicineName6
     type: code
-    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -1155,7 +1155,7 @@ questions:
   - label: Medicine name
     variable: GHC_MedicineName7
     type: code
-    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -1200,7 +1200,7 @@ questions:
   - label: Medicine name
     variable: GHC_MedicineName8
     type: code
-    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -1245,7 +1245,7 @@ questions:
   - label: Medicine name
     variable: GHC_MedicineName9
     type: code
-    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -1290,7 +1290,7 @@ questions:
   - label: Medicine name
     variable: GHC_MedicineName10
     type: code
-    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     plan: true
     attributes: 32

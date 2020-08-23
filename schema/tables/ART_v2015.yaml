@@ -109,7 +109,7 @@ questions:
   - label: MDM staff
     variable: ART_MDMstaff
     type: code
-    codesFile: Sys/Dic_Lists/LIST_A2_MDMstaff.dic
+    codesFile: LIST_A2_MDMstaff.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -275,10 +275,7 @@ questions:
   - label: Medicine taken
     variable: ART_AntiRetro_MedicineTaken1
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/ARV
-      Medicine_v2014.dic
+    codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -289,10 +286,7 @@ questions:
   - label: Medicine taken
     variable: ART_AntiRetro_MedicineTaken2
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/ARV
-      Medicine_v2014.dic
+    codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -303,10 +297,7 @@ questions:
   - label: Medicine taken
     variable: ART_AntiRetro_MedicineTaken3
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/ARV
-      Medicine_v2014.dic
+    codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -317,10 +308,7 @@ questions:
   - label: Medicine taken
     variable: ART_AntiRetro_MedicineTaken4
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/ARV
-      Medicine_v2014.dic
+    codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -331,10 +319,7 @@ questions:
   - label: MedicineTaken
     variable: ART_AntiRetro_MedicineTaken5
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/ARV
-      Medicine_v2014.dic
+    codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -345,9 +330,7 @@ questions:
   - label: Medicine code
     variable: ART_AntiBio_MedicineCode1
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -358,9 +341,7 @@ questions:
   - label: Medicine code
     variable: ART_AntiBio_MedicineCode2
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -371,9 +352,7 @@ questions:
   - label: Medicine code
     variable: ART_AntiBio_MedicineCode3
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -384,9 +363,7 @@ questions:
   - label: Medicine code
     variable: ART_AntiBio_MedicineCode4
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -397,9 +374,7 @@ questions:
   - label: Medicine code
     variable: ART_AntiBio_MedicineCode5
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -410,9 +385,7 @@ questions:
   - label: Medicine code
     variable: ART_AntiTB_MedicineCode1
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Medicines_List.txt
+    codesFile: TB_Medicines_List.txt
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -423,9 +396,7 @@ questions:
   - label: Medicine code
     variable: ART_AntiTB_MedicineCode2
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Medicines_List.txt
+    codesFile: TB_Medicines_List.txt
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -436,9 +407,7 @@ questions:
   - label: Medicine code
     variable: ART_AntiTB_MedicineCode3
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Medicines_List.txt
+    codesFile: TB_Medicines_List.txt
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -449,9 +418,7 @@ questions:
   - label: MedicineCode8
     variable: ART_AntiTB_MedicineCode4
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Medicines_List.txt
+    codesFile: TB_Medicines_List.txt
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -462,9 +429,7 @@ questions:
   - label: MedicineCode9
     variable: ART_AntiTB_MedicineCode5
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Medicines_List.txt
+    codesFile: TB_Medicines_List.txt
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -512,10 +477,7 @@ questions:
   - label: Medicine taken
     variable: ART_MedicineTaken1
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/ARV
-      Medicine_v2014.dic
+    codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -566,10 +528,7 @@ questions:
   - label: Medicine taken
     variable: ART_MedicineTaken2
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/ARV
-      Medicine_v2014.dic
+    codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -620,10 +579,7 @@ questions:
   - label: Medicine taken
     variable: ART_MedicineTaken3
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/ARV
-      Medicine_v2014.dic
+    codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -674,10 +630,7 @@ questions:
   - label: Medicine taken
     variable: ART_MedicineTaken4
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/ARV
-      Medicine_v2014.dic
+    codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -730,10 +683,7 @@ questions:
   - label: MedicineTaken
     variable: ART_MedicineTaken5
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/ARV
-      Medicine_v2014.dic
+    codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -2063,7 +2013,7 @@ questions:
   - label: Diagnosis Code
     variable: ART_GHC_DiaCode1
     type: code
-    codesFile: 'C:/Users/PDA/Desktop/New folder (3)/Sys/Dic_Lists/LIST_I011_Diagnosis.dic'
+    codesFile: LIST_I011_Diagnosis.dic
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -2085,7 +2035,7 @@ questions:
   - label: Diagnosis Code
     variable: ART_GHC_DiaCode2
     type: code
-    codesFile: 'C:/Users/PDA/Desktop/New folder (3)/Sys/Dic_Lists/LIST_I011_Diagnosis.dic'
+    codesFile: LIST_I011_Diagnosis.dic
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -2107,7 +2057,7 @@ questions:
   - label: Diagnosis Code
     variable: ART_GHC_DiaCode3
     type: code
-    codesFile: 'C:/Users/PDA/Desktop/New folder (3)/Sys/Dic_Lists/LIST_I011_Diagnosis.dic'
+    codesFile: LIST_I011_Diagnosis.dic
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -2129,7 +2079,7 @@ questions:
   - label: Diagnosis Code
     variable: ART_GHC_DiaCode4
     type: code
-    codesFile: 'C:/Users/PDA/Desktop/New folder (3)/Sys/Dic_Lists/LIST_I011_Diagnosis.dic'
+    codesFile: LIST_I011_Diagnosis.dic
     nbCharCode: 25
     format: '######'
     instructions: The code has 6 characters.
@@ -2296,9 +2246,7 @@ questions:
   - label: Smear
     variable: TB_Sputum_Smear
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Sample_Result.dic
+    codesFile: TB_Sample_Result.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2307,9 +2255,7 @@ questions:
   - label: Xpert
     variable: TB_Sputum_Xpert
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Sample_Result.dic
+    codesFile: TB_Sample_Result.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2318,9 +2264,7 @@ questions:
   - label: Culture
     variable: TB_Sputum_Culture
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Sample_Result.dic
+    codesFile: TB_Sample_Result.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2329,9 +2273,7 @@ questions:
   - label: H
     variable: TB_Sputum_H
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    codesFile: HRSE.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2340,9 +2282,7 @@ questions:
   - label: R
     variable: TB_Sputum_R
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    codesFile: HRSE.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2351,9 +2291,7 @@ questions:
   - label: S
     variable: TB_Sputum_S
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    codesFile: HRSE.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2362,9 +2300,7 @@ questions:
   - label: E
     variable: TB_Sputum_E
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    codesFile: HRSE.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2391,10 +2327,7 @@ questions:
   - label: Other Sample 1
     variable: TB_OtherSample1
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/AFB CNS
-      Test.dic
+    codesFile: AFB CNS Test.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2403,9 +2336,7 @@ questions:
   - label: Smear
     variable: TB_OtherSample1_Smear
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Sample_Result.dic
+    codesFile: TB_Sample_Result.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2414,9 +2345,7 @@ questions:
   - label: Xpert
     variable: TB_OtherSample1_Xpert
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Sample_Result.dic
+    codesFile: TB_Sample_Result.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2425,9 +2354,7 @@ questions:
   - label: Culture
     variable: TB_OtherSample1_Culture
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Sample_Result.dic
+    codesFile: TB_Sample_Result.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2436,9 +2363,7 @@ questions:
   - label: H
     variable: TB_OtherSample1_H
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    codesFile: HRSE.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2447,9 +2372,7 @@ questions:
   - label: R
     variable: TB_OtherSample1_R
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    codesFile: HRSE.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2458,9 +2381,7 @@ questions:
   - label: S
     variable: TB_OtherSample1_S
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    codesFile: HRSE.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2469,9 +2390,7 @@ questions:
   - label: E
     variable: TB_OtherSample1_E
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    codesFile: HRSE.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2498,10 +2417,7 @@ questions:
   - label: Other Sample 2
     variable: TB_OtherSample2
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/AFB CNS
-      Test.dic
+    codesFile: AFB CNS Test.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2510,9 +2426,7 @@ questions:
   - label: Smear
     variable: TB_OtherSample2_Smear
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Sample_Result.dic
+    codesFile: TB_Sample_Result.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2521,9 +2435,7 @@ questions:
   - label: Xpert
     variable: TB_OtherSample2_Xpert
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Sample_Result.dic
+    codesFile: TB_Sample_Result.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2532,9 +2444,7 @@ questions:
   - label: Culture
     variable: TB_OtherSample2_Culture
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Sample_Result.dic
+    codesFile: TB_Sample_Result.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2543,9 +2453,7 @@ questions:
   - label: H
     variable: TB_OtherSample2_H
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    codesFile: HRSE.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2554,9 +2462,7 @@ questions:
   - label: R
     variable: TB_OtherSample2_R
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    codesFile: HRSE.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2565,9 +2471,7 @@ questions:
   - label: S
     variable: TB_OtherSample2_S
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    codesFile: HRSE.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2576,9 +2480,7 @@ questions:
   - label: E
     variable: TB_OtherSample2_E
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    codesFile: HRSE.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2605,10 +2507,7 @@ questions:
   - label: Other Sample 3
     variable: TB_OtherSample3
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/AFB CNS
-      Test.dic
+    codesFile: AFB CNS Test.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2617,9 +2516,7 @@ questions:
   - label: Smear
     variable: TB_OtherSample3_Smear
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Sample_Result.dic
+    codesFile: TB_Sample_Result.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2628,9 +2525,7 @@ questions:
   - label: Xpert
     variable: TB_OtherSample3_Xpert
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Sample_Result.dic
+    codesFile: TB_Sample_Result.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2639,9 +2534,7 @@ questions:
   - label: Culture
     variable: TB_OtherSample3_Culture
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Sample_Result.dic
+    codesFile: TB_Sample_Result.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2650,9 +2543,7 @@ questions:
   - label: H
     variable: TB_OtherSample3_H
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    codesFile: HRSE.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2661,9 +2552,7 @@ questions:
   - label: R
     variable: TB_OtherSample3_R
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    codesFile: HRSE.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2672,9 +2561,7 @@ questions:
   - label: S
     variable: TB_OtherSample3_S
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    codesFile: HRSE.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2683,9 +2570,7 @@ questions:
   - label: E
     variable: TB_OtherSample3_E
     type: code
-    codesFile: >-
-      D:/For 2015 MMR
-      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    codesFile: HRSE.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -2986,7 +2871,7 @@ questions:
   - label: Medicine name
     variable: ART_ARTMedName1
     type: code
-    codesFile: Sys/Dic_Lists/ARV Medicine_v2014.dic
+    codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -3031,7 +2916,7 @@ questions:
   - label: Medicine name
     variable: ART_ARTMedName2
     type: code
-    codesFile: Sys/Dic_Lists/ARV Medicine_v2014.dic
+    codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -3076,7 +2961,7 @@ questions:
   - label: Medicine name
     variable: ART_ARTMedName3
     type: code
-    codesFile: Sys/Dic_Lists/ARV Medicine_v2014.dic
+    codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -3121,7 +3006,7 @@ questions:
   - label: Medicine name
     variable: ART_ARTMedName4
     type: code
-    codesFile: Sys/Dic_Lists/ARV Medicine_v2014.dic
+    codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -3160,9 +3045,7 @@ questions:
   - label: Medicine name
     variable: ART_ARTMedName5
     type: code
-    codesFile: >-
-      C:/Sphinx For Written Forms (YGN+KCN)/2014
-      Modification/Sys/Dic_Lists/LIST_I_ARVsMedicines.dic
+    codesFile: LIST_I_ARVsMedicines.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -3209,7 +3092,7 @@ questions:
   - label: Medicine name
     variable: ART_TB_MedicineName1
     type: code
-    codesFile: Sys/Dic_Lists/TB_Medicines_List.txt
+    codesFile: TB_Medicines_List.txt
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -3254,7 +3137,7 @@ questions:
   - label: Medicine name
     variable: ART_TB_MedicineName2
     type: code
-    codesFile: Sys/Dic_Lists/TB_Medicines_List.txt
+    codesFile: TB_Medicines_List.txt
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -3299,7 +3182,7 @@ questions:
   - label: Medicine name
     variable: ART_TB_MedicineName3
     type: code
-    codesFile: Sys/Dic_Lists/TB_Medicines_List.txt
+    codesFile: TB_Medicines_List.txt
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -3338,7 +3221,7 @@ questions:
   - label: Medicine name
     variable: ART_TB_MedicineName4
     type: code
-    codesFile: Sys/Dic_Lists/TB_Medicines_List.txt
+    codesFile: TB_Medicines_List.txt
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -3442,7 +3325,7 @@ questions:
   - label: IPT_Outcome
     variable: IPT_Outcome
     type: code
-    codesFile: Sys/Dic_Lists/IPT_Outcome.dic
+    codesFile: IPT_Outcome.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -3499,7 +3382,7 @@ questions:
   - label: Medicine name
     variable: ART_OTHMedName1
     type: code
-    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -3544,7 +3427,7 @@ questions:
   - label: Medicine name
     variable: ART_OTHMedName2
     type: code
-    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -3589,7 +3472,7 @@ questions:
   - label: Medicine name
     variable: ART_OTHMedName3
     type: code
-    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -3634,7 +3517,7 @@ questions:
   - label: Medicine name
     variable: ART_OTHMedName4
     type: code
-    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -3679,7 +3562,7 @@ questions:
   - label: Medicine name
     variable: ART_OTHMedName5
     type: code
-    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -3724,7 +3607,7 @@ questions:
   - label: Medicine name
     variable: ART_OTHMedName6
     type: code
-    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -3769,7 +3652,7 @@ questions:
   - label: Medicine name
     variable: ART_OTH_MedName7
     type: code
-    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -3814,7 +3697,7 @@ questions:
   - label: Medicine name
     variable: ART_OTH_MedName8
     type: code
-    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -3857,7 +3740,7 @@ questions:
   - label: Medicine name
     variable: ART_OTH_MedName9
     type: code
-    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -3896,7 +3779,7 @@ questions:
   - label: Medicine name
     variable: ART_OTH_MedName10
     type: code
-    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -3935,7 +3818,7 @@ questions:
   - label: Medicine name
     variable: ART_OTH_MedName11
     type: code
-    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    codesFile: Medicine_List.dic
     nbCharCode: 25
     plan: true
     attributes: 32

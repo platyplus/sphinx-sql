@@ -108,7 +108,7 @@ questions:
   - label: Place Of Testing
     variable: VCCT_PlaceOfTesting
     type: code
-    codesFile: Sys/Dic_Lists/LIST_A2_MDMstaff.dic
+    codesFile: LIST_A2_MDMstaff.dic
     nbCharCode: 25
     instructions: Mandatory response.
     plan: true
@@ -118,7 +118,7 @@ questions:
   - label: Patient Target
     variable: A07_PatientTarget
     type: code
-    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/LIST_A3_Target.dic'
+    codesFile: LIST_A3_Target.dic
     nbCharCode: 25
     plan: true
     attributes: 32
@@ -167,7 +167,7 @@ questions:
   - label: Type of drugs
     variable: VCCT_TypeOfDrugs1
     type: code
-    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/LIST_E_Drugs.dic'
+    codesFile: LIST_E_Drugs.dic
     nbCharCode: 25
     format: '###'
     instructions: The code has 3 characters.
@@ -212,7 +212,7 @@ questions:
   - label: Type of drugs
     variable: VCCT_TypeOfDrugs2
     type: code
-    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/LIST_E_Drugs.dic'
+    codesFile: LIST_E_Drugs.dic
     nbCharCode: 25
     format: '###'
     instructions: The code has 3 characters.
@@ -257,7 +257,7 @@ questions:
   - label: Type of drugs
     variable: VCCT_TypeOfDrugs3
     type: code
-    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/LIST_E_Drugs.dic'
+    codesFile: LIST_E_Drugs.dic
     nbCharCode: 25
     format: '###'
     instructions: The code has 3 characters.
@@ -553,7 +553,7 @@ questions:
   - label: RPR Positive Dilution
     variable: VCCT_RPRPositiveDilution
     type: code
-    codesFile: ../Myanmar_MDM_Clinic/Sys/Dic_Lists/LIST_VCCT_RPR_DILUTION.dic
+    codesFile: LIST_VCCT_RPR_DILUTION.dic
     nbCharCode: 25
     plan: true
     attributes: 32
