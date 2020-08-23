@@ -61,7 +61,7 @@ export type SphinxQuestion =
   | SphinxNumberQuestion
   | SphinxCodeQuestion;
 
-export type SphinxQuestions = {
+export type SphinxForm = {
   version: number;
   headers: {
     history: string;

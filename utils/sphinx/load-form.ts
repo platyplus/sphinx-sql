@@ -1,6 +1,6 @@
 import { readline } from "https://deno.land/x/readline/mod.ts";
 import { set } from "../set-value.ts";
-import { SphinxQuestions } from "./types.ts";
+import { SphinxForm } from "./types.ts";
 
 const arrayKeys = [
   "questions",
@@ -122,7 +122,7 @@ const getKeyValue = (line: string) => {
 
 export const loadSphinxForm = async (fileName: string) => {
   const f = await Deno.open(fileName);
-  const result = {} as SphinxQuestions;
+  const result = {} as SphinxForm;
   const arrayCounts: Record<number, number> = {};
   const processLine = (
     object: Record<string, any>,

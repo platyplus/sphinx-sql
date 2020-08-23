@@ -48,8 +48,6 @@
   - Good
   - Bad
   - Not Sure
-'14':
-  - 'Yes'
 '15':
   - Positive
   - Negative
@@ -57,9 +55,9 @@
 '16':
   - Patient has been treated for TB before
 '17':
-  - 'Yes'
-  - 'No'
-  - Pt don't come
+  - 'Yes': true
+  - 'No': false
+  - Pt don't come: null
 '18':
   - Normal
   - Abnormal
@@ -67,11 +65,6 @@
 '19':
   - Child
   - Adult
-'20':
-  - Stage 1
-  - Stage 2
-  - Stage 3
-  - Stage 4
 '21':
   - 'Healthy, able to work'
   - 'Sick, able to work'
@@ -141,11 +134,11 @@
   - Lb
   - Kg
 '33':
-  - °C
-  - °F
+  - °C: celsius
+  - °F: farenheit
 '34':
-  - Patient is pregnant
-  - Patient is breastfeeding
+  - Patient is pregnant: pregnant
+  - Patient is breastfeeding: breastfeeding
 '35':
   - Date of birth estimated
 '36':
@@ -175,16 +168,23 @@
   - 3 mths
   - 6 mths
   - Other
+'yes':
+  - 'Yes': true
+stages:
+  - Stage 1: 1
+  - Stage 2: 2
+  - Stage 3: 3
+  - Stage 4: 4
 yesNoQuestion:
-  - 'Yes'
-  - 'No'
+  - 'Yes': true
+  - 'No': false
 acceptQuestion:
-  - Accept
-  - Refused
+  - Accept: true
+  - Refused: false
 hivStatus:
   - HIV Positive
   - HIV Negative
   - Inconclusive
 gender:
-  - Male
-  - Female
+  - Male: male
+  - Female: female

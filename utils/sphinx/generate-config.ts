@@ -4,7 +4,7 @@ import { ensureDir, exists } from "https://deno.land/std/fs/mod.ts";
 import { merge } from "../deep-merge.ts";
 import { writeYamlFile, readYamlFile } from "../yaml.ts";
 import { loadSphinxForm } from "./load-form.ts";
-import { SphinxQuestions, SphinxOptionsSet } from "./types.ts";
+import { SphinxForm, SphinxOptionsSet } from "./types.ts";
 import { addOptionSet } from "./options-set.ts";
 
 export const generateConfig = async (
@@ -23,7 +23,7 @@ export const generateConfig = async (
     const yamlFile = path.join(tablesPath, `${name}.yaml`);
     let form = await loadSphinxForm(file.path);
     if (await exists(yamlFile)) {
-      const oldFile = await readYamlFile<SphinxQuestions>(yamlFile);
+      const oldFile = await readYamlFile<SphinxForm>(yamlFile);
       form = merge(oldFile, form);
     }
     form.questions.forEach((question) => {
