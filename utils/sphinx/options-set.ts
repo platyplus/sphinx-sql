@@ -53,12 +53,12 @@ export const getOptionValue = (options: any[], value: string | undefined) => {
   return typeof index === "string" ? index : index[Object.keys(index)[0]];
 };
 
-// * Tells if the option set is an enum i.e. its values are string
-export const isOptionsEnum = (options: any[]) =>
-  options.some((option) =>
-    typeof option === "string" ||
-    typeof option[Object.keys(option)[0]] === "string"
-  );
+// // * Tells if the option set is an enum i.e. its values are string
+// export const isOptionsEnum = (options: any[]) =>
+//   options.some((option) =>
+//     typeof option === "string" ||
+//     typeof option[Object.keys(option)[0]] === "string"
+//   );
 
-// * If none of the options are string e.g. boolean, null, number... then it's a scalar
-export const isOptionsScalar = (options: any[]) => !isOptionsEnum(options);
+// // * If none of the options are string e.g. boolean, null, number... then it's a scalar
+// export const isOptionsScalar = (options: any[]) => !isOptionsEnum(options);
