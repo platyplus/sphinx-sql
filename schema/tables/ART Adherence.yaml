@@ -11,7 +11,7 @@ headers:
       title: ART VISIT
 questions:
   - label: MDM code (Patient ID)
-    variable: MDMcode
+    variable: md_mcode
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -21,7 +21,7 @@ questions:
     translations:
       - label: MDM code (Patient ID)
   - label: A00. Registration date
-    variable: A00_RegistrationDate
+    variable: registration_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -29,7 +29,7 @@ questions:
     translations:
       - label: A00. Registration date
   - label: Patient Name
-    variable: A01_PatientName
+    variable: patient_name
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -38,7 +38,7 @@ questions:
     translations:
       - label: A01. Name
   - label: Father’s name
-    variable: A02_FatherName
+    variable: father_name
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -47,7 +47,7 @@ questions:
     translations:
       - label: A02. Father’s name
   - label: A03. Sex
-    variable: A03_Sexe
+    variable: sexe
     type: options
     nbOptions: 2
     options:
@@ -62,7 +62,7 @@ questions:
           - Male
           - Female
   - label: Date of birth
-    variable: A041_DateOfBirth
+    variable: date_of_birth
     type: date
     min: 3652
     format: jj/mm/aaaa
@@ -72,7 +72,7 @@ questions:
     translations:
       - label: A04. Date of birth
   - label: Age
-    variable: A05_Age
+    variable: age
     type: number
     nbDecimals: 2
     numberType: 2
@@ -91,7 +91,7 @@ questions:
           - mod-FR-6
           - mod-FR-7
   - label: A07. Patient target
-    variable: A07_PatientTarget
+    variable: patient_target
     type: code
     codesFile: LIST_A3_Target.dic
     nbCharCode: 25
@@ -101,7 +101,7 @@ questions:
     translations:
       - label: A07. Patient target
   - label: Medical care place
-    variable: ADH_PlaceOfMedicalCare
+    variable: place_of_medical_care
     type: options
     nbOptions: 6
     options:
@@ -124,7 +124,7 @@ questions:
           - Specialist
           - mod-FR-6
   - label: Visit
-    variable: ADH_Visit
+    variable: visit
     type: options
     nbOptions: 3
     options:
@@ -142,7 +142,7 @@ questions:
           - mod-FR-2
           - mod-FR-3
   - label: Visit_Assessment
-    variable: ADH_Visit_Assessment
+    variable: visit_assessment
     type: number
     nbDecimals: 2
     numberType: 2
@@ -152,7 +152,7 @@ questions:
     translations:
       - label: Visit_Assessment
   - label: Reason of visit
-    variable: ADH_ReasonOfVisit
+    variable: reason_of_visit
     type: multipleOptions
     nbOptions: 2
     options:
@@ -169,7 +169,7 @@ questions:
           - Hospital
           - Specialist
   - label: Visit date
-    variable: ADH_VisitDate
+    variable: visit_date
     type: date
     min: 32872
     format: jj/mm/aaaa
@@ -179,7 +179,7 @@ questions:
     translations:
       - label: Visit date
   - label: Appointment
-    variable: ADH_Appointment
+    variable: appointment
     type: options
     nbOptions: 3
     options:
@@ -196,7 +196,7 @@ questions:
           - mod-FR-2
           - mod-FR-3
   - label: Counselor
-    variable: ADH_Counselor
+    variable: counselor
     type: code
     codesFile: LIST_A2_MDMstaff.dic
     nbCharCode: 25
@@ -205,7 +205,7 @@ questions:
     translations:
       - label: MDM staff
   - label: Marital Status
-    variable: A07a_MaritalStatus
+    variable: marital_status
     type: code
     codesFile: LIST_A4_MaritalStatus.dic
     nbCharCode: 25
@@ -214,7 +214,7 @@ questions:
     translations:
       - label: Marital Status
   - label: No of children
-    variable: ADH_NoOfChildren
+    variable: no_of_children
     type: number
     nbDecimals: 2
     numberType: 2
@@ -223,7 +223,7 @@ questions:
     translations:
       - label: No of children
   - label: Accommodation
-    variable: ADH_Accommodation
+    variable: accommodation
     type: options
     nbOptions: 2
     options:
@@ -238,7 +238,7 @@ questions:
           - Lb
           - Kg
   - label: If Stable
-    variable: ADH_Accomo_IfStable
+    variable: accomo_if_stable
     type: options
     nbOptions: 2
     options:
@@ -253,7 +253,7 @@ questions:
           - 'Yes'
           - mod-FR-2
   - label: Occupation
-    variable: ADH_Occupation
+    variable: occupation
     type: options
     nbOptions: 2
     options:
@@ -268,7 +268,7 @@ questions:
           - 'Yes'
           - mod-FR-2
   - label: 'If yes, specify'
-    variable: ADH_Occupation_IfYes
+    variable: occupation_if_yes
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -277,7 +277,7 @@ questions:
     translations:
       - label: 'If yes, specify'
   - label: Financial situation
-    variable: ADH_FinancialSituation
+    variable: financial_situation
     type: options
     nbOptions: 2
     options:
@@ -292,7 +292,7 @@ questions:
           - mod-FR-13
           - mod-FR-14
   - label: Level of education
-    variable: ADH_LevelOfEducation
+    variable: level_of_education
     type: options
     nbOptions: 7
     options:
@@ -317,7 +317,7 @@ questions:
           - mod-FR-4
           - mod-FR-6
   - label: Remark
-    variable: ADH_Social_Remark
+    variable: social_remark
     type: open
     nbLines: 2
     nbCharLines: 0
@@ -326,7 +326,7 @@ questions:
     translations:
       - label: Remark
   - label: Does the patient have a care taker?
-    variable: ADH_PatientHasCareTaker
+    variable: patient_has_care_taker
     type: options
     nbOptions: 2
     options:
@@ -341,7 +341,7 @@ questions:
           - 'Yes'
           - mod-FR-2
   - label: 'If yes, name'
-    variable: ADH_IfYesName
+    variable: if_yes_name
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -350,7 +350,7 @@ questions:
     translations:
       - label: 'R012. If other, specify'
   - label: 'If no, why?'
-    variable: ADH_IfNoWhy
+    variable: if_no_why
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -359,7 +359,7 @@ questions:
     translations:
       - label: 'R012. If other, specify'
   - label: Relationship to patient
-    variable: ADH_RelationshipToPatient_I
+    variable: relationship_to_patient_i
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -368,7 +368,7 @@ questions:
     translations:
       - label: 'R012. If other, specify'
   - label: In same household?
-    variable: ADH_InSameHouseHold_I
+    variable: in_same_house_hold_i
     type: options
     nbOptions: 2
     options:
@@ -383,7 +383,7 @@ questions:
           - 'Yes'
           - mod-FR-2
   - label: Did care taker attend clinic with patient?
-    variable: ADH_CareTakerAttendClinic_I
+    variable: care_taker_attend_clinic_i
     type: options
     nbOptions: 2
     options:
@@ -398,7 +398,7 @@ questions:
           - 'Yes'
           - mod-FR-2
   - label: ART starting date
-    variable: ADH_ARTStartDate
+    variable: art_start_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -406,7 +406,7 @@ questions:
     translations:
       - label: ART starting date
   - label: ART Stop Date
-    variable: ADH_ARTStopDate1
+    variable: art_stop_date1
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -414,7 +414,7 @@ questions:
     translations:
       - label: ART Stop Date
   - label: ART Restarting Date
-    variable: ADH_ARTRestartingDate1
+    variable: art_restarting_date1
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -422,7 +422,7 @@ questions:
     translations:
       - label: ART Restarting Date
   - label: ART Stop Date
-    variable: ADH_ARTStopDate2
+    variable: art_stop_date2
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -430,7 +430,7 @@ questions:
     translations:
       - label: ART Stop Date
   - label: ART Restarting Date
-    variable: ADH_ARTRestartingDate2
+    variable: art_restarting_date2
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -438,7 +438,7 @@ questions:
     translations:
       - label: ART Restarting Date
   - label: ART Stop Date
-    variable: ADH_ARTStopDate3
+    variable: art_stop_date3
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -446,7 +446,7 @@ questions:
     translations:
       - label: ART Stop Date
   - label: ART Restarting Date
-    variable: ADH_ARTRestartingDate3
+    variable: art_restarting_date3
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -454,7 +454,7 @@ questions:
     translations:
       - label: ART Restarting Date
   - label: ART Stop Date
-    variable: ADH_ARTStopDate4
+    variable: art_stop_date4
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -462,7 +462,7 @@ questions:
     translations:
       - label: ART Stop Date
   - label: ART Restarting Date
-    variable: ADH_ARTRestartingDate4
+    variable: art_restarting_date4
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -470,7 +470,7 @@ questions:
     translations:
       - label: ART Restarting Date
   - label: ART Stop Date
-    variable: ADH_ARTStopDate5
+    variable: art_stop_date5
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -478,7 +478,7 @@ questions:
     translations:
       - label: ART Stop Date
   - label: ART Restarting Date
-    variable: ADH_ARTRestartingDate5
+    variable: art_restarting_date5
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -486,7 +486,7 @@ questions:
     translations:
       - label: ART Restarting Date
   - label: TB Starting Date
-    variable: ADH_TBStartDate
+    variable: tb_start_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -494,7 +494,7 @@ questions:
     translations:
       - label: TB Starting Date
   - label: TB Stop Date
-    variable: ADH_TBStopDate1
+    variable: tb_stop_date1
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -502,7 +502,7 @@ questions:
     translations:
       - label: TB Stop Date
   - label: TB Restarting Date
-    variable: ADH_TBRestartingDate1
+    variable: tb_restarting_date1
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -510,7 +510,7 @@ questions:
     translations:
       - label: TB Restarting Date
   - label: TB Stop Date
-    variable: ADH_TBStopDate2
+    variable: tb_stop_date2
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -518,7 +518,7 @@ questions:
     translations:
       - label: TB Stop Date
   - label: TB Restarting Date
-    variable: ADH_TBRestartingDate2
+    variable: tb_restarting_date2
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -526,7 +526,7 @@ questions:
     translations:
       - label: TB Restarting Date
   - label: TB Stop Date
-    variable: ADH_TBStopDate3
+    variable: tb_stop_date3
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -534,7 +534,7 @@ questions:
     translations:
       - label: TB Stop Date
   - label: TB Restarting Date
-    variable: ADH_TBRestartingDate3
+    variable: tb_restarting_date3
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -542,7 +542,7 @@ questions:
     translations:
       - label: TB Restarting Date
   - label: TB Stop Date
-    variable: ADH_TBStopDate4
+    variable: tb_stop_date4
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -550,7 +550,7 @@ questions:
     translations:
       - label: TB Stop Date
   - label: TB Restarting Date
-    variable: ADH_TBRestartingDate4
+    variable: tb_restarting_date4
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -558,7 +558,7 @@ questions:
     translations:
       - label: TB Restarting Date
   - label: TB Stop Date
-    variable: ADH_TBStopDate5
+    variable: tb_stop_date5
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -566,7 +566,7 @@ questions:
     translations:
       - label: TB Stop Date
   - label: TB Restarting Date
-    variable: ADH_TBRestartingDate5
+    variable: tb_restarting_date5
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -576,7 +576,7 @@ questions:
   - label: >-
       Ask the patient: "Many people have problems taking pills, what problems
       are you having?
-    variable: ADH_AdherenceProblem
+    variable: adherence_problem
     type: options
     nbOptions: 2
     options:
@@ -593,7 +593,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Problem for Adherence
-    variable: ADH_Problem
+    variable: problem
     type: multipleOptions
     nbOptions: 3
     options:
@@ -612,7 +612,7 @@ questions:
           - Medical
           - Miscellaneous
   - label: Social
-    variable: ADH_AdhSocialProblem
+    variable: adh_social_problem
     type: multipleOptions
     nbOptions: 7
     options:
@@ -639,7 +639,7 @@ questions:
           - Food insecurity
           - Transportation problem to come to clinic
   - label: Medical
-    variable: ADH_AdhMedicalProblem
+    variable: adh_medical_problem
     type: multipleOptions
     nbOptions: 5
     options:
@@ -662,7 +662,7 @@ questions:
           - Psychological disorder
           - Other medical problems
   - label: Medical Other
-    variable: ADH_AdhMedicalProblemOther
+    variable: adh_medical_problem_other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -671,7 +671,7 @@ questions:
     translations:
       - label: Medical Other
   - label: Miscellaneous
-    variable: ADH_AdhMiscellaneousProblem
+    variable: adh_miscellaneous_problem
     type: multipleOptions
     nbOptions: 7
     options:
@@ -698,7 +698,7 @@ questions:
           - Patient did not want to take pill
           - Paitent is disorganized
   - label: Comment
-    variable: ADH_Comment
+    variable: comment
     type: open
     nbLines: 4
     nbCharLines: 0
@@ -709,7 +709,7 @@ questions:
           Ask the patient: "Many people have problems taking pills, what
           problems are you having?
   - label: No side effects
-    variable: ADH_NoSideEffects
+    variable: no_side_effects
     type: options
     nbOptions: 1
     options:
@@ -722,7 +722,7 @@ questions:
         options:
           - No side effects
   - label: Side Effects
-    variable: ADH_SideEffects
+    variable: side_effects
     type: multipleOptions
     nbOptions: 3
     options:
@@ -741,7 +741,7 @@ questions:
           - Long term side effects
           - Short term/general
   - label: Severe side effects
-    variable: ADH_SevereSideEffects
+    variable: severe_side_effects
     type: multipleOptions
     nbOptions: 4
     options:
@@ -762,7 +762,7 @@ questions:
           - Abdominal pain
           - Shortness of breath
   - label: Long term side effects
-    variable: ADH_LongTermSideEffects
+    variable: long_term_side_effects
     type: multipleOptions
     nbOptions: 2
     options:
@@ -779,7 +779,7 @@ questions:
           - Lipodystrophy
           - Tingling and numbness
   - label: Short term/general
-    variable: ADH_ShortTermGeneral
+    variable: short_term_general
     type: multipleOptions
     nbOptions: 7
     options:
@@ -806,7 +806,7 @@ questions:
           - Weakness
           - Other
   - label: SideEffect_Other
-    variable: ADH_ShortTermSideEffects_Other
+    variable: short_term_side_effects_other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -815,7 +815,7 @@ questions:
     translations:
       - label: SideEffect_Other
   - label: Severe Side effects
-    variable: ADH_SevereSE
+    variable: severe_se
     type: options
     nbOptions: 2
     options:
@@ -830,7 +830,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Refer to Doctor
-    variable: ADH_ReferToDoctor
+    variable: refer_to_doctor
     type: options
     nbOptions: 2
     options:
@@ -845,7 +845,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Number of missed doses within last 7 days?
-    variable: ADH_NoOfMissedDosesLast7days
+    variable: no_of_missed_doses_last7days
     type: number
     nbDecimals: 2
     numberType: 2
@@ -855,7 +855,7 @@ questions:
     translations:
       - label: Number of missed doses last month
   - label: Number of missed doses within last 30 days?
-    variable: ADH_NoOfMissedDosesLast30days
+    variable: no_of_missed_doses_last30days
     type: number
     nbDecimals: 2
     numberType: 2
@@ -865,7 +865,7 @@ questions:
     translations:
       - label: Number of missed doses within last 30 days?
   - label: Total doses within last 30 days?
-    variable: ADH_TotalDoses
+    variable: total_doses
     type: number
     nbDecimals: 2
     numberType: 2
@@ -875,7 +875,7 @@ questions:
     translations:
       - label: Total doses within last 30 days?
   - label: Adherence within last 30 days?
-    variable: ADH_AdherenceWithinLast30Days
+    variable: adherence_within_last30_days
     type: number
     nbDecimals: 2
     numberType: 2
@@ -889,7 +889,7 @@ questions:
     translations:
       - label: Adherence within last 30 days?
   - label: Number of doses found (excluding extra doses)
-    variable: ADH_DosesFound
+    variable: doses_found
     type: number
     nbDecimals: 2
     numberType: 2
@@ -899,7 +899,7 @@ questions:
     translations:
       - label: Number of doses found (excluding extra doses)
   - label: Number of doses patient should have
-    variable: ADH_DosesShouldHave
+    variable: doses_should_have
     type: number
     nbDecimals: 2
     numberType: 2
@@ -909,7 +909,7 @@ questions:
     translations:
       - label: Number of doses patient should have
   - label: Extra doses provided
-    variable: ADH_ExtraDosesProvided
+    variable: extra_doses_provided
     type: number
     nbDecimals: 2
     numberType: 2
@@ -919,7 +919,7 @@ questions:
     translations:
       - label: Extra doses provided
   - label: dose for
-    variable: ADH_DoseFor
+    variable: dose_for
     type: number
     nbDecimals: 2
     numberType: 2
@@ -931,7 +931,7 @@ questions:
   - label: >-
       Adherence level since last visit: "how did you respect the doctor's
       prescription?"
-    variable: ADH_AdherenceLevelSinceLastVisit
+    variable: adherence_level_since_last_visit
     type: options
     nbOptions: 4
     options:
@@ -950,7 +950,7 @@ questions:
           - mod-FR-15
           - mod-FR-4
   - label: Social-familial situation
-    variable: ADH_SocialFamilialsituation
+    variable: social_familialsituation
     type: options
     nbOptions: 2
     options:
@@ -965,7 +965,7 @@ questions:
           - 'Yes'
           - mod-FR-2
   - label: 'If problem, specify'
-    variable: ADH_Social_IfProblem
+    variable: social_if_problem
     type: open
     nbLines: 2
     nbCharLines: 0
@@ -974,7 +974,7 @@ questions:
     translations:
       - label: 'If problem, specify'
   - label: Care taker
-    variable: ADH_CareTaker
+    variable: care_taker
     type: options
     nbOptions: 3
     options:
@@ -991,7 +991,7 @@ questions:
           - mod-FR-14
           - mod-FR-15
   - label: 'If Change, Name of care taker'
-    variable: ADH_CareTaker_IfChange
+    variable: care_taker_if_change
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1000,7 +1000,7 @@ questions:
     translations:
       - label: 'If Change, Name of buddy :'
   - label: In same household
-    variable: ADH_InSameHouseHold_F
+    variable: in_same_house_hold_f
     type: options
     nbOptions: 2
     options:
@@ -1015,7 +1015,7 @@ questions:
           - Fatigue
           - Fever
   - label: Relationship to patient
-    variable: ADH_RelationshipToPatient_F
+    variable: relationship_to_patient_f
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1024,7 +1024,7 @@ questions:
     translations:
       - label: 'Relationship to patient :'
   - label: Did care taker attend to clinic with the patient
-    variable: ADH_CareTakerAttendClinic_F
+    variable: care_taker_attend_clinic_f
     type: options
     nbOptions: 2
     options:
@@ -1039,7 +1039,7 @@ questions:
           - Fatigue
           - Fever
   - label: 'If probolem, specify'
-    variable: ADH_CareTakerAttendClinic_IfProblem
+    variable: care_taker_attend_clinic_if_problem
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1048,7 +1048,7 @@ questions:
     translations:
       - label: 'If probolem, specify'
   - label: Psychological disorder
-    variable: ADH_PsychologicalDisorder
+    variable: psychological_disorder
     type: options
     nbOptions: 2
     options:
@@ -1063,7 +1063,7 @@ questions:
           - 'Yes'
           - mod-FR-2
   - label: 'If yes, specify'
-    variable: ADH_Psycho_IfYes
+    variable: psycho_if_yes
     type: open
     nbLines: 2
     nbCharLines: 0
@@ -1072,7 +1072,7 @@ questions:
     translations:
       - label: 'If yes, specify'
   - label: Current drug use
-    variable: ADH_CurrentDrugUse
+    variable: current_drug_use
     type: options
     nbOptions: 2
     options:
@@ -1087,7 +1087,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Drug
-    variable: ADH_Drug
+    variable: drug
     type: multipleOptions
     nbOptions: 7
     options:
@@ -1114,7 +1114,7 @@ questions:
           - Herion
           - Opium
   - label: Last use
-    variable: ADH_AlcoholLastUse
+    variable: alcohol_last_use
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -1122,7 +1122,7 @@ questions:
     translations:
       - label: Last use
   - label: '#Time/Day'
-    variable: ADH_AlcoholTimeDay
+    variable: alcohol_time_day
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1132,7 +1132,7 @@ questions:
     translations:
       - label: '#Time/day'
   - label: '#Days/Week'
-    variable: ADH_AlcoholDaysWeek
+    variable: alcohol_days_week
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1142,7 +1142,7 @@ questions:
     translations:
       - label: '#Days/Week'
   - label: Way of use
-    variable: ADH_AlcoholWayOfUse
+    variable: alcohol_way_of_use
     type: code
     codesFile: WayOfUse.dic
     nbCharCode: 25
@@ -1151,7 +1151,7 @@ questions:
     translations:
       - label: Way of use
   - label: Last use
-    variable: ADH_AmpheataminelLastUse
+    variable: ampheataminel_last_use
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -1159,7 +1159,7 @@ questions:
     translations:
       - label: Last use
   - label: '#Time/Day'
-    variable: ADH_AmpheatamineTimeDay
+    variable: ampheatamine_time_day
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1169,7 +1169,7 @@ questions:
     translations:
       - label: '#Time/day'
   - label: '#Days/Week'
-    variable: ADH_AmpheatamineDaysWeek
+    variable: ampheatamine_days_week
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1179,7 +1179,7 @@ questions:
     translations:
       - label: ADH_AmpheatamineDaysWeek
   - label: Way of use
-    variable: ADH_AmpheatamineWayOfUse
+    variable: ampheatamine_way_of_use
     type: code
     codesFile: WayOfUse.dic
     nbCharCode: 25
@@ -1188,7 +1188,7 @@ questions:
     translations:
       - label: ADH_AmpheatamineWayOfUse
   - label: Last Use
-    variable: ADH_DiazepineLastUse
+    variable: diazepine_last_use
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -1196,7 +1196,7 @@ questions:
     translations:
       - label: Last Use
   - label: '#Time/Day'
-    variable: ADH_DiazepineTimeDay
+    variable: diazepine_time_day
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1206,7 +1206,7 @@ questions:
     translations:
       - label: '#Time/day'
   - label: '#Days/Week'
-    variable: ADH_DiazepineDaysWeek
+    variable: diazepine_days_week
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1216,7 +1216,7 @@ questions:
     translations:
       - label: ADH_DiazepineDaysWeek
   - label: Way of use
-    variable: ADH_DiazepineWayOfUse
+    variable: diazepine_way_of_use
     type: code
     codesFile: WayOfUse.dic
     nbCharCode: 25
@@ -1225,7 +1225,7 @@ questions:
     translations:
       - label: ADH_DiazepineWayOfUse
   - label: Last use
-    variable: ADH_CannabisLastUse
+    variable: cannabis_last_use
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -1233,7 +1233,7 @@ questions:
     translations:
       - label: Last use
   - label: '#Time/Day'
-    variable: ADH_CannabisTimeDay
+    variable: cannabis_time_day
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1243,7 +1243,7 @@ questions:
     translations:
       - label: '#Time/day'
   - label: '#Days/Week'
-    variable: ADH_CannabisDaysWeek
+    variable: cannabis_days_week
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1253,7 +1253,7 @@ questions:
     translations:
       - label: ADH_CannabisDaysWeek
   - label: Way of use
-    variable: ADH_CannabisWayOfUse
+    variable: cannabis_way_of_use
     type: code
     codesFile: WayOfUse.dic
     nbCharCode: 25
@@ -1262,7 +1262,7 @@ questions:
     translations:
       - label: ADH_CannabisWayOfUse
   - label: Last use
-    variable: ADH_EcstasyLastUse
+    variable: ecstasy_last_use
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -1270,7 +1270,7 @@ questions:
     translations:
       - label: Last use
   - label: '#Time/Day'
-    variable: ADH_EcstasyTimeDay
+    variable: ecstasy_time_day
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1280,7 +1280,7 @@ questions:
     translations:
       - label: '#Time/day'
   - label: '#Days/Week'
-    variable: ADH_EsctasyDaysWeek
+    variable: esctasy_days_week
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1290,7 +1290,7 @@ questions:
     translations:
       - label: ADH_EsctasyDaysWeek
   - label: Way of use
-    variable: ADH_EsctasyWayOfUse
+    variable: esctasy_way_of_use
     type: code
     codesFile: WayOfUse.dic
     nbCharCode: 25
@@ -1299,7 +1299,7 @@ questions:
     translations:
       - label: ADH_EsctasyWayOfUse
   - label: Last use
-    variable: ADH_HerionLastUse
+    variable: herion_last_use
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -1307,7 +1307,7 @@ questions:
     translations:
       - label: Last use
   - label: '#Time/Day'
-    variable: ADH_HerionTimeDay
+    variable: herion_time_day
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1317,7 +1317,7 @@ questions:
     translations:
       - label: '#Time/day'
   - label: '#Days/Week'
-    variable: ADH_HerionDaysWeek
+    variable: herion_days_week
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1327,7 +1327,7 @@ questions:
     translations:
       - label: ADH_HerionDaysWeek
   - label: Way of use
-    variable: ADH_HerionWayOfUse
+    variable: herion_way_of_use
     type: code
     codesFile: WayOfUse.dic
     nbCharCode: 25
@@ -1336,7 +1336,7 @@ questions:
     translations:
       - label: ADH_HerionWayOfUse
   - label: Last use
-    variable: ADH_OpiumLastUse
+    variable: opium_last_use
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -1344,7 +1344,7 @@ questions:
     translations:
       - label: Last use
   - label: '#Time/Day'
-    variable: ADH_OpiumTimeDay
+    variable: opium_time_day
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1354,7 +1354,7 @@ questions:
     translations:
       - label: '#Time/day'
   - label: '#Days/Week'
-    variable: ADH_OpiumDaysWeek
+    variable: opium_days_week
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1364,7 +1364,7 @@ questions:
     translations:
       - label: ADH_OpiumDaysWeek
   - label: Way of use
-    variable: ADH_OpiumWayOfUse
+    variable: opium_way_of_use
     type: code
     codesFile: WayOfUse.dic
     nbCharCode: 25
@@ -1373,7 +1373,7 @@ questions:
     translations:
       - label: ADH_OpiumWayOfUse
   - label: 'If you inject, did you share needle or syringe within last 30 days?'
-    variable: ADH_DidYouShareNeedleSyringe
+    variable: did_you_share_needle_syringe
     type: options
     nbOptions: 2
     options:
@@ -1388,7 +1388,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Herbal Medicines
-    variable: ADH_HerbalMedicines
+    variable: herbal_medicines
     type: options
     nbOptions: 2
     options:
@@ -1403,7 +1403,7 @@ questions:
           - 'Yes'
           - mod-FR-2
   - label: Methadone_is_taking_currently?
-    variable: ADH_Methadone_is_taking_currently?
+    variable: methadone_is_taking_currently
     type: options
     nbOptions: 2
     options:
@@ -1419,7 +1419,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Methadone_starting_date
-    variable: ADH_Methadone_starting_date
+    variable: methadone_starting_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -1427,7 +1427,7 @@ questions:
     translations:
       - label: Methadone_starting_date
   - label: Conclusion about adherence
-    variable: ADH_Conclusion
+    variable: conclusion
     type: options
     nbOptions: 3
     options:
@@ -1444,7 +1444,7 @@ questions:
           - mod-FR-2
           - mod-FR-3
   - label: 'Suggestions : actions to be taken'
-    variable: ADH_Suggestions
+    variable: suggestions
     type: open
     nbLines: 4
     nbCharLines: 0
@@ -1453,7 +1453,7 @@ questions:
     translations:
       - label: 'Suggestions : actions to be taken'
   - label: Check List
-    variable: ADH_CheckList
+    variable: check_list
     type: multipleOptions
     nbOptions: 8
     options:
@@ -1482,7 +1482,7 @@ questions:
           - Role of care taker
           - Change address
   - label: Next Appointment Date
-    variable: ADH_NextAppointmentDate
+    variable: next_appointment_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -1490,7 +1490,7 @@ questions:
     translations:
       - label: ART NextVisitDate
   - label: Verify patient
-    variable: Verify
+    variable: verify
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1499,7 +1499,7 @@ questions:
     translations:
       - label: Verify patient
   - label: Last registration date
-    variable: LastRegistrationDate
+    variable: last_registration_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -1508,7 +1508,7 @@ questions:
     translations:
       - label: Last registration date
   - label: Order of the observations before sorting
-    variable: ORDER
+    variable: order
     type: number
     nbDecimals: 2
     numberType: 2

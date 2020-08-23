@@ -12,7 +12,7 @@ headers:
       title: Patient General Data
 questions:
   - label: MDM location
-    variable: MDMlocation
+    variable: md_mlocation
     type: code
     codesFile: LIST_A1_MDMlocation.dic
     nbCharCode: 25
@@ -22,7 +22,7 @@ questions:
     translations:
       - label: MDM location
   - label: MDM code (Patient ID)
-    variable: MDMcode
+    variable: md_mcode
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -33,7 +33,7 @@ questions:
     translations:
       - label: MDM code (Patient ID)
   - label: Serial number
-    variable: SerialNumber
+    variable: serial_number
     type: open
     nbLines: 2
     nbCharLines: 0
@@ -44,7 +44,7 @@ questions:
     translations:
       - label: Serial number
   - label: A00. Registration date
-    variable: A00_RegistrationDate
+    variable: registration_date
     type: date
     format: jj/mm/aaaa
     instructions: Mandatory response.
@@ -53,7 +53,7 @@ questions:
     translations:
       - label: A00. Registration date
   - label: A01. Name
-    variable: A01_PatientName
+    variable: patient_name
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -65,7 +65,7 @@ questions:
     translations:
       - label: A01. Name
   - label: A02. Father’s name
-    variable: A02_FatherName
+    variable: father_name
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -76,7 +76,7 @@ questions:
     translations:
       - label: A02. Father’s name
   - label: A03. Sex
-    variable: A03_Sexe
+    variable: sexe
     type: options
     nbOptions: 2
     options:
@@ -92,7 +92,7 @@ questions:
           - Male
           - Female
   - label: A05. Date of birth
-    variable: A041_DateOfBirth
+    variable: date_of_birth
     type: date
     min: 3652
     format: jj/mm/aaaa
@@ -102,7 +102,7 @@ questions:
     translations:
       - label: A04. Date of birth
   - label: Age
-    variable: A05_Age
+    variable: age
     type: number
     nbDecimals: 2
     numberType: 2
@@ -122,7 +122,7 @@ questions:
           - mod-FR-6
           - mod-FR-7
   - label: A052. Date of birth estimated
-    variable: A052_DateOfBirthEstimated
+    variable: date_of_birth_estimated
     type: options
     nbOptions: 1
     options:
@@ -135,7 +135,7 @@ questions:
         options:
           - 'Yes'
   - label: A06. Place of birth
-    variable: A06_PlaceOfBirth
+    variable: place_of_birth
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -144,7 +144,7 @@ questions:
     translations:
       - label: A06. Place of birth
   - label: A06a. Height
-    variable: A06a_Height
+    variable: height
     type: number
     nbDecimals: 2
     numberType: 2
@@ -162,7 +162,7 @@ questions:
           - mod-FR-6
           - mod-FR-7
   - label: A07. Patient target
-    variable: A07_PatientTarget
+    variable: patient_target
     type: code
     codesFile: LIST_A3_Target.dic
     nbCharCode: 25
@@ -173,7 +173,7 @@ questions:
     translations:
       - label: A07. Patient target
   - label: A07a. Marital status
-    variable: A07a_MaritalStatus
+    variable: marital_status
     type: code
     codesFile: LIST_A4_MaritalStatus.dic
     nbCharCode: 25
@@ -182,7 +182,7 @@ questions:
     translations:
       - label: A07a. Marital status
   - label: A08. Level of education
-    variable: A08_LevelEducation
+    variable: level_education
     type: options
     nbOptions: 7
     options:
@@ -207,7 +207,7 @@ questions:
           - Non Applicable(e.g. for babies)
           - Primary (Grades 1 to 4)
   - label: A09. Occupation
-    variable: A09_Occupation
+    variable: occupation
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -216,7 +216,7 @@ questions:
     translations:
       - label: A09. Occupation
   - label: A10. Address (Township)
-    variable: A10_AddressTownship
+    variable: address_township
     type: code
     codesFile: LIST_A5_Township.dic
     nbCharCode: 25
@@ -227,7 +227,7 @@ questions:
     translations:
       - label: A10. Address (Township)
   - label: Township Name
-    variable: A10_AddressTownshipName
+    variable: address_township_name
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -238,7 +238,7 @@ questions:
     translations:
       - label: Township Name
   - label: A11. Geographical origin
-    variable: A11_GeographicalOrigin
+    variable: geographical_origin
     type: code
     codesFile: LIST_A6_GeographicalOrigin.dic
     nbCharCode: 25
@@ -247,7 +247,7 @@ questions:
     translations:
       - label: A11. Geographical origin
   - label: A12. Distance to MDM clinic
-    variable: A12_DistanceToMDMclinic
+    variable: distance_to_md_mclinic
     type: number
     nbDecimals: 2
     numberType: 2
@@ -265,7 +265,7 @@ questions:
           - mod-FR-6
           - mod-FR-7
   - label: A13. Other ID
-    variable: A13_OtherID
+    variable: other_id
     type: open
     nbLines: 2
     nbCharLines: 0
@@ -274,7 +274,7 @@ questions:
     translations:
       - label: A13. Other ID
   - label: Counter
-    variable: Counter
+    variable: counter
     type: number
     nbDecimals: 2
     numberType: 2
@@ -290,7 +290,7 @@ questions:
           - mod-FR-4
           - mod-FR-5
   - label: Verify
-    variable: Verify
+    variable: verify
     type: number
     nbDecimals: 2
     numberType: 2
@@ -303,7 +303,7 @@ questions:
         options:
           - mod-FR-1
   - label: Date of saving data
-    variable: A20_DateOfSavingData
+    variable: date_of_saving_data
     type: date
     format: jj/mm/aaaa
     plan: true

@@ -9,7 +9,7 @@ headers:
       title: GHC Visit
 questions:
   - label: MDM code (Patient ID)
-    variable: MDMcode
+    variable: md_mcode
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -19,7 +19,7 @@ questions:
     translations:
       - label: MDM code (Patient ID)
   - label: Registration date
-    variable: A00_RegistrationDate
+    variable: registration_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -27,7 +27,7 @@ questions:
     translations:
       - label: A00. Registration date
   - label: Name
-    variable: A01_PatientName
+    variable: patient_name
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -36,7 +36,7 @@ questions:
     translations:
       - label: A01. Name
   - label: Father’s name
-    variable: A02_FatherName
+    variable: father_name
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -45,7 +45,7 @@ questions:
     translations:
       - label: A02. Father’s name
   - label: A03. Sex
-    variable: A03_Sexe
+    variable: sexe
     type: options
     nbOptions: 2
     options:
@@ -60,7 +60,7 @@ questions:
           - Male
           - Female
   - label: A07. Patient target
-    variable: A07_PatientTarget
+    variable: patient_target
     type: code
     codesFile: LIST_A3_Target.dic
     nbCharCode: 25
@@ -70,7 +70,7 @@ questions:
     translations:
       - label: A07. Patient target
   - label: Date of birth
-    variable: A041_DateOfBirth
+    variable: date_of_birth
     type: date
     min: 3652
     format: jj/mm/aaaa
@@ -80,7 +80,7 @@ questions:
     translations:
       - label: A04. Date of birth
   - label: Age
-    variable: A05_Age
+    variable: age
     type: number
     nbDecimals: 2
     numberType: 2
@@ -99,7 +99,7 @@ questions:
           - mod-FR-6
           - mod-FR-7
   - label: New Patient
-    variable: GHC_NewPatient
+    variable: new_patient
     type: options
     nbOptions: 2
     options:
@@ -115,7 +115,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Visit date
-    variable: GHC_VisitDate
+    variable: visit_date
     type: date
     min: 32872
     format: jj/mm/aaaa
@@ -125,7 +125,7 @@ questions:
     translations:
       - label: B021. Visit date
   - label: MDM staff
-    variable: GHC_MDMstaff
+    variable: md_mstaff
     type: code
     codesFile: LIST_A2_MDMstaff.dic
     nbCharCode: 25
@@ -134,7 +134,7 @@ questions:
     translations:
       - label: B03. MDM staff
   - label: Constitutional
-    variable: GHC_Symptoms_Constitutional
+    variable: symptoms_constitutional
     type: multipleOptions
     nbOptions: 7
     options:
@@ -161,7 +161,7 @@ questions:
           - mod-FR-10
           - Other
   - label: Fatigue
-    variable: GHC_Constitutional_Fatigue
+    variable: constitutional_fatigue
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -170,7 +170,7 @@ questions:
     translations:
       - label: Fatigue
   - label: Fever
-    variable: GHC_Constitutional_Fever
+    variable: constitutional_fever
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -179,7 +179,7 @@ questions:
     translations:
       - label: Fever
   - label: Night sweats
-    variable: GHC_Constitutional_NightSweats
+    variable: constitutional_night_sweats
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -188,7 +188,7 @@ questions:
     translations:
       - label: Night sweats
   - label: Appetitie loss
-    variable: GHC_Constitutional_AppetitieLoss
+    variable: constitutional_appetitie_loss
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -197,7 +197,7 @@ questions:
     translations:
       - label: Appetitie loss
   - label: Weight loss
-    variable: GHC_Constitutional_WeightLoss
+    variable: constitutional_weight_loss
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -206,7 +206,7 @@ questions:
     translations:
       - label: Weight loss
   - label: Pain
-    variable: GHC_Constitutional_Pain
+    variable: constitutional_pain
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -215,7 +215,7 @@ questions:
     translations:
       - label: Pain
   - label: Other
-    variable: GHC_Constitutional_Other
+    variable: constitutional_other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -224,7 +224,7 @@ questions:
     translations:
       - label: 'G012. if other, specify'
   - label: Respiratory
-    variable: GHC_Symptoms_Respiratory
+    variable: symptoms_respiratory
     type: multipleOptions
     nbOptions: 7
     options:
@@ -251,7 +251,7 @@ questions:
           - mod-FR-7
           - Other
   - label: Non-productive cough
-    variable: GHC_Respiratory_NonProdCough
+    variable: respiratory_non_prod_cough
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -260,7 +260,7 @@ questions:
     translations:
       - label: Non-productive cough
   - label: Productive Cough
-    variable: GHC_Respiratory_ProductiveCough
+    variable: respiratory_productive_cough
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -269,7 +269,7 @@ questions:
     translations:
       - label: Productive Cough
   - label: Hemoptysis
-    variable: GHC_Respiratory_Hemoptysis
+    variable: respiratory_hemoptysis
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -278,7 +278,7 @@ questions:
     translations:
       - label: Hemoptysis
   - label: Difficulty breathing
-    variable: GHC_Respiratory_DiffBreathing
+    variable: respiratory_diff_breathing
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -287,7 +287,7 @@ questions:
     translations:
       - label: Difficulty breathing
   - label: Chest Pain
-    variable: GHC_Respiratory_ChestPain
+    variable: respiratory_chest_pain
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -296,7 +296,7 @@ questions:
     translations:
       - label: Chest Pain
   - label: Palpitation
-    variable: GHC_Respiratory_Palpitation
+    variable: respiratory_palpitation
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -305,7 +305,7 @@ questions:
     translations:
       - label: Palpitation
   - label: Other
-    variable: GHC_Respiratory_Other
+    variable: respiratory_other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -314,7 +314,7 @@ questions:
     translations:
       - label: 'G022. If other, specify'
   - label: Gastrointestinal
-    variable: GHC_Symptoms_Gastrointestinal
+    variable: symptoms_gastrointestinal
     type: multipleOptions
     nbOptions: 6
     options:
@@ -339,7 +339,7 @@ questions:
           - mod-FR-6
           - Other
   - label: Abdominal Pain
-    variable: GHC_Gastrointestinal_AbdPain
+    variable: gastrointestinal_abd_pain
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -348,7 +348,7 @@ questions:
     translations:
       - label: Abdominal Pain
   - label: Nausea
-    variable: GHC_Gastrointestinal_Nausea
+    variable: gastrointestinal_nausea
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -357,7 +357,7 @@ questions:
     translations:
       - label: Nausea
   - label: Vomiting
-    variable: GHC_Gastrointestinal_Vomiting
+    variable: gastrointestinal_vomiting
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -366,7 +366,7 @@ questions:
     translations:
       - label: Vomiting
   - label: Dysphagia
-    variable: GHC_Gastrointestinal_Dysphagia
+    variable: gastrointestinal_dysphagia
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -375,7 +375,7 @@ questions:
     translations:
       - label: Dysphagia
   - label: Diarrhea
-    variable: GHC_Gastrointestinal_Diarrhea
+    variable: gastrointestinal_diarrhea
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -384,7 +384,7 @@ questions:
     translations:
       - label: Diarrhea
   - label: Other
-    variable: GHC_Gastrointestinal_Other
+    variable: gastrointestinal_other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -393,7 +393,7 @@ questions:
     translations:
       - label: 'G032. If other, specify'
   - label: Neurological
-    variable: GHC_Symptoms_Neurological
+    variable: symptoms_neurological
     type: multipleOptions
     nbOptions: 6
     options:
@@ -418,7 +418,7 @@ questions:
           - mod-FR-6
           - mod-FR-7
   - label: Headache
-    variable: GHC_Neuro_Headache
+    variable: neuro_headache
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -427,7 +427,7 @@ questions:
     translations:
       - label: Headache
   - label: Confusion
-    variable: GHC_Neuro_Confusion
+    variable: neuro_confusion
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -436,7 +436,7 @@ questions:
     translations:
       - label: Confusion
   - label: Memory Problem
-    variable: GHC_Neuro_MemProblem
+    variable: neuro_mem_problem
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -445,7 +445,7 @@ questions:
     translations:
       - label: Memory Problem
   - label: Tingling and Numbness of limbs
-    variable: GHC_Neuro_Tingling
+    variable: neuro_tingling
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -454,7 +454,7 @@ questions:
     translations:
       - label: Tingling and Numbness of limbs
   - label: Insomnia
-    variable: GHC_Neuro_Insomnia
+    variable: neuro_insomnia
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -463,7 +463,7 @@ questions:
     translations:
       - label: Insomnia
   - label: Yawning
-    variable: GHC_Neuro_Yawning
+    variable: neuro_yawning
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -472,7 +472,7 @@ questions:
     translations:
       - label: Yawning
   - label: Skin Manifestation
-    variable: GHC_Symptoms_SkinManifestation
+    variable: symptoms_skin_manifestation
     type: multipleOptions
     nbOptions: 4
     options:
@@ -493,7 +493,7 @@ questions:
           - Lump/Nodules
           - Other
   - label: Itchiness
-    variable: GHC_Skin_Itchiness
+    variable: skin_itchiness
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -502,7 +502,7 @@ questions:
     translations:
       - label: Itchiness
   - label: Rash
-    variable: GHC_Skin_Rash
+    variable: skin_rash
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -511,7 +511,7 @@ questions:
     translations:
       - label: Rash
   - label: Lump/Nodules
-    variable: GHC_Skin_Lump
+    variable: skin_lump
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -520,7 +520,7 @@ questions:
     translations:
       - label: Lump/Nodules
   - label: Other
-    variable: GHC_Skin_Other
+    variable: skin_other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -529,7 +529,7 @@ questions:
     translations:
       - label: Other
   - label: Additional comments
-    variable: GHC_Symptoms_AdditionalComments
+    variable: symptoms_additional_comments
     type: open
     nbLines: 3
     nbCharLines: 0
@@ -538,7 +538,7 @@ questions:
     translations:
       - label: G09. Additional comments
   - label: Eye
-    variable: GHC_Eye
+    variable: eye
     type: options
     nbOptions: 3
     options:
@@ -555,7 +555,7 @@ questions:
           - Abnormal
           - Not done
   - label: Eye Comment (if abnormal describe)
-    variable: GHC_EyeComment
+    variable: eye_comment
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -564,7 +564,7 @@ questions:
     translations:
       - label: Eye Comment (if abnormal describe)
   - label: 'Ears, Nose'
-    variable: GHC_EarsNose
+    variable: ears_nose
     type: options
     nbOptions: 3
     options:
@@ -581,7 +581,7 @@ questions:
           - Abnormal
           - Not done
   - label: Comment (if abnormal describe)
-    variable: GHC_EarsNoseComment
+    variable: ears_nose_comment
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -590,7 +590,7 @@ questions:
     translations:
       - label: H022. Comment (if abnormal describe)
   - label: Oral
-    variable: GHC_Oral
+    variable: oral
     type: options
     nbOptions: 3
     options:
@@ -607,7 +607,7 @@ questions:
           - Abnormal
           - Not done
   - label: Comment (if abnormal describe)
-    variable: GHC_OralComment
+    variable: oral_comment
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -616,7 +616,7 @@ questions:
     translations:
       - label: H012. Comment (if abnormal describe)
   - label: Lymph nodes
-    variable: GHC_LymphNodes
+    variable: lymph_nodes
     type: options
     nbOptions: 3
     options:
@@ -633,7 +633,7 @@ questions:
           - Abnormal
           - Not done
   - label: Comment (if abnormal describe)
-    variable: GHC_LymphNodesComment
+    variable: lymph_nodes_comment
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -642,7 +642,7 @@ questions:
     translations:
       - label: H032. Comment (if abnormal describe)
   - label: Heart
-    variable: GHC_Heart
+    variable: heart
     type: options
     nbOptions: 3
     options:
@@ -659,7 +659,7 @@ questions:
           - Abnormal
           - Not done
   - label: Comment (if abnormal describe)
-    variable: GHC_HeartComment
+    variable: heart_comment
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -668,7 +668,7 @@ questions:
     translations:
       - label: H042. Comment (if abnormal describe)
   - label: Lungs
-    variable: GHC_Lungs
+    variable: lungs
     type: options
     nbOptions: 3
     options:
@@ -685,7 +685,7 @@ questions:
           - Abnormal
           - Not done
   - label: Comment (if abnormal describe)
-    variable: GHC_LungsComment
+    variable: lungs_comment
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -694,7 +694,7 @@ questions:
     translations:
       - label: H052. Comment (if abnormal describe)
   - label: Abdomen
-    variable: GHC_Abdomen
+    variable: abdomen
     type: options
     nbOptions: 3
     options:
@@ -711,7 +711,7 @@ questions:
           - Abnormal
           - Not done
   - label: Comment (if abnormal describe)
-    variable: GHC_AbdomenComment
+    variable: abdomen_comment
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -720,7 +720,7 @@ questions:
     translations:
       - label: H062. Comment (if abnormal describe)
   - label: Neurological
-    variable: GHC_Neurological
+    variable: neurological
     type: options
     nbOptions: 3
     options:
@@ -737,7 +737,7 @@ questions:
           - Abnormal
           - Not done
   - label: Comment (if abnormal describe)
-    variable: GHC_NeurologicalComment
+    variable: neurological_comment
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -746,7 +746,7 @@ questions:
     translations:
       - label: H102. Comment (if abnormal describe)
   - label: Additional comments
-    variable: GHC_AdditionalComments
+    variable: additional_comments
     type: open
     nbLines: 3
     nbCharLines: 0
@@ -755,7 +755,7 @@ questions:
     translations:
       - label: H13. Additional comments
   - label: Category
-    variable: GHC_Category1
+    variable: category1
     type: code
     codesFile: LIST_I011_Diagnosis.dic
     nbCharCode: 25
@@ -768,7 +768,7 @@ questions:
     translations:
       - label: I011. Category
   - label: Description
-    variable: GHC_Description1
+    variable: description1
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -780,7 +780,7 @@ questions:
     translations:
       - label: I011. Description
   - label: Category
-    variable: GHC_Category2
+    variable: category2
     type: code
     codesFile: LIST_I011_Diagnosis.dic
     nbCharCode: 25
@@ -793,7 +793,7 @@ questions:
     translations:
       - label: I021. Category
   - label: Description
-    variable: GHC_Description2
+    variable: description2
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -805,7 +805,7 @@ questions:
     translations:
       - label: I021. Description
   - label: Category
-    variable: GHC_Category3
+    variable: category3
     type: code
     codesFile: LIST_I011_Diagnosis.dic
     nbCharCode: 25
@@ -818,7 +818,7 @@ questions:
     translations:
       - label: I031. Category
   - label: Description
-    variable: GHC_Description3
+    variable: description3
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -830,7 +830,7 @@ questions:
     translations:
       - label: I031. Description
   - label: Category
-    variable: GHC_Category4
+    variable: category4
     type: code
     codesFile: LIST_I011_Diagnosis.dic
     nbCharCode: 25
@@ -843,7 +843,7 @@ questions:
     translations:
       - label: I041. Category
   - label: Description
-    variable: GHC_Description4
+    variable: description4
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -855,7 +855,7 @@ questions:
     translations:
       - label: I041. Description
   - label: Allergy
-    variable: GHC_Allergy
+    variable: allergy
     type: multipleOptions
     nbOptions: 3
     options:
@@ -874,7 +874,7 @@ questions:
           - Sulfa
           - Other
   - label: 'If other, specify'
-    variable: GHC_AllergyOther
+    variable: allergy_other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -883,7 +883,7 @@ questions:
     translations:
       - label: 'J012. If other, specify'
   - label: Medicine name
-    variable: GHC_MedicineName1
+    variable: medicine_name1
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -892,7 +892,7 @@ questions:
     translations:
       - label: J0211. Medicine name
   - label: Dosage
-    variable: GHC_Dosage1
+    variable: dosage1
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -901,7 +901,7 @@ questions:
     translations:
       - label: J0212. Dosage
   - label: Frequency
-    variable: GHC_Frequency1
+    variable: frequency1
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -910,7 +910,7 @@ questions:
     translations:
       - label: J0213. Frequency
   - label: Number days
-    variable: GHC_NumberDays1
+    variable: number_days1
     type: number
     nbDecimals: 2
     numberType: 2
@@ -928,7 +928,7 @@ questions:
           - From 1151321458 to 1381585749
           - 1381585749 and more
   - label: Medicine name
-    variable: GHC_MedicineName2
+    variable: medicine_name2
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -937,7 +937,7 @@ questions:
     translations:
       - label: J0221. Medicine name
   - label: Dosage
-    variable: GHC_Dosage2
+    variable: dosage2
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -946,7 +946,7 @@ questions:
     translations:
       - label: J0222. Dosage
   - label: Frequency
-    variable: GHC_Frequency2
+    variable: frequency2
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -955,7 +955,7 @@ questions:
     translations:
       - label: J0223. Frequency
   - label: Number days
-    variable: GHC_NumberDays2
+    variable: number_days2
     type: number
     nbDecimals: 2
     numberType: 2
@@ -973,7 +973,7 @@ questions:
           - From 1178573931 to 1414288717
           - 1414288717 and more
   - label: Medicine name
-    variable: GHC_MedicineName3
+    variable: medicine_name3
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -982,7 +982,7 @@ questions:
     translations:
       - label: J0231. Medicine name
   - label: Dosage
-    variable: GHC_Dosage3
+    variable: dosage3
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -991,7 +991,7 @@ questions:
     translations:
       - label: J0232. Dosage
   - label: Frequency
-    variable: GHC_Frequency3
+    variable: frequency3
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1000,7 +1000,7 @@ questions:
     translations:
       - label: J0233. Frequency
   - label: Number days
-    variable: GHC_NumberDays3
+    variable: number_days3
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1018,7 +1018,7 @@ questions:
           - From 1080852480 to 1297022976
           - 1297022976 and more
   - label: Medicine name
-    variable: GHC_MedicineName4
+    variable: medicine_name4
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -1027,7 +1027,7 @@ questions:
     translations:
       - label: J0241. Medicine name
   - label: Dosage
-    variable: GHC_Dosage4
+    variable: dosage4
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1036,7 +1036,7 @@ questions:
     translations:
       - label: J0242. Dosage
   - label: Frequency
-    variable: GHC_Frequency4
+    variable: frequency4
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1045,7 +1045,7 @@ questions:
     translations:
       - label: J0243. Frequency
   - label: Number days
-    variable: GHC_NumberDays4
+    variable: number_days4
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1063,7 +1063,7 @@ questions:
           - From 100 to 120
           - 120 and more
   - label: Medicine name
-    variable: GHC_MedicineName5
+    variable: medicine_name5
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -1072,7 +1072,7 @@ questions:
     translations:
       - label: J0251. Medicine name
   - label: Dosage
-    variable: GHC_Dosage5
+    variable: dosage5
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1081,7 +1081,7 @@ questions:
     translations:
       - label: J0252. Dosage
   - label: Frequency
-    variable: GHC_Frequency5
+    variable: frequency5
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1090,7 +1090,7 @@ questions:
     translations:
       - label: J0253. Frequency
   - label: Number days
-    variable: GHC_NumberDays5
+    variable: number_days5
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1108,7 +1108,7 @@ questions:
           - From 100 to 120
           - 120 and more
   - label: Medicine name
-    variable: GHC_MedicineName6
+    variable: medicine_name6
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -1117,7 +1117,7 @@ questions:
     translations:
       - label: J0261. Medicine name
   - label: Dosage
-    variable: GHC_Dosage6
+    variable: dosage6
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1126,7 +1126,7 @@ questions:
     translations:
       - label: J0262. Dosage
   - label: Frequency
-    variable: GHC_Frequency6
+    variable: frequency6
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1135,7 +1135,7 @@ questions:
     translations:
       - label: J0263. Frequency
   - label: Number days
-    variable: GHC_NumberDays6
+    variable: number_days6
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1153,7 +1153,7 @@ questions:
           - From 100 to 120
           - 120 and more
   - label: Medicine name
-    variable: GHC_MedicineName7
+    variable: medicine_name7
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -1162,7 +1162,7 @@ questions:
     translations:
       - label: J0271. Medicine name
   - label: Dosage
-    variable: GHC_Dosage7
+    variable: dosage7
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1171,7 +1171,7 @@ questions:
     translations:
       - label: J0272. Dosage
   - label: Frequency
-    variable: GHC_Frequency7
+    variable: frequency7
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1180,7 +1180,7 @@ questions:
     translations:
       - label: J0273. Frequency
   - label: Number days
-    variable: GHC_NumberDays7
+    variable: number_days7
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1198,7 +1198,7 @@ questions:
           - From 100 to 120
           - 120 and more
   - label: Medicine name
-    variable: GHC_MedicineName8
+    variable: medicine_name8
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -1207,7 +1207,7 @@ questions:
     translations:
       - label: J0281. Medicine name
   - label: Dosage
-    variable: GHC_Dosage8
+    variable: dosage8
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1216,7 +1216,7 @@ questions:
     translations:
       - label: J0282. Dosage
   - label: Frequency
-    variable: GHC_Frequency8
+    variable: frequency8
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1225,7 +1225,7 @@ questions:
     translations:
       - label: J0283. Frequency
   - label: Number days
-    variable: GHC_NumberDays8
+    variable: number_days8
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1243,7 +1243,7 @@ questions:
           - From 100 to 120
           - 120 and more
   - label: Medicine name
-    variable: GHC_MedicineName9
+    variable: medicine_name9
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -1252,7 +1252,7 @@ questions:
     translations:
       - label: J0291. Medicine name
   - label: Dosage
-    variable: GHC_Dosage9
+    variable: dosage9
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1261,7 +1261,7 @@ questions:
     translations:
       - label: J0292. Dosage
   - label: Frequency
-    variable: GHC_Frequency9
+    variable: frequency9
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1270,7 +1270,7 @@ questions:
     translations:
       - label: J0293. Frequency
   - label: Number days
-    variable: GHC_NumberDays9
+    variable: number_days9
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1288,7 +1288,7 @@ questions:
           - From 100 to 120
           - 120 and more
   - label: Medicine name
-    variable: GHC_MedicineName10
+    variable: medicine_name10
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -1297,7 +1297,7 @@ questions:
     translations:
       - label: J0301. Medicine name
   - label: Dosage
-    variable: GHC_Dosage10
+    variable: dosage10
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1306,7 +1306,7 @@ questions:
     translations:
       - label: J0302. Dosage
   - label: Frequency
-    variable: GHC_Frequency10
+    variable: frequency10
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1315,7 +1315,7 @@ questions:
     translations:
       - label: J0303. Frequency
   - label: Number days
-    variable: GHC_NumberDays10
+    variable: number_days10
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1333,7 +1333,7 @@ questions:
           - From 100 to 120
           - 120 and more
   - label: HBsAg
-    variable: GHC_HBsAg
+    variable: h_bs_ag
     type: options
     nbOptions: 2
     options:
@@ -1348,7 +1348,7 @@ questions:
           - Positive
           - Negative
   - label: HBsAb
-    variable: GHC_HBsAb
+    variable: h_bs_ab
     type: options
     nbOptions: 2
     options:
@@ -1363,7 +1363,7 @@ questions:
           - Positive
           - Negative
   - label: HCVAb
-    variable: GHC_HCVAb
+    variable: hcv_ab
     type: options
     nbOptions: 2
     options:
@@ -1378,7 +1378,7 @@ questions:
           - Positive
           - Negative
   - label: APRI
-    variable: GHC_APRI
+    variable: apri
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1387,7 +1387,7 @@ questions:
     translations:
       - label: APRI
   - label: Liver Fibrosis
-    variable: GHC_Liver_Fibrosis
+    variable: liver_fibrosis
     type: options
     nbOptions: 4
     options:
@@ -1406,7 +1406,7 @@ questions:
           - Stage 3
           - Stage 4
   - label: Patient should return in
-    variable: GHC_PatientShouldReturnIn
+    variable: patient_should_return_in
     type: options
     nbOptions: 8
     options:
@@ -1434,7 +1434,7 @@ questions:
           - 6 mths
           - Other
   - label: Other
-    variable: GHC_ShouldReturnIn_Other
+    variable: should_return_in_other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1443,7 +1443,7 @@ questions:
     translations:
       - label: L21. Other
   - label: Date of next visit
-    variable: GHC_DateNextVisit
+    variable: date_next_visit
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -1451,7 +1451,7 @@ questions:
     translations:
       - label: L3. Date of next visit
   - label: Verify patient
-    variable: Verify
+    variable: verify
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1462,7 +1462,7 @@ questions:
         options:
           - val = 1
   - label: Last registration date
-    variable: LastRegistrationDate
+    variable: last_registration_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -1471,7 +1471,7 @@ questions:
     translations:
       - label: Last registration date
   - label: GHC Key
-    variable: Key
+    variable: key
     type: open
     nbLines: 2
     nbCharLines: 0

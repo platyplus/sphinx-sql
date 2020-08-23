@@ -8,7 +8,7 @@ headers:
   pannelStage: 10
 questions:
   - label: MDM code (Patient ID)
-    variable: MDMcode
+    variable: md_mcode
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -16,27 +16,27 @@ questions:
     attributes: 32
     vb: "V_sexe = \"1\"€\x81If A03_Sexe In \"Female\" Then€\x81V_sexe = \"2\"€\x81EndIf€\x81if A07_PatientTarget In \"DU\" Then€\x81        V_PT=\"D\"€\x81\telse€\x81\t\tif A07_PatientTarget In \"DUP\" Then€\x81\t\t\tV_PT=\"P\"€\x81\t\t\telse€\x81\t\t\t\tif A07_PatientTarget In \"IDU\" Then€\x81\t\t\t\t\tV_PT=\"I\"€\x81\t\t\t\t\telse€\x81\t\t\t\t\t\tif A07_PatientTarget In \"IDUP\" Then€\x81\t\t\t\t\t\t\tV_PT=\"P\"€\x81\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\tif A07_PatientTarget In \"MSM\" Then€\x81\t\t\t\t\t\t\t\t\tV_PT=\"M\"€\x81\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"MSMP\" Then€\x81\t\t\t\t\t\t\t\t\t\t\tV_PT=\"P\"€\x81\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"SW\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"S\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"SWP\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"P\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"CH\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"C\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"GP\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"G\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"Other Partner\" Then €\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"P\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"Other High Risk Group\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"O\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV=PT=\"\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tend if€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tend if€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tend if€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\tendif€\x81\t\t\t\tendif€\x81\t\t\t\t€\x81\t\tendif€\x81endif€\x81MDMcode = MDMlocation.Catcode(3) & V_PT & V_sexe & SerialNumber"
   - label: A00. Registration date
-    variable: A00_RegistrationDate
+    variable: registration_date
     type: date
     format: jj/mm/aaaa
     plan: true
     attributes: 32
   - label: A01. Name
-    variable: A01_PatientName
+    variable: patient_name
     type: open
     nbLines: 1
     nbCharLines: 0
     plan: true
     attributes: 32
   - label: A02. Father’s name
-    variable: A02_FatherName
+    variable: father_name
     type: open
     nbLines: 1
     nbCharLines: 0
     plan: true
     attributes: 32
   - label: A03. Sex
-    variable: A03_Sexe
+    variable: sexe
     type: options
     nbOptions: 2
     options:
@@ -46,7 +46,7 @@ questions:
     plan: true
     attributes: 32
   - label: A04. Date of birth
-    variable: A041_DateOfBirth
+    variable: date_of_birth
     type: date
     min: 3652
     format: jj/mm/aaaa
@@ -54,7 +54,7 @@ questions:
     plan: true
     attributes: 160
   - label: A042. Date of birth estimated
-    variable: A042_DateOfBirthEstimated
+    variable: date_of_birth_estimated
     type: options
     nbOptions: 1
     options:
@@ -63,7 +63,7 @@ questions:
     plan: true
     attributes: 32
   - label: Age
-    variable: A05_Age
+    variable: age
     type: number
     nbDecimals: 2
     numberType: 2
@@ -72,7 +72,7 @@ questions:
     attributes: 32
     vb: "If  Not A041_DateOfBirth.EstNonRéponse Then€\x81    A05_Age = (A00_RegistrationDate - A041_DateOfBirth) / 365€\x81EndIf"
   - label: A07. Patient target
-    variable: A07_PatientTarget
+    variable: patient_target
     type: code
     codesFile: LIST_A3_Target.dic
     nbCharCode: 25
@@ -80,14 +80,14 @@ questions:
     attributes: 32
     vb: Majuscule(A07_PatientTarget)
   - label: Verify patient
-    variable: Verify
+    variable: verify
     type: number
     nbDecimals: 2
     numberType: 2
     plan: true
     attributes: 32
   - label: D00. MDM Staff
-    variable: D00_MDMStaff
+    variable: mdm_staff
     type: code
     codesFile: LIST_A2_MDMstaff.dic
     nbCharCode: 25
@@ -95,14 +95,14 @@ questions:
     plan: true
     attributes: 161
   - label: D01. Test date
-    variable: D01_TestDate
+    variable: test_date
     type: date
     format: jj/mm/aaaa
     instructions: La réponse est obligatoire.
     plan: true
     attributes: 161
   - label: D0201. MDM Lab?
-    variable: D0201_MDMLab
+    variable: mdm_lab
     type: options
     nbOptions: 2
     options:
@@ -112,7 +112,7 @@ questions:
     plan: true
     attributes: 32
   - label: D0201. Type of Test
-    variable: D0201_TypeofTest
+    variable: typeof_test
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -121,7 +121,7 @@ questions:
     vb: D0201_TypeofTest = D0201_TestName.CatCode(1)
     autoVariable: Basic
   - label: D0201. Test Name
-    variable: D0201_TestName
+    variable: test_name
     type: code
     codesFile: LAB_TestName.txt
     nbCharCode: 25
@@ -129,7 +129,7 @@ questions:
     attributes: 32
     vb: D0201_TestName = D0201_LabSamplesCode.CatCode(2)
   - label: D0201. Type Of Sample
-    variable: D0201_TypeOfSample
+    variable: type_of_sample
     type: code
     codesFile: LAB_TypeOfSample.txt
     nbCharCode: 25
@@ -137,7 +137,7 @@ questions:
     attributes: 32
     vb: D0201_TypeOfSample = D0201_LabSamplesCode.CatCode(3)
   - label: D0201. No Of Result
-    variable: D0201_NoOfResult
+    variable: no_of_result
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -145,7 +145,7 @@ questions:
     attributes: 32
     vb: D0201_NoOfSample = D0201_LabSamplesCode.CatCode(4)
   - label: D0201. Unit
-    variable: D0201_Unit
+    variable: unit
     type: code
     codesFile: LAB_Unit.txt
     nbCharCode: 25
@@ -153,7 +153,7 @@ questions:
     attributes: 32
     vb: D0201_TypeOfTest = D0201_TestName.CatCode(1)
   - label: D0201. Results
-    variable: D0201_Results
+    variable: results
     type: code
     codesFile: LAB_Result.txt
     nbCharCode: 25
@@ -161,7 +161,7 @@ questions:
     attributes: 32
     vb: D0201_Results = D0201_LabSamplesCode.CatCode(5)
   - label: D0201. Description
-    variable: D0201_Description
+    variable: description
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -169,7 +169,7 @@ questions:
     attributes: 32
     vb: D0201_Results = D0201_LabSamplesCode.CatCode(5)
   - label: D0201. Normal Value
-    variable: D0201_NormalValue
+    variable: normal_value
     type: open
     codesFile: LAB_TestName.txt
     nbLines: 1
@@ -179,7 +179,7 @@ questions:
     vb: D0201_NormalValue = D0201_TestName.CatCode(2)
     autoVariable: Basic
   - label: D0202. MDM Lab?
-    variable: D0202_MDMLab
+    variable: mdm_lab
     type: options
     nbOptions: 2
     options:
@@ -189,7 +189,7 @@ questions:
     plan: true
     attributes: 32
   - label: D0202. Type of Test
-    variable: D0202_TypeofTest
+    variable: typeof_test
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -198,7 +198,7 @@ questions:
     vb: D0202_TypeofTest = D0202_TestName.CatCode(1)
     autoVariable: Basic
   - label: D0202. Test Name
-    variable: D0202_TestName
+    variable: test_name
     type: code
     codesFile: LAB_TestName.txt
     nbCharCode: 25
@@ -206,7 +206,7 @@ questions:
     attributes: 32
     vb: D0202_TestName = D0202_LabSamplesCode.CatCode(2)
   - label: D0202. Type Of Sample
-    variable: D0202_TypeOfSample
+    variable: type_of_sample
     type: code
     codesFile: LAB_TypeOfSample.txt
     nbCharCode: 25
@@ -214,7 +214,7 @@ questions:
     attributes: 32
     vb: D0202_TypeOfSample = D0202_LabSamplesCode.CatCode(3)
   - label: D0202. No Of Result
-    variable: D0202_NoOfResult
+    variable: no_of_result
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -222,7 +222,7 @@ questions:
     attributes: 32
     vb: D0202_NoOfSample = D0202_LabSamplesCode.CatCode(4)
   - label: D0202. Unit
-    variable: D0202_Unit
+    variable: unit
     type: code
     codesFile: LAB_Unit.txt
     nbCharCode: 25
@@ -230,7 +230,7 @@ questions:
     attributes: 32
     vb: D0202_TypeOfTest = D0202_TestName.CatCode(1)
   - label: D0202. Results
-    variable: D0202_Results
+    variable: results
     type: code
     codesFile: LAB_Result.txt
     nbCharCode: 25
@@ -238,7 +238,7 @@ questions:
     attributes: 32
     vb: D0202_Results = D0202_LabSamplesCode.CatCode(5)
   - label: D0202. Description
-    variable: D0202_Description
+    variable: description
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -246,7 +246,7 @@ questions:
     attributes: 32
     vb: D0202_Results = D0202_LabSamplesCode.CatCode(5)
   - label: D0202. Normal Value
-    variable: D0202_NormalValue
+    variable: normal_value
     type: open
     codesFile: LAB_TestName.txt
     nbLines: 1
@@ -256,7 +256,7 @@ questions:
     vb: D0202_NormalValue = D0202_TestName.CatCode(2)
     autoVariable: Basic
   - label: D0203. MDM Lab?
-    variable: D0203_MDMLab
+    variable: mdm_lab
     type: options
     nbOptions: 2
     options:
@@ -266,7 +266,7 @@ questions:
     plan: true
     attributes: 32
   - label: D0203. Type of Test
-    variable: D0203_TypeofTest
+    variable: typeof_test
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -275,7 +275,7 @@ questions:
     vb: D0203_TypeofTest = D0203_TestName.CatCode(1)
     autoVariable: Basic
   - label: D0203. Test Name
-    variable: D0203_TestName
+    variable: test_name
     type: code
     codesFile: LAB_TestName.txt
     nbCharCode: 25
@@ -283,7 +283,7 @@ questions:
     attributes: 32
     vb: D0203_TestName = D0203_LabSamplesCode.CatCode(2)
   - label: D0203. Type Of Sample
-    variable: D0203_TypeOfSample
+    variable: type_of_sample
     type: code
     codesFile: LAB_TypeOfSample.txt
     nbCharCode: 25
@@ -291,7 +291,7 @@ questions:
     attributes: 32
     vb: D0203_TypeOfSample = D0203_LabSamplesCode.CatCode(3)
   - label: D0203. No Of Result
-    variable: D0203_NoOfResult
+    variable: no_of_result
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -299,7 +299,7 @@ questions:
     attributes: 32
     vb: D0203_NoOfSample = D0203_LabSamplesCode.CatCode(4)
   - label: D0203. Unit
-    variable: D0203_Unit
+    variable: unit
     type: code
     codesFile: LAB_Unit.txt
     nbCharCode: 25
@@ -307,7 +307,7 @@ questions:
     attributes: 32
     vb: D0203_TypeOfTest = D0203_TestName.CatCode(1)
   - label: D0203. Results
-    variable: D0203_Results
+    variable: results
     type: code
     codesFile: LAB_Result.txt
     nbCharCode: 25
@@ -315,7 +315,7 @@ questions:
     attributes: 32
     vb: D0203_Results = D0203_LabSamplesCode.CatCode(5)
   - label: D0203. Description
-    variable: D0203_Description
+    variable: description
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -323,7 +323,7 @@ questions:
     attributes: 32
     vb: D0203_Results = D0203_LabSamplesCode.CatCode(5)
   - label: D0203. Normal Value
-    variable: D0203_NormalValue
+    variable: normal_value
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -332,7 +332,7 @@ questions:
     vb: D0203_NormalValue = D0203_TestName.CatCode(2)
     autoVariable: Basic
   - label: D0204. MDM Lab?
-    variable: D0204_MDMLab
+    variable: mdm_lab
     type: options
     nbOptions: 2
     options:
@@ -342,7 +342,7 @@ questions:
     plan: true
     attributes: 32
   - label: D0204. Type of Test
-    variable: D0204_TypeofTest
+    variable: typeof_test
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -351,7 +351,7 @@ questions:
     vb: D0204_TypeofTest = D0204_TestName.CatCode(1)
     autoVariable: Basic
   - label: D0204. Test Name
-    variable: D0204_TestName
+    variable: test_name
     type: code
     codesFile: LAB_TestName.txt
     nbCharCode: 25
@@ -359,7 +359,7 @@ questions:
     attributes: 32
     vb: D0204_TestName = D0204_LabSamplesCode.CatCode(2)
   - label: D0204. Type Of Sample
-    variable: D0204_TypeOfSample
+    variable: type_of_sample
     type: code
     codesFile: LAB_TypeOfSample.txt
     nbCharCode: 25
@@ -367,7 +367,7 @@ questions:
     attributes: 32
     vb: D0204_TypeOfSample = D0204_LabSamplesCode.CatCode(3)
   - label: D0204. No Of Result
-    variable: D0204_NoOfResult
+    variable: no_of_result
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -375,7 +375,7 @@ questions:
     attributes: 32
     vb: D0204_NoOfSample = D0204_LabSamplesCode.CatCode(4)
   - label: D0204. Unit
-    variable: D0204_Unit
+    variable: unit
     type: code
     codesFile: LAB_Unit.txt
     nbCharCode: 25
@@ -383,7 +383,7 @@ questions:
     attributes: 32
     vb: D0204_TypeOfTest = D0204_TestName.CatCode(1)
   - label: D0204. Results
-    variable: D0204_Results
+    variable: results
     type: code
     codesFile: LAB_Result.txt
     nbCharCode: 25
@@ -391,7 +391,7 @@ questions:
     attributes: 32
     vb: D0204_Results = D0204_LabSamplesCode.CatCode(5)
   - label: D0204. Description
-    variable: D0204_Description
+    variable: description
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -399,7 +399,7 @@ questions:
     attributes: 32
     vb: D0204_Results = D0204_LabSamplesCode.CatCode(5)
   - label: D0204. Normal Value
-    variable: D0204_NormalValue
+    variable: normal_value
     type: open
     codesFile: LAB_TestName.txt
     nbLines: 1
@@ -409,7 +409,7 @@ questions:
     vb: D0204_NormalValue = D0204_TestName.CatCode(2)
     autoVariable: Basic
   - label: D0205. MDM Lab?
-    variable: D0205_MDMLab
+    variable: mdm_lab
     type: options
     nbOptions: 2
     options:
@@ -419,7 +419,7 @@ questions:
     plan: true
     attributes: 32
   - label: D0205. Type of Test
-    variable: D0205_TypeofTest
+    variable: typeof_test
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -428,7 +428,7 @@ questions:
     vb: D0205_TypeofTest = D0205_TestName.CatCode(1)
     autoVariable: Basic
   - label: D0205. Test Name
-    variable: D0205_TestName
+    variable: test_name
     type: code
     codesFile: LAB_TestName.txt
     nbCharCode: 25
@@ -436,7 +436,7 @@ questions:
     attributes: 32
     vb: D0205_TestName = D0205_LabSamplesCode.CatCode(2)
   - label: D0205. Type Of Sample
-    variable: D0205_TypeOfSample
+    variable: type_of_sample
     type: code
     codesFile: LAB_TypeOfSample.txt
     nbCharCode: 25
@@ -444,7 +444,7 @@ questions:
     attributes: 32
     vb: D0205_TypeOfSample = D0205_LabSamplesCode.CatCode(3)
   - label: D0205. No Of Result
-    variable: D0205_NoOfResult
+    variable: no_of_result
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -452,7 +452,7 @@ questions:
     attributes: 32
     vb: D0205_NoOfSample = D0205_LabSamplesCode.CatCode(4)
   - label: D0205. Unit
-    variable: D0205_Unit
+    variable: unit
     type: code
     codesFile: LAB_Unit.txt
     nbCharCode: 25
@@ -460,7 +460,7 @@ questions:
     attributes: 32
     vb: D0205_TypeOfTest = D0205_TestName.CatCode(1)
   - label: D0205. Results
-    variable: D0205_Results
+    variable: results
     type: code
     codesFile: LAB_Result.txt
     nbCharCode: 25
@@ -468,7 +468,7 @@ questions:
     attributes: 32
     vb: D0205_Results = D0205_LabSamplesCode.CatCode(5)
   - label: D0205. Description
-    variable: D0205_Description
+    variable: description
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -476,7 +476,7 @@ questions:
     attributes: 32
     vb: D0205_Results = D0205_LabSamplesCode.CatCode(5)
   - label: D0205. Normal Value
-    variable: D0205_NormalValue
+    variable: normal_value
     type: open
     codesFile: LAB_TestName.txt
     nbLines: 1
@@ -486,7 +486,7 @@ questions:
     vb: D0205_NormalValue = D0205_TestName.CatCode(2)
     autoVariable: Basic
   - label: D0206. MDM Lab?
-    variable: D0206_MDMLab
+    variable: mdm_lab
     type: options
     nbOptions: 2
     options:
@@ -496,7 +496,7 @@ questions:
     plan: true
     attributes: 32
   - label: D0206. Type of Test
-    variable: D0206_TypeofTest
+    variable: typeof_test
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -505,7 +505,7 @@ questions:
     vb: D0206_TypeofTest = D0206_TestName.CatCode(1)
     autoVariable: Basic
   - label: D0206. Test Name
-    variable: D0206_TestName
+    variable: test_name
     type: code
     codesFile: LAB_TestName.txt
     nbCharCode: 25
@@ -513,7 +513,7 @@ questions:
     attributes: 32
     vb: D0206_TestName = D0206_LabSamplesCode.CatCode(2)
   - label: D0206. Type Of Sample
-    variable: D0206_TypeOfSample
+    variable: type_of_sample
     type: code
     codesFile: LAB_TypeOfSample.txt
     nbCharCode: 25
@@ -521,7 +521,7 @@ questions:
     attributes: 32
     vb: D0206_TypeOfSample = D0206_LabSamplesCode.CatCode(3)
   - label: D0206. No Of Result
-    variable: D0206_NoOfResult
+    variable: no_of_result
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -529,7 +529,7 @@ questions:
     attributes: 32
     vb: D0206_NoOfSample = D0206_LabSamplesCode.CatCode(4)
   - label: D0206. Unit
-    variable: D0206_Unit
+    variable: unit
     type: code
     codesFile: LAB_Unit.txt
     nbCharCode: 25
@@ -537,7 +537,7 @@ questions:
     attributes: 32
     vb: D0206_TypeOfTest = D0206_TestName.CatCode(1)
   - label: D0206. Results
-    variable: D0206_Results
+    variable: results
     type: code
     codesFile: LAB_Result.txt
     nbCharCode: 25
@@ -545,7 +545,7 @@ questions:
     attributes: 32
     vb: D0206_Results = D0206_LabSamplesCode.CatCode(5)
   - label: D0206. Description
-    variable: D0206_Description
+    variable: description
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -553,7 +553,7 @@ questions:
     attributes: 32
     vb: D0206_Results = D0206_LabSamplesCode.CatCode(5)
   - label: D0206. Normal Value
-    variable: D0206_NormalValue
+    variable: normal_value
     type: open
     codesFile: LAB_TestName.txt
     nbLines: 1
@@ -563,7 +563,7 @@ questions:
     vb: D0206_NormalValue = D0206_TestName.CatCode(2)
     autoVariable: Basic
   - label: D0207. MDM Lab?
-    variable: D0207_MDMLab
+    variable: mdm_lab
     type: options
     nbOptions: 2
     options:
@@ -573,7 +573,7 @@ questions:
     plan: true
     attributes: 32
   - label: D0207. Type of Test
-    variable: D0207_TypeofTest
+    variable: typeof_test
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -582,7 +582,7 @@ questions:
     vb: D0207_TypeofTest = D0207_TestName.CatCode(1)
     autoVariable: Basic
   - label: D0207. Test Name
-    variable: D0207_TestName
+    variable: test_name
     type: code
     codesFile: LAB_TestName.txt
     nbCharCode: 25
@@ -590,7 +590,7 @@ questions:
     attributes: 32
     vb: D0207_TestName = D0207_LabSamplesCode.CatCode(2)
   - label: D0207. Type Of Sample
-    variable: D0207_TypeOfSample
+    variable: type_of_sample
     type: code
     codesFile: LAB_TypeOfSample.txt
     nbCharCode: 25
@@ -598,7 +598,7 @@ questions:
     attributes: 32
     vb: D0207_TypeOfSample = D0207_LabSamplesCode.CatCode(3)
   - label: D0207. No Of Result
-    variable: D0207_NoOfResult
+    variable: no_of_result
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -606,7 +606,7 @@ questions:
     attributes: 32
     vb: D0207_NoOfSample = D0207_LabSamplesCode.CatCode(4)
   - label: D0207. Unit
-    variable: D0207_Unit
+    variable: unit
     type: code
     codesFile: LAB_Unit.txt
     nbCharCode: 25
@@ -614,7 +614,7 @@ questions:
     attributes: 32
     vb: D0207_TypeOfTest = D0207_TestName.CatCode(1)
   - label: D0207. Results
-    variable: D0207_Results
+    variable: results
     type: code
     codesFile: LAB_Result.txt
     nbCharCode: 25
@@ -622,7 +622,7 @@ questions:
     attributes: 32
     vb: D0207_Results = D0207_LabSamplesCode.CatCode(5)
   - label: D0207. Description
-    variable: D0207_Description
+    variable: description
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -630,7 +630,7 @@ questions:
     attributes: 32
     vb: D0207_Results = D0207_LabSamplesCode.CatCode(5)
   - label: D0207. Normal Value
-    variable: D0207_NormalValue
+    variable: normal_value
     type: open
     codesFile: LAB_TestName.txt
     nbLines: 1
@@ -640,7 +640,7 @@ questions:
     vb: D0207_NormalValue = D0207_TestName.CatCode(2)
     autoVariable: Basic
   - label: D0208. MDM Lab?
-    variable: D0208_MDMLab
+    variable: mdm_lab
     type: options
     nbOptions: 2
     options:
@@ -650,7 +650,7 @@ questions:
     plan: true
     attributes: 32
   - label: D0208. Type of Test
-    variable: D0208_TypeofTest
+    variable: typeof_test
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -659,7 +659,7 @@ questions:
     vb: D0208_TypeofTest = D0208_TestName.CatCode(1)
     autoVariable: Basic
   - label: D0208. Test Name
-    variable: D0208_TestName
+    variable: test_name
     type: code
     codesFile: LAB_TestName.txt
     nbCharCode: 25
@@ -667,7 +667,7 @@ questions:
     attributes: 32
     vb: D0208_TestName = D0208_LabSamplesCode.CatCode(2)
   - label: D0208. Type Of Sample
-    variable: D0208_TypeOfSample
+    variable: type_of_sample
     type: code
     codesFile: LAB_TypeOfSample.txt
     nbCharCode: 25
@@ -675,7 +675,7 @@ questions:
     attributes: 32
     vb: D0208_TypeOfSample = D0208_LabSamplesCode.CatCode(3)
   - label: D0208. No Of Result
-    variable: D0208_NoOfResult
+    variable: no_of_result
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -683,7 +683,7 @@ questions:
     attributes: 32
     vb: D0208_NoOfSample = D0208_LabSamplesCode.CatCode(4)
   - label: D0208. Unit
-    variable: D0208_Unit
+    variable: unit
     type: code
     codesFile: LAB_Unit.txt
     nbCharCode: 25
@@ -691,7 +691,7 @@ questions:
     attributes: 32
     vb: D0208_TypeOfTest = D0208_TestName.CatCode(1)
   - label: D0208. Results
-    variable: D0208_Results
+    variable: results
     type: code
     codesFile: LAB_Result.txt
     nbCharCode: 25
@@ -699,7 +699,7 @@ questions:
     attributes: 32
     vb: D0208_Results = D0208_LabSamplesCode.CatCode(5)
   - label: D0208. Description
-    variable: D0208_Description
+    variable: description
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -707,7 +707,7 @@ questions:
     attributes: 32
     vb: D0208_Results = D0208_LabSamplesCode.CatCode(5)
   - label: D0208. Normal Value
-    variable: D0208_NormalValue
+    variable: normal_value
     type: open
     codesFile: LAB_TestName.txt
     nbLines: 1
@@ -717,7 +717,7 @@ questions:
     vb: D0208_NormalValue = D0208_TestName.CatCode(2)
     autoVariable: Basic
   - label: D0209. MDM Lab?
-    variable: D0209_MDMLab
+    variable: mdm_lab
     type: options
     nbOptions: 2
     options:
@@ -727,7 +727,7 @@ questions:
     plan: true
     attributes: 32
   - label: D0209. Type of Test
-    variable: D0209_TypeofTest
+    variable: typeof_test
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -736,7 +736,7 @@ questions:
     vb: D0209_TypeofTest = D0209_TestName.CatCode(1)
     autoVariable: Basic
   - label: D0209. Test Name
-    variable: D0209_TestName
+    variable: test_name
     type: code
     codesFile: LAB_TestName.txt
     nbCharCode: 25
@@ -744,7 +744,7 @@ questions:
     attributes: 32
     vb: D0209_TestName = D0209_LabSamplesCode.CatCode(2)
   - label: D0209. Type Of Sample
-    variable: D0209_TypeOfSample
+    variable: type_of_sample
     type: code
     codesFile: LAB_TypeOfSample.txt
     nbCharCode: 25
@@ -752,7 +752,7 @@ questions:
     attributes: 32
     vb: D0209_TypeOfSample = D0209_LabSamplesCode.CatCode(3)
   - label: D0209. No Of Result
-    variable: D0209_NoOfResult
+    variable: no_of_result
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -760,7 +760,7 @@ questions:
     attributes: 32
     vb: D0209_NoOfSample = D0209_LabSamplesCode.CatCode(4)
   - label: D0209. Unit
-    variable: D0209_Unit
+    variable: unit
     type: code
     codesFile: LAB_Unit.txt
     nbCharCode: 25
@@ -768,7 +768,7 @@ questions:
     attributes: 32
     vb: D0209_TypeOfTest = D0209_TestName.CatCode(1)
   - label: D0209. Results
-    variable: D0209_Results
+    variable: results
     type: code
     codesFile: LAB_Result.txt
     nbCharCode: 25
@@ -776,7 +776,7 @@ questions:
     attributes: 32
     vb: D0209_Results = D0209_LabSamplesCode.CatCode(5)
   - label: D0209. Description
-    variable: D0209_Description
+    variable: description
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -784,7 +784,7 @@ questions:
     attributes: 32
     vb: D0209_Results = D0209_LabSamplesCode.CatCode(5)
   - label: D0209. Normal Value
-    variable: D0209_NormalValue
+    variable: normal_value
     type: open
     codesFile: LAB_TestName.txt
     nbLines: 1
@@ -794,7 +794,7 @@ questions:
     vb: D0209_NormalValue = D0209_TestName.CatCode(2)
     autoVariable: Basic
   - label: D0210. MDM Lab?
-    variable: D0210_MDMLab
+    variable: mdm_lab
     type: options
     nbOptions: 2
     options:
@@ -804,7 +804,7 @@ questions:
     plan: true
     attributes: 32
   - label: D0210. Type of Test
-    variable: D0210_TypeofTest
+    variable: typeof_test
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -813,7 +813,7 @@ questions:
     vb: D0210_TypeofTest = D0210_TestName.CatCode(1)
     autoVariable: Basic
   - label: D0210. Test Name
-    variable: D0210_TestName
+    variable: test_name
     type: code
     codesFile: LAB_TestName.txt
     nbCharCode: 25
@@ -821,7 +821,7 @@ questions:
     attributes: 32
     vb: D0210_TestName = D0210_LabSamplesCode.CatCode(2)
   - label: D0210. Type Of Sample
-    variable: D0210_TypeOfSample
+    variable: type_of_sample
     type: code
     codesFile: LAB_TypeOfSample.txt
     nbCharCode: 25
@@ -829,7 +829,7 @@ questions:
     attributes: 32
     vb: D0210_TypeOfSample = D0210_LabSamplesCode.CatCode(3)
   - label: D0210. No Of Result
-    variable: D0210_NoOfResult
+    variable: no_of_result
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -837,7 +837,7 @@ questions:
     attributes: 32
     vb: D0210_NoOfSample = D0210_LabSamplesCode.CatCode(4)
   - label: D0210. Unit
-    variable: D0210_Unit
+    variable: unit
     type: code
     codesFile: LAB_Unit.txt
     nbCharCode: 25
@@ -845,7 +845,7 @@ questions:
     attributes: 32
     vb: D0210_TypeOfTest = D0210_TestName.CatCode(1)
   - label: D0210. Results
-    variable: D0210_Results
+    variable: results
     type: code
     codesFile: LAB_Result.txt
     nbCharCode: 25
@@ -853,7 +853,7 @@ questions:
     attributes: 32
     vb: D0210_Results = D0210_LabSamplesCode.CatCode(5)
   - label: D0210. Description
-    variable: D0210_Description
+    variable: description
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -861,7 +861,7 @@ questions:
     attributes: 32
     vb: D0210_Results = D0210_LabSamplesCode.CatCode(5)
   - label: D0210. Normal Value
-    variable: D0210_NormalValue
+    variable: normal_value
     type: open
     codesFile: LAB_TestName.txt
     nbLines: 1
@@ -871,7 +871,7 @@ questions:
     vb: D0210_NormalValue = D0210_TestName.CatCode(2)
     autoVariable: Basic
   - label: D0211. MDM Lab?
-    variable: D0211_MDMLab
+    variable: mdm_lab
     type: options
     nbOptions: 2
     options:
@@ -881,7 +881,7 @@ questions:
     plan: true
     attributes: 32
   - label: D0211. Type of Test
-    variable: D0211_TypeofTest
+    variable: typeof_test
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -890,7 +890,7 @@ questions:
     vb: D0211_TypeofTest = D0211_TestName.CatCode(1)
     autoVariable: Basic
   - label: D0211. Test Name
-    variable: D0211_TestName
+    variable: test_name
     type: code
     codesFile: LAB_TestName.txt
     nbCharCode: 25
@@ -898,7 +898,7 @@ questions:
     attributes: 32
     vb: D0211_TestName = D0211_LabSamplesCode.CatCode(2)
   - label: D0211. Type Of Sample
-    variable: D0211_TypeOfSample
+    variable: type_of_sample
     type: code
     codesFile: LAB_TypeOfSample.txt
     nbCharCode: 25
@@ -906,7 +906,7 @@ questions:
     attributes: 32
     vb: D0211_TypeOfSample = D0211_LabSamplesCode.CatCode(3)
   - label: D0211. No Of Result
-    variable: D0211_NoOfResult
+    variable: no_of_result
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -914,7 +914,7 @@ questions:
     attributes: 32
     vb: D0211_NoOfSample = D0211_LabSamplesCode.CatCode(4)
   - label: D0211. Unit
-    variable: D0211_Unit
+    variable: unit
     type: code
     codesFile: LAB_Unit.txt
     nbCharCode: 25
@@ -922,7 +922,7 @@ questions:
     attributes: 32
     vb: D0211_TypeOfTest = D0211_TestName.CatCode(1)
   - label: D0211. Results
-    variable: D0211_Results
+    variable: results
     type: code
     codesFile: LAB_Result.txt
     nbCharCode: 25
@@ -930,7 +930,7 @@ questions:
     attributes: 32
     vb: D0211_Results = D0211_LabSamplesCode.CatCode(5)
   - label: D0211. Description
-    variable: D0211_Description
+    variable: description
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -938,7 +938,7 @@ questions:
     attributes: 32
     vb: D0211_Results = D0211_LabSamplesCode.CatCode(5)
   - label: D0211. Normal Value
-    variable: D0211_NormalValue
+    variable: normal_value
     type: open
     codesFile: LAB_TestName.txt
     nbLines: 1
@@ -948,7 +948,7 @@ questions:
     vb: D0211_NormalValue = D0211_TestName.CatCode(2)
     autoVariable: Basic
   - label: D0212. MDM Lab?
-    variable: D0212_MDMLab
+    variable: mdm_lab
     type: options
     nbOptions: 2
     options:
@@ -958,7 +958,7 @@ questions:
     plan: true
     attributes: 32
   - label: D0212. Type of Test
-    variable: D0212_TypeofTest
+    variable: typeof_test
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -967,7 +967,7 @@ questions:
     vb: D0212_TypeofTest = D0212_TestName.CatCode(1)
     autoVariable: Basic
   - label: D0212. Test Name
-    variable: D0212_TestName
+    variable: test_name
     type: code
     codesFile: LAB_TestName.txt
     nbCharCode: 25
@@ -975,7 +975,7 @@ questions:
     attributes: 32
     vb: D0212_TestName = D0212_LabSamplesCode.CatCode(2)
   - label: D0212. Type Of Sample
-    variable: D0212_TypeOfSample
+    variable: type_of_sample
     type: code
     codesFile: LAB_TypeOfSample.txt
     nbCharCode: 25
@@ -983,7 +983,7 @@ questions:
     attributes: 32
     vb: D0212_TypeOfSample = D0212_LabSamplesCode.CatCode(3)
   - label: D0212. No Of Result
-    variable: D0212_NoOfResult
+    variable: no_of_result
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -991,7 +991,7 @@ questions:
     attributes: 32
     vb: D0212_NoOfSample = D0212_LabSamplesCode.CatCode(4)
   - label: D0212. Unit
-    variable: D0212_Unit
+    variable: unit
     type: code
     codesFile: LAB_Unit.txt
     nbCharCode: 25
@@ -999,7 +999,7 @@ questions:
     attributes: 32
     vb: D0212_TypeOfTest = D0212_TestName.CatCode(1)
   - label: D0212. Results
-    variable: D0212_Results
+    variable: results
     type: code
     codesFile: LAB_Result.txt
     nbCharCode: 25
@@ -1007,7 +1007,7 @@ questions:
     attributes: 32
     vb: D0212_Results = D0212_LabSamplesCode.CatCode(5)
   - label: D0212. Description
-    variable: D0212_Description
+    variable: description
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1015,7 +1015,7 @@ questions:
     attributes: 32
     vb: D0212_Results = D0212_LabSamplesCode.CatCode(5)
   - label: D0212. Normal Value
-    variable: D0212_NormalValue
+    variable: normal_value
     type: open
     codesFile: LAB_TestName.txt
     nbLines: 1
@@ -1025,7 +1025,7 @@ questions:
     vb: D0212_NormalValue = D0212_TestName.CatCode(2)
     autoVariable: Basic
   - label: D0213. MDM Lab?
-    variable: D0213_MDMLab
+    variable: mdm_lab
     type: options
     nbOptions: 2
     options:
@@ -1035,7 +1035,7 @@ questions:
     plan: true
     attributes: 32
   - label: D0213. Type of Test
-    variable: D0213_TypeofTest
+    variable: typeof_test
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1044,7 +1044,7 @@ questions:
     vb: D0213_TypeofTest = D0213_TestName.CatCode(1)
     autoVariable: Basic
   - label: D0213. Test Name
-    variable: D0213_TestName
+    variable: test_name
     type: code
     codesFile: LAB_TestName.txt
     nbCharCode: 25
@@ -1052,7 +1052,7 @@ questions:
     attributes: 32
     vb: D0213_TestName = D0213_LabSamplesCode.CatCode(2)
   - label: D0213. Type Of Sample
-    variable: D0213_TypeOfSample
+    variable: type_of_sample
     type: code
     codesFile: LAB_TypeOfSample.txt
     nbCharCode: 25
@@ -1060,7 +1060,7 @@ questions:
     attributes: 32
     vb: D0213_TypeOfSample = D0213_LabSamplesCode.CatCode(3)
   - label: D0213. No Of Result
-    variable: D0213_NoOfResult
+    variable: no_of_result
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1068,7 +1068,7 @@ questions:
     attributes: 32
     vb: D0213_NoOfSample = D0213_LabSamplesCode.CatCode(4)
   - label: D0213. Unit
-    variable: D0213_Unit
+    variable: unit
     type: code
     codesFile: LAB_Unit.txt
     nbCharCode: 25
@@ -1076,7 +1076,7 @@ questions:
     attributes: 32
     vb: D0213_TypeOfTest = D0213_TestName.CatCode(1)
   - label: D0213. Results
-    variable: D0213_Results
+    variable: results
     type: code
     codesFile: LAB_Result.txt
     nbCharCode: 25
@@ -1084,7 +1084,7 @@ questions:
     attributes: 32
     vb: D0213_Results = D0213_LabSamplesCode.CatCode(5)
   - label: D0213. Description
-    variable: D0213_Description
+    variable: description
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1092,7 +1092,7 @@ questions:
     attributes: 32
     vb: D0213_Results = D0213_LabSamplesCode.CatCode(5)
   - label: D0213. Normal Value
-    variable: D0213_NormalValue
+    variable: normal_value
     type: open
     codesFile: LAB_TestName.txt
     nbLines: 1
@@ -1102,7 +1102,7 @@ questions:
     vb: D0213_NormalValue = D0213_TestName.CatCode(2)
     autoVariable: Basic
   - label: D0214. MDM Lab?
-    variable: D0214_MDMLab
+    variable: mdm_lab
     type: options
     nbOptions: 2
     options:
@@ -1112,7 +1112,7 @@ questions:
     plan: true
     attributes: 32
   - label: D0214. Type of Test
-    variable: D0214_TypeofTest
+    variable: typeof_test
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1121,7 +1121,7 @@ questions:
     vb: D0214_TypeofTest = D0214_TestName.CatCode(1)
     autoVariable: Basic
   - label: D0214. Test Name
-    variable: D0214_TestName
+    variable: test_name
     type: code
     codesFile: LAB_TestName.txt
     nbCharCode: 25
@@ -1129,7 +1129,7 @@ questions:
     attributes: 32
     vb: D0214_TestName = D0214_LabSamplesCode.CatCode(2)
   - label: D0214. Type Of Sample
-    variable: D0214_TypeOfSample
+    variable: type_of_sample
     type: code
     codesFile: LAB_TypeOfSample.txt
     nbCharCode: 25
@@ -1137,7 +1137,7 @@ questions:
     attributes: 32
     vb: D0214_TypeOfSample = D0214_LabSamplesCode.CatCode(3)
   - label: D0214. No Of Result
-    variable: D0214_NoOfResult
+    variable: no_of_result
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1145,7 +1145,7 @@ questions:
     attributes: 32
     vb: D0214_NoOfSample = D0214_LabSamplesCode.CatCode(4)
   - label: D0214. Unit
-    variable: D0214_Unit
+    variable: unit
     type: code
     codesFile: LAB_Unit.txt
     nbCharCode: 25
@@ -1153,7 +1153,7 @@ questions:
     attributes: 32
     vb: D0214_TypeOfTest = D0214_TestName.CatCode(1)
   - label: D0214. Results
-    variable: D0214_Results
+    variable: results
     type: code
     codesFile: LAB_Result.txt
     nbCharCode: 25
@@ -1161,7 +1161,7 @@ questions:
     attributes: 32
     vb: D0214_Results = D0214_LabSamplesCode.CatCode(5)
   - label: D0214. Description
-    variable: D0214_Description
+    variable: description
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1169,7 +1169,7 @@ questions:
     attributes: 32
     vb: D0214_Results = D0214_LabSamplesCode.CatCode(5)
   - label: D0214. Normal Value
-    variable: D0214_NormalValue
+    variable: normal_value
     type: open
     codesFile: LAB_TestName.txt
     nbLines: 1
@@ -1179,7 +1179,7 @@ questions:
     vb: D0214_NormalValue = D0214_TestName.CatCode(2)
     autoVariable: Basic
   - label: D0215. MDM Lab?
-    variable: D0215_MDMLab
+    variable: mdm_lab
     type: options
     nbOptions: 2
     options:
@@ -1189,7 +1189,7 @@ questions:
     plan: true
     attributes: 32
   - label: D0215. Type of Test
-    variable: D0215_TypeofTest
+    variable: typeof_test
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1198,7 +1198,7 @@ questions:
     vb: D0215_TypeofTest = D0215_TestName.CatCode(1)
     autoVariable: Basic
   - label: D0215. Test Name
-    variable: D0215_TestName
+    variable: test_name
     type: code
     codesFile: LAB_TestName.txt
     nbCharCode: 25
@@ -1206,7 +1206,7 @@ questions:
     attributes: 32
     vb: D0215_TestName = D0215_LabSamplesCode.CatCode(2)
   - label: D0215. Type Of Sample
-    variable: D0215_TypeOfSample
+    variable: type_of_sample
     type: code
     codesFile: LAB_TypeOfSample.txt
     nbCharCode: 25
@@ -1214,7 +1214,7 @@ questions:
     attributes: 32
     vb: D0215_TypeOfSample = D0215_LabSamplesCode.CatCode(3)
   - label: D0215. No Of Result
-    variable: D0215_NoOfResult
+    variable: no_of_result
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1222,7 +1222,7 @@ questions:
     attributes: 32
     vb: D0215_NoOfSample = D0215_LabSamplesCode.CatCode(4)
   - label: D0215. Unit
-    variable: D0215_Unit
+    variable: unit
     type: code
     codesFile: LAB_Unit.txt
     nbCharCode: 25
@@ -1230,7 +1230,7 @@ questions:
     attributes: 32
     vb: D0215_TypeOfTest = D0215_TestName.CatCode(1)
   - label: D0215. Results
-    variable: D0215_Results
+    variable: results
     type: code
     codesFile: LAB_Result.txt
     nbCharCode: 25
@@ -1238,7 +1238,7 @@ questions:
     attributes: 32
     vb: D0215_Results = D0215_LabSamplesCode.CatCode(5)
   - label: D0215. Description
-    variable: D0215_Description
+    variable: description
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1246,7 +1246,7 @@ questions:
     attributes: 32
     vb: D0215_Results = D0215_LabSamplesCode.CatCode(5)
   - label: D0215. Normal Value
-    variable: D0215_NormalValue
+    variable: normal_value
     type: open
     codesFile: LAB_TestName.txt
     nbLines: 1
@@ -1256,7 +1256,7 @@ questions:
     vb: D0215_NormalValue = D0215_TestName.CatCode(2)
     autoVariable: Basic
   - label: D0216. MDM Lab?
-    variable: D0216_MDMLab
+    variable: mdm_lab
     type: options
     nbOptions: 2
     options:
@@ -1266,7 +1266,7 @@ questions:
     plan: true
     attributes: 32
   - label: D0216. Type of Test
-    variable: D0216_TypeofTest
+    variable: typeof_test
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1275,7 +1275,7 @@ questions:
     vb: D0216_TypeofTest = D0216_TestName.CatCode(1)
     autoVariable: Basic
   - label: D0216. Test Name
-    variable: D0216_TestName
+    variable: test_name
     type: code
     codesFile: LAB_TestName.txt
     nbCharCode: 25
@@ -1283,7 +1283,7 @@ questions:
     attributes: 32
     vb: D0216_TestName = D0216_LabSamplesCode.CatCode(2)
   - label: D0216. Type Of Sample
-    variable: D0216_TypeOfSample
+    variable: type_of_sample
     type: code
     codesFile: LAB_TypeOfSample.txt
     nbCharCode: 25
@@ -1291,7 +1291,7 @@ questions:
     attributes: 32
     vb: D0216_TypeOfSample = D0216_LabSamplesCode.CatCode(3)
   - label: D0216. No Of Result
-    variable: D0216_NoOfResult
+    variable: no_of_result
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1299,7 +1299,7 @@ questions:
     attributes: 32
     vb: D0216_NoOfSample = D0216_LabSamplesCode.CatCode(4)
   - label: D0216. Unit
-    variable: D0216_Unit
+    variable: unit
     type: code
     codesFile: LAB_Unit.txt
     nbCharCode: 25
@@ -1307,7 +1307,7 @@ questions:
     attributes: 32
     vb: D0216_TypeOfTest = D0216_TestName.CatCode(1)
   - label: D0216. Results
-    variable: D0216_Results
+    variable: results
     type: code
     codesFile: LAB_Result.txt
     nbCharCode: 25
@@ -1315,7 +1315,7 @@ questions:
     attributes: 32
     vb: D0216_Results = D0216_LabSamplesCode.CatCode(5)
   - label: D0216. Description
-    variable: D0216_Description
+    variable: description
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1323,7 +1323,7 @@ questions:
     attributes: 32
     vb: D0216_Results = D0216_LabSamplesCode.CatCode(5)
   - label: D0216. Normal Value
-    variable: D0216_NormalValue
+    variable: normal_value
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1332,7 +1332,7 @@ questions:
     vb: D0216_NormalValue = D0216_TestName.CatCode(2)
     autoVariable: Basic
   - label: D0217. MDM Lab?
-    variable: D0217_MDMLab
+    variable: mdm_lab
     type: options
     nbOptions: 2
     options:
@@ -1342,7 +1342,7 @@ questions:
     plan: true
     attributes: 32
   - label: D0217. Type of Test
-    variable: D0217_TypeofTest
+    variable: typeof_test
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1351,7 +1351,7 @@ questions:
     vb: D0217_TypeofTest = D0217_TestName.CatCode(1)
     autoVariable: Basic
   - label: D0217. Test Name
-    variable: D0217_TestName
+    variable: test_name
     type: code
     codesFile: LAB_TestName.txt
     nbCharCode: 25
@@ -1359,7 +1359,7 @@ questions:
     attributes: 32
     vb: D0217_TestName = D0217_LabSamplesCode.CatCode(2)
   - label: D0217. Type Of Sample
-    variable: D0217_TypeOfSample
+    variable: type_of_sample
     type: code
     codesFile: LAB_TypeOfSample.txt
     nbCharCode: 25
@@ -1367,7 +1367,7 @@ questions:
     attributes: 32
     vb: D0217_TypeOfSample = D0217_LabSamplesCode.CatCode(3)
   - label: D0217. No Of Result
-    variable: D0217_NoOfResult
+    variable: no_of_result
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1375,7 +1375,7 @@ questions:
     attributes: 32
     vb: D0217_NoOfSample = D0217_LabSamplesCode.CatCode(4)
   - label: D0217. Unit
-    variable: D0217_Unit
+    variable: unit
     type: code
     codesFile: LAB_Unit.txt
     nbCharCode: 25
@@ -1383,7 +1383,7 @@ questions:
     attributes: 32
     vb: D0217_TypeOfTest = D0217_TestName.CatCode(1)
   - label: D0217. Results
-    variable: D0217_Results
+    variable: results
     type: code
     codesFile: LAB_Result.txt
     nbCharCode: 25
@@ -1391,7 +1391,7 @@ questions:
     attributes: 32
     vb: D0217_Results = D0217_LabSamplesCode.CatCode(5)
   - label: D0217. Description
-    variable: D0217_Description
+    variable: description
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1399,7 +1399,7 @@ questions:
     attributes: 32
     vb: D0217_Results = D0217_LabSamplesCode.CatCode(5)
   - label: D0217. Normal Value
-    variable: D0217_NormalValue
+    variable: normal_value
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1408,7 +1408,7 @@ questions:
     vb: D0217_NormalValue = D0217_TestName.CatCode(2)
     autoVariable: Basic
   - label: D0218. MDM Lab?
-    variable: D0218_MDMLab
+    variable: mdm_lab
     type: options
     nbOptions: 2
     options:
@@ -1418,7 +1418,7 @@ questions:
     plan: true
     attributes: 32
   - label: D0218. Type of Test
-    variable: D0218_TypeofTest
+    variable: typeof_test
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1427,7 +1427,7 @@ questions:
     vb: D0218_TypeofTest = D0218_TestName.CatCode(1)
     autoVariable: Basic
   - label: D0218. Test Name
-    variable: D0218_TestName
+    variable: test_name
     type: code
     codesFile: LAB_TestName.txt
     nbCharCode: 25
@@ -1435,7 +1435,7 @@ questions:
     attributes: 32
     vb: D0218_TestName = D0218_LabSamplesCode.CatCode(2)
   - label: D0218. Type Of Sample
-    variable: D0218_TypeOfSample
+    variable: type_of_sample
     type: code
     codesFile: LAB_TypeOfSample.txt
     nbCharCode: 25
@@ -1443,7 +1443,7 @@ questions:
     attributes: 32
     vb: D0218_TypeOfSample = D0218_LabSamplesCode.CatCode(3)
   - label: D0218. No Of Result
-    variable: D0218_NoOfResult
+    variable: no_of_result
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1451,7 +1451,7 @@ questions:
     attributes: 32
     vb: D0218_NoOfSample = D0218_LabSamplesCode.CatCode(4)
   - label: D0218. Unit
-    variable: D0218_Unit
+    variable: unit
     type: code
     codesFile: LAB_Unit.txt
     nbCharCode: 25
@@ -1459,7 +1459,7 @@ questions:
     attributes: 32
     vb: D0218_TypeOfTest = D0218_TestName.CatCode(1)
   - label: D0218. Results
-    variable: D0218_Results
+    variable: results
     type: code
     codesFile: LAB_Result.txt
     nbCharCode: 25
@@ -1467,7 +1467,7 @@ questions:
     attributes: 32
     vb: D0218_Results = D0218_LabSamplesCode.CatCode(5)
   - label: D0218. Description
-    variable: D0218_Description
+    variable: description
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1475,7 +1475,7 @@ questions:
     attributes: 32
     vb: D0218_Results = D0218_LabSamplesCode.CatCode(5)
   - label: D0218. Normal Value
-    variable: D0218_NormalValue
+    variable: normal_value
     type: open
     codesFile: LAB_TestName.txt
     nbLines: 1
@@ -1485,7 +1485,7 @@ questions:
     vb: D0218_NormalValue = D0218_TestName.CatCode(2)
     autoVariable: Basic
   - label: D0219. MDM Lab?
-    variable: D0219_MDMLab
+    variable: mdm_lab
     type: options
     nbOptions: 2
     options:
@@ -1495,7 +1495,7 @@ questions:
     plan: true
     attributes: 32
   - label: D0219. Type of Test
-    variable: D0219_TypeofTest
+    variable: typeof_test
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1504,7 +1504,7 @@ questions:
     vb: D0219_TypeofTest = D0219_TestName.CatCode(1)
     autoVariable: Basic
   - label: D0219. Test Name
-    variable: D0219_TestName
+    variable: test_name
     type: code
     codesFile: LAB_TestName.txt
     nbCharCode: 25
@@ -1512,7 +1512,7 @@ questions:
     attributes: 32
     vb: D0219_TestName = D0219_LabSamplesCode.CatCode(2)
   - label: D0219. Type Of Sample
-    variable: D0219_TypeOfSample
+    variable: type_of_sample
     type: code
     codesFile: LAB_TypeOfSample.txt
     nbCharCode: 25
@@ -1520,7 +1520,7 @@ questions:
     attributes: 32
     vb: D0219_TypeOfSample = D0219_LabSamplesCode.CatCode(3)
   - label: D0219. No Of Result
-    variable: D0219_NoOfResult
+    variable: no_of_result
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1528,7 +1528,7 @@ questions:
     attributes: 32
     vb: D0219_NoOfSample = D0219_LabSamplesCode.CatCode(4)
   - label: D0219. Unit
-    variable: D0219_Unit
+    variable: unit
     type: code
     codesFile: LAB_Unit.txt
     nbCharCode: 25
@@ -1536,7 +1536,7 @@ questions:
     attributes: 32
     vb: D0219_TypeOfTest = D0219_TestName.CatCode(1)
   - label: D0219. Results
-    variable: D0219_Results
+    variable: results
     type: code
     codesFile: LAB_Result.txt
     nbCharCode: 25
@@ -1544,7 +1544,7 @@ questions:
     attributes: 32
     vb: D0219_Results = D0219_LabSamplesCode.CatCode(5)
   - label: D0219. Description
-    variable: D0219_Description
+    variable: description
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1552,7 +1552,7 @@ questions:
     attributes: 32
     vb: D0219_Results = D0219_LabSamplesCode.CatCode(5)
   - label: D0219. Normal Value
-    variable: D0219_NormalValue
+    variable: normal_value
     type: open
     codesFile: LAB_TestName.txt
     nbLines: 1

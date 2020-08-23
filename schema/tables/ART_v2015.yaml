@@ -11,7 +11,7 @@ headers:
       title: ART VISIT
 questions:
   - label: MDM code (Patient ID)
-    variable: MDMcode
+    variable: md_mcode
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -20,7 +20,7 @@ questions:
     translations:
       - label: MDM code (Patient ID)
   - label: Registration date
-    variable: A00_RegistrationDate
+    variable: registration_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -28,7 +28,7 @@ questions:
     translations:
       - label: A00. Registration date
   - label: Name
-    variable: A01_PatientName
+    variable: patient_name
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -37,7 +37,7 @@ questions:
     translations:
       - label: A01. Name
   - label: Father’s name
-    variable: A02_FatherName
+    variable: father_name
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -46,7 +46,7 @@ questions:
     translations:
       - label: A02. Father’s name
   - label: Sex
-    variable: A03_Sexe
+    variable: sexe
     type: options
     nbOptions: 2
     options:
@@ -62,7 +62,7 @@ questions:
           - Male
           - Female
   - label: Date of birth
-    variable: A041_DateOfBirth
+    variable: date_of_birth
     type: date
     min: 3652
     format: jj/mm/aaaa
@@ -72,7 +72,7 @@ questions:
     translations:
       - label: A04. Date of birth
   - label: Age
-    variable: A05_Age
+    variable: age
     type: number
     nbDecimals: 2
     numberType: 2
@@ -89,7 +89,7 @@ questions:
           - From 16 to 18
           - 18 and more
   - label: Patient target
-    variable: A07_PatientTarget
+    variable: patient_target
     type: code
     nbCharCode: 25
     plan: true
@@ -97,7 +97,7 @@ questions:
     translations:
       - label: A07. Patient target
   - label: Visit date
-    variable: ART_VisitDate
+    variable: visit_date
     type: date
     min: 32872
     format: jj/mm/aaaa
@@ -107,7 +107,7 @@ questions:
     translations:
       - label: Visit date
   - label: MDM staff
-    variable: ART_MDMstaff
+    variable: md_mstaff
     type: code
     codesFile: LIST_A2_MDMstaff.dic
     nbCharCode: 25
@@ -116,7 +116,7 @@ questions:
     translations:
       - label: MDM staff
   - label: PLH New Patient
-    variable: ART_PLHNewPatient
+    variable: plh_new_patient
     type: options
     nbOptions: 2
     options:
@@ -132,7 +132,7 @@ questions:
           - Date of birth estimated
           - mod-FR-2
   - label: ART New Patient
-    variable: ART_ARTNewPatient
+    variable: art_new_patient
     type: options
     nbOptions: 2
     options:
@@ -148,7 +148,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: ART Treatment
-    variable: ART_ARTTreatment
+    variable: art_treatment
     type: options
     nbOptions: 2
     options:
@@ -164,7 +164,7 @@ questions:
           - Date of birth estimated
           - mod-FR-2
   - label: Patient partner has been tested
-    variable: ART_PatientPartnerTested
+    variable: patient_partner_tested
     type: options
     nbOptions: 1
     options:
@@ -177,7 +177,7 @@ questions:
         options:
           - 'Yes'
   - label: Patient partner test status
-    variable: ART_PatientPartnerTestStatus
+    variable: patient_partner_test_status
     type: options
     nbOptions: 3
     options:
@@ -194,7 +194,7 @@ questions:
           - Negative
           - Unknown
   - label: Patient has disclosed status
-    variable: ART_PatientDisclosedStatus
+    variable: patient_disclosed_status
     type: options
     nbOptions: 1
     options:
@@ -207,7 +207,7 @@ questions:
         options:
           - 'Yes'
   - label: Status disclosed by
-    variable: ART_StatusDisclosedBy
+    variable: status_disclosed_by
     type: multipleOptions
     nbOptions: 5
     options:
@@ -230,7 +230,7 @@ questions:
           - Other family member
           - Other
   - label: 'If by other, specify'
-    variable: ART_StatusDisclosedByOther
+    variable: status_disclosed_by_other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -239,7 +239,7 @@ questions:
     translations:
       - label: 'G041. If by other, specify'
   - label: Patient is taking medicines
-    variable: ART_PatientTakingMedicines
+    variable: patient_taking_medicines
     type: options
     nbOptions: 1
     options:
@@ -252,7 +252,7 @@ questions:
         options:
           - 'Yes'
   - label: Which medicines?
-    variable: ART_PatientTakingFollowingMedicines
+    variable: patient_taking_following_medicines
     type: multipleOptions
     nbOptions: 4
     options:
@@ -273,7 +273,7 @@ questions:
           - Anti-Tuberculosis
           - Other
   - label: Medicine taken
-    variable: ART_AntiRetro_MedicineTaken1
+    variable: anti_retro_medicine_taken1
     type: code
     codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
@@ -284,7 +284,7 @@ questions:
     translations:
       - label: I011. Medicine taken
   - label: Medicine taken
-    variable: ART_AntiRetro_MedicineTaken2
+    variable: anti_retro_medicine_taken2
     type: code
     codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
@@ -295,7 +295,7 @@ questions:
     translations:
       - label: I011. Medicine taken
   - label: Medicine taken
-    variable: ART_AntiRetro_MedicineTaken3
+    variable: anti_retro_medicine_taken3
     type: code
     codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
@@ -306,7 +306,7 @@ questions:
     translations:
       - label: I011. Medicine taken
   - label: Medicine taken
-    variable: ART_AntiRetro_MedicineTaken4
+    variable: anti_retro_medicine_taken4
     type: code
     codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
@@ -317,7 +317,7 @@ questions:
     translations:
       - label: I011. Medicine taken
   - label: MedicineTaken
-    variable: ART_AntiRetro_MedicineTaken5
+    variable: anti_retro_medicine_taken5
     type: code
     codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
@@ -328,7 +328,7 @@ questions:
     translations:
       - label: MedicineTaken4
   - label: Medicine code
-    variable: ART_AntiBio_MedicineCode1
+    variable: anti_bio_medicine_code1
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -339,7 +339,7 @@ questions:
     translations:
       - label: R0111. Medicine code
   - label: Medicine code
-    variable: ART_AntiBio_MedicineCode2
+    variable: anti_bio_medicine_code2
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -350,7 +350,7 @@ questions:
     translations:
       - label: R0111. Medicine code
   - label: Medicine code
-    variable: ART_AntiBio_MedicineCode3
+    variable: anti_bio_medicine_code3
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -361,7 +361,7 @@ questions:
     translations:
       - label: R0111. Medicine code
   - label: Medicine code
-    variable: ART_AntiBio_MedicineCode4
+    variable: anti_bio_medicine_code4
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -372,7 +372,7 @@ questions:
     translations:
       - label: R0111. Medicine code
   - label: Medicine code
-    variable: ART_AntiBio_MedicineCode5
+    variable: anti_bio_medicine_code5
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -383,7 +383,7 @@ questions:
     translations:
       - label: R0111. Medicine code
   - label: Medicine code
-    variable: ART_AntiTB_MedicineCode1
+    variable: anti_tb_medicine_code1
     type: code
     codesFile: TB_Medicines_List.txt
     nbCharCode: 25
@@ -394,7 +394,7 @@ questions:
     translations:
       - label: R0111. Medicine code
   - label: Medicine code
-    variable: ART_AntiTB_MedicineCode2
+    variable: anti_tb_medicine_code2
     type: code
     codesFile: TB_Medicines_List.txt
     nbCharCode: 25
@@ -405,7 +405,7 @@ questions:
     translations:
       - label: R0111. Medicine code
   - label: Medicine code
-    variable: ART_AntiTB_MedicineCode3
+    variable: anti_tb_medicine_code3
     type: code
     codesFile: TB_Medicines_List.txt
     nbCharCode: 25
@@ -416,7 +416,7 @@ questions:
     translations:
       - label: R0111. Medicine code
   - label: MedicineCode8
-    variable: ART_AntiTB_MedicineCode4
+    variable: anti_tb_medicine_code4
     type: code
     codesFile: TB_Medicines_List.txt
     nbCharCode: 25
@@ -427,7 +427,7 @@ questions:
     translations:
       - label: MedicineCode8
   - label: MedicineCode9
-    variable: ART_AntiTB_MedicineCode5
+    variable: anti_tb_medicine_code5
     type: code
     codesFile: TB_Medicines_List.txt
     nbCharCode: 25
@@ -438,7 +438,7 @@ questions:
     translations:
       - label: MedicineCode9
   - label: Other
-    variable: ART_PatientTakingOther
+    variable: patient_taking_other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -447,7 +447,7 @@ questions:
     translations:
       - label: H026. Other
   - label: Comment
-    variable: ART_MedicationsComment
+    variable: medications_comment
     type: open
     nbLines: 2
     nbCharLines: 0
@@ -456,7 +456,7 @@ questions:
     translations:
       - label: H03. Comment
   - label: Patient has taken ARVs before
-    variable: ART_PatientTakenARVsBefore
+    variable: patient_taken_ar_vs_before
     type: multipleOptions
     nbOptions: 3
     options:
@@ -475,7 +475,7 @@ questions:
           - For PMTCT
           - For HIV/AIDS treatment
   - label: Medicine taken
-    variable: ART_MedicineTaken1
+    variable: medicine_taken1
     type: code
     codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
@@ -486,7 +486,7 @@ questions:
     translations:
       - label: I011. Medicine taken
   - label: Medecine name
-    variable: ART_MedicineName1
+    variable: medicine_name1
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -497,7 +497,7 @@ questions:
     translations:
       - label: I011_Medecine name
   - label: Start date
-    variable: ART_StartDate1
+    variable: start_date1
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -505,7 +505,7 @@ questions:
     translations:
       - label: I012. Start date
   - label: Stop date
-    variable: ART_StopDate1
+    variable: stop_date1
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -513,7 +513,7 @@ questions:
     translations:
       - label: I013. Stop date
   - label: Interrupted
-    variable: ART_Interrupted1
+    variable: interrupted1
     type: options
     nbOptions: 1
     options:
@@ -526,7 +526,7 @@ questions:
         options:
           - 'Yes'
   - label: Medicine taken
-    variable: ART_MedicineTaken2
+    variable: medicine_taken2
     type: code
     codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
@@ -537,7 +537,7 @@ questions:
     translations:
       - label: I021. Medicine taken
   - label: Medicine name
-    variable: ART_MedicineName2
+    variable: medicine_name2
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -548,7 +548,7 @@ questions:
     translations:
       - label: I021_Medicine name
   - label: Start date
-    variable: ART_StartDate2
+    variable: start_date2
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -556,7 +556,7 @@ questions:
     translations:
       - label: I022. Start date
   - label: Stop date
-    variable: ART_StopDate2
+    variable: stop_date2
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -564,7 +564,7 @@ questions:
     translations:
       - label: I023. Stop date
   - label: Interrupted
-    variable: ART_Interrupted2
+    variable: interrupted2
     type: options
     nbOptions: 1
     options:
@@ -577,7 +577,7 @@ questions:
         options:
           - 'Yes'
   - label: Medicine taken
-    variable: ART_MedicineTaken3
+    variable: medicine_taken3
     type: code
     codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
@@ -588,7 +588,7 @@ questions:
     translations:
       - label: I031. Medicine taken
   - label: Medicine name
-    variable: ART_MedicineName3
+    variable: medicine_name3
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -599,7 +599,7 @@ questions:
     translations:
       - label: I031. Medicine name
   - label: Start date
-    variable: ART_StartDate3
+    variable: start_date3
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -607,7 +607,7 @@ questions:
     translations:
       - label: I032. Start date
   - label: Stop date
-    variable: ART_StopDate3
+    variable: stop_date3
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -615,7 +615,7 @@ questions:
     translations:
       - label: I033. Stop date
   - label: Interrupted
-    variable: ART_Interrupted3
+    variable: interrupted3
     type: options
     nbOptions: 1
     options:
@@ -628,7 +628,7 @@ questions:
         options:
           - 'Yes'
   - label: Medicine taken
-    variable: ART_MedicineTaken4
+    variable: medicine_taken4
     type: code
     codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
@@ -639,7 +639,7 @@ questions:
     translations:
       - label: I041. Medicine taken
   - label: Medicine name
-    variable: ART_MedicineName4
+    variable: medicine_name4
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -650,7 +650,7 @@ questions:
     translations:
       - label: I041. Medicine name
   - label: Start date
-    variable: ART_StartDate4
+    variable: start_date4
     type: date
     min: 3652
     format: jj/mm/aaaa
@@ -660,7 +660,7 @@ questions:
     translations:
       - label: I042. Start date
   - label: Stop date
-    variable: ART_StopDate4
+    variable: stop_date4
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -668,7 +668,7 @@ questions:
     translations:
       - label: I043. Stop date
   - label: Interrupted
-    variable: ART_Interrupted4
+    variable: interrupted4
     type: options
     nbOptions: 1
     options:
@@ -681,7 +681,7 @@ questions:
         options:
           - 'Yes'
   - label: MedicineTaken
-    variable: ART_MedicineTaken5
+    variable: medicine_taken5
     type: code
     codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
@@ -692,7 +692,7 @@ questions:
     translations:
       - label: I051. MedicineTaken
   - label: Medicine name
-    variable: ART_MedicineName5
+    variable: medicine_name5
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -703,7 +703,7 @@ questions:
     translations:
       - label: I051. Medicine name
   - label: Start date
-    variable: ART_StartDate5
+    variable: start_date5
     type: date
     min: 3652
     format: jj/mm/aaaa
@@ -713,7 +713,7 @@ questions:
     translations:
       - label: I052. Start date
   - label: Stop date
-    variable: ART_StopDate5
+    variable: stop_date5
     type: date
     min: 3652
     format: jj/mm/aaaa
@@ -723,7 +723,7 @@ questions:
     translations:
       - label: I053. Stop date
   - label: Interrupted
-    variable: ART_Interrupted5
+    variable: interrupted5
     type: options
     nbOptions: 1
     options:
@@ -736,7 +736,7 @@ questions:
         options:
           - 'Yes'
   - label: Comment
-    variable: ART_ARVComment
+    variable: arv_comment
     type: open
     nbLines: 5
     nbCharLines: 0
@@ -745,7 +745,7 @@ questions:
     translations:
       - label: I055. ARVComment
   - label: Comment
-    variable: ART_MedicalHistoryComment
+    variable: medical_history_comment
     type: open
     nbLines: 5
     nbCharLines: 0
@@ -754,7 +754,7 @@ questions:
     translations:
       - label: J04. Comment
   - label: TB history
-    variable: ART_TBhistory
+    variable: t_bhistory
     type: options
     nbOptions: 1
     options:
@@ -768,7 +768,7 @@ questions:
         options:
           - Patient has been treated for TB before
   - label: Previous TB diagnosis
-    variable: ART_PreviousTBdiagnosis
+    variable: previous_t_bdiagnosis
     type: multipleOptions
     nbOptions: 2
     options:
@@ -785,7 +785,7 @@ questions:
           - Extrapulmonary
           - Pulmonary
   - label: Year of Extrapulmonary episode
-    variable: ART_YearOfExtrapulmonaryEpisode
+    variable: year_of_extrapulmonary_episode
     type: number
     nbDecimals: 2
     numberType: 2
@@ -800,7 +800,7 @@ questions:
         options:
           - val = 32767
   - label: Year of Pulmonary episode
-    variable: ART_YearOfPulmonaryEpisode
+    variable: year_of_pulmonary_episode
     type: number
     nbDecimals: 2
     numberType: 2
@@ -812,7 +812,7 @@ questions:
         options:
           - val = 32767
   - label: Comments
-    variable: ART_TBhistoryComments
+    variable: t_bhistory_comments
     type: open
     nbLines: 2
     nbCharLines: 0
@@ -821,7 +821,7 @@ questions:
     translations:
       - label: K06. Comments
   - label: TB related symptoms
-    variable: ART_TBRelatedSymptoms_Opt
+    variable: tb_related_symptoms_opt
     type: options
     nbOptions: 3
     options:
@@ -839,7 +839,7 @@ questions:
           - 'No'
           - mod-FR-3
   - label: TB Related Symptoms
-    variable: ART_TBRelatedSymptoms
+    variable: tb_related_symptoms
     type: multipleOptions
     nbOptions: 7
     options:
@@ -866,7 +866,7 @@ questions:
           - Haemoptysis
           - Notice of any abdominal or cervical lump
   - label: Fever
-    variable: ART_TBRelated_Fever
+    variable: tb_related_fever
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -875,7 +875,7 @@ questions:
     translations:
       - label: Fever
   - label: Night sweats
-    variable: ART_TBRelated_NightSweats
+    variable: tb_related_night_sweats
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -884,7 +884,7 @@ questions:
     translations:
       - label: Night sweats
   - label: Appetite loss
-    variable: ART_TBRelated_AppetiteLoss
+    variable: tb_related_appetite_loss
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -893,7 +893,7 @@ questions:
     translations:
       - label: Appetite loss
   - label: Weight loss
-    variable: ART_TBRelated_WeightLoss
+    variable: tb_related_weight_loss
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -902,7 +902,7 @@ questions:
     translations:
       - label: Weight loss
   - label: Night sweats
-    variable: ART_TBRelated_Cough
+    variable: tb_related_cough
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -911,7 +911,7 @@ questions:
     translations:
       - label: Night sweats
   - label: Appetite loss
-    variable: ART_TBRelated_Haemoptysis
+    variable: tb_related_haemoptysis
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -920,7 +920,7 @@ questions:
     translations:
       - label: Appetite loss
   - label: Weight loss
-    variable: ART_TBRelated_Notice
+    variable: tb_related_notice
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -929,7 +929,7 @@ questions:
     translations:
       - label: Weight loss
   - label: Constitutional
-    variable: ART_Constitutional
+    variable: constitutional
     type: multipleOptions
     nbOptions: 3
     options:
@@ -948,7 +948,7 @@ questions:
           - mod-FR-10
           - Other
   - label: Fatigue
-    variable: ART_Consti_Fatigue
+    variable: consti_fatigue
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -957,7 +957,7 @@ questions:
     translations:
       - label: Fatigue
   - label: Pain
-    variable: ART_Consti_Pain
+    variable: consti_pain
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -966,7 +966,7 @@ questions:
     translations:
       - label: Pain
   - label: Other
-    variable: ART_Consti_Other
+    variable: consti_other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -975,7 +975,7 @@ questions:
     translations:
       - label: 'M012. if other, specify'
   - label: Gastrointestinal
-    variable: ART_Gastrointestinal
+    variable: gastrointestinal
     type: multipleOptions
     nbOptions: 6
     options:
@@ -1000,7 +1000,7 @@ questions:
           - Diarrhea
           - Other
   - label: Abdominal Pain
-    variable: ART_Gastro_AbdominalPain
+    variable: gastro_abdominal_pain
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1009,7 +1009,7 @@ questions:
     translations:
       - label: Abdominal Pain
   - label: Nausea
-    variable: ART_Gastro_Nausea
+    variable: gastro_nausea
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1018,7 +1018,7 @@ questions:
     translations:
       - label: Nausea
   - label: Vomiting
-    variable: ART_Gastro_Vomiting
+    variable: gastro_vomiting
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1027,7 +1027,7 @@ questions:
     translations:
       - label: Vomiting
   - label: Dysphagia
-    variable: ART_Gastro_Dysphagia
+    variable: gastro_dysphagia
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1036,7 +1036,7 @@ questions:
     translations:
       - label: Dysphagia
   - label: Diarrhea
-    variable: ART_Gastro_Diarrhea
+    variable: gastro_diarrhea
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1045,7 +1045,7 @@ questions:
     translations:
       - label: Diarrhea
   - label: Other
-    variable: ART_Gastro_Other
+    variable: gastro_other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1054,7 +1054,7 @@ questions:
     translations:
       - label: 'M032. If other, specify'
   - label: Respiratory & CVs
-    variable: ART_Respiratory&CVs
+    variable: respiratory_c_vs
     type: multipleOptions
     nbOptions: 4
     options:
@@ -1075,7 +1075,7 @@ questions:
           - mod-FR-6
           - mod-FR-7
   - label: Difficultly breathing
-    variable: ART_Respi_DifficultlyBreathing
+    variable: respi_difficultly_breathing
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1084,7 +1084,7 @@ questions:
     translations:
       - label: Difficultly breathing
   - label: Chest Pain
-    variable: ART_Respi_ChestPain
+    variable: respi_chest_pain
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1093,7 +1093,7 @@ questions:
     translations:
       - label: Chest Pain
   - label: Palpitation
-    variable: ART_Respi_Palpitation
+    variable: respi_palpitation
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1102,7 +1102,7 @@ questions:
     translations:
       - label: Palpitation
   - label: Other
-    variable: ART_Respi_Other
+    variable: respi_other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1111,7 +1111,7 @@ questions:
     translations:
       - label: 'M022. If other, specify'
   - label: Neurological
-    variable: ART_Neurological
+    variable: neurological
     type: multipleOptions
     nbOptions: 6
     options:
@@ -1136,7 +1136,7 @@ questions:
           - mod-FR-6
           - Other
   - label: Headache
-    variable: ART_Neuro_Headache
+    variable: neuro_headache
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1145,7 +1145,7 @@ questions:
     translations:
       - label: Headache
   - label: Confusion
-    variable: ART_Neuro_Confusion
+    variable: neuro_confusion
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1154,7 +1154,7 @@ questions:
     translations:
       - label: Confusion
   - label: Memory problems
-    variable: ART_Neuro_MemoryProblems
+    variable: neuro_memory_problems
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1163,7 +1163,7 @@ questions:
     translations:
       - label: Memory problems
   - label: Tingling
-    variable: ART_Neuro_Tingling
+    variable: neuro_tingling
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1172,7 +1172,7 @@ questions:
     translations:
       - label: Tingling
   - label: Insomnia
-    variable: ART_Neuro_Insomnia
+    variable: neuro_insomnia
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1181,7 +1181,7 @@ questions:
     translations:
       - label: Insomnia
   - label: Yawning
-    variable: ART_Neuro_Yawning
+    variable: neuro_yawning
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1190,7 +1190,7 @@ questions:
     translations:
       - label: Yawning
   - label: Skin Manifestation
-    variable: ART_SkinManifestation
+    variable: skin_manifestation
     type: multipleOptions
     nbOptions: 4
     options:
@@ -1211,7 +1211,7 @@ questions:
           - Anxiety
           - Other
   - label: Itchiness
-    variable: ART_Skin_Itchiness
+    variable: skin_itchiness
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1220,7 +1220,7 @@ questions:
     translations:
       - label: Itchiness
   - label: Rash
-    variable: ART_Skin_Rash
+    variable: skin_rash
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1229,7 +1229,7 @@ questions:
     translations:
       - label: Rash
   - label: Lump
-    variable: ART_Skin_Lump
+    variable: skin_lump
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1238,7 +1238,7 @@ questions:
     translations:
       - label: Lump
   - label: Other
-    variable: ART_Skin_Other
+    variable: skin_other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1247,7 +1247,7 @@ questions:
     translations:
       - label: 'M082. If other, specify'
   - label: Additional comments
-    variable: ART_SymptomsComments
+    variable: symptoms_comments
     type: open
     nbLines: 3
     nbCharLines: 0
@@ -1256,7 +1256,7 @@ questions:
     translations:
       - label: M09. Additional comments
   - label: Eye
-    variable: ART_Eye
+    variable: eye
     type: options
     nbOptions: 3
     options:
@@ -1273,7 +1273,7 @@ questions:
           - Abnormal
           - Not done
   - label: Comment (specify)
-    variable: ART_EyeComment
+    variable: eye_comment
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1282,7 +1282,7 @@ questions:
     translations:
       - label: N122. Comment (specify)
   - label: 'Ears, Nose'
-    variable: ART_EarsNose
+    variable: ears_nose
     type: options
     nbOptions: 3
     options:
@@ -1299,7 +1299,7 @@ questions:
           - Abnormal
           - Not done
   - label: Comment (if abnormal describe)
-    variable: ART_EarsNoseComment
+    variable: ears_nose_comment
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1308,7 +1308,7 @@ questions:
     translations:
       - label: N022. Comment (if abnormal describe)
   - label: Oral
-    variable: ART_Oral
+    variable: oral
     type: options
     nbOptions: 3
     options:
@@ -1325,7 +1325,7 @@ questions:
           - Abnormal
           - Not done
   - label: Comment (if abnormal describe)
-    variable: ART_OralComment
+    variable: oral_comment
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1334,7 +1334,7 @@ questions:
     translations:
       - label: N012. Comment (if abnormal describe)
   - label: Lymph nodes
-    variable: ART_LymphNodes
+    variable: lymph_nodes
     type: options
     nbOptions: 3
     options:
@@ -1351,7 +1351,7 @@ questions:
           - Abnormal
           - Not done
   - label: Comment (if abnormal describe)
-    variable: ART_LymphNodesComment
+    variable: lymph_nodes_comment
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1360,7 +1360,7 @@ questions:
     translations:
       - label: N032. Comment (if abnormal describe)
   - label: Heart
-    variable: ART_Heart
+    variable: heart
     type: options
     nbOptions: 3
     options:
@@ -1377,7 +1377,7 @@ questions:
           - Abnormal
           - Not done
   - label: Comment (if abnormal describe)
-    variable: ART_HeartComment
+    variable: heart_comment
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1386,7 +1386,7 @@ questions:
     translations:
       - label: N042. Comment (if abnormal describe)
   - label: Lungs
-    variable: ART_Lungs
+    variable: lungs
     type: options
     nbOptions: 3
     options:
@@ -1403,7 +1403,7 @@ questions:
           - Abnormal
           - Not done
   - label: Comment (if abnormal describe)
-    variable: ART_LungsComment
+    variable: lungs_comment
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1412,7 +1412,7 @@ questions:
     translations:
       - label: N052. Comment (if abnormal describe)
   - label: Abdomen
-    variable: ART_Abdomen
+    variable: abdomen
     type: options
     nbOptions: 3
     options:
@@ -1429,7 +1429,7 @@ questions:
           - Abnormal
           - Not done
   - label: Comment (if abnormal describe)
-    variable: ART_AbdomenComment
+    variable: abdomen_comment
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1438,7 +1438,7 @@ questions:
     translations:
       - label: N062. Comment (if abnormal describe)
   - label: Neurological
-    variable: ART_PExam_Neurological
+    variable: p_exam_neurological
     type: options
     nbOptions: 3
     options:
@@ -1455,7 +1455,7 @@ questions:
           - Abnormal
           - Not done
   - label: Comment (if abnormal describe)
-    variable: ART_NeurologicalComment
+    variable: neurological_comment
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1464,7 +1464,7 @@ questions:
     translations:
       - label: N102. Comment (if abnormal describe)
   - label: Skin
-    variable: ART_Skin
+    variable: skin
     type: options
     nbOptions: 3
     options:
@@ -1481,7 +1481,7 @@ questions:
           - Abnormal
           - Not done
   - label: Comment (if abnormal describe)
-    variable: ART_SkinComment
+    variable: skin_comment
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1490,7 +1490,7 @@ questions:
     translations:
       - label: N072. Comment (if abnormal describe)
   - label: Additional comments
-    variable: ART_PhysicalExamComments
+    variable: physical_exam_comments
     type: open
     nbLines: 5
     nbCharLines: 0
@@ -1499,7 +1499,7 @@ questions:
     translations:
       - label: N13. Additional comments
   - label: WHO Stages For
-    variable: ART_Child_or_Adult
+    variable: child_or_adult
     type: options
     nbOptions: 2
     options:
@@ -1514,7 +1514,7 @@ questions:
           - Stage 1
           - Stage 2
   - label: Stage
-    variable: ART_Adult_Stage
+    variable: adult_stage
     type: options
     nbOptions: 4
     options:
@@ -1533,7 +1533,7 @@ questions:
           - Stage 3
           - Stage 4
   - label: Stage 1
-    variable: ART_Adult_Stage1
+    variable: adult_stage1
     type: multipleOptions
     nbOptions: 4
     options:
@@ -1554,7 +1554,7 @@ questions:
           - Hepatosplenomegaly
           - Other
   - label: Stage 2
-    variable: ART_Adult_Stage2
+    variable: adult_stage2
     type: multipleOptions
     nbOptions: 13
     options:
@@ -1601,7 +1601,7 @@ questions:
           - Minor mucocutaneous manifestations
           - Other
   - label: Stage 3
-    variable: ART_Adult_Stage3
+    variable: adult_stage3
     type: multipleOptions
     nbOptions: 19
     options:
@@ -1664,7 +1664,7 @@ questions:
           - Other severe bacterial infections (Myositis...)
           - Other
   - label: Stage 4
-    variable: ART_Adult_Stage4
+    variable: adult_stage4
     type: multipleOptions
     nbOptions: 29
     options:
@@ -1743,7 +1743,7 @@ questions:
           - Cytomegalovirus other than liver lymph node
           - Other
   - label: Child Stage
-    variable: ART_Child_Stage
+    variable: child_stage
     type: options
     nbOptions: 4
     options:
@@ -1762,7 +1762,7 @@ questions:
           - Stage 3
           - Stage 4
   - label: Child Stage 1
-    variable: ART_Child_Stage1
+    variable: child_stage1
     type: multipleOptions
     nbOptions: 3
     options:
@@ -1781,7 +1781,7 @@ questions:
           - Generalized Lymphadenopathy
           - Other
   - label: Child Stage 2
-    variable: ART_Child_Stage2
+    variable: child_stage2
     type: multipleOptions
     nbOptions: 11
     options:
@@ -1822,7 +1822,7 @@ questions:
             episodes in any 6 months period)
           - Loss of weight lower than 10%
   - label: Child Stage 3
-    variable: ART_Child_Stage3
+    variable: child_stage3
     type: multipleOptions
     nbOptions: 14
     options:
@@ -1873,7 +1873,7 @@ questions:
           - In bed less than 50% of normal daytime due to sickness
           - Other
   - label: Child Stage 4
-    variable: ART_Child_Stage4
+    variable: child_stage4
     type: multipleOptions
     nbOptions: 19
     options:
@@ -1937,7 +1937,7 @@ questions:
           - Lymphoma
           - mod-FR-20
   - label: Patient status
-    variable: ART_PatientStatus
+    variable: patient_status
     type: options
     nbOptions: 4
     options:
@@ -1956,7 +1956,7 @@ questions:
           - 'Sick, unable to work'
           - Beridden
   - label: OI Diagnosis
-    variable: ART_OIDiagnosis
+    variable: oi_diagnosis
     type: multipleOptions
     nbOptions: 12
     options:
@@ -1993,7 +1993,7 @@ questions:
           - Toxoplasmosis
           - Other OIs
   - label: EPTB
-    variable: ART_OIDiagnosisEPTB
+    variable: oi_diagnosis_eptb
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -2002,7 +2002,7 @@ questions:
     translations:
       - label: OI Diagnosis EPTB
   - label: Other
-    variable: ART_OIDiagnosisOther
+    variable: oi_diagnosis_other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -2011,7 +2011,7 @@ questions:
     translations:
       - label: P03. Other Diagnosis
   - label: Diagnosis Code
-    variable: ART_GHC_DiaCode1
+    variable: ghc_dia_code1
     type: code
     codesFile: LIST_I011_Diagnosis.dic
     nbCharCode: 25
@@ -2022,7 +2022,7 @@ questions:
     translations:
       - label: Diagnosis Code
   - label: Description
-    variable: ART_GHC_DiaDescription1
+    variable: ghc_dia_description1
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -2033,7 +2033,7 @@ questions:
     translations:
       - label: Description
   - label: Diagnosis Code
-    variable: ART_GHC_DiaCode2
+    variable: ghc_dia_code2
     type: code
     codesFile: LIST_I011_Diagnosis.dic
     nbCharCode: 25
@@ -2044,7 +2044,7 @@ questions:
     translations:
       - label: Diagnosis Coe
   - label: Description
-    variable: ART_GHC_DiaDescription2
+    variable: ghc_dia_description2
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -2055,7 +2055,7 @@ questions:
     translations:
       - label: Description
   - label: Diagnosis Code
-    variable: ART_GHC_DiaCode3
+    variable: ghc_dia_code3
     type: code
     codesFile: LIST_I011_Diagnosis.dic
     nbCharCode: 25
@@ -2066,7 +2066,7 @@ questions:
     translations:
       - label: Diagnosis Code
   - label: Description
-    variable: ART_GHC_DiaDescription3
+    variable: ghc_dia_description3
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -2077,7 +2077,7 @@ questions:
     translations:
       - label: Description
   - label: Diagnosis Code
-    variable: ART_GHC_DiaCode4
+    variable: ghc_dia_code4
     type: code
     codesFile: LIST_I011_Diagnosis.dic
     nbCharCode: 25
@@ -2088,7 +2088,7 @@ questions:
     translations:
       - label: Diagnosis Code
   - label: Description
-    variable: ART_GHC_DiaDescription4
+    variable: ghc_dia_description4
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -2099,7 +2099,7 @@ questions:
     translations:
       - label: Description
   - label: Additional comments
-    variable: ART_Diagnosis_Comments
+    variable: diagnosis_comments
     type: open
     nbLines: 4
     nbCharLines: 0
@@ -2108,7 +2108,7 @@ questions:
     translations:
       - label: Q05. Additional comments
   - label: First CD4
-    variable: ART_FirstCD4
+    variable: first_cd4
     type: number
     nbDecimals: 2
     numberType: 2
@@ -2126,7 +2126,7 @@ questions:
           - From 500 to 600
           - 600 and more
   - label: Last CD4
-    variable: ART_LastCD4
+    variable: last_cd4
     type: number
     nbDecimals: 2
     numberType: 2
@@ -2144,7 +2144,7 @@ questions:
           - From 500000 to 600000
           - 600000 and more
   - label: Viral load Result
-    variable: ART_ViralLoad_Result
+    variable: viral_load_result
     type: number
     nbDecimals: 2
     numberType: 2
@@ -2162,7 +2162,7 @@ questions:
           - From 5000 to 6000
           - 6000 and more
   - label: HBsAg
-    variable: ART_HBsAg
+    variable: h_bs_ag
     type: options
     nbOptions: 2
     options:
@@ -2177,7 +2177,7 @@ questions:
           - Positive
           - Negative
   - label: HBsAb
-    variable: ART_HBsAb
+    variable: h_bs_ab
     type: options
     nbOptions: 2
     options:
@@ -2192,7 +2192,7 @@ questions:
           - Positive
           - Negative
   - label: HCVAb
-    variable: ART_HCVAb
+    variable: hcv_ab
     type: options
     nbOptions: 2
     options:
@@ -2207,7 +2207,7 @@ questions:
           - Positive
           - Negative
   - label: APRI
-    variable: ART_APRI
+    variable: apri
     type: number
     nbDecimals: 2
     numberType: 4
@@ -2225,7 +2225,7 @@ questions:
           - From 61 to 73
           - 73 and more
   - label: Liver Fibrosis
-    variable: ART_LiverFilbrosis
+    variable: liver_filbrosis
     type: options
     nbOptions: 4
     options:
@@ -2244,7 +2244,7 @@ questions:
           - Stage 3
           - Stage 4
   - label: Smear
-    variable: TB_Sputum_Smear
+    variable: sputum_smear
     type: code
     codesFile: TB_Sample_Result.dic
     nbCharCode: 25
@@ -2253,7 +2253,7 @@ questions:
     translations:
       - label: Smear
   - label: Xpert
-    variable: TB_Sputum_Xpert
+    variable: sputum_xpert
     type: code
     codesFile: TB_Sample_Result.dic
     nbCharCode: 25
@@ -2262,7 +2262,7 @@ questions:
     translations:
       - label: Xpert
   - label: Culture
-    variable: TB_Sputum_Culture
+    variable: sputum_culture
     type: code
     codesFile: TB_Sample_Result.dic
     nbCharCode: 25
@@ -2271,7 +2271,7 @@ questions:
     translations:
       - label: Culture
   - label: H
-    variable: TB_Sputum_H
+    variable: sputum_h
     type: code
     codesFile: HRSE.dic
     nbCharCode: 25
@@ -2280,7 +2280,7 @@ questions:
     translations:
       - label: H
   - label: R
-    variable: TB_Sputum_R
+    variable: sputum_r
     type: code
     codesFile: HRSE.dic
     nbCharCode: 25
@@ -2289,7 +2289,7 @@ questions:
     translations:
       - label: R
   - label: S
-    variable: TB_Sputum_S
+    variable: sputum_s
     type: code
     codesFile: HRSE.dic
     nbCharCode: 25
@@ -2298,7 +2298,7 @@ questions:
     translations:
       - label: S
   - label: E
-    variable: TB_Sputum_E
+    variable: sputum_e
     type: code
     codesFile: HRSE.dic
     nbCharCode: 25
@@ -2307,7 +2307,7 @@ questions:
     translations:
       - label: E
   - label: LPA
-    variable: TB_Sputum_LPA
+    variable: sputum_lpa
     type: open
     codesFile: TB_Sample_Result.dic
     nbLines: 1
@@ -2317,7 +2317,7 @@ questions:
     translations:
       - label: LPA
   - label: Sample Date
-    variable: TB_Sputum_SampleDate
+    variable: sputum_sample_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -2325,7 +2325,7 @@ questions:
     translations:
       - label: Sample Date
   - label: Other Sample 1
-    variable: TB_OtherSample1
+    variable: other_sample1
     type: code
     codesFile: AFB CNS Test.dic
     nbCharCode: 25
@@ -2334,7 +2334,7 @@ questions:
     translations:
       - label: Other Sample
   - label: Smear
-    variable: TB_OtherSample1_Smear
+    variable: other_sample1_smear
     type: code
     codesFile: TB_Sample_Result.dic
     nbCharCode: 25
@@ -2343,7 +2343,7 @@ questions:
     translations:
       - label: Smear
   - label: Xpert
-    variable: TB_OtherSample1_Xpert
+    variable: other_sample1_xpert
     type: code
     codesFile: TB_Sample_Result.dic
     nbCharCode: 25
@@ -2352,7 +2352,7 @@ questions:
     translations:
       - label: Xpert
   - label: Culture
-    variable: TB_OtherSample1_Culture
+    variable: other_sample1_culture
     type: code
     codesFile: TB_Sample_Result.dic
     nbCharCode: 25
@@ -2361,7 +2361,7 @@ questions:
     translations:
       - label: Culture
   - label: H
-    variable: TB_OtherSample1_H
+    variable: other_sample1_h
     type: code
     codesFile: HRSE.dic
     nbCharCode: 25
@@ -2370,7 +2370,7 @@ questions:
     translations:
       - label: H
   - label: R
-    variable: TB_OtherSample1_R
+    variable: other_sample1_r
     type: code
     codesFile: HRSE.dic
     nbCharCode: 25
@@ -2379,7 +2379,7 @@ questions:
     translations:
       - label: R
   - label: S
-    variable: TB_OtherSample1_S
+    variable: other_sample1_s
     type: code
     codesFile: HRSE.dic
     nbCharCode: 25
@@ -2388,7 +2388,7 @@ questions:
     translations:
       - label: S
   - label: E
-    variable: TB_OtherSample1_E
+    variable: other_sample1_e
     type: code
     codesFile: HRSE.dic
     nbCharCode: 25
@@ -2397,7 +2397,7 @@ questions:
     translations:
       - label: E
   - label: LPA
-    variable: TB_OtherSample1_LPA
+    variable: other_sample1_lpa
     type: open
     codesFile: TB_Sample_Result.dic
     nbLines: 1
@@ -2407,7 +2407,7 @@ questions:
     translations:
       - label: LPA
   - label: Sample Date
-    variable: TB_OtherSample1_SampleDate
+    variable: other_sample1_sample_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -2415,7 +2415,7 @@ questions:
     translations:
       - label: Sample Date
   - label: Other Sample 2
-    variable: TB_OtherSample2
+    variable: other_sample2
     type: code
     codesFile: AFB CNS Test.dic
     nbCharCode: 25
@@ -2424,7 +2424,7 @@ questions:
     translations:
       - label: Other Sample
   - label: Smear
-    variable: TB_OtherSample2_Smear
+    variable: other_sample2_smear
     type: code
     codesFile: TB_Sample_Result.dic
     nbCharCode: 25
@@ -2433,7 +2433,7 @@ questions:
     translations:
       - label: Smear
   - label: Xpert
-    variable: TB_OtherSample2_Xpert
+    variable: other_sample2_xpert
     type: code
     codesFile: TB_Sample_Result.dic
     nbCharCode: 25
@@ -2442,7 +2442,7 @@ questions:
     translations:
       - label: Xpert
   - label: Culture
-    variable: TB_OtherSample2_Culture
+    variable: other_sample2_culture
     type: code
     codesFile: TB_Sample_Result.dic
     nbCharCode: 25
@@ -2451,7 +2451,7 @@ questions:
     translations:
       - label: Culture
   - label: H
-    variable: TB_OtherSample2_H
+    variable: other_sample2_h
     type: code
     codesFile: HRSE.dic
     nbCharCode: 25
@@ -2460,7 +2460,7 @@ questions:
     translations:
       - label: H
   - label: R
-    variable: TB_OtherSample2_R
+    variable: other_sample2_r
     type: code
     codesFile: HRSE.dic
     nbCharCode: 25
@@ -2469,7 +2469,7 @@ questions:
     translations:
       - label: R
   - label: S
-    variable: TB_OtherSample2_S
+    variable: other_sample2_s
     type: code
     codesFile: HRSE.dic
     nbCharCode: 25
@@ -2478,7 +2478,7 @@ questions:
     translations:
       - label: S
   - label: E
-    variable: TB_OtherSample2_E
+    variable: other_sample2_e
     type: code
     codesFile: HRSE.dic
     nbCharCode: 25
@@ -2487,7 +2487,7 @@ questions:
     translations:
       - label: E
   - label: LPA
-    variable: TB_OtherSample2_LPA
+    variable: other_sample2_lpa
     type: open
     codesFile: TB_Sample_Result.dic
     nbLines: 1
@@ -2497,7 +2497,7 @@ questions:
     translations:
       - label: LPA
   - label: Sample Date
-    variable: TB_OtherSample2_SampleDate
+    variable: other_sample2_sample_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -2505,7 +2505,7 @@ questions:
     translations:
       - label: Sample Date
   - label: Other Sample 3
-    variable: TB_OtherSample3
+    variable: other_sample3
     type: code
     codesFile: AFB CNS Test.dic
     nbCharCode: 25
@@ -2514,7 +2514,7 @@ questions:
     translations:
       - label: Other Sample
   - label: Smear
-    variable: TB_OtherSample3_Smear
+    variable: other_sample3_smear
     type: code
     codesFile: TB_Sample_Result.dic
     nbCharCode: 25
@@ -2523,7 +2523,7 @@ questions:
     translations:
       - label: Smear
   - label: Xpert
-    variable: TB_OtherSample3_Xpert
+    variable: other_sample3_xpert
     type: code
     codesFile: TB_Sample_Result.dic
     nbCharCode: 25
@@ -2532,7 +2532,7 @@ questions:
     translations:
       - label: Xpert
   - label: Culture
-    variable: TB_OtherSample3_Culture
+    variable: other_sample3_culture
     type: code
     codesFile: TB_Sample_Result.dic
     nbCharCode: 25
@@ -2541,7 +2541,7 @@ questions:
     translations:
       - label: Culture
   - label: H
-    variable: TB_OtherSample3_H
+    variable: other_sample3_h
     type: code
     codesFile: HRSE.dic
     nbCharCode: 25
@@ -2550,7 +2550,7 @@ questions:
     translations:
       - label: H
   - label: R
-    variable: TB_OtherSample3_R
+    variable: other_sample3_r
     type: code
     codesFile: HRSE.dic
     nbCharCode: 25
@@ -2559,7 +2559,7 @@ questions:
     translations:
       - label: R
   - label: S
-    variable: TB_OtherSample3_S
+    variable: other_sample3_s
     type: code
     codesFile: HRSE.dic
     nbCharCode: 25
@@ -2568,7 +2568,7 @@ questions:
     translations:
       - label: S
   - label: E
-    variable: TB_OtherSample3_E
+    variable: other_sample3_e
     type: code
     codesFile: HRSE.dic
     nbCharCode: 25
@@ -2577,7 +2577,7 @@ questions:
     translations:
       - label: E
   - label: LPA
-    variable: TB_OtherSample3_LPA
+    variable: other_sample3_lpa
     type: open
     codesFile: TB_Sample_Result.dic
     nbLines: 1
@@ -2587,7 +2587,7 @@ questions:
     translations:
       - label: LPA
   - label: Sample Date
-    variable: TB_OtherSample3_SampleDate
+    variable: other_sample3_sample_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -2595,7 +2595,7 @@ questions:
     translations:
       - label: Sample Date
   - label: Date
-    variable: TB_RadiologyDate
+    variable: radiology_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -2603,7 +2603,7 @@ questions:
     translations:
       - label: Date
   - label: Radiology
-    variable: TB_Radio_Radiology
+    variable: radio_radiology
     type: multipleOptions
     nbOptions: 3
     options:
@@ -2622,7 +2622,7 @@ questions:
           - 'Sick, able to work'
           - mod-FR-3
   - label: CXRay
-    variable: TB_Radio_CXRay
+    variable: radio_cx_ray
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -2631,7 +2631,7 @@ questions:
     translations:
       - label: M041. BodyFluid
   - label: X-Ray
-    variable: TB_Radio_XRay
+    variable: radio_x_ray
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -2640,7 +2640,7 @@ questions:
     translations:
       - label: M042. C&S
   - label: USG abdomen
-    variable: TB_Radio_USG
+    variable: radio_usg
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -2649,7 +2649,7 @@ questions:
     translations:
       - label: M043. Other
   - label: Persons living with the patient screened TB
-    variable: TB_Persons_screened_TB
+    variable: persons_screened_tb
     type: options
     nbOptions: 2
     options:
@@ -2664,7 +2664,7 @@ questions:
           - MDM Lab
           - Outside Lab
   - label: 'If yes, where'
-    variable: TB_ScreenedTBYesWhere
+    variable: screened_tb_yes_where
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -2673,7 +2673,7 @@ questions:
     translations:
       - label: 'S012. Plan: (Next visit)'
   - label: Referred
-    variable: TB_Referred
+    variable: referred
     type: options
     nbOptions: 2
     options:
@@ -2688,7 +2688,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: 'If yes, where'
-    variable: TB_ReferYesWhere
+    variable: refer_yes_where
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -2702,7 +2702,7 @@ questions:
           - mod-FR-3
           - mod-FR-4
   - label: Type of Case
-    variable: TB_TypeOfCase
+    variable: type_of_case
     type: options
     nbOptions: 6
     options:
@@ -2725,7 +2725,7 @@ questions:
           - mod-FR-4
           - mod-FR-5
   - label: Type
-    variable: TB_Type
+    variable: type
     type: options
     nbOptions: 2
     options:
@@ -2740,7 +2740,7 @@ questions:
           - New case
           - Retreatment care
   - label: Allergy
-    variable: ARTAllergy
+    variable: art_allergy
     type: multipleOptions
     nbOptions: 3
     options:
@@ -2759,7 +2759,7 @@ questions:
           - Sulfa
           - Other
   - label: 'If other, specify'
-    variable: ART_AllergyOther
+    variable: allergy_other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -2768,7 +2768,7 @@ questions:
     translations:
       - label: 'R012. If other, specify'
   - label: Pregnant
-    variable: ART_Pregnant
+    variable: pregnant
     type: options
     nbOptions: 2
     options:
@@ -2783,7 +2783,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Prophylaxis
-    variable: ART_Prophylaxis
+    variable: prophylaxis
     type: multipleOptions
     nbOptions: 2
     options:
@@ -2800,7 +2800,7 @@ questions:
           - Primary
           - Secondary
   - label: Prophyaxis_Primary
-    variable: ART_Prophyaxis_Primary
+    variable: prophyaxis_primary
     type: multipleOptions
     nbOptions: 4
     options:
@@ -2821,7 +2821,7 @@ questions:
           - mod-FR-6
           - mod-FR-8
   - label: Prophylaxis_Secondary
-    variable: ART_Prophylaxis_Secondary
+    variable: prophylaxis_secondary
     type: multipleOptions
     nbOptions: 5
     options:
@@ -2844,7 +2844,7 @@ questions:
           - Itraco
           - Azithro
   - label: MDM ART Starting Date
-    variable: ART_MDMARTStartingDate
+    variable: mdmart_starting_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -2852,7 +2852,7 @@ questions:
     translations:
       - label: R012. MDM Starting Date
   - label: Remaining pill (days)
-    variable: ART_RemainingPill
+    variable: remaining_pill
     type: number
     nbDecimals: 2
     numberType: 2
@@ -2869,7 +2869,7 @@ questions:
           - From 10 to 12
           - 12 and more
   - label: Medicine name
-    variable: ART_ARTMedName1
+    variable: art_med_name1
     type: code
     codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
@@ -2878,7 +2878,7 @@ questions:
     translations:
       - label: R0111. Medicine name
   - label: Dosage
-    variable: ART_Dosage1
+    variable: dosage1
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -2887,7 +2887,7 @@ questions:
     translations:
       - label: R0112. Dosage
   - label: Frequency
-    variable: ART_Frequency1
+    variable: frequency1
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -2896,7 +2896,7 @@ questions:
     translations:
       - label: R0113. Frequency
   - label: Number days
-    variable: ART_NumberDays1
+    variable: number_days1
     type: number
     nbDecimals: 2
     numberType: 2
@@ -2914,7 +2914,7 @@ questions:
           - mod-FR-6
           - mod-FR-7
   - label: Medicine name
-    variable: ART_ARTMedName2
+    variable: art_med_name2
     type: code
     codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
@@ -2923,7 +2923,7 @@ questions:
     translations:
       - label: R0121. Medicine name
   - label: Dosage
-    variable: ART_Dosage2
+    variable: dosage2
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -2932,7 +2932,7 @@ questions:
     translations:
       - label: R0122. Dosage
   - label: Frequency
-    variable: ART_Frequency2
+    variable: frequency2
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -2941,7 +2941,7 @@ questions:
     translations:
       - label: R0123. Frequency
   - label: Number days
-    variable: ART_NumberDays2
+    variable: number_days2
     type: number
     nbDecimals: 2
     numberType: 2
@@ -2959,7 +2959,7 @@ questions:
           - mod-FR-6
           - mod-FR-7
   - label: Medicine name
-    variable: ART_ARTMedName3
+    variable: art_med_name3
     type: code
     codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
@@ -2968,7 +2968,7 @@ questions:
     translations:
       - label: R0131. Medicine name
   - label: Dosage
-    variable: ART_Dosage3
+    variable: dosage3
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -2977,7 +2977,7 @@ questions:
     translations:
       - label: R0132. Dosage
   - label: Frequency
-    variable: ART_Frequency3
+    variable: frequency3
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -2986,7 +2986,7 @@ questions:
     translations:
       - label: R0133. Frequency
   - label: Number days
-    variable: ART_NumberDays3
+    variable: number_days3
     type: number
     nbDecimals: 2
     numberType: 2
@@ -3004,7 +3004,7 @@ questions:
           - mod-FR-6
           - mod-FR-7
   - label: Medicine name
-    variable: ART_ARTMedName4
+    variable: art_med_name4
     type: code
     codesFile: ARV Medicine_v2014.dic
     nbCharCode: 25
@@ -3013,7 +3013,7 @@ questions:
     translations:
       - label: R0141. Medicine name
   - label: Dosage
-    variable: ART_Dosage4
+    variable: dosage4
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3022,7 +3022,7 @@ questions:
     translations:
       - label: R0142. Dosage
   - label: Frequency
-    variable: ART_Frequency4
+    variable: frequency4
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3031,7 +3031,7 @@ questions:
     translations:
       - label: R0143. Frequency
   - label: Number days
-    variable: ART_NumberDays4
+    variable: number_days4
     type: number
     nbDecimals: 2
     numberType: 2
@@ -3043,7 +3043,7 @@ questions:
         options:
           - val = 32767
   - label: Medicine name
-    variable: ART_ARTMedName5
+    variable: art_med_name5
     type: code
     codesFile: LIST_I_ARVsMedicines.dic
     nbCharCode: 25
@@ -3052,7 +3052,7 @@ questions:
     translations:
       - label: R0151. Medicine name
   - label: Dosage
-    variable: ART_Dosage5
+    variable: dosage5
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3061,7 +3061,7 @@ questions:
     translations:
       - label: R0152. Dosage
   - label: Frequency
-    variable: ART_Frequency5
+    variable: frequency5
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3070,7 +3070,7 @@ questions:
     translations:
       - label: R0153. Frequency
   - label: Number days
-    variable: ART_NumberDays5
+    variable: number_days5
     type: number
     nbDecimals: 2
     numberType: 2
@@ -3082,7 +3082,7 @@ questions:
         options:
           - val = 32767
   - label: TB Starting Date
-    variable: ART_TB_StartingDate
+    variable: tb_starting_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -3090,7 +3090,7 @@ questions:
     translations:
       - label: TB Starting Date
   - label: Medicine name
-    variable: ART_TB_MedicineName1
+    variable: tb_medicine_name1
     type: code
     codesFile: TB_Medicines_List.txt
     nbCharCode: 25
@@ -3099,7 +3099,7 @@ questions:
     translations:
       - label: R0111. Medicine name
   - label: Dosage
-    variable: ART_TB_Dosage1
+    variable: tb_dosage1
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3108,7 +3108,7 @@ questions:
     translations:
       - label: R0112. Dosage
   - label: Frequency
-    variable: ART_TB_Frequency1
+    variable: tb_frequency1
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3117,7 +3117,7 @@ questions:
     translations:
       - label: R0113. Frequency
   - label: Number days
-    variable: ART_TB_NumberDays1
+    variable: tb_number_days1
     type: number
     nbDecimals: 2
     numberType: 2
@@ -3135,7 +3135,7 @@ questions:
           - From 500 to 600
           - 600 and more
   - label: Medicine name
-    variable: ART_TB_MedicineName2
+    variable: tb_medicine_name2
     type: code
     codesFile: TB_Medicines_List.txt
     nbCharCode: 25
@@ -3144,7 +3144,7 @@ questions:
     translations:
       - label: R0121. Medicine name
   - label: Dosage
-    variable: ART_TB_Dosage2
+    variable: tb_dosage2
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3153,7 +3153,7 @@ questions:
     translations:
       - label: R0122. Dosage
   - label: Frequency
-    variable: ART_TB_Frequency2
+    variable: tb_frequency2
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3162,7 +3162,7 @@ questions:
     translations:
       - label: R0123. Frequency
   - label: Number days
-    variable: ART_TB_NumberDays2
+    variable: tb_number_days2
     type: number
     nbDecimals: 2
     numberType: 2
@@ -3180,7 +3180,7 @@ questions:
           - From 50 to 60
           - 60 and more
   - label: Medicine name
-    variable: ART_TB_MedicineName3
+    variable: tb_medicine_name3
     type: code
     codesFile: TB_Medicines_List.txt
     nbCharCode: 25
@@ -3189,7 +3189,7 @@ questions:
     translations:
       - label: R0131. Medicine name
   - label: Dosage
-    variable: ART_TB_Dosage3
+    variable: tb_dosage3
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3198,7 +3198,7 @@ questions:
     translations:
       - label: R0132. Dosage
   - label: Frequency
-    variable: ART_TB_Frequency3
+    variable: tb_frequency3
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3207,7 +3207,7 @@ questions:
     translations:
       - label: R0133. Frequency
   - label: Number days
-    variable: ART_TB_NumberDays3
+    variable: tb_number_days3
     type: number
     nbDecimals: 2
     numberType: 2
@@ -3219,7 +3219,7 @@ questions:
         options:
           - val = 7
   - label: Medicine name
-    variable: ART_TB_MedicineName4
+    variable: tb_medicine_name4
     type: code
     codesFile: TB_Medicines_List.txt
     nbCharCode: 25
@@ -3228,7 +3228,7 @@ questions:
     translations:
       - label: R0141. Medicine name
   - label: Dosage
-    variable: ART_TB_Dosage4
+    variable: tb_dosage4
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3237,7 +3237,7 @@ questions:
     translations:
       - label: R0142. Dosage
   - label: Frequency
-    variable: ART_TB_Frequency4
+    variable: tb_frequency4
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3246,7 +3246,7 @@ questions:
     translations:
       - label: R0143. Frequency
   - label: Number days
-    variable: ART_TB_NumberDays4
+    variable: tb_number_days4
     type: number
     nbDecimals: 2
     numberType: 2
@@ -3258,7 +3258,7 @@ questions:
         options:
           - val = 32767
   - label: TB Category
-    variable: TB_Category
+    variable: category
     type: options
     nbOptions: 2
     options:
@@ -3273,7 +3273,7 @@ questions:
           - Intensive
           - Continuation
   - label: Treatment Category
-    variable: TB_TreatmentCategory
+    variable: treatment_category
     type: options
     nbOptions: 3
     options:
@@ -3290,7 +3290,7 @@ questions:
           - mod-FR-5
           - mod-FR-6
   - label: IPT_Treatment
-    variable: IPT_Treatmet
+    variable: treatmet
     type: multipleOptions
     nbOptions: 2
     options:
@@ -3307,7 +3307,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: IPT_Initiation_Date
-    variable: IPT_Initiation_Date
+    variable: initiation_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -3315,7 +3315,7 @@ questions:
     translations:
       - label: IPT_Initiation_Date
   - label: Initial_1st_Visit_Date
-    variable: Initial_1st_Visit_Date
+    variable: 1st_visit_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -3323,7 +3323,7 @@ questions:
     translations:
       - label: Initial_1st_Visit_Date
   - label: IPT_Outcome
-    variable: IPT_Outcome
+    variable: outcome
     type: code
     codesFile: IPT_Outcome.dic
     nbCharCode: 25
@@ -3332,7 +3332,7 @@ questions:
     translations:
       - label: IPT_Outcome
   - label: IPT_Outcome_Date
-    variable: IPT_Outcome_Date
+    variable: outcome_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -3340,7 +3340,7 @@ questions:
     translations:
       - label: IPT_Outcome_Date
   - label: Reasons_of_not_starting_IPT
-    variable: Reasons_of_not_starting_IPT
+    variable: of_not_starting_ipt
     type: options
     nbOptions: 10
     options:
@@ -3371,7 +3371,7 @@ questions:
           - Patient refusal
           - mod-FR-10
   - label: IPT_Other
-    variable: IPT_Other
+    variable: other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3380,7 +3380,7 @@ questions:
     translations:
       - label: IPT_Other
   - label: Medicine name
-    variable: ART_OTHMedName1
+    variable: oth_med_name1
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -3389,7 +3389,7 @@ questions:
     translations:
       - label: R0211. Medicine name
   - label: Dosage
-    variable: ART_OTH_Dosage1
+    variable: oth_dosage1
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3398,7 +3398,7 @@ questions:
     translations:
       - label: R0212. Dosage
   - label: Frequency
-    variable: ART_OTH_Frequency1
+    variable: oth_frequency1
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3407,7 +3407,7 @@ questions:
     translations:
       - label: R0213. Frequency
   - label: Number days
-    variable: ART_OTH_NumberDays1
+    variable: oth_number_days1
     type: number
     nbDecimals: 2
     numberType: 2
@@ -3425,7 +3425,7 @@ questions:
           - mod-FR-6
           - mod-FR-7
   - label: Medicine name
-    variable: ART_OTHMedName2
+    variable: oth_med_name2
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -3434,7 +3434,7 @@ questions:
     translations:
       - label: R0221. Medicine name
   - label: Dosage
-    variable: ART_OTH_Dosage2
+    variable: oth_dosage2
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3443,7 +3443,7 @@ questions:
     translations:
       - label: R0222. Dosage
   - label: Frequency
-    variable: ART_OTH_Frequency2
+    variable: oth_frequency2
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3452,7 +3452,7 @@ questions:
     translations:
       - label: R0223. Frequency
   - label: Number days
-    variable: ART_OTH_NumberDays2
+    variable: oth_number_days2
     type: number
     nbDecimals: 2
     numberType: 2
@@ -3470,7 +3470,7 @@ questions:
           - mod-FR-6
           - mod-FR-7
   - label: Medicine name
-    variable: ART_OTHMedName3
+    variable: oth_med_name3
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -3479,7 +3479,7 @@ questions:
     translations:
       - label: R0231. Medicine name
   - label: Dosage
-    variable: ART_OTH_Dosage3
+    variable: oth_dosage3
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3488,7 +3488,7 @@ questions:
     translations:
       - label: R0232. Dosage
   - label: Frequency
-    variable: ART_OTH_Frequency3
+    variable: oth_frequency3
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3497,7 +3497,7 @@ questions:
     translations:
       - label: R0233. Frequency
   - label: Number days
-    variable: ART_OTH_NumberDays3
+    variable: oth_number_days3
     type: number
     nbDecimals: 2
     numberType: 2
@@ -3515,7 +3515,7 @@ questions:
           - mod-FR-6
           - mod-FR-7
   - label: Medicine name
-    variable: ART_OTHMedName4
+    variable: oth_med_name4
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -3524,7 +3524,7 @@ questions:
     translations:
       - label: R0241. Medicine name
   - label: Dosage
-    variable: ART_OTH_Dosage4
+    variable: oth_dosage4
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3533,7 +3533,7 @@ questions:
     translations:
       - label: R0242. Dosage
   - label: Frequency
-    variable: ART_OTH_Frequency4
+    variable: oth_frequency4
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3542,7 +3542,7 @@ questions:
     translations:
       - label: R0243. Frequency
   - label: Number days
-    variable: ART_OTH_NumberDays4
+    variable: oth_number_days4
     type: number
     nbDecimals: 2
     numberType: 2
@@ -3560,7 +3560,7 @@ questions:
           - mod-FR-6
           - mod-FR-7
   - label: Medicine name
-    variable: ART_OTHMedName5
+    variable: oth_med_name5
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -3569,7 +3569,7 @@ questions:
     translations:
       - label: R0251. Medicine name
   - label: Dosage
-    variable: ART_OTH_Dosage5
+    variable: oth_dosage5
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3578,7 +3578,7 @@ questions:
     translations:
       - label: R0252. Dosage
   - label: Frequency
-    variable: ART_OTH_Frequency5
+    variable: oth_frequency5
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3587,7 +3587,7 @@ questions:
     translations:
       - label: R0253. Frequency
   - label: Number days
-    variable: ART_OTH_NumberDays5
+    variable: oth_number_days5
     type: number
     nbDecimals: 2
     numberType: 2
@@ -3605,7 +3605,7 @@ questions:
           - mod-FR-6
           - mod-FR-7
   - label: Medicine name
-    variable: ART_OTHMedName6
+    variable: oth_med_name6
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -3614,7 +3614,7 @@ questions:
     translations:
       - label: R0251. Medicine name
   - label: Dosage
-    variable: ART_OTH_Dosage6
+    variable: oth_dosage6
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3623,7 +3623,7 @@ questions:
     translations:
       - label: R0252. Dosage
   - label: Frequency
-    variable: ART_OTH_Frequency6
+    variable: oth_frequency6
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3632,7 +3632,7 @@ questions:
     translations:
       - label: R0253. Frequency
   - label: Number days
-    variable: ART_OTH_NumberDays6
+    variable: oth_number_days6
     type: number
     nbDecimals: 2
     numberType: 2
@@ -3650,7 +3650,7 @@ questions:
           - mod-FR-6
           - mod-FR-7
   - label: Medicine name
-    variable: ART_OTH_MedName7
+    variable: oth_med_name7
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -3659,7 +3659,7 @@ questions:
     translations:
       - label: R0211. Medicine name
   - label: Dosage
-    variable: ART_OTH_Dosage7
+    variable: oth_dosage7
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3668,7 +3668,7 @@ questions:
     translations:
       - label: R0212. Dosage
   - label: Frequency
-    variable: ART_OTH_Frequency7
+    variable: oth_frequency7
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3677,7 +3677,7 @@ questions:
     translations:
       - label: R0213. Frequency
   - label: Number days
-    variable: ART_OTH_NumberDays7
+    variable: oth_number_days7
     type: number
     nbDecimals: 2
     numberType: 2
@@ -3695,7 +3695,7 @@ questions:
           - From 10.00 to 12.00
           - 12.00 and more
   - label: Medicine name
-    variable: ART_OTH_MedName8
+    variable: oth_med_name8
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -3704,7 +3704,7 @@ questions:
     translations:
       - label: R0221. Medicine name
   - label: Dosage
-    variable: ART_OTH_Dosage8
+    variable: oth_dosage8
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3713,7 +3713,7 @@ questions:
     translations:
       - label: R0222. Dosage
   - label: Frequency
-    variable: ART_OTH_Frequency8
+    variable: oth_frequency8
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3722,7 +3722,7 @@ questions:
     translations:
       - label: R0223. Frequency
   - label: Number days
-    variable: ART_OTH_NumberDays8
+    variable: oth_number_days8
     type: number
     nbDecimals: 2
     numberType: 2
@@ -3738,7 +3738,7 @@ questions:
           - val = 6
           - val = 7
   - label: Medicine name
-    variable: ART_OTH_MedName9
+    variable: oth_med_name9
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -3747,7 +3747,7 @@ questions:
     translations:
       - label: R0231. Medicine name
   - label: Dosage
-    variable: ART_OTH_Dosage9
+    variable: oth_dosage9
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3756,7 +3756,7 @@ questions:
     translations:
       - label: R0232. Dosage
   - label: Frequency
-    variable: ART_OTH_Frequency9
+    variable: oth_frequency9
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3765,7 +3765,7 @@ questions:
     translations:
       - label: R0233. Frequency
   - label: Number days
-    variable: ART_OTH_NumberDays9
+    variable: oth_number_days9
     type: number
     nbDecimals: 2
     numberType: 2
@@ -3777,7 +3777,7 @@ questions:
         options:
           - val = 7
   - label: Medicine name
-    variable: ART_OTH_MedName10
+    variable: oth_med_name10
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -3786,7 +3786,7 @@ questions:
     translations:
       - label: R0241. Medicine name
   - label: Dosage
-    variable: ART_OTH_Dosage10
+    variable: oth_dosage10
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3795,7 +3795,7 @@ questions:
     translations:
       - label: R0242. Dosage
   - label: Frequency
-    variable: ART_OTH_Frequency10
+    variable: oth_frequency10
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3804,7 +3804,7 @@ questions:
     translations:
       - label: R0243. Frequency
   - label: Number days
-    variable: ART_OTH_NumberDays10
+    variable: oth_number_days10
     type: number
     nbDecimals: 2
     numberType: 2
@@ -3816,7 +3816,7 @@ questions:
         options:
           - val = 32767
   - label: Medicine name
-    variable: ART_OTH_MedName11
+    variable: oth_med_name11
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -3825,7 +3825,7 @@ questions:
     translations:
       - label: R0251. Medicine name
   - label: Dosage
-    variable: ART_OTH_Dosage11
+    variable: oth_dosage11
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3834,7 +3834,7 @@ questions:
     translations:
       - label: R0252. Dosage
   - label: Frequency
-    variable: ART_OTH_Frequency11
+    variable: oth_frequency11
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3843,7 +3843,7 @@ questions:
     translations:
       - label: R0253. Frequency
   - label: Number days
-    variable: ART_OTH_NumberDays11
+    variable: oth_number_days11
     type: number
     nbDecimals: 2
     numberType: 2
@@ -3855,7 +3855,7 @@ questions:
         options:
           - val = 32767
   - label: Referred to hospital or other structure
-    variable: ART_ReferredTo
+    variable: referred_to
     type: options
     nbOptions: 2
     options:
@@ -3870,7 +3870,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Patient should return in
-    variable: ART_PatientShouldReturnIn
+    variable: patient_should_return_in
     type: options
     nbOptions: 8
     options:
@@ -3897,7 +3897,7 @@ questions:
           - 6 mths
           - Other
   - label: Other
-    variable: ART_ReturnOther
+    variable: return_other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3906,7 +3906,7 @@ questions:
     translations:
       - label: T21. Other
   - label: Date of next visit
-    variable: ART_DateNextVisit
+    variable: date_next_visit
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -3914,7 +3914,7 @@ questions:
     translations:
       - label: T3. Date of next visit
   - label: Motive
-    variable: ART_Motive
+    variable: motive
     type: multipleOptions
     nbOptions: 9
     options:
@@ -3945,7 +3945,7 @@ questions:
           - Other
           - mod-FR-9
   - label: MotiveOther
-    variable: ART_MotiveOther
+    variable: motive_other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -3954,7 +3954,7 @@ questions:
     translations:
       - label: MotiveOther
   - label: Plan (Next visit)
-    variable: ART_PlanNextVisit
+    variable: plan_next_visit
     type: open
     nbLines: 4
     nbCharLines: 0
@@ -3963,7 +3963,7 @@ questions:
     translations:
       - label: Plan (Next visit)
   - label: Verify patient
-    variable: Verify
+    variable: verify
     type: number
     nbDecimals: 2
     numberType: 2
@@ -3974,7 +3974,7 @@ questions:
         options:
           - val = 32767
   - label: Last registration date
-    variable: LastRegistrationDate
+    variable: last_registration_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -3984,7 +3984,7 @@ questions:
     translations:
       - label: Last registration date
   - label: ART Key
-    variable: Key
+    variable: key
     type: open
     nbLines: 2
     nbCharLines: 0
@@ -3996,7 +3996,7 @@ questions:
     translations:
       - label: test
   - label: Order of the observations before sorting
-    variable: ORDER
+    variable: order
     type: number
     nbDecimals: 2
     numberType: 2
@@ -4014,7 +4014,7 @@ questions:
           - From 5000 to 6000
           - 6000 and more
   - label: Order of the observations before sorting
-    variable: ORDER1
+    variable: order1
     type: number
     nbDecimals: 2
     numberType: 2
@@ -4032,7 +4032,7 @@ questions:
           - From 5000 to 6000
           - 6000 and more
   - label: Order of the observations before sorting
-    variable: ORDER2
+    variable: order2
     type: number
     nbDecimals: 2
     numberType: 2
@@ -4050,7 +4050,7 @@ questions:
           - From 10000 to 12000
           - 12000 and more
   - label: Order of the observations before sorting
-    variable: ORDER3
+    variable: order3
     type: number
     nbDecimals: 2
     numberType: 2
@@ -4068,7 +4068,7 @@ questions:
           - From 10000 to 12000
           - 12000 and more
   - label: Order of the observations before sorting
-    variable: ORDER4
+    variable: order4
     type: number
     nbDecimals: 2
     numberType: 2
@@ -4086,7 +4086,7 @@ questions:
           - From 10000 to 12000
           - 12000 and more
   - label: Order of the observations before sorting
-    variable: ORDER5
+    variable: order5
     type: number
     nbDecimals: 2
     numberType: 2
@@ -4104,7 +4104,7 @@ questions:
           - From 10000 to 12000
           - 12000 and more
   - label: Order of the observations before sorting
-    variable: ORDER6
+    variable: order6
     type: number
     nbDecimals: 2
     numberType: 2
@@ -4244,7 +4244,7 @@ strata:
     active: 0
     filter:
       operator: 1
-      variable: 141
+      variable: '141'
       included: 2
       options:
         - '1'

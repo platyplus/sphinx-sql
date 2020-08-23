@@ -1,4 +1,5 @@
 import { readline } from "https://deno.land/x/readline/mod.ts";
+import { snakeCase } from "https://deno.land/x/case/mod.ts";
 import { set } from "../set-value.ts";
 import { SphinxForm } from "./types.ts";
 
@@ -80,6 +81,12 @@ const valueTransformers: Record<string, (value: string) => any> = {
     value.substring(
       value.lastIndexOf("\\") + 1,
     ),
+  variable: (value) => {
+    // ? Specific to MdM encoding. Set as a parameter somehow?
+    const underscore = value.indexOf("_");
+    if (underscore >= 0) value = value.substring(underscore + 1);
+    return snakeCase(value);
+  },
   type: (type) => {
     if (type === "0") return "label";
     if (type === "1") return "options";

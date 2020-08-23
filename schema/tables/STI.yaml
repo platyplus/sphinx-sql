@@ -11,7 +11,7 @@ headers:
       title: ART VISIT
 questions:
   - label: MDM code (Patient ID)
-    variable: MDMcode
+    variable: md_mcode
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -20,7 +20,7 @@ questions:
     translations:
       - label: MDM code (Patient ID)
   - label: Registration date
-    variable: A00_RegistrationDate
+    variable: registration_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -28,7 +28,7 @@ questions:
     translations:
       - label: A00. Registration date
   - label: Name
-    variable: A01_PatientName
+    variable: patient_name
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -37,7 +37,7 @@ questions:
     translations:
       - label: A01. Name
   - label: Father’s name
-    variable: A02_FatherName
+    variable: father_name
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -46,7 +46,7 @@ questions:
     translations:
       - label: A02. Father’s name
   - label: Sex
-    variable: A03_Sexe
+    variable: sexe
     type: options
     nbOptions: 2
     options:
@@ -62,7 +62,7 @@ questions:
           - Male
           - Female
   - label: Date of birth
-    variable: A041_DateOfBirth
+    variable: date_of_birth
     type: date
     min: 3652
     format: jj/mm/aaaa
@@ -72,7 +72,7 @@ questions:
     translations:
       - label: A04. Date of birth
   - label: Age
-    variable: A05_Age
+    variable: age
     type: number
     nbDecimals: 2
     numberType: 2
@@ -81,7 +81,7 @@ questions:
     translations:
       - label: A05. Age
   - label: Patient target
-    variable: A07_PatientTarget
+    variable: patient_target
     type: code
     codesFile: LIST_A3_Target.dic
     nbCharCode: 25
@@ -91,7 +91,7 @@ questions:
     translations:
       - label: A07. Patient target
   - label: Visit date
-    variable: STI_VisitDate
+    variable: visit_date
     type: date
     min: 32872
     format: jj/mm/aaaa
@@ -101,7 +101,7 @@ questions:
     translations:
       - label: Visit date
   - label: MDM staff
-    variable: STI_MDMstaff
+    variable: md_mstaff
     type: code
     codesFile: LIST_A2_MDMstaff.dic
     nbCharCode: 25
@@ -110,7 +110,7 @@ questions:
     translations:
       - label: MDM staff
   - label: STI New Patient
-    variable: STI_NewPatient
+    variable: new_patient
     type: options
     nbOptions: 2
     options:
@@ -126,7 +126,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Previous SIT Treated
-    variable: STI_Background_PreviousSITTreated
+    variable: background_previous_sit_treated
     type: options
     nbOptions: 2
     options:
@@ -141,7 +141,7 @@ questions:
           - 'Yes'
           - mod-FR-2
   - label: Symptoms
-    variable: STI_Symptoms
+    variable: symptoms
     type: multipleOptions
     nbOptions: 12
     options:
@@ -178,7 +178,7 @@ questions:
           - mod-FR-14
           - mod-FR-10
   - label: Score throat
-    variable: STI_Symptoms_ScoreThroat
+    variable: symptoms_score_throat
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -187,7 +187,7 @@ questions:
     translations:
       - label: Score throat
   - label: VaginalDOpt
-    variable: STI_Symptoms_VaginalDOpt
+    variable: symptoms_vaginal_d_opt
     type: multipleOptions
     nbOptions: 3
     options:
@@ -206,7 +206,7 @@ questions:
           - Fever
           - Fatigue
   - label: VDischargeDescription
-    variable: STI_Symptoms_VDischarge
+    variable: symptoms_v_discharge
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -216,7 +216,7 @@ questions:
     translations:
       - label: VDischargeDescription
   - label: LowAbdoOpt
-    variable: STI_Symptoms_LowAbdoOpt
+    variable: symptoms_low_abdo_opt
     type: multipleOptions
     nbOptions: 2
     options:
@@ -233,7 +233,7 @@ questions:
           - Fatigue
           - Fever
   - label: LowAbdoPain
-    variable: STI_Symptoms_LowAbdoPain
+    variable: symptoms_low_abdo_pain
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -242,7 +242,7 @@ questions:
     translations:
       - label: 'M082. If other, specify'
   - label: Dysuria
-    variable: STI_Symptoms_Dysuria
+    variable: symptoms_dysuria
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -251,7 +251,7 @@ questions:
     translations:
       - label: 'M042. If other, specify'
   - label: UlcerOpt
-    variable: STI_Symptoms_UlcerOpt
+    variable: symptoms_ulcer_opt
     type: multipleOptions
     nbOptions: 4
     options:
@@ -272,7 +272,7 @@ questions:
           - Night sweats
           - mod-FR-4
   - label: Ulcer
-    variable: STI_Symptoms_Ulcer
+    variable: symptoms_ulcer
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -281,7 +281,7 @@ questions:
     translations:
       - label: 'M032. If other, specify'
   - label: Anal Discharge
-    variable: STI_Symptoms_AnalDischarge
+    variable: symptoms_anal_discharge
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -290,7 +290,7 @@ questions:
     translations:
       - label: Anal Discharge
   - label: ItchinessDescription
-    variable: STI_Symptoms_ItchinessDescription
+    variable: symptoms_itchiness_description
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -299,7 +299,7 @@ questions:
     translations:
       - label: ItchinessDuration
   - label: Swelling
-    variable: STI_Symptoms_Swelling
+    variable: symptoms_swelling
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -308,7 +308,7 @@ questions:
     translations:
       - label: Swelling
   - label: Warts
-    variable: STI_Symptoms_Warts
+    variable: symptoms_warts
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -317,7 +317,7 @@ questions:
     translations:
       - label: 'M072. If other, specify'
   - label: Scrotal
-    variable: STI_Symptoms_Scrotal
+    variable: symptoms_scrotal
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -326,7 +326,7 @@ questions:
     translations:
       - label: 'M082. If other, specify'
   - label: Urethral Discharge
-    variable: STI_Symptoms_UrethralDischarge
+    variable: symptoms_urethral_discharge
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -335,7 +335,7 @@ questions:
     translations:
       - label: Urethral Discharge
   - label: Other
-    variable: STI_Symptoms_Other
+    variable: symptoms_other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -344,7 +344,7 @@ questions:
     translations:
       - label: K102_WeightLoss
   - label: Comment
-    variable: STI_Symptoms_Comment
+    variable: symptoms_comment
     type: open
     nbLines: 4
     nbCharLines: 0
@@ -353,7 +353,7 @@ questions:
     translations:
       - label: Comment
   - label: Physical Exam
-    variable: STI_PhysicalExam
+    variable: physical_exam
     type: multipleOptions
     nbOptions: 16
     options:
@@ -398,7 +398,7 @@ questions:
           - mod-FR-11
           - mod-FR-12
   - label: Oral Ulcer Opt
-    variable: STI_PExam_OralUlcerOpt
+    variable: p_exam_oral_ulcer_opt
     type: multipleOptions
     nbOptions: 3
     options:
@@ -417,7 +417,7 @@ questions:
           - Multiple
           - Tenderness
   - label: Pyaryngitis
-    variable: STI_PExam_Pyaryngitis
+    variable: p_exam_pyaryngitis
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -426,7 +426,7 @@ questions:
     translations:
       - label: Pyaryngitis
   - label: Skin Rash
-    variable: STI_PExam_SkinRash
+    variable: p_exam_skin_rash
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -436,7 +436,7 @@ questions:
     translations:
       - label: Skin Rash Opt
   - label: Tenderness Over Lower Abdomen
-    variable: STI_PExam_TendernessOverLowerAbdomen
+    variable: p_exam_tenderness_over_lower_abdomen
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -445,7 +445,7 @@ questions:
     translations:
       - label: N012. Comment (if abnormal describe)
   - label: Vulva
-    variable: STI_PExam_Vulva
+    variable: p_exam_vulva
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -454,7 +454,7 @@ questions:
     translations:
       - label: Vulva
   - label: VaginalD
-    variable: STI_PExam_VaginalD
+    variable: p_exam_vaginal_d
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -464,7 +464,7 @@ questions:
     translations:
       - label: VaginalD
   - label: CervicalD
-    variable: STI_PExam_CervicalD
+    variable: p_exam_cervical_d
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -474,7 +474,7 @@ questions:
     translations:
       - label: CervicalDOpt
   - label: Adnexal tenderness
-    variable: STI_PExam_AdnexalTenderness
+    variable: p_exam_adnexal_tenderness
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -483,7 +483,7 @@ questions:
     translations:
       - label: Adnexal tenderness
   - label: Cervical motion tenderness
-    variable: STI_PExam_CervicalMotionTenderness
+    variable: p_exam_cervical_motion_tenderness
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -492,7 +492,7 @@ questions:
     translations:
       - label: Cervical motion tenderness
   - label: Inguinal bubo
-    variable: STI_PExam_InguinalBubo
+    variable: p_exam_inguinal_bubo
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -501,7 +501,7 @@ questions:
     translations:
       - label: Inguinal bubo
   - label: GenitalUlcer
-    variable: STI_PExam_GenitalUlcer
+    variable: p_exam_genital_ulcer
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -511,7 +511,7 @@ questions:
     translations:
       - label: GenitalUlcer
   - label: Warts
-    variable: STI_PExam_Warts
+    variable: p_exam_warts
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -521,7 +521,7 @@ questions:
     translations:
       - label: WartsOpt
   - label: Urethral discharge
-    variable: STI_PExam_UrethralDischarge
+    variable: p_exam_urethral_discharge
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -530,7 +530,7 @@ questions:
     translations:
       - label: Urethral discharge
   - label: Anal discharge
-    variable: STI_PExam_AnalDischarge
+    variable: p_exam_anal_discharge
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -539,7 +539,7 @@ questions:
     translations:
       - label: Anal discharge
   - label: Scrotal
-    variable: STI_PExam_Scrotal
+    variable: p_exam_scrotal
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -549,7 +549,7 @@ questions:
     translations:
       - label: ScrotalOpt
   - label: Other
-    variable: STI_PExam_Other
+    variable: p_exam_other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -558,7 +558,7 @@ questions:
     translations:
       - label: N13. Additional comments
   - label: Comment
-    variable: STI_PExam_Comment
+    variable: p_exam_comment
     type: open
     nbLines: 2
     nbCharLines: 0
@@ -567,7 +567,7 @@ questions:
     translations:
       - label: Comment
   - label: Pregnancy Test
-    variable: STI_Test_PregnancyTest
+    variable: test_pregnancy_test
     type: options
     nbOptions: 2
     options:
@@ -582,7 +582,7 @@ questions:
           - Pen
           - Sulfa
   - label: Test
-    variable: STI_PExam_Test
+    variable: p_exam_test
     type: multipleOptions
     nbOptions: 9
     options:
@@ -613,7 +613,7 @@ questions:
           - Chlamydia Ag
           - RPR
   - label: 'Sniff Test:'
-    variable: STI_Test_SniffTest
+    variable: test_sniff_test
     type: multipleOptions
     nbOptions: 2
     options:
@@ -630,7 +630,7 @@ questions:
           - To change Treatment Plan
           - To contunue the Current treatment
   - label: PH
-    variable: STI_Test_PH
+    variable: test_ph
     type: multipleOptions
     nbOptions: 2
     options:
@@ -647,7 +647,7 @@ questions:
           - Pen
           - Sulfa
   - label: Urethral Smear
-    variable: STI_Test_UrethralSmear
+    variable: test_urethral_smear
     type: options
     nbOptions: 2
     options:
@@ -662,7 +662,7 @@ questions:
           - Pen
           - Sulfa
   - label: Vaginal Smear
-    variable: STI_Test_VaginalSmear
+    variable: test_vaginal_smear
     type: options
     nbOptions: 2
     options:
@@ -677,7 +677,7 @@ questions:
           - To change Treatment Plan
           - To contunue the Current treatment
   - label: Anal Smear
-    variable: STI_Test_AnalSmear
+    variable: test_anal_smear
     type: options
     nbOptions: 2
     options:
@@ -692,7 +692,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Ulcer Smear
-    variable: STI_Test_UlcerSmear
+    variable: test_ulcer_smear
     type: options
     nbOptions: 2
     options:
@@ -707,7 +707,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Throat Swab
-    variable: STI_Test_ThroatSwab
+    variable: test_throat_swab
     type: options
     nbOptions: 2
     options:
@@ -722,7 +722,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Chlamydia
-    variable: STI_Test_Chlamydia
+    variable: test_chlamydia
     type: options
     nbOptions: 2
     options:
@@ -737,7 +737,7 @@ questions:
           - Positive
           - Negative
   - label: RPR
-    variable: STI_Test_RPR
+    variable: test_rpr
     type: options
     nbOptions: 2
     options:
@@ -752,7 +752,7 @@ questions:
           - Positive
           - Negative
   - label: RPR dil
-    variable: STI_Test_RPRDil
+    variable: test_rpr_dil
     type: number
     nbDecimals: 2
     numberType: 2
@@ -762,7 +762,7 @@ questions:
     translations:
       - label: RPR dil
   - label: Other Investigation
-    variable: STI_Test_OtherInvestigation
+    variable: test_other_investigation
     type: open
     nbLines: 2
     nbCharLines: 0
@@ -771,7 +771,7 @@ questions:
     translations:
       - label: 'R012. If other, specify'
   - label: PresumptiveDiagnosis
-    variable: STI_PresumptiveDiagnosis
+    variable: presumptive_diagnosis
     type: multipleOptions
     nbOptions: 18
     options:
@@ -820,7 +820,7 @@ questions:
           - mod-FR-21
           - mod-FR-16
   - label: Other
-    variable: STI_PDiagnosis_Other
+    variable: p_diagnosis_other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -829,7 +829,7 @@ questions:
     translations:
       - label: M043. Other
   - label: M01. Lab
-    variable: STI_M01_Lab
+    variable: m01_lab
     type: multipleOptions
     nbOptions: 2
     options:
@@ -846,7 +846,7 @@ questions:
           - 'Healthy, able to work'
           - 'Sick, able to work'
   - label: Do you want
-    variable: STI_Treatment_TreatmentPlan
+    variable: treatment_treatment_plan
     type: options
     nbOptions: 3
     options:
@@ -863,7 +863,7 @@ questions:
           - To contunue the Current treatment
           - To stop treatment
   - label: Allergy
-    variable: STI_Treatment_Allergy
+    variable: treatment_allergy
     type: multipleOptions
     nbOptions: 3
     options:
@@ -882,7 +882,7 @@ questions:
           - Sulfa
           - Other
   - label: 'If other, specify'
-    variable: STI_Treatment_AllergyOther
+    variable: treatment_allergy_other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -891,7 +891,7 @@ questions:
     translations:
       - label: 'R012. If other, specify'
   - label: Pregnant
-    variable: STI_Treatment_Pregnant
+    variable: treatment_pregnant
     type: options
     nbOptions: 2
     options:
@@ -906,7 +906,7 @@ questions:
           - Pen
           - Sulfa
   - label: Surgical Intervention
-    variable: STI_Treatment_SurgicalIntervention
+    variable: treatment_surgical_intervention
     type: options
     nbOptions: 2
     options:
@@ -921,7 +921,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Medicine name
-    variable: STI_Treatment_MedicineName1
+    variable: treatment_medicine_name1
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -930,7 +930,7 @@ questions:
     translations:
       - label: R0111. Medicine name
   - label: Dosage
-    variable: STI_Treatment_Dosage1
+    variable: treatment_dosage1
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -939,7 +939,7 @@ questions:
     translations:
       - label: R0112. Dosage
   - label: Frequency
-    variable: STI_Treatment_Frequency1
+    variable: treatment_frequency1
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -948,7 +948,7 @@ questions:
     translations:
       - label: R0113. Frequency
   - label: Number days
-    variable: STI_Treatment_NumberDays1
+    variable: treatment_number_days1
     type: number
     nbDecimals: 2
     numberType: 2
@@ -958,7 +958,7 @@ questions:
     translations:
       - label: R0114. Number days
   - label: Medicine name
-    variable: STI_Treatment_MedicineName2
+    variable: treatment_medicine_name2
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -967,7 +967,7 @@ questions:
     translations:
       - label: R0121. Medicine name
   - label: Dosage
-    variable: STI_Treatment_Dosage2
+    variable: treatment_dosage2
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -976,7 +976,7 @@ questions:
     translations:
       - label: R0122. Dosage
   - label: Frequency
-    variable: STI_Treatment_Frequency2
+    variable: treatment_frequency2
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -985,7 +985,7 @@ questions:
     translations:
       - label: R0123. Frequency
   - label: Number days
-    variable: STI_Treatment_NumberDays2
+    variable: treatment_number_days2
     type: number
     nbDecimals: 2
     numberType: 2
@@ -995,7 +995,7 @@ questions:
     translations:
       - label: R0124. Number days
   - label: Medicine name
-    variable: STI_Treatment_MedicineName3
+    variable: treatment_medicine_name3
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -1004,7 +1004,7 @@ questions:
     translations:
       - label: R0131. Medicine name
   - label: Dosage
-    variable: STI_Treatment_Dosage3
+    variable: treatment_dosage3
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1013,7 +1013,7 @@ questions:
     translations:
       - label: R0132. Dosage
   - label: Frequency
-    variable: STI_Treatment_Frequency3
+    variable: treatment_frequency3
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1022,7 +1022,7 @@ questions:
     translations:
       - label: R0133. Frequency
   - label: Number days
-    variable: STI_Treatment_NumberDays3
+    variable: treatment_number_days3
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1032,7 +1032,7 @@ questions:
     translations:
       - label: R0134. Number days
   - label: Medicine name
-    variable: STI_Treatment_MedicineName4
+    variable: treatment_medicine_name4
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -1041,7 +1041,7 @@ questions:
     translations:
       - label: R0141. Medicine name
   - label: Dosage
-    variable: STI_Treatment_Dosage4
+    variable: treatment_dosage4
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1050,7 +1050,7 @@ questions:
     translations:
       - label: R0142. Dosage
   - label: Frequency
-    variable: STI_Treatment_Frequency4
+    variable: treatment_frequency4
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1059,7 +1059,7 @@ questions:
     translations:
       - label: R0143. Frequency
   - label: Number days
-    variable: STI_Treatment_NumberDays4
+    variable: treatment_number_days4
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1069,7 +1069,7 @@ questions:
     translations:
       - label: R0144. Number days
   - label: Medicine name
-    variable: STI_Treatment_MedicineName5
+    variable: treatment_medicine_name5
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -1078,7 +1078,7 @@ questions:
     translations:
       - label: R0151. Medicine name
   - label: Dosage
-    variable: STI_Treatment_Dosage5
+    variable: treatment_dosage5
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1087,7 +1087,7 @@ questions:
     translations:
       - label: R0152. Dosage
   - label: Frequency
-    variable: STI_Treatment_Frequency5
+    variable: treatment_frequency5
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1096,7 +1096,7 @@ questions:
     translations:
       - label: R0153. Frequency
   - label: Number days
-    variable: STI_Treatment_NumberDays5
+    variable: treatment_number_days5
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1106,7 +1106,7 @@ questions:
     translations:
       - label: R0154. Number days
   - label: Medicine name
-    variable: STI_Treatment_MedicineName6
+    variable: treatment_medicine_name6
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -1115,7 +1115,7 @@ questions:
     translations:
       - label: R0211. Medicine name
   - label: Dosage
-    variable: STI_Treatment_Dosage6
+    variable: treatment_dosage6
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1124,7 +1124,7 @@ questions:
     translations:
       - label: R0212. Dosage
   - label: Frequency
-    variable: STI_Treatment_Frequency6
+    variable: treatment_frequency6
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1133,7 +1133,7 @@ questions:
     translations:
       - label: R0213. Frequency
   - label: Number days
-    variable: STI_Treatment_NumberDays6
+    variable: treatment_number_days6
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1143,7 +1143,7 @@ questions:
     translations:
       - label: R0214. Number days
   - label: Medicine name
-    variable: STI_Treatment_MedicineName7
+    variable: treatment_medicine_name7
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -1152,7 +1152,7 @@ questions:
     translations:
       - label: R0221. Medicine name
   - label: Dosage
-    variable: STI_Treatment_Dosage7
+    variable: treatment_dosage7
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1161,7 +1161,7 @@ questions:
     translations:
       - label: R0222. Dosage
   - label: Frequency
-    variable: STI_Treatment_Frequency7
+    variable: treatment_frequency7
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1170,7 +1170,7 @@ questions:
     translations:
       - label: R0223. Frequency
   - label: Number days
-    variable: STI_Treatment_NumberDays7
+    variable: treatment_number_days7
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1180,7 +1180,7 @@ questions:
     translations:
       - label: R0224. Number days
   - label: Medicine name
-    variable: STI_Treatment_MedicineName8
+    variable: treatment_medicine_name8
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -1189,7 +1189,7 @@ questions:
     translations:
       - label: R0231. Medicine name
   - label: Dosage
-    variable: STI_Treatment_Dosage8
+    variable: treatment_dosage8
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1198,7 +1198,7 @@ questions:
     translations:
       - label: R0232. Dosage
   - label: Frequency
-    variable: STI_Treatment_Frequency8
+    variable: treatment_frequency8
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1207,7 +1207,7 @@ questions:
     translations:
       - label: R0233. Frequency
   - label: Number days
-    variable: STI_Treatment_NumberDays8
+    variable: treatment_number_days8
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1217,7 +1217,7 @@ questions:
     translations:
       - label: R0234. Number days
   - label: Medicine name
-    variable: STI_Treatment_MedicineName9
+    variable: treatment_medicine_name9
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -1226,7 +1226,7 @@ questions:
     translations:
       - label: R0241. Medicine name
   - label: Dosage
-    variable: STI_Treatment_Dosage9
+    variable: treatment_dosage9
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1235,7 +1235,7 @@ questions:
     translations:
       - label: R0242. Dosage
   - label: Frequency
-    variable: STI_Treatment_Frequency9
+    variable: treatment_frequency9
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1244,7 +1244,7 @@ questions:
     translations:
       - label: R0243. Frequency
   - label: Number days
-    variable: STI_Treatment_NumberDays9
+    variable: treatment_number_days9
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1254,7 +1254,7 @@ questions:
     translations:
       - label: R0244. Number days
   - label: Medicine name
-    variable: STI_Treatment_MedicineName10
+    variable: treatment_medicine_name10
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -1263,7 +1263,7 @@ questions:
     translations:
       - label: R0251. Medicine name
   - label: Dosage
-    variable: STI_Treatment_Dosage10
+    variable: treatment_dosage10
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1272,7 +1272,7 @@ questions:
     translations:
       - label: R0252. Dosage
   - label: Frequency
-    variable: STI_Treatment_Frequency10
+    variable: treatment_frequency10
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1281,7 +1281,7 @@ questions:
     translations:
       - label: R0253. Frequency
   - label: Number days
-    variable: STI_Treatment_NumberDays10
+    variable: treatment_number_days10
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1291,7 +1291,7 @@ questions:
     translations:
       - label: R0254. Number days
   - label: N03. Other treatment
-    variable: STI_N03_OtherTreatment
+    variable: n03_other_treatment
     type: open
     nbLines: 6
     nbCharLines: 0
@@ -1300,7 +1300,7 @@ questions:
     translations:
       - label: R03. Other treatment
   - label: 'Referred to hospital or other structure:'
-    variable: STI_Referred
+    variable: referred
     type: options
     nbOptions: 2
     options:
@@ -1315,7 +1315,7 @@ questions:
           - MDM Lab
           - Outside Lab
   - label: STI/Condom use counseling
-    variable: STI_STI/Condom
+    variable: sti_condom
     type: options
     nbOptions: 2
     options:
@@ -1330,7 +1330,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Partner treatment
-    variable: STI_PartnerTreatment
+    variable: partner_treatment
     type: multipleOptions
     nbOptions: 2
     options:
@@ -1347,7 +1347,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Remark
-    variable: STI_Remark
+    variable: remark
     type: open
     nbLines: 3
     nbCharLines: 0
@@ -1356,7 +1356,7 @@ questions:
     translations:
       - label: 'S012. Plan: (Next visit)'
   - label: Date of next visit
-    variable: STI_DateNextVisit
+    variable: date_next_visit
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -1364,7 +1364,7 @@ questions:
     translations:
       - label: T3. Date of next visit
   - label: Plan for next visit
-    variable: STI_PlanForNextVisit
+    variable: plan_for_next_visit
     type: open
     nbLines: 3
     nbCharLines: 0
@@ -1373,7 +1373,7 @@ questions:
     translations:
       - label: Plan for next visit
   - label: Verify patient
-    variable: Verify
+    variable: verify
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1382,7 +1382,7 @@ questions:
     translations:
       - label: Verify patient
   - label: Last registration date
-    variable: LastRegistrationDate
+    variable: last_registration_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -1391,7 +1391,7 @@ questions:
     translations:
       - label: Last registration date
   - label: STI Key
-    variable: Key
+    variable: key
     type: open
     nbLines: 2
     nbCharLines: 0

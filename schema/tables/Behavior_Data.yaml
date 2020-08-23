@@ -8,21 +8,21 @@ headers:
   pannelStage: 10
 questions:
   - label: MDM code
-    variable: MDMcode
+    variable: md_mcode
     type: open
     nbLines: 1
     nbCharLines: 20
     plan: true
     attributes: 32
   - label: Name
-    variable: A01_PatientName
+    variable: patient_name
     type: open
     nbLines: 1
     nbCharLines: 0
     plan: true
     attributes: 32
   - label: Sex
-    variable: A03_Sexe
+    variable: sexe
     type: options
     nbOptions: 2
     options:
@@ -32,26 +32,26 @@ questions:
     plan: true
     attributes: 32
   - label: Age
-    variable: A05_Age
+    variable: age
     type: number
     nbDecimals: 2
     numberType: 2
     plan: true
     attributes: 32
   - label: Patient Target
-    variable: A07_PatientTarget
+    variable: patient_target
     type: code
     nbCharCode: 25
     plan: true
     attributes: 32
   - label: Date
-    variable: Beh_Date
+    variable: date
     type: date
     format: jj/mm/aaaa
     plan: true
     attributes: 32
   - label: PLH
-    variable: Beh_PLH
+    variable: plh
     type: options
     nbOptions: 2
     options:
@@ -61,7 +61,7 @@ questions:
     plan: true
     attributes: 32
   - label: Have you ever taken STI treatment in last 3 months?
-    variable: Beh_TakenSTITreatmentinLast3Months
+    variable: taken_sti_treatmentin_last3_months
     type: options
     nbOptions: 2
     options:
@@ -71,7 +71,7 @@ questions:
     plan: true
     attributes: 32
   - label: Did you have sex in last 6 months?
-    variable: Beh_DidYouHaveSexInLast6Months
+    variable: did_you_have_sex_in_last6_months
     type: options
     nbOptions: 2
     options:
@@ -81,7 +81,7 @@ questions:
     plan: true
     attributes: 32
   - label: 'If Yes, did you use condom at last sex?'
-    variable: Beh_UseCondomAtLastSex
+    variable: use_condom_at_last_sex
     type: options
     nbOptions: 2
     options:
@@ -91,7 +91,7 @@ questions:
     plan: true
     attributes: 32
   - label: Did you inject in last 6 months?
-    variable: Beh_DidYouInjectInLast6Months
+    variable: did_you_inject_in_last6_months
     type: options
     nbOptions: 2
     options:
@@ -101,7 +101,7 @@ questions:
     plan: true
     attributes: 32
   - label: 'If Yes, did you share needle/syringe in last injection?'
-    variable: Beh_ShareNeedleSyringeInLastInjection
+    variable: share_needle_syringe_in_last_injection
     type: options
     nbOptions: 2
     options:

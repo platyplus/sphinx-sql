@@ -17,6 +17,6 @@ const data = loadSphinxData(
   path.join("schema", "options.yaml"),
 );
 
-for await (const record of data) {
-  console.log(record);
-}
+// for await (const record of data) {
+//   console.log(record);
+// }

@@ -11,7 +11,7 @@ headers:
       title: ART VISIT
 questions:
   - label: MDM code (Patient ID)
-    variable: MDMcode
+    variable: md_mcode
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -21,7 +21,7 @@ questions:
     translations:
       - label: MDM code (Patient ID)
   - label: Registration date
-    variable: A00_RegistrationDate
+    variable: registration_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -29,7 +29,7 @@ questions:
     translations:
       - label: A00. Registration date
   - label: Name
-    variable: A01_PatientName
+    variable: patient_name
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -38,7 +38,7 @@ questions:
     translations:
       - label: A01. Name
   - label: Father’s name
-    variable: A02_FatherName
+    variable: father_name
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -47,7 +47,7 @@ questions:
     translations:
       - label: A02. Father’s name
   - label: A03. Sex
-    variable: A03_Sexe
+    variable: sexe
     type: options
     nbOptions: 2
     options:
@@ -62,7 +62,7 @@ questions:
           - Male
           - Female
   - label: Date of birth
-    variable: A041_DateOfBirth
+    variable: date_of_birth
     type: date
     min: 3652
     format: jj/mm/aaaa
@@ -72,7 +72,7 @@ questions:
     translations:
       - label: A04. Date of birth
   - label: Age
-    variable: A05_Age
+    variable: age
     type: number
     nbDecimals: 2
     numberType: 2
@@ -91,7 +91,7 @@ questions:
           - mod-FR-6
           - mod-FR-7
   - label: A07. Patient target
-    variable: A07_PatientTarget
+    variable: patient_target
     type: code
     codesFile: LIST_A3_Target.dic
     nbCharCode: 25
@@ -101,7 +101,7 @@ questions:
     translations:
       - label: A07. Patient target
   - label: Medical care place
-    variable: GI_PlaceOfMedicalCare
+    variable: place_of_medical_care
     type: options
     nbOptions: 5
     options:
@@ -123,7 +123,7 @@ questions:
           - Hospital
           - Specialist
   - label: Visit date
-    variable: GI_VisitDate
+    variable: visit_date
     type: date
     min: 32872
     format: jj/mm/aaaa
@@ -133,7 +133,7 @@ questions:
     translations:
       - label: Visit date
   - label: Marital Status
-    variable: A07a_MaritalStatus
+    variable: marital_status
     type: code
     codesFile: LIST_A4_MaritalStatus.dic
     nbCharCode: 25
@@ -142,7 +142,7 @@ questions:
     translations:
       - label: Marital Status
   - label: Current work place
-    variable: B04_CurrentWorkPlace
+    variable: current_work_place
     type: code
     codesFile: LIST_A7_WorkPlace.dic
     nbCharCode: 25
@@ -151,7 +151,7 @@ questions:
     translations:
       - label: B06. Current work place
   - label: Height
-    variable: A06a_Height
+    variable: height
     type: number
     nbDecimals: 2
     numberType: 2
@@ -164,7 +164,7 @@ questions:
         options:
           - val = 32767
   - label: BW
-    variable: GI_BW
+    variable: bw
     type: number
     nbDecimals: 2
     numberType: 2
@@ -177,7 +177,7 @@ questions:
         options:
           - val = 32767
   - label: Lb / Kg
-    variable: GI_LbOrKg
+    variable: lb_or_kg
     type: options
     nbOptions: 2
     options:
@@ -193,7 +193,7 @@ questions:
           - Lb
           - Kg
   - label: BMI
-    variable: GI_BMI
+    variable: bmi
     type: number
     nbDecimals: 2
     numberType: 4
@@ -205,7 +205,7 @@ questions:
     translations:
       - label: C06. BMI
   - label: Temperature
-    variable: GI_Temperature
+    variable: temperature
     type: number
     nbDecimals: 2
     numberType: 4
@@ -223,7 +223,7 @@ questions:
           - From - to -
           - '- and more'
   - label: °C/F
-    variable: GI_CorF
+    variable: cor_f
     type: options
     nbOptions: 2
     options:
@@ -239,7 +239,7 @@ questions:
           - °C
           - °F
   - label: BP
-    variable: GI_BP
+    variable: bp
     type: number
     nbDecimals: 2
     numberType: 2
@@ -251,7 +251,7 @@ questions:
         options:
           - val = 32767
   - label: BP
-    variable: GI_BP1
+    variable: bp1
     type: number
     nbDecimals: 2
     numberType: 2
@@ -263,7 +263,7 @@ questions:
         options:
           - val = 32767
   - label: RR
-    variable: GI_RR
+    variable: rr
     type: number
     nbDecimals: 2
     numberType: 2
@@ -275,7 +275,7 @@ questions:
         options:
           - val = 32767
   - label: Pulse
-    variable: GI_Pulse
+    variable: pulse
     type: number
     nbDecimals: 2
     numberType: 2
@@ -287,7 +287,7 @@ questions:
         options:
           - val = 32767
   - label: Reproductive health
-    variable: GI_ReproductiveHealth
+    variable: reproductive_health
     type: options
     nbOptions: 2
     options:
@@ -302,7 +302,7 @@ questions:
           - Patient is pregnant
           - Patient is breastfeeding
   - label: Contraception
-    variable: GI_Contraception
+    variable: contraception
     type: options
     nbOptions: 2
     options:
@@ -317,7 +317,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Type of contraception
-    variable: GI_ContraceptionType
+    variable: contraception_type
     type: multipleOptions
     nbOptions: 6
     options:
@@ -342,7 +342,7 @@ questions:
           - Tubal ligation/hysterectomy
           - Other
   - label: 'if other, specify'
-    variable: GI_OtherContraceptionType
+    variable: other_contraception_type
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -351,7 +351,7 @@ questions:
     translations:
       - label: 'D023. if other, specify'
   - label: Drug taken on
-    variable: GI_DrugTakenOn
+    variable: drug_taken_on
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -359,7 +359,7 @@ questions:
     translations:
       - label: D024. Drug taken on
   - label: LMP date
-    variable: GI_LMPdate
+    variable: lm_pdate
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -367,7 +367,7 @@ questions:
     translations:
       - label: D031. LMP date
   - label: Parity
-    variable: GI_Parity
+    variable: parity
     type: number
     nbDecimals: 2
     numberType: 2
@@ -377,7 +377,7 @@ questions:
     translations:
       - label: Parity
   - label: Condom use for last sex
-    variable: GI_CondomUseForLastSex
+    variable: condom_use_for_last_sex
     type: options
     nbOptions: 2
     options:
@@ -392,7 +392,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Number clients last working day
-    variable: GI_NumberClientsLastWorkingDay
+    variable: number_clients_last_working_day
     type: number
     nbDecimals: 2
     numberType: 2
@@ -404,7 +404,7 @@ questions:
         options:
           - val = 32767
   - label: Did you share needle/syringe in last injection?
-    variable: GI_ShareNeedleOrSyringeInLast
+    variable: share_needle_or_syringe_in_last
     type: options
     nbOptions: 2
     options:
@@ -419,7 +419,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Did you share needle/syringe in last month?
-    variable: GI_ShareNeedleOrSyringeInLastMonth
+    variable: share_needle_or_syringe_in_last_month
     type: options
     nbOptions: 2
     options:
@@ -434,7 +434,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Did you share needle/syringe in last 6 months?
-    variable: GI_ShareNeedleOrSyringeInLast6Months
+    variable: share_needle_or_syringe_in_last6_months
     type: options
     nbOptions: 2
     options:
@@ -449,7 +449,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Remarks
-    variable: GI_Remarks
+    variable: remarks
     type: open
     nbLines: 5
     nbCharLines: 0
@@ -458,7 +458,7 @@ questions:
     translations:
       - label: D04. Remarks
   - label: Verify patient
-    variable: Verify
+    variable: verify
     type: number
     nbDecimals: 2
     numberType: 2
@@ -469,7 +469,7 @@ questions:
         options:
           - val = 32767
   - label: Last registration date
-    variable: LastRegistrationDate
+    variable: last_registration_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -478,7 +478,7 @@ questions:
     translations:
       - label: Last registration date
   - label: GI ART Key
-    variable: Key
+    variable: key
     type: open
     nbLines: 2
     nbCharLines: 0

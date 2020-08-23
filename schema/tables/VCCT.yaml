@@ -11,7 +11,7 @@ headers:
       title: ART VISIT
 questions:
   - label: MDM code
-    variable: MDMcode
+    variable: md_mcode
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -21,7 +21,7 @@ questions:
     translations:
       - label: MDM code (Patient ID)
   - label: Registration date
-    variable: A00_RegistrationDate
+    variable: registration_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -29,7 +29,7 @@ questions:
     translations:
       - label: A00. Registration date
   - label: Name
-    variable: A01_PatientName
+    variable: patient_name
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -38,7 +38,7 @@ questions:
     translations:
       - label: A01. Name
   - label: Father’s name
-    variable: A02_FatherName
+    variable: father_name
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -47,7 +47,7 @@ questions:
     translations:
       - label: A02. Father’s name
   - label: Sex
-    variable: A03_Sexe
+    variable: sexe
     type: options
     nbOptions: 2
     options:
@@ -62,7 +62,7 @@ questions:
           - Male
           - Female
   - label: Date of birth
-    variable: A041_DateOfBirth
+    variable: date_of_birth
     type: date
     min: 3652
     format: jj/mm/aaaa
@@ -72,7 +72,7 @@ questions:
     translations:
       - label: A04. Date of birth
   - label: Age
-    variable: A05_Age
+    variable: age
     type: number
     nbDecimals: 2
     numberType: 2
@@ -81,7 +81,7 @@ questions:
     translations:
       - label: A05. Age
   - label: Visit date
-    variable: VCCT_VisitDate
+    variable: visit_date
     type: date
     min: 32872
     format: jj/mm/aaaa
@@ -91,7 +91,7 @@ questions:
     translations:
       - label: Visit date
   - label: TB Patient?
-    variable: VCCT_TBPatient
+    variable: tb_patient
     type: options
     nbOptions: 2
     options:
@@ -106,7 +106,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Place Of Testing
-    variable: VCCT_PlaceOfTesting
+    variable: place_of_testing
     type: code
     codesFile: LIST_A2_MDMstaff.dic
     nbCharCode: 25
@@ -116,7 +116,7 @@ questions:
     translations:
       - label: MDM staff
   - label: Patient Target
-    variable: A07_PatientTarget
+    variable: patient_target
     type: code
     codesFile: LIST_A3_Target.dic
     nbCharCode: 25
@@ -125,7 +125,7 @@ questions:
     translations:
       - label: A07. Patient target
   - label: Unsafe Sex in previous six weeks
-    variable: VCCT_UnsafeSexInPrevious6Wks
+    variable: unsafe_sex_in_previous6_wks
     type: options
     nbOptions: 2
     options:
@@ -140,7 +140,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: I/DU for
-    variable: VCCT_IDUsince
+    variable: id_usince
     type: number
     nbDecimals: 2
     numberType: 2
@@ -150,7 +150,7 @@ questions:
     translations:
       - label: E01. I/DU since
   - label: Drug use within last 1 year?
-    variable: VCCT_DrugUseWithinLast1Year
+    variable: drug_use_within_last1_year
     type: options
     nbOptions: 2
     options:
@@ -165,7 +165,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Type of drugs
-    variable: VCCT_TypeOfDrugs1
+    variable: type_of_drugs1
     type: code
     codesFile: LIST_E_Drugs.dic
     nbCharCode: 25
@@ -178,7 +178,7 @@ questions:
     translations:
       - label: E0311. Type of drugs
   - label: Drug name
-    variable: VCCT_DrugName1
+    variable: drug_name1
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -189,7 +189,7 @@ questions:
     translations:
       - label: E0311. Drug name
   - label: Way of use
-    variable: VCCT_WayOfUse1
+    variable: way_of_use1
     type: multipleOptions
     nbOptions: 4
     options:
@@ -210,7 +210,7 @@ questions:
           - Smoking
           - Swallowing
   - label: Type of drugs
-    variable: VCCT_TypeOfDrugs2
+    variable: type_of_drugs2
     type: code
     codesFile: LIST_E_Drugs.dic
     nbCharCode: 25
@@ -223,7 +223,7 @@ questions:
     translations:
       - label: E0321. Type of drugs
   - label: Drug name
-    variable: VCCT_DrugName2
+    variable: drug_name2
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -234,7 +234,7 @@ questions:
     translations:
       - label: E0321. Drug name
   - label: Way of use
-    variable: VCCT_WayOfUse2
+    variable: way_of_use2
     type: multipleOptions
     nbOptions: 4
     options:
@@ -255,7 +255,7 @@ questions:
           - Smoking
           - Swallowing
   - label: Type of drugs
-    variable: VCCT_TypeOfDrugs3
+    variable: type_of_drugs3
     type: code
     codesFile: LIST_E_Drugs.dic
     nbCharCode: 25
@@ -268,7 +268,7 @@ questions:
     translations:
       - label: Type of drugs
   - label: Drug Name
-    variable: VCCT_DrugName3
+    variable: drug_name3
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -279,7 +279,7 @@ questions:
     translations:
       - label: Drug Name
   - label: Way of use
-    variable: VCCT_WayOfUse3
+    variable: way_of_use3
     type: multipleOptions
     nbOptions: 4
     options:
@@ -300,7 +300,7 @@ questions:
           - Smoking
           - Swallowing
   - label: Have you injected drugs at any time in previous six weeks?
-    variable: VCCT_InjectedDrugsAtAnyTimeInPre6Wks
+    variable: injected_drugs_at_any_time_in_pre6_wks
     type: options
     nbOptions: 2
     options:
@@ -315,7 +315,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: 'If yes, did you share needle/syringe in previous six weeks?'
-    variable: VCCT_ShareNeedleOrSyringeInPre6Wks
+    variable: share_needle_or_syringe_in_pre6_wks
     type: options
     nbOptions: 2
     options:
@@ -330,7 +330,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Blood Transfusion in previous six weeks
-    variable: VCCT_BloodTransfusionInPre6Wks
+    variable: blood_transfusion_in_pre6_wks
     type: options
     nbOptions: 2
     options:
@@ -345,7 +345,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Body Piercing and Tatttooing In previous six weeks
-    variable: VCCT_BodyPiercingTattooingInPre6Wks
+    variable: body_piercing_tattooing_in_pre6_wks
     type: options
     nbOptions: 2
     options:
@@ -360,7 +360,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Previous HIV Testing
-    variable: VCCT_PreviousHIVTesting
+    variable: previous_hiv_testing
     type: options
     nbOptions: 2
     options:
@@ -375,7 +375,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: 'If Yes,Previous HIV Testing Date'
-    variable: VCCT_PreviousHIVTestingDate
+    variable: previous_hiv_testing_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -383,7 +383,7 @@ questions:
     translations:
       - label: 'If Yes,Previous HIV Testing Date'
   - label: Pre-test performed
-    variable: VCCT_PretestPerformed
+    variable: pretest_performed
     type: options
     nbOptions: 1
     options:
@@ -396,7 +396,7 @@ questions:
         options:
           - Other
   - label: Pretest Date
-    variable: VCCT_PreTestDate
+    variable: pre_test_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -404,7 +404,7 @@ questions:
     translations:
       - label: T3. Date of next visit
   - label: HIV Test
-    variable: VCCT_HIVTest
+    variable: hiv_test
     type: options
     nbOptions: 2
     options:
@@ -419,7 +419,7 @@ questions:
           - Accept
           - Refused
   - label: '#HIV Blood Test in MDM'
-    variable: VCCT_HIVBloodTest
+    variable: hiv_blood_test
     type: number
     nbDecimals: 2
     numberType: 2
@@ -430,7 +430,7 @@ questions:
     translations:
       - label: T21. Other
   - label: Post-test performed
-    variable: VCCT_PostTestPerformed
+    variable: post_test_performed
     type: options
     nbOptions: 1
     options:
@@ -443,7 +443,7 @@ questions:
         options:
           - Other
   - label: Postest Date
-    variable: VCCT_PostTestDate
+    variable: post_test_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -451,7 +451,7 @@ questions:
     translations:
       - label: T3. Date of next visit
   - label: Test Result
-    variable: VCCT_TestResult
+    variable: test_result
     type: options
     nbOptions: 4
     options:
@@ -470,7 +470,7 @@ questions:
           - mod-FR-3
           - mod-FR-4
   - label: Test Result from NHL
-    variable: VCCT_TestResultByNHL
+    variable: test_result_by_nhl
     type: options
     nbOptions: 2
     options:
@@ -485,7 +485,7 @@ questions:
           - Positive
           - Negative
   - label: NHL Date
-    variable: VCCT_NHLDate
+    variable: nhl_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -493,7 +493,7 @@ questions:
     translations:
       - label: NHL Date
   - label: History of Syphilis
-    variable: VCCT_HistoryOfSyphilis
+    variable: history_of_syphilis
     type: options
     nbOptions: 2
     options:
@@ -508,7 +508,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Test for Syphilis In Current Visit
-    variable: VCCT_TestForSyphilisInCurrentVisit
+    variable: test_for_syphilis_in_current_visit
     type: options
     nbOptions: 1
     options:
@@ -521,7 +521,7 @@ questions:
         options:
           - 'Yes'
   - label: Current Syphilis ICT Test Result
-    variable: VCCT_CurrentICTTestResult
+    variable: current_ict_test_result
     type: options
     nbOptions: 2
     options:
@@ -536,7 +536,7 @@ questions:
           - Positive
           - Negative
   - label: Current RPR Test Result
-    variable: VCCT_CurrentRPRTestResult
+    variable: current_rpr_test_result
     type: options
     nbOptions: 2
     options:
@@ -551,7 +551,7 @@ questions:
           - Other
           - mod-FR-9
   - label: RPR Positive Dilution
-    variable: VCCT_RPRPositiveDilution
+    variable: rpr_positive_dilution
     type: code
     codesFile: LIST_VCCT_RPR_DILUTION.dic
     nbCharCode: 25
@@ -560,7 +560,7 @@ questions:
     translations:
       - label: RPR Positive Dilution
   - label: VCCT_1stTimeHIVTest
-    variable: VCCT_1stTimeHIVTest
+    variable: 1st_time_hiv_test
     type: number
     nbDecimals: 2
     numberType: 2
@@ -572,7 +572,7 @@ questions:
     translations:
       - label: VCCT_1stTimeHIVTest
   - label: VCCT_1stTimeHIVTestAndPositive
-    variable: VCCT_1stTimeHIVTestAndPositive
+    variable: 1st_time_hiv_test_and_positive
     type: number
     nbDecimals: 2
     numberType: 2
@@ -584,7 +584,7 @@ questions:
     translations:
       - label: VCCT_1stTimeHIVTestAndPositive
   - label: Partner HIV Testing
-    variable: VCCT_PartnerHIVTesting
+    variable: partner_hiv_testing
     type: options
     nbOptions: 2
     options:
@@ -599,7 +599,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Date of Partner HIV Testing
-    variable: VCCT_DateOfPartnerHIVTesting
+    variable: date_of_partner_hiv_testing
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -607,7 +607,7 @@ questions:
     translations:
       - label: Date of Partner HIV Testing
   - label: Know Your Partner HIV Status
-    variable: VCCT_KnowYourPartnerHIVStatus
+    variable: know_your_partner_hiv_status
     type: options
     nbOptions: 3
     options:
@@ -626,7 +626,7 @@ questions:
   - label: >-
       If you don't know partner's status,offer partner HIV testing and
       counselling
-    variable: 'VCCT_IfYouDon''tKnow,OfferPartnerHTC'
+    variable: if_you_don_t_know_offer_partner_htc
     type: options
     nbOptions: 1
     options:
@@ -641,7 +641,7 @@ questions:
         options:
           - 'Yes'
   - label: Patient should return in
-    variable: VCCT_PatientShouldReturnIn
+    variable: patient_should_return_in
     type: options
     nbOptions: 9
     options:
@@ -670,7 +670,7 @@ questions:
           - 6 mths
           - Other
   - label: Other
-    variable: VCCT_EndOfVisitOther
+    variable: end_of_visit_other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -679,7 +679,7 @@ questions:
     translations:
       - label: T21. Other
   - label: Date of next visit
-    variable: VCCT_DateNextVisit
+    variable: date_next_visit
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -687,7 +687,7 @@ questions:
     translations:
       - label: T3. Date of next visit
   - label: Done for HIV Retesting
-    variable: VCCT_HIVRetesting
+    variable: hiv_retesting
     type: options
     nbOptions: 2
     options:
@@ -702,7 +702,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Date of HIV Retesting
-    variable: VCCT_HIVRetestingDate
+    variable: hiv_retesting_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -710,7 +710,7 @@ questions:
     translations:
       - label: Date of HIV Retesting
   - label: Conclusion for HIV Retesting
-    variable: VCCT_HIVRetestingResult
+    variable: hiv_retesting_result
     type: options
     nbOptions: 3
     options:
@@ -727,7 +727,7 @@ questions:
           - HIV Negative
           - Inconclusive
   - label: NHL HIV Retesting Date
-    variable: VCCT_NHLHIVRetestingDate
+    variable: nhlhiv_retesting_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -735,7 +735,7 @@ questions:
     translations:
       - label: NHL HIV Retesting Date
   - label: NHL HIV Retesting Result
-    variable: VCCT_NHLHIVRetestingResult
+    variable: nhlhiv_retesting_result
     type: options
     nbOptions: 3
     options:
@@ -752,7 +752,7 @@ questions:
           - HIV Negative
           - Inconclusive
   - label: Follow up visit date
-    variable: VCCT_Followupvisitdate
+    variable: followupvisitdate
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -760,7 +760,7 @@ questions:
     translations:
       - label: Follow up visit date
   - label: Verify patient
-    variable: Verify
+    variable: verify
     type: number
     nbDecimals: 2
     numberType: 2
@@ -769,7 +769,7 @@ questions:
     translations:
       - label: Verify patient
   - label: Last registration date
-    variable: LastRegistrationDate
+    variable: last_registration_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -777,7 +777,7 @@ questions:
     translations:
       - label: Last registration date
   - label: Key
-    variable: Key
+    variable: key
     type: open
     nbLines: 2
     nbCharLines: 0

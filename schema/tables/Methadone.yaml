@@ -11,7 +11,7 @@ headers:
       title: ART VISIT
 questions:
   - label: MDM code (Patient ID)
-    variable: MDMcode
+    variable: md_mcode
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -20,7 +20,7 @@ questions:
     translations:
       - label: MDM code (Patient ID)
   - label: A00. Registration date
-    variable: A00_RegistrationDate
+    variable: registration_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -28,7 +28,7 @@ questions:
     translations:
       - label: A00. Registration date
   - label: Name
-    variable: A01_PatientName
+    variable: patient_name
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -37,7 +37,7 @@ questions:
     translations:
       - label: A01. Name
   - label: Father’s name
-    variable: A02_FatherName
+    variable: father_name
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -46,7 +46,7 @@ questions:
     translations:
       - label: A02. Father’s name
   - label: Sex
-    variable: A03_Sexe
+    variable: sexe
     type: options
     nbOptions: 2
     options:
@@ -61,7 +61,7 @@ questions:
           - Male
           - Female
   - label: Date of birth
-    variable: A041_DateOfBirth
+    variable: date_of_birth
     type: date
     min: 3652
     format: jj/mm/aaaa
@@ -71,7 +71,7 @@ questions:
     translations:
       - label: A04. Date of birth
   - label: Age
-    variable: A05_Age
+    variable: age
     type: number
     nbDecimals: 2
     numberType: 2
@@ -80,7 +80,7 @@ questions:
     translations:
       - label: A05. Age
   - label: Patient target
-    variable: A07_PatientTarget
+    variable: patient_target
     type: code
     codesFile: LIST_A3_Target.dic
     nbCharCode: 25
@@ -89,7 +89,7 @@ questions:
     translations:
       - label: A07. Patient target
   - label: Medical care place
-    variable: MMT_PlaceOfMedicalCare
+    variable: place_of_medical_care
     type: options
     nbOptions: 5
     options:
@@ -111,7 +111,7 @@ questions:
           - Hospital
           - mod-FR-5
   - label: Visit Date
-    variable: MMT_VisitDate
+    variable: visit_date
     type: date
     min: 32872
     format: jj/mm/aaaa
@@ -122,7 +122,7 @@ questions:
     translations:
       - label: Visit Date
   - label: PLH
-    variable: MMT_PLH
+    variable: plh
     type: options
     nbOptions: 2
     options:
@@ -137,7 +137,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: MDM Staff 1
-    variable: MMT_MDMStaff1
+    variable: mdm_staff1
     type: code
     codesFile: LIST_A2_MDMstaff.dic
     nbCharCode: 25
@@ -146,7 +146,7 @@ questions:
     translations:
       - label: Methadone Nurse
   - label: MDM Staff 2
-    variable: MMT_MDMStaff2
+    variable: mdm_staff2
     type: code
     codesFile: LIST_A2_MDMstaff.dic
     nbCharCode: 25
@@ -155,7 +155,7 @@ questions:
     translations:
       - label: MDM staff
   - label: Height
-    variable: A06a_Height
+    variable: height
     type: number
     nbDecimals: 2
     numberType: 4
@@ -166,7 +166,7 @@ questions:
     translations:
       - label: Height
   - label: BW
-    variable: MMT_BW
+    variable: bw
     type: number
     nbDecimals: 2
     numberType: 2
@@ -177,7 +177,7 @@ questions:
     translations:
       - label: C01. BW
   - label: Lb / Kg
-    variable: MMT_LbOrKg
+    variable: lb_or_kg
     type: options
     nbOptions: 2
     options:
@@ -193,7 +193,7 @@ questions:
           - Lb
           - Kg
   - label: BMI
-    variable: MMT_BMI
+    variable: bmi
     type: number
     nbDecimals: 2
     numberType: 4
@@ -204,7 +204,7 @@ questions:
     translations:
       - label: C06. BMI
   - label: Temperature
-    variable: MMT_Temperature
+    variable: temperature
     type: number
     nbDecimals: 2
     numberType: 4
@@ -214,7 +214,7 @@ questions:
     translations:
       - label: C05. Temperature
   - label: °C/F
-    variable: MMT_CorF
+    variable: cor_f
     type: options
     nbOptions: 2
     options:
@@ -230,7 +230,7 @@ questions:
           - °C
           - °F
   - label: BP
-    variable: MMT_BP
+    variable: bp
     type: number
     nbDecimals: 2
     numberType: 2
@@ -240,7 +240,7 @@ questions:
     translations:
       - label: C04. BP
   - label: BP
-    variable: MMT_BP1
+    variable: bp1
     type: number
     nbDecimals: 2
     numberType: 2
@@ -250,7 +250,7 @@ questions:
     translations:
       - label: C042. BP
   - label: Pulse
-    variable: MMT_Pulse
+    variable: pulse
     type: number
     nbDecimals: 2
     numberType: 2
@@ -260,7 +260,7 @@ questions:
     translations:
       - label: C03. Pulse
   - label: RR
-    variable: MMT_RR
+    variable: rr
     type: number
     nbDecimals: 2
     numberType: 2
@@ -270,7 +270,7 @@ questions:
     translations:
       - label: C02. RR
   - label: 'Pupil Size:'
-    variable: MMT_PupilSize
+    variable: pupil_size
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -279,7 +279,7 @@ questions:
     translations:
       - label: 'C08. Pupil Site:'
   - label: 'IP starting date :'
-    variable: MMT_IPStartingDate
+    variable: ip_starting_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -289,7 +289,7 @@ questions:
         options:
           - 'Yes'
   - label: 'IP duration:'
-    variable: MMT_IPDuration
+    variable: ip_duration
     type: number
     nbDecimals: 2
     numberType: 2
@@ -299,7 +299,7 @@ questions:
     translations:
       - label: 'IP duration:'
   - label: Dose prescribed at the end of IP
-    variable: MMT_DosePrescribed
+    variable: dose_prescribed
     type: code
     nbCharCode: 25
     plan: true
@@ -307,7 +307,7 @@ questions:
     translations:
       - label: Dose prescribed at the end of IP
   - label: MP starting date
-    variable: MMT_MPStartingDate
+    variable: mp_starting_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -315,7 +315,7 @@ questions:
     translations:
       - label: MP starting date
   - label: Current Methadone Dose
-    variable: MMT_CurrentMMTDose
+    variable: current_mmt_dose
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -324,7 +324,7 @@ questions:
     translations:
       - label: Actual dose
   - label: Start Date of Current Dose
-    variable: MMT_StartDateOfCurrentDose
+    variable: start_date_of_current_dose
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -332,7 +332,7 @@ questions:
     translations:
       - label: Since
   - label: Marital Status
-    variable: A07a_MaritalStatus
+    variable: marital_status
     type: code
     codesFile: LIST_A4_MaritalStatus.dic
     nbCharCode: 25
@@ -341,7 +341,7 @@ questions:
     translations:
       - label: Marital Status
   - label: Contact Name1
-    variable: MMT_ContactName1
+    variable: contact_name1
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -350,7 +350,7 @@ questions:
     translations:
       - label: B03. Contact Name
   - label: Contact Name2
-    variable: MMT_ContactName2
+    variable: contact_name2
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -359,7 +359,7 @@ questions:
     translations:
       - label: B03. Contact Name
   - label: Remark
-    variable: MMT_Remark
+    variable: remark
     type: open
     nbLines: 3
     nbCharLines: 0
@@ -368,7 +368,7 @@ questions:
     translations:
       - label: D03. Remark
   - label: Treatment other than methadone
-    variable: MMT_TreatmentOtherThanMethadone
+    variable: treatment_other_than_methadone
     type: options
     nbOptions: 2
     options:
@@ -383,7 +383,7 @@ questions:
           - 'Yes'
           - mod-FR-2
   - label: 'If yes, sepcify'
-    variable: MMT_IfYesSpecify
+    variable: if_yes_specify
     type: multipleOptions
     nbOptions: 3
     options:
@@ -402,7 +402,7 @@ questions:
           - Anti-Tuberculosis
           - Other
   - label: Other
-    variable: MMT_IfYesOther
+    variable: if_yes_other
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -411,7 +411,7 @@ questions:
     translations:
       - label: H026. Other
   - label: CurrentDrugUse
-    variable: MMT_CurrentDrugUse
+    variable: current_drug_use
     type: options
     nbOptions: 2
     options:
@@ -426,7 +426,7 @@ questions:
           - 'Yes'
           - mod-FR-2
   - label: Type of Drugs
-    variable: MMT_TypeOfDrugs
+    variable: type_of_drugs
     type: multipleOptions
     nbOptions: 7
     options:
@@ -453,7 +453,7 @@ questions:
           - Heroin
           - Opium
   - label: Last Use
-    variable: MMT_ALC_LastUse
+    variable: alc_last_use
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -462,7 +462,7 @@ questions:
     translations:
       - label: ALC Last Use
   - label: '#Time/Day'
-    variable: MMT_ALC_Time
+    variable: alc_time
     type: number
     nbDecimals: 2
     numberType: 2
@@ -472,7 +472,7 @@ questions:
     translations:
       - label: '#Time/Day'
   - label: '#Days/Week'
-    variable: MMT_ALC_Days
+    variable: alc_days
     type: code
     codesFile: CurrDrug_DaysWeek.dic
     nbCharCode: 25
@@ -481,7 +481,7 @@ questions:
     translations:
       - label: MMT_AMP_Days
   - label: Last Use
-    variable: MMT_AMP_LastUse
+    variable: amp_last_use
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -489,7 +489,7 @@ questions:
     translations:
       - label: Last Use
   - label: '#Time/Day'
-    variable: MMT_AMP_Time
+    variable: amp_time
     type: number
     nbDecimals: 2
     numberType: 2
@@ -499,7 +499,7 @@ questions:
     translations:
       - label: '#Time/Day'
   - label: '#Days/Week'
-    variable: MMT_AMP_Days
+    variable: amp_days
     type: code
     codesFile: CurrDrug_DaysWeek.dic
     nbCharCode: 25
@@ -508,7 +508,7 @@ questions:
     translations:
       - label: MMT_AMP_Days
   - label: Way of Use
-    variable: MMT_AMP_WayOfUse
+    variable: amp_way_of_use
     type: code
     codesFile: WayOfUse.dic
     nbCharCode: 25
@@ -517,7 +517,7 @@ questions:
     translations:
       - label: Way of Use
   - label: Last Use
-    variable: MMT_BEN_LastUse
+    variable: ben_last_use
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -526,7 +526,7 @@ questions:
     translations:
       - label: BEN Last Use
   - label: '#Time/Day'
-    variable: MMT_BEN_Time
+    variable: ben_time
     type: number
     nbDecimals: 2
     numberType: 2
@@ -536,7 +536,7 @@ questions:
     translations:
       - label: '#Time/Day'
   - label: '#Days/Week'
-    variable: MMT_BEN_Days
+    variable: ben_days
     type: code
     codesFile: CurrDrug_DaysWeek.dic
     nbCharCode: 25
@@ -545,7 +545,7 @@ questions:
     translations:
       - label: MMT_BEN_Days
   - label: Way of Use
-    variable: MMT_BEN_WayOfUse
+    variable: ben_way_of_use
     type: code
     codesFile: WayOfUse.dic
     nbCharCode: 25
@@ -555,7 +555,7 @@ questions:
     translations:
       - label: Way of Use
   - label: Last Use
-    variable: MMT_CAN_LastUse
+    variable: can_last_use
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -563,7 +563,7 @@ questions:
     translations:
       - label: Last Use
   - label: '#Time/Day'
-    variable: MMT_CAN_Time
+    variable: can_time
     type: number
     nbDecimals: 2
     numberType: 2
@@ -573,7 +573,7 @@ questions:
     translations:
       - label: '#Time/Day'
   - label: '#Days/Week'
-    variable: MMT_CAN_Days
+    variable: can_days
     type: code
     codesFile: CurrDrug_DaysWeek.dic
     nbCharCode: 25
@@ -582,7 +582,7 @@ questions:
     translations:
       - label: MMT_CAN_Days
   - label: Way of Use
-    variable: MMT_CAN_WayOfUse
+    variable: can_way_of_use
     type: code
     codesFile: WayOfUse.dic
     nbCharCode: 25
@@ -591,7 +591,7 @@ questions:
     translations:
       - label: Way of Use
   - label: Last Use
-    variable: MMT_ECS_LastUse
+    variable: ecs_last_use
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -599,7 +599,7 @@ questions:
     translations:
       - label: Last Use
   - label: '#Time/Day'
-    variable: MMT_ECS_Time
+    variable: ecs_time
     type: number
     nbDecimals: 2
     numberType: 2
@@ -609,7 +609,7 @@ questions:
     translations:
       - label: '#Time/Day'
   - label: '#Days/Week'
-    variable: MMT_ECS_Days
+    variable: ecs_days
     type: code
     codesFile: CurrDrug_DaysWeek.dic
     nbCharCode: 25
@@ -618,7 +618,7 @@ questions:
     translations:
       - label: MMT_ECS_Days
   - label: Way of Use
-    variable: MMT_ECS_WayOfUse
+    variable: ecs_way_of_use
     type: code
     codesFile: WayOfUse.dic
     nbCharCode: 25
@@ -627,7 +627,7 @@ questions:
     translations:
       - label: Way of Use
   - label: Last Use
-    variable: MMT_HER_LastUse
+    variable: her_last_use
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -636,7 +636,7 @@ questions:
     translations:
       - label: HER Last Use
   - label: '#Time/Day'
-    variable: MMT_HER_Time
+    variable: her_time
     type: number
     nbDecimals: 2
     numberType: 2
@@ -646,7 +646,7 @@ questions:
     translations:
       - label: '#Time/Day'
   - label: '#Days/Week'
-    variable: MMT_HER_Days
+    variable: her_days
     type: code
     codesFile: CurrDrug_DaysWeek.dic
     nbCharCode: 25
@@ -655,7 +655,7 @@ questions:
     translations:
       - label: MMT_HER_Days
   - label: Way of Use
-    variable: MMT_HER_WayOfUse
+    variable: her_way_of_use
     type: code
     codesFile: WayOfUse.dic
     nbCharCode: 25
@@ -665,7 +665,7 @@ questions:
     translations:
       - label: Way of Use
   - label: Last Use
-    variable: MMT_OPI_LastUse
+    variable: opi_last_use
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -674,7 +674,7 @@ questions:
     translations:
       - label: OPI Last Use
   - label: '#Time/Day'
-    variable: MMT_OPI_Time
+    variable: opi_time
     type: number
     nbDecimals: 2
     numberType: 2
@@ -684,7 +684,7 @@ questions:
     translations:
       - label: '#Time/Day'
   - label: '#Days/Week'
-    variable: MMT_OPI_Days
+    variable: opi_days
     type: code
     codesFile: CurrDrug_DaysWeek.dic
     nbCharCode: 25
@@ -693,7 +693,7 @@ questions:
     translations:
       - label: MMT_OPI_Days
   - label: Way of Use
-    variable: MMT_OPI_WayOfUse
+    variable: opi_way_of_use
     type: code
     codesFile: WayOfUse.dic
     nbCharCode: 25
@@ -703,7 +703,7 @@ questions:
     translations:
       - label: Way of Use
   - label: 'If you inject, did you share needle or syringe:'
-    variable: MMT_ShareNeedleOrSyringe
+    variable: share_needle_or_syringe
     type: options
     nbOptions: 2
     options:
@@ -718,7 +718,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: 'Psychiatric history:'
-    variable: MMT_Psychiatrichistory
+    variable: psychiatrichistory
     type: open
     nbLines: 5
     nbCharLines: 0
@@ -732,7 +732,7 @@ questions:
           - Patient is still on TB medication
           - TB regimen contain RIF
   - label: Withdrawal Signs
-    variable: MMT_Symptoms_WithdrawalSigns
+    variable: symptoms_withdrawal_signs
     type: multipleOptions
     nbOptions: 16
     options:
@@ -777,7 +777,7 @@ questions:
           - Night sweats
           - mod-FR-10
   - label: Intoxication Signs
-    variable: MMT_Symptoms_IntoxicationSigns
+    variable: symptoms_intoxication_signs
     type: multipleOptions
     nbOptions: 5
     options:
@@ -800,7 +800,7 @@ questions:
           - mod-FR-4
           - mod-FR-5
   - label: Other Side Effects
-    variable: MMT_Symptoms_OtherSideEffects
+    variable: symptoms_other_side_effects
     type: multipleOptions
     nbOptions: 3
     options:
@@ -819,7 +819,7 @@ questions:
           - Not done
           - mod-FR-6
   - label: 'Hours of comfort with current dose (n.hours/24h) :'
-    variable: MMT_HoursOfComfortWithCurrentDose
+    variable: hours_of_comfort_with_current_dose
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -828,7 +828,7 @@ questions:
     translations:
       - label: M09. Additional comments
   - label: Diagnosis
-    variable: MMT_Diagnosis
+    variable: diagnosis
     type: open
     nbLines: 2
     nbCharLines: 0
@@ -837,7 +837,7 @@ questions:
     translations:
       - label: P01. Psychiatric Diagnosis
   - label: Additional comments
-    variable: MMT_AdditionalComments
+    variable: additional_comments
     type: open
     nbLines: 3
     nbCharLines: 0
@@ -846,7 +846,7 @@ questions:
     translations:
       - label: Q05. Additional comments
   - label: Treatment
-    variable: Treatment
+    variable: treatment
     type: open
     nbLines: 2
     nbCharLines: 0
@@ -855,7 +855,7 @@ questions:
     translations:
       - label: Treatment
   - label: Medicine name
-    variable: MMT_M0111_MedicineName
+    variable: m0111_medicine_name
     type: code
     codesFile: Methadone_Medicines_List.dic
     nbCharCode: 25
@@ -864,7 +864,7 @@ questions:
     translations:
       - label: R0111. Medicine name
   - label: Dosage
-    variable: MMT_M0112_Dosage
+    variable: m0112_dosage
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -873,7 +873,7 @@ questions:
     translations:
       - label: R0112. Dosage
   - label: Frequency
-    variable: MMT_M0113_Frequency
+    variable: m0113_frequency
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -882,7 +882,7 @@ questions:
     translations:
       - label: R0113. Frequency
   - label: Number days
-    variable: MMT_M0114_NumberDays
+    variable: m0114_number_days
     type: number
     nbDecimals: 2
     numberType: 2
@@ -892,7 +892,7 @@ questions:
     translations:
       - label: R0114. Number days
   - label: Medicine name
-    variable: MMT_M0121_MedicineName
+    variable: m0121_medicine_name
     type: code
     codesFile: Methadone_Medicines_List.dic
     nbCharCode: 25
@@ -901,7 +901,7 @@ questions:
     translations:
       - label: R0121. Medicine name
   - label: Dosage
-    variable: MMT_M0122_Dosage
+    variable: m0122_dosage
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -910,7 +910,7 @@ questions:
     translations:
       - label: R0122. Dosage
   - label: Frequency
-    variable: MMT_M0123_Frequency
+    variable: m0123_frequency
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -919,7 +919,7 @@ questions:
     translations:
       - label: R0123. Frequency
   - label: Number days
-    variable: MMT_M0124_NumberDays
+    variable: m0124_number_days
     type: number
     nbDecimals: 2
     numberType: 2
@@ -929,7 +929,7 @@ questions:
     translations:
       - label: R0124. Number days
   - label: Medicine name
-    variable: MMT_M0131_MedicineName
+    variable: m0131_medicine_name
     type: code
     codesFile: Methadone_Medicines_List.dic
     nbCharCode: 25
@@ -938,7 +938,7 @@ questions:
     translations:
       - label: R0131. Medicine name
   - label: Dosage
-    variable: MMT_M0132_Dosage
+    variable: m0132_dosage
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -947,7 +947,7 @@ questions:
     translations:
       - label: R0132. Dosage
   - label: Frequency
-    variable: MMT_M0133_Frequency
+    variable: m0133_frequency
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -956,7 +956,7 @@ questions:
     translations:
       - label: R0133. Frequency
   - label: Number days
-    variable: MMT_M0134_NumberDays
+    variable: m0134_number_days
     type: number
     nbDecimals: 2
     numberType: 2
@@ -966,7 +966,7 @@ questions:
     translations:
       - label: R0134. Number days
   - label: Medicine name
-    variable: MMT_M0211_MedicineName
+    variable: m0211_medicine_name
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -975,7 +975,7 @@ questions:
     translations:
       - label: R0211. Medicine name
   - label: Dosage
-    variable: MMT_M0212_Dosage
+    variable: m0212_dosage
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -984,7 +984,7 @@ questions:
     translations:
       - label: R0212. Dosage
   - label: Frequency
-    variable: MMT_M0213_Frequency
+    variable: m0213_frequency
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -993,7 +993,7 @@ questions:
     translations:
       - label: R0213. Frequency
   - label: Number days
-    variable: MMT_M0214_NumberDays
+    variable: m0214_number_days
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1003,7 +1003,7 @@ questions:
     translations:
       - label: R0214. Number days
   - label: Medicine name
-    variable: MMT_M0221_MedicineName
+    variable: m0221_medicine_name
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -1012,7 +1012,7 @@ questions:
     translations:
       - label: R0221. Medicine name
   - label: Dosage
-    variable: MMT_M0222_Dosage
+    variable: m0222_dosage
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1021,7 +1021,7 @@ questions:
     translations:
       - label: R0222. Dosage
   - label: Frequency
-    variable: MMT_M0223_Frequency
+    variable: m0223_frequency
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1030,7 +1030,7 @@ questions:
     translations:
       - label: R0223. Frequency
   - label: Number days
-    variable: MMT_M0224_NumberDays
+    variable: m0224_number_days
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1040,7 +1040,7 @@ questions:
     translations:
       - label: R0224. Number days
   - label: Medicine name
-    variable: MMT_M0231_MedicineName
+    variable: m0231_medicine_name
     type: code
     codesFile: Medicine_List.dic
     nbCharCode: 25
@@ -1049,7 +1049,7 @@ questions:
     translations:
       - label: R0231. Medicine name
   - label: Dosage
-    variable: MMT_M0232_Dosage
+    variable: m0232_dosage
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1058,7 +1058,7 @@ questions:
     translations:
       - label: R0232. Dosage
   - label: Frequency
-    variable: MMT_M0233_Frequency
+    variable: m0233_frequency
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1067,7 +1067,7 @@ questions:
     translations:
       - label: R0233. Frequency
   - label: Number days
-    variable: MMT_M0234_NumberDays
+    variable: m0234_number_days
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1077,7 +1077,7 @@ questions:
     translations:
       - label: R0234. Number days
   - label: Plan of next visit
-    variable: MMT_PlanOfNextVisit
+    variable: plan_of_next_visit
     type: open
     nbLines: 3
     nbCharLines: 0
@@ -1086,7 +1086,7 @@ questions:
     translations:
       - label: Plan of next visit
   - label: Is it adequate
-    variable: MMT_IsItAdequate
+    variable: is_it_adequate
     type: options
     nbOptions: 2
     options:
@@ -1101,7 +1101,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: 'If no, specify reason'
-    variable: MMT_IfNoSpecify
+    variable: if_no_specify
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1110,7 +1110,7 @@ questions:
     translations:
       - label: 'N011. If no, specify reason'
   - label: Plan to modify
-    variable: MMT_PlanToModify
+    variable: plan_to_modify
     type: options
     nbOptions: 2
     options:
@@ -1125,7 +1125,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: 'If yes, specify'
-    variable: MMT_Plan_IfYesSpecify
+    variable: plan_if_yes_specify
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1134,7 +1134,7 @@ questions:
     translations:
       - label: 'N021. If yes, specify'
   - label: Date of next visit
-    variable: MMT_DateNextVisit
+    variable: date_next_visit
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -1142,7 +1142,7 @@ questions:
     translations:
       - label: T3. Date of next visit
   - label: With
-    variable: MMT_With
+    variable: with
     type: multipleOptions
     nbOptions: 2
     options:
@@ -1159,7 +1159,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: Refferal made today
-    variable: MMT_Refferal
+    variable: refferal
     type: options
     nbOptions: 2
     options:
@@ -1174,7 +1174,7 @@ questions:
           - 'Yes'
           - 'No'
   - label: If yes
-    variable: MMT_ReferralsMadeTodayYes
+    variable: referrals_made_today_yes
     type: open
     nbLines: 1
     nbCharLines: 0
@@ -1183,7 +1183,7 @@ questions:
     translations:
       - label: O031.If yes
   - label: Conclusion
-    variable: MMT_Conclusion
+    variable: conclusion
     type: open
     nbLines: 4
     nbCharLines: 0
@@ -1193,7 +1193,7 @@ questions:
     translations:
       - label: Conclusion2
   - label: Verify patient
-    variable: Verify
+    variable: verify
     type: number
     nbDecimals: 2
     numberType: 2
@@ -1202,7 +1202,7 @@ questions:
     translations:
       - label: Verify patient
   - label: Last registration date
-    variable: LastRegistrationDate
+    variable: last_registration_date
     type: date
     format: jj/mm/aaaa
     plan: true
@@ -1211,7 +1211,7 @@ questions:
     translations:
       - label: Last registration date
   - label: Key
-    variable: Key
+    variable: key
     type: open
     nbLines: 2
     nbCharLines: 0
