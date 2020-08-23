@@ -1,0 +1,1561 @@
+version: 5104
+headers:
+  history: >-
+    5.0.0.81(Médecins du Mon;5.1.0.2(Médecins du Mond;5.1.0.3(Médecins du
+    Mond;5.1.0.4(MEDECINS DU MOND;
+  language: fr
+  title: MDM Laboratory
+  pannelStage: 10
+questions:
+  - label: MDM code (Patient ID)
+    variable: MDMcode
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: "V_sexe = \"1\"€\x81If A03_Sexe In \"Female\" Then€\x81V_sexe = \"2\"€\x81EndIf€\x81if A07_PatientTarget In \"DU\" Then€\x81        V_PT=\"D\"€\x81\telse€\x81\t\tif A07_PatientTarget In \"DUP\" Then€\x81\t\t\tV_PT=\"P\"€\x81\t\t\telse€\x81\t\t\t\tif A07_PatientTarget In \"IDU\" Then€\x81\t\t\t\t\tV_PT=\"I\"€\x81\t\t\t\t\telse€\x81\t\t\t\t\t\tif A07_PatientTarget In \"IDUP\" Then€\x81\t\t\t\t\t\t\tV_PT=\"P\"€\x81\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\tif A07_PatientTarget In \"MSM\" Then€\x81\t\t\t\t\t\t\t\t\tV_PT=\"M\"€\x81\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"MSMP\" Then€\x81\t\t\t\t\t\t\t\t\t\t\tV_PT=\"P\"€\x81\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"SW\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"S\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"SWP\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"P\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"CH\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"C\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"GP\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"G\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"Other Partner\" Then €\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"P\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"Other High Risk Group\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"O\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV=PT=\"\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tend if€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tend if€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tend if€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\tendif€\x81\t\t\t\tendif€\x81\t\t\t\t€\x81\t\tendif€\x81endif€\x81MDMcode = MDMlocation.Catcode(3) & V_PT & V_sexe & SerialNumber"
+  - label: A00. Registration date
+    variable: A00_RegistrationDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+  - label: A01. Name
+    variable: A01_PatientName
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+  - label: A02. Father’s name
+    variable: A02_FatherName
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+  - label: A03. Sex
+    variable: A03_Sexe
+    type: options
+    nbOptions: 2
+    options:
+      - Male
+      - Female
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: A04. Date of birth
+    variable: A041_DateOfBirth
+    type: date
+    min: 3652
+    format: jj/mm/aaaa
+    instructions: La réponse doit être supérieure à 01/01/1910.
+    plan: true
+    attributes: 160
+  - label: A042. Date of birth estimated
+    variable: A042_DateOfBirthEstimated
+    type: options
+    nbOptions: 1
+    options:
+      - Date of birth estimated
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: Age
+    variable: A05_Age
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    vb: "If  Not A041_DateOfBirth.EstNonRéponse Then€\x81    A05_Age = (A00_RegistrationDate - A041_DateOfBirth) / 365€\x81EndIf"
+  - label: A07. Patient target
+    variable: A07_PatientTarget
+    type: code
+    codesFile: 'D:/Lab data in Medical D-base 13-8-12/Sys/Dic_Lists/LIST_A3_Target.dic'
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: Majuscule(A07_PatientTarget)
+  - label: Verify patient
+    variable: Verify
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    plan: true
+    attributes: 32
+  - label: D00. MDM Staff
+    variable: D00_MDMStaff
+    type: code
+    codesFile: Sys/Dic_Lists/LIST_A2_MDMstaff.dic
+    nbCharCode: 25
+    instructions: La réponse est obligatoire.
+    plan: true
+    attributes: 161
+  - label: D01. Test date
+    variable: D01_TestDate
+    type: date
+    format: jj/mm/aaaa
+    instructions: La réponse est obligatoire.
+    plan: true
+    attributes: 161
+  - label: D0201. MDM Lab?
+    variable: D0201_MDMLab
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: D0201. Type of Test
+    variable: D0201_TypeofTest
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0201_TypeofTest = D0201_TestName.CatCode(1)
+    autoVariable: Basic
+  - label: D0201. Test Name
+    variable: D0201_TestName
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TestName.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0201_TestName = D0201_LabSamplesCode.CatCode(2)
+  - label: D0201. Type Of Sample
+    variable: D0201_TypeOfSample
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TypeOfSample.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0201_TypeOfSample = D0201_LabSamplesCode.CatCode(3)
+  - label: D0201. No Of Result
+    variable: D0201_NoOfResult
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0201_NoOfSample = D0201_LabSamplesCode.CatCode(4)
+  - label: D0201. Unit
+    variable: D0201_Unit
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Unit.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0201_TypeOfTest = D0201_TestName.CatCode(1)
+  - label: D0201. Results
+    variable: D0201_Results
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Result.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0201_Results = D0201_LabSamplesCode.CatCode(5)
+  - label: D0201. Description
+    variable: D0201_Description
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0201_Results = D0201_LabSamplesCode.CatCode(5)
+  - label: D0201. Normal Value
+    variable: D0201_NormalValue
+    type: open
+    codesFile: 'D:/Lab data in Medical D-base 13-8-12/Sys/Dic_Lists/LAB_TestName.txt'
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0201_NormalValue = D0201_TestName.CatCode(2)
+    autoVariable: Basic
+  - label: D0202. MDM Lab?
+    variable: D0202_MDMLab
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: D0202. Type of Test
+    variable: D0202_TypeofTest
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0202_TypeofTest = D0202_TestName.CatCode(1)
+    autoVariable: Basic
+  - label: D0202. Test Name
+    variable: D0202_TestName
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TestName.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0202_TestName = D0202_LabSamplesCode.CatCode(2)
+  - label: D0202. Type Of Sample
+    variable: D0202_TypeOfSample
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TypeOfSample.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0202_TypeOfSample = D0202_LabSamplesCode.CatCode(3)
+  - label: D0202. No Of Result
+    variable: D0202_NoOfResult
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0202_NoOfSample = D0202_LabSamplesCode.CatCode(4)
+  - label: D0202. Unit
+    variable: D0202_Unit
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Unit.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0202_TypeOfTest = D0202_TestName.CatCode(1)
+  - label: D0202. Results
+    variable: D0202_Results
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Result.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0202_Results = D0202_LabSamplesCode.CatCode(5)
+  - label: D0202. Description
+    variable: D0202_Description
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0202_Results = D0202_LabSamplesCode.CatCode(5)
+  - label: D0202. Normal Value
+    variable: D0202_NormalValue
+    type: open
+    codesFile: 'D:/Lab data in Medical D-base 13-8-12/Sys/Dic_Lists/LAB_TestName.txt'
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0202_NormalValue = D0202_TestName.CatCode(2)
+    autoVariable: Basic
+  - label: D0203. MDM Lab?
+    variable: D0203_MDMLab
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: D0203. Type of Test
+    variable: D0203_TypeofTest
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0203_TypeofTest = D0203_TestName.CatCode(1)
+    autoVariable: Basic
+  - label: D0203. Test Name
+    variable: D0203_TestName
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TestName.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0203_TestName = D0203_LabSamplesCode.CatCode(2)
+  - label: D0203. Type Of Sample
+    variable: D0203_TypeOfSample
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TypeOfSample.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0203_TypeOfSample = D0203_LabSamplesCode.CatCode(3)
+  - label: D0203. No Of Result
+    variable: D0203_NoOfResult
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0203_NoOfSample = D0203_LabSamplesCode.CatCode(4)
+  - label: D0203. Unit
+    variable: D0203_Unit
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Unit.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0203_TypeOfTest = D0203_TestName.CatCode(1)
+  - label: D0203. Results
+    variable: D0203_Results
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Result.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0203_Results = D0203_LabSamplesCode.CatCode(5)
+  - label: D0203. Description
+    variable: D0203_Description
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0203_Results = D0203_LabSamplesCode.CatCode(5)
+  - label: D0203. Normal Value
+    variable: D0203_NormalValue
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0203_NormalValue = D0203_TestName.CatCode(2)
+    autoVariable: Basic
+  - label: D0204. MDM Lab?
+    variable: D0204_MDMLab
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: D0204. Type of Test
+    variable: D0204_TypeofTest
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0204_TypeofTest = D0204_TestName.CatCode(1)
+    autoVariable: Basic
+  - label: D0204. Test Name
+    variable: D0204_TestName
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TestName.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0204_TestName = D0204_LabSamplesCode.CatCode(2)
+  - label: D0204. Type Of Sample
+    variable: D0204_TypeOfSample
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TypeOfSample.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0204_TypeOfSample = D0204_LabSamplesCode.CatCode(3)
+  - label: D0204. No Of Result
+    variable: D0204_NoOfResult
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0204_NoOfSample = D0204_LabSamplesCode.CatCode(4)
+  - label: D0204. Unit
+    variable: D0204_Unit
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Unit.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0204_TypeOfTest = D0204_TestName.CatCode(1)
+  - label: D0204. Results
+    variable: D0204_Results
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Result.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0204_Results = D0204_LabSamplesCode.CatCode(5)
+  - label: D0204. Description
+    variable: D0204_Description
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0204_Results = D0204_LabSamplesCode.CatCode(5)
+  - label: D0204. Normal Value
+    variable: D0204_NormalValue
+    type: open
+    codesFile: 'D:/Lab data in Medical D-base 13-8-12/Sys/Dic_Lists/LAB_TestName.txt'
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0204_NormalValue = D0204_TestName.CatCode(2)
+    autoVariable: Basic
+  - label: D0205. MDM Lab?
+    variable: D0205_MDMLab
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: D0205. Type of Test
+    variable: D0205_TypeofTest
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0205_TypeofTest = D0205_TestName.CatCode(1)
+    autoVariable: Basic
+  - label: D0205. Test Name
+    variable: D0205_TestName
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TestName.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0205_TestName = D0205_LabSamplesCode.CatCode(2)
+  - label: D0205. Type Of Sample
+    variable: D0205_TypeOfSample
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TypeOfSample.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0205_TypeOfSample = D0205_LabSamplesCode.CatCode(3)
+  - label: D0205. No Of Result
+    variable: D0205_NoOfResult
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0205_NoOfSample = D0205_LabSamplesCode.CatCode(4)
+  - label: D0205. Unit
+    variable: D0205_Unit
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Unit.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0205_TypeOfTest = D0205_TestName.CatCode(1)
+  - label: D0205. Results
+    variable: D0205_Results
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Result.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0205_Results = D0205_LabSamplesCode.CatCode(5)
+  - label: D0205. Description
+    variable: D0205_Description
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0205_Results = D0205_LabSamplesCode.CatCode(5)
+  - label: D0205. Normal Value
+    variable: D0205_NormalValue
+    type: open
+    codesFile: 'D:/Lab data in Medical D-base 13-8-12/Sys/Dic_Lists/LAB_TestName.txt'
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0205_NormalValue = D0205_TestName.CatCode(2)
+    autoVariable: Basic
+  - label: D0206. MDM Lab?
+    variable: D0206_MDMLab
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: D0206. Type of Test
+    variable: D0206_TypeofTest
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0206_TypeofTest = D0206_TestName.CatCode(1)
+    autoVariable: Basic
+  - label: D0206. Test Name
+    variable: D0206_TestName
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TestName.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0206_TestName = D0206_LabSamplesCode.CatCode(2)
+  - label: D0206. Type Of Sample
+    variable: D0206_TypeOfSample
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TypeOfSample.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0206_TypeOfSample = D0206_LabSamplesCode.CatCode(3)
+  - label: D0206. No Of Result
+    variable: D0206_NoOfResult
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0206_NoOfSample = D0206_LabSamplesCode.CatCode(4)
+  - label: D0206. Unit
+    variable: D0206_Unit
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Unit.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0206_TypeOfTest = D0206_TestName.CatCode(1)
+  - label: D0206. Results
+    variable: D0206_Results
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Result.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0206_Results = D0206_LabSamplesCode.CatCode(5)
+  - label: D0206. Description
+    variable: D0206_Description
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0206_Results = D0206_LabSamplesCode.CatCode(5)
+  - label: D0206. Normal Value
+    variable: D0206_NormalValue
+    type: open
+    codesFile: 'D:/Lab data in Medical D-base 13-8-12/Sys/Dic_Lists/LAB_TestName.txt'
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0206_NormalValue = D0206_TestName.CatCode(2)
+    autoVariable: Basic
+  - label: D0207. MDM Lab?
+    variable: D0207_MDMLab
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: D0207. Type of Test
+    variable: D0207_TypeofTest
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0207_TypeofTest = D0207_TestName.CatCode(1)
+    autoVariable: Basic
+  - label: D0207. Test Name
+    variable: D0207_TestName
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TestName.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0207_TestName = D0207_LabSamplesCode.CatCode(2)
+  - label: D0207. Type Of Sample
+    variable: D0207_TypeOfSample
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TypeOfSample.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0207_TypeOfSample = D0207_LabSamplesCode.CatCode(3)
+  - label: D0207. No Of Result
+    variable: D0207_NoOfResult
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0207_NoOfSample = D0207_LabSamplesCode.CatCode(4)
+  - label: D0207. Unit
+    variable: D0207_Unit
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Unit.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0207_TypeOfTest = D0207_TestName.CatCode(1)
+  - label: D0207. Results
+    variable: D0207_Results
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Result.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0207_Results = D0207_LabSamplesCode.CatCode(5)
+  - label: D0207. Description
+    variable: D0207_Description
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0207_Results = D0207_LabSamplesCode.CatCode(5)
+  - label: D0207. Normal Value
+    variable: D0207_NormalValue
+    type: open
+    codesFile: 'D:/Lab data in Medical D-base 13-8-12/Sys/Dic_Lists/LAB_TestName.txt'
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0207_NormalValue = D0207_TestName.CatCode(2)
+    autoVariable: Basic
+  - label: D0208. MDM Lab?
+    variable: D0208_MDMLab
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: D0208. Type of Test
+    variable: D0208_TypeofTest
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0208_TypeofTest = D0208_TestName.CatCode(1)
+    autoVariable: Basic
+  - label: D0208. Test Name
+    variable: D0208_TestName
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TestName.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0208_TestName = D0208_LabSamplesCode.CatCode(2)
+  - label: D0208. Type Of Sample
+    variable: D0208_TypeOfSample
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TypeOfSample.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0208_TypeOfSample = D0208_LabSamplesCode.CatCode(3)
+  - label: D0208. No Of Result
+    variable: D0208_NoOfResult
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0208_NoOfSample = D0208_LabSamplesCode.CatCode(4)
+  - label: D0208. Unit
+    variable: D0208_Unit
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Unit.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0208_TypeOfTest = D0208_TestName.CatCode(1)
+  - label: D0208. Results
+    variable: D0208_Results
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Result.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0208_Results = D0208_LabSamplesCode.CatCode(5)
+  - label: D0208. Description
+    variable: D0208_Description
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0208_Results = D0208_LabSamplesCode.CatCode(5)
+  - label: D0208. Normal Value
+    variable: D0208_NormalValue
+    type: open
+    codesFile: 'D:/Lab data in Medical D-base 13-8-12/Sys/Dic_Lists/LAB_TestName.txt'
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0208_NormalValue = D0208_TestName.CatCode(2)
+    autoVariable: Basic
+  - label: D0209. MDM Lab?
+    variable: D0209_MDMLab
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: D0209. Type of Test
+    variable: D0209_TypeofTest
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0209_TypeofTest = D0209_TestName.CatCode(1)
+    autoVariable: Basic
+  - label: D0209. Test Name
+    variable: D0209_TestName
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TestName.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0209_TestName = D0209_LabSamplesCode.CatCode(2)
+  - label: D0209. Type Of Sample
+    variable: D0209_TypeOfSample
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TypeOfSample.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0209_TypeOfSample = D0209_LabSamplesCode.CatCode(3)
+  - label: D0209. No Of Result
+    variable: D0209_NoOfResult
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0209_NoOfSample = D0209_LabSamplesCode.CatCode(4)
+  - label: D0209. Unit
+    variable: D0209_Unit
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Unit.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0209_TypeOfTest = D0209_TestName.CatCode(1)
+  - label: D0209. Results
+    variable: D0209_Results
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Result.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0209_Results = D0209_LabSamplesCode.CatCode(5)
+  - label: D0209. Description
+    variable: D0209_Description
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0209_Results = D0209_LabSamplesCode.CatCode(5)
+  - label: D0209. Normal Value
+    variable: D0209_NormalValue
+    type: open
+    codesFile: 'D:/Lab data in Medical D-base 13-8-12/Sys/Dic_Lists/LAB_TestName.txt'
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0209_NormalValue = D0209_TestName.CatCode(2)
+    autoVariable: Basic
+  - label: D0210. MDM Lab?
+    variable: D0210_MDMLab
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: D0210. Type of Test
+    variable: D0210_TypeofTest
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0210_TypeofTest = D0210_TestName.CatCode(1)
+    autoVariable: Basic
+  - label: D0210. Test Name
+    variable: D0210_TestName
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TestName.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0210_TestName = D0210_LabSamplesCode.CatCode(2)
+  - label: D0210. Type Of Sample
+    variable: D0210_TypeOfSample
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TypeOfSample.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0210_TypeOfSample = D0210_LabSamplesCode.CatCode(3)
+  - label: D0210. No Of Result
+    variable: D0210_NoOfResult
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0210_NoOfSample = D0210_LabSamplesCode.CatCode(4)
+  - label: D0210. Unit
+    variable: D0210_Unit
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Unit.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0210_TypeOfTest = D0210_TestName.CatCode(1)
+  - label: D0210. Results
+    variable: D0210_Results
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Result.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0210_Results = D0210_LabSamplesCode.CatCode(5)
+  - label: D0210. Description
+    variable: D0210_Description
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0210_Results = D0210_LabSamplesCode.CatCode(5)
+  - label: D0210. Normal Value
+    variable: D0210_NormalValue
+    type: open
+    codesFile: 'D:/Lab data in Medical D-base 13-8-12/Sys/Dic_Lists/LAB_TestName.txt'
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0210_NormalValue = D0210_TestName.CatCode(2)
+    autoVariable: Basic
+  - label: D0211. MDM Lab?
+    variable: D0211_MDMLab
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: D0211. Type of Test
+    variable: D0211_TypeofTest
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0211_TypeofTest = D0211_TestName.CatCode(1)
+    autoVariable: Basic
+  - label: D0211. Test Name
+    variable: D0211_TestName
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TestName.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0211_TestName = D0211_LabSamplesCode.CatCode(2)
+  - label: D0211. Type Of Sample
+    variable: D0211_TypeOfSample
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TypeOfSample.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0211_TypeOfSample = D0211_LabSamplesCode.CatCode(3)
+  - label: D0211. No Of Result
+    variable: D0211_NoOfResult
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0211_NoOfSample = D0211_LabSamplesCode.CatCode(4)
+  - label: D0211. Unit
+    variable: D0211_Unit
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Unit.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0211_TypeOfTest = D0211_TestName.CatCode(1)
+  - label: D0211. Results
+    variable: D0211_Results
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Result.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0211_Results = D0211_LabSamplesCode.CatCode(5)
+  - label: D0211. Description
+    variable: D0211_Description
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0211_Results = D0211_LabSamplesCode.CatCode(5)
+  - label: D0211. Normal Value
+    variable: D0211_NormalValue
+    type: open
+    codesFile: 'D:/Lab data in Medical D-base 13-8-12/Sys/Dic_Lists/LAB_TestName.txt'
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0211_NormalValue = D0211_TestName.CatCode(2)
+    autoVariable: Basic
+  - label: D0212. MDM Lab?
+    variable: D0212_MDMLab
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: D0212. Type of Test
+    variable: D0212_TypeofTest
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0212_TypeofTest = D0212_TestName.CatCode(1)
+    autoVariable: Basic
+  - label: D0212. Test Name
+    variable: D0212_TestName
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TestName.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0212_TestName = D0212_LabSamplesCode.CatCode(2)
+  - label: D0212. Type Of Sample
+    variable: D0212_TypeOfSample
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TypeOfSample.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0212_TypeOfSample = D0212_LabSamplesCode.CatCode(3)
+  - label: D0212. No Of Result
+    variable: D0212_NoOfResult
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0212_NoOfSample = D0212_LabSamplesCode.CatCode(4)
+  - label: D0212. Unit
+    variable: D0212_Unit
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Unit.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0212_TypeOfTest = D0212_TestName.CatCode(1)
+  - label: D0212. Results
+    variable: D0212_Results
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Result.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0212_Results = D0212_LabSamplesCode.CatCode(5)
+  - label: D0212. Description
+    variable: D0212_Description
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0212_Results = D0212_LabSamplesCode.CatCode(5)
+  - label: D0212. Normal Value
+    variable: D0212_NormalValue
+    type: open
+    codesFile: 'D:/Lab data in Medical D-base 13-8-12/Sys/Dic_Lists/LAB_TestName.txt'
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0212_NormalValue = D0212_TestName.CatCode(2)
+    autoVariable: Basic
+  - label: D0213. MDM Lab?
+    variable: D0213_MDMLab
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: D0213. Type of Test
+    variable: D0213_TypeofTest
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0213_TypeofTest = D0213_TestName.CatCode(1)
+    autoVariable: Basic
+  - label: D0213. Test Name
+    variable: D0213_TestName
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TestName.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0213_TestName = D0213_LabSamplesCode.CatCode(2)
+  - label: D0213. Type Of Sample
+    variable: D0213_TypeOfSample
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TypeOfSample.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0213_TypeOfSample = D0213_LabSamplesCode.CatCode(3)
+  - label: D0213. No Of Result
+    variable: D0213_NoOfResult
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0213_NoOfSample = D0213_LabSamplesCode.CatCode(4)
+  - label: D0213. Unit
+    variable: D0213_Unit
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Unit.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0213_TypeOfTest = D0213_TestName.CatCode(1)
+  - label: D0213. Results
+    variable: D0213_Results
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Result.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0213_Results = D0213_LabSamplesCode.CatCode(5)
+  - label: D0213. Description
+    variable: D0213_Description
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0213_Results = D0213_LabSamplesCode.CatCode(5)
+  - label: D0213. Normal Value
+    variable: D0213_NormalValue
+    type: open
+    codesFile: 'D:/Lab data in Medical D-base 13-8-12/Sys/Dic_Lists/LAB_TestName.txt'
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0213_NormalValue = D0213_TestName.CatCode(2)
+    autoVariable: Basic
+  - label: D0214. MDM Lab?
+    variable: D0214_MDMLab
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: D0214. Type of Test
+    variable: D0214_TypeofTest
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0214_TypeofTest = D0214_TestName.CatCode(1)
+    autoVariable: Basic
+  - label: D0214. Test Name
+    variable: D0214_TestName
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TestName.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0214_TestName = D0214_LabSamplesCode.CatCode(2)
+  - label: D0214. Type Of Sample
+    variable: D0214_TypeOfSample
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TypeOfSample.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0214_TypeOfSample = D0214_LabSamplesCode.CatCode(3)
+  - label: D0214. No Of Result
+    variable: D0214_NoOfResult
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0214_NoOfSample = D0214_LabSamplesCode.CatCode(4)
+  - label: D0214. Unit
+    variable: D0214_Unit
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Unit.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0214_TypeOfTest = D0214_TestName.CatCode(1)
+  - label: D0214. Results
+    variable: D0214_Results
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Result.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0214_Results = D0214_LabSamplesCode.CatCode(5)
+  - label: D0214. Description
+    variable: D0214_Description
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0214_Results = D0214_LabSamplesCode.CatCode(5)
+  - label: D0214. Normal Value
+    variable: D0214_NormalValue
+    type: open
+    codesFile: 'D:/Lab data in Medical D-base 13-8-12/Sys/Dic_Lists/LAB_TestName.txt'
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0214_NormalValue = D0214_TestName.CatCode(2)
+    autoVariable: Basic
+  - label: D0215. MDM Lab?
+    variable: D0215_MDMLab
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: D0215. Type of Test
+    variable: D0215_TypeofTest
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0215_TypeofTest = D0215_TestName.CatCode(1)
+    autoVariable: Basic
+  - label: D0215. Test Name
+    variable: D0215_TestName
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TestName.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0215_TestName = D0215_LabSamplesCode.CatCode(2)
+  - label: D0215. Type Of Sample
+    variable: D0215_TypeOfSample
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TypeOfSample.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0215_TypeOfSample = D0215_LabSamplesCode.CatCode(3)
+  - label: D0215. No Of Result
+    variable: D0215_NoOfResult
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0215_NoOfSample = D0215_LabSamplesCode.CatCode(4)
+  - label: D0215. Unit
+    variable: D0215_Unit
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Unit.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0215_TypeOfTest = D0215_TestName.CatCode(1)
+  - label: D0215. Results
+    variable: D0215_Results
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Result.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0215_Results = D0215_LabSamplesCode.CatCode(5)
+  - label: D0215. Description
+    variable: D0215_Description
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0215_Results = D0215_LabSamplesCode.CatCode(5)
+  - label: D0215. Normal Value
+    variable: D0215_NormalValue
+    type: open
+    codesFile: 'D:/Lab data in Medical D-base 13-8-12/Sys/Dic_Lists/LAB_TestName.txt'
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0215_NormalValue = D0215_TestName.CatCode(2)
+    autoVariable: Basic
+  - label: D0216. MDM Lab?
+    variable: D0216_MDMLab
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: D0216. Type of Test
+    variable: D0216_TypeofTest
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0216_TypeofTest = D0216_TestName.CatCode(1)
+    autoVariable: Basic
+  - label: D0216. Test Name
+    variable: D0216_TestName
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TestName.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0216_TestName = D0216_LabSamplesCode.CatCode(2)
+  - label: D0216. Type Of Sample
+    variable: D0216_TypeOfSample
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TypeOfSample.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0216_TypeOfSample = D0216_LabSamplesCode.CatCode(3)
+  - label: D0216. No Of Result
+    variable: D0216_NoOfResult
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0216_NoOfSample = D0216_LabSamplesCode.CatCode(4)
+  - label: D0216. Unit
+    variable: D0216_Unit
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Unit.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0216_TypeOfTest = D0216_TestName.CatCode(1)
+  - label: D0216. Results
+    variable: D0216_Results
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Result.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0216_Results = D0216_LabSamplesCode.CatCode(5)
+  - label: D0216. Description
+    variable: D0216_Description
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0216_Results = D0216_LabSamplesCode.CatCode(5)
+  - label: D0216. Normal Value
+    variable: D0216_NormalValue
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0216_NormalValue = D0216_TestName.CatCode(2)
+    autoVariable: Basic
+  - label: D0217. MDM Lab?
+    variable: D0217_MDMLab
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: D0217. Type of Test
+    variable: D0217_TypeofTest
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0217_TypeofTest = D0217_TestName.CatCode(1)
+    autoVariable: Basic
+  - label: D0217. Test Name
+    variable: D0217_TestName
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TestName.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0217_TestName = D0217_LabSamplesCode.CatCode(2)
+  - label: D0217. Type Of Sample
+    variable: D0217_TypeOfSample
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TypeOfSample.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0217_TypeOfSample = D0217_LabSamplesCode.CatCode(3)
+  - label: D0217. No Of Result
+    variable: D0217_NoOfResult
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0217_NoOfSample = D0217_LabSamplesCode.CatCode(4)
+  - label: D0217. Unit
+    variable: D0217_Unit
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Unit.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0217_TypeOfTest = D0217_TestName.CatCode(1)
+  - label: D0217. Results
+    variable: D0217_Results
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Result.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0217_Results = D0217_LabSamplesCode.CatCode(5)
+  - label: D0217. Description
+    variable: D0217_Description
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0217_Results = D0217_LabSamplesCode.CatCode(5)
+  - label: D0217. Normal Value
+    variable: D0217_NormalValue
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0217_NormalValue = D0217_TestName.CatCode(2)
+    autoVariable: Basic
+  - label: D0218. MDM Lab?
+    variable: D0218_MDMLab
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: D0218. Type of Test
+    variable: D0218_TypeofTest
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0218_TypeofTest = D0218_TestName.CatCode(1)
+    autoVariable: Basic
+  - label: D0218. Test Name
+    variable: D0218_TestName
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TestName.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0218_TestName = D0218_LabSamplesCode.CatCode(2)
+  - label: D0218. Type Of Sample
+    variable: D0218_TypeOfSample
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TypeOfSample.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0218_TypeOfSample = D0218_LabSamplesCode.CatCode(3)
+  - label: D0218. No Of Result
+    variable: D0218_NoOfResult
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0218_NoOfSample = D0218_LabSamplesCode.CatCode(4)
+  - label: D0218. Unit
+    variable: D0218_Unit
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Unit.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0218_TypeOfTest = D0218_TestName.CatCode(1)
+  - label: D0218. Results
+    variable: D0218_Results
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Result.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0218_Results = D0218_LabSamplesCode.CatCode(5)
+  - label: D0218. Description
+    variable: D0218_Description
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0218_Results = D0218_LabSamplesCode.CatCode(5)
+  - label: D0218. Normal Value
+    variable: D0218_NormalValue
+    type: open
+    codesFile: 'D:/Lab data in Medical D-base 13-8-12/Sys/Dic_Lists/LAB_TestName.txt'
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0218_NormalValue = D0218_TestName.CatCode(2)
+    autoVariable: Basic
+  - label: D0219. MDM Lab?
+    variable: D0219_MDMLab
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: D0219. Type of Test
+    variable: D0219_TypeofTest
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: D0219_TypeofTest = D0219_TestName.CatCode(1)
+    autoVariable: Basic
+  - label: D0219. Test Name
+    variable: D0219_TestName
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TestName.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0219_TestName = D0219_LabSamplesCode.CatCode(2)
+  - label: D0219. Type Of Sample
+    variable: D0219_TypeOfSample
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_TypeOfSample.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0219_TypeOfSample = D0219_LabSamplesCode.CatCode(3)
+  - label: D0219. No Of Result
+    variable: D0219_NoOfResult
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0219_NoOfSample = D0219_LabSamplesCode.CatCode(4)
+  - label: D0219. Unit
+    variable: D0219_Unit
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Unit.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0219_TypeOfTest = D0219_TestName.CatCode(1)
+  - label: D0219. Results
+    variable: D0219_Results
+    type: code
+    codesFile: Sys/Dic_Lists/LAB_Result.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: D0219_Results = D0219_LabSamplesCode.CatCode(5)
+  - label: D0219. Description
+    variable: D0219_Description
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: D0219_Results = D0219_LabSamplesCode.CatCode(5)
+  - label: D0219. Normal Value
+    variable: D0219_NormalValue
+    type: open
+    codesFile: 'D:/Lab data in Medical D-base 13-8-12/Sys/Dic_Lists/LAB_TestName.txt'
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32

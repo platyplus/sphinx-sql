@@ -1,0 +1,129 @@
+Version=5104
+Entête
+	Historique=5.1.0.4(MEDECINS DU MOND;
+	Langue=EN
+	Titre=Behavior Data
+	Période=2013
+	Organisme=MDM
+	StadePanneau=10
+Fin
+Questions
+	Question
+		Libellé=MDM code
+		Variable=MDMcode
+		Type=6
+		NbLignes=1
+		NbCarLigne=20
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		Libellé=Name
+		Variable=A01_PatientName
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		Libellé=Sex
+		Variable=A03_Sexe
+		Type=1
+		NbModalités=2
+		Modalités=Male ; Female
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		Libellé=Age
+		Variable=A05_Age
+		Type=4
+		NbDécimales=2
+		TypeNombre=2
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		Libellé=Patient Target
+		Variable=A07_PatientTarget
+		Type=7
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		Libellé=Date
+		Variable=Beh_Date
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		Libellé=PLH
+		Variable=Beh_PLH
+		Type=1
+		NbModalités=2
+		Modalités=Yes ; No
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		Libellé=Have you ever taken STI treatment in last 3 months?
+		Variable=Beh_TakenSTITreatmentinLast3Months
+		Type=1
+		NbModalités=2
+		Modalités=Yes ; No
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		Libellé=Did you have sex in last 6 months?
+		Variable=Beh_DidYouHaveSexInLast6Months
+		Type=1
+		NbModalités=2
+		Modalités=Yes ; No
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		Libellé=If Yes, did you use condom at last sex?
+		Variable=Beh_UseCondomAtLastSex
+		Type=1
+		NbModalités=2
+		Modalités=Yes ; No
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		Libellé=Did you inject in last 6 months?
+		Variable=Beh_DidYouInjectInLast6Months
+		Type=1
+		NbModalités=2
+		Modalités=Yes ; No
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		Libellé=If Yes, did you share needle/syringe in last injection?
+		Variable=Beh_ShareNeedleSyringeInLastInjection
+		Type=1
+		NbModalités=2
+		Modalités=Yes ; No
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+	Fin
+Fin
+Options
+	GroupesActifs=1
+	RenvoisActifs=1
+	ControlesActifs=1
+Fin

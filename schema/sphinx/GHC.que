@@ -1,0 +1,1901 @@
+Version=5104
+EntÍte
+	Historique=5.0.0.81(MÈdecins du Mon;5.1.0.2(MÈdecins du Mond;5.1.0.4(MEDECINS DU MOND;
+	Langue=EN
+	Titre=GHC Visit
+	StadePanneau=10
+	Traductions
+		Traduction
+			Langue=FR
+			Titre=GHC Visit
+		Fin
+	Fin
+Fin
+Questions
+	Question
+		LibellÈ=MDM code (Patient ID)
+		Variable=MDMcode
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=V_sexe = "1"ÄÅIf A03_Sexe In "Female" ThenÄÅV_sexe = "2"ÄÅEndIfÄÅif A07_PatientTarget In "DU" ThenÄÅ        V_PT="D"ÄÅ	elseÄÅ		if A07_PatientTarget In "DUP" ThenÄÅ			V_PT="P"ÄÅ			elseÄÅ				if A07_PatientTarget In "IDU" ThenÄÅ					V_PT="I"ÄÅ					elseÄÅ						if A07_PatientTarget In "IDUP" ThenÄÅ							V_PT="P"ÄÅ							elseÄÅ								if A07_PatientTarget In "MSM" ThenÄÅ									V_PT="M"ÄÅ									elseÄÅ										if A07_PatientTarget In "MSMP" ThenÄÅ											V_PT="P"ÄÅ											elseÄÅ												if A07_PatientTarget In "SW" ThenÄÅ													V_PT="S"ÄÅ													elseÄÅ														if A07_PatientTarget In "SWP" ThenÄÅ															V_PT="P"ÄÅ															elseÄÅ																if A07_PatientTarget In "CH" ThenÄÅ																	V_PT="C"ÄÅ																	elseÄÅ																		if A07_PatientTarget In "GP" ThenÄÅ																			V_PT="G"ÄÅ																			elseÄÅ																				if A07_PatientTarget In "Other Partner" Then ÄÅ																					V_PT="P"ÄÅ																					elseÄÅ																						if A07_PatientTarget In "Other High Risk Group" ThenÄÅ																							V_PT="O"ÄÅ																							elseÄÅ																								V=PT=""ÄÅ																						end ifÄÅ																				end ifÄÅ																		end ifÄÅ																endifÄÅ														endifÄÅ												endifÄÅ										endifÄÅ								endifÄÅ						endifÄÅ				endifÄÅ				ÄÅ		endifÄÅendifÄÅMDMcode = MDMlocation.Catcode(3) & V_PT & V_sexe & SerialNumber
+		Traductions
+			Traduction
+				LibellÈ=MDM code (Patient ID)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Registration date
+		Variable=A00_RegistrationDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=A00. Registration date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Name
+		Variable=A01_PatientName
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=A01. Name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Fatherís name
+		Variable=A02_FatherName
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=A02. Fatherís name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=A03. Sex
+		Variable=A03_Sexe
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Male ; Female
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=A03. Sexe
+				ModalitÈs=Male ; Female ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=A07. Patient target
+		Variable=A07_PatientTarget
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LIST_A3_Target.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=Majuscule(A07_PatientTarget)
+		Traductions
+			Traduction
+				LibellÈ=A07. Patient target
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Date of birth
+		Variable=A041_DateOfBirth
+		Type=8
+		MinNombre=3652
+		Format=jj/mm/aaaa
+		Consigne=The response must be more than 01/01/1910.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=A04. Date of birth
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Age
+		Variable=A05_Age
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Basic=If  Not A041_DateOfBirth.EstNonRÈponse ThenÄÅ    A05_Age = (A00_RegistrationDate - A041_DateOfBirth) / 365ÄÅEndIf
+		Traductions
+			Traduction
+				LibellÈ=Age
+				ModalitÈs=mod-FR-1 ; mod-FR-2 ; mod-FR-3 ; mod-FR-4 ; mod-FR-5 ; mod-FR-6 ; mod-FR-7 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=New Patient
+		Variable=GHC_NewPatient
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Consigne=Mandatory response.
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				LibellÈ=B00. Initial visit
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Visit date
+		Variable=GHC_VisitDate
+		Type=8
+		MinNombre=32872
+		Format=jj/mm/aaaa
+		Consigne=The response must be more than 01/01/1990.ÄÅMandatory response.
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				LibellÈ=B021. Visit date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=MDM staff
+		Variable=GHC_MDMstaff
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LIST_A2_MDMstaff.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=33
+		Traductions
+			Traduction
+				LibellÈ=B03. MDM staff
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Constitutional
+		Variable=GHC_Symptoms_Constitutional
+		Type=2
+		NbModalitÈs=7
+		ModalitÈs=Fatigue ; Fever ; Night sweats ; Appetite loss ; Weight loss ; Pain ; Other
+		MaxRÈponses=7
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=G011. Constitutional
+				ModalitÈs=Fatigue ; Fever ; Night sweats ; Appetite loss ; Weight loss ; mod-FR-10 ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Fatigue
+		Variable=GHC_Constitutional_Fatigue
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Fatigue
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Fever
+		Variable=GHC_Constitutional_Fever
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Fever
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Night sweats
+		Variable=GHC_Constitutional_NightSweats
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Night sweats
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Appetitie loss
+		Variable=GHC_Constitutional_AppetitieLoss
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Appetitie loss
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Weight loss
+		Variable=GHC_Constitutional_WeightLoss
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Weight loss
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Pain
+		Variable=GHC_Constitutional_Pain
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Pain
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Other
+		Variable=GHC_Constitutional_Other
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=G012. if other, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Respiratory
+		Variable=GHC_Symptoms_Respiratory
+		Type=2
+		NbModalitÈs=7
+		ModalitÈs=Non-productive cough ; Productive cough ; Hemoptysis ; Difficulty breathing ; Chest Pain ; Palpitation ; Other
+		MaxRÈponses=7
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=G021. Respiratory
+				ModalitÈs=Non-productive cough ; Productive cough ; Hemoptysis ; Difficulty breathing-SOB ; mod-FR-6 ; mod-FR-7 ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Non-productive cough
+		Variable=GHC_Respiratory_NonProdCough
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Non-productive cough
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Productive Cough
+		Variable=GHC_Respiratory_ProductiveCough
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Productive Cough
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Hemoptysis
+		Variable=GHC_Respiratory_Hemoptysis
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Hemoptysis
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Difficulty breathing
+		Variable=GHC_Respiratory_DiffBreathing
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Difficulty breathing
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Chest Pain
+		Variable=GHC_Respiratory_ChestPain
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Chest Pain
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Palpitation
+		Variable=GHC_Respiratory_Palpitation
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Palpitation
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Other
+		Variable=GHC_Respiratory_Other
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=G022. If other, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Gastrointestinal
+		Variable=GHC_Symptoms_Gastrointestinal
+		Type=2
+		NbModalitÈs=6
+		ModalitÈs=Abdominal Pain ; Nausea ; Vomiting ; Diarrhea ; Dysphagia ; Other
+		MaxRÈponses=6
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=G031. Gastrointestinal
+				ModalitÈs=mod-FR-5 ; Nausea and/or vomiting ; mod-FR-4 ; Diarrhea ; mod-FR-6 ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Abdominal Pain
+		Variable=GHC_Gastrointestinal_AbdPain
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Abdominal Pain
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Nausea
+		Variable=GHC_Gastrointestinal_Nausea
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Nausea
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Vomiting
+		Variable=GHC_Gastrointestinal_Vomiting
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Vomiting
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dysphagia
+		Variable=GHC_Gastrointestinal_Dysphagia
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Dysphagia
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Diarrhea
+		Variable=GHC_Gastrointestinal_Diarrhea
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Diarrhea
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Other
+		Variable=GHC_Gastrointestinal_Other
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=G032. If other, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Neurological
+		Variable=GHC_Symptoms_Neurological
+		Type=2
+		NbModalitÈs=6
+		ModalitÈs=Headache ; Confusion ; Memory problems ; Tingling and Numbness of limbs ; Insomnia ; Yawning
+		MaxRÈponses=6
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=G041. Neurological
+				ModalitÈs=Headache ; Confusion ; Memory problems ; Numbness/Tingling in legs/feet ; mod-FR-6 ; mod-FR-7 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Headache
+		Variable=GHC_Neuro_Headache
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Headache
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Confusion
+		Variable=GHC_Neuro_Confusion
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Confusion
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Memory Problem
+		Variable=GHC_Neuro_MemProblem
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Memory Problem
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Tingling and Numbness of limbs
+		Variable=GHC_Neuro_Tingling
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Tingling and Numbness of limbs
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Insomnia
+		Variable=GHC_Neuro_Insomnia
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Insomnia
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Yawning
+		Variable=GHC_Neuro_Yawning
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Yawning
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Skin Manifestation
+		Variable=GHC_Symptoms_SkinManifestation
+		Type=2
+		NbModalitÈs=4
+		ModalitÈs=Itchiness ; Rash ; Lump/Nodules ; Other
+		MaxRÈponses=4
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=Skin Manifestation
+				ModalitÈs=Itchiness ; Rash ; Lump/Nodules ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Itchiness
+		Variable=GHC_Skin_Itchiness
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Itchiness
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Rash
+		Variable=GHC_Skin_Rash
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Rash
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Lump/Nodules
+		Variable=GHC_Skin_Lump
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Lump/Nodules
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Other
+		Variable=GHC_Skin_Other
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Other
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Additional comments
+		Variable=GHC_Symptoms_AdditionalComments
+		Type=6
+		NbLignes=3
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=G09. Additional comments
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Eye
+		Variable=GHC_Eye
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=Normal ; Abnormal ; Not done
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Eye
+				ModalitÈs=Normal ; Abnormal ; Not done ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Eye Comment (if abnormal describe)
+		Variable=GHC_EyeComment
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Eye Comment (if abnormal describe)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Ears, Nose
+		Variable=GHC_EarsNose
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=Normal ; Abnormal ; Not done
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H02. Ears, Nose
+				ModalitÈs=Normal ; Abnormal ; Not done ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Comment (if abnormal describe)
+		Variable=GHC_EarsNoseComment
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H022. Comment (if abnormal describe)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Oral
+		Variable=GHC_Oral
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=Normal ; Abnormal ; Not done
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H01. Oral
+				ModalitÈs=Normal ; Abnormal ; Not done ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Comment (if abnormal describe)
+		Variable=GHC_OralComment
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H012. Comment (if abnormal describe)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Lymph nodes
+		Variable=GHC_LymphNodes
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=Normal ; Abnormal ; Not done
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H03. Lymph nodes
+				ModalitÈs=Normal ; Abnormal ; Not done ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Comment (if abnormal describe)
+		Variable=GHC_LymphNodesComment
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H032. Comment (if abnormal describe)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Heart
+		Variable=GHC_Heart
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=Normal ; Abnormal ; Not done
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H04. Heart
+				ModalitÈs=Normal ; Abnormal ; Not done ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Comment (if abnormal describe)
+		Variable=GHC_HeartComment
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H042. Comment (if abnormal describe)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Lungs
+		Variable=GHC_Lungs
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=Normal ; Abnormal ; Not done
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H05. Lungs
+				ModalitÈs=Normal ; Abnormal ; Not done ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Comment (if abnormal describe)
+		Variable=GHC_LungsComment
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H052. Comment (if abnormal describe)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Abdomen
+		Variable=GHC_Abdomen
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=Normal ; Abnormal ; Not done
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H06. Abdomen
+				ModalitÈs=Normal ; Abnormal ; Not done ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Comment (if abnormal describe)
+		Variable=GHC_AbdomenComment
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H062. Comment (if abnormal describe)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Neurological
+		Variable=GHC_Neurological
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=Normal ; Abnormal ; Not done
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H10. Neurological
+				ModalitÈs=Normal ; Abnormal ; Not done ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Comment (if abnormal describe)
+		Variable=GHC_NeurologicalComment
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H102. Comment (if abnormal describe)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Additional comments
+		Variable=GHC_AdditionalComments
+		Type=6
+		NbLignes=3
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H13. Additional comments
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Category
+		Variable=GHC_Category1
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LIST_I011_Diagnosis.dic
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=33184
+		Basic=Majuscule(GHC_Category1)
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				LibellÈ=I011. Category
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Description
+		Variable=GHC_Description1
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		OptionsBasic=1
+		Basic=If  Not GHC_Category1 = "" ThenÄÅ    GHC_Description1 = GHC_Category1.CatCode(2)ÄÅEndIf
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				LibellÈ=I011. Description
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Category
+		Variable=GHC_Category2
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LIST_I011_Diagnosis.dic
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=33184
+		Basic=Majuscule(GHC_Category2)
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				LibellÈ=I021. Category
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Description
+		Variable=GHC_Description2
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		OptionsBasic=1
+		Basic=If  Not GHC_Category2 = "" ThenÄÅ    GHC_Description2 = GHC_Category2.CatCode(2)ÄÅEndIf
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				LibellÈ=I021. Description
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Category
+		Variable=GHC_Category3
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LIST_I011_Diagnosis.dic
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=33184
+		Basic=Majuscule(GHC_Category3)
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				LibellÈ=I031. Category
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Description
+		Variable=GHC_Description3
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		OptionsBasic=1
+		Basic=If  Not GHC_Category3 = "" ThenÄÅ    GHC_Description3 = GHC_Category3.CatCode(2)ÄÅEndIf
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				LibellÈ=I031. Description
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Category
+		Variable=GHC_Category4
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LIST_I011_Diagnosis.dic
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=33184
+		Basic=Majuscule(GHC_Category4)
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				LibellÈ=I041. Category
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Description
+		Variable=GHC_Description4
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		OptionsBasic=1
+		Basic=If  Not GHC_Category4 = "" ThenÄÅ    GHC_Description4 = GHC_Category4.CatCode(2)ÄÅEndIf
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				LibellÈ=I041. Description
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Allergy
+		Variable=GHC_Allergy
+		Type=2
+		NbModalitÈs=3
+		ModalitÈs=Pen ; Sulfa ; Other
+		MaxRÈponses=3
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=J011. Allergy
+				ModalitÈs=Pen ; Sulfa ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=If other, specify
+		Variable=GHC_AllergyOther
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J012. If other, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=GHC_MedicineName1
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0211. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=GHC_Dosage1
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0212. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=GHC_Frequency1
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0213. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=GHC_NumberDays1
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0214. Number days
+				ModalitÈs=Less than 230264292 ; From 230264292 to 460528583 ; From 460528583 to 690792875 ; From 690792875 to 921057166 ; From 921057166 to 1151321458 ; From 1151321458 to 1381585749 ; 1381585749 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=GHC_MedicineName2
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0221. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=GHC_Dosage2
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0222. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=GHC_Frequency2
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0223. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=GHC_NumberDays2
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0224. Number days
+				ModalitÈs=Less than 235714786 ; From 235714786 to 471429572 ; From 471429572 to 707144359 ; From 707144359 to 942859145 ; From 942859145 to 1178573931 ; From 1178573931 to 1414288717 ; 1414288717 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=GHC_MedicineName3
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0231. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=GHC_Dosage3
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0232. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=GHC_Frequency3
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0233. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=GHC_NumberDays3
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0234. Number days
+				ModalitÈs=Less than 216170496 ; From 216170496 to 432340992 ; From 432340992 to 648511488 ; From 648511488 to 864681984 ; From 864681984 to 1080852480 ; From 1080852480 to 1297022976 ; 1297022976 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=GHC_MedicineName4
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0241. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=GHC_Dosage4
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0242. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=GHC_Frequency4
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0243. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=GHC_NumberDays4
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0244. Number days
+				ModalitÈs=Less than 20 ; From 20 to 40 ; From 40 to 60 ; From 60 to 80 ; From 80 to 100 ; From 100 to 120 ; 120 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=GHC_MedicineName5
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0251. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=GHC_Dosage5
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0252. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=GHC_Frequency5
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0253. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=GHC_NumberDays5
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0254. Number days
+				ModalitÈs=Less than 20 ; From 20 to 40 ; From 40 to 60 ; From 60 to 80 ; From 80 to 100 ; From 100 to 120 ; 120 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=GHC_MedicineName6
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0261. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=GHC_Dosage6
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0262. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=GHC_Frequency6
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0263. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=GHC_NumberDays6
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0264. Number days
+				ModalitÈs=Less than 20 ; From 20 to 40 ; From 40 to 60 ; From 60 to 80 ; From 80 to 100 ; From 100 to 120 ; 120 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=GHC_MedicineName7
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0271. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=GHC_Dosage7
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0272. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=GHC_Frequency7
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0273. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=GHC_NumberDays7
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0274. Number days
+				ModalitÈs=Less than 20 ; From 20 to 40 ; From 40 to 60 ; From 60 to 80 ; From 80 to 100 ; From 100 to 120 ; 120 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=GHC_MedicineName8
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0281. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=GHC_Dosage8
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0282. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=GHC_Frequency8
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0283. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=GHC_NumberDays8
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0284. Number days
+				ModalitÈs=Less than 20 ; From 20 to 40 ; From 40 to 60 ; From 60 to 80 ; From 80 to 100 ; From 100 to 120 ; 120 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=GHC_MedicineName9
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0291. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=GHC_Dosage9
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0292. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=GHC_Frequency9
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0293. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=GHC_NumberDays9
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0294. Number days
+				ModalitÈs=Less than 20 ; From 20 to 40 ; From 40 to 60 ; From 60 to 80 ; From 80 to 100 ; From 100 to 120 ; 120 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=GHC_MedicineName10
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0301. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=GHC_Dosage10
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0302. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=GHC_Frequency10
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0303. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=GHC_NumberDays10
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J0304. Number days
+				ModalitÈs=Less than 20 ; From 20 to 40 ; From 40 to 60 ; From 60 to 80 ; From 80 to 100 ; From 100 to 120 ; 120 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=HBsAg
+		Variable=GHC_HBsAg
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Positive ; Negative
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=HBsAg
+				ModalitÈs=Positive ; Negative ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=HBsAb
+		Variable=GHC_HBsAb
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Positive ; Negative
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=HBsAb
+				ModalitÈs=Positive ; Negative ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=HCVAb
+		Variable=GHC_HCVAb
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Positive ; Negative
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=HCVAb
+				ModalitÈs=Positive ; Negative ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=APRI
+		Variable=GHC_APRI
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=APRI
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Liver Fibrosis
+		Variable=GHC_Liver_Fibrosis
+		Type=1
+		NbModalitÈs=4
+		ModalitÈs=Stage 0 ; Stage < 2 ; Stage >= 2 ; Stage 4
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Liver Fibrosis
+				ModalitÈs=Stage 1 ; Stage 2 ; Stage 3 ; Stage 4 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Patient should return in
+		Variable=GHC_PatientShouldReturnIn
+		Type=1
+		NbModalitÈs=8
+		ModalitÈs=1 wk ; 2wks ; 3wks ; 1 mth ; 2 mths ; 3 mths ; 6 mths ; Other
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=L2. Patient should return in
+				ModalitÈs=1 wk ; 2wks ; 3wks ; 1 mth ; 2 mths ; 3 mths ; 6 mths ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Other
+		Variable=GHC_ShouldReturnIn_Other
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=L21. Other
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Date of next visit
+		Variable=GHC_DateNextVisit
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=L3. Date of next visit
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Verify patient
+		Variable=Verify
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Verify patient
+				ModalitÈs=val = 1 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Last registration date
+		Variable=LastRegistrationDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=33056
+		VariableAutomatique=DateEnreg
+		Traductions
+			Traduction
+				LibellÈ=Last registration date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=GHC Key
+		Variable=Key
+		Type=6
+		NbLignes=2
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		OptionsBasic=1
+		Basic=Key = MDMcode & GHC_VisitDate
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				LibellÈ=GHC Key
+			Fin
+		Fin
+	Fin
+Fin
+Titres
+	Titre
+		Type=0
+		LibellÈ=SOCIO-DEMOGRAPHIC DATA
+		PremiËre=1
+		Traductions
+			Traduction
+				LibellÈ=A. SOCIO-DEMOGRAPHIC DATA
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=VISIT
+		PremiËre=0
+		Traductions
+			Traduction
+			Fin
+		Fin
+	Fin
+Fin
+Options
+Fin

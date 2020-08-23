@@ -1,0 +1,681 @@
+Version=5104
+Entête
+	Historique=5.0.0.81(Médecins du Mon;5.1.0.2(Médecins du Mond;5.0.0.64(Médecins du Mon;5.1.0.4(MEDECINS DU MOND;
+	Langue=EN
+	Titre=General Information
+	StadePanneau=10
+	Traductions
+		Traduction
+			Langue=FR
+			Titre=ART VISIT
+		Fin
+	Fin
+Fin
+Questions
+	Question
+		Libellé=MDM code (Patient ID)
+		Variable=MDMcode
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=V_sexe = "1"€If A03_Sexe In "Female" Then€V_sexe = "2"€EndIf€if A07_PatientTarget In "DU" Then€        V_PT="D"€	else€		if A07_PatientTarget In "DUP" Then€			V_PT="P"€			else€				if A07_PatientTarget In "IDU" Then€					V_PT="I"€					else€						if A07_PatientTarget In "IDUP" Then€							V_PT="P"€							else€								if A07_PatientTarget In "MSM" Then€									V_PT="M"€									else€										if A07_PatientTarget In "MSMP" Then€											V_PT="P"€											else€												if A07_PatientTarget In "SW" Then€													V_PT="S"€													else€														if A07_PatientTarget In "SWP" Then€															V_PT="P"€															else€																if A07_PatientTarget In "CH" Then€																	V_PT="C"€																	else€																		if A07_PatientTarget In "GP" Then€																			V_PT="G"€																			else€																				if A07_PatientTarget In "Other Partner" Then €																					V_PT="P"€																					else€																						if A07_PatientTarget In "Other High Risk Group" Then€																							V_PT="O"€																							else€																								V=PT=""€																						end if€																				end if€																		end if€																endif€														endif€												endif€										endif€								endif€						endif€				endif€				€		endif€endif€MDMcode = MDMlocation.Catcode(3) & V_PT & V_sexe & SerialNumber
+		Traductions
+			Traduction
+				Libellé=MDM code (Patient ID)
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Registration date
+		Variable=A00_RegistrationDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=A00. Registration date
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Name
+		Variable=A01_PatientName
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=A01. Name
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Father’s name
+		Variable=A02_FatherName
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=A02. Father’s name
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=A03. Sex
+		Variable=A03_Sexe
+		Type=1
+		NbModalités=2
+		Modalités=Male ; Female
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=A03. Sexe
+				Modalités=Male ; Female ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Date of birth
+		Variable=A041_DateOfBirth
+		Type=8
+		MinNombre=3652
+		Format=jj/mm/aaaa
+		Consigne=The response must be more than 01/01/1910.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				Libellé=A04. Date of birth
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Age
+		Variable=A05_Age
+		Type=4
+		NbDécimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Basic=If  Not A041_DateOfBirth.EstNonRéponse Then€    A05_Age = (A00_RegistrationDate - A041_DateOfBirth) / 365€EndIf
+		Traductions
+			Traduction
+				Libellé=Age
+				Modalités=mod-FR-1 ; mod-FR-2 ; mod-FR-3 ; mod-FR-4 ; mod-FR-5 ; mod-FR-6 ; mod-FR-7 ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=A07. Patient target
+		Variable=A07_PatientTarget
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LIST_A3_Target.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=Majuscule(A07_PatientTarget)
+		Traductions
+			Traduction
+				Libellé=A07. Patient target
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Medical care place
+		Variable=GI_PlaceOfMedicalCare
+		Type=1
+		NbModalités=5
+		Modalités=Clinic ; HBC ; Outreach ; Hospital ; Specialist
+		Pondérations= 0
+		Consigne=Mandatory response.
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				Libellé=Medical care place
+				Modalités=Clinic ; HBC ; mod-FR-5 ; Hospital ; Specialist ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Visit date
+		Variable=GI_VisitDate
+		Type=8
+		MinNombre=32872
+		Format=jj/mm/aaaa
+		Consigne=The response must be more than 01/01/1990.€Mandatory response.
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				Libellé=Visit date
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Marital Status
+		Variable=A07a_MaritalStatus
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LIST_A4_MaritalStatus.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=Marital Status
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Current work place
+		Variable=B04_CurrentWorkPlace
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LIST_A7_WorkPlace.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=B06. Current work place
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Height
+		Variable=A06a_Height
+		Type=4
+		NbDécimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Basic=If (Not A06a_Height=0) and (C012_LbOrKg="Kg") then€C06_BMI=C011_BW/(A06a_Height*A06a_Height)€elseif (Not A06a_Height=0) and (C012_LbOrKg="Lb") then€C06_BMI=(C011_BW/2.2)/(A06a_Height*A06a_Height)€endif€€
+		Traductions
+			Traduction
+				Libellé=Height
+				Modalités=val = 32767 ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=BW
+		Variable=GI_BW
+		Type=4
+		NbDécimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Basic=Height_m=A06a_Height/100€Height_m2=Height_m*Height_m€If (Not A06a_Height=0) and (C012_LbOrKg="Kg") then€C06_BMI=C011_BW/Height_m2€elseif (Not A06a_Height=0) and (C012_LbOrKg="Lb") then€C06_BMI=(C011_BW/2.2)/Height_m2€endif€€
+		Traductions
+			Traduction
+				Libellé=C01. BW
+				Modalités=val = 32767 ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Lb / Kg
+		Variable=GI_LbOrKg
+		Type=1
+		NbModalités=2
+		Modalités=Lb ; Kg
+		Pondérations= 0
+		Plan=1
+		Attributs=33056
+		VariableAutomatique=Identique
+		Traductions
+			Traduction
+				Libellé=C012. Lb / Kg
+				Modalités=Lb ; Kg ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=BMI
+		Variable=GI_BMI
+		Type=4
+		NbDécimales=2
+		TypeNombre=4
+		Format=########
+		Plan=1
+		Attributs=33056
+		Basic=Height_m = A06a_Height / 100€Height_m2 = Height_m * Height_m€If ( Not A06a_Height = 0) And (GI_LbOrKg = "Kg") Then€    GI_BMI = GI_BW / Height_m2€ElseIf ( Not A06a_Height = 0) And (GI_LbOrKg = "Lb") Then€    GI_BMI = (GI_BW / 2.2) / Height_m2€EndIf€€
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				Libellé=C06. BMI
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Temperature
+		Variable=GI_Temperature
+		Type=4
+		NbDécimales=2
+		TypeNombre=4
+		Format=####
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=C05. Temperature
+				Modalités=Less than - ; From - to - ; From - to - ; From - to - ; From - to - ; From - to - ; - and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=°C/F
+		Variable=GI_CorF
+		Type=1
+		NbModalités=2
+		Modalités=°C ; °F
+		Pondérations= 0
+		Plan=1
+		Attributs=33056
+		VariableAutomatique=Identique
+		Traductions
+			Traduction
+				Libellé=C051. °C/F
+				Modalités=°C ; °F ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=BP
+		Variable=GI_BP
+		Type=4
+		NbDécimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=C04. BP
+				Modalités=val = 32767 ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=BP
+		Variable=GI_BP1
+		Type=4
+		NbDécimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=C042. BP
+				Modalités=val = 32767 ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=RR
+		Variable=GI_RR
+		Type=4
+		NbDécimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=C02. RR
+				Modalités=val = 32767 ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Pulse
+		Variable=GI_Pulse
+		Type=4
+		NbDécimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=C03. Pulse
+				Modalités=val = 32767 ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Reproductive health
+		Variable=GI_ReproductiveHealth
+		Type=1
+		NbModalités=2
+		Modalités=Patient is pregnant ; Patient is breastfeeding
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=D011. Reproductive health
+				Modalités=Patient is pregnant ; Patient is breastfeeding ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Contraception
+		Variable=GI_Contraception
+		Type=1
+		NbModalités=2
+		Modalités=Yes ; No
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=D02. Contraception
+				Modalités=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Type of contraception
+		Variable=GI_ContraceptionType
+		Type=2
+		NbModalités=6
+		Modalités=Condoms ; Oral contraceptive pills ; Diaphragm/cervical cap ; Injectable/implanted hormones ; Tubal ligation/hysterectomy ; Other
+		MaxRéponses=6
+		Pondérations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				Libellé=D022. Type of contraception
+				Modalités=Condoms ; Oral contraceptive pills ; Diaphragm/cervical cap ; Injectable/implanted hormones ; Tubal ligation/hysterectomy ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=if other, specify
+		Variable=GI_OtherContraceptionType
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=D023. if other, specify
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Drug taken on
+		Variable=GI_DrugTakenOn
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=D024. Drug taken on
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=LMP date
+		Variable=GI_LMPdate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=D031. LMP date
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Parity
+		Variable=GI_Parity
+		Type=4
+		NbDécimales=2
+		TypeNombre=2
+		Format=#####
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=Parity
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Condom use for last sex
+		Variable=GI_CondomUseForLastSex
+		Type=1
+		NbModalités=2
+		Modalités=Yes ; No
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=F01. Condom use for last sex
+				Modalités=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Number clients last working day
+		Variable=GI_NumberClientsLastWorkingDay
+		Type=4
+		NbDécimales=2
+		TypeNombre=2
+		Format=#####
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=F03. Number clients last working day
+				Modalités=val = 32767 ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Did you share needle/syringe in last injection?
+		Variable=GI_ShareNeedleOrSyringeInLast
+		Type=1
+		NbModalités=2
+		Modalités=Yes ; No
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=F02. Did you share needle/syringe in last
+				Modalités=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Did you share needle/syringe in last month?
+		Variable=GI_ShareNeedleOrSyringeInLastMonth
+		Type=1
+		NbModalités=2
+		Modalités=Yes ; No
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=Did you share needle/syringe in last month?
+				Modalités=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Did you share needle/syringe in last 6 months?
+		Variable=GI_ShareNeedleOrSyringeInLast6Months
+		Type=1
+		NbModalités=2
+		Modalités=Yes ; No
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=Did you share needle/syringe in last 6 months?
+				Modalités=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Remarks
+		Variable=GI_Remarks
+		Type=6
+		NbLignes=5
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=D04. Remarks
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Verify patient
+		Variable=Verify
+		Type=4
+		NbDécimales=2
+		TypeNombre=2
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=Verify patient
+				Modalités=val = 32767 ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Last registration date
+		Variable=LastRegistrationDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=33056
+		VariableAutomatique=DateEnreg
+		Traductions
+			Traduction
+				Libellé=Last registration date
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=GI ART Key
+		Variable=Key
+		Type=6
+		NbLignes=2
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		OptionsBasic=1
+		Basic=Key = MDMcode & GI_VisitDate
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				Libellé=test
+			Fin
+		Fin
+	Fin
+Fin
+Titres
+	Titre
+		Type=0
+		Libellé=A. SOCIO-DEMOGRAPHIC DATA
+		Première=1
+		Traductions
+			Traduction
+				Libellé=A. SOCIO-DEMOGRAPHIC DATA
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		Libellé=Vital sign
+		Première=12
+		Traductions
+			Traduction
+				Libellé=C. Vital sign
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		Libellé=Reproductive health
+		Première=22
+		Traductions
+			Traduction
+				Libellé=D. Reproductive health
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		Libellé=Contraception
+		Première=23
+		Traductions
+			Traduction
+				Libellé=D02. Contraception
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		Libellé=LMP
+		Première=27
+		Traductions
+			Traduction
+				Libellé=D03. LMP
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		Libellé=Behaviour
+		Première=29
+		Traductions
+			Traduction
+				Libellé=F. Behaviour
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		Libellé=System Items
+		Première=35
+		Traductions
+			Traduction
+				Libellé=System Items
+			Fin
+		Fin
+	Fin
+Fin
+Options
+	GroupesActifs=1
+	RenvoisActifs=1
+	ControlesActifs=1
+Fin

@@ -1,0 +1,4375 @@
+version: 5000
+headers:
+  history: >-
+    5.0.0.81(Médecins du Mon;5.1.0.2(Médecins du Mond;5.0.0.64(Médecins du
+    Mon;5.1.0.4(MEDECINS DU MOND;
+  language: en
+  title: ART VISIT
+  pannelStage: 20
+  translations:
+    - language: fr
+      title: ART VISIT
+questions:
+  - label: MDM code (Patient ID)
+    variable: MDMcode
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: MDM code (Patient ID)
+  - label: Registration date
+    variable: A00_RegistrationDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: A00. Registration date
+  - label: Name
+    variable: A01_PatientName
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: A01. Name
+  - label: Father’s name
+    variable: A02_FatherName
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: A02. Father’s name
+  - label: Sex
+    variable: A03_Sexe
+    type: options
+    nbOptions: 2
+    options:
+      - Male
+      - Female
+    weights: 0
+    plan: true
+    attributes: 32
+    vb: A03_Sex = A03_Sexe
+    translations:
+      - label: A03. Sexe
+        options:
+          - Male
+          - Female
+  - label: Date of birth
+    variable: A041_DateOfBirth
+    type: date
+    min: 3652
+    format: jj/mm/aaaa
+    instructions: The response must be more than 01/01/1910.
+    plan: true
+    attributes: 160
+    translations:
+      - label: A04. Date of birth
+  - label: Age
+    variable: A05_Age
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    plan: true
+    attributes: 32
+    translations:
+      - label: A05. Age
+        options:
+          - Less than 8
+          - From 8 to 10
+          - From 10 to 12
+          - From 12 to 14
+          - From 14 to 16
+          - From 16 to 18
+          - 18 and more
+  - label: Patient target
+    variable: A07_PatientTarget
+    type: code
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: A07. Patient target
+  - label: Visit date
+    variable: ART_VisitDate
+    type: date
+    min: 32872
+    format: jj/mm/aaaa
+    instructions: "The response must be more than 01/01/1990.€\x81Mandatory response."
+    plan: true
+    attributes: 161
+    translations:
+      - label: Visit date
+  - label: MDM staff
+    variable: ART_MDMstaff
+    type: code
+    codesFile: Sys/Dic_Lists/LIST_A2_MDMstaff.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: MDM staff
+  - label: PLH New Patient
+    variable: ART_PLHNewPatient
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    instructions: Mandatory response.
+    plan: true
+    attributes: 161
+    translations:
+      - label: A042. Date of birth estimated
+        options:
+          - Date of birth estimated
+          - mod-FR-2
+  - label: ART New Patient
+    variable: ART_ARTNewPatient
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    instructions: Mandatory response.
+    plan: true
+    attributes: 161
+    translations:
+      - label: Initial visit
+        options:
+          - 'Yes'
+          - 'No'
+  - label: ART Treatment
+    variable: ART_ARTTreatment
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    instructions: Mandatory response.
+    plan: true
+    attributes: 161
+    translations:
+      - label: A042. Date of birth estimated
+        options:
+          - Date of birth estimated
+          - mod-FR-2
+  - label: Patient partner has been tested
+    variable: ART_PatientPartnerTested
+    type: options
+    nbOptions: 1
+    options:
+      - 'Yes'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: G01. Patient partner has been tested
+        options:
+          - 'Yes'
+  - label: Patient partner test status
+    variable: ART_PatientPartnerTestStatus
+    type: options
+    nbOptions: 3
+    options:
+      - Positive
+      - Negative
+      - Unknown
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: G02. Patient partner test status
+        options:
+          - Positive
+          - Negative
+          - Unknown
+  - label: Patient has disclosed status
+    variable: ART_PatientDisclosedStatus
+    type: options
+    nbOptions: 1
+    options:
+      - 'Yes'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: G03. Patient has disclosed status
+        options:
+          - 'Yes'
+  - label: Status disclosed by
+    variable: ART_StatusDisclosedBy
+    type: multipleOptions
+    nbOptions: 5
+    options:
+      - Spouse/Partner
+      - Friend
+      - Child
+      - Other family member
+      - Other
+    maxResponses: 5
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: G04. Status disclosed by
+        options:
+          - Spouse/Partner
+          - Friend
+          - Child
+          - Other family member
+          - Other
+  - label: 'If by other, specify'
+    variable: ART_StatusDisclosedByOther
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'G041. If by other, specify'
+  - label: Patient is taking medicines
+    variable: ART_PatientTakingMedicines
+    type: options
+    nbOptions: 1
+    options:
+      - 'Yes'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: H01. Patient is taking medicines
+        options:
+          - 'Yes'
+  - label: Which medicines?
+    variable: ART_PatientTakingFollowingMedicines
+    type: multipleOptions
+    nbOptions: 4
+    options:
+      - Anti-Retrovirals
+      - Antibiotics
+      - Anti-Tuberculosis
+      - Other
+    maxResponses: 4
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: H02. Which medicines?
+        options:
+          - Anti-Retrovirals
+          - Antibiotics
+          - Anti-Tuberculosis
+          - Other
+  - label: Medicine taken
+    variable: ART_AntiRetro_MedicineTaken1
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/ARV
+      Medicine_v2014.dic
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: I011. Medicine taken
+  - label: Medicine taken
+    variable: ART_AntiRetro_MedicineTaken2
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/ARV
+      Medicine_v2014.dic
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: I011. Medicine taken
+  - label: Medicine taken
+    variable: ART_AntiRetro_MedicineTaken3
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/ARV
+      Medicine_v2014.dic
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: I011. Medicine taken
+  - label: Medicine taken
+    variable: ART_AntiRetro_MedicineTaken4
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/ARV
+      Medicine_v2014.dic
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: I011. Medicine taken
+  - label: MedicineTaken
+    variable: ART_AntiRetro_MedicineTaken5
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/ARV
+      Medicine_v2014.dic
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: MedicineTaken4
+  - label: Medicine code
+    variable: ART_AntiBio_MedicineCode1
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: R0111. Medicine code
+  - label: Medicine code
+    variable: ART_AntiBio_MedicineCode2
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: R0111. Medicine code
+  - label: Medicine code
+    variable: ART_AntiBio_MedicineCode3
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: R0111. Medicine code
+  - label: Medicine code
+    variable: ART_AntiBio_MedicineCode4
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: R0111. Medicine code
+  - label: Medicine code
+    variable: ART_AntiBio_MedicineCode5
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: R0111. Medicine code
+  - label: Medicine code
+    variable: ART_AntiTB_MedicineCode1
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Medicines_List.txt
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: R0111. Medicine code
+  - label: Medicine code
+    variable: ART_AntiTB_MedicineCode2
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Medicines_List.txt
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: R0111. Medicine code
+  - label: Medicine code
+    variable: ART_AntiTB_MedicineCode3
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Medicines_List.txt
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: R0111. Medicine code
+  - label: MedicineCode8
+    variable: ART_AntiTB_MedicineCode4
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Medicines_List.txt
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: MedicineCode8
+  - label: MedicineCode9
+    variable: ART_AntiTB_MedicineCode5
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Medicines_List.txt
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: MedicineCode9
+  - label: Other
+    variable: ART_PatientTakingOther
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: H026. Other
+  - label: Comment
+    variable: ART_MedicationsComment
+    type: open
+    nbLines: 2
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: H03. Comment
+  - label: Patient has taken ARVs before
+    variable: ART_PatientTakenARVsBefore
+    type: multipleOptions
+    nbOptions: 3
+    options:
+      - None
+      - For PMTCT
+      - For HIV/AIDS treatment
+    maxResponses: 3
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: I01. Patient has taken ARVs before
+        options:
+          - None
+          - For PMTCT
+          - For HIV/AIDS treatment
+  - label: Medicine taken
+    variable: ART_MedicineTaken1
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/ARV
+      Medicine_v2014.dic
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: I011. Medicine taken
+  - label: Medecine name
+    variable: ART_MedicineName1
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: "If Not ART_MedicineTaken1 = \"OTHERS\" Then€\x81    ART_MedicineName1 = ART_MedicineTaken1.CatCode(1)€\x81EndIf"
+    autoVariable: Basic
+    translations:
+      - label: I011_Medecine name
+  - label: Start date
+    variable: ART_StartDate1
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: I012. Start date
+  - label: Stop date
+    variable: ART_StopDate1
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: I013. Stop date
+  - label: Interrupted
+    variable: ART_Interrupted1
+    type: options
+    nbOptions: 1
+    options:
+      - 'Yes'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: I014. Interrupted
+        options:
+          - 'Yes'
+  - label: Medicine taken
+    variable: ART_MedicineTaken2
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/ARV
+      Medicine_v2014.dic
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: I021. Medicine taken
+  - label: Medicine name
+    variable: ART_MedicineName2
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: "If Not ART_MedicineTaken2 = \"OTHERS\" Then€\x81    ART_MedicineName2 = ART_MedicineTaken2.CatCode(1)€\x81EndIf"
+    autoVariable: Basic
+    translations:
+      - label: I021_Medicine name
+  - label: Start date
+    variable: ART_StartDate2
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: I022. Start date
+  - label: Stop date
+    variable: ART_StopDate2
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: I023. Stop date
+  - label: Interrupted
+    variable: ART_Interrupted2
+    type: options
+    nbOptions: 1
+    options:
+      - 'Yes'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: I024. Interrupted
+        options:
+          - 'Yes'
+  - label: Medicine taken
+    variable: ART_MedicineTaken3
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/ARV
+      Medicine_v2014.dic
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: I031. Medicine taken
+  - label: Medicine name
+    variable: ART_MedicineName3
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: "If Not ART_MedicineTaken3 = \"OTHERS\" Then€\x81    ART_MedicineName3 = ART_MedicineTaken3.CatCode(1)€\x81EndIf"
+    autoVariable: Basic
+    translations:
+      - label: I031. Medicine name
+  - label: Start date
+    variable: ART_StartDate3
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: I032. Start date
+  - label: Stop date
+    variable: ART_StopDate3
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: I033. Stop date
+  - label: Interrupted
+    variable: ART_Interrupted3
+    type: options
+    nbOptions: 1
+    options:
+      - 'Yes'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: I034. Interrupted
+        options:
+          - 'Yes'
+  - label: Medicine taken
+    variable: ART_MedicineTaken4
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/ARV
+      Medicine_v2014.dic
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: I041. Medicine taken
+  - label: Medicine name
+    variable: ART_MedicineName4
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: "If Not ART_MedicineTaken4 = \"OTHERS\" Then€\x81    ART_MedicineName4 = ART_MedicineTaken4.CatCode(1)€\x81EndIf"
+    autoVariable: Basic
+    translations:
+      - label: I041. Medicine name
+  - label: Start date
+    variable: ART_StartDate4
+    type: date
+    min: 3652
+    format: jj/mm/aaaa
+    instructions: The response must be more than 01/01/1910.
+    plan: true
+    attributes: 160
+    translations:
+      - label: I042. Start date
+  - label: Stop date
+    variable: ART_StopDate4
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: I043. Stop date
+  - label: Interrupted
+    variable: ART_Interrupted4
+    type: options
+    nbOptions: 1
+    options:
+      - 'Yes'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: I044. Interrupted
+        options:
+          - 'Yes'
+  - label: MedicineTaken
+    variable: ART_MedicineTaken5
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/ARV
+      Medicine_v2014.dic
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: I051. MedicineTaken
+  - label: Medicine name
+    variable: ART_MedicineName5
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: "If Not ART_MedicineTaken5 = \"OTHERS\" Then€\x81    ART_MedicineName5 = ART_MedicineTaken5.CatCode(1)€\x81EndIf"
+    autoVariable: Basic
+    translations:
+      - label: I051. Medicine name
+  - label: Start date
+    variable: ART_StartDate5
+    type: date
+    min: 3652
+    format: jj/mm/aaaa
+    instructions: The response must be more than 01/01/1910.
+    plan: true
+    attributes: 160
+    translations:
+      - label: I052. Start date
+  - label: Stop date
+    variable: ART_StopDate5
+    type: date
+    min: 3652
+    format: jj/mm/aaaa
+    instructions: The response must be more than 01/01/1910.
+    plan: true
+    attributes: 160
+    translations:
+      - label: I053. Stop date
+  - label: Interrupted
+    variable: ART_Interrupted5
+    type: options
+    nbOptions: 1
+    options:
+      - 'Yes'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: I054. Interrupted
+        options:
+          - 'Yes'
+  - label: Comment
+    variable: ART_ARVComment
+    type: open
+    nbLines: 5
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: I055. ARVComment
+  - label: Comment
+    variable: ART_MedicalHistoryComment
+    type: open
+    nbLines: 5
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: J04. Comment
+  - label: TB history
+    variable: ART_TBhistory
+    type: options
+    nbOptions: 1
+    options:
+      - Patient has been treated for TB before
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: K01. TB history
+        options:
+          - Patient has been treated for TB before
+  - label: Previous TB diagnosis
+    variable: ART_PreviousTBdiagnosis
+    type: multipleOptions
+    nbOptions: 2
+    options:
+      - Extrapulmonary
+      - Pulmonary
+    maxResponses: 2
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: K021. Previous TB diagnosis
+        options:
+          - Extrapulmonary
+          - Pulmonary
+  - label: Year of Extrapulmonary episode
+    variable: ART_YearOfExtrapulmonaryEpisode
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    min: 1910
+    max: 2020
+    format: '#####'
+    instructions: The response must be between 1910 and 2020.
+    plan: true
+    attributes: 160
+    translations:
+      - label: K022. Year of Extrapulmonary episode
+        options:
+          - val = 32767
+  - label: Year of Pulmonary episode
+    variable: ART_YearOfPulmonaryEpisode
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '#####'
+    plan: true
+    attributes: 32
+    translations:
+      - label: K023. Year of Pulmonary episode
+        options:
+          - val = 32767
+  - label: Comments
+    variable: ART_TBhistoryComments
+    type: open
+    nbLines: 2
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: K06. Comments
+  - label: TB related symptoms
+    variable: ART_TBRelatedSymptoms_Opt
+    type: options
+    nbOptions: 3
+    options:
+      - 'Yes'
+      - 'No'
+      - Pt don't come
+    weights: 0
+    instructions: Mandatory response.
+    plan: true
+    attributes: 161
+    translations:
+      - label: TB Related Symptoms
+        options:
+          - 'Yes'
+          - 'No'
+          - mod-FR-3
+  - label: TB Related Symptoms
+    variable: ART_TBRelatedSymptoms
+    type: multipleOptions
+    nbOptions: 7
+    options:
+      - Fever
+      - Night sweats
+      - Appetite loss
+      - Weight loss
+      - Cough
+      - Haemoptysis
+      - Notice of any abdominal or cervical lump
+    maxResponses: 7
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: TB Related Symptoms
+        options:
+          - Fever
+          - Night sweats
+          - Appetite loss
+          - Weight loss
+          - Cough
+          - Haemoptysis
+          - Notice of any abdominal or cervical lump
+  - label: Fever
+    variable: ART_TBRelated_Fever
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Fever
+  - label: Night sweats
+    variable: ART_TBRelated_NightSweats
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Night sweats
+  - label: Appetite loss
+    variable: ART_TBRelated_AppetiteLoss
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Appetite loss
+  - label: Weight loss
+    variable: ART_TBRelated_WeightLoss
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Weight loss
+  - label: Night sweats
+    variable: ART_TBRelated_Cough
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Night sweats
+  - label: Appetite loss
+    variable: ART_TBRelated_Haemoptysis
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Appetite loss
+  - label: Weight loss
+    variable: ART_TBRelated_Notice
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Weight loss
+  - label: Constitutional
+    variable: ART_Constitutional
+    type: multipleOptions
+    nbOptions: 3
+    options:
+      - Fatigue
+      - Pain
+      - Other
+    maxResponses: 3
+    weights: 0
+    instructions: "More than one response can be selected.€\x81Go to '363-ART_R011_Allergy' if ART_L003_Cured = \"Yes\"except ART_L003_Cured = \"No\""
+    plan: true
+    attributes: 160
+    translations:
+      - label: M011. Constitutional
+        options:
+          - Fatigue
+          - mod-FR-10
+          - Other
+  - label: Fatigue
+    variable: ART_Consti_Fatigue
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Fatigue
+  - label: Pain
+    variable: ART_Consti_Pain
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Pain
+  - label: Other
+    variable: ART_Consti_Other
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'M012. if other, specify'
+  - label: Gastrointestinal
+    variable: ART_Gastrointestinal
+    type: multipleOptions
+    nbOptions: 6
+    options:
+      - Abdominal Pain
+      - Nausea
+      - Vomiting
+      - Dysphagia
+      - Diarrhea
+      - Other
+    maxResponses: 6
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: M031. Gastrointestinal
+        options:
+          - mod-FR-5
+          - Nausea and/or vomiting
+          - mod-FR-6
+          - mod-FR-4
+          - Diarrhea
+          - Other
+  - label: Abdominal Pain
+    variable: ART_Gastro_AbdominalPain
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Abdominal Pain
+  - label: Nausea
+    variable: ART_Gastro_Nausea
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Nausea
+  - label: Vomiting
+    variable: ART_Gastro_Vomiting
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Vomiting
+  - label: Dysphagia
+    variable: ART_Gastro_Dysphagia
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Dysphagia
+  - label: Diarrhea
+    variable: ART_Gastro_Diarrhea
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Diarrhea
+  - label: Other
+    variable: ART_Gastro_Other
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'M032. If other, specify'
+  - label: Respiratory & CVs
+    variable: ART_Respiratory&CVs
+    type: multipleOptions
+    nbOptions: 4
+    options:
+      - Difficulty breathing
+      - Chest pain
+      - Palpitation
+      - Other
+    maxResponses: 4
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: M021. Respiratory
+        options:
+          - Difficulty breathing-SOB
+          - Other
+          - mod-FR-6
+          - mod-FR-7
+  - label: Difficultly breathing
+    variable: ART_Respi_DifficultlyBreathing
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Difficultly breathing
+  - label: Chest Pain
+    variable: ART_Respi_ChestPain
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Chest Pain
+  - label: Palpitation
+    variable: ART_Respi_Palpitation
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Palpitation
+  - label: Other
+    variable: ART_Respi_Other
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'M022. If other, specify'
+  - label: Neurological
+    variable: ART_Neurological
+    type: multipleOptions
+    nbOptions: 6
+    options:
+      - Headache
+      - Confusion
+      - Memory problems
+      - Tingling and Numbness of limbs
+      - Insomnia
+      - Yawning
+    maxResponses: 6
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: M041. Neurological
+        options:
+          - Headache
+          - Confusion
+          - Memory problems
+          - Numbness/Tingling in legs/feet
+          - mod-FR-6
+          - Other
+  - label: Headache
+    variable: ART_Neuro_Headache
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Headache
+  - label: Confusion
+    variable: ART_Neuro_Confusion
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Confusion
+  - label: Memory problems
+    variable: ART_Neuro_MemoryProblems
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Memory problems
+  - label: Tingling
+    variable: ART_Neuro_Tingling
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Tingling
+  - label: Insomnia
+    variable: ART_Neuro_Insomnia
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Insomnia
+  - label: Yawning
+    variable: ART_Neuro_Yawning
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Yawning
+  - label: Skin Manifestation
+    variable: ART_SkinManifestation
+    type: multipleOptions
+    nbOptions: 4
+    options:
+      - Itchiness
+      - Rash
+      - Lump/Nodules
+      - Other
+    maxResponses: 4
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: M081. Psychiatric
+        options:
+          - mod-FR-7
+          - Cognitive functioning
+          - Anxiety
+          - Other
+  - label: Itchiness
+    variable: ART_Skin_Itchiness
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Itchiness
+  - label: Rash
+    variable: ART_Skin_Rash
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Rash
+  - label: Lump
+    variable: ART_Skin_Lump
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Lump
+  - label: Other
+    variable: ART_Skin_Other
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'M082. If other, specify'
+  - label: Additional comments
+    variable: ART_SymptomsComments
+    type: open
+    nbLines: 3
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: M09. Additional comments
+  - label: Eye
+    variable: ART_Eye
+    type: options
+    nbOptions: 3
+    options:
+      - Normal
+      - Abnormal
+      - Not done
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: N12. Other2
+        options:
+          - Normal
+          - Abnormal
+          - Not done
+  - label: Comment (specify)
+    variable: ART_EyeComment
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: N122. Comment (specify)
+  - label: 'Ears, Nose'
+    variable: ART_EarsNose
+    type: options
+    nbOptions: 3
+    options:
+      - Normal
+      - Abnormal
+      - Not done
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'N02. Ears, Nose'
+        options:
+          - Normal
+          - Abnormal
+          - Not done
+  - label: Comment (if abnormal describe)
+    variable: ART_EarsNoseComment
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: N022. Comment (if abnormal describe)
+  - label: Oral
+    variable: ART_Oral
+    type: options
+    nbOptions: 3
+    options:
+      - Normal
+      - Abnormal
+      - Not done
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: N01. Oral
+        options:
+          - Normal
+          - Abnormal
+          - Not done
+  - label: Comment (if abnormal describe)
+    variable: ART_OralComment
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: N012. Comment (if abnormal describe)
+  - label: Lymph nodes
+    variable: ART_LymphNodes
+    type: options
+    nbOptions: 3
+    options:
+      - Normal
+      - Abnormal
+      - Not done
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: N03. Lymph nodes
+        options:
+          - Normal
+          - Abnormal
+          - Not done
+  - label: Comment (if abnormal describe)
+    variable: ART_LymphNodesComment
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: N032. Comment (if abnormal describe)
+  - label: Heart
+    variable: ART_Heart
+    type: options
+    nbOptions: 3
+    options:
+      - Normal
+      - Abnormal
+      - Not done
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: N04. Heart
+        options:
+          - Normal
+          - Abnormal
+          - Not done
+  - label: Comment (if abnormal describe)
+    variable: ART_HeartComment
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: N042. Comment (if abnormal describe)
+  - label: Lungs
+    variable: ART_Lungs
+    type: options
+    nbOptions: 3
+    options:
+      - Normal
+      - Abnormal
+      - Not done
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: N05. Lungs
+        options:
+          - Normal
+          - Abnormal
+          - Not done
+  - label: Comment (if abnormal describe)
+    variable: ART_LungsComment
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: N052. Comment (if abnormal describe)
+  - label: Abdomen
+    variable: ART_Abdomen
+    type: options
+    nbOptions: 3
+    options:
+      - Normal
+      - Abnormal
+      - Not done
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: N06. Abdomen
+        options:
+          - Normal
+          - Abnormal
+          - Not done
+  - label: Comment (if abnormal describe)
+    variable: ART_AbdomenComment
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: N062. Comment (if abnormal describe)
+  - label: Neurological
+    variable: ART_PExam_Neurological
+    type: options
+    nbOptions: 3
+    options:
+      - Normal
+      - Abnormal
+      - Not done
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: N10. Neurological
+        options:
+          - Normal
+          - Abnormal
+          - Not done
+  - label: Comment (if abnormal describe)
+    variable: ART_NeurologicalComment
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: N102. Comment (if abnormal describe)
+  - label: Skin
+    variable: ART_Skin
+    type: options
+    nbOptions: 3
+    options:
+      - Normal
+      - Abnormal
+      - Not done
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: N07. Skin
+        options:
+          - Normal
+          - Abnormal
+          - Not done
+  - label: Comment (if abnormal describe)
+    variable: ART_SkinComment
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: N072. Comment (if abnormal describe)
+  - label: Additional comments
+    variable: ART_PhysicalExamComments
+    type: open
+    nbLines: 5
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: N13. Additional comments
+  - label: WHO Stages For
+    variable: ART_Child_or_Adult
+    type: options
+    nbOptions: 2
+    options:
+      - Child
+      - Adult
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: O0. Stage
+        options:
+          - Stage 1
+          - Stage 2
+  - label: Stage
+    variable: ART_Adult_Stage
+    type: options
+    nbOptions: 4
+    options:
+      - Stage 1
+      - Stage 2
+      - Stage 3
+      - Stage 4
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: O0. Stage
+        options:
+          - Stage 1
+          - Stage 2
+          - Stage 3
+          - Stage 4
+  - label: Stage 1
+    variable: ART_Adult_Stage1
+    type: multipleOptions
+    nbOptions: 4
+    options:
+      - Asymptomatic
+      - Generalized Lymphadenopathy
+      - Hepatosplenomegaly
+      - Other
+    maxResponses: 4
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: O1. Stage 1
+        options:
+          - Asymptomatic
+          - Generalized Lymphadenopathy
+          - Hepatosplenomegaly
+          - Other
+  - label: Stage 2
+    variable: ART_Adult_Stage2
+    type: multipleOptions
+    nbOptions: 13
+    options:
+      - Papular pruritic eruptions
+      - Seborrhoeic dermatitis
+      - Fungal nail infections
+      - Angular chelitis
+      - Lineal gingival erythema (LGE)
+      - >-
+        Extensive human papilloma virus infection or molluscum infection (>5%
+        body area)
+      - Recurrent oral ulcerations (2 or > episodes in 6 months)
+      - Parotid enlargement
+      - Herpes Zoster (2 or > episodes in 6 months)
+      - >-
+        Recurrent of chronic upper RTIs (otitis media, sinusitis 2 or > episodes
+        in any 6 months period)
+      - Loss of weight lower than 10%
+      - Minor mucocutaneous manifestations
+      - Other
+    maxResponses: 13
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: O2. Stage 2
+        options:
+          - Papular pruritic eruptions
+          - Seborrhoeic dermatitis
+          - Fungal nail infections
+          - Angular chelitis
+          - Lineal gingival erythema (LGE)
+          - >-
+            Extensive human papilloma virus infection or molluscum infection
+            (>5% body area)
+          - Recurrent oral ulcerations (2 or > episodes in 6 months)
+          - Parotid enlargement
+          - Herpes Zoster (2 or > episodes in 6 months)
+          - >-
+            Recurrent of chronic upper RTIs (otitis media, sinusitis 2 or >
+            episodes in any 6 months period)
+          - Loss of weight lower than 10%
+          - Minor mucocutaneous manifestations
+          - Other
+  - label: Stage 3
+    variable: ART_Adult_Stage3
+    type: multipleOptions
+    nbOptions: 19
+    options:
+      - >-
+        Unexplained low weight for age/ low height for age/ low weight for
+        height
+      - Unexplained persistant diarrhea (> 14 days)
+      - 'Unexplained persistant fever (intermittent or constant, > 1 month)'
+      - Oral candidiasis (outside neonatal period)
+      - Oral hairy leukoplakia
+      - 'Tuberculous lymphadenopathy (axill, cerv, or inguinal)'
+      - >-
+        Severe recurrent presumed bacterial pneumonia (2 or > episodes in 6
+        months)
+      - Acute necrotizing ulcerative gingivitis/parodentitis
+      - Lymphoid interstitial pneumonia (LIP)
+      - 'Unexplained anaemia (<8gm/dl), neutropenia (<1000/mm3) for > 1 month'
+      - HIV related cardiomyopathy
+      - HIV related nephropathy
+      - In bed less than 50% of normal daytime due to sickness
+      - Loss of weight higher than 10%
+      - Chronic diarrhea for more than 1 month
+      - >-
+        Vulvovaginal candidiasis for more than 1 month or poorly responsive to
+        therapy
+      - Pulmonary tuberculosis within previous 12 months
+      - Other severe bacterial infections (Myositis...)
+      - Other
+    maxResponses: 19
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: O3. Stage 3
+        options:
+          - >-
+            Unexplained low weight for age/ low height for age/ low weight for
+            height
+          - Unexplained persistant diarrhea (> 14 days)
+          - 'Unexplained persistant fever (intermittent or constant, > 1 month)'
+          - Oral candidiasis (outside neonatal period)
+          - Oral hairy leukoplakia
+          - 'Tuberculous lymphadenopathy (axill, cerv, or inguinal)'
+          - >-
+            Severe recurrent presumed bacterial pneumonia (2 or > episodes in 6
+            months)
+          - Acute necrotizing ulcerative gingivitis/parodentitis
+          - Lymphoid interstitial pneumonia (LIP)
+          - 'Unexplained anaemia (<8gm/dl), neutropenia (<1000/mm3) for > 1 month'
+          - HIV related cardiomyopathy
+          - HIV related nephropathy
+          - In bed less than 50% of normal daytime due to sickness
+          - Loss of weight higher than 10%
+          - Chronic diarrhea for more than 1 month
+          - >-
+            Vulvovaginal candidiasis for more than 1 month or poorly responsive
+            to therapy
+          - Pulmonary tuberculosis within previous 12 months
+          - Other severe bacterial infections (Myositis...)
+          - Other
+  - label: Stage 4
+    variable: ART_Adult_Stage4
+    type: multipleOptions
+    nbOptions: 29
+    options:
+      - Unexplained severe wasting or severe malnutrition
+      - Pneumocystic pneumonia
+      - Recurrent severe presumed bacterial infections (*)
+      - >-
+        Chronic orolabial or cutaneous herpes simplex infection (> 1 month
+        duration)
+      - Extrapulmonary TB (excluding lymphadenitis)
+      - Karposi's sarcoma
+      - Oesophageal candidiasis
+      - CMV retinitis
+      - Cerebral toxoplasmosis
+      - >-
+        Any disseminated endemic mycosis (e.g. extra-pulmonary cryptococcosis,
+        penicilliosis)
+      - Disseminated mycobacterial disease other than TB (MAC)
+      - Recurrent non-typhoidal salmonella septicaemia
+      - Progressive multifocal leucoencephalopathy (PML)
+      - HIV encephalopathy
+      - In bed more than 50% of norma daytime due to sickness
+      - Wasting syndrome
+      - Cryptococcosis extra pulmonary
+      - Pneumocystic carinii pneumonia
+      - 'Encephalopathy, dementia'
+      - Penicillium Marneffei infection
+      - 'Candidiasis of the oesophagus, trachea'
+      - Cryptosporiosis with diarrhea for more than 1 month
+      - Isosporidiosis with diarrhea for more than 1 month
+      - Lymphoma
+      - Herpes simplex mucocutaneous for more than 1 month or visceral
+      - Atypical mycobacteriosis disseminated
+      - Non-typhoid salmonella septicaemia
+      - Cytomegalovirus other than liver lymph node
+      - Other
+    maxResponses: 29
+    weights: 0
+    instructions: "More than one response can be selected.€\x81The question is only appropriate if ART_O0_Stage = \"Stage 4\""
+    plan: true
+    attributes: 160
+    translations:
+      - label: O4. Stage 4
+        options:
+          - Unexplained severe wasting or severe malnutrition
+          - Pneumocystic pneumonia
+          - Recurrent severe presumed bacterial infections (*)
+          - >-
+            Chronic orolabial or cutaneous herpes simplex infection (> 1 month
+            duration)
+          - Extrapulmonary TB (excluding lymphadenitis)
+          - Karposi's sarcoma
+          - Oesophageal candidiasis
+          - CMV retinitis
+          - Cerebral toxoplasmosis
+          - >-
+            Any disseminated endemic mycosis (e.g. extra-pulmonary
+            cryptococcosis, penicilliosis)
+          - Disseminated mycobacterial disease other than TB (MAC)
+          - Recurrent non-typhoidal salmonella septicaemia
+          - Progressive multifocal leucoencephalopathy (PML)
+          - HIV encephalopathy
+          - In bed more than 50% of norma daytime due to sickness
+          - Wasting syndrome
+          - Cryptococcosis extra pulmonary
+          - Pneumocystic carinii pneumonia
+          - 'Encephalopathy, dementia'
+          - Penicillium Marneffei infection
+          - 'Candidiasis of the oesophagus, trachea'
+          - Cryptosporiosis with diarrhea for more than 1 month
+          - Isosporidiosis with diarrhea for more than 1 month
+          - Lymphoma
+          - Herpes simplex mucocutaneous for more than 1 month or visceral
+          - Atypical mycobacteriosis disseminated
+          - Non-typhoid salmonella septicaemia
+          - Cytomegalovirus other than liver lymph node
+          - Other
+  - label: Child Stage
+    variable: ART_Child_Stage
+    type: options
+    nbOptions: 4
+    options:
+      - Stage 1
+      - Stage 2
+      - Stage 3
+      - Stage 4
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: O0. Stage
+        options:
+          - Stage 1
+          - Stage 2
+          - Stage 3
+          - Stage 4
+  - label: Child Stage 1
+    variable: ART_Child_Stage1
+    type: multipleOptions
+    nbOptions: 3
+    options:
+      - Asymptomatic
+      - Persistent generalized lymphadenopathy
+      - Other
+    maxResponses: 3
+    weights: 0
+    instructions: "More than one response can be selected.€\x81The question is only appropriate if ART_O0_ChStage = \"Stage 1\""
+    plan: true
+    attributes: 160
+    translations:
+      - label: O1. Stage 1
+        options:
+          - Asymptomatic
+          - Generalized Lymphadenopathy
+          - Other
+  - label: Child Stage 2
+    variable: ART_Child_Stage2
+    type: multipleOptions
+    nbOptions: 11
+    options:
+      - Unexplained persistent hepatosplenomegaly
+      - Papular pruritic eruptions
+      - Extensive wart virus infection
+      - Extensive molluscum contagiosum
+      - Recurrent oral ulcerations
+      - Unexplained persistent parotid enlargement
+      - Lineal gingival erythema
+      - Herpes zoster
+      - >-
+        Recurrent or chronic upper respiratory tract infections(otitis
+        media,otorrhoea,sinusitis,tonsillitis)
+      - Fungal nail infections
+      - Other
+    maxResponses: 11
+    weights: 0
+    instructions: "More than one response can be selected.€\x81The question is only appropriate if ART_O0_ChStage = \"Stage 2\""
+    plan: true
+    attributes: 160
+    translations:
+      - label: O2. Stage 2
+        options:
+          - Papular pruritic eruptions
+          - Seborrhoeic dermatitis
+          - Fungal nail infections
+          - Angular chelitis
+          - Lineal gingival erythema (LGE)
+          - >-
+            Extensive human papilloma virus infection or molluscum infection
+            (>5% body area)
+          - Recurrent oral ulcerations (2 or > episodes in 6 months)
+          - Parotid enlargement
+          - Herpes Zoster (2 or > episodes in 6 months)
+          - >-
+            Recurrent of chronic upper RTIs (otitis media, sinusitis 2 or >
+            episodes in any 6 months period)
+          - Loss of weight lower than 10%
+  - label: Child Stage 3
+    variable: ART_Child_Stage3
+    type: multipleOptions
+    nbOptions: 14
+    options:
+      - >-
+        Moderate unexplained malnutrition not adequately responding to standard
+        therapy
+      - Unexplained persistent diarrhoea (14 days or more)
+      - >-
+        Unexplained persistent fever (above 37.5 intermittent or constant, for
+        longer than one month)
+      - Persistent oral candida (outside first 6-8 weeks of life)
+      - Oral hairy leukoplakia
+      - Acute necrotizing ulcerative gingivitis/periodontitis
+      - Lymph node TB
+      - Pulmonary tuberculosis
+      - Severe recurrent persumed bacterial pneumonia
+      - Symptomatic lymphoid interstitial pneumonitis
+      - Chronic HIV-associated lung disease including bronchiectasis
+      - >-
+        Unexplained anaemie (<8g/dl), neutropaenia (<500/mm3) or chronic
+        thrombocytopeniz (<50 000/mm3)
+      - HIV-associated cardiomyopathy or HIV-associated nephropathy
+      - Other
+    maxResponses: 14
+    weights: 0
+    instructions: "More than one response can be selected.€\x81The question is only appropriate if ART_O0_ChStage = \"Stage 3\""
+    plan: true
+    attributes: 160
+    translations:
+      - label: O3. Stage 3
+        options:
+          - >-
+            Unexplained low weight for age/ low height for age/ low weight for
+            height
+          - 'Unexplained anaemia (<8gm/dl), neutropenia (<1000/mm3) for > 1 month'
+          - Unexplained persistant diarrhea (> 14 days)
+          - 'Unexplained persistant fever (intermittent or constant, > 1 month)'
+          - Oral candidiasis (outside neonatal period)
+          - Oral hairy leukoplakia
+          - 'Tuberculous lymphadenopathy (axill, cerv, or inguinal)'
+          - >-
+            Severe recurrent presumed bacterial pneumonia (2 or > episodes in 6
+            months)
+          - Acute necrotizing ulcerative gingivitis/parodentitis
+          - Lymphoid interstitial pneumonia (LIP)
+          - HIV related cardiomyopathy
+          - HIV related nephropathy
+          - In bed less than 50% of normal daytime due to sickness
+          - Other
+  - label: Child Stage 4
+    variable: ART_Child_Stage4
+    type: multipleOptions
+    nbOptions: 19
+    options:
+      - >-
+        Unexplained severe wasting,stunting or severe malnutrition not
+        responding to standard therapy
+      - Pneumocystis pneumonia
+      - >-
+        Recurrent severe presumed bacterial infections (e.g., empyema,
+        pyomyositis, bone or joint infection,meningitis, but excluding
+        pneumonia)
+      - >-
+        Chronic herpes simplex infection (orolabial or cutaneous > 1  month
+        duration or visceral at any site)
+      - Extrapulmonary tuberculosis
+      - Kaposi sarcoma
+      - 'Oesophageal candidiasis ( or candida of trachea, bronchi or lungs)'
+      - Central nervous system toxoplasmosis (outside the neonatal period)
+      - HIV encephalopathy
+      - >-
+        Cytomegalovirus (CMV) retinitis or CMV infection affecting another
+        organ, with onset at age >1 month
+      - Extrapulmonary cryptococcosis including meningitis
+      - >-
+        Disseminated endemic mycosis(extrapulmonary histoplasmosis,
+        coccidiomycosis,penicilliosis)
+      - Chronic Cryptosporidiosis
+      - Chronic Isosporiasis
+      - Disseminated non-tuberculous mycobacteria infection
+      - Acquired HIV-associated rectal fistula
+      - Cerebral or B cell non-Hodgkin lymphoma
+      - Progressive multifocal leukoencephalopathy
+      - Other
+    maxResponses: 19
+    weights: 0
+    instructions: "More than one response can be selected.€\x81The question is only appropriate if ART_O0_ChStage = \"Stage 4\""
+    plan: true
+    attributes: 160
+    translations:
+      - label: O4. Stage 4
+        options:
+          - Unexplained severe wasting or severe malnutrition
+          - In bed more than 50% of norma daytime due to sickness
+          - Pneumocystic pneumonia
+          - Wasting syndrome
+          - Cryptococcosis extra pulmonary
+          - Pneumocystic carinii pneumonia
+          - >-
+            Chronic orolabial or cutaneous herpes simplex infection (> 1 month
+            duration)
+          - 'Encephalopathy, dementia'
+          - Extrapulmonary TB (excluding lymphadenitis)
+          - Penicillium Marneffei infection
+          - Karposi's sarcoma
+          - 'Candidiasis of the oesophagus, trachea'
+          - Oesophageal candidiasis
+          - Cryptosporiosis with diarrhea for more than 1 month
+          - CMV retinitis
+          - Isosporidiosis with diarrhea for more than 1 month
+          - Cerebral toxoplasmosis
+          - Lymphoma
+          - mod-FR-20
+  - label: Patient status
+    variable: ART_PatientStatus
+    type: options
+    nbOptions: 4
+    options:
+      - 'Healthy, able to work'
+      - 'Sick, able to work'
+      - 'Sick, unable to work'
+      - Bedridden
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: P01. Patient status
+        options:
+          - 'Healthy, able to work'
+          - 'Sick, able to work'
+          - 'Sick, unable to work'
+          - Beridden
+  - label: OI Diagnosis
+    variable: ART_OIDiagnosis
+    type: multipleOptions
+    nbOptions: 12
+    options:
+      - Oral candidiasis
+      - OHL
+      - esophageal candidias
+      - PTB
+      - EPTB
+      - Herpes zoster
+      - Cryptoccocosis
+      - Penicilliosis
+      - MAC
+      - CMV
+      - Toxoplasmosis
+      - Other OIs
+    maxResponses: 12
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: OI Diagnosis
+        options:
+          - Oral candidiasis
+          - OHL
+          - esophageal candidias
+          - PTB
+          - EPTB
+          - Herpes zoster
+          - Cryptoccocosis
+          - Penicilliosis
+          - MAC
+          - CMV
+          - Toxoplasmosis
+          - Other OIs
+  - label: EPTB
+    variable: ART_OIDiagnosisEPTB
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: OI Diagnosis EPTB
+  - label: Other
+    variable: ART_OIDiagnosisOther
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: P03. Other Diagnosis
+  - label: Diagnosis Code
+    variable: ART_GHC_DiaCode1
+    type: code
+    codesFile: 'C:/Users/PDA/Desktop/New folder (3)/Sys/Dic_Lists/LIST_I011_Diagnosis.dic'
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: Diagnosis Code
+  - label: Description
+    variable: ART_GHC_DiaDescription1
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: "If Not ART_GHC_DiaCode1 = \"OTHERS\" Then€\x81    ART_GHC_DiaDescription1 = ART_GHC_DiaCode1.CatCode(2)€\x81EndIf"
+    autoVariable: Basic
+    translations:
+      - label: Description
+  - label: Diagnosis Code
+    variable: ART_GHC_DiaCode2
+    type: code
+    codesFile: 'C:/Users/PDA/Desktop/New folder (3)/Sys/Dic_Lists/LIST_I011_Diagnosis.dic'
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: Diagnosis Coe
+  - label: Description
+    variable: ART_GHC_DiaDescription2
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: "If Not ART_GHC_DiaCode2 = \"OTHERS\" Then€\x81    ART_GHC_DiaDescription2 = ART_GHC_DiaCode2.CatCode(2)€\x81EndIf"
+    autoVariable: Basic
+    translations:
+      - label: Description
+  - label: Diagnosis Code
+    variable: ART_GHC_DiaCode3
+    type: code
+    codesFile: 'C:/Users/PDA/Desktop/New folder (3)/Sys/Dic_Lists/LIST_I011_Diagnosis.dic'
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: Diagnosis Code
+  - label: Description
+    variable: ART_GHC_DiaDescription3
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: "If Not ART_GHC_DiaCode3 = \"OTHERS\" Then€\x81    ART_GHC_DiaDescription3 = ART_GHC_DiaCode3.CatCode(2)€\x81EndIf"
+    autoVariable: Basic
+    translations:
+      - label: Description
+  - label: Diagnosis Code
+    variable: ART_GHC_DiaCode4
+    type: code
+    codesFile: 'C:/Users/PDA/Desktop/New folder (3)/Sys/Dic_Lists/LIST_I011_Diagnosis.dic'
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: Diagnosis Code
+  - label: Description
+    variable: ART_GHC_DiaDescription4
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: "If Not ART_GHC_DiaCode4 = \"OTHERS\" Then€\x81    ART_GHC_DiaDescription4 = ART_GHC_DiaCode4.CatCode(2)€\x81EndIf"
+    autoVariable: Basic
+    translations:
+      - label: Description
+  - label: Additional comments
+    variable: ART_Diagnosis_Comments
+    type: open
+    nbLines: 4
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Q05. Additional comments
+  - label: First CD4
+    variable: ART_FirstCD4
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###################'
+    plan: true
+    attributes: 32
+    translations:
+      - label: Q00. First CD4
+        options:
+          - Less than 100
+          - From 100 to 200
+          - From 200 to 300
+          - From 300 to 400
+          - From 400 to 500
+          - From 500 to 600
+          - 600 and more
+  - label: Last CD4
+    variable: ART_LastCD4
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###################'
+    plan: true
+    attributes: 32
+    translations:
+      - label: Last CD4
+        options:
+          - Less than 100000
+          - From 100000 to 200000
+          - From 200000 to 300000
+          - From 300000 to 400000
+          - From 400000 to 500000
+          - From 500000 to 600000
+          - 600000 and more
+  - label: Viral load Result
+    variable: ART_ViralLoad_Result
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###################'
+    plan: true
+    attributes: 32
+    translations:
+      - label: Viral load Result
+        options:
+          - Less than 1000
+          - From 1000 to 2000
+          - From 2000 to 3000
+          - From 3000 to 4000
+          - From 4000 to 5000
+          - From 5000 to 6000
+          - 6000 and more
+  - label: HBsAg
+    variable: ART_HBsAg
+    type: options
+    nbOptions: 2
+    options:
+      - Positive
+      - Negative
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: HBsAg
+        options:
+          - Positive
+          - Negative
+  - label: HBsAb
+    variable: ART_HBsAb
+    type: options
+    nbOptions: 2
+    options:
+      - Positive
+      - Negative
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: HBsAb
+        options:
+          - Positive
+          - Negative
+  - label: HCVAb
+    variable: ART_HCVAb
+    type: options
+    nbOptions: 2
+    options:
+      - Positive
+      - Negative
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: HCVAb
+        options:
+          - Positive
+          - Negative
+  - label: APRI
+    variable: ART_APRI
+    type: number
+    nbDecimals: 2
+    numberType: 4
+    format: '###################'
+    plan: true
+    attributes: 32
+    translations:
+      - label: APRI
+        options:
+          - Less than 12
+          - From 12 to 24
+          - From 24 to 37
+          - From 37 to 49
+          - From 49 to 61
+          - From 61 to 73
+          - 73 and more
+  - label: Liver Fibrosis
+    variable: ART_LiverFilbrosis
+    type: options
+    nbOptions: 4
+    options:
+      - Stage 0
+      - Stage < 2
+      - Stage >= 2
+      - Stage 4
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Liver Fibrosis
+        options:
+          - Stage 1
+          - Stage 2
+          - Stage 3
+          - Stage 4
+  - label: Smear
+    variable: TB_Sputum_Smear
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Sample_Result.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: Smear
+  - label: Xpert
+    variable: TB_Sputum_Xpert
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Sample_Result.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: Xpert
+  - label: Culture
+    variable: TB_Sputum_Culture
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Sample_Result.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: Culture
+  - label: H
+    variable: TB_Sputum_H
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: H
+  - label: R
+    variable: TB_Sputum_R
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R
+  - label: S
+    variable: TB_Sputum_S
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: S
+  - label: E
+    variable: TB_Sputum_E
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: E
+  - label: LPA
+    variable: TB_Sputum_LPA
+    type: open
+    codesFile: TB_Sample_Result.dic
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: LPA
+  - label: Sample Date
+    variable: TB_Sputum_SampleDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: Sample Date
+  - label: Other Sample 1
+    variable: TB_OtherSample1
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/AFB CNS
+      Test.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: Other Sample
+  - label: Smear
+    variable: TB_OtherSample1_Smear
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Sample_Result.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: Smear
+  - label: Xpert
+    variable: TB_OtherSample1_Xpert
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Sample_Result.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: Xpert
+  - label: Culture
+    variable: TB_OtherSample1_Culture
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Sample_Result.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: Culture
+  - label: H
+    variable: TB_OtherSample1_H
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: H
+  - label: R
+    variable: TB_OtherSample1_R
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R
+  - label: S
+    variable: TB_OtherSample1_S
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: S
+  - label: E
+    variable: TB_OtherSample1_E
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: E
+  - label: LPA
+    variable: TB_OtherSample1_LPA
+    type: open
+    codesFile: TB_Sample_Result.dic
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: LPA
+  - label: Sample Date
+    variable: TB_OtherSample1_SampleDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: Sample Date
+  - label: Other Sample 2
+    variable: TB_OtherSample2
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/AFB CNS
+      Test.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: Other Sample
+  - label: Smear
+    variable: TB_OtherSample2_Smear
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Sample_Result.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: Smear
+  - label: Xpert
+    variable: TB_OtherSample2_Xpert
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Sample_Result.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: Xpert
+  - label: Culture
+    variable: TB_OtherSample2_Culture
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Sample_Result.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: Culture
+  - label: H
+    variable: TB_OtherSample2_H
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: H
+  - label: R
+    variable: TB_OtherSample2_R
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R
+  - label: S
+    variable: TB_OtherSample2_S
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: S
+  - label: E
+    variable: TB_OtherSample2_E
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: E
+  - label: LPA
+    variable: TB_OtherSample2_LPA
+    type: open
+    codesFile: TB_Sample_Result.dic
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: LPA
+  - label: Sample Date
+    variable: TB_OtherSample2_SampleDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: Sample Date
+  - label: Other Sample 3
+    variable: TB_OtherSample3
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/AFB CNS
+      Test.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: Other Sample
+  - label: Smear
+    variable: TB_OtherSample3_Smear
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Sample_Result.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: Smear
+  - label: Xpert
+    variable: TB_OtherSample3_Xpert
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Sample_Result.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: Xpert
+  - label: Culture
+    variable: TB_OtherSample3_Culture
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/TB_Sample_Result.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: Culture
+  - label: H
+    variable: TB_OtherSample3_H
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: H
+  - label: R
+    variable: TB_OtherSample3_R
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R
+  - label: S
+    variable: TB_OtherSample3_S
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: S
+  - label: E
+    variable: TB_OtherSample3_E
+    type: code
+    codesFile: >-
+      D:/For 2015 MMR
+      Report/Testing_Package_2015/Myanmar_MDM_Clinic/Sys/Dic_Lists/HRSE.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: E
+  - label: LPA
+    variable: TB_OtherSample3_LPA
+    type: open
+    codesFile: TB_Sample_Result.dic
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: LPA
+  - label: Sample Date
+    variable: TB_OtherSample3_SampleDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: Sample Date
+  - label: Date
+    variable: TB_RadiologyDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: Date
+  - label: Radiology
+    variable: TB_Radio_Radiology
+    type: multipleOptions
+    nbOptions: 3
+    options:
+      - CXRay
+      - X-Ray
+      - USG abdomen
+    maxResponses: 3
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: P01. Patient status
+        options:
+          - 'Healthy, able to work'
+          - 'Sick, able to work'
+          - mod-FR-3
+  - label: CXRay
+    variable: TB_Radio_CXRay
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: M041. BodyFluid
+  - label: X-Ray
+    variable: TB_Radio_XRay
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: M042. C&S
+  - label: USG abdomen
+    variable: TB_Radio_USG
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: M043. Other
+  - label: Persons living with the patient screened TB
+    variable: TB_Persons_screened_TB
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Laboratory
+        options:
+          - MDM Lab
+          - Outside Lab
+  - label: 'If yes, where'
+    variable: TB_ScreenedTBYesWhere
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'S012. Plan: (Next visit)'
+  - label: Referred
+    variable: TB_Referred
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: M001. Complaints
+        options:
+          - 'Yes'
+          - 'No'
+  - label: 'If yes, where'
+    variable: TB_ReferYesWhere
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: M002. If Yes
+        options:
+          - Same complaints
+          - New complaints
+          - mod-FR-3
+          - mod-FR-4
+  - label: Type of Case
+    variable: TB_TypeOfCase
+    type: options
+    nbOptions: 6
+    options:
+      - New
+      - Replase
+      - Treatment after failure
+      - Treatment after LTFU
+      - Other
+      - Unknown
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: M001. Complaints
+        options:
+          - mod-FR-6
+          - 'Yes'
+          - 'No'
+          - mod-FR-3
+          - mod-FR-4
+          - mod-FR-5
+  - label: Type
+    variable: TB_Type
+    type: options
+    nbOptions: 2
+    options:
+      - Bacteriologically confirmed
+      - Clinically diagnosised
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Type of case
+        options:
+          - New case
+          - Retreatment care
+  - label: Allergy
+    variable: ARTAllergy
+    type: multipleOptions
+    nbOptions: 3
+    options:
+      - Pen
+      - Sulfa
+      - Other
+    maxResponses: 3
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: R011. Allergy
+        options:
+          - Pen
+          - Sulfa
+          - Other
+  - label: 'If other, specify'
+    variable: ART_AllergyOther
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'R012. If other, specify'
+  - label: Pregnant
+    variable: ART_Pregnant
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Pregnant
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Prophylaxis
+    variable: ART_Prophylaxis
+    type: multipleOptions
+    nbOptions: 2
+    options:
+      - Primary
+      - Secondary
+    maxResponses: 2
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: Prophylaxis
+        options:
+          - Primary
+          - Secondary
+  - label: Prophyaxis_Primary
+    variable: ART_Prophyaxis_Primary
+    type: multipleOptions
+    nbOptions: 4
+    options:
+      - Cotri
+      - Dapsone
+      - Acyclovir
+      - INH
+    maxResponses: 4
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: R011. Allergy
+        options:
+          - Pen
+          - Sulfa
+          - mod-FR-6
+          - mod-FR-8
+  - label: Prophylaxis_Secondary
+    variable: ART_Prophylaxis_Secondary
+    type: multipleOptions
+    nbOptions: 5
+    options:
+      - Cotri
+      - Dapsone
+      - Fluco
+      - Itraco
+      - Azithro
+    maxResponses: 5
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: Prophylaxis_Secondary
+        options:
+          - Cotri
+          - Dapsone
+          - Fluco
+          - Itraco
+          - Azithro
+  - label: MDM ART Starting Date
+    variable: ART_MDMARTStartingDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: R012. MDM Starting Date
+  - label: Remaining pill (days)
+    variable: ART_RemainingPill
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    plan: true
+    attributes: 32
+    translations:
+      - label: Remaining pill (Days)
+        options:
+          - Less than 2
+          - From 2 to 4
+          - From 4 to 6
+          - From 6 to 8
+          - From 8 to 10
+          - From 10 to 12
+          - 12 and more
+  - label: Medicine name
+    variable: ART_ARTMedName1
+    type: code
+    codesFile: Sys/Dic_Lists/ARV Medicine_v2014.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0111. Medicine name
+  - label: Dosage
+    variable: ART_Dosage1
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0112. Dosage
+  - label: Frequency
+    variable: ART_Frequency1
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0113. Frequency
+  - label: Number days
+    variable: ART_NumberDays1
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0114. Number days
+        options:
+          - val = 32767
+          - mod-FR-2
+          - mod-FR-3
+          - mod-FR-4
+          - mod-FR-5
+          - mod-FR-6
+          - mod-FR-7
+  - label: Medicine name
+    variable: ART_ARTMedName2
+    type: code
+    codesFile: Sys/Dic_Lists/ARV Medicine_v2014.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0121. Medicine name
+  - label: Dosage
+    variable: ART_Dosage2
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0122. Dosage
+  - label: Frequency
+    variable: ART_Frequency2
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0123. Frequency
+  - label: Number days
+    variable: ART_NumberDays2
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0124. Number days
+        options:
+          - val = 32767
+          - mod-FR-2
+          - mod-FR-3
+          - mod-FR-4
+          - mod-FR-5
+          - mod-FR-6
+          - mod-FR-7
+  - label: Medicine name
+    variable: ART_ARTMedName3
+    type: code
+    codesFile: Sys/Dic_Lists/ARV Medicine_v2014.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0131. Medicine name
+  - label: Dosage
+    variable: ART_Dosage3
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0132. Dosage
+  - label: Frequency
+    variable: ART_Frequency3
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0133. Frequency
+  - label: Number days
+    variable: ART_NumberDays3
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0134. Number days
+        options:
+          - val = 32767
+          - mod-FR-2
+          - mod-FR-3
+          - mod-FR-4
+          - mod-FR-5
+          - mod-FR-6
+          - mod-FR-7
+  - label: Medicine name
+    variable: ART_ARTMedName4
+    type: code
+    codesFile: Sys/Dic_Lists/ARV Medicine_v2014.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0141. Medicine name
+  - label: Dosage
+    variable: ART_Dosage4
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0142. Dosage
+  - label: Frequency
+    variable: ART_Frequency4
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0143. Frequency
+  - label: Number days
+    variable: ART_NumberDays4
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0144. Number days
+        options:
+          - val = 32767
+  - label: Medicine name
+    variable: ART_ARTMedName5
+    type: code
+    codesFile: >-
+      C:/Sphinx For Written Forms (YGN+KCN)/2014
+      Modification/Sys/Dic_Lists/LIST_I_ARVsMedicines.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0151. Medicine name
+  - label: Dosage
+    variable: ART_Dosage5
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0152. Dosage
+  - label: Frequency
+    variable: ART_Frequency5
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0153. Frequency
+  - label: Number days
+    variable: ART_NumberDays5
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0154. Number days
+        options:
+          - val = 32767
+  - label: TB Starting Date
+    variable: ART_TB_StartingDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: TB Starting Date
+  - label: Medicine name
+    variable: ART_TB_MedicineName1
+    type: code
+    codesFile: Sys/Dic_Lists/TB_Medicines_List.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0111. Medicine name
+  - label: Dosage
+    variable: ART_TB_Dosage1
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0112. Dosage
+  - label: Frequency
+    variable: ART_TB_Frequency1
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0113. Frequency
+  - label: Number days
+    variable: ART_TB_NumberDays1
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0114. Number days
+        options:
+          - Less than 100
+          - From 100 to 200
+          - From 200 to 300
+          - From 300 to 400
+          - From 400 to 500
+          - From 500 to 600
+          - 600 and more
+  - label: Medicine name
+    variable: ART_TB_MedicineName2
+    type: code
+    codesFile: Sys/Dic_Lists/TB_Medicines_List.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0121. Medicine name
+  - label: Dosage
+    variable: ART_TB_Dosage2
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0122. Dosage
+  - label: Frequency
+    variable: ART_TB_Frequency2
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0123. Frequency
+  - label: Number days
+    variable: ART_TB_NumberDays2
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0124. Number days
+        options:
+          - Less than 10
+          - From 10 to 20
+          - From 20 to 30
+          - From 30 to 40
+          - From 40 to 50
+          - From 50 to 60
+          - 60 and more
+  - label: Medicine name
+    variable: ART_TB_MedicineName3
+    type: code
+    codesFile: Sys/Dic_Lists/TB_Medicines_List.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0131. Medicine name
+  - label: Dosage
+    variable: ART_TB_Dosage3
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0132. Dosage
+  - label: Frequency
+    variable: ART_TB_Frequency3
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0133. Frequency
+  - label: Number days
+    variable: ART_TB_NumberDays3
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0134. Number days
+        options:
+          - val = 7
+  - label: Medicine name
+    variable: ART_TB_MedicineName4
+    type: code
+    codesFile: Sys/Dic_Lists/TB_Medicines_List.txt
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0141. Medicine name
+  - label: Dosage
+    variable: ART_TB_Dosage4
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0142. Dosage
+  - label: Frequency
+    variable: ART_TB_Frequency4
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0143. Frequency
+  - label: Number days
+    variable: ART_TB_NumberDays4
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0144. Number days
+        options:
+          - val = 32767
+  - label: TB Category
+    variable: TB_Category
+    type: options
+    nbOptions: 2
+    options:
+      - Intensive
+      - Continuation
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: TB Category
+        options:
+          - Intensive
+          - Continuation
+  - label: Treatment Category
+    variable: TB_TreatmentCategory
+    type: options
+    nbOptions: 3
+    options:
+      - Initial
+      - Retreatment
+      - Childhood
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Laboratory
+        options:
+          - mod-FR-4
+          - mod-FR-5
+          - mod-FR-6
+  - label: IPT_Treatment
+    variable: IPT_Treatmet
+    type: multipleOptions
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    maxResponses: 2
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 161
+    translations:
+      - label: IPT_Treatment
+        options:
+          - 'Yes'
+          - 'No'
+  - label: IPT_Initiation_Date
+    variable: IPT_Initiation_Date
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: IPT_Initiation_Date
+  - label: Initial_1st_Visit_Date
+    variable: Initial_1st_Visit_Date
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: Initial_1st_Visit_Date
+  - label: IPT_Outcome
+    variable: IPT_Outcome
+    type: code
+    codesFile: Sys/Dic_Lists/IPT_Outcome.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: IPT_Outcome
+  - label: IPT_Outcome_Date
+    variable: IPT_Outcome_Date
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: IPT_Outcome_Date
+  - label: Reasons_of_not_starting_IPT
+    variable: Reasons_of_not_starting_IPT
+    type: options
+    nbOptions: 10
+    options:
+      - Currently on anti-TB treatment
+      - Currently on IPT
+      - Clinically susupected active TB
+      - Completed IPT treatment
+      - Active hepatitis (acute or chronic)
+      - Heavy alcoholism
+      - Peripheral neuropathy
+      - Patient needs additional counselling
+      - Patient refusal
+      - Other (Please specify)
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Reasons_of_not_starting_IPT
+        options:
+          - Currently on anti-TB treatment
+          - Currently on IPT
+          - Clinically susupected active TB
+          - Completed IPT treatment
+          - Active hepatitis (acute or chronic)
+          - Heavy alcoholism
+          - Peripheral neuropathy
+          - Patient needs additional counselling
+          - Patient refusal
+          - mod-FR-10
+  - label: IPT_Other
+    variable: IPT_Other
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: IPT_Other
+  - label: Medicine name
+    variable: ART_OTHMedName1
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0211. Medicine name
+  - label: Dosage
+    variable: ART_OTH_Dosage1
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0212. Dosage
+  - label: Frequency
+    variable: ART_OTH_Frequency1
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0213. Frequency
+  - label: Number days
+    variable: ART_OTH_NumberDays1
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0214. Number days
+        options:
+          - val = 32767
+          - mod-FR-2
+          - mod-FR-3
+          - mod-FR-4
+          - mod-FR-5
+          - mod-FR-6
+          - mod-FR-7
+  - label: Medicine name
+    variable: ART_OTHMedName2
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0221. Medicine name
+  - label: Dosage
+    variable: ART_OTH_Dosage2
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0222. Dosage
+  - label: Frequency
+    variable: ART_OTH_Frequency2
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0223. Frequency
+  - label: Number days
+    variable: ART_OTH_NumberDays2
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0224. Number days
+        options:
+          - val = 32767
+          - mod-FR-2
+          - mod-FR-3
+          - mod-FR-4
+          - mod-FR-5
+          - mod-FR-6
+          - mod-FR-7
+  - label: Medicine name
+    variable: ART_OTHMedName3
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0231. Medicine name
+  - label: Dosage
+    variable: ART_OTH_Dosage3
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0232. Dosage
+  - label: Frequency
+    variable: ART_OTH_Frequency3
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0233. Frequency
+  - label: Number days
+    variable: ART_OTH_NumberDays3
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0234. Number days
+        options:
+          - val = 32767
+          - mod-FR-2
+          - mod-FR-3
+          - mod-FR-4
+          - mod-FR-5
+          - mod-FR-6
+          - mod-FR-7
+  - label: Medicine name
+    variable: ART_OTHMedName4
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0241. Medicine name
+  - label: Dosage
+    variable: ART_OTH_Dosage4
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0242. Dosage
+  - label: Frequency
+    variable: ART_OTH_Frequency4
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0243. Frequency
+  - label: Number days
+    variable: ART_OTH_NumberDays4
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0244. Number days
+        options:
+          - val = 32767
+          - mod-FR-2
+          - mod-FR-3
+          - mod-FR-4
+          - mod-FR-5
+          - mod-FR-6
+          - mod-FR-7
+  - label: Medicine name
+    variable: ART_OTHMedName5
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0251. Medicine name
+  - label: Dosage
+    variable: ART_OTH_Dosage5
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0252. Dosage
+  - label: Frequency
+    variable: ART_OTH_Frequency5
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0253. Frequency
+  - label: Number days
+    variable: ART_OTH_NumberDays5
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0254. Number days
+        options:
+          - val = 32767
+          - mod-FR-2
+          - mod-FR-3
+          - mod-FR-4
+          - mod-FR-5
+          - mod-FR-6
+          - mod-FR-7
+  - label: Medicine name
+    variable: ART_OTHMedName6
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0251. Medicine name
+  - label: Dosage
+    variable: ART_OTH_Dosage6
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0252. Dosage
+  - label: Frequency
+    variable: ART_OTH_Frequency6
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0253. Frequency
+  - label: Number days
+    variable: ART_OTH_NumberDays6
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0254. Number days
+        options:
+          - val = 32767
+          - mod-FR-2
+          - mod-FR-3
+          - mod-FR-4
+          - mod-FR-5
+          - mod-FR-6
+          - mod-FR-7
+  - label: Medicine name
+    variable: ART_OTH_MedName7
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0211. Medicine name
+  - label: Dosage
+    variable: ART_OTH_Dosage7
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0212. Dosage
+  - label: Frequency
+    variable: ART_OTH_Frequency7
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0213. Frequency
+  - label: Number days
+    variable: ART_OTH_NumberDays7
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0214. Number days
+        options:
+          - Less than 2.00
+          - From 2.00 to 4.00
+          - From 4.00 to 6.00
+          - From 6.00 to 8.00
+          - From 8.00 to 10.00
+          - From 10.00 to 12.00
+          - 12.00 and more
+  - label: Medicine name
+    variable: ART_OTH_MedName8
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0221. Medicine name
+  - label: Dosage
+    variable: ART_OTH_Dosage8
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0222. Dosage
+  - label: Frequency
+    variable: ART_OTH_Frequency8
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0223. Frequency
+  - label: Number days
+    variable: ART_OTH_NumberDays8
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0224. Number days
+        options:
+          - val = 3
+          - val = 4
+          - val = 5
+          - val = 6
+          - val = 7
+  - label: Medicine name
+    variable: ART_OTH_MedName9
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0231. Medicine name
+  - label: Dosage
+    variable: ART_OTH_Dosage9
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0232. Dosage
+  - label: Frequency
+    variable: ART_OTH_Frequency9
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0233. Frequency
+  - label: Number days
+    variable: ART_OTH_NumberDays9
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0234. Number days
+        options:
+          - val = 7
+  - label: Medicine name
+    variable: ART_OTH_MedName10
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0241. Medicine name
+  - label: Dosage
+    variable: ART_OTH_Dosage10
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0242. Dosage
+  - label: Frequency
+    variable: ART_OTH_Frequency10
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0243. Frequency
+  - label: Number days
+    variable: ART_OTH_NumberDays10
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0244. Number days
+        options:
+          - val = 32767
+  - label: Medicine name
+    variable: ART_OTH_MedName11
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0251. Medicine name
+  - label: Dosage
+    variable: ART_OTH_Dosage11
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0252. Dosage
+  - label: Frequency
+    variable: ART_OTH_Frequency11
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0253. Frequency
+  - label: Number days
+    variable: ART_OTH_NumberDays11
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0254. Number days
+        options:
+          - val = 32767
+  - label: Referred to hospital or other structure
+    variable: ART_ReferredTo
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Referred to hospital or other structure
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Patient should return in
+    variable: ART_PatientShouldReturnIn
+    type: options
+    nbOptions: 8
+    options:
+      - 1 wk
+      - 2 wks
+      - 3 wks
+      - 1 mth
+      - 2 mths
+      - 3 mths
+      - 6 mths
+      - Other
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: T2. Patient should return in
+        options:
+          - 1 wk
+          - 2wks
+          - mod-FR-8
+          - 1 mth
+          - 2 mths
+          - 3 mths
+          - 6 mths
+          - Other
+  - label: Other
+    variable: ART_ReturnOther
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: T21. Other
+  - label: Date of next visit
+    variable: ART_DateNextVisit
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: T3. Date of next visit
+  - label: Motive
+    variable: ART_Motive
+    type: multipleOptions
+    nbOptions: 9
+    options:
+      - ART Follow up
+      - PLH Follow up
+      - TB Follow up
+      - STI Follow up
+      - CD4
+      - Support Group
+      - Nutritional Support
+      - Vaccination
+      - Other
+    maxResponses: 9
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: T2. Patient should return in
+        options:
+          - 1 wk
+          - 2wks
+          - mod-FR-8
+          - 1 mth
+          - 2 mths
+          - 3 mths
+          - 6 mths
+          - Other
+          - mod-FR-9
+  - label: MotiveOther
+    variable: ART_MotiveOther
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: MotiveOther
+  - label: Plan (Next visit)
+    variable: ART_PlanNextVisit
+    type: open
+    nbLines: 4
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Plan (Next visit)
+  - label: Verify patient
+    variable: Verify
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    plan: true
+    attributes: 32
+    translations:
+      - label: Verify patient
+        options:
+          - val = 32767
+  - label: Last registration date
+    variable: LastRegistrationDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 33056
+    vbOptions: 1
+    autoVariable: DateEnreg
+    translations:
+      - label: Last registration date
+  - label: ART Key
+    variable: Key
+    type: open
+    nbLines: 2
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vbOptions: 1
+    vb: Key = MDMcode & ART_VisitDate
+    autoVariable: Basic
+    translations:
+      - label: test
+  - label: Order of the observations before sorting
+    variable: ORDER
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: 'jj/mm/aaaa hh:nn:ss'
+    plan: true
+    attributes: 32
+    translations:
+      - label: Order of the observations before sorting
+        options:
+          - Less than 1000
+          - From 1000 to 2000
+          - From 2000 to 3000
+          - From 3000 to 4000
+          - From 4000 to 5000
+          - From 5000 to 6000
+          - 6000 and more
+  - label: Order of the observations before sorting
+    variable: ORDER1
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: 'jj/mm/aaaa hh:nn:ss'
+    plan: true
+    attributes: 32
+    translations:
+      - label: Order of the observations before sorting
+        options:
+          - Less than 1000
+          - From 1000 to 2000
+          - From 2000 to 3000
+          - From 3000 to 4000
+          - From 4000 to 5000
+          - From 5000 to 6000
+          - 6000 and more
+  - label: Order of the observations before sorting
+    variable: ORDER2
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: 'jj/mm/aaaa hh:nn:ss'
+    plan: true
+    attributes: 32
+    translations:
+      - label: Order of the observations before sorting
+        options:
+          - Less than 2000
+          - From 2000 to 4000
+          - From 4000 to 6000
+          - From 6000 to 8000
+          - From 8000 to 10000
+          - From 10000 to 12000
+          - 12000 and more
+  - label: Order of the observations before sorting
+    variable: ORDER3
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: 'jj/mm/aaaa hh:nn:ss'
+    plan: true
+    attributes: 32
+    translations:
+      - label: Order of the observations before sorting
+        options:
+          - Less than 2000
+          - From 2000 to 4000
+          - From 4000 to 6000
+          - From 6000 to 8000
+          - From 8000 to 10000
+          - From 10000 to 12000
+          - 12000 and more
+  - label: Order of the observations before sorting
+    variable: ORDER4
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: 'jj/mm/aaaa hh:nn:ss'
+    plan: true
+    attributes: 32
+    translations:
+      - label: Order of the observations before sorting
+        options:
+          - Less than 2000
+          - From 2000 to 4000
+          - From 4000 to 6000
+          - From 6000 to 8000
+          - From 8000 to 10000
+          - From 10000 to 12000
+          - 12000 and more
+  - label: Order of the observations before sorting
+    variable: ORDER5
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: 'jj/mm/aaaa hh:nn:ss'
+    plan: true
+    attributes: 32
+    translations:
+      - label: Order of the observations before sorting
+        options:
+          - Less than 2000
+          - From 2000 to 4000
+          - From 4000 to 6000
+          - From 6000 to 8000
+          - From 8000 to 10000
+          - From 10000 to 12000
+          - 12000 and more
+  - label: Order of the observations before sorting
+    variable: ORDER6
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: 'jj/mm/aaaa hh:nn:ss'
+    plan: true
+    attributes: 32
+titles:
+  - type: label
+    label: SOCIO-DEMOGRAPHIC DATA
+    first: 1
+    translations:
+      - label: A. SOCIO-DEMOGRAPHIC DATA
+  - type: label
+    label: VISIT
+    first: 8
+    translations:
+      - label: B. VISIT
+  - type: label
+    label: Background
+    first: 13
+    translations:
+      - label: G. Background
+  - type: label
+    label: Medications
+    first: 18
+    translations:
+      - label: H. Medications
+  - type: label
+    label: ARVs
+    first: 37
+    translations:
+      - label: I. ARVs
+  - type: label
+    label: Medical history
+    first: 64
+    translations:
+      - label: J. Medical history
+  - type: label
+    label: TB history
+    first: 65
+    translations:
+      - label: K. TB history
+  - type: label
+    label: Review of symptoms
+    first: 70
+    translations:
+      - label: M. Review of symptoms
+  - type: label
+    label: Physical Exam
+    first: 108
+    translations:
+      - label: N. Physical Exam
+  - type: label
+    label: WHO staging
+    first: 127
+    translations:
+      - label: O. Who staging
+  - type: label
+    label: WHO staging (Child)
+    first: 133
+    translations:
+      - label: O. Who staging (Child)
+  - type: label
+    label: Diagnosis
+    first: 138
+    translations:
+      - label: P. Assessment
+  - type: label
+    label: Investigation ordered
+    first: 151
+    translations:
+      - label: S. Investigation ordered
+  - type: label
+    label: Hepatitis
+    first: 154
+    translations:
+      - label: Hepatitis
+  - type: label
+    label: TB
+    first: 159
+    translations:
+      - label: TB
+  - type: label
+    label: Radiology
+    first: 198
+    translations:
+      - label: Radiology
+  - type: label
+    label: Contact
+    first: 203
+    translations:
+      - label: Contact
+  - type: label
+    label: Type of Case
+    first: 207
+    translations:
+      - label: Type of Case
+  - type: label
+    label: Treatment
+    first: 209
+    translations:
+      - label: R. Treatment
+  - type: label
+    label: ART treatment
+    first: 215
+    translations:
+      - label: R01. ART treatment
+  - type: label
+    label: TB Treatment
+    first: 237
+    translations:
+      - label: TB Treatment
+  - type: label
+    label: IPT Treatment
+    instructions: IPT_Treatment
+    first: 256
+    translations:
+      - label: IPT_Treatment
+        instructions: IPT_Treatment
+  - type: label
+    label: Other treatment
+    first: 263
+    translations:
+      - label: R02. Other treatment
+  - type: label
+    label: End of visit
+    first: 307
+    translations:
+      - label: T. End of visit
+  - type: label
+    label: System Items
+    first: 314
+    translations:
+      - label: System Items
+strata:
+  - name: OI_D
+    active: 0
+    filter:
+      operator: 1
+      variable: 141
+      included: 2
+      options:
+        - '1'
+      rank: 1
+      isNumber: false
+  - name: OI_P
+    active: 0
+options:
+  groups: true
+  resend: true
+  controls: true

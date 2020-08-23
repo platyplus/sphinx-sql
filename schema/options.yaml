@@ -1,0 +1,190 @@
+'1':
+  - Clinic
+  - HBC
+  - Outreach
+  - Hospital
+  - Specialist
+  - Phone Contact
+'2':
+  - Initial Visit
+  - Follow up
+  - Assessment
+'3':
+  - On Time
+  - Early
+  - Late
+'4':
+  - Stable
+  - Homeless
+'5':
+  - With Family
+  - With Friends
+'6':
+  - 'Yes'
+  - 'No'
+'7':
+  - OK
+  - Difficult
+'8':
+  - Graduate (After grade 10)
+  - High (Grades 9 & 10)
+  - Middle (Grades 5 to 8)
+  - Primary (Grades 1 to 4)
+  - Illiterate
+  - Literate (read & write)
+  - Non Applicable (e.g. for babies)
+'9':
+  - No side effects
+'10':
+  - Perfectly
+  - Almost
+  - Half
+  - Not at all
+'11':
+  - STABLE
+  - PROBLEM
+'12':
+  - STABLE
+  - CHANGE
+  - PROBLEM
+'13':
+  - Good
+  - Bad
+  - Not Sure
+'14':
+  - 'Yes'
+'15':
+  - Positive
+  - Negative
+  - Unknown
+'16':
+  - Patient has been treated for TB before
+'17':
+  - 'Yes'
+  - 'No'
+  - Pt don't come
+'18':
+  - Normal
+  - Abnormal
+  - Not done
+'19':
+  - Child
+  - Adult
+'20':
+  - Stage 1
+  - Stage 2
+  - Stage 3
+  - Stage 4
+'21':
+  - 'Healthy, able to work'
+  - 'Sick, able to work'
+  - 'Sick, unable to work'
+  - Bedridden
+'22':
+  - Positive
+  - Negative
+'23':
+  - Stage 0
+  - Stage < 2
+  - Stage >= 2
+  - Stage 4
+'24':
+  - New
+  - Replase
+  - Treatment after failure
+  - Treatment after LTFU
+  - Other
+  - Unknown
+'25':
+  - Bacteriologically confirmed
+  - Clinically diagnosised
+'26':
+  - Intensive
+  - Continuation
+'27':
+  - Initial
+  - Retreatment
+  - Childhood
+'28':
+  - Currently on anti-TB treatment
+  - Currently on IPT
+  - Clinically susupected active TB
+  - Completed IPT treatment
+  - Active hepatitis (acute or chronic)
+  - Heavy alcoholism
+  - Peripheral neuropathy
+  - Patient needs additional counselling
+  - Patient refusal
+  - Other (Please specify)
+'29':
+  - 1 wk
+  - 2 wks
+  - 3 wks
+  - 1 mth
+  - 2 mths
+  - 3 mths
+  - 6 mths
+  - Other
+'30':
+  - 1 wk
+  - 2wks
+  - 3wks
+  - 1 mth
+  - 2 mths
+  - 3 mths
+  - 6 mths
+  - Other
+'31':
+  - Clinic
+  - HBC
+  - Outreach
+  - Hospital
+  - Specialist
+'32':
+  - Lb
+  - Kg
+'33':
+  - °C
+  - °F
+'34':
+  - Patient is pregnant
+  - Patient is breastfeeding
+'35':
+  - Date of birth estimated
+'36':
+  - Graduate(After grade 10)
+  - High(Grades 9 & 10)
+  - Illiterate
+  - Literate (read & write)
+  - Middle(Grades 5 to 8)
+  - Non Applicable(e.g. for babies)
+  - Primary (Grades 1 to 4)
+'37':
+  - To change treatment plan
+  - To continue current treatment
+  - To stop treatment
+'38':
+  - Accept
+  - Refused
+'39':
+  - Positive
+  - Negative
+  - Inconclusive 1st time
+  - Inconclusive 2nd time
+'40':
+  - 1 wk
+  - 2 wks
+  - 3 wks
+  - 1 mth
+  - 6 wks
+  - 2 mths
+  - 3 mths
+  - 6 mths
+  - Other
+'41':
+  - HIV Positive
+  - HIV Negative
+  - Inconclusive
+gender:
+  - Male
+  - Female

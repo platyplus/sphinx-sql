@@ -1,0 +1,412 @@
+Version=5104
+Entête
+	Historique=5.0.0.81(Médecins du Mon;5.1.0.2(Médecins du Mond;5.0.0.64(Médecins du Mon;5.1.0.3(Médecins du Mond;5.1.0.4(MEDECINS DU MOND;5.1.0.4(Médecins du Mond;
+	Langue=EN
+	Titre=Patient General Data
+	StadePanneau=10
+	Traductions
+		Traduction
+			Langue=FR
+			Titre=Patient General Data
+		Fin
+	Fin
+Fin
+Questions
+	Question
+		Libellé=MDM location
+		Variable=MDMlocation
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LIST_A1_MDMlocation.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=33056
+		VariableAutomatique=Identique
+		Traductions
+			Traduction
+				Libellé=MDM location
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=MDM code (Patient ID)
+		Variable=MDMcode
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=V_sexe = "1"€If A03_Sexe In "Female" Then€V_sexe = "2"€EndIf€If A07_PatientTarget = "SW" then€        V_PT="S"€Else€	If A07_PatientTarget = "MSM" then€		V_PT="M"€	Else€		If A07_PatientTarget = "IDU" then€			V_PT="I"€		Else€			If A07_PatientTarget = "DU" then€				V_PT="D"€			Else€                                If A07_PatientTarget = "CH" then€				        V_PT="C"€			        Else€				        If A07_PatientTarget = "GP" then€					        V_PT="G"€				        Else€					        V_PT="P"€				        endif€                                endif€			endif€		endif€	endif€endif€MDMcode = MDMlocation.Catcode(3) & V_PT & V_sexe & SerialNumber€
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				Libellé=MDM code (Patient ID)
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Serial number
+		Variable=SerialNumber
+		Type=6
+		NbLignes=2
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=V_serial =Counter€If Counter < 10 Then€   V_serial = "0000" & Counter€Else€   If Counter < 100 Then€      V_serial = "000" & Counter€   Else€      If Counter < 1000 Then€         V_serial = "00" & Counter€      Else€         If Counter < 10000 Then€           V_serial = "0" & Counter€         EndIf€      EndIf€   EndIf€EndIf€SerialNumber = V_serial
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				Libellé=Serial number
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=A00. Registration date
+		Variable=A00_RegistrationDate
+		Type=8
+		Format=jj/mm/aaaa
+		Consigne=Mandatory response.
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				Libellé=A00. Registration date
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=A01. Name
+		Variable=A01_PatientName
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Consigne=Mandatory response.
+		Plan=1
+		Attributs=33185
+		Basic=Majuscule(A01_PatientName)
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				Libellé=A01. Name
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=A02. Father’s name
+		Variable=A02_FatherName
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=Majuscule(A02_FatherName)
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				Libellé=A02. Father’s name
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=A03. Sex
+		Variable=A03_Sexe
+		Type=1
+		NbModalités=2
+		Modalités=Male ; Female
+		Pondérations= 0
+		Consigne=Mandatory response.
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				Libellé=A03. Sexe
+				Modalités=Male ; Female ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=A05. Date of birth
+		Variable=A041_DateOfBirth
+		Type=8
+		MinNombre=3652
+		Format=jj/mm/aaaa
+		Consigne=The response must be more than 01/01/1910.
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				Libellé=A04. Date of birth
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Age
+		Variable=A05_Age
+		Type=4
+		NbDécimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=33056
+		Basic=If  Not A041_DateOfBirth.EstNonRéponse Then€    A05_Age = (Now()- A041_DateOfBirth) / 365€EndIf
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				Libellé=Age
+				Modalités=mod-FR-1 ; mod-FR-2 ; mod-FR-3 ; mod-FR-4 ; mod-FR-5 ; mod-FR-6 ; mod-FR-7 ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=A052. Date of birth estimated
+		Variable=A052_DateOfBirthEstimated
+		Type=1
+		NbModalités=1
+		Modalités=Yes
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=A042. Date of birth estimated
+				Modalités=Yes ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=A06. Place of birth
+		Variable=A06_PlaceOfBirth
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=A06. Place of birth
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=A06a. Height
+		Variable=A06a_Height
+		Type=4
+		NbDécimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=A06a. Height
+				Modalités=mod-FR-1 ; mod-FR-2 ; mod-FR-3 ; mod-FR-4 ; mod-FR-5 ; mod-FR-6 ; mod-FR-7 ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=A07. Patient target
+		Variable=A07_PatientTarget
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LIST_A3_Target.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=33057
+		Basic=Majuscule(A07_PatientTarget)
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				Libellé=A07. Patient target
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=A07a. Marital status
+		Variable=A07a_MaritalStatus
+		Type=7
+		FichierCodes=LIST_A4_MaritalStatus.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=A07a. Marital status
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=A08. Level of education
+		Variable=A08_LevelEducation
+		Type=1
+		NbModalités=7
+		Modalités=Graduate(After grade 10) ; High(Grades 9 & 10) ; Illiterate ; Literate (read & write) ; Middle(Grades 5 to 8) ; Non Applicable(e.g. for babies) ; Primary (Grades 1 to 4)
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=A08. Level of education
+				Modalités=Graduate(After grade 10) ; High(Grades 9 & 10) ; Illiterate ; Literate (read & write) ; Middle(Grades 5 to 8) ; Non Applicable(e.g. for babies) ; Primary (Grades 1 to 4) ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=A09. Occupation
+		Variable=A09_Occupation
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=A09. Occupation
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=A10. Address (Township)
+		Variable=A10_AddressTownship
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LIST_A5_Township.dic
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				Libellé=A10. Address (Township)
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Township Name
+		Variable=A10_AddressTownshipName
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=A10_AddressTownshipName = A10_AddressTownship.CatCode(1)
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				Libellé=Township Name
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=A11. Geographical origin
+		Variable=A11_GeographicalOrigin
+		Type=7
+		FichierCodes=LIST_A6_GeographicalOrigin.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=A11. Geographical origin
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=A12. Distance to MDM clinic
+		Variable=A12_DistanceToMDMclinic
+		Type=4
+		NbDécimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=A12. Distance to MDM clinic
+				Modalités=mod-FR-1 ; mod-FR-2 ; mod-FR-3 ; mod-FR-4 ; mod-FR-5 ; mod-FR-6 ; mod-FR-7 ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=A13. Other ID
+		Variable=A13_OtherID
+		Type=6
+		NbLignes=2
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=A13. Other ID
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Counter
+		Variable=Counter
+		Type=4
+		NbDécimales=2
+		TypeNombre=2
+		Plan=1
+		Attributs=98592
+		VariableAutomatique=Compteur
+		Traductions
+			Traduction
+				Libellé=Counter
+				Modalités=mod-FR-1 ; mod-FR-2 ; mod-FR-3 ; mod-FR-4 ; mod-FR-5 ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Verify
+		Variable=Verify
+		Type=4
+		NbDécimales=2
+		TypeNombre=2
+		Plan=1
+		Attributs=33056
+		Basic=Verify = 1
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				Libellé=Verify
+				Modalités=mod-FR-1 ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Date of saving data
+		Variable=A20_DateOfSavingData
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=33056
+		VariableAutomatique=DateEnreg
+		Traductions
+			Traduction
+				Libellé=Date of saving data
+			Fin
+		Fin
+	Fin
+Fin
+Titres
+	Titre
+		Type=0
+		Libellé=A. SOCIO-DEMOGRAPHIC DATA
+		Première=4
+		Traductions
+			Traduction
+				Libellé=A. SOCIO-DEMOGRAPHIC DATA
+			Fin
+		Fin
+	Fin
+Fin
+TrisCroisés
+	TriCroisé
+		Variable1=16
+		Variable2=21
+		Plan=0
+	Fin
+Fin
+Options
+	GroupesActifs=1
+	RenvoisActifs=1
+	ControlesActifs=1
+Fin

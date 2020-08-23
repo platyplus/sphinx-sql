@@ -1,0 +1,21 @@
+Type Of Sample
+Anal smear
+Blood
+Body fluid
+CSF
+Ear swabs
+Eye swabs
+Genital ulcer swabs
+Nasal swabs
+Oral swabs
+PUS
+Skin scrubing
+Sputum
+Stool
+Urethral smear
+Urine
+Vaginal smear
+Lymph Node
+Ulcer
+Warts
+Other

@@ -1,0 +1,1311 @@
+version: 5104
+headers:
+  history: >-
+    5.0.0.81(Médecins du Mon;5.1.0.2(Médecins du Mond;5.0.0.64(Médecins du
+    Mon;5.1.0.3(Médecins du Mond;5.1.0.4(MEDECINS DU MOND;
+  language: en
+  title: METHADONE
+  pannelStage: 30
+  translations:
+    - language: fr
+      title: ART VISIT
+questions:
+  - label: MDM code (Patient ID)
+    variable: MDMcode
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: MDM code (Patient ID)
+  - label: A00. Registration date
+    variable: A00_RegistrationDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: A00. Registration date
+  - label: Name
+    variable: A01_PatientName
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: A01. Name
+  - label: Father’s name
+    variable: A02_FatherName
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: A02. Father’s name
+  - label: Sex
+    variable: A03_Sexe
+    type: options
+    nbOptions: 2
+    options:
+      - Male
+      - Female
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: A03. Sexe
+        options:
+          - Male
+          - Female
+  - label: Date of birth
+    variable: A041_DateOfBirth
+    type: date
+    min: 3652
+    format: jj/mm/aaaa
+    instructions: The response must be more than 01/01/1910.
+    plan: true
+    attributes: 160
+    translations:
+      - label: A04. Date of birth
+  - label: Age
+    variable: A05_Age
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    plan: true
+    attributes: 32
+    translations:
+      - label: A05. Age
+  - label: Patient target
+    variable: A07_PatientTarget
+    type: code
+    codesFile: LIST_A3_Target.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: A07. Patient target
+  - label: Medical care place
+    variable: MMT_PlaceOfMedicalCare
+    type: options
+    nbOptions: 5
+    options:
+      - Clinic
+      - HBC
+      - Outreach
+      - Hospital
+      - Specialist
+    weights: 0
+    instructions: Mandatory response.
+    plan: true
+    attributes: 161
+    translations:
+      - label: Medical care place
+        options:
+          - Clinic
+          - mod-FR-3
+          - mod-FR-4
+          - Hospital
+          - mod-FR-5
+  - label: Visit Date
+    variable: MMT_VisitDate
+    type: date
+    min: 32872
+    format: jj/mm/aaaa
+    instructions: "The response must be more than 01/01/1990.€\x81Mandatory response."
+    plan: true
+    attributes: 160
+    vbOptions: 1
+    translations:
+      - label: Visit Date
+  - label: PLH
+    variable: MMT_PLH
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Initial visit
+        options:
+          - 'Yes'
+          - 'No'
+  - label: MDM Staff 1
+    variable: MMT_MDMStaff1
+    type: code
+    codesFile: Sys/Dic_Lists/LIST_A2_MDMstaff.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: Methadone Nurse
+  - label: MDM Staff 2
+    variable: MMT_MDMStaff2
+    type: code
+    codesFile: Sys/Dic_Lists/LIST_A2_MDMstaff.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: MDM staff
+  - label: Height
+    variable: A06a_Height
+    type: number
+    nbDecimals: 2
+    numberType: 4
+    format: '###'
+    plan: true
+    attributes: 32
+    vb: "If (Not A06a_Height=0) and (C012_LbOrKg=\"Kg\") then€\x81C06_BMI=C011_BW/(A06a_Height*A06a_Height)€\x81elseif (Not A06a_Height=0) and (C012_LbOrKg=\"Lb\") then€\x81C06_BMI=(C011_BW/2.2)/(A06a_Height*A06a_Height)€\x81endif€\x81€\x81"
+    translations:
+      - label: Height
+  - label: BW
+    variable: MMT_BW
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    vb: "Height_m=A06a_Height/100€\x81Height_m2=Height_m*Height_m€\x81If (Not A06a_Height=0) and (C012_LbOrKg=\"Kg\") then€\x81C06_BMI=C011_BW/Height_m2€\x81elseif (Not A06a_Height=0) and (C012_LbOrKg=\"Lb\") then€\x81C06_BMI=(C011_BW/2.2)/Height_m2€\x81endif€\x81€\x81"
+    translations:
+      - label: C01. BW
+  - label: Lb / Kg
+    variable: MMT_LbOrKg
+    type: options
+    nbOptions: 2
+    options:
+      - Lb
+      - Kg
+    weights: 0
+    plan: true
+    attributes: 33056
+    autoVariable: Identique
+    translations:
+      - label: C012. Lb / Kg
+        options:
+          - Lb
+          - Kg
+  - label: BMI
+    variable: MMT_BMI
+    type: number
+    nbDecimals: 2
+    numberType: 4
+    plan: true
+    attributes: 33056
+    vb: "Height_m=A06a_Height/100€\x81Height_m2=Height_m*Height_m€\x81If (Not A06a_Height=0) and (MMT_LbOrKg=\"Kg\") then€\x81MMT_BMI=MMT_BW/Height_m2€\x81elseif (Not A06a_Height=0) and (MMT_LbOrKg=\"Lb\") then€\x81MMT_BMI=(MMT_BW/2.2)/Height_m2€\x81endif€\x81"
+    autoVariable: Basic
+    translations:
+      - label: C06. BMI
+  - label: Temperature
+    variable: MMT_Temperature
+    type: number
+    nbDecimals: 2
+    numberType: 4
+    format: '####'
+    plan: true
+    attributes: 32
+    translations:
+      - label: C05. Temperature
+  - label: °C/F
+    variable: MMT_CorF
+    type: options
+    nbOptions: 2
+    options:
+      - °C
+      - °F
+    weights: 0
+    plan: true
+    attributes: 33056
+    autoVariable: Identique
+    translations:
+      - label: C051. °C/F
+        options:
+          - °C
+          - °F
+  - label: BP
+    variable: MMT_BP
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: C04. BP
+  - label: BP
+    variable: MMT_BP1
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: C042. BP
+  - label: Pulse
+    variable: MMT_Pulse
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: C03. Pulse
+  - label: RR
+    variable: MMT_RR
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: C02. RR
+  - label: 'Pupil Size:'
+    variable: MMT_PupilSize
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'C08. Pupil Site:'
+  - label: 'IP starting date :'
+    variable: MMT_IPStartingDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: G01. Patient partner has been tested
+        options:
+          - 'Yes'
+  - label: 'IP duration:'
+    variable: MMT_IPDuration
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'IP duration:'
+  - label: Dose prescribed at the end of IP
+    variable: MMT_DosePrescribed
+    type: code
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: Dose prescribed at the end of IP
+  - label: MP starting date
+    variable: MMT_MPStartingDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: MP starting date
+  - label: Current Methadone Dose
+    variable: MMT_CurrentMMTDose
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Actual dose
+  - label: Start Date of Current Dose
+    variable: MMT_StartDateOfCurrentDose
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: Since
+  - label: Marital Status
+    variable: A07a_MaritalStatus
+    type: code
+    codesFile: Sys/Dic_Lists/LIST_A4_MaritalStatus.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: Marital Status
+  - label: Contact Name1
+    variable: MMT_ContactName1
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: B03. Contact Name
+  - label: Contact Name2
+    variable: MMT_ContactName2
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: B03. Contact Name
+  - label: Remark
+    variable: MMT_Remark
+    type: open
+    nbLines: 3
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: D03. Remark
+  - label: Treatment other than methadone
+    variable: MMT_TreatmentOtherThanMethadone
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: H01. Patient is taking medicines
+        options:
+          - 'Yes'
+          - mod-FR-2
+  - label: 'If yes, sepcify'
+    variable: MMT_IfYesSpecify
+    type: multipleOptions
+    nbOptions: 3
+    options:
+      - ART
+      - anti TB
+      - Others
+    maxResponses: 3
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: H02. Which medicines?
+        options:
+          - Anti-Retrovirals
+          - Anti-Tuberculosis
+          - Other
+  - label: Other
+    variable: MMT_IfYesOther
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: H026. Other
+  - label: CurrentDrugUse
+    variable: MMT_CurrentDrugUse
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: H01. Patient is taking medicines
+        options:
+          - 'Yes'
+          - mod-FR-2
+  - label: Type of Drugs
+    variable: MMT_TypeOfDrugs
+    type: multipleOptions
+    nbOptions: 7
+    options:
+      - Alcohol
+      - Amphetamine
+      - Benzodiazepine
+      - Cannabis
+      - Ecstasy
+      - Heroin
+      - Opium
+    maxResponses: 7
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: Type of Drugs
+        options:
+          - Alcohol
+          - Amphetamine
+          - Benzodiazepine
+          - Cannabis
+          - Ecstasy
+          - Heroin
+          - Opium
+  - label: Last Use
+    variable: MMT_ALC_LastUse
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    vbOptions: 1
+    translations:
+      - label: ALC Last Use
+  - label: '#Time/Day'
+    variable: MMT_ALC_Time
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '########'
+    plan: true
+    attributes: 32
+    translations:
+      - label: '#Time/Day'
+  - label: '#Days/Week'
+    variable: MMT_ALC_Days
+    type: code
+    codesFile: Sys/Dic_Lists/CurrDrug_DaysWeek.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: MMT_AMP_Days
+  - label: Last Use
+    variable: MMT_AMP_LastUse
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: Last Use
+  - label: '#Time/Day'
+    variable: MMT_AMP_Time
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '########'
+    plan: true
+    attributes: 32
+    translations:
+      - label: '#Time/Day'
+  - label: '#Days/Week'
+    variable: MMT_AMP_Days
+    type: code
+    codesFile: Sys/Dic_Lists/CurrDrug_DaysWeek.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: MMT_AMP_Days
+  - label: Way of Use
+    variable: MMT_AMP_WayOfUse
+    type: code
+    codesFile: Sys/Dic_Lists/WayOfUse.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: Way of Use
+  - label: Last Use
+    variable: MMT_BEN_LastUse
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    vbOptions: 1
+    translations:
+      - label: BEN Last Use
+  - label: '#Time/Day'
+    variable: MMT_BEN_Time
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '########'
+    plan: true
+    attributes: 32
+    translations:
+      - label: '#Time/Day'
+  - label: '#Days/Week'
+    variable: MMT_BEN_Days
+    type: code
+    codesFile: Sys/Dic_Lists/CurrDrug_DaysWeek.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: MMT_BEN_Days
+  - label: Way of Use
+    variable: MMT_BEN_WayOfUse
+    type: code
+    codesFile: Sys/Dic_Lists/WayOfUse.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vbOptions: 1
+    translations:
+      - label: Way of Use
+  - label: Last Use
+    variable: MMT_CAN_LastUse
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: Last Use
+  - label: '#Time/Day'
+    variable: MMT_CAN_Time
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '########'
+    plan: true
+    attributes: 32
+    translations:
+      - label: '#Time/Day'
+  - label: '#Days/Week'
+    variable: MMT_CAN_Days
+    type: code
+    codesFile: Sys/Dic_Lists/CurrDrug_DaysWeek.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: MMT_CAN_Days
+  - label: Way of Use
+    variable: MMT_CAN_WayOfUse
+    type: code
+    codesFile: Sys/Dic_Lists/WayOfUse.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: Way of Use
+  - label: Last Use
+    variable: MMT_ECS_LastUse
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: Last Use
+  - label: '#Time/Day'
+    variable: MMT_ECS_Time
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '########'
+    plan: true
+    attributes: 32
+    translations:
+      - label: '#Time/Day'
+  - label: '#Days/Week'
+    variable: MMT_ECS_Days
+    type: code
+    codesFile: Sys/Dic_Lists/CurrDrug_DaysWeek.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: MMT_ECS_Days
+  - label: Way of Use
+    variable: MMT_ECS_WayOfUse
+    type: code
+    codesFile: Sys/Dic_Lists/WayOfUse.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: Way of Use
+  - label: Last Use
+    variable: MMT_HER_LastUse
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    vbOptions: 1
+    translations:
+      - label: HER Last Use
+  - label: '#Time/Day'
+    variable: MMT_HER_Time
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '########'
+    plan: true
+    attributes: 32
+    translations:
+      - label: '#Time/Day'
+  - label: '#Days/Week'
+    variable: MMT_HER_Days
+    type: code
+    codesFile: Sys/Dic_Lists/CurrDrug_DaysWeek.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: MMT_HER_Days
+  - label: Way of Use
+    variable: MMT_HER_WayOfUse
+    type: code
+    codesFile: Sys/Dic_Lists/WayOfUse.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vbOptions: 1
+    translations:
+      - label: Way of Use
+  - label: Last Use
+    variable: MMT_OPI_LastUse
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    vbOptions: 1
+    translations:
+      - label: OPI Last Use
+  - label: '#Time/Day'
+    variable: MMT_OPI_Time
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '########'
+    plan: true
+    attributes: 32
+    translations:
+      - label: '#Time/Day'
+  - label: '#Days/Week'
+    variable: MMT_OPI_Days
+    type: code
+    codesFile: Sys/Dic_Lists/CurrDrug_DaysWeek.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: MMT_OPI_Days
+  - label: Way of Use
+    variable: MMT_OPI_WayOfUse
+    type: code
+    codesFile: Sys/Dic_Lists/WayOfUse.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vbOptions: 1
+    translations:
+      - label: Way of Use
+  - label: 'If you inject, did you share needle or syringe:'
+    variable: MMT_ShareNeedleOrSyringe
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: F02. Did you share needle/syringe in last
+        options:
+          - 'Yes'
+          - 'No'
+  - label: 'Psychiatric history:'
+    variable: MMT_Psychiatrichistory
+    type: open
+    nbLines: 5
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: K01. TB history
+        options:
+          - Patient has been treated for TB before
+          - Patient is currently being evaluated for TB
+          - Patient is still on TB medication
+          - TB regimen contain RIF
+  - label: Withdrawal Signs
+    variable: MMT_Symptoms_WithdrawalSigns
+    type: multipleOptions
+    nbOptions: 16
+    options:
+      - Nausea/vomiting
+      - Diarrhea
+      - Muscles/Joints pain
+      - Yawning
+      - Lacrimation
+      - Rhinorrhoea
+      - Anxiety
+      - Restlessness
+      - Excessive sweeting
+      - Piloerection
+      - Irritability
+      - Insomnia
+      - Drug seeking behaviour
+      - Dreamt of drug use
+      - Abdominal cramps
+      - Dysphoric mood
+    maxResponses: 16
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: M011. Constitutional
+        options:
+          - Fatigue
+          - Fever
+          - Visual problems(new)
+          - Weakness
+          - mod-FR-9
+          - Weight loss
+          - mod-FR-11
+          - mod-FR-12
+          - mod-FR-10
+          - Appetite loss
+          - mod-FR-13
+          - mod-FR-14
+          - mod-FR-15
+          - mod-FR-16
+          - Night sweats
+          - mod-FR-10
+  - label: Intoxication Signs
+    variable: MMT_Symptoms_IntoxicationSigns
+    type: multipleOptions
+    nbOptions: 5
+    options:
+      - Pin point pupils
+      - Sleepiness
+      - Nodding
+      - Psychomotor slowing
+      - Respiratory depression
+    maxResponses: 5
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: N12. Other2
+        options:
+          - Normal
+          - Abnormal
+          - Not done
+          - mod-FR-4
+          - mod-FR-5
+  - label: Other Side Effects
+    variable: MMT_Symptoms_OtherSideEffects
+    type: multipleOptions
+    nbOptions: 3
+    options:
+      - Constipation
+      - Decrease salivation
+      - Sexual dysfunction
+    maxResponses: 3
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: N03. Lymph nodes
+        options:
+          - Normal
+          - Not done
+          - mod-FR-6
+  - label: 'Hours of comfort with current dose (n.hours/24h) :'
+    variable: MMT_HoursOfComfortWithCurrentDose
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: M09. Additional comments
+  - label: Diagnosis
+    variable: MMT_Diagnosis
+    type: open
+    nbLines: 2
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: P01. Psychiatric Diagnosis
+  - label: Additional comments
+    variable: MMT_AdditionalComments
+    type: open
+    nbLines: 3
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Q05. Additional comments
+  - label: Treatment
+    variable: Treatment
+    type: open
+    nbLines: 2
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Treatment
+  - label: Medicine name
+    variable: MMT_M0111_MedicineName
+    type: code
+    codesFile: Sys/Dic_Lists/Methadone_Medicines_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0111. Medicine name
+  - label: Dosage
+    variable: MMT_M0112_Dosage
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0112. Dosage
+  - label: Frequency
+    variable: MMT_M0113_Frequency
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0113. Frequency
+  - label: Number days
+    variable: MMT_M0114_NumberDays
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0114. Number days
+  - label: Medicine name
+    variable: MMT_M0121_MedicineName
+    type: code
+    codesFile: Sys/Dic_Lists/Methadone_Medicines_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0121. Medicine name
+  - label: Dosage
+    variable: MMT_M0122_Dosage
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0122. Dosage
+  - label: Frequency
+    variable: MMT_M0123_Frequency
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0123. Frequency
+  - label: Number days
+    variable: MMT_M0124_NumberDays
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0124. Number days
+  - label: Medicine name
+    variable: MMT_M0131_MedicineName
+    type: code
+    codesFile: Sys/Dic_Lists/Methadone_Medicines_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0131. Medicine name
+  - label: Dosage
+    variable: MMT_M0132_Dosage
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0132. Dosage
+  - label: Frequency
+    variable: MMT_M0133_Frequency
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0133. Frequency
+  - label: Number days
+    variable: MMT_M0134_NumberDays
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0134. Number days
+  - label: Medicine name
+    variable: MMT_M0211_MedicineName
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0211. Medicine name
+  - label: Dosage
+    variable: MMT_M0212_Dosage
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0212. Dosage
+  - label: Frequency
+    variable: MMT_M0213_Frequency
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0213. Frequency
+  - label: Number days
+    variable: MMT_M0214_NumberDays
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0214. Number days
+  - label: Medicine name
+    variable: MMT_M0221_MedicineName
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0221. Medicine name
+  - label: Dosage
+    variable: MMT_M0222_Dosage
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0222. Dosage
+  - label: Frequency
+    variable: MMT_M0223_Frequency
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0223. Frequency
+  - label: Number days
+    variable: MMT_M0224_NumberDays
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0224. Number days
+  - label: Medicine name
+    variable: MMT_M0231_MedicineName
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0231. Medicine name
+  - label: Dosage
+    variable: MMT_M0232_Dosage
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0232. Dosage
+  - label: Frequency
+    variable: MMT_M0233_Frequency
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0233. Frequency
+  - label: Number days
+    variable: MMT_M0234_NumberDays
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0234. Number days
+  - label: Plan of next visit
+    variable: MMT_PlanOfNextVisit
+    type: open
+    nbLines: 3
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Plan of next visit
+  - label: Is it adequate
+    variable: MMT_IsItAdequate
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: S021. Refferal made today
+        options:
+          - 'Yes'
+          - 'No'
+  - label: 'If no, specify reason'
+    variable: MMT_IfNoSpecify
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'N011. If no, specify reason'
+  - label: Plan to modify
+    variable: MMT_PlanToModify
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: S021. Refferal made today
+        options:
+          - 'Yes'
+          - 'No'
+  - label: 'If yes, specify'
+    variable: MMT_Plan_IfYesSpecify
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'N021. If yes, specify'
+  - label: Date of next visit
+    variable: MMT_DateNextVisit
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: T3. Date of next visit
+  - label: With
+    variable: MMT_With
+    type: multipleOptions
+    nbOptions: 2
+    options:
+      - Methadone Nurse
+      - Methadone Doctor
+    maxResponses: 2
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: S021. Refferal made today
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Refferal made today
+    variable: MMT_Refferal
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: S021. Refferal made today
+        options:
+          - 'Yes'
+          - 'No'
+  - label: If yes
+    variable: MMT_ReferralsMadeTodayYes
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: O031.If yes
+  - label: Conclusion
+    variable: MMT_Conclusion
+    type: open
+    nbLines: 4
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vbOptions: 1
+    translations:
+      - label: Conclusion2
+  - label: Verify patient
+    variable: Verify
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    plan: true
+    attributes: 32
+    translations:
+      - label: Verify patient
+  - label: Last registration date
+    variable: LastRegistrationDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 33056
+    autoVariable: DateEnreg
+    translations:
+      - label: Last registration date
+  - label: Key
+    variable: Key
+    type: open
+    nbLines: 2
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vbOptions: 1
+    vb: Key = MDMcode & MMT_VisitDate
+    autoVariable: Basic
+    translations:
+      - label: Key
+titles:
+  - type: label
+    label: SOCIO-DEMOGRAPHIC DATA
+    first: 1
+    translations:
+      - label: A. SOCIO-DEMOGRAPHIC DATA
+  - type: label
+    label: VISIT_METHADONE NURSE
+    first: 8
+    translations:
+      - label: B. VISIT
+  - type: label
+    label: Vital sign
+    first: 13
+    translations:
+      - label: C. Vital sign
+  - type: label
+    label: Methadone History
+    first: 24
+    translations:
+      - label: Methadone History
+  - type: label
+    label: Social Situation
+    first: 30
+    translations:
+      - label: D. Social And Familial Situation
+  - type: label
+    label: Medications
+    first: 34
+    translations:
+      - label: H. Medications
+  - type: label
+    label: Behaviour
+    first: 37
+    translations:
+      - label: F. Behaviour
+  - type: label
+    label: >-
+      Psychiatric History (use complete psychiatric assessment form if suspicion
+      of current psychiatric disease)
+    first: 67
+    translations:
+      - label: K. TB history
+  - type: label
+    label: Symptoms
+    first: 68
+    translations:
+      - label: N. Physical Exam
+  - type: label
+    label: Diagnosis
+    first: 72
+    translations:
+      - label: P. Assessment
+  - type: label
+    label: Treatment
+    first: 74
+    translations:
+      - label: R. Treatment
+  - type: label
+    label: Psychiatric treatment
+    first: 75
+    translations:
+      - label: R01. ART treatment
+  - type: label
+    label: Other treatment
+    first: 87
+    translations:
+      - label: R02. Other treatment
+  - type: label
+    label: Dosing of Methadone
+    first: 100
+    translations:
+      - label: N. Dosing of Methadone
+  - type: label
+    label: End of visit
+    first: 104
+    translations:
+      - label: T. End of visit
+  - type: label
+    label: System Items
+    first: 109
+    translations:
+      - label: System Items
+options:
+  groups: true
+  resend: true
+  controls: true

@@ -1,0 +1,1628 @@
+version: 5104
+headers:
+  history: >-
+    5.0.0.81(Médecins du Mon;5.1.0.2(Médecins du Mond;5.0.0.64(Médecins du
+    Mon;5.1.0.4(MEDECINS DU MOND;5.1.0.4(Médecins du Mond;
+  language: en
+  title: ART Adherence
+  pannelStage: 10
+  translations:
+    - language: fr
+      title: ART VISIT
+questions:
+  - label: MDM code (Patient ID)
+    variable: MDMcode
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: "V_sexe = \"1\"€\x81If A03_Sexe In \"Female\" Then€\x81V_sexe = \"2\"€\x81EndIf€\x81if A07_PatientTarget In \"DU\" Then€\x81        V_PT=\"D\"€\x81\telse€\x81\t\tif A07_PatientTarget In \"DUP\" Then€\x81\t\t\tV_PT=\"P\"€\x81\t\t\telse€\x81\t\t\t\tif A07_PatientTarget In \"IDU\" Then€\x81\t\t\t\t\tV_PT=\"I\"€\x81\t\t\t\t\telse€\x81\t\t\t\t\t\tif A07_PatientTarget In \"IDUP\" Then€\x81\t\t\t\t\t\t\tV_PT=\"P\"€\x81\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\tif A07_PatientTarget In \"MSM\" Then€\x81\t\t\t\t\t\t\t\t\tV_PT=\"M\"€\x81\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"MSMP\" Then€\x81\t\t\t\t\t\t\t\t\t\t\tV_PT=\"P\"€\x81\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"SW\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"S\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"SWP\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"P\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"CH\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"C\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"GP\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"G\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"Other Partner\" Then €\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"P\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"Other High Risk Group\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"O\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV=PT=\"\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tend if€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tend if€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tend if€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\tendif€\x81\t\t\t\tendif€\x81\t\t\t\t€\x81\t\tendif€\x81endif€\x81MDMcode = MDMlocation.Catcode(3) & V_PT & V_sexe & SerialNumber"
+    translations:
+      - label: MDM code (Patient ID)
+  - label: A00. Registration date
+    variable: A00_RegistrationDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: A00. Registration date
+  - label: Patient Name
+    variable: A01_PatientName
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: A01. Name
+  - label: Father’s name
+    variable: A02_FatherName
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: A02. Father’s name
+  - label: A03. Sex
+    variable: A03_Sexe
+    type: options
+    nbOptions: 2
+    options:
+      - Male
+      - Female
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: A03. Sexe
+        options:
+          - Male
+          - Female
+  - label: Date of birth
+    variable: A041_DateOfBirth
+    type: date
+    min: 3652
+    format: jj/mm/aaaa
+    instructions: The response must be more than 01/01/1910.
+    plan: true
+    attributes: 160
+    translations:
+      - label: A04. Date of birth
+  - label: Age
+    variable: A05_Age
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    vb: "If  Not A041_DateOfBirth.EstNonRéponse Then€\x81    A05_Age = (A00_RegistrationDate - A041_DateOfBirth) / 365€\x81EndIf"
+    translations:
+      - label: Age
+        options:
+          - mod-FR-1
+          - mod-FR-2
+          - mod-FR-3
+          - mod-FR-4
+          - mod-FR-5
+          - mod-FR-6
+          - mod-FR-7
+  - label: A07. Patient target
+    variable: A07_PatientTarget
+    type: code
+    codesFile: >-
+      D:/2012 Data/Error for ADH in MGG/24.5.12 ART
+      ADH/Sys/Dic_Lists/LIST_A3_Target.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: Majuscule(A07_PatientTarget)
+    translations:
+      - label: A07. Patient target
+  - label: Medical care place
+    variable: ADH_PlaceOfMedicalCare
+    type: options
+    nbOptions: 6
+    options:
+      - Clinic
+      - HBC
+      - Outreach
+      - Hospital
+      - Specialist
+      - Phone Contact
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Medical care place
+        options:
+          - Clinic
+          - HBC
+          - mod-FR-5
+          - Hospital
+          - Specialist
+          - mod-FR-6
+  - label: Visit
+    variable: ADH_Visit
+    type: options
+    nbOptions: 3
+    options:
+      - Initial Visit
+      - Follow up
+      - Assessment
+    weights: 0
+    instructions: Mandatory response.
+    plan: true
+    attributes: 161
+    translations:
+      - label: A042. Date of birth estimated
+        options:
+          - Date of birth estimated
+          - mod-FR-2
+          - mod-FR-3
+  - label: Visit_Assessment
+    variable: ADH_Visit_Assessment
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: 'jj/mm/aaaa hh:nn:ss'
+    plan: true
+    attributes: 32
+    translations:
+      - label: Visit_Assessment
+  - label: Reason of visit
+    variable: ADH_ReasonOfVisit
+    type: multipleOptions
+    nbOptions: 2
+    options:
+      - ART
+      - TB
+    maxResponses: 2
+    weights: 0
+    instructions: "More than one response can be selected.€\x81Mandatory response."
+    plan: true
+    attributes: 161
+    translations:
+      - label: Medical care place
+        options:
+          - Hospital
+          - Specialist
+  - label: Visit date
+    variable: ADH_VisitDate
+    type: date
+    min: 32872
+    format: jj/mm/aaaa
+    instructions: "The response must be more than 01/01/1990.€\x81Mandatory response."
+    plan: true
+    attributes: 161
+    translations:
+      - label: Visit date
+  - label: Appointment
+    variable: ADH_Appointment
+    type: options
+    nbOptions: 3
+    options:
+      - On Time
+      - Early
+      - Late
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: B09.Dehydration
+        options:
+          - 'Yes'
+          - mod-FR-2
+          - mod-FR-3
+  - label: Counselor
+    variable: ADH_Counselor
+    type: code
+    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/LIST_A2_MDMstaff.dic'
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: MDM staff
+  - label: Marital Status
+    variable: A07a_MaritalStatus
+    type: code
+    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/LIST_A4_MaritalStatus.dic'
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: Marital Status
+  - label: No of children
+    variable: ADH_NoOfChildren
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    plan: true
+    attributes: 32
+    translations:
+      - label: No of children
+  - label: Accommodation
+    variable: ADH_Accommodation
+    type: options
+    nbOptions: 2
+    options:
+      - Stable
+      - Homeless
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: B032. Lb / Kg
+        options:
+          - Lb
+          - Kg
+  - label: If Stable
+    variable: ADH_Accomo_IfStable
+    type: options
+    nbOptions: 2
+    options:
+      - With Family
+      - With Friends
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: B09.Dehydration
+        options:
+          - 'Yes'
+          - mod-FR-2
+  - label: Occupation
+    variable: ADH_Occupation
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: B09.Dehydration
+        options:
+          - 'Yes'
+          - mod-FR-2
+  - label: 'If yes, specify'
+    variable: ADH_Occupation_IfYes
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'If yes, specify'
+  - label: Financial situation
+    variable: ADH_FinancialSituation
+    type: options
+    nbOptions: 2
+    options:
+      - OK
+      - Difficult
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: M011. Constitutional
+        options:
+          - mod-FR-13
+          - mod-FR-14
+  - label: Level of education
+    variable: ADH_LevelOfEducation
+    type: options
+    nbOptions: 7
+    options:
+      - Graduate (After grade 10)
+      - High (Grades 9 & 10)
+      - Middle (Grades 5 to 8)
+      - Primary (Grades 1 to 4)
+      - Illiterate
+      - Literate (read & write)
+      - Non Applicable (e.g. for babies)
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: M011. Constitutional
+        options:
+          - mod-FR-13
+          - mod-FR-14
+          - mod-FR-5
+          - mod-FR-7
+          - mod-FR-15
+          - mod-FR-4
+          - mod-FR-6
+  - label: Remark
+    variable: ADH_Social_Remark
+    type: open
+    nbLines: 2
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Remark
+  - label: Does the patient have a care taker?
+    variable: ADH_PatientHasCareTaker
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: G03. Patient has disclosed status
+        options:
+          - 'Yes'
+          - mod-FR-2
+  - label: 'If yes, name'
+    variable: ADH_IfYesName
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'R012. If other, specify'
+  - label: 'If no, why?'
+    variable: ADH_IfNoWhy
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'R012. If other, specify'
+  - label: Relationship to patient
+    variable: ADH_RelationshipToPatient_I
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'R012. If other, specify'
+  - label: In same household?
+    variable: ADH_InSameHouseHold_I
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: G03. Patient has disclosed status
+        options:
+          - 'Yes'
+          - mod-FR-2
+  - label: Did care taker attend clinic with patient?
+    variable: ADH_CareTakerAttendClinic_I
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: G03. Patient has disclosed status
+        options:
+          - 'Yes'
+          - mod-FR-2
+  - label: ART starting date
+    variable: ADH_ARTStartDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: ART starting date
+  - label: ART Stop Date
+    variable: ADH_ARTStopDate1
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: ART Stop Date
+  - label: ART Restarting Date
+    variable: ADH_ARTRestartingDate1
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: ART Restarting Date
+  - label: ART Stop Date
+    variable: ADH_ARTStopDate2
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: ART Stop Date
+  - label: ART Restarting Date
+    variable: ADH_ARTRestartingDate2
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: ART Restarting Date
+  - label: ART Stop Date
+    variable: ADH_ARTStopDate3
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: ART Stop Date
+  - label: ART Restarting Date
+    variable: ADH_ARTRestartingDate3
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: ART Restarting Date
+  - label: ART Stop Date
+    variable: ADH_ARTStopDate4
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: ART Stop Date
+  - label: ART Restarting Date
+    variable: ADH_ARTRestartingDate4
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: ART Restarting Date
+  - label: ART Stop Date
+    variable: ADH_ARTStopDate5
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: ART Stop Date
+  - label: ART Restarting Date
+    variable: ADH_ARTRestartingDate5
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: ART Restarting Date
+  - label: TB Starting Date
+    variable: ADH_TBStartDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: TB Starting Date
+  - label: TB Stop Date
+    variable: ADH_TBStopDate1
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: TB Stop Date
+  - label: TB Restarting Date
+    variable: ADH_TBRestartingDate1
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: TB Restarting Date
+  - label: TB Stop Date
+    variable: ADH_TBStopDate2
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: TB Stop Date
+  - label: TB Restarting Date
+    variable: ADH_TBRestartingDate2
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: TB Restarting Date
+  - label: TB Stop Date
+    variable: ADH_TBStopDate3
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: TB Stop Date
+  - label: TB Restarting Date
+    variable: ADH_TBRestartingDate3
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: TB Restarting Date
+  - label: TB Stop Date
+    variable: ADH_TBStopDate4
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: TB Stop Date
+  - label: TB Restarting Date
+    variable: ADH_TBRestartingDate4
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: TB Restarting Date
+  - label: TB Stop Date
+    variable: ADH_TBStopDate5
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: TB Stop Date
+  - label: TB Restarting Date
+    variable: ADH_TBRestartingDate5
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: TB Restarting Date
+  - label: >-
+      Ask the patient: "Many people have problems taking pills, what problems
+      are you having?
+    variable: ADH_AdherenceProblem
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: >-
+          Ask the patient: "Many people have problems taking pills, what
+          problems are you having?
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Problem for Adherence
+    variable: ADH_Problem
+    type: multipleOptions
+    nbOptions: 3
+    options:
+      - Social
+      - Medical
+      - Miscellaneous
+    maxResponses: 3
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: Problem for Adherence
+        options:
+          - Social
+          - Medical
+          - Miscellaneous
+  - label: Social
+    variable: ADH_AdhSocialProblem
+    type: multipleOptions
+    nbOptions: 7
+    options:
+      - Care taker
+      - Disclosure
+      - Unfortable to take pill in front of others
+      - Patient sold pills
+      - Patient is in jail
+      - Food insecurity
+      - Transportation problem to come to clinic
+    maxResponses: 7
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: Social
+        options:
+          - Care taker
+          - Disclosure
+          - Unfortable to take pill in front of others
+          - Patient sold pills
+          - Patient is in jail
+          - Food insecurity
+          - Transportation problem to come to clinic
+  - label: Medical
+    variable: ADH_AdhMedicalProblem
+    type: multipleOptions
+    nbOptions: 5
+    options:
+      - Pill burden
+      - Difficulty in swallowing
+      - Alcohol/drugs
+      - Psychological disorder
+      - Other medical problems
+    maxResponses: 5
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: Medical
+        options:
+          - Pill burden
+          - Difficulty in swallowing
+          - Alcohol/drugs
+          - Psychological disorder
+          - Other medical problems
+  - label: Medical Other
+    variable: ADH_AdhMedicalProblemOther
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Medical Other
+  - label: Miscellaneous
+    variable: ADH_AdhMiscellaneousProblem
+    type: multipleOptions
+    nbOptions: 7
+    options:
+      - Forgot
+      - Travelling
+      - Patient ran out of medication
+      - Clinician ran out of medication
+      - Patient lost his/her pill
+      - Patient did not want to take pill
+      - Paitent is disorganized
+    maxResponses: 7
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: Miscellaneous
+        options:
+          - Forgot
+          - Travelling
+          - Patient ran out of medication
+          - Clinician ran out of medication
+          - Patient lost his/her pill
+          - Patient did not want to take pill
+          - Paitent is disorganized
+  - label: Comment
+    variable: ADH_Comment
+    type: open
+    nbLines: 4
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: >-
+          Ask the patient: "Many people have problems taking pills, what
+          problems are you having?
+  - label: No side effects
+    variable: ADH_NoSideEffects
+    type: options
+    nbOptions: 1
+    options:
+      - No side effects
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: No side effects
+        options:
+          - No side effects
+  - label: Side Effects
+    variable: ADH_SideEffects
+    type: multipleOptions
+    nbOptions: 3
+    options:
+      - Severe side effects
+      - Long term side effects
+      - Short term/general
+    maxResponses: 3
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: Side Effects
+        options:
+          - Severe side effects
+          - Long term side effects
+          - Short term/general
+  - label: Severe side effects
+    variable: ADH_SevereSideEffects
+    type: multipleOptions
+    nbOptions: 4
+    options:
+      - Skin rash
+      - jaundice
+      - Abdominal pain
+      - Shortness of breath
+    maxResponses: 4
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: Severe side effects
+        options:
+          - Skin rash
+          - jaundice
+          - Abdominal pain
+          - Shortness of breath
+  - label: Long term side effects
+    variable: ADH_LongTermSideEffects
+    type: multipleOptions
+    nbOptions: 2
+    options:
+      - Lipodystrophy
+      - Tingling and numbness
+    maxResponses: 2
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: Long term side effects
+        options:
+          - Lipodystrophy
+          - Tingling and numbness
+  - label: Short term/general
+    variable: ADH_ShortTermGeneral
+    type: multipleOptions
+    nbOptions: 7
+    options:
+      - Nausea/Vomiting
+      - Diarrhea
+      - Headache
+      - Dizziness
+      - Strange dreams
+      - Weakness
+      - Other
+    maxResponses: 7
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: Short term/general
+        options:
+          - Nausea/Vomiting
+          - Diarrhea
+          - Headache
+          - Dizziness
+          - Strange dreams
+          - Weakness
+          - Other
+  - label: SideEffect_Other
+    variable: ADH_ShortTermSideEffects_Other
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: SideEffect_Other
+  - label: Severe Side effects
+    variable: ADH_SevereSE
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Severe Side effects
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Refer to Doctor
+    variable: ADH_ReferToDoctor
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Refer to Doctor
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Number of missed doses within last 7 days?
+    variable: ADH_NoOfMissedDosesLast7days
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: Number of missed doses last month
+  - label: Number of missed doses within last 30 days?
+    variable: ADH_NoOfMissedDosesLast30days
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: Number of missed doses within last 30 days?
+  - label: Total doses within last 30 days?
+    variable: ADH_TotalDoses
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: Total doses within last 30 days?
+  - label: Adherence within last 30 days?
+    variable: ADH_AdherenceWithinLast30Days
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '#####'
+    plan: true
+    attributes: 33056
+    vb: >-
+      ADH_AdherenceWithinLast30Days = ((ADH_TotalDoses -
+      ADH_NoOfMissedDosesLast30days)/ADH_TotalDoses) * 100
+    autoVariable: Basic
+    translations:
+      - label: Adherence within last 30 days?
+  - label: Number of doses found (excluding extra doses)
+    variable: ADH_DosesFound
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: Number of doses found (excluding extra doses)
+  - label: Number of doses patient should have
+    variable: ADH_DosesShouldHave
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: Number of doses patient should have
+  - label: Extra doses provided
+    variable: ADH_ExtraDosesProvided
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: Extra doses provided
+  - label: dose for
+    variable: ADH_DoseFor
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: dose for
+  - label: >-
+      Adherence level since last visit: "how did you respect the doctor's
+      prescription?"
+    variable: ADH_AdherenceLevelSinceLastVisit
+    type: options
+    nbOptions: 4
+    options:
+      - Perfectly
+      - Almost
+      - Half
+      - Not at all
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: M011. Constitutional
+        options:
+          - mod-FR-13
+          - mod-FR-14
+          - mod-FR-15
+          - mod-FR-4
+  - label: Social-familial situation
+    variable: ADH_SocialFamilialsituation
+    type: options
+    nbOptions: 2
+    options:
+      - STABLE
+      - PROBLEM
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: G03. Patient has disclosed status
+        options:
+          - 'Yes'
+          - mod-FR-2
+  - label: 'If problem, specify'
+    variable: ADH_Social_IfProblem
+    type: open
+    nbLines: 2
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'If problem, specify'
+  - label: Care taker
+    variable: ADH_CareTaker
+    type: options
+    nbOptions: 3
+    options:
+      - STABLE
+      - CHANGE
+      - PROBLEM
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: M011. Constitutional
+        options:
+          - mod-FR-13
+          - mod-FR-14
+          - mod-FR-15
+  - label: 'If Change, Name of care taker'
+    variable: ADH_CareTaker_IfChange
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'If Change, Name of buddy :'
+  - label: In same household
+    variable: ADH_InSameHouseHold_F
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: M011. Constitutional
+        options:
+          - Fatigue
+          - Fever
+  - label: Relationship to patient
+    variable: ADH_RelationshipToPatient_F
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'Relationship to patient :'
+  - label: Did care taker attend to clinic with the patient
+    variable: ADH_CareTakerAttendClinic_F
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: M011. Constitutional
+        options:
+          - Fatigue
+          - Fever
+  - label: 'If probolem, specify'
+    variable: ADH_CareTakerAttendClinic_IfProblem
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'If probolem, specify'
+  - label: Psychological disorder
+    variable: ADH_PsychologicalDisorder
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: G03. Patient has disclosed status
+        options:
+          - 'Yes'
+          - mod-FR-2
+  - label: 'If yes, specify'
+    variable: ADH_Psycho_IfYes
+    type: open
+    nbLines: 2
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'If yes, specify'
+  - label: Current drug use
+    variable: ADH_CurrentDrugUse
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Current drug use
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Drug
+    variable: ADH_Drug
+    type: multipleOptions
+    nbOptions: 7
+    options:
+      - Alcohol
+      - Ampheatamine
+      - Benzodiazepine
+      - Cannabis
+      - Ecstasy
+      - Herion
+      - Opium
+    maxResponses: 7
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: Drug
+        options:
+          - Alcohol
+          - Ampheatamine
+          - Benzodiazepine
+          - Cannabis
+          - Ecstasy
+          - Herion
+          - Opium
+  - label: Last use
+    variable: ADH_AlcoholLastUse
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: Last use
+  - label: '#Time/Day'
+    variable: ADH_AlcoholTimeDay
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '##########'
+    plan: true
+    attributes: 32
+    translations:
+      - label: '#Time/day'
+  - label: '#Days/Week'
+    variable: ADH_AlcoholDaysWeek
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '##########'
+    plan: true
+    attributes: 32
+    translations:
+      - label: '#Days/Week'
+  - label: Way of use
+    variable: ADH_AlcoholWayOfUse
+    type: code
+    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/WayOfUse.dic'
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: Way of use
+  - label: Last use
+    variable: ADH_AmpheataminelLastUse
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: Last use
+  - label: '#Time/Day'
+    variable: ADH_AmpheatamineTimeDay
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '##########'
+    plan: true
+    attributes: 32
+    translations:
+      - label: '#Time/day'
+  - label: '#Days/Week'
+    variable: ADH_AmpheatamineDaysWeek
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '##########'
+    plan: true
+    attributes: 32
+    translations:
+      - label: ADH_AmpheatamineDaysWeek
+  - label: Way of use
+    variable: ADH_AmpheatamineWayOfUse
+    type: code
+    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/WayOfUse.dic'
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: ADH_AmpheatamineWayOfUse
+  - label: Last Use
+    variable: ADH_DiazepineLastUse
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: Last Use
+  - label: '#Time/Day'
+    variable: ADH_DiazepineTimeDay
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '##########'
+    plan: true
+    attributes: 32
+    translations:
+      - label: '#Time/day'
+  - label: '#Days/Week'
+    variable: ADH_DiazepineDaysWeek
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '##########'
+    plan: true
+    attributes: 32
+    translations:
+      - label: ADH_DiazepineDaysWeek
+  - label: Way of use
+    variable: ADH_DiazepineWayOfUse
+    type: code
+    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/WayOfUse.dic'
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: ADH_DiazepineWayOfUse
+  - label: Last use
+    variable: ADH_CannabisLastUse
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: Last use
+  - label: '#Time/Day'
+    variable: ADH_CannabisTimeDay
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '##########'
+    plan: true
+    attributes: 32
+    translations:
+      - label: '#Time/day'
+  - label: '#Days/Week'
+    variable: ADH_CannabisDaysWeek
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '##########'
+    plan: true
+    attributes: 32
+    translations:
+      - label: ADH_CannabisDaysWeek
+  - label: Way of use
+    variable: ADH_CannabisWayOfUse
+    type: code
+    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/WayOfUse.dic'
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: ADH_CannabisWayOfUse
+  - label: Last use
+    variable: ADH_EcstasyLastUse
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: Last use
+  - label: '#Time/Day'
+    variable: ADH_EcstasyTimeDay
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '##########'
+    plan: true
+    attributes: 32
+    translations:
+      - label: '#Time/day'
+  - label: '#Days/Week'
+    variable: ADH_EsctasyDaysWeek
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '##########'
+    plan: true
+    attributes: 32
+    translations:
+      - label: ADH_EsctasyDaysWeek
+  - label: Way of use
+    variable: ADH_EsctasyWayOfUse
+    type: code
+    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/WayOfUse.dic'
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: ADH_EsctasyWayOfUse
+  - label: Last use
+    variable: ADH_HerionLastUse
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: Last use
+  - label: '#Time/Day'
+    variable: ADH_HerionTimeDay
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '##########'
+    plan: true
+    attributes: 32
+    translations:
+      - label: '#Time/day'
+  - label: '#Days/Week'
+    variable: ADH_HerionDaysWeek
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '##########'
+    plan: true
+    attributes: 32
+    translations:
+      - label: ADH_HerionDaysWeek
+  - label: Way of use
+    variable: ADH_HerionWayOfUse
+    type: code
+    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/WayOfUse.dic'
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: ADH_HerionWayOfUse
+  - label: Last use
+    variable: ADH_OpiumLastUse
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: Last use
+  - label: '#Time/Day'
+    variable: ADH_OpiumTimeDay
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '##########'
+    plan: true
+    attributes: 32
+    translations:
+      - label: '#Time/day'
+  - label: '#Days/Week'
+    variable: ADH_OpiumDaysWeek
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: ADH_OpiumDaysWeek
+  - label: Way of use
+    variable: ADH_OpiumWayOfUse
+    type: code
+    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/WayOfUse.dic'
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: ADH_OpiumWayOfUse
+  - label: 'If you inject, did you share needle or syringe within last 30 days?'
+    variable: ADH_DidYouShareNeedleSyringe
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'If you inject, did you share needle or syringe within last 30 days?'
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Herbal Medicines
+    variable: ADH_HerbalMedicines
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: G03. Patient has disclosed status
+        options:
+          - 'Yes'
+          - mod-FR-2
+  - label: Methadone_is_taking_currently?
+    variable: ADH_Methadone_is_taking_currently?
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    instructions: Mandatory response.
+    plan: true
+    attributes: 161
+    translations:
+      - label: Methadone_is_taking_currently?
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Methadone_starting_date
+    variable: ADH_Methadone_starting_date
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: Methadone_starting_date
+  - label: Conclusion about adherence
+    variable: ADH_Conclusion
+    type: options
+    nbOptions: 3
+    options:
+      - Good
+      - Bad
+      - Not Sure
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: G03. Patient has disclosed status
+        options:
+          - 'Yes'
+          - mod-FR-2
+          - mod-FR-3
+  - label: 'Suggestions : actions to be taken'
+    variable: ADH_Suggestions
+    type: open
+    nbLines: 4
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'Suggestions : actions to be taken'
+  - label: Check List
+    variable: ADH_CheckList
+    type: multipleOptions
+    nbOptions: 8
+    options:
+      - Reminders and alarms to take pills checked
+      - Calendar checked
+      - Potential barriers to adherence and solutions
+      - Adherence plan and life plan
+      - Importance of attending all appointments
+      - Proper storage of drugs
+      - Role of care taker
+      - Change address
+    maxResponses: 8
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: Check List
+        options:
+          - Reminders and alarms to take pills checked
+          - Calendar checked
+          - Potential barriers to adherence and solutions
+          - Adherence plan and life plan
+          - Importance of attending all appointments
+          - Proper storage of drugs
+          - Role of care taker
+          - Change address
+  - label: Next Appointment Date
+    variable: ADH_NextAppointmentDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: ART NextVisitDate
+  - label: Verify patient
+    variable: Verify
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    plan: true
+    attributes: 32
+    translations:
+      - label: Verify patient
+  - label: Last registration date
+    variable: LastRegistrationDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 33056
+    autoVariable: DateEnreg
+    translations:
+      - label: Last registration date
+  - label: Order of the observations before sorting
+    variable: ORDER
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: 'jj/mm/aaaa hh:nn:ss'
+    plan: true
+    attributes: 32
+    translations:
+      - label: Order of the observations before sorting
+titles:
+  - type: label
+    label: SOCIO-DEMOGRAPHIC DATA
+    first: 1
+    translations:
+      - label: A. SOCIO-DEMOGRAPHIC DATA
+  - type: label
+    label: VISIT
+    first: 8
+    translations:
+      - label: B. VISIT
+  - type: label
+    label: FAMILY SITUATION
+    first: 15
+    translations:
+      - label: FAMILY SITUATION
+  - type: label
+    label: SOCIAL SITUATION
+    first: 17
+    translations:
+      - label: SOCIAL SITUATION
+  - type: label
+    label: CARE TAKER (Initial)
+    first: 24
+    translations:
+      - label: TREATMENT BUDDY
+  - type: label
+    label: TREATMENT
+    first: 30
+    translations:
+      - label: TREATMENT
+  - type: label
+    label: ADHERENCE
+    first: 52
+    translations:
+      - label: ADHERENCE
+  - type: label
+    label: ADHERENCE_PROBLEM
+    first: 53
+    translations:
+      - label: ADHERENCE_PROBLEM
+  - type: label
+    label: ADHERENCE_SIDE EFFECTS
+    first: 59
+    translations:
+      - label: ADHERENCE_SIDE EFFECTS
+  - type: label
+    label: ADHERENCE_i
+    first: 65
+    translations:
+      - label: ADHERENCE_i
+  - type: label
+    label: SOCIAL-FAMILIAL SITUATION
+    first: 76
+    translations:
+      - label: SOCIAL-FAMILIAL SITUATION
+  - type: label
+    label: CARE TAKER
+    first: 78
+    translations:
+      - label: CARE TAKER
+  - type: label
+    label: PSYCHOLOGICAL DISORDER
+    first: 84
+    translations:
+      - label: PSYCHOLOGICAL DISORDER
+  - type: label
+    label: BEHAVIOUR
+    first: 86
+    translations:
+      - label: BEHAVIOUR
+  - type: label
+    label: HERBAL MEDICINES
+    first: 117
+    translations:
+      - label: HERBAL MEDICINES
+  - type: label
+    label: METHADONE
+    instructions: METHADONE
+    first: 118
+    translations:
+      - label: METHADONE
+        instructions: METHADONE
+  - type: label
+    label: CONCLUSION ABOUT ADHERENCE
+    first: 120
+    translations:
+      - label: CONCLUSION ABOUT ADHERENCE
+  - type: label
+    label: SUGGESTIONS
+    first: 121
+    translations:
+      - label: SUGGESTIONS
+  - type: label
+    label: COUNSELOR CHECK-LIST
+    first: 122
+    translations:
+      - label: COUNSELOR CHECK-LIST
+  - type: label
+    label: System Items
+    first: 124
+    translations:
+      - label: System Items
+options:
+  groups: true
+  resend: true
+  controls: true

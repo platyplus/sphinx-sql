@@ -1,0 +1,531 @@
+version: 5104
+headers:
+  history: >-
+    5.0.0.81(Médecins du Mon;5.1.0.2(Médecins du Mond;5.0.0.64(Médecins du
+    Mon;5.1.0.4(MEDECINS DU MOND;
+  language: en
+  title: General Information
+  pannelStage: 10
+  translations:
+    - language: fr
+      title: ART VISIT
+questions:
+  - label: MDM code (Patient ID)
+    variable: MDMcode
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: "V_sexe = \"1\"€\x81If A03_Sexe In \"Female\" Then€\x81V_sexe = \"2\"€\x81EndIf€\x81if A07_PatientTarget In \"DU\" Then€\x81        V_PT=\"D\"€\x81\telse€\x81\t\tif A07_PatientTarget In \"DUP\" Then€\x81\t\t\tV_PT=\"P\"€\x81\t\t\telse€\x81\t\t\t\tif A07_PatientTarget In \"IDU\" Then€\x81\t\t\t\t\tV_PT=\"I\"€\x81\t\t\t\t\telse€\x81\t\t\t\t\t\tif A07_PatientTarget In \"IDUP\" Then€\x81\t\t\t\t\t\t\tV_PT=\"P\"€\x81\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\tif A07_PatientTarget In \"MSM\" Then€\x81\t\t\t\t\t\t\t\t\tV_PT=\"M\"€\x81\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"MSMP\" Then€\x81\t\t\t\t\t\t\t\t\t\t\tV_PT=\"P\"€\x81\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"SW\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"S\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"SWP\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"P\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"CH\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"C\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"GP\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"G\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"Other Partner\" Then €\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"P\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"Other High Risk Group\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"O\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV=PT=\"\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tend if€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tend if€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tend if€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\tendif€\x81\t\t\t\tendif€\x81\t\t\t\t€\x81\t\tendif€\x81endif€\x81MDMcode = MDMlocation.Catcode(3) & V_PT & V_sexe & SerialNumber"
+    translations:
+      - label: MDM code (Patient ID)
+  - label: Registration date
+    variable: A00_RegistrationDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: A00. Registration date
+  - label: Name
+    variable: A01_PatientName
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: A01. Name
+  - label: Father’s name
+    variable: A02_FatherName
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: A02. Father’s name
+  - label: A03. Sex
+    variable: A03_Sexe
+    type: options
+    nbOptions: 2
+    options:
+      - Male
+      - Female
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: A03. Sexe
+        options:
+          - Male
+          - Female
+  - label: Date of birth
+    variable: A041_DateOfBirth
+    type: date
+    min: 3652
+    format: jj/mm/aaaa
+    instructions: The response must be more than 01/01/1910.
+    plan: true
+    attributes: 160
+    translations:
+      - label: A04. Date of birth
+  - label: Age
+    variable: A05_Age
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    vb: "If  Not A041_DateOfBirth.EstNonRéponse Then€\x81    A05_Age = (A00_RegistrationDate - A041_DateOfBirth) / 365€\x81EndIf"
+    translations:
+      - label: Age
+        options:
+          - mod-FR-1
+          - mod-FR-2
+          - mod-FR-3
+          - mod-FR-4
+          - mod-FR-5
+          - mod-FR-6
+          - mod-FR-7
+  - label: A07. Patient target
+    variable: A07_PatientTarget
+    type: code
+    codesFile: Sys/Dic_Lists/LIST_A3_Target.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: Majuscule(A07_PatientTarget)
+    translations:
+      - label: A07. Patient target
+  - label: Medical care place
+    variable: GI_PlaceOfMedicalCare
+    type: options
+    nbOptions: 5
+    options:
+      - Clinic
+      - HBC
+      - Outreach
+      - Hospital
+      - Specialist
+    weights: 0
+    instructions: Mandatory response.
+    plan: true
+    attributes: 161
+    translations:
+      - label: Medical care place
+        options:
+          - Clinic
+          - HBC
+          - mod-FR-5
+          - Hospital
+          - Specialist
+  - label: Visit date
+    variable: GI_VisitDate
+    type: date
+    min: 32872
+    format: jj/mm/aaaa
+    instructions: "The response must be more than 01/01/1990.€\x81Mandatory response."
+    plan: true
+    attributes: 161
+    translations:
+      - label: Visit date
+  - label: Marital Status
+    variable: A07a_MaritalStatus
+    type: code
+    codesFile: Sys/Dic_Lists/LIST_A4_MaritalStatus.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: Marital Status
+  - label: Current work place
+    variable: B04_CurrentWorkPlace
+    type: code
+    codesFile: Sys/Dic_Lists/LIST_A7_WorkPlace.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: B06. Current work place
+  - label: Height
+    variable: A06a_Height
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    vb: "If (Not A06a_Height=0) and (C012_LbOrKg=\"Kg\") then€\x81C06_BMI=C011_BW/(A06a_Height*A06a_Height)€\x81elseif (Not A06a_Height=0) and (C012_LbOrKg=\"Lb\") then€\x81C06_BMI=(C011_BW/2.2)/(A06a_Height*A06a_Height)€\x81endif€\x81€\x81"
+    translations:
+      - label: Height
+        options:
+          - val = 32767
+  - label: BW
+    variable: GI_BW
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    vb: "Height_m=A06a_Height/100€\x81Height_m2=Height_m*Height_m€\x81If (Not A06a_Height=0) and (C012_LbOrKg=\"Kg\") then€\x81C06_BMI=C011_BW/Height_m2€\x81elseif (Not A06a_Height=0) and (C012_LbOrKg=\"Lb\") then€\x81C06_BMI=(C011_BW/2.2)/Height_m2€\x81endif€\x81€\x81"
+    translations:
+      - label: C01. BW
+        options:
+          - val = 32767
+  - label: Lb / Kg
+    variable: GI_LbOrKg
+    type: options
+    nbOptions: 2
+    options:
+      - Lb
+      - Kg
+    weights: 0
+    plan: true
+    attributes: 33056
+    autoVariable: Identique
+    translations:
+      - label: C012. Lb / Kg
+        options:
+          - Lb
+          - Kg
+  - label: BMI
+    variable: GI_BMI
+    type: number
+    nbDecimals: 2
+    numberType: 4
+    format: '########'
+    plan: true
+    attributes: 33056
+    vb: "Height_m = A06a_Height / 100€\x81Height_m2 = Height_m * Height_m€\x81If ( Not A06a_Height = 0) And (GI_LbOrKg = \"Kg\") Then€\x81    GI_BMI = GI_BW / Height_m2€\x81ElseIf ( Not A06a_Height = 0) And (GI_LbOrKg = \"Lb\") Then€\x81    GI_BMI = (GI_BW / 2.2) / Height_m2€\x81EndIf€\x81€\x81"
+    autoVariable: Basic
+    translations:
+      - label: C06. BMI
+  - label: Temperature
+    variable: GI_Temperature
+    type: number
+    nbDecimals: 2
+    numberType: 4
+    format: '####'
+    plan: true
+    attributes: 32
+    translations:
+      - label: C05. Temperature
+        options:
+          - Less than -
+          - From - to -
+          - From - to -
+          - From - to -
+          - From - to -
+          - From - to -
+          - '- and more'
+  - label: °C/F
+    variable: GI_CorF
+    type: options
+    nbOptions: 2
+    options:
+      - °C
+      - °F
+    weights: 0
+    plan: true
+    attributes: 33056
+    autoVariable: Identique
+    translations:
+      - label: C051. °C/F
+        options:
+          - °C
+          - °F
+  - label: BP
+    variable: GI_BP
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: C04. BP
+        options:
+          - val = 32767
+  - label: BP
+    variable: GI_BP1
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: C042. BP
+        options:
+          - val = 32767
+  - label: RR
+    variable: GI_RR
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: C02. RR
+        options:
+          - val = 32767
+  - label: Pulse
+    variable: GI_Pulse
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: C03. Pulse
+        options:
+          - val = 32767
+  - label: Reproductive health
+    variable: GI_ReproductiveHealth
+    type: options
+    nbOptions: 2
+    options:
+      - Patient is pregnant
+      - Patient is breastfeeding
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: D011. Reproductive health
+        options:
+          - Patient is pregnant
+          - Patient is breastfeeding
+  - label: Contraception
+    variable: GI_Contraception
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: D02. Contraception
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Type of contraception
+    variable: GI_ContraceptionType
+    type: multipleOptions
+    nbOptions: 6
+    options:
+      - Condoms
+      - Oral contraceptive pills
+      - Diaphragm/cervical cap
+      - Injectable/implanted hormones
+      - Tubal ligation/hysterectomy
+      - Other
+    maxResponses: 6
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: D022. Type of contraception
+        options:
+          - Condoms
+          - Oral contraceptive pills
+          - Diaphragm/cervical cap
+          - Injectable/implanted hormones
+          - Tubal ligation/hysterectomy
+          - Other
+  - label: 'if other, specify'
+    variable: GI_OtherContraceptionType
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'D023. if other, specify'
+  - label: Drug taken on
+    variable: GI_DrugTakenOn
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: D024. Drug taken on
+  - label: LMP date
+    variable: GI_LMPdate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: D031. LMP date
+  - label: Parity
+    variable: GI_Parity
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '#####'
+    plan: true
+    attributes: 32
+    translations:
+      - label: Parity
+  - label: Condom use for last sex
+    variable: GI_CondomUseForLastSex
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: F01. Condom use for last sex
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Number clients last working day
+    variable: GI_NumberClientsLastWorkingDay
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '#####'
+    plan: true
+    attributes: 32
+    translations:
+      - label: F03. Number clients last working day
+        options:
+          - val = 32767
+  - label: Did you share needle/syringe in last injection?
+    variable: GI_ShareNeedleOrSyringeInLast
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: F02. Did you share needle/syringe in last
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Did you share needle/syringe in last month?
+    variable: GI_ShareNeedleOrSyringeInLastMonth
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Did you share needle/syringe in last month?
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Did you share needle/syringe in last 6 months?
+    variable: GI_ShareNeedleOrSyringeInLast6Months
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Did you share needle/syringe in last 6 months?
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Remarks
+    variable: GI_Remarks
+    type: open
+    nbLines: 5
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: D04. Remarks
+  - label: Verify patient
+    variable: Verify
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    plan: true
+    attributes: 32
+    translations:
+      - label: Verify patient
+        options:
+          - val = 32767
+  - label: Last registration date
+    variable: LastRegistrationDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 33056
+    autoVariable: DateEnreg
+    translations:
+      - label: Last registration date
+  - label: GI ART Key
+    variable: Key
+    type: open
+    nbLines: 2
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vbOptions: 1
+    vb: Key = MDMcode & GI_VisitDate
+    autoVariable: Basic
+    translations:
+      - label: test
+titles:
+  - type: label
+    label: A. SOCIO-DEMOGRAPHIC DATA
+    first: 1
+    translations:
+      - label: A. SOCIO-DEMOGRAPHIC DATA
+  - type: label
+    label: Vital sign
+    first: 12
+    translations:
+      - label: C. Vital sign
+  - type: label
+    label: Reproductive health
+    first: 22
+    translations:
+      - label: D. Reproductive health
+  - type: label
+    label: Contraception
+    first: 23
+    translations:
+      - label: D02. Contraception
+  - type: label
+    label: LMP
+    first: 27
+    translations:
+      - label: D03. LMP
+  - type: label
+    label: Behaviour
+    first: 29
+    translations:
+      - label: F. Behaviour
+  - type: label
+    label: System Items
+    first: 35
+    translations:
+      - label: System Items
+options:
+  groups: true
+  resend: true
+  controls: true

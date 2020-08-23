@@ -1,0 +1,7 @@
+MCC Software (Errors List) Mar 19 2008
+
+1.  Run time error occurs when delete the DIC activitiy ( not select any row)
+2.  After reporting, when click Outreach DU/IDU click, run time error occurs.
+3.  In the Advocacy form, Advocacy date is not current date.
+4.  In the prevention report, 2.4.9.9. section is not value (corncerning  DU outreach)
+5.  In the DIC attendence when we do not fill all text boxes, we can not save.

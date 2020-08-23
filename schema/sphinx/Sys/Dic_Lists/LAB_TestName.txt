@@ -1,0 +1,87 @@
+Test Name=Type of Test=Normal Value
+Albumin=ChemicalPathology=3.5 - 5.0
+ASO=ChemicalPathology=<200 IU/L
+AFB(ZN stain)=Microbiology=
+AFP=Tumour Markers=0.000 - 8.50 IU/ml
+Anti HBs antibody=Serology & Immunology= 
+Anti HCV antibody=Serology & Immunology= 
+Anti HIV antibody=Serology & Immunology= 
+AST/SGOT=ChemicalPathology=7 - 41 u/l
+Aurimine=Microbiology= 
+Biopsy=Histopathology= 
+Bleeding time (BT)=Hematology
+CD4=Serology & Immunology= 
+CK-MB=Biochemistry=1.0 - 16.0
+Coomb's test=Haematology= 
+CP(HB)=Haematology=M: 13 - 17 / F: 12 - 14 g/dl
+CP(RBC)=Haematology=4,000,000,000,000 - 5,600,000,000,000 /L
+CP(PLETLET)=Haematology=150,000- 400,000 /L
+CP(WBC)=Haematology=4000 - 11000 IU/L
+CP=Haematology= 
+Clotting time (CT)=Hematology=
+Creatinine=ChemicalPathology=44 - 124 mmol/L
+CSF(RE)=Microbiology= 
+CT Scan head=Radiology= 
+CXR(AP)=Radiology=
+CXR(PA)=Radiology= 
+CXR(Lateral)=Radiology= 
+ECG=Radiology= 
+ECHO=Radiology= 
+Electrolyde(Bicarbonate)=ChemicalPathology= 
+Electrolyde(Chloride)=ChemicalPathology=98 - 107 mmol/L
+Electrolyde(Potassium)=ChemicalPathology=3.6 - 5 mmol/L
+Electrolyde(Sodium)=ChemicalPathology=137 - 147 mmol/L
+ESR=Haematology= 
+G6PD Screening=Haematology= 
+Giemsa=Microbiology= 
+Glucose(Fasting)=ChemicalPathology=3.3 - 6.4 mmol/L
+Glucose(Random)=ChemicalPathology=3.5 - 10.0 mmol/L
+GRAM Stain=Microbiology= 
+Hb=Haematology= 
+HBs Ag=Serology & Immunology= 
+HCV=Serology & Immunology= 
+HIV Viral Load=Microbiology=500/cc
+India Ink=Microbiology=
+Inorganic Phosphorus=ChemcalPathology=0.81 - 1.4 mmol/l
+Iodine=Microbiology=
+INR=Hematology= 
+KOH=Microbiology= 
+LFT(Alk phos)=ChemicalPathology=38 - 126 U/L
+LFT(Bilirubin)=ChemicalPathology=0.2 - 0.8 mg/dl
+LFT(SGPT/ALT)=ChemicalPathology=11 - 66 U/L
+LFT(Globulin)=ChemicalPathology=20 - 35 mg/dl
+LFT(GGT/rGT)=ChemicalPathology=9 - 58 u/L
+Lipid profile(Chol)=ChemicalPathology=0 - 200 mg/dl
+Lipid profile(HDL)=ChemicalPathology=40 - 160 mg/dl
+Lipid profile(LDL)=ChemicalPathology=0 - 35 mg/dl
+Lipid profile(VLDL)=ChemicalPatology=
+Lipid profile(Trigl)=ChemicalPathology=0 - 160 mg/dl
+Lipid profile(C:H ratio)=ChemicalPathology=
+Modified ZN=Microbiology= 
+N/S=Microbiology= 
+PCP(Toludine blue)=Microbiology= 
+Prothrombin Time=Haematology= 
+Pus(C&S)=Microbiology= 
+Retic count=Haematology= 
+Serum Amylase=ChemicalPathology=30 - 110  U/L
+serum Calcium=ChemicalPathology=2.2 -2.6 mmol/l
+Sputum(C&S)=Microbiology= 
+Stool RE=Microbiology= 
+Stool For Crypto=Microbiology= 
+Syphilis (ICT)=Serology & Immunology= 
+Syphilis (RPR)=Serology & Immunology= 
+T3=Hormone=0.801 - 1.90
+T4=Hormone=5.53 - 12.8
+TSH=Hormone=0.465 - 4.68
+T+DP(Albumin)=ChemicalPathology=3.5 - 5.0 g/dl
+T+DP(Total Protein)=ChemicalPathology=6.0 - 8.0 g/dl
+Urea(BUN)=ChemicalPathology=3.3 - 7.1 mmol/L
+Uric Acid=ChemicalPathology=2.5 - 7 mg/dl
+Urine RE=Microbiology= 
+USG(abdomen)=Radiology= 
+USG(chest)=Radiology= 
+USG(L/N)=Radiology= 
+Widal Test=Immunology=
+XR(abdomen)=Radiology= 
+XRay=Radiology=
+Cryptococcal Ag test=Simple agglutination=

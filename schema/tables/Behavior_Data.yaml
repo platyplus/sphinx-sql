@@ -1,0 +1,116 @@
+version: 5104
+headers:
+  history: 5.1.0.4(MEDECINS DU MOND;
+  language: en
+  title: Behavior Data
+  period: 2013
+  organisation: MDM
+  pannelStage: 10
+questions:
+  - label: MDM code
+    variable: MDMcode
+    type: open
+    nbLines: 1
+    nbCharLines: 20
+    plan: true
+    attributes: 32
+  - label: Name
+    variable: A01_PatientName
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+  - label: Sex
+    variable: A03_Sexe
+    type: options
+    nbOptions: 2
+    options:
+      - Male
+      - Female
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: Age
+    variable: A05_Age
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    plan: true
+    attributes: 32
+  - label: Patient Target
+    variable: A07_PatientTarget
+    type: code
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+  - label: Date
+    variable: Beh_Date
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+  - label: PLH
+    variable: Beh_PLH
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: Have you ever taken STI treatment in last 3 months?
+    variable: Beh_TakenSTITreatmentinLast3Months
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: Did you have sex in last 6 months?
+    variable: Beh_DidYouHaveSexInLast6Months
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: 'If Yes, did you use condom at last sex?'
+    variable: Beh_UseCondomAtLastSex
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: Did you inject in last 6 months?
+    variable: Beh_DidYouInjectInLast6Months
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+  - label: 'If Yes, did you share needle/syringe in last injection?'
+    variable: Beh_ShareNeedleSyringeInLastInjection
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+options:
+  groups: true
+  resend: true
+  controls: true

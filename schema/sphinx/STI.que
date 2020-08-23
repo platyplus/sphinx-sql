@@ -1,0 +1,1892 @@
+Version=5104
+EntÍte
+	Historique=5.0.0.81(MÈdecins du Mon;5.1.0.2(MÈdecins du Mond;5.0.0.64(MÈdecins du Mon;5.1.0.4(MEDECINS DU MOND;
+	Langue=EN
+	Titre=STI VISIT
+	StadePanneau=11
+	Traductions
+		Traduction
+			Langue=FR
+			Titre=ART VISIT
+		Fin
+	Fin
+Fin
+Questions
+	Question
+		LibellÈ=MDM code (Patient ID)
+		Variable=MDMcode
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=MDM code (Patient ID)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Registration date
+		Variable=A00_RegistrationDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=A00. Registration date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Name
+		Variable=A01_PatientName
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=A01. Name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Fatherís name
+		Variable=A02_FatherName
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=A02. Fatherís name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Sex
+		Variable=A03_Sexe
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Male ; Female
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Basic=A03_Sex = A03_Sexe
+		Traductions
+			Traduction
+				LibellÈ=A03. Sexe
+				ModalitÈs=Male ; Female ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Date of birth
+		Variable=A041_DateOfBirth
+		Type=8
+		MinNombre=3652
+		Format=jj/mm/aaaa
+		Consigne=The response must be more than 01/01/1910.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=A04. Date of birth
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Age
+		Variable=A05_Age
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=A05. Age
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Patient target
+		Variable=A07_PatientTarget
+		Type=7
+		FichierCodes=M:\Myanmar_MDM_Clinic\Sys\Dic_Lists\LIST_A3_Target.dic
+		NbCarCode=25
+		Consigne=Mandatory response.
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				LibellÈ=A07. Patient target
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Visit date
+		Variable=STI_VisitDate
+		Type=8
+		MinNombre=32872
+		Format=jj/mm/aaaa
+		Consigne=The response must be more than 01/01/1990.ÄÅMandatory response.
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				LibellÈ=Visit date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=MDM staff
+		Variable=STI_MDMstaff
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LIST_A2_MDMstaff.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=MDM staff
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=STI New Patient
+		Variable=STI_NewPatient
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Consigne=Mandatory response.
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				LibellÈ=Initial visit
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Previous SIT Treated
+		Variable=STI_Background_PreviousSITTreated
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=G01. Patient partner has been tested
+				ModalitÈs=Yes ; mod-FR-2 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Symptoms
+		Variable=STI_Symptoms
+		Type=2
+		NbModalitÈs=12
+		ModalitÈs=Score throat ; Vaginal Discharge ; Lower abdominal Pain ; Dysuria ; Genital ulcer ; Anal discharge ; Itchiness ; Swelling over genital area ; Genital warts ; Scrotal Swelling ; Urethral Discharge ; Other
+		MaxRÈponses=12
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=M011. Constitutional
+				ModalitÈs=mod-FR-13 ; Fatigue ; Appetite loss ; Visual problems(new) ; Night sweats ; mod-FR-12 ; Fever ; mod-FR-11 ; Weight loss ; mod-FR-10 ; mod-FR-14 ; mod-FR-10 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Score throat
+		Variable=STI_Symptoms_ScoreThroat
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Score throat
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=VaginalDOpt
+		Variable=STI_Symptoms_VaginalDOpt
+		Type=2
+		NbModalitÈs=3
+		ModalitÈs=Aboundant ; Foul Smell ; Colour
+		MaxRÈponses=3
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=M011. Constitutional
+				ModalitÈs=Night sweats ; Fever ; Fatigue ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=VDischargeDescription
+		Variable=STI_Symptoms_VDischarge
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		OptionsBasic=1
+		Traductions
+			Traduction
+				LibellÈ=VDischargeDescription
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=LowAbdoOpt
+		Variable=STI_Symptoms_LowAbdoOpt
+		Type=2
+		NbModalitÈs=2
+		ModalitÈs=Fever ; Dyspareunia
+		MaxRÈponses=2
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=M011. Constitutional
+				ModalitÈs=Fatigue ; Fever ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=LowAbdoPain
+		Variable=STI_Symptoms_LowAbdoPain
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M082. If other, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dysuria
+		Variable=STI_Symptoms_Dysuria
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M042. If other, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=UlcerOpt
+		Variable=STI_Symptoms_UlcerOpt
+		Type=2
+		NbModalitÈs=4
+		ModalitÈs=Painful ; Single ; Multiple ; Vesicles
+		MaxRÈponses=4
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=M011. Constitutional
+				ModalitÈs=Fatigue ; Fever ; Night sweats ; mod-FR-4 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Ulcer
+		Variable=STI_Symptoms_Ulcer
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M032. If other, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Anal Discharge
+		Variable=STI_Symptoms_AnalDischarge
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Anal Discharge
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=ItchinessDescription
+		Variable=STI_Symptoms_ItchinessDescription
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ItchinessDuration
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Swelling
+		Variable=STI_Symptoms_Swelling
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Swelling
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Warts
+		Variable=STI_Symptoms_Warts
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M072. If other, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Scrotal
+		Variable=STI_Symptoms_Scrotal
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M082. If other, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Urethral Discharge
+		Variable=STI_Symptoms_UrethralDischarge
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Urethral Discharge
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Other
+		Variable=STI_Symptoms_Other
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=K102_WeightLoss
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Comment
+		Variable=STI_Symptoms_Comment
+		Type=6
+		NbLignes=4
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Comment
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Physical Exam
+		Variable=STI_PhysicalExam
+		Type=2
+		NbModalitÈs=16
+		ModalitÈs=Oral ulcer ; Pharyngitis ; Skin rash ; Tenderness over lower abdomen ; Vulva erythema ; Vaginal discharge ; Cervical discharge ; Adnexal tenderness ; Cervical motion tenderness ; Inguinal bubo ; Genital Ulcer ; Genital warts ; Urethral discharge ; Anal discharge ; Scrotal swelling ; Other
+		MaxRÈponses=16
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=M011. Constitutional
+				ModalitÈs=mod-FR-13 ; mod-FR-14 ; mod-FR-19 ; Fatigue ; Fever ; Weight loss ; Appetite loss ; mod-FR-10 ; Other ; mod-FR-16 ; Weakness ; mod-FR-17 ; mod-FR-16 ; mod-FR-15 ; mod-FR-11 ; mod-FR-12 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Oral Ulcer Opt
+		Variable=STI_PExam_OralUlcerOpt
+		Type=2
+		NbModalitÈs=3
+		ModalitÈs=Single ; Multiple ; Tenderness
+		MaxRÈponses=3
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=Oral Ulcer
+				ModalitÈs=Single ; Multiple ; Tenderness ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Pyaryngitis
+		Variable=STI_PExam_Pyaryngitis
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Pyaryngitis
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Skin Rash
+		Variable=STI_PExam_SkinRash
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=Skin Rash Opt
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Tenderness Over Lower Abdomen
+		Variable=STI_PExam_TendernessOverLowerAbdomen
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=N012. Comment (if abnormal describe)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Vulva
+		Variable=STI_PExam_Vulva
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Vulva
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=VaginalD
+		Variable=STI_PExam_VaginalD
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=VaginalD
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=CervicalD
+		Variable=STI_PExam_CervicalD
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=CervicalDOpt
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Adnexal tenderness
+		Variable=STI_PExam_AdnexalTenderness
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Adnexal tenderness
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Cervical motion tenderness
+		Variable=STI_PExam_CervicalMotionTenderness
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Cervical motion tenderness
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Inguinal bubo
+		Variable=STI_PExam_InguinalBubo
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Inguinal bubo
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=GenitalUlcer
+		Variable=STI_PExam_GenitalUlcer
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=GenitalUlcer
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Warts
+		Variable=STI_PExam_Warts
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=WartsOpt
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Urethral discharge
+		Variable=STI_PExam_UrethralDischarge
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Urethral discharge
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Anal discharge
+		Variable=STI_PExam_AnalDischarge
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Anal discharge
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Scrotal
+		Variable=STI_PExam_Scrotal
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=ScrotalOpt
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Other
+		Variable=STI_PExam_Other
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=N13. Additional comments
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Comment
+		Variable=STI_PExam_Comment
+		Type=6
+		NbLignes=2
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Comment
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Pregnancy Test
+		Variable=STI_Test_PregnancyTest
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R011. Allergy
+				ModalitÈs=Pen ; Sulfa ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Test
+		Variable=STI_PExam_Test
+		Type=2
+		NbModalitÈs=9
+		ModalitÈs=Sniff Test ; pH ; Vaginal Smear ; Male urethral Smear ; Anal Smear ; Ulcer Smear ; Throat Swab ; Chlamydia Ag ; RPR
+		MaxRÈponses=9
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=Test
+				ModalitÈs=Sniff Test ; pH ; Vaginal Smear ; Male urethral Smear ; Anal Smear ; Ulcer Smear ; Throat Swab ; Chlamydia Ag ; RPR ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Sniff Test:
+		Variable=STI_Test_SniffTest
+		Type=2
+		NbModalitÈs=2
+		ModalitÈs=Smell + ; Smell --
+		MaxRÈponses=2
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=Do you want
+				ModalitÈs=To change Treatment Plan ; To contunue the Current treatment ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=PH
+		Variable=STI_Test_PH
+		Type=2
+		NbModalitÈs=2
+		ModalitÈs=<=4.5 ; >4.5
+		MaxRÈponses=2
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=R011. Allergy
+				ModalitÈs=Pen ; Sulfa ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Urethral Smear
+		Variable=STI_Test_UrethralSmear
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R011. Allergy
+				ModalitÈs=Pen ; Sulfa ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Vaginal Smear
+		Variable=STI_Test_VaginalSmear
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Do you want
+				ModalitÈs=To change Treatment Plan ; To contunue the Current treatment ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Anal Smear
+		Variable=STI_Test_AnalSmear
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Anal Smear
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Ulcer Smear
+		Variable=STI_Test_UlcerSmear
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Ulcer Smear
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Throat Swab
+		Variable=STI_Test_ThroatSwab
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Throat Swab
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Chlamydia
+		Variable=STI_Test_Chlamydia
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Positive ; Negative
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Chlamydia
+				ModalitÈs=Positive ; Negative ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=RPR
+		Variable=STI_Test_RPR
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Positive ; Negative
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=RPR
+				ModalitÈs=Positive ; Negative ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=RPR dil
+		Variable=STI_Test_RPRDil
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=#####
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=RPR dil
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Other Investigation
+		Variable=STI_Test_OtherInvestigation
+		Type=6
+		NbLignes=2
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R012. If other, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=PresumptiveDiagnosis
+		Variable=STI_PresumptiveDiagnosis
+		Type=2
+		NbModalitÈs=18
+		ModalitÈs=Gonococci ; Chlamydia trachomatis ; GC/CT (syndromic) ; Vaginal Candida ; PID ; Chancroid ; Genital Herpes ; LGV ; Genital Warts ; Bacterial Vaginosis ; Trichomonas vaginalis ; BV/TV (syndromic) ; Epididimits ; Genital Scabies ; Syphilis ; Molluscum ; Bartholin's Abscess ; Other
+		MaxRÈponses=18
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=P01. Patient status
+				ModalitÈs=Healthy, able to work ; Sick, able to work ; mod-FR-20 ; mod-FR-4 ; mod-FR-6 ; mod-FR-7 ; mod-FR-8 ; mod-FR-9 ; mod-FR-10 ; mod-FR-11 ; mod-FR-17 ; mod-FR-21 ; mod-FR-18 ; mod-FR-19 ; mod-FR-5 ; mod-FR-20 ; mod-FR-21 ; mod-FR-16 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Other
+		Variable=STI_PDiagnosis_Other
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M043. Other
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=M01. Lab
+		Variable=STI_M01_Lab
+		Type=2
+		NbModalitÈs=2
+		ModalitÈs=MDM Lab ; Outside Lab
+		MaxRÈponses=2
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=P01. Patient status
+				ModalitÈs=Healthy, able to work ; Sick, able to work ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Do you want
+		Variable=STI_Treatment_TreatmentPlan
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=To change treatment plan ; To continue current treatment ; To stop treatment
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Do you want
+				ModalitÈs=To change Treatment Plan ; To contunue the Current treatment ; To stop treatment ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Allergy
+		Variable=STI_Treatment_Allergy
+		Type=2
+		NbModalitÈs=3
+		ModalitÈs=Pen ; Sulfa ; Other
+		MaxRÈponses=3
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=R011. Allergy
+				ModalitÈs=Pen ; Sulfa ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=If other, specify
+		Variable=STI_Treatment_AllergyOther
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R012. If other, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Pregnant
+		Variable=STI_Treatment_Pregnant
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R011. Allergy
+				ModalitÈs=Pen ; Sulfa ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Surgical Intervention
+		Variable=STI_Treatment_SurgicalIntervention
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Surgical Intervention
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=STI_Treatment_MedicineName1
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0111. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=STI_Treatment_Dosage1
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0112. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=STI_Treatment_Frequency1
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0113. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=STI_Treatment_NumberDays1
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0114. Number days
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=STI_Treatment_MedicineName2
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0121. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=STI_Treatment_Dosage2
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0122. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=STI_Treatment_Frequency2
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0123. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=STI_Treatment_NumberDays2
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0124. Number days
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=STI_Treatment_MedicineName3
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0131. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=STI_Treatment_Dosage3
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0132. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=STI_Treatment_Frequency3
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0133. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=STI_Treatment_NumberDays3
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0134. Number days
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=STI_Treatment_MedicineName4
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0141. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=STI_Treatment_Dosage4
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0142. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=STI_Treatment_Frequency4
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0143. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=STI_Treatment_NumberDays4
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0144. Number days
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=STI_Treatment_MedicineName5
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0151. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=STI_Treatment_Dosage5
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0152. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=STI_Treatment_Frequency5
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0153. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=STI_Treatment_NumberDays5
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0154. Number days
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=STI_Treatment_MedicineName6
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0211. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=STI_Treatment_Dosage6
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0212. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=STI_Treatment_Frequency6
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0213. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=STI_Treatment_NumberDays6
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0214. Number days
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=STI_Treatment_MedicineName7
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0221. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=STI_Treatment_Dosage7
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0222. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=STI_Treatment_Frequency7
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0223. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=STI_Treatment_NumberDays7
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0224. Number days
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=STI_Treatment_MedicineName8
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0231. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=STI_Treatment_Dosage8
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0232. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=STI_Treatment_Frequency8
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0233. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=STI_Treatment_NumberDays8
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0234. Number days
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=STI_Treatment_MedicineName9
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0241. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=STI_Treatment_Dosage9
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0242. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=STI_Treatment_Frequency9
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0243. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=STI_Treatment_NumberDays9
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0244. Number days
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=STI_Treatment_MedicineName10
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0251. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=STI_Treatment_Dosage10
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0252. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=STI_Treatment_Frequency10
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0253. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=STI_Treatment_NumberDays10
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0254. Number days
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=N03. Other treatment
+		Variable=STI_N03_OtherTreatment
+		Type=6
+		NbLignes=6
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R03. Other treatment
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Referred to hospital or other structure:
+		Variable=STI_Referred
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Laboratory
+				ModalitÈs=MDM Lab ; Outside Lab ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=STI/Condom use counseling
+		Variable=STI_STI/Condom
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M001. Complaints
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Partner treatment
+		Variable=STI_PartnerTreatment
+		Type=2
+		NbModalitÈs=2
+		ModalitÈs=Partner treatment (empirical) ; Partner referral
+		MaxRÈponses=2
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=M001. Complaints
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Remark
+		Variable=STI_Remark
+		Type=6
+		NbLignes=3
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=S012. Plan: (Next visit)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Date of next visit
+		Variable=STI_DateNextVisit
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=T3. Date of next visit
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Plan for next visit
+		Variable=STI_PlanForNextVisit
+		Type=6
+		NbLignes=3
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Plan for next visit
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Verify patient
+		Variable=Verify
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Verify patient
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Last registration date
+		Variable=LastRegistrationDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=33056
+		VariableAutomatique=DateEnreg
+		Traductions
+			Traduction
+				LibellÈ=Last registration date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=STI Key
+		Variable=Key
+		Type=6
+		NbLignes=2
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		OptionsBasic=1
+		Basic=Key = MDMCode & STI_VisitDateÄÅ
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				LibellÈ=test
+			Fin
+		Fin
+	Fin
+Fin
+Titres
+	Titre
+		Type=0
+		LibellÈ=A. SOCIO-DEMOGRAPHIC DATA
+		PremiËre=1
+		Traductions
+			Traduction
+				LibellÈ=A. SOCIO-DEMOGRAPHIC DATA
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=VISIT
+		PremiËre=8
+		Traductions
+			Traduction
+				LibellÈ=B. VISIT
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Symptoms
+		PremiËre=12
+		Traductions
+			Traduction
+				LibellÈ=M. Review of symptoms
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Physical Examination
+		PremiËre=29
+		Traductions
+			Traduction
+				LibellÈ=N. Physical Exam
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Test performed during the visit
+		PremiËre=47
+		Traductions
+			Traduction
+				LibellÈ=Test performed during the visit
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Presumptive Diagnosis
+		PremiËre=60
+		Traductions
+			Traduction
+				LibellÈ=M. Diagnosis
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Investigation ordered
+		PremiËre=62
+		Traductions
+			Traduction
+				LibellÈ=N. Radiology
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Treatment
+		PremiËre=63
+		Traductions
+			Traduction
+				LibellÈ=R. Treatment
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Medication
+		PremiËre=68
+		Traductions
+			Traduction
+				LibellÈ=R01. ART treatment
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Referral
+		PremiËre=109
+		Traductions
+			Traduction
+				LibellÈ=S. Investigation ordered
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=System Items
+		PremiËre=115
+		Traductions
+			Traduction
+				LibellÈ=System Items
+			Fin
+		Fin
+	Fin
+Fin
+Options
+	GroupesActifs=1
+	RenvoisActifs=1
+	ControlesActifs=1
+Fin

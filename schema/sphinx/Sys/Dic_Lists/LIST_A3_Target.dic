@@ -1,0 +1,11 @@
+code=description
+IDU=Intravenous Drug User
+DU=Drug user 
+IDUP=Intravenous drug user partner
+DUP=Drug user partner
+CH=The son or daughter living whose mother or father is I/DU, or mother is  SW
+MSM=Man having sex with Men
+SW=(Female )Sex worker
+MSMP=Wife of an MSM
+SWP=Husband of a SW
+GP=General population:People other than the above risk group or partners and children. For the MDM staffs who does not fit in the target definitions should also be identified as “GP”

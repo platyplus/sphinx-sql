@@ -1,0 +1,5154 @@
+Version=5000
+EntÍte
+	Historique=5.0.0.81(MÈdecins du Mon;5.1.0.2(MÈdecins du Mond;5.0.0.64(MÈdecins du Mon;5.1.0.4(MEDECINS DU MOND;
+	Langue=EN
+	Titre=ART VISIT
+	StadePanneau=20
+	Traductions
+		Traduction
+			Langue=FR
+			Titre=ART VISIT
+		Fin
+	Fin
+Fin
+Questions
+	Question
+		LibellÈ=MDM code (Patient ID)
+		Variable=MDMcode
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=MDM code (Patient ID)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Registration date
+		Variable=A00_RegistrationDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=A00. Registration date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Name
+		Variable=A01_PatientName
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=A01. Name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Fatherís name
+		Variable=A02_FatherName
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=A02. Fatherís name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Sex
+		Variable=A03_Sexe
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Male ; Female
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Basic=A03_Sex = A03_Sexe
+		Traductions
+			Traduction
+				LibellÈ=A03. Sexe
+				ModalitÈs=Male ; Female ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Date of birth
+		Variable=A041_DateOfBirth
+		Type=8
+		MinNombre=3652
+		Format=jj/mm/aaaa
+		Consigne=The response must be more than 01/01/1910.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=A04. Date of birth
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Age
+		Variable=A05_Age
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=A05. Age
+				ModalitÈs=Less than 8 ; From 8 to 10 ; From 10 to 12 ; From 12 to 14 ; From 14 to 16 ; From 16 to 18 ; 18 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Patient target
+		Variable=A07_PatientTarget
+		Type=7
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=A07. Patient target
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Visit date
+		Variable=ART_VisitDate
+		Type=8
+		MinNombre=32872
+		Format=jj/mm/aaaa
+		Consigne=The response must be more than 01/01/1990.ÄÅMandatory response.
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				LibellÈ=Visit date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=MDM staff
+		Variable=ART_MDMstaff
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LIST_A2_MDMstaff.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=MDM staff
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=PLH New Patient
+		Variable=ART_PLHNewPatient
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Consigne=Mandatory response.
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				LibellÈ=A042. Date of birth estimated
+				ModalitÈs=Date of birth estimated ; mod-FR-2 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=ART New Patient
+		Variable=ART_ARTNewPatient
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Consigne=Mandatory response.
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				LibellÈ=Initial visit
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=ART Treatment
+		Variable=ART_ARTTreatment
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Consigne=Mandatory response.
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				LibellÈ=A042. Date of birth estimated
+				ModalitÈs=Date of birth estimated ; mod-FR-2 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Patient partner has been tested
+		Variable=ART_PatientPartnerTested
+		Type=1
+		NbModalitÈs=1
+		ModalitÈs=Yes
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=G01. Patient partner has been tested
+				ModalitÈs=Yes ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Patient partner test status
+		Variable=ART_PatientPartnerTestStatus
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=Positive ; Negative ; Unknown
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=G02. Patient partner test status
+				ModalitÈs=Positive ; Negative ; Unknown ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Patient has disclosed status
+		Variable=ART_PatientDisclosedStatus
+		Type=1
+		NbModalitÈs=1
+		ModalitÈs=Yes
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=G03. Patient has disclosed status
+				ModalitÈs=Yes ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Status disclosed by
+		Variable=ART_StatusDisclosedBy
+		Type=2
+		NbModalitÈs=5
+		ModalitÈs=Spouse/Partner ; Friend ; Child ; Other family member ; Other
+		MaxRÈponses=5
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=G04. Status disclosed by
+				ModalitÈs=Spouse/Partner ; Friend ; Child ; Other family member ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=If by other, specify
+		Variable=ART_StatusDisclosedByOther
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=G041. If by other, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Patient is taking medicines
+		Variable=ART_PatientTakingMedicines
+		Type=1
+		NbModalitÈs=1
+		ModalitÈs=Yes
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H01. Patient is taking medicines
+				ModalitÈs=Yes ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Which medicines?
+		Variable=ART_PatientTakingFollowingMedicines
+		Type=2
+		NbModalitÈs=4
+		ModalitÈs=Anti-Retrovirals ; Antibiotics ; Anti-Tuberculosis ; Other
+		MaxRÈponses=4
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=H02. Which medicines?
+				ModalitÈs=Anti-Retrovirals ; Antibiotics ; Anti-Tuberculosis ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine taken
+		Variable=ART_AntiRetro_MedicineTaken1
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\ARV Medicine_v2014.dic
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=I011. Medicine taken
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine taken
+		Variable=ART_AntiRetro_MedicineTaken2
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\ARV Medicine_v2014.dic
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=I011. Medicine taken
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine taken
+		Variable=ART_AntiRetro_MedicineTaken3
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\ARV Medicine_v2014.dic
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=I011. Medicine taken
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine taken
+		Variable=ART_AntiRetro_MedicineTaken4
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\ARV Medicine_v2014.dic
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=I011. Medicine taken
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=MedicineTaken
+		Variable=ART_AntiRetro_MedicineTaken5
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\ARV Medicine_v2014.dic
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=MedicineTaken4
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine code
+		Variable=ART_AntiBio_MedicineCode1
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=R0111. Medicine code
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine code
+		Variable=ART_AntiBio_MedicineCode2
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=R0111. Medicine code
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine code
+		Variable=ART_AntiBio_MedicineCode3
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=R0111. Medicine code
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine code
+		Variable=ART_AntiBio_MedicineCode4
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=R0111. Medicine code
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine code
+		Variable=ART_AntiBio_MedicineCode5
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=R0111. Medicine code
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine code
+		Variable=ART_AntiTB_MedicineCode1
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\TB_Medicines_List.txt
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=R0111. Medicine code
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine code
+		Variable=ART_AntiTB_MedicineCode2
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\TB_Medicines_List.txt
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=R0111. Medicine code
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine code
+		Variable=ART_AntiTB_MedicineCode3
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\TB_Medicines_List.txt
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=R0111. Medicine code
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=MedicineCode8
+		Variable=ART_AntiTB_MedicineCode4
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\TB_Medicines_List.txt
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=MedicineCode8
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=MedicineCode9
+		Variable=ART_AntiTB_MedicineCode5
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\TB_Medicines_List.txt
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=MedicineCode9
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Other
+		Variable=ART_PatientTakingOther
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H026. Other
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Comment
+		Variable=ART_MedicationsComment
+		Type=6
+		NbLignes=2
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H03. Comment
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Patient has taken ARVs before
+		Variable=ART_PatientTakenARVsBefore
+		Type=2
+		NbModalitÈs=3
+		ModalitÈs=None ; For PMTCT ; For HIV/AIDS treatment
+		MaxRÈponses=3
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=I01. Patient has taken ARVs before
+				ModalitÈs=None ; For PMTCT ; For HIV/AIDS treatment ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine taken
+		Variable=ART_MedicineTaken1
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\ARV Medicine_v2014.dic
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=I011. Medicine taken
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medecine name
+		Variable=ART_MedicineName1
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=If Not ART_MedicineTaken1 = "OTHERS" ThenÄÅ    ART_MedicineName1 = ART_MedicineTaken1.CatCode(1)ÄÅEndIf
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				LibellÈ=I011_Medecine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Start date
+		Variable=ART_StartDate1
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=I012. Start date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Stop date
+		Variable=ART_StopDate1
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=I013. Stop date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Interrupted
+		Variable=ART_Interrupted1
+		Type=1
+		NbModalitÈs=1
+		ModalitÈs=Yes
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=I014. Interrupted
+				ModalitÈs=Yes ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine taken
+		Variable=ART_MedicineTaken2
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\ARV Medicine_v2014.dic
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=I021. Medicine taken
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=ART_MedicineName2
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=If Not ART_MedicineTaken2 = "OTHERS" ThenÄÅ    ART_MedicineName2 = ART_MedicineTaken2.CatCode(1)ÄÅEndIf
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				LibellÈ=I021_Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Start date
+		Variable=ART_StartDate2
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=I022. Start date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Stop date
+		Variable=ART_StopDate2
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=I023. Stop date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Interrupted
+		Variable=ART_Interrupted2
+		Type=1
+		NbModalitÈs=1
+		ModalitÈs=Yes
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=I024. Interrupted
+				ModalitÈs=Yes ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine taken
+		Variable=ART_MedicineTaken3
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\ARV Medicine_v2014.dic
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=I031. Medicine taken
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=ART_MedicineName3
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=If Not ART_MedicineTaken3 = "OTHERS" ThenÄÅ    ART_MedicineName3 = ART_MedicineTaken3.CatCode(1)ÄÅEndIf
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				LibellÈ=I031. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Start date
+		Variable=ART_StartDate3
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=I032. Start date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Stop date
+		Variable=ART_StopDate3
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=I033. Stop date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Interrupted
+		Variable=ART_Interrupted3
+		Type=1
+		NbModalitÈs=1
+		ModalitÈs=Yes
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=I034. Interrupted
+				ModalitÈs=Yes ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine taken
+		Variable=ART_MedicineTaken4
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\ARV Medicine_v2014.dic
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=I041. Medicine taken
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=ART_MedicineName4
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=If Not ART_MedicineTaken4 = "OTHERS" ThenÄÅ    ART_MedicineName4 = ART_MedicineTaken4.CatCode(1)ÄÅEndIf
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				LibellÈ=I041. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Start date
+		Variable=ART_StartDate4
+		Type=8
+		MinNombre=3652
+		Format=jj/mm/aaaa
+		Consigne=The response must be more than 01/01/1910.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=I042. Start date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Stop date
+		Variable=ART_StopDate4
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=I043. Stop date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Interrupted
+		Variable=ART_Interrupted4
+		Type=1
+		NbModalitÈs=1
+		ModalitÈs=Yes
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=I044. Interrupted
+				ModalitÈs=Yes ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=MedicineTaken
+		Variable=ART_MedicineTaken5
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\ARV Medicine_v2014.dic
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=I051. MedicineTaken
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=ART_MedicineName5
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=If Not ART_MedicineTaken5 = "OTHERS" ThenÄÅ    ART_MedicineName5 = ART_MedicineTaken5.CatCode(1)ÄÅEndIf
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				LibellÈ=I051. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Start date
+		Variable=ART_StartDate5
+		Type=8
+		MinNombre=3652
+		Format=jj/mm/aaaa
+		Consigne=The response must be more than 01/01/1910.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=I052. Start date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Stop date
+		Variable=ART_StopDate5
+		Type=8
+		MinNombre=3652
+		Format=jj/mm/aaaa
+		Consigne=The response must be more than 01/01/1910.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=I053. Stop date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Interrupted
+		Variable=ART_Interrupted5
+		Type=1
+		NbModalitÈs=1
+		ModalitÈs=Yes
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=I054. Interrupted
+				ModalitÈs=Yes ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Comment
+		Variable=ART_ARVComment
+		Type=6
+		NbLignes=5
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=I055. ARVComment
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Comment
+		Variable=ART_MedicalHistoryComment
+		Type=6
+		NbLignes=5
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=J04. Comment
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=TB history
+		Variable=ART_TBhistory
+		Type=1
+		NbModalitÈs=1
+		ModalitÈs=Patient has been treated for TB before
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=K01. TB history
+				ModalitÈs=Patient has been treated for TB before ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Previous TB diagnosis
+		Variable=ART_PreviousTBdiagnosis
+		Type=2
+		NbModalitÈs=2
+		ModalitÈs=Extrapulmonary ; Pulmonary
+		MaxRÈponses=2
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=K021. Previous TB diagnosis
+				ModalitÈs=Extrapulmonary ; Pulmonary ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Year of Extrapulmonary episode
+		Variable=ART_YearOfExtrapulmonaryEpisode
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		MinNombre=1910
+		MaxNombre=2020
+		Format=#####
+		Consigne=The response must be between 1910 and 2020.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=K022. Year of Extrapulmonary episode
+				ModalitÈs=val = 32767 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Year of Pulmonary episode
+		Variable=ART_YearOfPulmonaryEpisode
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=#####
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=K023. Year of Pulmonary episode
+				ModalitÈs=val = 32767 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Comments
+		Variable=ART_TBhistoryComments
+		Type=6
+		NbLignes=2
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=K06. Comments
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=TB related symptoms
+		Variable=ART_TBRelatedSymptoms_Opt
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=Yes ; No ; Pt don't come
+		PondÈrations= 0
+		Consigne=Mandatory response.
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				LibellÈ=TB Related Symptoms
+				ModalitÈs=Yes ; No ; mod-FR-3 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=TB Related Symptoms
+		Variable=ART_TBRelatedSymptoms
+		Type=2
+		NbModalitÈs=7
+		ModalitÈs=Fever ; Night sweats ; Appetite loss ; Weight loss ; Cough ; Haemoptysis ; Notice of any abdominal or cervical lump
+		MaxRÈponses=7
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=TB Related Symptoms
+				ModalitÈs=Fever ; Night sweats ; Appetite loss ; Weight loss ; Cough ; Haemoptysis ; Notice of any abdominal or cervical lump ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Fever
+		Variable=ART_TBRelated_Fever
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Fever
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Night sweats
+		Variable=ART_TBRelated_NightSweats
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Night sweats
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Appetite loss
+		Variable=ART_TBRelated_AppetiteLoss
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Appetite loss
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Weight loss
+		Variable=ART_TBRelated_WeightLoss
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Weight loss
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Night sweats
+		Variable=ART_TBRelated_Cough
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Night sweats
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Appetite loss
+		Variable=ART_TBRelated_Haemoptysis
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Appetite loss
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Weight loss
+		Variable=ART_TBRelated_Notice
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Weight loss
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Constitutional
+		Variable=ART_Constitutional
+		Type=2
+		NbModalitÈs=3
+		ModalitÈs=Fatigue ; Pain ; Other
+		MaxRÈponses=3
+		PondÈrations= 0
+		Consigne=More than one response can be selected.ÄÅGo to '363-ART_R011_Allergy' if ART_L003_Cured = "Yes"except ART_L003_Cured = "No"
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=M011. Constitutional
+				ModalitÈs=Fatigue ; mod-FR-10 ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Fatigue
+		Variable=ART_Consti_Fatigue
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Fatigue
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Pain
+		Variable=ART_Consti_Pain
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Pain
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Other
+		Variable=ART_Consti_Other
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M012. if other, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Gastrointestinal
+		Variable=ART_Gastrointestinal
+		Type=2
+		NbModalitÈs=6
+		ModalitÈs=Abdominal Pain ; Nausea ; Vomiting ; Dysphagia ; Diarrhea ; Other
+		MaxRÈponses=6
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=M031. Gastrointestinal
+				ModalitÈs=mod-FR-5 ; Nausea and/or vomiting ; mod-FR-6 ; mod-FR-4 ; Diarrhea ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Abdominal Pain
+		Variable=ART_Gastro_AbdominalPain
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Abdominal Pain
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Nausea
+		Variable=ART_Gastro_Nausea
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Nausea
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Vomiting
+		Variable=ART_Gastro_Vomiting
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Vomiting
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dysphagia
+		Variable=ART_Gastro_Dysphagia
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Dysphagia
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Diarrhea
+		Variable=ART_Gastro_Diarrhea
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Diarrhea
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Other
+		Variable=ART_Gastro_Other
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M032. If other, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Respiratory & CVs
+		Variable=ART_Respiratory&CVs
+		Type=2
+		NbModalitÈs=4
+		ModalitÈs=Difficulty breathing ; Chest pain ; Palpitation ; Other
+		MaxRÈponses=4
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=M021. Respiratory
+				ModalitÈs=Difficulty breathing-SOB ; Other ; mod-FR-6 ; mod-FR-7 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Difficultly breathing
+		Variable=ART_Respi_DifficultlyBreathing
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Difficultly breathing
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Chest Pain
+		Variable=ART_Respi_ChestPain
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Chest Pain
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Palpitation
+		Variable=ART_Respi_Palpitation
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Palpitation
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Other
+		Variable=ART_Respi_Other
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M022. If other, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Neurological
+		Variable=ART_Neurological
+		Type=2
+		NbModalitÈs=6
+		ModalitÈs=Headache ; Confusion ; Memory problems ; Tingling and Numbness of limbs ; Insomnia ; Yawning
+		MaxRÈponses=6
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=M041. Neurological
+				ModalitÈs=Headache ; Confusion ; Memory problems ; Numbness/Tingling in legs/feet ; mod-FR-6 ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Headache
+		Variable=ART_Neuro_Headache
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Headache
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Confusion
+		Variable=ART_Neuro_Confusion
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Confusion
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Memory problems
+		Variable=ART_Neuro_MemoryProblems
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Memory problems
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Tingling
+		Variable=ART_Neuro_Tingling
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Tingling
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Insomnia
+		Variable=ART_Neuro_Insomnia
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Insomnia
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Yawning
+		Variable=ART_Neuro_Yawning
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Yawning
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Skin Manifestation
+		Variable=ART_SkinManifestation
+		Type=2
+		NbModalitÈs=4
+		ModalitÈs=Itchiness ; Rash ; Lump/Nodules ; Other
+		MaxRÈponses=4
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=M081. Psychiatric
+				ModalitÈs=mod-FR-7 ; Cognitive functioning ; Anxiety ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Itchiness
+		Variable=ART_Skin_Itchiness
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Itchiness
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Rash
+		Variable=ART_Skin_Rash
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Rash
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Lump
+		Variable=ART_Skin_Lump
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Lump
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Other
+		Variable=ART_Skin_Other
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M082. If other, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Additional comments
+		Variable=ART_SymptomsComments
+		Type=6
+		NbLignes=3
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M09. Additional comments
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Eye
+		Variable=ART_Eye
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=Normal ; Abnormal ; Not done
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=N12. Other2
+				ModalitÈs=Normal ; Abnormal ; Not done ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Comment (specify)
+		Variable=ART_EyeComment
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=N122. Comment (specify)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Ears, Nose
+		Variable=ART_EarsNose
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=Normal ; Abnormal ; Not done
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=N02. Ears, Nose
+				ModalitÈs=Normal ; Abnormal ; Not done ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Comment (if abnormal describe)
+		Variable=ART_EarsNoseComment
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=N022. Comment (if abnormal describe)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Oral
+		Variable=ART_Oral
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=Normal ; Abnormal ; Not done
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=N01. Oral
+				ModalitÈs=Normal ; Abnormal ; Not done ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Comment (if abnormal describe)
+		Variable=ART_OralComment
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=N012. Comment (if abnormal describe)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Lymph nodes
+		Variable=ART_LymphNodes
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=Normal ; Abnormal ; Not done
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=N03. Lymph nodes
+				ModalitÈs=Normal ; Abnormal ; Not done ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Comment (if abnormal describe)
+		Variable=ART_LymphNodesComment
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=N032. Comment (if abnormal describe)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Heart
+		Variable=ART_Heart
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=Normal ; Abnormal ; Not done
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=N04. Heart
+				ModalitÈs=Normal ; Abnormal ; Not done ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Comment (if abnormal describe)
+		Variable=ART_HeartComment
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=N042. Comment (if abnormal describe)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Lungs
+		Variable=ART_Lungs
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=Normal ; Abnormal ; Not done
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=N05. Lungs
+				ModalitÈs=Normal ; Abnormal ; Not done ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Comment (if abnormal describe)
+		Variable=ART_LungsComment
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=N052. Comment (if abnormal describe)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Abdomen
+		Variable=ART_Abdomen
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=Normal ; Abnormal ; Not done
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=N06. Abdomen
+				ModalitÈs=Normal ; Abnormal ; Not done ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Comment (if abnormal describe)
+		Variable=ART_AbdomenComment
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=N062. Comment (if abnormal describe)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Neurological
+		Variable=ART_PExam_Neurological
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=Normal ; Abnormal ; Not done
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=N10. Neurological
+				ModalitÈs=Normal ; Abnormal ; Not done ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Comment (if abnormal describe)
+		Variable=ART_NeurologicalComment
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=N102. Comment (if abnormal describe)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Skin
+		Variable=ART_Skin
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=Normal ; Abnormal ; Not done
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=N07. Skin
+				ModalitÈs=Normal ; Abnormal ; Not done ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Comment (if abnormal describe)
+		Variable=ART_SkinComment
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=N072. Comment (if abnormal describe)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Additional comments
+		Variable=ART_PhysicalExamComments
+		Type=6
+		NbLignes=5
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=N13. Additional comments
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=WHO Stages For
+		Variable=ART_Child_or_Adult
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Child ; Adult
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=O0. Stage
+				ModalitÈs=Stage 1 ; Stage 2 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Stage
+		Variable=ART_Adult_Stage
+		Type=1
+		NbModalitÈs=4
+		ModalitÈs=Stage 1 ; Stage 2 ; Stage 3 ; Stage 4
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=O0. Stage
+				ModalitÈs=Stage 1 ; Stage 2 ; Stage 3 ; Stage 4 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Stage 1
+		Variable=ART_Adult_Stage1
+		Type=2
+		NbModalitÈs=4
+		ModalitÈs=Asymptomatic ; Generalized Lymphadenopathy ; Hepatosplenomegaly ; Other
+		MaxRÈponses=4
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=O1. Stage 1
+				ModalitÈs=Asymptomatic ; Generalized Lymphadenopathy ; Hepatosplenomegaly ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Stage 2
+		Variable=ART_Adult_Stage2
+		Type=2
+		NbModalitÈs=13
+		ModalitÈs=Papular pruritic eruptions ; Seborrhoeic dermatitis ; Fungal nail infections ; Angular chelitis ; Lineal gingival erythema (LGE) ; Extensive human papilloma virus infection or molluscum infection (>5% body area) ; Recurrent oral ulcerations (2 or > episodes in 6 months) ; Parotid enlargement ; Herpes Zoster (2 or > episodes in 6 months) ; Recurrent of chronic upper RTIs (otitis media, sinusitis 2 or > episodes in any 6 months period) ; Loss of weight lower than 10% ; Minor mucocutaneous manifestations ; Other
+		MaxRÈponses=13
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=O2. Stage 2
+				ModalitÈs=Papular pruritic eruptions ; Seborrhoeic dermatitis ; Fungal nail infections ; Angular chelitis ; Lineal gingival erythema (LGE) ; Extensive human papilloma virus infection or molluscum infection (>5% body area) ; Recurrent oral ulcerations (2 or > episodes in 6 months) ; Parotid enlargement ; Herpes Zoster (2 or > episodes in 6 months) ; Recurrent of chronic upper RTIs (otitis media, sinusitis 2 or > episodes in any 6 months period) ; Loss of weight lower than 10% ; Minor mucocutaneous manifestations ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Stage 3
+		Variable=ART_Adult_Stage3
+		Type=2
+		NbModalitÈs=19
+		ModalitÈs=Unexplained low weight for age/ low height for age/ low weight for height ; Unexplained persistant diarrhea (> 14 days) ; Unexplained persistant fever (intermittent or constant, > 1 month) ; Oral candidiasis (outside neonatal period) ; Oral hairy leukoplakia ; Tuberculous lymphadenopathy (axill, cerv, or inguinal) ; Severe recurrent presumed bacterial pneumonia (2 or > episodes in 6 months) ; Acute necrotizing ulcerative gingivitis/parodentitis ; Lymphoid interstitial pneumonia (LIP) ; Unexplained anaemia (<8gm/dl), neutropenia (<1000/mm3) for > 1 month ; HIV related cardiomyopathy ; HIV related nephropathy ; In bed less than 50% of normal daytime due to sickness ; Loss of weight higher than 10% ; Chronic diarrhea for more than 1 month ; Vulvovaginal candidiasis for more than 1 month or poorly responsive to therapy ; Pulmonary tuberculosis within previous 12 months ; Other severe bacterial infections (Myositis...) ; Other
+		MaxRÈponses=19
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=O3. Stage 3
+				ModalitÈs=Unexplained low weight for age/ low height for age/ low weight for height ; Unexplained persistant diarrhea (> 14 days) ; Unexplained persistant fever (intermittent or constant, > 1 month) ; Oral candidiasis (outside neonatal period) ; Oral hairy leukoplakia ; Tuberculous lymphadenopathy (axill, cerv, or inguinal) ; Severe recurrent presumed bacterial pneumonia (2 or > episodes in 6 months) ; Acute necrotizing ulcerative gingivitis/parodentitis ; Lymphoid interstitial pneumonia (LIP) ; Unexplained anaemia (<8gm/dl), neutropenia (<1000/mm3) for > 1 month ; HIV related cardiomyopathy ; HIV related nephropathy ; In bed less than 50% of normal daytime due to sickness ; Loss of weight higher than 10% ; Chronic diarrhea for more than 1 month ; Vulvovaginal candidiasis for more than 1 month or poorly responsive to therapy ; Pulmonary tuberculosis within previous 12 months ; Other severe bacterial infections (Myositis...) ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Stage 4
+		Variable=ART_Adult_Stage4
+		Type=2
+		NbModalitÈs=29
+		ModalitÈs=Unexplained severe wasting or severe malnutrition ; Pneumocystic pneumonia ; Recurrent severe presumed bacterial infections (*) ; Chronic orolabial or cutaneous herpes simplex infection (> 1 month duration) ; Extrapulmonary TB (excluding lymphadenitis) ; Karposi's sarcoma ; Oesophageal candidiasis ; CMV retinitis ; Cerebral toxoplasmosis ; Any disseminated endemic mycosis (e.g. extra-pulmonary cryptococcosis, penicilliosis) ; Disseminated mycobacterial disease other than TB (MAC) ; Recurrent non-typhoidal salmonella septicaemia ; Progressive multifocal leucoencephalopathy (PML) ; HIV encephalopathy ; In bed more than 50% of norma daytime due to sickness ; Wasting syndrome ; Cryptococcosis extra pulmonary ; Pneumocystic carinii pneumonia ; Encephalopathy, dementia ; Penicillium Marneffei infection ; Candidiasis of the oesophagus, trachea ; Cryptosporiosis with diarrhea for more than 1 month ; Isosporidiosis with diarrhea for more than 1 month ; Lymphoma ; Herpes simplex mucocutaneous for more than 1 month or visceral ; Atypical mycobacteriosis disseminated ; Non-typhoid salmonella septicaemia ; Cytomegalovirus other than liver lymph node ; Other
+		MaxRÈponses=29
+		PondÈrations= 0
+		Consigne=More than one response can be selected.ÄÅThe question is only appropriate if ART_O0_Stage = "Stage 4"
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=O4. Stage 4
+				ModalitÈs=Unexplained severe wasting or severe malnutrition ; Pneumocystic pneumonia ; Recurrent severe presumed bacterial infections (*) ; Chronic orolabial or cutaneous herpes simplex infection (> 1 month duration) ; Extrapulmonary TB (excluding lymphadenitis) ; Karposi's sarcoma ; Oesophageal candidiasis ; CMV retinitis ; Cerebral toxoplasmosis ; Any disseminated endemic mycosis (e.g. extra-pulmonary cryptococcosis, penicilliosis) ; Disseminated mycobacterial disease other than TB (MAC) ; Recurrent non-typhoidal salmonella septicaemia ; Progressive multifocal leucoencephalopathy (PML) ; HIV encephalopathy ; In bed more than 50% of norma daytime due to sickness ; Wasting syndrome ; Cryptococcosis extra pulmonary ; Pneumocystic carinii pneumonia ; Encephalopathy, dementia ; Penicillium Marneffei infection ; Candidiasis of the oesophagus, trachea ; Cryptosporiosis with diarrhea for more than 1 month ; Isosporidiosis with diarrhea for more than 1 month ; Lymphoma ; Herpes simplex mucocutaneous for more than 1 month or visceral ; Atypical mycobacteriosis disseminated ; Non-typhoid salmonella septicaemia ; Cytomegalovirus other than liver lymph node ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Child Stage
+		Variable=ART_Child_Stage
+		Type=1
+		NbModalitÈs=4
+		ModalitÈs=Stage 1 ; Stage 2 ; Stage 3 ; Stage 4
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=O0. Stage
+				ModalitÈs=Stage 1 ; Stage 2 ; Stage 3 ; Stage 4 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Child Stage 1
+		Variable=ART_Child_Stage1
+		Type=2
+		NbModalitÈs=3
+		ModalitÈs=Asymptomatic ; Persistent generalized lymphadenopathy ; Other
+		MaxRÈponses=3
+		PondÈrations= 0
+		Consigne=More than one response can be selected.ÄÅThe question is only appropriate if ART_O0_ChStage = "Stage 1"
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=O1. Stage 1
+				ModalitÈs=Asymptomatic ; Generalized Lymphadenopathy ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Child Stage 2
+		Variable=ART_Child_Stage2
+		Type=2
+		NbModalitÈs=11
+		ModalitÈs=Unexplained persistent hepatosplenomegaly ; Papular pruritic eruptions ; Extensive wart virus infection ; Extensive molluscum contagiosum ; Recurrent oral ulcerations ; Unexplained persistent parotid enlargement ; Lineal gingival erythema ; Herpes zoster ; Recurrent or chronic upper respiratory tract infections(otitis media,otorrhoea,sinusitis,tonsillitis) ; Fungal nail infections ; Other
+		MaxRÈponses=11
+		PondÈrations= 0
+		Consigne=More than one response can be selected.ÄÅThe question is only appropriate if ART_O0_ChStage = "Stage 2"
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=O2. Stage 2
+				ModalitÈs=Papular pruritic eruptions ; Seborrhoeic dermatitis ; Fungal nail infections ; Angular chelitis ; Lineal gingival erythema (LGE) ; Extensive human papilloma virus infection or molluscum infection (>5% body area) ; Recurrent oral ulcerations (2 or > episodes in 6 months) ; Parotid enlargement ; Herpes Zoster (2 or > episodes in 6 months) ; Recurrent of chronic upper RTIs (otitis media, sinusitis 2 or > episodes in any 6 months period) ; Loss of weight lower than 10% ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Child Stage 3
+		Variable=ART_Child_Stage3
+		Type=2
+		NbModalitÈs=14
+		ModalitÈs=Moderate unexplained malnutrition not adequately responding to standard therapy ; Unexplained persistent diarrhoea (14 days or more) ; Unexplained persistent fever (above 37.5 intermittent or constant, for longer than one month) ; Persistent oral candida (outside first 6-8 weeks of life) ; Oral hairy leukoplakia ; Acute necrotizing ulcerative gingivitis/periodontitis ; Lymph node TB ; Pulmonary tuberculosis ; Severe recurrent persumed bacterial pneumonia ; Symptomatic lymphoid interstitial pneumonitis ; Chronic HIV-associated lung disease including bronchiectasis ; Unexplained anaemie (<8g/dl), neutropaenia (<500/mm3) or chronic thrombocytopeniz (<50 000/mm3) ; HIV-associated cardiomyopathy or HIV-associated nephropathy ; Other
+		MaxRÈponses=14
+		PondÈrations= 0
+		Consigne=More than one response can be selected.ÄÅThe question is only appropriate if ART_O0_ChStage = "Stage 3"
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=O3. Stage 3
+				ModalitÈs=Unexplained low weight for age/ low height for age/ low weight for height ; Unexplained anaemia (<8gm/dl), neutropenia (<1000/mm3) for > 1 month ; Unexplained persistant diarrhea (> 14 days) ; Unexplained persistant fever (intermittent or constant, > 1 month) ; Oral candidiasis (outside neonatal period) ; Oral hairy leukoplakia ; Tuberculous lymphadenopathy (axill, cerv, or inguinal) ; Severe recurrent presumed bacterial pneumonia (2 or > episodes in 6 months) ; Acute necrotizing ulcerative gingivitis/parodentitis ; Lymphoid interstitial pneumonia (LIP) ; HIV related cardiomyopathy ; HIV related nephropathy ; In bed less than 50% of normal daytime due to sickness ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Child Stage 4
+		Variable=ART_Child_Stage4
+		Type=2
+		NbModalitÈs=19
+		ModalitÈs=Unexplained severe wasting,stunting or severe malnutrition not responding to standard therapy ; Pneumocystis pneumonia ; Recurrent severe presumed bacterial infections (e.g., empyema, pyomyositis, bone or joint infection,meningitis, but excluding pneumonia) ; Chronic herpes simplex infection (orolabial or cutaneous > 1  month duration or visceral at any site) ; Extrapulmonary tuberculosis ; Kaposi sarcoma ; Oesophageal candidiasis ( or candida of trachea, bronchi or lungs) ; Central nervous system toxoplasmosis (outside the neonatal period) ; HIV encephalopathy ; Cytomegalovirus (CMV) retinitis or CMV infection affecting another organ, with onset at age >1 month ; Extrapulmonary cryptococcosis including meningitis ; Disseminated endemic mycosis(extrapulmonary histoplasmosis, coccidiomycosis,penicilliosis) ; Chronic Cryptosporidiosis ; Chronic Isosporiasis ; Disseminated non-tuberculous mycobacteria infection ; Acquired HIV-associated rectal fistula ; Cerebral or B cell non-Hodgkin lymphoma ; Progressive multifocal leukoencephalopathy ; Other
+		MaxRÈponses=19
+		PondÈrations= 0
+		Consigne=More than one response can be selected.ÄÅThe question is only appropriate if ART_O0_ChStage = "Stage 4"
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=O4. Stage 4
+				ModalitÈs=Unexplained severe wasting or severe malnutrition ; In bed more than 50% of norma daytime due to sickness ; Pneumocystic pneumonia ; Wasting syndrome ; Cryptococcosis extra pulmonary ; Pneumocystic carinii pneumonia ; Chronic orolabial or cutaneous herpes simplex infection (> 1 month duration) ; Encephalopathy, dementia ; Extrapulmonary TB (excluding lymphadenitis) ; Penicillium Marneffei infection ; Karposi's sarcoma ; Candidiasis of the oesophagus, trachea ; Oesophageal candidiasis ; Cryptosporiosis with diarrhea for more than 1 month ; CMV retinitis ; Isosporidiosis with diarrhea for more than 1 month ; Cerebral toxoplasmosis ; Lymphoma ; mod-FR-20 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Patient status
+		Variable=ART_PatientStatus
+		Type=1
+		NbModalitÈs=4
+		ModalitÈs=Healthy, able to work ; Sick, able to work ; Sick, unable to work ; Bedridden
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=P01. Patient status
+				ModalitÈs=Healthy, able to work ; Sick, able to work ; Sick, unable to work ; Beridden ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=OI Diagnosis
+		Variable=ART_OIDiagnosis
+		Type=2
+		NbModalitÈs=12
+		ModalitÈs=Oral candidiasis ; OHL ; esophageal candidias ; PTB ; EPTB ; Herpes zoster ; Cryptoccocosis ; Penicilliosis ; MAC ; CMV ; Toxoplasmosis ; Other OIs
+		MaxRÈponses=12
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=OI Diagnosis
+				ModalitÈs=Oral candidiasis ; OHL ; esophageal candidias ; PTB ; EPTB ; Herpes zoster ; Cryptoccocosis ; Penicilliosis ; MAC ; CMV ; Toxoplasmosis ; Other OIs ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=EPTB
+		Variable=ART_OIDiagnosisEPTB
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=OI Diagnosis EPTB
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Other
+		Variable=ART_OIDiagnosisOther
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=P03. Other Diagnosis
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Diagnosis Code
+		Variable=ART_GHC_DiaCode1
+		Type=7
+		FichierCodes=C:\Users\PDA\Desktop\New folder (3)\Sys\Dic_Lists\LIST_I011_Diagnosis.dic
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=Diagnosis Code
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Description
+		Variable=ART_GHC_DiaDescription1
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=If Not ART_GHC_DiaCode1 = "OTHERS" ThenÄÅ    ART_GHC_DiaDescription1 = ART_GHC_DiaCode1.CatCode(2)ÄÅEndIf
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				LibellÈ=Description
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Diagnosis Code
+		Variable=ART_GHC_DiaCode2
+		Type=7
+		FichierCodes=C:\Users\PDA\Desktop\New folder (3)\Sys\Dic_Lists\LIST_I011_Diagnosis.dic
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=Diagnosis Coe
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Description
+		Variable=ART_GHC_DiaDescription2
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=If Not ART_GHC_DiaCode2 = "OTHERS" ThenÄÅ    ART_GHC_DiaDescription2 = ART_GHC_DiaCode2.CatCode(2)ÄÅEndIf
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				LibellÈ=Description
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Diagnosis Code
+		Variable=ART_GHC_DiaCode3
+		Type=7
+		FichierCodes=C:\Users\PDA\Desktop\New folder (3)\Sys\Dic_Lists\LIST_I011_Diagnosis.dic
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=Diagnosis Code
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Description
+		Variable=ART_GHC_DiaDescription3
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=If Not ART_GHC_DiaCode3 = "OTHERS" ThenÄÅ    ART_GHC_DiaDescription3 = ART_GHC_DiaCode3.CatCode(2)ÄÅEndIf
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				LibellÈ=Description
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Diagnosis Code
+		Variable=ART_GHC_DiaCode4
+		Type=7
+		FichierCodes=C:\Users\PDA\Desktop\New folder (3)\Sys\Dic_Lists\LIST_I011_Diagnosis.dic
+		NbCarCode=25
+		Format=######
+		Consigne=The code has 6 characters.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=Diagnosis Code
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Description
+		Variable=ART_GHC_DiaDescription4
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=If Not ART_GHC_DiaCode4 = "OTHERS" ThenÄÅ    ART_GHC_DiaDescription4 = ART_GHC_DiaCode4.CatCode(2)ÄÅEndIf
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				LibellÈ=Description
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Additional comments
+		Variable=ART_Diagnosis_Comments
+		Type=6
+		NbLignes=4
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Q05. Additional comments
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=First CD4
+		Variable=ART_FirstCD4
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###################
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Q00. First CD4
+				ModalitÈs=Less than 100 ; From 100 to 200 ; From 200 to 300 ; From 300 to 400 ; From 400 to 500 ; From 500 to 600 ; 600 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Last CD4
+		Variable=ART_LastCD4
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###################
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Last CD4
+				ModalitÈs=Less than 100000 ; From 100000 to 200000 ; From 200000 to 300000 ; From 300000 to 400000 ; From 400000 to 500000 ; From 500000 to 600000 ; 600000 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Viral load Result
+		Variable=ART_ViralLoad_Result
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###################
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Viral load Result
+				ModalitÈs=Less than 1000 ; From 1000 to 2000 ; From 2000 to 3000 ; From 3000 to 4000 ; From 4000 to 5000 ; From 5000 to 6000 ; 6000 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=HBsAg
+		Variable=ART_HBsAg
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Positive ; Negative
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=HBsAg
+				ModalitÈs=Positive ; Negative ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=HBsAb
+		Variable=ART_HBsAb
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Positive ; Negative
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=HBsAb
+				ModalitÈs=Positive ; Negative ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=HCVAb
+		Variable=ART_HCVAb
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Positive ; Negative
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=HCVAb
+				ModalitÈs=Positive ; Negative ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=APRI
+		Variable=ART_APRI
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=4
+		Format=###################
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=APRI
+				ModalitÈs=Less than 12 ; From 12 to 24 ; From 24 to 37 ; From 37 to 49 ; From 49 to 61 ; From 61 to 73 ; 73 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Liver Fibrosis
+		Variable=ART_LiverFilbrosis
+		Type=1
+		NbModalitÈs=4
+		ModalitÈs=Stage 0 ; Stage < 2 ; Stage >= 2 ; Stage 4
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Liver Fibrosis
+				ModalitÈs=Stage 1 ; Stage 2 ; Stage 3 ; Stage 4 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Smear
+		Variable=TB_Sputum_Smear
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\TB_Sample_Result.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Smear
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Xpert
+		Variable=TB_Sputum_Xpert
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\TB_Sample_Result.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Xpert
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Culture
+		Variable=TB_Sputum_Culture
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\TB_Sample_Result.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Culture
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=H
+		Variable=TB_Sputum_H
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\HRSE.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=R
+		Variable=TB_Sputum_R
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\HRSE.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=S
+		Variable=TB_Sputum_S
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\HRSE.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=S
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=E
+		Variable=TB_Sputum_E
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\HRSE.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=E
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=LPA
+		Variable=TB_Sputum_LPA
+		Type=6
+		FichierCodes=TB_Sample_Result.dic
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=LPA
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Sample Date
+		Variable=TB_Sputum_SampleDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Sample Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Other Sample 1
+		Variable=TB_OtherSample1
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\AFB CNS Test.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Other Sample
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Smear
+		Variable=TB_OtherSample1_Smear
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\TB_Sample_Result.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Smear
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Xpert
+		Variable=TB_OtherSample1_Xpert
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\TB_Sample_Result.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Xpert
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Culture
+		Variable=TB_OtherSample1_Culture
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\TB_Sample_Result.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Culture
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=H
+		Variable=TB_OtherSample1_H
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\HRSE.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=R
+		Variable=TB_OtherSample1_R
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\HRSE.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=S
+		Variable=TB_OtherSample1_S
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\HRSE.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=S
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=E
+		Variable=TB_OtherSample1_E
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\HRSE.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=E
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=LPA
+		Variable=TB_OtherSample1_LPA
+		Type=6
+		FichierCodes=TB_Sample_Result.dic
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=LPA
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Sample Date
+		Variable=TB_OtherSample1_SampleDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Sample Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Other Sample 2
+		Variable=TB_OtherSample2
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\AFB CNS Test.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Other Sample
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Smear
+		Variable=TB_OtherSample2_Smear
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\TB_Sample_Result.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Smear
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Xpert
+		Variable=TB_OtherSample2_Xpert
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\TB_Sample_Result.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Xpert
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Culture
+		Variable=TB_OtherSample2_Culture
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\TB_Sample_Result.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Culture
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=H
+		Variable=TB_OtherSample2_H
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\HRSE.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=R
+		Variable=TB_OtherSample2_R
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\HRSE.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=S
+		Variable=TB_OtherSample2_S
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\HRSE.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=S
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=E
+		Variable=TB_OtherSample2_E
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\HRSE.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=E
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=LPA
+		Variable=TB_OtherSample2_LPA
+		Type=6
+		FichierCodes=TB_Sample_Result.dic
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=LPA
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Sample Date
+		Variable=TB_OtherSample2_SampleDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Sample Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Other Sample 3
+		Variable=TB_OtherSample3
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\AFB CNS Test.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Other Sample
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Smear
+		Variable=TB_OtherSample3_Smear
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\TB_Sample_Result.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Smear
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Xpert
+		Variable=TB_OtherSample3_Xpert
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\TB_Sample_Result.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Xpert
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Culture
+		Variable=TB_OtherSample3_Culture
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\TB_Sample_Result.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Culture
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=H
+		Variable=TB_OtherSample3_H
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\HRSE.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=R
+		Variable=TB_OtherSample3_R
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\HRSE.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=S
+		Variable=TB_OtherSample3_S
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\HRSE.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=S
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=E
+		Variable=TB_OtherSample3_E
+		Type=7
+		FichierCodes=D:\For 2015 MMR Report\Testing_Package_2015\Myanmar_MDM_Clinic\Sys\Dic_Lists\HRSE.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=E
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=LPA
+		Variable=TB_OtherSample3_LPA
+		Type=6
+		FichierCodes=TB_Sample_Result.dic
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=LPA
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Sample Date
+		Variable=TB_OtherSample3_SampleDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Sample Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Date
+		Variable=TB_RadiologyDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Radiology
+		Variable=TB_Radio_Radiology
+		Type=2
+		NbModalitÈs=3
+		ModalitÈs=CXRay ; X-Ray ; USG abdomen
+		MaxRÈponses=3
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=P01. Patient status
+				ModalitÈs=Healthy, able to work ; Sick, able to work ; mod-FR-3 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=CXRay
+		Variable=TB_Radio_CXRay
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M041. BodyFluid
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=X-Ray
+		Variable=TB_Radio_XRay
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M042. C&S
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=USG abdomen
+		Variable=TB_Radio_USG
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M043. Other
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Persons living with the patient screened TB
+		Variable=TB_Persons_screened_TB
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Laboratory
+				ModalitÈs=MDM Lab ; Outside Lab ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=If yes, where
+		Variable=TB_ScreenedTBYesWhere
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=S012. Plan: (Next visit)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Referred
+		Variable=TB_Referred
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M001. Complaints
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=If yes, where
+		Variable=TB_ReferYesWhere
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M002. If Yes
+				ModalitÈs=Same complaints ; New complaints ; mod-FR-3 ; mod-FR-4 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Type of Case
+		Variable=TB_TypeOfCase
+		Type=1
+		NbModalitÈs=6
+		ModalitÈs=New ; Replase ; Treatment after failure ; Treatment after LTFU ; Other ; Unknown
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M001. Complaints
+				ModalitÈs=mod-FR-6 ; Yes ; No ; mod-FR-3 ; mod-FR-4 ; mod-FR-5 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Type
+		Variable=TB_Type
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Bacteriologically confirmed ; Clinically diagnosised
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Type of case
+				ModalitÈs=New case ; Retreatment care ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Allergy
+		Variable=ARTAllergy
+		Type=2
+		NbModalitÈs=3
+		ModalitÈs=Pen ; Sulfa ; Other
+		MaxRÈponses=3
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=R011. Allergy
+				ModalitÈs=Pen ; Sulfa ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=If other, specify
+		Variable=ART_AllergyOther
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R012. If other, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Pregnant
+		Variable=ART_Pregnant
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Pregnant
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Prophylaxis
+		Variable=ART_Prophylaxis
+		Type=2
+		NbModalitÈs=2
+		ModalitÈs=Primary ; Secondary
+		MaxRÈponses=2
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=Prophylaxis
+				ModalitÈs=Primary ; Secondary ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Prophyaxis_Primary
+		Variable=ART_Prophyaxis_Primary
+		Type=2
+		NbModalitÈs=4
+		ModalitÈs=Cotri ; Dapsone ; Acyclovir ; INH
+		MaxRÈponses=4
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=R011. Allergy
+				ModalitÈs=Pen ; Sulfa ; mod-FR-6 ; mod-FR-8 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Prophylaxis_Secondary
+		Variable=ART_Prophylaxis_Secondary
+		Type=2
+		NbModalitÈs=5
+		ModalitÈs=Cotri ; Dapsone ; Fluco ; Itraco ; Azithro
+		MaxRÈponses=5
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=Prophylaxis_Secondary
+				ModalitÈs=Cotri ; Dapsone ; Fluco ; Itraco ; Azithro ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=MDM ART Starting Date
+		Variable=ART_MDMARTStartingDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R012. MDM Starting Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Remaining pill (days)
+		Variable=ART_RemainingPill
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Remaining pill (Days)
+				ModalitÈs=Less than 2 ; From 2 to 4 ; From 4 to 6 ; From 6 to 8 ; From 8 to 10 ; From 10 to 12 ; 12 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=ART_ARTMedName1
+		Type=7
+		FichierCodes=Sys\Dic_Lists\ARV Medicine_v2014.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0111. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=ART_Dosage1
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0112. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=ART_Frequency1
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0113. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=ART_NumberDays1
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0114. Number days
+				ModalitÈs=val = 32767 ; mod-FR-2 ; mod-FR-3 ; mod-FR-4 ; mod-FR-5 ; mod-FR-6 ; mod-FR-7 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=ART_ARTMedName2
+		Type=7
+		FichierCodes=Sys\Dic_Lists\ARV Medicine_v2014.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0121. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=ART_Dosage2
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0122. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=ART_Frequency2
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0123. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=ART_NumberDays2
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0124. Number days
+				ModalitÈs=val = 32767 ; mod-FR-2 ; mod-FR-3 ; mod-FR-4 ; mod-FR-5 ; mod-FR-6 ; mod-FR-7 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=ART_ARTMedName3
+		Type=7
+		FichierCodes=Sys\Dic_Lists\ARV Medicine_v2014.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0131. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=ART_Dosage3
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0132. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=ART_Frequency3
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0133. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=ART_NumberDays3
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0134. Number days
+				ModalitÈs=val = 32767 ; mod-FR-2 ; mod-FR-3 ; mod-FR-4 ; mod-FR-5 ; mod-FR-6 ; mod-FR-7 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=ART_ARTMedName4
+		Type=7
+		FichierCodes=Sys\Dic_Lists\ARV Medicine_v2014.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0141. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=ART_Dosage4
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0142. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=ART_Frequency4
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0143. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=ART_NumberDays4
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0144. Number days
+				ModalitÈs=val = 32767 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=ART_ARTMedName5
+		Type=7
+		FichierCodes=C:\Sphinx For Written Forms (YGN+KCN)\2014 Modification\Sys\Dic_Lists\LIST_I_ARVsMedicines.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0151. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=ART_Dosage5
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0152. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=ART_Frequency5
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0153. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=ART_NumberDays5
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0154. Number days
+				ModalitÈs=val = 32767 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=TB Starting Date
+		Variable=ART_TB_StartingDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=TB Starting Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=ART_TB_MedicineName1
+		Type=7
+		FichierCodes=Sys\Dic_Lists\TB_Medicines_List.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0111. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=ART_TB_Dosage1
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0112. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=ART_TB_Frequency1
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0113. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=ART_TB_NumberDays1
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0114. Number days
+				ModalitÈs=Less than 100 ; From 100 to 200 ; From 200 to 300 ; From 300 to 400 ; From 400 to 500 ; From 500 to 600 ; 600 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=ART_TB_MedicineName2
+		Type=7
+		FichierCodes=Sys\Dic_Lists\TB_Medicines_List.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0121. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=ART_TB_Dosage2
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0122. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=ART_TB_Frequency2
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0123. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=ART_TB_NumberDays2
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0124. Number days
+				ModalitÈs=Less than 10 ; From 10 to 20 ; From 20 to 30 ; From 30 to 40 ; From 40 to 50 ; From 50 to 60 ; 60 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=ART_TB_MedicineName3
+		Type=7
+		FichierCodes=Sys\Dic_Lists\TB_Medicines_List.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0131. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=ART_TB_Dosage3
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0132. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=ART_TB_Frequency3
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0133. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=ART_TB_NumberDays3
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0134. Number days
+				ModalitÈs=val = 7 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=ART_TB_MedicineName4
+		Type=7
+		FichierCodes=Sys\Dic_Lists\TB_Medicines_List.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0141. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=ART_TB_Dosage4
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0142. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=ART_TB_Frequency4
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0143. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=ART_TB_NumberDays4
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0144. Number days
+				ModalitÈs=val = 32767 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=TB Category
+		Variable=TB_Category
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Intensive ; Continuation
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=TB Category
+				ModalitÈs=Intensive ; Continuation ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Treatment Category
+		Variable=TB_TreatmentCategory
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=Initial ; Retreatment ; Childhood
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Laboratory
+				ModalitÈs=mod-FR-4 ; mod-FR-5 ; mod-FR-6 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=IPT_Treatment
+		Variable=IPT_Treatmet
+		Type=2
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		MaxRÈponses=2
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				LibellÈ=IPT_Treatment
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=IPT_Initiation_Date
+		Variable=IPT_Initiation_Date
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=IPT_Initiation_Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Initial_1st_Visit_Date
+		Variable=Initial_1st_Visit_Date
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Initial_1st_Visit_Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=IPT_Outcome
+		Variable=IPT_Outcome
+		Type=7
+		FichierCodes=Sys\Dic_Lists\IPT_Outcome.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=IPT_Outcome
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=IPT_Outcome_Date
+		Variable=IPT_Outcome_Date
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=IPT_Outcome_Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Reasons_of_not_starting_IPT
+		Variable=Reasons_of_not_starting_IPT
+		Type=1
+		NbModalitÈs=10
+		ModalitÈs=Currently on anti-TB treatment ; Currently on IPT ; Clinically susupected active TB ; Completed IPT treatment ; Active hepatitis (acute or chronic) ; Heavy alcoholism ; Peripheral neuropathy ; Patient needs additional counselling ; Patient refusal ; Other (Please specify)
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Reasons_of_not_starting_IPT
+				ModalitÈs=Currently on anti-TB treatment ; Currently on IPT ; Clinically susupected active TB ; Completed IPT treatment ; Active hepatitis (acute or chronic) ; Heavy alcoholism ; Peripheral neuropathy ; Patient needs additional counselling ; Patient refusal ; mod-FR-10 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=IPT_Other
+		Variable=IPT_Other
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=IPT_Other
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=ART_OTHMedName1
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0211. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=ART_OTH_Dosage1
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0212. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=ART_OTH_Frequency1
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0213. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=ART_OTH_NumberDays1
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0214. Number days
+				ModalitÈs=val = 32767 ; mod-FR-2 ; mod-FR-3 ; mod-FR-4 ; mod-FR-5 ; mod-FR-6 ; mod-FR-7 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=ART_OTHMedName2
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0221. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=ART_OTH_Dosage2
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0222. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=ART_OTH_Frequency2
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0223. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=ART_OTH_NumberDays2
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0224. Number days
+				ModalitÈs=val = 32767 ; mod-FR-2 ; mod-FR-3 ; mod-FR-4 ; mod-FR-5 ; mod-FR-6 ; mod-FR-7 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=ART_OTHMedName3
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0231. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=ART_OTH_Dosage3
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0232. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=ART_OTH_Frequency3
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0233. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=ART_OTH_NumberDays3
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0234. Number days
+				ModalitÈs=val = 32767 ; mod-FR-2 ; mod-FR-3 ; mod-FR-4 ; mod-FR-5 ; mod-FR-6 ; mod-FR-7 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=ART_OTHMedName4
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0241. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=ART_OTH_Dosage4
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0242. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=ART_OTH_Frequency4
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0243. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=ART_OTH_NumberDays4
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0244. Number days
+				ModalitÈs=val = 32767 ; mod-FR-2 ; mod-FR-3 ; mod-FR-4 ; mod-FR-5 ; mod-FR-6 ; mod-FR-7 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=ART_OTHMedName5
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0251. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=ART_OTH_Dosage5
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0252. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=ART_OTH_Frequency5
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0253. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=ART_OTH_NumberDays5
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0254. Number days
+				ModalitÈs=val = 32767 ; mod-FR-2 ; mod-FR-3 ; mod-FR-4 ; mod-FR-5 ; mod-FR-6 ; mod-FR-7 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=ART_OTHMedName6
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0251. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=ART_OTH_Dosage6
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0252. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=ART_OTH_Frequency6
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0253. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=ART_OTH_NumberDays6
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0254. Number days
+				ModalitÈs=val = 32767 ; mod-FR-2 ; mod-FR-3 ; mod-FR-4 ; mod-FR-5 ; mod-FR-6 ; mod-FR-7 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=ART_OTH_MedName7
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0211. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=ART_OTH_Dosage7
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0212. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=ART_OTH_Frequency7
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0213. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=ART_OTH_NumberDays7
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0214. Number days
+				ModalitÈs=Less than 2.00 ; From 2.00 to 4.00 ; From 4.00 to 6.00 ; From 6.00 to 8.00 ; From 8.00 to 10.00 ; From 10.00 to 12.00 ; 12.00 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=ART_OTH_MedName8
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0221. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=ART_OTH_Dosage8
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0222. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=ART_OTH_Frequency8
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0223. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=ART_OTH_NumberDays8
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0224. Number days
+				ModalitÈs=val = 3 ; val = 4 ; val = 5 ; val = 6 ; val = 7 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=ART_OTH_MedName9
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0231. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=ART_OTH_Dosage9
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0232. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=ART_OTH_Frequency9
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0233. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=ART_OTH_NumberDays9
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0234. Number days
+				ModalitÈs=val = 7 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=ART_OTH_MedName10
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0241. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=ART_OTH_Dosage10
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0242. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=ART_OTH_Frequency10
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0243. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=ART_OTH_NumberDays10
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0244. Number days
+				ModalitÈs=val = 32767 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=ART_OTH_MedName11
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0251. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=ART_OTH_Dosage11
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0252. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=ART_OTH_Frequency11
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0253. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=ART_OTH_NumberDays11
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0254. Number days
+				ModalitÈs=val = 32767 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Referred to hospital or other structure
+		Variable=ART_ReferredTo
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Referred to hospital or other structure
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Patient should return in
+		Variable=ART_PatientShouldReturnIn
+		Type=1
+		NbModalitÈs=8
+		ModalitÈs=1 wk ; 2 wks ; 3 wks ; 1 mth ; 2 mths ; 3 mths ; 6 mths ; Other
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=T2. Patient should return in
+				ModalitÈs=1 wk ; 2wks ; mod-FR-8 ; 1 mth ; 2 mths ; 3 mths ; 6 mths ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Other
+		Variable=ART_ReturnOther
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=T21. Other
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Date of next visit
+		Variable=ART_DateNextVisit
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=T3. Date of next visit
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Motive
+		Variable=ART_Motive
+		Type=2
+		NbModalitÈs=9
+		ModalitÈs=ART Follow up ; PLH Follow up ; TB Follow up ; STI Follow up ; CD4 ; Support Group ; Nutritional Support ; Vaccination ; Other
+		MaxRÈponses=9
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=T2. Patient should return in
+				ModalitÈs=1 wk ; 2wks ; mod-FR-8 ; 1 mth ; 2 mths ; 3 mths ; 6 mths ; Other ; mod-FR-9 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=MotiveOther
+		Variable=ART_MotiveOther
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=MotiveOther
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Plan (Next visit)
+		Variable=ART_PlanNextVisit
+		Type=6
+		NbLignes=4
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Plan (Next visit)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Verify patient
+		Variable=Verify
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Verify patient
+				ModalitÈs=val = 32767 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Last registration date
+		Variable=LastRegistrationDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=33056
+		OptionsBasic=1
+		VariableAutomatique=DateEnreg
+		Traductions
+			Traduction
+				LibellÈ=Last registration date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=ART Key
+		Variable=Key
+		Type=6
+		NbLignes=2
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		OptionsBasic=1
+		Basic=Key = MDMcode & ART_VisitDate
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				LibellÈ=test
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Order of the observations before sorting
+		Variable=ORDER
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=jj/mm/aaaa hh:nn:ss
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Order of the observations before sorting
+				ModalitÈs=Less than 1000 ; From 1000 to 2000 ; From 2000 to 3000 ; From 3000 to 4000 ; From 4000 to 5000 ; From 5000 to 6000 ; 6000 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Order of the observations before sorting
+		Variable=ORDER1
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=jj/mm/aaaa hh:nn:ss
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Order of the observations before sorting
+				ModalitÈs=Less than 1000 ; From 1000 to 2000 ; From 2000 to 3000 ; From 3000 to 4000 ; From 4000 to 5000 ; From 5000 to 6000 ; 6000 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Order of the observations before sorting
+		Variable=ORDER2
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=jj/mm/aaaa hh:nn:ss
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Order of the observations before sorting
+				ModalitÈs=Less than 2000 ; From 2000 to 4000 ; From 4000 to 6000 ; From 6000 to 8000 ; From 8000 to 10000 ; From 10000 to 12000 ; 12000 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Order of the observations before sorting
+		Variable=ORDER3
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=jj/mm/aaaa hh:nn:ss
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Order of the observations before sorting
+				ModalitÈs=Less than 2000 ; From 2000 to 4000 ; From 4000 to 6000 ; From 6000 to 8000 ; From 8000 to 10000 ; From 10000 to 12000 ; 12000 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Order of the observations before sorting
+		Variable=ORDER4
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=jj/mm/aaaa hh:nn:ss
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Order of the observations before sorting
+				ModalitÈs=Less than 2000 ; From 2000 to 4000 ; From 4000 to 6000 ; From 6000 to 8000 ; From 8000 to 10000 ; From 10000 to 12000 ; 12000 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Order of the observations before sorting
+		Variable=ORDER5
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=jj/mm/aaaa hh:nn:ss
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Order of the observations before sorting
+				ModalitÈs=Less than 2000 ; From 2000 to 4000 ; From 4000 to 6000 ; From 6000 to 8000 ; From 8000 to 10000 ; From 10000 to 12000 ; 12000 and more ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Order of the observations before sorting
+		Variable=ORDER6
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=jj/mm/aaaa hh:nn:ss
+		Plan=1
+		Attributs=32
+	Fin
+Fin
+Titres
+	Titre
+		Type=0
+		LibellÈ=SOCIO-DEMOGRAPHIC DATA
+		PremiËre=1
+		Traductions
+			Traduction
+				LibellÈ=A. SOCIO-DEMOGRAPHIC DATA
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=VISIT
+		PremiËre=8
+		Traductions
+			Traduction
+				LibellÈ=B. VISIT
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Background
+		PremiËre=13
+		Traductions
+			Traduction
+				LibellÈ=G. Background
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Medications
+		PremiËre=18
+		Traductions
+			Traduction
+				LibellÈ=H. Medications
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=ARVs
+		PremiËre=37
+		Traductions
+			Traduction
+				LibellÈ=I. ARVs
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Medical history
+		PremiËre=64
+		Traductions
+			Traduction
+				LibellÈ=J. Medical history
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=TB history
+		PremiËre=65
+		Traductions
+			Traduction
+				LibellÈ=K. TB history
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Review of symptoms
+		PremiËre=70
+		Traductions
+			Traduction
+				LibellÈ=M. Review of symptoms
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Physical Exam
+		PremiËre=108
+		Traductions
+			Traduction
+				LibellÈ=N. Physical Exam
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=WHO staging
+		PremiËre=127
+		Traductions
+			Traduction
+				LibellÈ=O. Who staging
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=WHO staging (Child)
+		PremiËre=133
+		Traductions
+			Traduction
+				LibellÈ=O. Who staging (Child)
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Diagnosis
+		PremiËre=138
+		Traductions
+			Traduction
+				LibellÈ=P. Assessment
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Investigation ordered
+		PremiËre=151
+		Traductions
+			Traduction
+				LibellÈ=S. Investigation ordered
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Hepatitis
+		PremiËre=154
+		Traductions
+			Traduction
+				LibellÈ=Hepatitis
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=TB
+		PremiËre=159
+		Traductions
+			Traduction
+				LibellÈ=TB
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Radiology
+		PremiËre=198
+		Traductions
+			Traduction
+				LibellÈ=Radiology
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Contact
+		PremiËre=203
+		Traductions
+			Traduction
+				LibellÈ=Contact
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Type of Case
+		PremiËre=207
+		Traductions
+			Traduction
+				LibellÈ=Type of Case
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Treatment
+		PremiËre=209
+		Traductions
+			Traduction
+				LibellÈ=R. Treatment
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=ART treatment
+		PremiËre=215
+		Traductions
+			Traduction
+				LibellÈ=R01. ART treatment
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=TB Treatment
+		PremiËre=237
+		Traductions
+			Traduction
+				LibellÈ=TB Treatment
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=IPT Treatment
+		Consigne=IPT_Treatment
+		PremiËre=256
+		Traductions
+			Traduction
+				LibellÈ=IPT_Treatment
+				Consigne=IPT_Treatment
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Other treatment
+		PremiËre=263
+		Traductions
+			Traduction
+				LibellÈ=R02. Other treatment
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=End of visit
+		PremiËre=307
+		Traductions
+			Traduction
+				LibellÈ=T. End of visit
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=System Items
+		PremiËre=314
+		Traductions
+			Traduction
+				LibellÈ=System Items
+			Fin
+		Fin
+	Fin
+Fin
+Strates
+	Strate
+		Nom=OI_D
+		Active=0
+		Filtre
+			OpÈrateur=-1
+			Variable=139
+			Compris=2
+			ModalitÈs= 1
+			Rang=1
+			NumÈrique=0
+		Fin
+		Filtre
+			OpÈrateur=1
+			Variable=141
+			Compris=2
+			NumÈrique=0
+		Fin
+	Fin
+	Strate
+		Nom=OI_P
+		Active=0
+	Fin
+Fin
+Options
+	GroupesActifs=1
+	RenvoisActifs=1
+	ControlesActifs=1
+Fin

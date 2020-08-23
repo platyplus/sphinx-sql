@@ -1,0 +1,2103 @@
+Version=5104
+EntÍte
+	Historique=5.0.0.81(MÈdecins du Mon;5.1.0.2(MÈdecins du Mond;5.0.0.64(MÈdecins du Mon;5.1.0.4(MEDECINS DU MOND;5.1.0.4(MÈdecins du Mond;
+	Langue=EN
+	Titre=ART Adherence
+	StadePanneau=10
+	Traductions
+		Traduction
+			Langue=FR
+			Titre=ART VISIT
+		Fin
+	Fin
+Fin
+Questions
+	Question
+		LibellÈ=MDM code (Patient ID)
+		Variable=MDMcode
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=V_sexe = "1"ÄÅIf A03_Sexe In "Female" ThenÄÅV_sexe = "2"ÄÅEndIfÄÅif A07_PatientTarget In "DU" ThenÄÅ        V_PT="D"ÄÅ	elseÄÅ		if A07_PatientTarget In "DUP" ThenÄÅ			V_PT="P"ÄÅ			elseÄÅ				if A07_PatientTarget In "IDU" ThenÄÅ					V_PT="I"ÄÅ					elseÄÅ						if A07_PatientTarget In "IDUP" ThenÄÅ							V_PT="P"ÄÅ							elseÄÅ								if A07_PatientTarget In "MSM" ThenÄÅ									V_PT="M"ÄÅ									elseÄÅ										if A07_PatientTarget In "MSMP" ThenÄÅ											V_PT="P"ÄÅ											elseÄÅ												if A07_PatientTarget In "SW" ThenÄÅ													V_PT="S"ÄÅ													elseÄÅ														if A07_PatientTarget In "SWP" ThenÄÅ															V_PT="P"ÄÅ															elseÄÅ																if A07_PatientTarget In "CH" ThenÄÅ																	V_PT="C"ÄÅ																	elseÄÅ																		if A07_PatientTarget In "GP" ThenÄÅ																			V_PT="G"ÄÅ																			elseÄÅ																				if A07_PatientTarget In "Other Partner" Then ÄÅ																					V_PT="P"ÄÅ																					elseÄÅ																						if A07_PatientTarget In "Other High Risk Group" ThenÄÅ																							V_PT="O"ÄÅ																							elseÄÅ																								V=PT=""ÄÅ																						end ifÄÅ																				end ifÄÅ																		end ifÄÅ																endifÄÅ														endifÄÅ												endifÄÅ										endifÄÅ								endifÄÅ						endifÄÅ				endifÄÅ				ÄÅ		endifÄÅendifÄÅMDMcode = MDMlocation.Catcode(3) & V_PT & V_sexe & SerialNumber
+		Traductions
+			Traduction
+				LibellÈ=MDM code (Patient ID)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=A00. Registration date
+		Variable=A00_RegistrationDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=A00. Registration date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Patient Name
+		Variable=A01_PatientName
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=A01. Name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Fatherís name
+		Variable=A02_FatherName
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=A02. Fatherís name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=A03. Sex
+		Variable=A03_Sexe
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Male ; Female
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=A03. Sexe
+				ModalitÈs=Male ; Female ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Date of birth
+		Variable=A041_DateOfBirth
+		Type=8
+		MinNombre=3652
+		Format=jj/mm/aaaa
+		Consigne=The response must be more than 01/01/1910.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=A04. Date of birth
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Age
+		Variable=A05_Age
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Basic=If  Not A041_DateOfBirth.EstNonRÈponse ThenÄÅ    A05_Age = (A00_RegistrationDate - A041_DateOfBirth) / 365ÄÅEndIf
+		Traductions
+			Traduction
+				LibellÈ=Age
+				ModalitÈs=mod-FR-1 ; mod-FR-2 ; mod-FR-3 ; mod-FR-4 ; mod-FR-5 ; mod-FR-6 ; mod-FR-7 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=A07. Patient target
+		Variable=A07_PatientTarget
+		Type=7
+		FichierCodes=D:\2012 Data\Error for ADH in MGG\24.5.12 ART ADH\Sys\Dic_Lists\LIST_A3_Target.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=Majuscule(A07_PatientTarget)
+		Traductions
+			Traduction
+				LibellÈ=A07. Patient target
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medical care place
+		Variable=ADH_PlaceOfMedicalCare
+		Type=1
+		NbModalitÈs=6
+		ModalitÈs=Clinic ; HBC ; Outreach ; Hospital ; Specialist ; Phone Contact
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Medical care place
+				ModalitÈs=Clinic ; HBC ; mod-FR-5 ; Hospital ; Specialist ; mod-FR-6 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Visit
+		Variable=ADH_Visit
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=Initial Visit ; Follow up ; Assessment
+		PondÈrations= 0
+		Consigne=Mandatory response.
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				LibellÈ=A042. Date of birth estimated
+				ModalitÈs=Date of birth estimated ; mod-FR-2 ; mod-FR-3 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Visit_Assessment
+		Variable=ADH_Visit_Assessment
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=jj/mm/aaaa hh:nn:ss
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Visit_Assessment
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Reason of visit
+		Variable=ADH_ReasonOfVisit
+		Type=2
+		NbModalitÈs=2
+		ModalitÈs=ART ; TB
+		MaxRÈponses=2
+		PondÈrations= 0
+		Consigne=More than one response can be selected.ÄÅMandatory response.
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				LibellÈ=Medical care place
+				ModalitÈs=Hospital ; Specialist ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Visit date
+		Variable=ADH_VisitDate
+		Type=8
+		MinNombre=32872
+		Format=jj/mm/aaaa
+		Consigne=The response must be more than 01/01/1990.ÄÅMandatory response.
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				LibellÈ=Visit date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Appointment
+		Variable=ADH_Appointment
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=On Time ; Early ; Late
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=B09.Dehydration
+				ModalitÈs=Yes ; mod-FR-2 ; mod-FR-3 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Counselor
+		Variable=ADH_Counselor
+		Type=7
+		FichierCodes=D:\Myanmar_MDM_Clinic\Sys\Dic_Lists\LIST_A2_MDMstaff.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=MDM staff
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Marital Status
+		Variable=A07a_MaritalStatus
+		Type=7
+		FichierCodes=D:\Myanmar_MDM_Clinic\Sys\Dic_Lists\LIST_A4_MaritalStatus.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Marital Status
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=No of children
+		Variable=ADH_NoOfChildren
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=No of children
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Accommodation
+		Variable=ADH_Accommodation
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Stable ; Homeless
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=B032. Lb / Kg
+				ModalitÈs=Lb ; Kg ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=If Stable
+		Variable=ADH_Accomo_IfStable
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=With Family ; With Friends
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=B09.Dehydration
+				ModalitÈs=Yes ; mod-FR-2 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Occupation
+		Variable=ADH_Occupation
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=B09.Dehydration
+				ModalitÈs=Yes ; mod-FR-2 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=If yes, specify
+		Variable=ADH_Occupation_IfYes
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=If yes, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Financial situation
+		Variable=ADH_FinancialSituation
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=OK ; Difficult
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M011. Constitutional
+				ModalitÈs=mod-FR-13 ; mod-FR-14 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Level of education
+		Variable=ADH_LevelOfEducation
+		Type=1
+		NbModalitÈs=7
+		ModalitÈs=Graduate (After grade 10) ; High (Grades 9 & 10) ; Middle (Grades 5 to 8) ; Primary (Grades 1 to 4) ; Illiterate ; Literate (read & write) ; Non Applicable (e.g. for babies)
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M011. Constitutional
+				ModalitÈs=mod-FR-13 ; mod-FR-14 ; mod-FR-5 ; mod-FR-7 ; mod-FR-15 ; mod-FR-4 ; mod-FR-6 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Remark
+		Variable=ADH_Social_Remark
+		Type=6
+		NbLignes=2
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Remark
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Does the patient have a care taker?
+		Variable=ADH_PatientHasCareTaker
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=G03. Patient has disclosed status
+				ModalitÈs=Yes ; mod-FR-2 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=If yes, name
+		Variable=ADH_IfYesName
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R012. If other, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=If no, why?
+		Variable=ADH_IfNoWhy
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R012. If other, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Relationship to patient
+		Variable=ADH_RelationshipToPatient_I
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R012. If other, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=In same household?
+		Variable=ADH_InSameHouseHold_I
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=G03. Patient has disclosed status
+				ModalitÈs=Yes ; mod-FR-2 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Did care taker attend clinic with patient?
+		Variable=ADH_CareTakerAttendClinic_I
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=G03. Patient has disclosed status
+				ModalitÈs=Yes ; mod-FR-2 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=ART starting date
+		Variable=ADH_ARTStartDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ART starting date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=ART Stop Date
+		Variable=ADH_ARTStopDate1
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ART Stop Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=ART Restarting Date
+		Variable=ADH_ARTRestartingDate1
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ART Restarting Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=ART Stop Date
+		Variable=ADH_ARTStopDate2
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ART Stop Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=ART Restarting Date
+		Variable=ADH_ARTRestartingDate2
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ART Restarting Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=ART Stop Date
+		Variable=ADH_ARTStopDate3
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ART Stop Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=ART Restarting Date
+		Variable=ADH_ARTRestartingDate3
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ART Restarting Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=ART Stop Date
+		Variable=ADH_ARTStopDate4
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ART Stop Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=ART Restarting Date
+		Variable=ADH_ARTRestartingDate4
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ART Restarting Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=ART Stop Date
+		Variable=ADH_ARTStopDate5
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ART Stop Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=ART Restarting Date
+		Variable=ADH_ARTRestartingDate5
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ART Restarting Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=TB Starting Date
+		Variable=ADH_TBStartDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=TB Starting Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=TB Stop Date
+		Variable=ADH_TBStopDate1
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=TB Stop Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=TB Restarting Date
+		Variable=ADH_TBRestartingDate1
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=TB Restarting Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=TB Stop Date
+		Variable=ADH_TBStopDate2
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=TB Stop Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=TB Restarting Date
+		Variable=ADH_TBRestartingDate2
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=TB Restarting Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=TB Stop Date
+		Variable=ADH_TBStopDate3
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=TB Stop Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=TB Restarting Date
+		Variable=ADH_TBRestartingDate3
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=TB Restarting Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=TB Stop Date
+		Variable=ADH_TBStopDate4
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=TB Stop Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=TB Restarting Date
+		Variable=ADH_TBRestartingDate4
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=TB Restarting Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=TB Stop Date
+		Variable=ADH_TBStopDate5
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=TB Stop Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=TB Restarting Date
+		Variable=ADH_TBRestartingDate5
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=TB Restarting Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Ask the patient: "Many people have problems taking pills, what problems are you having?
+		Variable=ADH_AdherenceProblem
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Ask the patient: "Many people have problems taking pills, what problems are you having?
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Problem for Adherence
+		Variable=ADH_Problem
+		Type=2
+		NbModalitÈs=3
+		ModalitÈs=Social ; Medical ; Miscellaneous
+		MaxRÈponses=3
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=Problem for Adherence
+				ModalitÈs=Social ; Medical ; Miscellaneous ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Social
+		Variable=ADH_AdhSocialProblem
+		Type=2
+		NbModalitÈs=7
+		ModalitÈs=Care taker ; Disclosure ; Unfortable to take pill in front of others ; Patient sold pills ; Patient is in jail ; Food insecurity ; Transportation problem to come to clinic
+		MaxRÈponses=7
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=Social
+				ModalitÈs=Care taker ; Disclosure ; Unfortable to take pill in front of others ; Patient sold pills ; Patient is in jail ; Food insecurity ; Transportation problem to come to clinic ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medical
+		Variable=ADH_AdhMedicalProblem
+		Type=2
+		NbModalitÈs=5
+		ModalitÈs=Pill burden ; Difficulty in swallowing ; Alcohol/drugs ; Psychological disorder ; Other medical problems
+		MaxRÈponses=5
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=Medical
+				ModalitÈs=Pill burden ; Difficulty in swallowing ; Alcohol/drugs ; Psychological disorder ; Other medical problems ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medical Other
+		Variable=ADH_AdhMedicalProblemOther
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Medical Other
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Miscellaneous
+		Variable=ADH_AdhMiscellaneousProblem
+		Type=2
+		NbModalitÈs=7
+		ModalitÈs=Forgot ; Travelling ; Patient ran out of medication ; Clinician ran out of medication ; Patient lost his/her pill ; Patient did not want to take pill ; Paitent is disorganized
+		MaxRÈponses=7
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=Miscellaneous
+				ModalitÈs=Forgot ; Travelling ; Patient ran out of medication ; Clinician ran out of medication ; Patient lost his/her pill ; Patient did not want to take pill ; Paitent is disorganized ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Comment
+		Variable=ADH_Comment
+		Type=6
+		NbLignes=4
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Ask the patient: "Many people have problems taking pills, what problems are you having?
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=No side effects
+		Variable=ADH_NoSideEffects
+		Type=1
+		NbModalitÈs=1
+		ModalitÈs=No side effects
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=No side effects
+				ModalitÈs=No side effects ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Side Effects
+		Variable=ADH_SideEffects
+		Type=2
+		NbModalitÈs=3
+		ModalitÈs=Severe side effects ; Long term side effects ; Short term/general
+		MaxRÈponses=3
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=Side Effects
+				ModalitÈs=Severe side effects ; Long term side effects ; Short term/general ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Severe side effects
+		Variable=ADH_SevereSideEffects
+		Type=2
+		NbModalitÈs=4
+		ModalitÈs=Skin rash ; jaundice ; Abdominal pain ; Shortness of breath
+		MaxRÈponses=4
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=Severe side effects
+				ModalitÈs=Skin rash ; jaundice ; Abdominal pain ; Shortness of breath ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Long term side effects
+		Variable=ADH_LongTermSideEffects
+		Type=2
+		NbModalitÈs=2
+		ModalitÈs=Lipodystrophy ; Tingling and numbness
+		MaxRÈponses=2
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=Long term side effects
+				ModalitÈs=Lipodystrophy ; Tingling and numbness ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Short term/general
+		Variable=ADH_ShortTermGeneral
+		Type=2
+		NbModalitÈs=7
+		ModalitÈs=Nausea/Vomiting ; Diarrhea ; Headache ; Dizziness ; Strange dreams ; Weakness ; Other
+		MaxRÈponses=7
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=Short term/general
+				ModalitÈs=Nausea/Vomiting ; Diarrhea ; Headache ; Dizziness ; Strange dreams ; Weakness ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=SideEffect_Other
+		Variable=ADH_ShortTermSideEffects_Other
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=SideEffect_Other
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Severe Side effects
+		Variable=ADH_SevereSE
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Severe Side effects
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Refer to Doctor
+		Variable=ADH_ReferToDoctor
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Refer to Doctor
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number of missed doses within last 7 days?
+		Variable=ADH_NoOfMissedDosesLast7days
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Number of missed doses last month
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number of missed doses within last 30 days?
+		Variable=ADH_NoOfMissedDosesLast30days
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Number of missed doses within last 30 days?
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Total doses within last 30 days?
+		Variable=ADH_TotalDoses
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Total doses within last 30 days?
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Adherence within last 30 days?
+		Variable=ADH_AdherenceWithinLast30Days
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=#####
+		Plan=1
+		Attributs=33056
+		Basic=ADH_AdherenceWithinLast30Days = ((ADH_TotalDoses - ADH_NoOfMissedDosesLast30days)/ADH_TotalDoses) * 100
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				LibellÈ=Adherence within last 30 days?
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number of doses found (excluding extra doses)
+		Variable=ADH_DosesFound
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Number of doses found (excluding extra doses)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number of doses patient should have
+		Variable=ADH_DosesShouldHave
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Number of doses patient should have
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Extra doses provided
+		Variable=ADH_ExtraDosesProvided
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Extra doses provided
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=dose for
+		Variable=ADH_DoseFor
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=dose for
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Adherence level since last visit: "how did you respect the doctor's prescription?"
+		Variable=ADH_AdherenceLevelSinceLastVisit
+		Type=1
+		NbModalitÈs=4
+		ModalitÈs=Perfectly ; Almost ; Half ; Not at all
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M011. Constitutional
+				ModalitÈs=mod-FR-13 ; mod-FR-14 ; mod-FR-15 ; mod-FR-4 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Social-familial situation
+		Variable=ADH_SocialFamilialsituation
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=STABLE ; PROBLEM
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=G03. Patient has disclosed status
+				ModalitÈs=Yes ; mod-FR-2 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=If problem, specify
+		Variable=ADH_Social_IfProblem
+		Type=6
+		NbLignes=2
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=If problem, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Care taker
+		Variable=ADH_CareTaker
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=STABLE ; CHANGE ; PROBLEM
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M011. Constitutional
+				ModalitÈs=mod-FR-13 ; mod-FR-14 ; mod-FR-15 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=If Change, Name of care taker
+		Variable=ADH_CareTaker_IfChange
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=If Change, Name of buddy :
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=In same household
+		Variable=ADH_InSameHouseHold_F
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M011. Constitutional
+				ModalitÈs=Fatigue ; Fever ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Relationship to patient
+		Variable=ADH_RelationshipToPatient_F
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Relationship to patient :
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Did care taker attend to clinic with the patient
+		Variable=ADH_CareTakerAttendClinic_F
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M011. Constitutional
+				ModalitÈs=Fatigue ; Fever ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=If probolem, specify
+		Variable=ADH_CareTakerAttendClinic_IfProblem
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=If probolem, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Psychological disorder
+		Variable=ADH_PsychologicalDisorder
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=G03. Patient has disclosed status
+				ModalitÈs=Yes ; mod-FR-2 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=If yes, specify
+		Variable=ADH_Psycho_IfYes
+		Type=6
+		NbLignes=2
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=If yes, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Current drug use
+		Variable=ADH_CurrentDrugUse
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Current drug use
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Drug
+		Variable=ADH_Drug
+		Type=2
+		NbModalitÈs=7
+		ModalitÈs=Alcohol ; Ampheatamine ; Benzodiazepine ; Cannabis ; Ecstasy ; Herion ; Opium
+		MaxRÈponses=7
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=Drug
+				ModalitÈs=Alcohol ; Ampheatamine ; Benzodiazepine ; Cannabis ; Ecstasy ; Herion ; Opium ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Last use
+		Variable=ADH_AlcoholLastUse
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Last use
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Time/Day
+		Variable=ADH_AlcoholTimeDay
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=##########
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=#Time/day
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Days/Week
+		Variable=ADH_AlcoholDaysWeek
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=##########
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=#Days/Week
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Way of use
+		Variable=ADH_AlcoholWayOfUse
+		Type=7
+		FichierCodes=D:\Myanmar_MDM_Clinic\Sys\Dic_Lists\WayOfUse.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Way of use
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Last use
+		Variable=ADH_AmpheataminelLastUse
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Last use
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Time/Day
+		Variable=ADH_AmpheatamineTimeDay
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=##########
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=#Time/day
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Days/Week
+		Variable=ADH_AmpheatamineDaysWeek
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=##########
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ADH_AmpheatamineDaysWeek
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Way of use
+		Variable=ADH_AmpheatamineWayOfUse
+		Type=7
+		FichierCodes=D:\Myanmar_MDM_Clinic\Sys\Dic_Lists\WayOfUse.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ADH_AmpheatamineWayOfUse
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Last Use
+		Variable=ADH_DiazepineLastUse
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Last Use
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Time/Day
+		Variable=ADH_DiazepineTimeDay
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=##########
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=#Time/day
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Days/Week
+		Variable=ADH_DiazepineDaysWeek
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=##########
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ADH_DiazepineDaysWeek
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Way of use
+		Variable=ADH_DiazepineWayOfUse
+		Type=7
+		FichierCodes=D:\Myanmar_MDM_Clinic\Sys\Dic_Lists\WayOfUse.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ADH_DiazepineWayOfUse
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Last use
+		Variable=ADH_CannabisLastUse
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Last use
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Time/Day
+		Variable=ADH_CannabisTimeDay
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=##########
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=#Time/day
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Days/Week
+		Variable=ADH_CannabisDaysWeek
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=##########
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ADH_CannabisDaysWeek
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Way of use
+		Variable=ADH_CannabisWayOfUse
+		Type=7
+		FichierCodes=D:\Myanmar_MDM_Clinic\Sys\Dic_Lists\WayOfUse.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ADH_CannabisWayOfUse
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Last use
+		Variable=ADH_EcstasyLastUse
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Last use
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Time/Day
+		Variable=ADH_EcstasyTimeDay
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=##########
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=#Time/day
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Days/Week
+		Variable=ADH_EsctasyDaysWeek
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=##########
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ADH_EsctasyDaysWeek
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Way of use
+		Variable=ADH_EsctasyWayOfUse
+		Type=7
+		FichierCodes=D:\Myanmar_MDM_Clinic\Sys\Dic_Lists\WayOfUse.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ADH_EsctasyWayOfUse
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Last use
+		Variable=ADH_HerionLastUse
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Last use
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Time/Day
+		Variable=ADH_HerionTimeDay
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=##########
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=#Time/day
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Days/Week
+		Variable=ADH_HerionDaysWeek
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=##########
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ADH_HerionDaysWeek
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Way of use
+		Variable=ADH_HerionWayOfUse
+		Type=7
+		FichierCodes=D:\Myanmar_MDM_Clinic\Sys\Dic_Lists\WayOfUse.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ADH_HerionWayOfUse
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Last use
+		Variable=ADH_OpiumLastUse
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Last use
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Time/Day
+		Variable=ADH_OpiumTimeDay
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=##########
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=#Time/day
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Days/Week
+		Variable=ADH_OpiumDaysWeek
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ADH_OpiumDaysWeek
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Way of use
+		Variable=ADH_OpiumWayOfUse
+		Type=7
+		FichierCodes=D:\Myanmar_MDM_Clinic\Sys\Dic_Lists\WayOfUse.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ADH_OpiumWayOfUse
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=If you inject, did you share needle or syringe within last 30 days?
+		Variable=ADH_DidYouShareNeedleSyringe
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=If you inject, did you share needle or syringe within last 30 days?
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Herbal Medicines
+		Variable=ADH_HerbalMedicines
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=G03. Patient has disclosed status
+				ModalitÈs=Yes ; mod-FR-2 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Methadone_is_taking_currently?
+		Variable=ADH_Methadone_is_taking_currently?
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Consigne=Mandatory response.
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				LibellÈ=Methadone_is_taking_currently?
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Methadone_starting_date
+		Variable=ADH_Methadone_starting_date
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Methadone_starting_date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Conclusion about adherence
+		Variable=ADH_Conclusion
+		Type=1
+		NbModalitÈs=3
+		ModalitÈs=Good ; Bad ; Not Sure
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=G03. Patient has disclosed status
+				ModalitÈs=Yes ; mod-FR-2 ; mod-FR-3 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Suggestions : actions to be taken
+		Variable=ADH_Suggestions
+		Type=6
+		NbLignes=4
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Suggestions : actions to be taken
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Check List
+		Variable=ADH_CheckList
+		Type=2
+		NbModalitÈs=8
+		ModalitÈs=Reminders and alarms to take pills checked ; Calendar checked ; Potential barriers to adherence and solutions ; Adherence plan and life plan ; Importance of attending all appointments ; Proper storage of drugs ; Role of care taker ; Change address
+		MaxRÈponses=8
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=Check List
+				ModalitÈs=Reminders and alarms to take pills checked ; Calendar checked ; Potential barriers to adherence and solutions ; Adherence plan and life plan ; Importance of attending all appointments ; Proper storage of drugs ; Role of care taker ; Change address ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Next Appointment Date
+		Variable=ADH_NextAppointmentDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=ART NextVisitDate
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Verify patient
+		Variable=Verify
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Verify patient
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Last registration date
+		Variable=LastRegistrationDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=33056
+		VariableAutomatique=DateEnreg
+		Traductions
+			Traduction
+				LibellÈ=Last registration date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Order of the observations before sorting
+		Variable=ORDER
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=jj/mm/aaaa hh:nn:ss
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Order of the observations before sorting
+			Fin
+		Fin
+	Fin
+Fin
+Titres
+	Titre
+		Type=0
+		LibellÈ=SOCIO-DEMOGRAPHIC DATA
+		PremiËre=1
+		Traductions
+			Traduction
+				LibellÈ=A. SOCIO-DEMOGRAPHIC DATA
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=VISIT
+		PremiËre=8
+		Traductions
+			Traduction
+				LibellÈ=B. VISIT
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=FAMILY SITUATION
+		PremiËre=15
+		Traductions
+			Traduction
+				LibellÈ=FAMILY SITUATION
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=SOCIAL SITUATION
+		PremiËre=17
+		Traductions
+			Traduction
+				LibellÈ=SOCIAL SITUATION
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=CARE TAKER (Initial)
+		PremiËre=24
+		Traductions
+			Traduction
+				LibellÈ=TREATMENT BUDDY
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=TREATMENT
+		PremiËre=30
+		Traductions
+			Traduction
+				LibellÈ=TREATMENT
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=ADHERENCE
+		PremiËre=52
+		Traductions
+			Traduction
+				LibellÈ=ADHERENCE
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=ADHERENCE_PROBLEM
+		PremiËre=53
+		Traductions
+			Traduction
+				LibellÈ=ADHERENCE_PROBLEM
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=ADHERENCE_SIDE EFFECTS
+		PremiËre=59
+		Traductions
+			Traduction
+				LibellÈ=ADHERENCE_SIDE EFFECTS
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=ADHERENCE_i
+		PremiËre=65
+		Traductions
+			Traduction
+				LibellÈ=ADHERENCE_i
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=SOCIAL-FAMILIAL SITUATION
+		PremiËre=76
+		Traductions
+			Traduction
+				LibellÈ=SOCIAL-FAMILIAL SITUATION
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=CARE TAKER
+		PremiËre=78
+		Traductions
+			Traduction
+				LibellÈ=CARE TAKER
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=PSYCHOLOGICAL DISORDER
+		PremiËre=84
+		Traductions
+			Traduction
+				LibellÈ=PSYCHOLOGICAL DISORDER
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=BEHAVIOUR
+		PremiËre=86
+		Traductions
+			Traduction
+				LibellÈ=BEHAVIOUR
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=HERBAL MEDICINES
+		PremiËre=117
+		Traductions
+			Traduction
+				LibellÈ=HERBAL MEDICINES
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=METHADONE
+		Consigne=METHADONE
+		PremiËre=118
+		Traductions
+			Traduction
+				LibellÈ=METHADONE
+				Consigne=METHADONE
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=CONCLUSION ABOUT ADHERENCE
+		PremiËre=120
+		Traductions
+			Traduction
+				LibellÈ=CONCLUSION ABOUT ADHERENCE
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=SUGGESTIONS
+		PremiËre=121
+		Traductions
+			Traduction
+				LibellÈ=SUGGESTIONS
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=COUNSELOR CHECK-LIST
+		PremiËre=122
+		Traductions
+			Traduction
+				LibellÈ=COUNSELOR CHECK-LIST
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=System Items
+		PremiËre=124
+		Traductions
+			Traduction
+				LibellÈ=System Items
+			Fin
+		Fin
+	Fin
+Fin
+Options
+	GroupesActifs=1
+	RenvoisActifs=1
+	ControlesActifs=1
+Fin

@@ -1,0 +1,1493 @@
+version: 5104
+headers:
+  history: 5.0.0.81(Médecins du Mon;5.1.0.2(Médecins du Mond;5.1.0.4(MEDECINS DU MOND;
+  language: en
+  title: GHC Visit
+  pannelStage: 10
+  translations:
+    - language: fr
+      title: GHC Visit
+questions:
+  - label: MDM code (Patient ID)
+    variable: MDMcode
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vb: "V_sexe = \"1\"€\x81If A03_Sexe In \"Female\" Then€\x81V_sexe = \"2\"€\x81EndIf€\x81if A07_PatientTarget In \"DU\" Then€\x81        V_PT=\"D\"€\x81\telse€\x81\t\tif A07_PatientTarget In \"DUP\" Then€\x81\t\t\tV_PT=\"P\"€\x81\t\t\telse€\x81\t\t\t\tif A07_PatientTarget In \"IDU\" Then€\x81\t\t\t\t\tV_PT=\"I\"€\x81\t\t\t\t\telse€\x81\t\t\t\t\t\tif A07_PatientTarget In \"IDUP\" Then€\x81\t\t\t\t\t\t\tV_PT=\"P\"€\x81\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\tif A07_PatientTarget In \"MSM\" Then€\x81\t\t\t\t\t\t\t\t\tV_PT=\"M\"€\x81\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"MSMP\" Then€\x81\t\t\t\t\t\t\t\t\t\t\tV_PT=\"P\"€\x81\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"SW\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"S\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"SWP\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"P\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"CH\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"C\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"GP\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"G\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"Other Partner\" Then €\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"P\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif A07_PatientTarget In \"Other High Risk Group\" Then€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV_PT=\"O\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tV=PT=\"\"€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tend if€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tend if€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tend if€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\t\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\t\t\tendif€\x81\t\t\t\t\t\tendif€\x81\t\t\t\tendif€\x81\t\t\t\t€\x81\t\tendif€\x81endif€\x81MDMcode = MDMlocation.Catcode(3) & V_PT & V_sexe & SerialNumber"
+    translations:
+      - label: MDM code (Patient ID)
+  - label: Registration date
+    variable: A00_RegistrationDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: A00. Registration date
+  - label: Name
+    variable: A01_PatientName
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: A01. Name
+  - label: Father’s name
+    variable: A02_FatherName
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: A02. Father’s name
+  - label: A03. Sex
+    variable: A03_Sexe
+    type: options
+    nbOptions: 2
+    options:
+      - Male
+      - Female
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: A03. Sexe
+        options:
+          - Male
+          - Female
+  - label: A07. Patient target
+    variable: A07_PatientTarget
+    type: code
+    codesFile: Sys/Dic_Lists/LIST_A3_Target.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    vb: Majuscule(A07_PatientTarget)
+    translations:
+      - label: A07. Patient target
+  - label: Date of birth
+    variable: A041_DateOfBirth
+    type: date
+    min: 3652
+    format: jj/mm/aaaa
+    instructions: The response must be more than 01/01/1910.
+    plan: true
+    attributes: 160
+    translations:
+      - label: A04. Date of birth
+  - label: Age
+    variable: A05_Age
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    vb: "If  Not A041_DateOfBirth.EstNonRéponse Then€\x81    A05_Age = (A00_RegistrationDate - A041_DateOfBirth) / 365€\x81EndIf"
+    translations:
+      - label: Age
+        options:
+          - mod-FR-1
+          - mod-FR-2
+          - mod-FR-3
+          - mod-FR-4
+          - mod-FR-5
+          - mod-FR-6
+          - mod-FR-7
+  - label: New Patient
+    variable: GHC_NewPatient
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    instructions: Mandatory response.
+    plan: true
+    attributes: 161
+    translations:
+      - label: B00. Initial visit
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Visit date
+    variable: GHC_VisitDate
+    type: date
+    min: 32872
+    format: jj/mm/aaaa
+    instructions: "The response must be more than 01/01/1990.€\x81Mandatory response."
+    plan: true
+    attributes: 161
+    translations:
+      - label: B021. Visit date
+  - label: MDM staff
+    variable: GHC_MDMstaff
+    type: code
+    codesFile: Sys/Dic_Lists/LIST_A2_MDMstaff.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 33
+    translations:
+      - label: B03. MDM staff
+  - label: Constitutional
+    variable: GHC_Symptoms_Constitutional
+    type: multipleOptions
+    nbOptions: 7
+    options:
+      - Fatigue
+      - Fever
+      - Night sweats
+      - Appetite loss
+      - Weight loss
+      - Pain
+      - Other
+    maxResponses: 7
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: G011. Constitutional
+        options:
+          - Fatigue
+          - Fever
+          - Night sweats
+          - Appetite loss
+          - Weight loss
+          - mod-FR-10
+          - Other
+  - label: Fatigue
+    variable: GHC_Constitutional_Fatigue
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Fatigue
+  - label: Fever
+    variable: GHC_Constitutional_Fever
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Fever
+  - label: Night sweats
+    variable: GHC_Constitutional_NightSweats
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Night sweats
+  - label: Appetitie loss
+    variable: GHC_Constitutional_AppetitieLoss
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Appetitie loss
+  - label: Weight loss
+    variable: GHC_Constitutional_WeightLoss
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Weight loss
+  - label: Pain
+    variable: GHC_Constitutional_Pain
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Pain
+  - label: Other
+    variable: GHC_Constitutional_Other
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'G012. if other, specify'
+  - label: Respiratory
+    variable: GHC_Symptoms_Respiratory
+    type: multipleOptions
+    nbOptions: 7
+    options:
+      - Non-productive cough
+      - Productive cough
+      - Hemoptysis
+      - Difficulty breathing
+      - Chest Pain
+      - Palpitation
+      - Other
+    maxResponses: 7
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: G021. Respiratory
+        options:
+          - Non-productive cough
+          - Productive cough
+          - Hemoptysis
+          - Difficulty breathing-SOB
+          - mod-FR-6
+          - mod-FR-7
+          - Other
+  - label: Non-productive cough
+    variable: GHC_Respiratory_NonProdCough
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Non-productive cough
+  - label: Productive Cough
+    variable: GHC_Respiratory_ProductiveCough
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Productive Cough
+  - label: Hemoptysis
+    variable: GHC_Respiratory_Hemoptysis
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Hemoptysis
+  - label: Difficulty breathing
+    variable: GHC_Respiratory_DiffBreathing
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Difficulty breathing
+  - label: Chest Pain
+    variable: GHC_Respiratory_ChestPain
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Chest Pain
+  - label: Palpitation
+    variable: GHC_Respiratory_Palpitation
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Palpitation
+  - label: Other
+    variable: GHC_Respiratory_Other
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'G022. If other, specify'
+  - label: Gastrointestinal
+    variable: GHC_Symptoms_Gastrointestinal
+    type: multipleOptions
+    nbOptions: 6
+    options:
+      - Abdominal Pain
+      - Nausea
+      - Vomiting
+      - Diarrhea
+      - Dysphagia
+      - Other
+    maxResponses: 6
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: G031. Gastrointestinal
+        options:
+          - mod-FR-5
+          - Nausea and/or vomiting
+          - mod-FR-4
+          - Diarrhea
+          - mod-FR-6
+          - Other
+  - label: Abdominal Pain
+    variable: GHC_Gastrointestinal_AbdPain
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Abdominal Pain
+  - label: Nausea
+    variable: GHC_Gastrointestinal_Nausea
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Nausea
+  - label: Vomiting
+    variable: GHC_Gastrointestinal_Vomiting
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Vomiting
+  - label: Dysphagia
+    variable: GHC_Gastrointestinal_Dysphagia
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Dysphagia
+  - label: Diarrhea
+    variable: GHC_Gastrointestinal_Diarrhea
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Diarrhea
+  - label: Other
+    variable: GHC_Gastrointestinal_Other
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'G032. If other, specify'
+  - label: Neurological
+    variable: GHC_Symptoms_Neurological
+    type: multipleOptions
+    nbOptions: 6
+    options:
+      - Headache
+      - Confusion
+      - Memory problems
+      - Tingling and Numbness of limbs
+      - Insomnia
+      - Yawning
+    maxResponses: 6
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: G041. Neurological
+        options:
+          - Headache
+          - Confusion
+          - Memory problems
+          - Numbness/Tingling in legs/feet
+          - mod-FR-6
+          - mod-FR-7
+  - label: Headache
+    variable: GHC_Neuro_Headache
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Headache
+  - label: Confusion
+    variable: GHC_Neuro_Confusion
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Confusion
+  - label: Memory Problem
+    variable: GHC_Neuro_MemProblem
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Memory Problem
+  - label: Tingling and Numbness of limbs
+    variable: GHC_Neuro_Tingling
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Tingling and Numbness of limbs
+  - label: Insomnia
+    variable: GHC_Neuro_Insomnia
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Insomnia
+  - label: Yawning
+    variable: GHC_Neuro_Yawning
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Yawning
+  - label: Skin Manifestation
+    variable: GHC_Symptoms_SkinManifestation
+    type: multipleOptions
+    nbOptions: 4
+    options:
+      - Itchiness
+      - Rash
+      - Lump/Nodules
+      - Other
+    maxResponses: 4
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: Skin Manifestation
+        options:
+          - Itchiness
+          - Rash
+          - Lump/Nodules
+          - Other
+  - label: Itchiness
+    variable: GHC_Skin_Itchiness
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Itchiness
+  - label: Rash
+    variable: GHC_Skin_Rash
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Rash
+  - label: Lump/Nodules
+    variable: GHC_Skin_Lump
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Lump/Nodules
+  - label: Other
+    variable: GHC_Skin_Other
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Other
+  - label: Additional comments
+    variable: GHC_Symptoms_AdditionalComments
+    type: open
+    nbLines: 3
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: G09. Additional comments
+  - label: Eye
+    variable: GHC_Eye
+    type: options
+    nbOptions: 3
+    options:
+      - Normal
+      - Abnormal
+      - Not done
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Eye
+        options:
+          - Normal
+          - Abnormal
+          - Not done
+  - label: Eye Comment (if abnormal describe)
+    variable: GHC_EyeComment
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Eye Comment (if abnormal describe)
+  - label: 'Ears, Nose'
+    variable: GHC_EarsNose
+    type: options
+    nbOptions: 3
+    options:
+      - Normal
+      - Abnormal
+      - Not done
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'H02. Ears, Nose'
+        options:
+          - Normal
+          - Abnormal
+          - Not done
+  - label: Comment (if abnormal describe)
+    variable: GHC_EarsNoseComment
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: H022. Comment (if abnormal describe)
+  - label: Oral
+    variable: GHC_Oral
+    type: options
+    nbOptions: 3
+    options:
+      - Normal
+      - Abnormal
+      - Not done
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: H01. Oral
+        options:
+          - Normal
+          - Abnormal
+          - Not done
+  - label: Comment (if abnormal describe)
+    variable: GHC_OralComment
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: H012. Comment (if abnormal describe)
+  - label: Lymph nodes
+    variable: GHC_LymphNodes
+    type: options
+    nbOptions: 3
+    options:
+      - Normal
+      - Abnormal
+      - Not done
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: H03. Lymph nodes
+        options:
+          - Normal
+          - Abnormal
+          - Not done
+  - label: Comment (if abnormal describe)
+    variable: GHC_LymphNodesComment
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: H032. Comment (if abnormal describe)
+  - label: Heart
+    variable: GHC_Heart
+    type: options
+    nbOptions: 3
+    options:
+      - Normal
+      - Abnormal
+      - Not done
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: H04. Heart
+        options:
+          - Normal
+          - Abnormal
+          - Not done
+  - label: Comment (if abnormal describe)
+    variable: GHC_HeartComment
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: H042. Comment (if abnormal describe)
+  - label: Lungs
+    variable: GHC_Lungs
+    type: options
+    nbOptions: 3
+    options:
+      - Normal
+      - Abnormal
+      - Not done
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: H05. Lungs
+        options:
+          - Normal
+          - Abnormal
+          - Not done
+  - label: Comment (if abnormal describe)
+    variable: GHC_LungsComment
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: H052. Comment (if abnormal describe)
+  - label: Abdomen
+    variable: GHC_Abdomen
+    type: options
+    nbOptions: 3
+    options:
+      - Normal
+      - Abnormal
+      - Not done
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: H06. Abdomen
+        options:
+          - Normal
+          - Abnormal
+          - Not done
+  - label: Comment (if abnormal describe)
+    variable: GHC_AbdomenComment
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: H062. Comment (if abnormal describe)
+  - label: Neurological
+    variable: GHC_Neurological
+    type: options
+    nbOptions: 3
+    options:
+      - Normal
+      - Abnormal
+      - Not done
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: H10. Neurological
+        options:
+          - Normal
+          - Abnormal
+          - Not done
+  - label: Comment (if abnormal describe)
+    variable: GHC_NeurologicalComment
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: H102. Comment (if abnormal describe)
+  - label: Additional comments
+    variable: GHC_AdditionalComments
+    type: open
+    nbLines: 3
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: H13. Additional comments
+  - label: Category
+    variable: GHC_Category1
+    type: code
+    codesFile: Sys/Dic_Lists/LIST_I011_Diagnosis.dic
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 33184
+    vb: Majuscule(GHC_Category1)
+    autoVariable: Basic
+    translations:
+      - label: I011. Category
+  - label: Description
+    variable: GHC_Description1
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vbOptions: 1
+    vb: "If  Not GHC_Category1 = \"\" Then€\x81    GHC_Description1 = GHC_Category1.CatCode(2)€\x81EndIf"
+    autoVariable: Basic
+    translations:
+      - label: I011. Description
+  - label: Category
+    variable: GHC_Category2
+    type: code
+    codesFile: Sys/Dic_Lists/LIST_I011_Diagnosis.dic
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 33184
+    vb: Majuscule(GHC_Category2)
+    autoVariable: Basic
+    translations:
+      - label: I021. Category
+  - label: Description
+    variable: GHC_Description2
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vbOptions: 1
+    vb: "If  Not GHC_Category2 = \"\" Then€\x81    GHC_Description2 = GHC_Category2.CatCode(2)€\x81EndIf"
+    autoVariable: Basic
+    translations:
+      - label: I021. Description
+  - label: Category
+    variable: GHC_Category3
+    type: code
+    codesFile: Sys/Dic_Lists/LIST_I011_Diagnosis.dic
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 33184
+    vb: Majuscule(GHC_Category3)
+    autoVariable: Basic
+    translations:
+      - label: I031. Category
+  - label: Description
+    variable: GHC_Description3
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vbOptions: 1
+    vb: "If  Not GHC_Category3 = \"\" Then€\x81    GHC_Description3 = GHC_Category3.CatCode(2)€\x81EndIf"
+    autoVariable: Basic
+    translations:
+      - label: I031. Description
+  - label: Category
+    variable: GHC_Category4
+    type: code
+    codesFile: Sys/Dic_Lists/LIST_I011_Diagnosis.dic
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 33184
+    vb: Majuscule(GHC_Category4)
+    autoVariable: Basic
+    translations:
+      - label: I041. Category
+  - label: Description
+    variable: GHC_Description4
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vbOptions: 1
+    vb: "If  Not GHC_Category4 = \"\" Then€\x81    GHC_Description4 = GHC_Category4.CatCode(2)€\x81EndIf"
+    autoVariable: Basic
+    translations:
+      - label: I041. Description
+  - label: Allergy
+    variable: GHC_Allergy
+    type: multipleOptions
+    nbOptions: 3
+    options:
+      - Pen
+      - Sulfa
+      - Other
+    maxResponses: 3
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: J011. Allergy
+        options:
+          - Pen
+          - Sulfa
+          - Other
+  - label: 'If other, specify'
+    variable: GHC_AllergyOther
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'J012. If other, specify'
+  - label: Medicine name
+    variable: GHC_MedicineName1
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0211. Medicine name
+  - label: Dosage
+    variable: GHC_Dosage1
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0212. Dosage
+  - label: Frequency
+    variable: GHC_Frequency1
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0213. Frequency
+  - label: Number days
+    variable: GHC_NumberDays1
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0214. Number days
+        options:
+          - Less than 230264292
+          - From 230264292 to 460528583
+          - From 460528583 to 690792875
+          - From 690792875 to 921057166
+          - From 921057166 to 1151321458
+          - From 1151321458 to 1381585749
+          - 1381585749 and more
+  - label: Medicine name
+    variable: GHC_MedicineName2
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0221. Medicine name
+  - label: Dosage
+    variable: GHC_Dosage2
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0222. Dosage
+  - label: Frequency
+    variable: GHC_Frequency2
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0223. Frequency
+  - label: Number days
+    variable: GHC_NumberDays2
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0224. Number days
+        options:
+          - Less than 235714786
+          - From 235714786 to 471429572
+          - From 471429572 to 707144359
+          - From 707144359 to 942859145
+          - From 942859145 to 1178573931
+          - From 1178573931 to 1414288717
+          - 1414288717 and more
+  - label: Medicine name
+    variable: GHC_MedicineName3
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0231. Medicine name
+  - label: Dosage
+    variable: GHC_Dosage3
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0232. Dosage
+  - label: Frequency
+    variable: GHC_Frequency3
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0233. Frequency
+  - label: Number days
+    variable: GHC_NumberDays3
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0234. Number days
+        options:
+          - Less than 216170496
+          - From 216170496 to 432340992
+          - From 432340992 to 648511488
+          - From 648511488 to 864681984
+          - From 864681984 to 1080852480
+          - From 1080852480 to 1297022976
+          - 1297022976 and more
+  - label: Medicine name
+    variable: GHC_MedicineName4
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0241. Medicine name
+  - label: Dosage
+    variable: GHC_Dosage4
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0242. Dosage
+  - label: Frequency
+    variable: GHC_Frequency4
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0243. Frequency
+  - label: Number days
+    variable: GHC_NumberDays4
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0244. Number days
+        options:
+          - Less than 20
+          - From 20 to 40
+          - From 40 to 60
+          - From 60 to 80
+          - From 80 to 100
+          - From 100 to 120
+          - 120 and more
+  - label: Medicine name
+    variable: GHC_MedicineName5
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0251. Medicine name
+  - label: Dosage
+    variable: GHC_Dosage5
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0252. Dosage
+  - label: Frequency
+    variable: GHC_Frequency5
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0253. Frequency
+  - label: Number days
+    variable: GHC_NumberDays5
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0254. Number days
+        options:
+          - Less than 20
+          - From 20 to 40
+          - From 40 to 60
+          - From 60 to 80
+          - From 80 to 100
+          - From 100 to 120
+          - 120 and more
+  - label: Medicine name
+    variable: GHC_MedicineName6
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0261. Medicine name
+  - label: Dosage
+    variable: GHC_Dosage6
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0262. Dosage
+  - label: Frequency
+    variable: GHC_Frequency6
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0263. Frequency
+  - label: Number days
+    variable: GHC_NumberDays6
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0264. Number days
+        options:
+          - Less than 20
+          - From 20 to 40
+          - From 40 to 60
+          - From 60 to 80
+          - From 80 to 100
+          - From 100 to 120
+          - 120 and more
+  - label: Medicine name
+    variable: GHC_MedicineName7
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0271. Medicine name
+  - label: Dosage
+    variable: GHC_Dosage7
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0272. Dosage
+  - label: Frequency
+    variable: GHC_Frequency7
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0273. Frequency
+  - label: Number days
+    variable: GHC_NumberDays7
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0274. Number days
+        options:
+          - Less than 20
+          - From 20 to 40
+          - From 40 to 60
+          - From 60 to 80
+          - From 80 to 100
+          - From 100 to 120
+          - 120 and more
+  - label: Medicine name
+    variable: GHC_MedicineName8
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0281. Medicine name
+  - label: Dosage
+    variable: GHC_Dosage8
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0282. Dosage
+  - label: Frequency
+    variable: GHC_Frequency8
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0283. Frequency
+  - label: Number days
+    variable: GHC_NumberDays8
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0284. Number days
+        options:
+          - Less than 20
+          - From 20 to 40
+          - From 40 to 60
+          - From 60 to 80
+          - From 80 to 100
+          - From 100 to 120
+          - 120 and more
+  - label: Medicine name
+    variable: GHC_MedicineName9
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0291. Medicine name
+  - label: Dosage
+    variable: GHC_Dosage9
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0292. Dosage
+  - label: Frequency
+    variable: GHC_Frequency9
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0293. Frequency
+  - label: Number days
+    variable: GHC_NumberDays9
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0294. Number days
+        options:
+          - Less than 20
+          - From 20 to 40
+          - From 40 to 60
+          - From 60 to 80
+          - From 80 to 100
+          - From 100 to 120
+          - 120 and more
+  - label: Medicine name
+    variable: GHC_MedicineName10
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0301. Medicine name
+  - label: Dosage
+    variable: GHC_Dosage10
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0302. Dosage
+  - label: Frequency
+    variable: GHC_Frequency10
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0303. Frequency
+  - label: Number days
+    variable: GHC_NumberDays10
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: J0304. Number days
+        options:
+          - Less than 20
+          - From 20 to 40
+          - From 40 to 60
+          - From 60 to 80
+          - From 80 to 100
+          - From 100 to 120
+          - 120 and more
+  - label: HBsAg
+    variable: GHC_HBsAg
+    type: options
+    nbOptions: 2
+    options:
+      - Positive
+      - Negative
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: HBsAg
+        options:
+          - Positive
+          - Negative
+  - label: HBsAb
+    variable: GHC_HBsAb
+    type: options
+    nbOptions: 2
+    options:
+      - Positive
+      - Negative
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: HBsAb
+        options:
+          - Positive
+          - Negative
+  - label: HCVAb
+    variable: GHC_HCVAb
+    type: options
+    nbOptions: 2
+    options:
+      - Positive
+      - Negative
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: HCVAb
+        options:
+          - Positive
+          - Negative
+  - label: APRI
+    variable: GHC_APRI
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: APRI
+  - label: Liver Fibrosis
+    variable: GHC_Liver_Fibrosis
+    type: options
+    nbOptions: 4
+    options:
+      - Stage 0
+      - Stage < 2
+      - Stage >= 2
+      - Stage 4
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Liver Fibrosis
+        options:
+          - Stage 1
+          - Stage 2
+          - Stage 3
+          - Stage 4
+  - label: Patient should return in
+    variable: GHC_PatientShouldReturnIn
+    type: options
+    nbOptions: 8
+    options:
+      - 1 wk
+      - 2wks
+      - 3wks
+      - 1 mth
+      - 2 mths
+      - 3 mths
+      - 6 mths
+      - Other
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: L2. Patient should return in
+        options:
+          - 1 wk
+          - 2wks
+          - 3wks
+          - 1 mth
+          - 2 mths
+          - 3 mths
+          - 6 mths
+          - Other
+  - label: Other
+    variable: GHC_ShouldReturnIn_Other
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: L21. Other
+  - label: Date of next visit
+    variable: GHC_DateNextVisit
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: L3. Date of next visit
+  - label: Verify patient
+    variable: Verify
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    plan: true
+    attributes: 32
+    translations:
+      - label: Verify patient
+        options:
+          - val = 1
+  - label: Last registration date
+    variable: LastRegistrationDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 33056
+    autoVariable: DateEnreg
+    translations:
+      - label: Last registration date
+  - label: GHC Key
+    variable: Key
+    type: open
+    nbLines: 2
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vbOptions: 1
+    vb: Key = MDMcode & GHC_VisitDate
+    autoVariable: Basic
+    translations:
+      - label: GHC Key
+titles:
+  - type: label
+    label: SOCIO-DEMOGRAPHIC DATA
+    first: 1
+    translations:
+      - label: A. SOCIO-DEMOGRAPHIC DATA
+  - type: label
+    label: VISIT
+    first: 0

@@ -1,0 +1,70 @@
+Code=Stage=Description
+101ASY=1=Asymptomatic
+102GEN=1=Generalized Lymphadenopathy
+103HEP=1=Hepatosplenomegaly
+104OTH=1=Other
+
+201PAP=2=Papular pruritic eruptions
+202SEB=2=Seborrhoeic dermatitis
+203FUN=2=Fungal nail infections
+204ANG=2=Angular chelitis
+205LIN=2=Lineal gingival erythema (LGE)
+206EXT=2=Extensive Human Papilloma virus infection or Molluscum infection ( >5% body area )
+207REC=2=Recurrent oral ulcerations ( 2 or > espisodes in 6 mths )
+208PAR=2=Parotid enlargement
+209HER=2=Herpes Zoster ( 2 or > episodes in 6 mths )
+210REC=2=Recurrent of chronic upper RTIs (otitis media, sinusitis 2 or > episodes in any 6 month period )
+211LOS=2=Loss of weight lower than 10%
+212MIN=2=Minor mucocutaneous manifestations
+213OTH=2=Other
+
+301ULW=3=Unexplained low weight for age/low height for age/low weight for height
+302UPD=3=Unexplained persistant diarrhea ( > 14 days)
+303UPF=3=Unexplained persistent fever ( intermittent or constant, >1 month)
+304ORA=3=Oral candidiasis (outside neonatal period)
+305OHL=3=Oral hairy leukoplakia
+306TUB=3=Tuberculous Lymphadenopathy (axill., cerv, or inguinal)
+307SEV=3=Severe recurrent presumed bacterial pneumonia (2 or more episodes in 6 months)
+308ACU=3=Acute necrotizing ulcerative gingivitis/ periodentitis
+309LYM=3=Lymphoid interstitial Pneumonia (LIP)
+310UNE=3=Unexplained anaemia (<8 gm/dl), neutropenia (<1000/mm3) for >1 mth
+311HIV=3=HIV related cardiomyopathy
+312HIV=3=HIV related nephropathy
+313INB=3=In bed less than 50% of normal daytime due to sickness
+314LOS=3=Loss of weight higher than 10 %
+315CHR=3=Chronic diarrhoea for more than 1 month
+316VUL=3=Vulvovaginal candidiasis for more than 1 month or poorly responsive to therapy
+317PUL=3=Pulmonary tuberculosis within pervious 12 months
+318OTI=3=Other severe bacterial infections (Myositis..)
+319OTH=3=Other
+
+401UNE=4=Unexplained severe wasting or severe malnutrition
+402PNE=4=Pneumocystic pneumonia
+403REC=4="Recurrent severe presumed bacterial infections ( 2 or more episodes within 1 year 
+e.g. empyema, pyomyositis,bone or joint infection, meningitis, but excluding pneumonia )"
+404CHR=4=Chronic orolabial or cutaneous herpes simplex infection ( of >1 month duration )
+405EXT=4=Extrapulmonary TB ( excluding lymphadenitis )
+406KAR=4=Karposi's sarcoma
+407OES=4=Oesophageal candidiasis
+408CMV=4=CMV retinitis
+409CER=4=Cerebral Toxoplasmosis
+410ANY=4=Any disseminated endemic mycosis ( e.g. extra-pulmonary cryptococcosis, penicilliosis )
+411DIS=4=Disseminated mycobacterial disease other than TB (MAC)
+412REC=4=Recurrent non-typhoidal salmonella septicaemia
+413PRO=4=Progressive multifocal leucoencephalopathy (PML)
+414HIV=4=HIV encephalopathy
+415INB=4=In bed more than 50% of normal daytime due to sickness
+416WAS=4=Wasting syndrome
+417CRY=4=Cryptococcosis extra pulmonary
+418PNE=4=Pneumocystic carinii pneumonia
+419ENC=4=Encephalopathy, dementia...
+420PEN=4=Penicillium Marneffei infection
+421CAN=4=Candidiasis of the esophagus, trachea...
+422CRY=4=Cryptosporidiosis with diarrhea for more than 1 month
+423ISO=4=Isosporidiosis with diarrhea for more than 1 month
+424LYM=4=Lymphoma
+425HER=4=Herpes simplex mucocutaneous for more than 1 month or visceral
+426ATY=4=Atypical mycobacteriosis disseminated
+427NON=4=Non-typhoid salmonella septicemias
+428CYT=4=Cytomegalovirus other than liver lymph node
+429OTH=4=Other

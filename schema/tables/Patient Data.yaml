@@ -1,0 +1,327 @@
+version: 5104
+headers:
+  history: >-
+    5.0.0.81(Médecins du Mon;5.1.0.2(Médecins du Mond;5.0.0.64(Médecins du
+    Mon;5.1.0.3(Médecins du Mond;5.1.0.4(MEDECINS DU MOND;5.1.0.4(Médecins du
+    Mond;
+  language: en
+  title: Patient General Data
+  pannelStage: 10
+  translations:
+    - language: fr
+      title: Patient General Data
+questions:
+  - label: MDM location
+    variable: MDMlocation
+    type: code
+    codesFile: Sys/Dic_Lists/LIST_A1_MDMlocation.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 33056
+    autoVariable: Identique
+    translations:
+      - label: MDM location
+  - label: MDM code (Patient ID)
+    variable: MDMcode
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: "V_sexe = \"1\"€\x81If A03_Sexe In \"Female\" Then€\x81V_sexe = \"2\"€\x81EndIf€\x81If A07_PatientTarget = \"SW\" then€\x81        V_PT=\"S\"€\x81Else€\x81\tIf A07_PatientTarget = \"MSM\" then€\x81\t\tV_PT=\"M\"€\x81\tElse€\x81\t\tIf A07_PatientTarget = \"IDU\" then€\x81\t\t\tV_PT=\"I\"€\x81\t\tElse€\x81\t\t\tIf A07_PatientTarget = \"DU\" then€\x81\t\t\t\tV_PT=\"D\"€\x81\t\t\tElse€\x81                                If A07_PatientTarget = \"CH\" then€\x81\t\t\t\t        V_PT=\"C\"€\x81\t\t\t        Else€\x81\t\t\t\t        If A07_PatientTarget = \"GP\" then€\x81\t\t\t\t\t        V_PT=\"G\"€\x81\t\t\t\t        Else€\x81\t\t\t\t\t        V_PT=\"P\"€\x81\t\t\t\t        endif€\x81                                endif€\x81\t\t\tendif€\x81\t\tendif€\x81\tendif€\x81endif€\x81MDMcode = MDMlocation.Catcode(3) & V_PT & V_sexe & SerialNumber€\x81"
+    autoVariable: Basic
+    translations:
+      - label: MDM code (Patient ID)
+  - label: Serial number
+    variable: SerialNumber
+    type: open
+    nbLines: 2
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: "V_serial =Counter€\x81If Counter < 10 Then€\x81   V_serial = \"0000\" & Counter€\x81Else€\x81   If Counter < 100 Then€\x81      V_serial = \"000\" & Counter€\x81   Else€\x81      If Counter < 1000 Then€\x81         V_serial = \"00\" & Counter€\x81      Else€\x81         If Counter < 10000 Then€\x81           V_serial = \"0\" & Counter€\x81         EndIf€\x81      EndIf€\x81   EndIf€\x81EndIf€\x81SerialNumber = V_serial"
+    autoVariable: Basic
+    translations:
+      - label: Serial number
+  - label: A00. Registration date
+    variable: A00_RegistrationDate
+    type: date
+    format: jj/mm/aaaa
+    instructions: Mandatory response.
+    plan: true
+    attributes: 161
+    translations:
+      - label: A00. Registration date
+  - label: A01. Name
+    variable: A01_PatientName
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    instructions: Mandatory response.
+    plan: true
+    attributes: 33185
+    vb: Majuscule(A01_PatientName)
+    autoVariable: Basic
+    translations:
+      - label: A01. Name
+  - label: A02. Father’s name
+    variable: A02_FatherName
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: Majuscule(A02_FatherName)
+    autoVariable: Basic
+    translations:
+      - label: A02. Father’s name
+  - label: A03. Sex
+    variable: A03_Sexe
+    type: options
+    nbOptions: 2
+    options:
+      - Male
+      - Female
+    weights: 0
+    instructions: Mandatory response.
+    plan: true
+    attributes: 161
+    translations:
+      - label: A03. Sexe
+        options:
+          - Male
+          - Female
+  - label: A05. Date of birth
+    variable: A041_DateOfBirth
+    type: date
+    min: 3652
+    format: jj/mm/aaaa
+    instructions: The response must be more than 01/01/1910.
+    plan: true
+    attributes: 161
+    translations:
+      - label: A04. Date of birth
+  - label: Age
+    variable: A05_Age
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 33056
+    vb: "If  Not A041_DateOfBirth.EstNonRéponse Then€\x81    A05_Age = (Now()- A041_DateOfBirth) / 365€\x81EndIf"
+    autoVariable: Basic
+    translations:
+      - label: Age
+        options:
+          - mod-FR-1
+          - mod-FR-2
+          - mod-FR-3
+          - mod-FR-4
+          - mod-FR-5
+          - mod-FR-6
+          - mod-FR-7
+  - label: A052. Date of birth estimated
+    variable: A052_DateOfBirthEstimated
+    type: options
+    nbOptions: 1
+    options:
+      - 'Yes'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: A042. Date of birth estimated
+        options:
+          - 'Yes'
+  - label: A06. Place of birth
+    variable: A06_PlaceOfBirth
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: A06. Place of birth
+  - label: A06a. Height
+    variable: A06a_Height
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: A06a. Height
+        options:
+          - mod-FR-1
+          - mod-FR-2
+          - mod-FR-3
+          - mod-FR-4
+          - mod-FR-5
+          - mod-FR-6
+          - mod-FR-7
+  - label: A07. Patient target
+    variable: A07_PatientTarget
+    type: code
+    codesFile: Sys/Dic_Lists/LIST_A3_Target.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 33057
+    vb: Majuscule(A07_PatientTarget)
+    autoVariable: Basic
+    translations:
+      - label: A07. Patient target
+  - label: A07a. Marital status
+    variable: A07a_MaritalStatus
+    type: code
+    codesFile: LIST_A4_MaritalStatus.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: A07a. Marital status
+  - label: A08. Level of education
+    variable: A08_LevelEducation
+    type: options
+    nbOptions: 7
+    options:
+      - Graduate(After grade 10)
+      - High(Grades 9 & 10)
+      - Illiterate
+      - Literate (read & write)
+      - Middle(Grades 5 to 8)
+      - Non Applicable(e.g. for babies)
+      - Primary (Grades 1 to 4)
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: A08. Level of education
+        options:
+          - Graduate(After grade 10)
+          - High(Grades 9 & 10)
+          - Illiterate
+          - Literate (read & write)
+          - Middle(Grades 5 to 8)
+          - Non Applicable(e.g. for babies)
+          - Primary (Grades 1 to 4)
+  - label: A09. Occupation
+    variable: A09_Occupation
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: A09. Occupation
+  - label: A10. Address (Township)
+    variable: A10_AddressTownship
+    type: code
+    codesFile: Sys/Dic_Lists/LIST_A5_Township.dic
+    nbCharCode: 25
+    format: '######'
+    instructions: The code has 6 characters.
+    plan: true
+    attributes: 160
+    translations:
+      - label: A10. Address (Township)
+  - label: Township Name
+    variable: A10_AddressTownshipName
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: A10_AddressTownshipName = A10_AddressTownship.CatCode(1)
+    autoVariable: Basic
+    translations:
+      - label: Township Name
+  - label: A11. Geographical origin
+    variable: A11_GeographicalOrigin
+    type: code
+    codesFile: LIST_A6_GeographicalOrigin.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: A11. Geographical origin
+  - label: A12. Distance to MDM clinic
+    variable: A12_DistanceToMDMclinic
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: A12. Distance to MDM clinic
+        options:
+          - mod-FR-1
+          - mod-FR-2
+          - mod-FR-3
+          - mod-FR-4
+          - mod-FR-5
+          - mod-FR-6
+          - mod-FR-7
+  - label: A13. Other ID
+    variable: A13_OtherID
+    type: open
+    nbLines: 2
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: A13. Other ID
+  - label: Counter
+    variable: Counter
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    plan: true
+    attributes: 98592
+    autoVariable: Compteur
+    translations:
+      - label: Counter
+        options:
+          - mod-FR-1
+          - mod-FR-2
+          - mod-FR-3
+          - mod-FR-4
+          - mod-FR-5
+  - label: Verify
+    variable: Verify
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    plan: true
+    attributes: 33056
+    vb: Verify = 1
+    autoVariable: Basic
+    translations:
+      - label: Verify
+        options:
+          - mod-FR-1
+  - label: Date of saving data
+    variable: A20_DateOfSavingData
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 33056
+    autoVariable: DateEnreg
+    translations:
+      - label: Date of saving data
+titles:
+  - type: label
+    label: A. SOCIO-DEMOGRAPHIC DATA
+    first: 4
+    translations:
+      - label: A. SOCIO-DEMOGRAPHIC DATA
+crossedSorts:
+  - var1: 16
+    var2: 21
+    plan: false
+options:
+  groups: true
+  resend: true
+  controls: true

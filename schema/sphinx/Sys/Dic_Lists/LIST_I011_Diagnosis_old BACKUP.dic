@@ -1,0 +1,686 @@
+Code=MainDiagnosisType=Diagnosis
+G&U001=General and Unspecified=Abnormal Result Investigation NOS
+G&U002=General and Unspecified=Adverse Effect Medical Agent
+G&U003=General and Unspecified=Adverse Effect Physical Factor
+G&U004=General and Unspecified=Bleeding/haemorrhage NOS
+G&U005=General and Unspecified=Chest Pain NOS
+G&U006=General and Unspecified=Chickenpox
+G&U007=General and Unspecified=Chills
+G&U008=General and Unspecified=Coma
+G&U009=General and Unspecified=Complication of Medical Treatment
+G&U010=General and Unspecified=Concern about appearance
+G&U011=General and Unspecified=Concern/fear medical treatment
+G&U012=General and Unspecified=Congenital Anomaly OS/Multiple
+G&U013=General and Unspecified=Effect Prosthetic Device
+G&U014=General and Unspecified=Euthanasia request/discussion
+G&U015=General and Unspecified=Fainting/syncope
+G&U016=General and Unspecified=Fear of cancer NOS
+G&U017=General and Unspecified=Fear of death/dying
+G&U018=General and Unspecified=Fear of other disease NOS
+G&U019=General and Unspecified=Felling/ill
+G&U020=General and Unspecified=Fever
+G&U021=General and Unspecified=General symptom/complaint other
+G&U022=General and Unspecified=Infectious Desease Other/NOS
+G&U023=General and Unspecified=Infectious Mononucleosis
+G&U024=General and Unspecified=Irritable infant
+G&U025=General and Unspecified=Limited function/disability NOS
+G&U026=General and Unspecified=Malaria
+G&U027=General and Unspecified=Malignancy NOS
+G&U028=General and Unspecified=Measles 
+G&U029=General and Unspecified=Multiple Trauma/Injuries
+G&U030=General and Unspecified=Pain general/multiple sites
+G&U031=General and Unspecified=Poisoning by Medical Agent
+G&U032=General and Unspecified=Risk factor for malignancy
+G&U033=General and Unspecified=Risk factor NOS
+G&U034=General and Unspecified=Rubella
+G&U035=General and Unspecified=Secondary Effect of Trauma
+G&U036=General and Unspecified=Sweating Problem
+G&U037=General and Unspecified=Swelling
+G&U038=General and Unspecified=Toxic Effect Non-Medicinal Sebstance
+G&U039=General and Unspecified=Trauma/Injury NOS
+G&U=General and Unspecified=Tuberculosis
+G&U=General and Unspecified=Viral Desease Other/NOS
+G&U=General and Unspecified=Viral Exanthen Other
+G&U=General and Unspecified=Weakness/tiredness general
+G&U=General and Unspecified=Allergy/Allergic Reaction NOS
+G&U=General and Unspecified=Death
+G&U=General and Unspecified=General Disease NOS
+G&U=General and Unspecified=Health maintenance/Prevention
+G&U=General and Unspecified=No disease
+G&U=General and Unspecified=Perinatal Morbidity Other 
+G&U=General and Unspecified=Perinatal Mortality 
+G&U=General and Unspecified=Premature New Born
+BLO=Blood, Blood Forming Organs and Immune Mechanism=Anaemia Other/Unspecified 
+BLO=Blood, Blood Forming Organs and Immune Mechanism=Anaemia,Vitamin B12/Folate Def
+BLO=Blood, Blood Forming Organs and Immune Mechanism=Benign/unspecified neoplasm blood
+BLO=Blood, Blood Forming Organs and Immune Mechanism=Blood Symptom/Complaint
+BLO=Blood, Blood Forming Organs and Immune Mechanism=Blood/Lymph/Spleen Desease Other
+BLO=Blood, Blood Forming Organs and Immune Mechanism=Congen Anom Blood/Lymph Other
+BLO=Blood, Blood Forming Organs and Immune Mechanism=Fear Blood/Lymph Disease Other
+BLO=Blood, Blood Forming Organs and Immune Mechanism=Fear Cancer Blood/Lymph
+BLO=Blood, Blood Forming Organs and Immune Mechanism=Fear of AIDS/HIV
+BLO=Blood, Blood Forming Organs and Immune Mechanism=Hereditary Haemolytic Anaemia
+BLO=Blood, Blood Forming Organs and Immune Mechanism=HIV-Infecdion/AIDS
+BLO=Blood, Blood Forming Organs and Immune Mechanism=Hodgkin's Disease/Lymphoma 
+BLO=Blood, Blood Forming Organs and Immune Mechanism=Injury Blood/Lymph/Spleel Other
+BLO=Blood, Blood Forming Organs and Immune Mechanism=Iron Deficiency Anaemia 
+BLO=Blood, Blood Forming Organs and Immune Mechanism=Leukaemia
+BLO=Blood, Blood Forming Organs and Immune Mechanism=Limited Function/Disability
+BLO=Blood, Blood Forming Organs and Immune Mechanism=Lymph Gland (s) Enlarged/Painful
+BLO=Blood, Blood Forming Organs and Immune Mechanism=Lymphandenitis Acude
+BLO=Blood, Blood Forming Organs and Immune Mechanism=Lymphandenitis Non-Specific 
+BLO=Blood, Blood Forming Organs and Immune Mechanism=Malignant neoplasm blood other
+BLO=Blood, Blood Forming Organs and Immune Mechanism=Purpura/Coagulation Defeect 
+BLO=Blood, Blood Forming Organs and Immune Mechanism=Rupturd Spleen Traumacit
+BLO=Blood, Blood Forming Organs and Immune Mechanism=Splenomegaly 
+BLO=Blood, Blood Forming Organs and Immune Mechanism=Sympt/Complt Lymph/Immune Other
+BLO=Blood, Blood Forming Organs and Immune Mechanism=Unexplained Abnormal White Cells
+DIG=Digestive=Abdominal Distension 
+DIG=Digestive=Abdominal Mass NOS
+DIG=Digestive=Abdominal Pain Epigastric
+DIG=Digestive=Abdominal Pain Localized Other
+DIG=Digestive=Abdominal Pain/Cramps General
+DIG=Digestive=Change faeces/Bowel movements
+DIG=Digestive=Congen-Amomaly Digestive System
+DIG=Digestive=Consipation 
+DIG=Digestive=Diarrhoea
+DIG=Digestive=Digestive Symptom/Complaint Other
+DIG=Digestive=Duodenal Ulcer
+DIG=Digestive=Dyspepsia/indigestion
+DIG=Digestive=Fear of Cancer of Digestive System
+DIG=Digestive=Fear of Digestive Disease Other
+DIG=Digestive=Flatulence/gas/belching
+DIG=Digestive=Foreing Body Digestive System 
+DIG=Digestive=Gastroentertis Presumet Infection 
+DIG=Digestive=gastrointestinal Infection 
+DIG=Digestive=Haematemesis/Vominting Blood
+DIG=Digestive=Heard Burn 
+DIG=Digestive=Hepatomegaly
+DIG=Digestive=Incontinence of Bowel
+DIG=Digestive=Indury Digestive System Other
+DIG=Digestive=Jaundice
+DIG=Digestive=Limited Function/Disability(d)
+DIG=Digestive=Malignant Neoplasm Colom/Rectum
+DIG=Digestive=Malignant Neoplasm Pancreas
+DIG=Digestive=Malignant Neoplasm stomach
+DIG=Digestive=Malig-Neoplasm Digest Other/NOS
+DIG=Digestive=Memaena
+DIG=Digestive=Mouth/Tongue/Lip/Symptom/Complt
+DIG=Digestive=Mouth/Tongue/Lipdisease
+DIG=Digestive=Mumps 
+DIG=Digestive=Nausea
+DIG=Digestive=Neoplasm Digest Benign/Uncertain
+DIG=Digestive=Oesophagus Disease
+DIG=Digestive=Perianal Itching 
+DIG=Digestive=Rectal Bleeding
+DIG=Digestive=Rectal/Anal Pain 
+DIG=Digestive=Swallowing Problem 
+DIG=Digestive=Teeth/Gum Disease
+DIG=Digestive=Teeth/Gumsymptom/Complaint
+DIG=Digestive=Viral Hepatitis
+DIG=Digestive=Vomiting
+DIG=Digestive=Abdominal Hernia Other
+DIG=Digestive=Anal Fissure/Perianal Abscess
+DIG=Digestive=Appendicitis 
+DIG=Digestive=Cholecy Stitis/Cholelithiasis
+DIG=Digestive=Chronic Enteritis Ulcertivecolitis 
+DIG=Digestive=Disease Digestive System, Other 
+DIG=Digestive=Diverticular Disease 
+DIG=Digestive=Hiatus Hernia
+DIG=Digestive=Inguinal Hermra  
+DIG=Digestive=Irritable Bowel Syndrome
+DIG=Digestive=Liver Disease NOS
+DIG=Digestive=Peptic Ulcer Other
+DIG=Digestive=Stomach Function Disorder
+DIG=Digestive=Worms/Other Parasites
+EYE=Eye=Blindness
+EyE=Eye=Blepharitis/stye/chalazion
+EyE=Eye=Blocked lacrimal duct of infant
+EyE=Eye=Congenital abnomal eye other
+EyE=Eye=Conjunctivitis allergic
+EyE=Eye=Conjunctivitis infectious
+EyE=Eye=Contact lens symptom/complaint
+EyE=Eye=Contusion/haemorrhage eys
+EyE=Eye=Corneal ulcer
+EyE=Eye=Detached retina
+EyE=Eye=Eye appearance abnormal
+EyE=Eye=Eye discharge
+EyE=Eye=Eye infection/inflammation other
+EyE=Eye=Eye movements abnormal 
+EyE=Eye=Eye Pain
+EyE=Eye=Eye sensation abnormal 
+EyE=Eye=Eye symptom/complaint other
+EyE=Eye=Eyelid symptom/complaint
+EyE=Eye=Fear of eye disease
+EyE=Eye=Foreign body in eye
+EyE=Eye=Glasses symptom/complaint
+EyE=Eye=Injury eye other 
+EyE=Eye=Limited function/disability (f)
+EyE=Eye=Macular degeneration
+EyE=Eye=Neoplasm of eye/adnexa
+EyE=Eye=Red eye
+EyE=Eye=Refractive error
+EyE=Eye=Retinopathy
+EyE=Eye=Trachoma
+EyE=Eye=Visual disturbance other
+EyE=Eye=Visual floaters/spots
+EyE=Eye=Cataract
+EyE=Eye=Eye/adnexa disease, other
+EyE=Eye=Glaucoma
+EyE=Eye=Strabismus
+CAV=Cardiovascular=Acute Myocardian Infarction 
+CAV=Cardiovascular=Atherosclerosis/PVD
+CAV=Cardiovascular=Atrial Fibrillation/flutter
+CAV=Cardiovascular=Cardiac Arrhythmia NOS
+CAV=Cardiovascular=Cardiovascular Disease Other 
+CAV=Cardiovascular=Cardiovascural Pain NOS
+CAV=Cardiovascular=Cardiovascural Sympt/Complt Other
+CAV=Cardiovascular=Cerebrovascural Disease 
+CAV=Cardiovascular=Congenitan Anomaly Cardiovascular
+CAV=Cardiovascular=Elevate Blood Pressure 
+CAV=Cardiovascular=Fear cardiovasuscular disease Other
+CAV=Cardiovascular=Fear of Heart Disease
+CAV=Cardiovascular=Fear of Hypertension 
+CAV=Cardiovascular=Haemorrhoids
+CAV=Cardiovascular=Heard fainure
+CAV=Cardiovascular=Heard Pain 
+CAV=Cardiovascular=Heart Disease Other
+CAV=Cardiovascular=Heart value disease NOS
+CAV=Cardiovascular=Heart/arterial murmur NOS
+CAV=Cardiovascular=Hyper tension complicated
+CAV=Cardiovascular=Hyper tension Uncomplicated
+CAV=Cardiovascular=Infection of Circulatory System 
+CAV=Cardiovascular=Irregular heartbeat Other  
+CAV=Cardiovascular=Ischaemic Heart Disease w.angina 
+CAV=Cardiovascular=Ischaemic Heart Disease w/o.angina
+CAV=Cardiovascular=Limited Function/Disability(k)
+CAV=Cardiovascular=Neoplasm Cardiovascular
+CAV=Cardiovascular=Palpitations/awareness of heart
+CAV=Cardiovascular=Paroxysmal Tachycardia
+CAV=Cardiovascular=Phlevitis/Thrombo phlebitis
+CAV=Cardiovascular=Posturam Hypotension 
+CAV=Cardiovascular=Pransient Cerebral Ischaemia
+CAV=Cardiovascular=Pressure/Tightness of heart
+CAV=Cardiovascular=Prominent Veins
+CAV=Cardiovascular=Pulmonary Embolism 
+CAV=Cardiovascular=Pulmonary Heart Disease
+CAV=Cardiovascular=Rheumatic Fever/Heart Disease
+CAV=Cardiovascular=Risk Factor Cardiovascular discease
+CAV=Cardiovascular=Storke/Cerebrovasular accident 
+CAV=Cardiovascular=Swollen Ankles/Oedema
+CAV=Cardiovascular=Varicose Veins of Leg 
+EAR=Ear=Acoustic Trauma 
+EAR=Ear=Acute Otitis Media 
+EAR=Ear=Bleeding Ear
+EAR=Ear=Blugged Feeling Ear
+EAR=Ear=Chronic Otitis Media
+EAR=Ear=Concern with Appearance of Ears
+EAR=Ear=Congenital Anomaly of Ear
+EAR=Ear=Deafness 
+EAR=Ear=Ear Discharge
+EAR=Ear=Ear Indury Other 
+EAR=Ear=Ear Symptom/Complaint Other
+EAR=Ear=Ear/Mastoid Disease,Other
+EAR=Ear=Earpain/Earche
+EAR=Ear=Eustachian Salpingitis 
+EAR=Ear=Excessive Ear wax
+EAR=Ear=Fear of Ear Disease
+EAR=Ear=Foeign Body in Ear
+EAR=Ear=Hearing Complaing
+EAR=Ear=Limited Function/Disability Ear
+EAR=Ear=Neoplasm of Ear
+EAR=Ear=Otitis Eherna 
+EAR=Ear=Otosclerrosis
+EAR=Ear=Perfoation ear drum
+EAR=Ear=Presbyacusis 
+EAR=Ear=Serous Otitis Media
+EAR=Ear=Superfrcral indury ear
+EAR=Ear=Tinnitus, Ringing, Buzzing Ear
+EAR=Ear=Vertiginous Syndrome
+MSK=Musculoskeletal=Acquired deformity of spine
+MSK=Musculoskeletal=Ankle symptom/complaint
+MSK=Musculoskeletal=Arm symptom/complaint
+MSK=Musculoskeletal=Back Symptom/complaint
+MSK=Musculoskeletal=Back syndrome
+MSK=Musculoskeletal=back syndrome with radiating pain
+MSK=Musculoskeletal=Bursitis/tendinitis/synovitis NOS
+MSK=Musculoskeletal=Chest symptom/complaint
+MSK=Musculoskeletal=Congenital anomaly musculoskeletal
+MSK=Musculoskeletal=Dislocation/subluxation
+MSK=Musculoskeletal=Elbow symptom/complaint
+MSK=Musculoskeletal=Fear musculoskeltal disease other
+MSK=Musculoskeletal=Fear of cancer musculoskeletal
+MSK=Musculoskeletal=Flank/axilla symptom/complaint
+MSK=Musculoskeletal=Foot/Toe symptom/complaint
+MSK=Musculoskeletal=Fracture:femur
+MSK=Musculoskeletal=Fracture:hank/foot bone
+MSK=Musculoskeletal=Fracture:other
+MSK=Musculoskeletal=Fracture:radius/ulna
+MSK=Musculoskeletal=Fracture:tibia/fibula
+MSK=Musculoskeletal=Hand/finger symptom/complaint
+MSK=Musculoskeletal=Hip symptom/complaint
+MSK=Musculoskeletal=Infections  musculoskeletal System
+MSK=Musculoskeletal=Injury musuloskeletal NOS
+MSK=Musculoskeletal=Jaw symptom/complaint
+MSK=Musculoskeletal=Joint symptom/complaint
+MSK=Musculoskeletal=Knee symptom/complaint
+MSK=Musculoskeletal=Leg/thigh symptom/complaint
+MSK=Musculoskeletal=Limited Function/disability(l)
+MSK=Musculoskeletal=Low Back Symptom/complaint
+MSK=Musculoskeletal=Malignant Neoplasm Musculoskeletal 
+MSK=Musculoskeletal=Muscle Pain 
+MSK=Musculoskeletal=Muscle Symptom/complaint NOS 
+MSK=Musculoskeletal=Neck symptom/complain
+MSK=Musculoskeletal=Neck syndrome
+MSK=Musculoskeletal=Osteoarthrosis of hip
+MSK=Musculoskeletal=Osteoarthrosis of knee
+MSK=Musculoskeletal=Rheumatoid/seropositive arthritics
+MSK=Musculoskeletal=Shoulder symptom/complaint 
+MSK=Musculoskeletal=Sprain/strain of ankle
+MSK=Musculoskeletal=Sprain/strain of joint NOS
+MSK=Musculoskeletal=Sprain/strain of knee
+MSK=Musculoskeletal=Sympt/complt Musculoskeletal other
+MSK=Musculoskeletal=Wrist symptom/complaint
+MSK=Musculoskeletal=Acquired deformity of limb
+MSK=Musculoskeletal=Acute internal damage knee
+MSK=Musculoskeletal=Musculoskeletal disease,other
+MSK=Musculoskeletal=Neoplasm benign/unspec musculo.
+MSK=Musculoskeletal=Osteoarthrosis other
+MSK=Musculoskeletal=Osteochondrosis
+MSK=Musculoskeletal=Osteoporosis
+MSK=Musculoskeletal=Shouldersyndrome
+MSK=Musculoskeletal=Tennis elbow
+NRL=Neurological=Abnormal involuntary movements
+NRL=Neurological=Benign neoplasm nervous system
+NRL=Neurological=Carpal tunnel syndrome
+NRL=Neurological=Cluster headache 
+NRL=Neurological=Concussion 
+NRL=Neurological=Congenital anomaly neurological 
+NRL=Neurological=Convulsion/seizure
+NRL=Neurological=Disturbance of smell/taste
+NRL=Neurological=Epilepsy 
+NRL=Neurological=Facial paralysis/bell's palsy
+NRL=Neurological=Fear cancer neurological system
+NRL=Neurological=Fear of neurological disease other
+NRL=Neurological=Head injury other
+NRL=Neurological=Headache
+NRL=Neurological=Injury nervous system other
+NRL=Neurological=Limited function/disability(n)
+NRL=Neurological=Malignant neoplasm nervous system
+NRL=Neurological=Meningitis/encephalitis
+NRL=Neurological=Migraine 
+NRL=Neurological=Multiple sclerosis 
+NRL=Neurological=Neoplasm nervous system unspec. 
+NRL=Neurological=Neurological infection other
+NRL=Neurological=Neurological synptom/complt. other
+NRL=Neurological=Pain face
+NRL=Neurological=Paralysis/weakness
+NRL=Neurological=Parkinsonism
+NRL=Neurological=Peripheral neuritis/neuropathy 
+NRL=Neurological=Poliomyelitis 
+NRL=Neurological=Restless legs
+NRL=Neurological=Sensation disturbance other
+NRL=Neurological=Speech disorder
+NRL=Neurological=Tetanus
+NRL=Neurological=Tingling fingers/feet/toes
+NRL=Neurological=Trige minal neuralgia
+NRL=Neurological=Vertigo/dizziness
+NRL=Neurological=Tension headache
+NRL=Neurological=Neurological disease, other
+PSY=Psychological=Acute alcoho abuse 
+PSY=Psychological=Acute stress reaction
+PSY=Psychological=Adolescent behav. Symptom/complt.
+PSY=Psychological=Affective psychosis 
+PSY=Psychological=Anorexia nervosa/bulimia 
+PSY=Psychological=Anxiety disorder/anxiety state
+PSY=Psychological=Bedwetting/enuresis 
+PSY=Psychological=Child behaviour symptom/complaint
+PSY=Psychological=Chronic alcohol abuse
+PSY=Psychological=Dementia 
+PSY=Psychological=Depressive disorder 
+PSY=Psychological=Drug abuse 
+PSY=Psychological=Eating problem in child
+PSY=Psychological=Encopresis/bowel training problem
+PSY=Psychological=Fear of mental disorder 
+PSY=Psychological=Feeling anxious/nervous/tense
+PSY=Psychological=Feeling depressed
+PSY=Psychological=Feeling/behaving irritable/angry
+PSY=Psychological=Hyperkinetic disorder
+PSY=Psychological=Limited function/disability (p)
+PSY=Psychological=Medication abuse
+PSY=Psychological=Memory disturbance 
+PSY=Psychological=Mental retardation 
+PSY=Psychological=Neuraesthenia/surmenage
+PSY=Psychological=Organic psychosis other
+PSY=Psychological=Personality disorder 
+PSY=Psychological=Phase of life problem adult 
+PSY=Psychological=Phobia/compulsive disoder
+PSY=Psychological=Post-traumatic stress disorder 
+PSY=Psychological=Psychological symptom/complt other
+PSY=Psychological=Psychosis NOS/other
+PSY=Psychological=Schizophrenia 
+PSY=Psychological=Senility, feeling/behaving old
+PSY=Psychological=Sexual desire reduced 
+PSY=Psychological=Sexual fulfilment reduced 
+PSY=Psychological=Sexual preference concern
+PSY=Psychological=Sleep disturbance
+PSY=Psychological=Somatization disorder 
+PSY=Psychological=Specific learning problem 
+PSY=Psychological=Stammering/stuttering/tic
+PSY=Psychological=Suicide/suicide attempt
+PSY=Psychological=Tobacco abuse 
+PSY=Psychological=Psychological disorders, other
+RES=Respiratory=Acute bronchitis/bronchiolitis
+RES=Respiratory=Allergic rhinitis
+RES=Respiratory=Asthma
+RES=Respiratory=Benign neoplasm respiratory
+RES=Respiratory=Boil/abscess nose
+RES=Respiratory=Breathing problem, other
+RES=Respiratory=Chronic bronchitis
+RES=Respiratory=Chronic obstructive pulmonary dis
+RES=Respiratory=Congenital anomaly respiratory
+RES=Respiratory=Cough
+RES=Respiratory=Fear of cancer respiratory system
+RES=Respiratory=Fear of respiratory disease other
+RES=Respiratory=Foreign body nose/larynx/bronch
+RES=Respiratory=Haemoptysis
+RES=Respiratory=Hypertrophy tonsils/adenoids
+RES=Respiratory=Hyperventilation syndrome
+RES=Respiratory=Influenza
+RES=Respiratory=Injury respiratory other
+RES=Respiratory=Laryngitis/tracheitis acute
+RES=Respiratory=Limited function/disability (r)
+RES=Respiratory=Malignant neoplasm bronchus/lung
+RES=Respiratory=Malinant neoplasm respiratory, other
+RES=Respiratory=Neoplasm respiratory unspecified
+RES=Respiratory=Nose bleed, epistaxis
+RES=Respiratory=Nose symptom/complaint other
+RES=Respiratory=Pain respiratory system
+RES=Respiratory=Pleurisy/pleural effusion
+RES=Respiratory=Pneumonia
+RES=Respiratory=Respiratory disease other
+RES=Respiratory=Respiratory infection other
+RES=Respiratory=Respiratory symptom/complaint oth.
+RES=Respiratory=Shortness of breath/dyspnoea
+RES=Respiratory=Sinus symptom/complaint
+RES=Respiratory=Sinusitis acute/chronic
+RES=Respiratory=Sneezing/nasal congestion
+RES=Respiratory=Sputum/phlegm abnormal
+RES=Respiratory=Strep throat
+RES=Respiratory=Throat symptom/complaint
+RES=Respiratory=Tonsillitis acute
+RES=Respiratory=Upper respiratory infection acute
+RES=Respiratory=Voice symptom/complaint
+RES=Respiratory=Wheezing
+RES=Respiratory=Whooping cough
+SKI=Skin=Abrasion/scratch/blister
+SKI=Skin=Animal/humar bite 
+SKI=Skin=Boil/carbuncle 
+SKI=Skin=Bruise/contusion 
+SKI=Skin=Burn/scald 
+SKI=Skin=Congenital skin anomaly other
+SKI=Skin=Corn/callosity 
+SKI=Skin=Dermatophytosis 
+SKI=Skin=Fear of cancer of skin
+SKI=Skin=Fear of skin disease other
+SKI=Skin=Foreign Body in skin
+SKI=Skin=Haemangioma/lymphangioma 
+SKI=Skin=Hair loss/baldness
+SKI=Skin=Hair/scalp symptom/complaint 
+SKI=Skin=Herpes simplex
+SKI=Skin=Herpes zoster 
+SKI=Skin=Impetigo 
+SKI=Skin=Infectide finger/toe
+SKI=Skin=Insect bite/sting 
+SKI=Skin=Laceration/cut 
+SKI=Skin=Limited function/disability(s)
+SKI=Skin=Lipoma 
+SKI=Skin=Lump/swelling localized
+SKI=Skin=Lumpa/awellings generalized
+SKI=Skin=Malignant neoplasm of skin
+SKI=Skin=Moniliasis/candidiasis skin
+SKI=Skin=Naevaus/mole
+SKI=Skin=Nail symptom/complaint 
+SKI=Skin=Neoplasm skin benign/unspecified
+SKI=Skin=Pain/tenderness of skin
+SKI=Skin=Pediculosis/skin infestation other
+SKI=Skin=Pilonidal cyst/fistula
+SKI=Skin=Pruritus
+SKI=Skin=Rash generalized
+SKI=Skin=Rash localized
+SKI=Skin=Scabies/other acariasis 
+SKI=Skin=Skin colour change
+SKI=Skin=Skin infection other
+SKI=Skin=Skin infection post-traumatic 
+SKI=Skin=Skin injury other 
+SKI=Skin=Skin symptom/complaint other 
+SKI=Skin=Skin texture symptom/complaint 
+SKI=Skin=Solar keratosis/sunburn 
+SKI=Skin=Warts
+SKI=Skin=Dermatitis seborrhoeic 
+SKI=Skin=Dermatitis/atopic eczema 
+SKI=Skin=Dermatitis contact/allergic 
+SKI=Skin=Diaper rash 
+SKI=Skin=Pityriasis rosea 
+SKI=Skin=Psoriasis 
+SKI=Skin=Sweat gland disease 
+SKI=Skin=Sebaceous cyst 
+SKI=Skin=Ingrowing nail 
+SKI=Skin=Molluscum contagiosun 
+SKI=Skin=Acne 
+SKI=Skin=Chromic ulcer skin
+SKI=Skin=Urticaria 
+SKI=Skin=Skin disease other 
+EnM=Endocrine/metabolic and nutritional=Excessive thirst 
+EnM=Endocrine/metabolic and nutritional=Excessice appetite
+EnM=Endocrine/metabolic and nutritional=Loss of appetite 
+EnM=Endocrine/metabolic and nutritional=Feeding problem of infant/child
+EnM=Endocrine/metabolic and nutritional=Feeding problem of adult
+EnM=Endocrine/metabolic and nutritional=Weight gain 
+EnM=Endocrine/metabolic and nutritional=Weight loss 
+EnM=Endocrine/metabolic and nutritional=Growth delay 
+EnM=Endocrine/metabolic and nutritional=Dehydration 
+EnM=Endocrine/metabolic and nutritional=Fear of cancer of endocrine system 
+EnM=Endocrine/metabolic and nutritional=Limited function/disability(t)
+EnM=Endocrine/metabolic and nutritional=Endocrine/met/sympt/complt other
+EnM=Endocrine/metabolic and nutritional=Endocrine infection 
+EnM=Endocrine/metabolic and nutritional=Malignant neoplasm thyroid
+EnM=Endocrine/metabolic and nutritional=Benign neoplasm thyroid 
+EnM=Endocrine/metabolic and nutritional=Neoplasm endocrime oth/unspecified 
+EnM=Endocrine/metabolic and nutritional=Thyroglossal duct/cyst
+EnM=Endocrine/metabolic and nutritional=Congenital anom endocrine/metab 
+EnM=Endocrine/metabolic and nutritional=Goitre 
+EnM=Endocrine/metabolic and nutritional=Obesity 
+EnM=Endocrine/metabolic and nutritional=Overweight 
+EnM=Endocrine/metabolic and nutritional=Hyperthyroidism/thyrotoxicosis 
+EnM=Endocrine/metabolic and nutritional=Hypothyroidism/myxhodema
+EnM=Endocrine/metabolic and nutritional=Hypognycaemia 
+EnM=Endocrine/metabolic and nutritional=Diabetes insulin dependent
+EnM=Endocrine/metabolic and nutritional=Diabetes non-insulin dependent
+EnM=Endocrine/metabolic and nutritional=Vitamin/mutritional deficiency 
+EnM=Endocrine/metabolic and nutritional=Gout
+EnM=Endocrine/metabolic and nutritional=Lipid disorder 
+EnM=Endocrine/metabolic and nutritional=Endocrine/metab/nutrit.dis.other
+URO=Urological=Abnormal urine test NOS
+URO=Urological=Benign neoplasm urinary tract
+URO=Urological=Bladder symptom/complaint other
+URO=Urological=Congenital anomaly urinary tract
+URO=Urological=Cystitis/urinary infection other
+URO=Urological=Dysuria/painful urination 
+URO=Urological=Fear of cancer of urinary system 
+URO=Urological=Fear of urinary disease other
+URO=Urological=Glomerulonephritis/nephrosis
+URO=Urological=Haematuria 
+URO=Urological=Incontinence Urine 
+URO=Urological=Injury urinary tract 
+URO=Urological=Kindney symptom/complaint 
+URO=Urological=Limited function/disability urinary 
+URO=Urological=Malignant neoplasm of bladder
+URO=Urological=Malignant Neoplasm of kidney
+URO=Urological=Malignant neoplasm urinary other 
+URO=Urological=Neoplasm urinary tract NOS
+URO=Urological=Orthostatic albumin./proteinuria 
+URO=Urological=Pyelonephritis/pyelitis 
+URO=Urological=Urethritis 
+URO=Urological=Urinary calculus 
+URO=Urological=Urinary disease,other 
+URO=Urological=Urinary frequency/urgency 
+URO=Urological=Urinary retention 
+URO=Urological=Urinary symptom/complaint other
+URO=Urological=Urination problems other
+URO=Urological=Urine symptom/complaint other
+PRG=Pregnancy,Childbearing,Family Planning=Abortion induced
+PRG=Pregnancy,Childbearing,Family Planning=Abortion spontaneous
+PRG=Pregnancy,Childbearing,Family Planning=Benign/unspec.neoplasm/pregnancy
+PRG=Pregnancy,Childbearing,Family Planning=Breast disorder in pregnancy other
+PRG=Pregnancy,Childbearing,Family Planning=Complicate labour/delivery stillbirth
+PRG=Pregnancy,Childbearing,Family Planning=Complications of puerperium other
+PRG=Pregnancy,Childbearing,Family Planning=Compolicate labour/delivery livebirth
+PRG=Pregnancy,Childbearing,Family Planning=Congenital anomaly complicate preg.
+PRG=Pregnancy,Childbearing,Family Planning=Disorder pregnancy/delivery,other
+PRG=Pregnancy,Childbearing,Family Planning=Ectopic pregrancy 
+PRG=Pregnancy,Childbearing,Family Planning=Gestational diabetes
+PRG=Pregnancy,Childbearing,Family Planning=Infection complicating pregnancy
+PRG=Pregnancy,Childbearing,Family Planning=Injury complicating pregnancy 
+PRG=Pregnancy,Childbearing,Family Planning=Malignant neoplasm relate to preg.
+PRG=Pregnancy,Childbearing,Family Planning=Pregnancy 
+PRG=Pregnancy,Childbearing,Family Planning=Pregnancy high risk 
+PRG=Pregnancy,Childbearing,Family Planning=Pregnancy symptom/complaint other
+PRG=Pregnancy,Childbearing,Family Planning=Puerperal infection/sepsis
+PRG=Pregnancy,Childbearing,Family Planning=Puerperal mastitis
+PRG=Pregnancy,Childbearing,Family Planning=Toxaemia of pregnancy
+PRG=Pregnancy,Childbearing,Family Planning=Uncomplicate labour/delivery live
+PRG=Pregnancy,Childbearing,Family Planning=Uncomplicate labour/delivery still
+PRG=Pregnancy,Childbearing,Family Planning=Unwanted pregnancy
+PRG=Pregnancy,Childbearing,Family Planning=Question of pregnancy
+PRG=Pregnancy,Childbearing,Family Planning=Fear of pregnancy
+PRG=Pregnancy,Childbearing,Family Planning=Antepartum bleeding
+PRG=Pregnancy,Childbearing,Family Planning=Pregnancy vomiting/nausea
+PRG=Pregnancy,Childbearing,Family Planning=Contraception postcoital
+PRG=Pregnancy,Childbearing,Family Planning=Contraception oral
+PRG=Pregnancy,Childbearing,Family Planning=Contraception intrauterine
+PRG=Pregnancy,Childbearing,Family Planning=Sterilization
+PRG=Pregnancy,Childbearing,Family Planning=Contraception other
+PRG=Pregnancy,Childbearing,Family Planning=Infertility/subfertility
+PRG=Pregnancy,Childbearing,Family Planning=Post-partum bleeding
+PRG=Pregnancy,Childbearing,Family Planning=Post-partum symptom/complaint oth.
+PRG=Pregnancy,Childbearing,Family Planning=Breast/lactation symptom/complaint
+PRG=Pregnancy,Childbearing,Family Planning=Concern body image in pregnancy
+PRG=Pregnancy,Childbearing,Family Planning=Fear complications of pregnancy
+PRG=Pregnancy,Childbearing,Family Planning=Limited function/disability(w)
+F&G=Female Genital=Genital pain female
+F&G=Female Genital=Menstrual pain 
+F&G=Female Genital=Intermenstrual pain 
+F&G=Female Genital=Painful intercourse female
+F&G=Female Genital=Menstruation absent/scanty 
+F&G=Female Genital=Menstruation excessive
+F&G=Female Genital=Menstruation irregular/frequent
+F&G=Female Genital=Intermenstrual bleeding 
+F&G=Female Genital=Premenstrual symptom/complaint
+F&G=Female Genital=Postponement ofmenstruation 
+F&G=Female Genital=Menopausal aymptom/complaint
+F&G=Female Genital=Postmenopausal bleeding
+F&G=Female Genital=Psoticoital bleeding
+F&G=Female Genital=Vaginal discharge
+F&G=Female Genital=Vaginal symptom/complaint other
+F&G=Female Genital=vulval symptom/complaint
+F&G=Female Genital=Pelvis symptom/complaint female
+F&G=Female Genital=Breast pain female
+F&G=Female Genital=Breast lump/mass female 
+F&G=Female Genital=Nipple symptom/complaint female
+F&G=Female Genital=Breast symtom/complt.female other
+F&G=Female Genital=Abnormal cervix smear
+F&G=Female Genital=Benign neoplasm breastfemale 
+F&G=Female Genital=Benign neoplasm female genital
+F&G=Female Genital=Cervical disease NOS 
+F&G=Female Genital=Chlamydia infection genital(f)
+F&G=Female Genital=Concern breast appearance female
+F&G=Female Genital=Condylomata acuminata female
+F&G=Female Genital=Congenital anomaly genital female
+F&G=Female Genital=Fear genital/breast disease other (f)
+F&G=Female Genital=Fear of breast cancer female
+F&G=Female Genital=Fear of genital cancer female
+F&G=Female Genital=Fear of sexual dysfunction female
+F&G=Female Genital=Fear sexually transmitted disease(f)
+F&G=Female Genital=Fibrocystic disease breast
+F&G=Female Genital=Fibromyoma uterus
+F&G=Female Genital=Genital candidiasis female
+F&G=Female Genital=Genital disease female, other
+F&G=Female Genital=Genital herpes female
+F&G=Female Genital=Genital neoplasm oth/ unspecied (f)
+F&G=Female Genital=Genital symptom/complt female oth.
+F&G=Female Genital=Genital trichomoniasis female
+F&G=Female Genital=Gonorrhoea female
+F&G=Female Genital=Injury genital female
+F&G=Female Genital=Limited function/disability(x)
+F&G=Female Genital=Malignant neoplasm breast female
+F&G=Female Genital=Malignant neoplasm cervix
+F&G=Female Genital=Malignant neoplasm genital other (f)
+F&G=Female Genital=Pelvicinflammatory disease
+F&G=Female Genital=Premenstrual tension syndrome 
+F&G=Female Genital=Syphilis female
+F&G=Female Genital=Uterovaginal prolapse
+F&G=Female Genital=Vaginitis/vulvitis NOS
+M&G=Male Genital=Balanitis 
+M&G=Male Genital=Benign prostatic hypertrophy
+M&G=Male Genital=Benign/unspec. Neoplasm gen. (m)
+M&G=Male Genital=Condylomata acuminata male
+M&G=Male Genital=Congenital genl anomaly (m) other
+M&G=Male Genital=Fear of genital cancer male
+M&G=Male Genital=Fear of genital disease male other
+M&G=Male Genital=Fear of sexual dysfunction male
+M&G=Male Genital=Fear sexually fransmitted dis.male
+M&G=Male Genital=Genital disease male, other
+M&G=Male Genital=Genital herpes male
+M&G=Male Genital=Genital sympt./complt.male other
+M&G=Male Genital=Gonorrhoea male
+M&G=Male Genital=Hydrocoele
+M&G=Male Genital=Hypospadias
+M&G=Male Genital=Injury male genital 
+M&G=Male Genital=Limited function/disability (y)
+M&G=Male Genital=Malign neoplasm male genital other
+M&G=Male Genital=Malignant neoplasm prostate 
+M&G=Male Genital=Orchitis/epididymitis 
+M&G=Male Genital=Phimosis/redundant prepuce
+M&G=Male Genital=Prostatitis/seminal vesiclitis
+M&G=Male Genital=Syphilis male
+M&G=Male Genital=Undescended testicle
+M&G=Male Genital=Breast symptom/complaint male
+M&G=Male Genital=Family planning male other
+M&G=Male Genital=Impotence NOS 
+M&G=Male Genital=Infertility/subfertility male
+M&G=Male Genital=Pain in penis
+M&G=Male Genital=Pain in testis/scrotum
+M&G=Male Genital=Penis symptom/complaint other  
+M&G=Male Genital=Prostate symptom/complaint 
+M&G=Male Genital=Scrotum/testis sympt/complt. Other
+M&G=Male Genital=Sexual function sympt./complt. (m)
+M&G=Male Genital=Sterlization male
+M&G=Male Genital=Urethral discharge 
+SOC=Social Problems=Assaul/harmful event problem
+SOC=Social Problems=Behaviour problem parent/family
+SOC=Social Problems=Compliance/being ill problem
+SOC=Social Problems=Education problem
+SOC=Social Problems=Fear of social problem 
+SOC=Social Problems=Food/water problem
+SOC=Social Problems=Health care system problem
+SOC=Social Problems=Housing/neighbourhood problem
+SOC=Social Problems=Illness problem parent/family 
+SOC=Social Problems=Illness problem with child 
+SOC=Social Problems=Legal problem
+SOC=Social Problems=Limited function/disability (z)
+SOC=Social Problems=Loss/death of child problem 
+SOC=Social Problems=Loss/death of partner problem
+SOC=Social Problems=Loss/death parent/family member
+SOC=Social Problems=Partner illness problem
+SOC=Social Problems=Partner's behaviour problem
+SOC=Social Problems=Proverty/financial problem
+SOC=Social Problems=Relationship prob. Parent/family
+SOC=Social Problems=Relationship problem friend 
+SOC=Social Problems=Relationship problem with child
+SOC=Social Problems=Relationship problem with partner
+SOC=Social Problems=Social cultural problem
+SOC=Social Problems=Social problem NOS
+SOC=Social Problems=Social welfare problem
+SOC=Social Problems=Unemployment problem
+SOC=Social Problems=Work problem

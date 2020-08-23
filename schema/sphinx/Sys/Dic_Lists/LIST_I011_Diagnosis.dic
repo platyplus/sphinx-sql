@@ -1,0 +1,673 @@
+Code=MainDiagnosisType=Diagnosis
+MDMI01=General and Unspecified=Malaria
+MDMI02=General and Unspecified=Malaria Follow up
+MDMP01=Psychological=Withdrawal Syndrome
+MDMP02=Psychological=Opioid Overdose
+
+G&U001=General and Unspecified=Abnormal Result Investigation NOS
+G&U002=General and Unspecified=Adverse Effect Medical Agent
+G&U003=General and Unspecified=Adverse Effect Physical Factor
+G&U004=General and Unspecified=Bleeding/haemorrhage NOS
+G&U005=General and Unspecified=Chest Pain NOS
+G&U006=General and Unspecified=Chickenpox
+G&U007=General and Unspecified=Chills
+G&U008=General and Unspecified=Coma
+G&U009=General and Unspecified=Complication of Medical Treatment
+G&U010=General and Unspecified=Concern about appearance
+G&U011=General and Unspecified=Concern/fear medical treatment
+G&U012=General and Unspecified=Congenital Anomaly OS/Multiple
+G&U013=General and Unspecified=Effect Prosthetic Device
+G&U014=General and Unspecified=Euthanasia request/discussion
+G&U015=General and Unspecified=Fainting/syncope
+G&U016=General and Unspecified=Fear of cancer NOS
+G&U017=General and Unspecified=Fear of death/dying
+G&U018=General and Unspecified=Fear of other disease NOS
+G&U019=General and Unspecified=Felling/ill
+G&U020=General and Unspecified=Fever
+G&U021=General and Unspecified=General symptom/complaint other
+G&U022=General and Unspecified=Infectious Desease Other/NOS
+G&U023=General and Unspecified=Infectious Mononucleosis
+G&U024=General and Unspecified=Irritable infant
+G&U025=General and Unspecified=Limited function/disability NOS
+G&U026=General and Unspecified=Malaria
+G&U027=General and Unspecified=Malignancy NOS
+G&U028=General and Unspecified=Measles 
+G&U029=General and Unspecified=Multiple Trauma/Injuries
+G&U030=General and Unspecified=Pain general/multiple sites
+G&U031=General and Unspecified=Poisoning by Medical Agent
+G&U032=General and Unspecified=Risk factor for malignancy
+G&U033=General and Unspecified=Risk factor NOS
+G&U034=General and Unspecified=Rubella
+G&U035=General and Unspecified=Secondary Effect of Trauma
+G&U036=General and Unspecified=Sweating Problem
+G&U037=General and Unspecified=Swelling
+G&U038=General and Unspecified=Toxic Effect Non-Medicinal Sebstance
+G&U039=General and Unspecified=Trauma/Injury NOS
+G&U040=General and Unspecified=Tuberculosis
+G&U041=General and Unspecified=Viral Desease Other/NOS
+G&U042=General and Unspecified=Viral Exanthen Other
+G&U043=General and Unspecified=Weakness/tiredness general
+G&U044=General and Unspecified=Allergy/Allergic Reaction NOS
+G&U045=General and Unspecified=Death
+G&U046=General and Unspecified=General Disease NOS
+G&U047=General and Unspecified=Health maintenance/Prevention
+G&U048=General and Unspecified=No disease
+G&U049=General and Unspecified=Perinatal Morbidity Other 
+G&U050=General and Unspecified=Perinatal Mortality 
+G&U051=General and Unspecified=Premature New Born
+
+BLO001=Blood, Blood Forming Organs and Immune Mechanism=Anaemia Other/Unspecified 
+BLO002=Blood, Blood Forming Organs and Immune Mechanism=Anaemia,Vitamin B12/Folate Def
+BLO003=Blood, Blood Forming Organs and Immune Mechanism=Benign/unspecified neoplasm blood
+BLO004=Blood, Blood Forming Organs and Immune Mechanism=Blood Symptom/Complaint
+BLO005=Blood, Blood Forming Organs and Immune Mechanism=Blood/Lymph/Spleen Desease Other
+BLO006=Blood, Blood Forming Organs and Immune Mechanism=Congen Anom Blood/Lymph Other
+BLO007=Blood, Blood Forming Organs and Immune Mechanism=Fear Blood/Lymph Disease Other
+BLO008=Blood, Blood Forming Organs and Immune Mechanism=Fear Cancer Blood/Lymph
+BLO009=Blood, Blood Forming Organs and Immune Mechanism=Fear of AIDS/HIV
+BLO010=Blood, Blood Forming Organs and Immune Mechanism=Hereditary Haemolytic Anaemia
+BLO011=Blood, Blood Forming Organs and Immune Mechanism=HIV-Infecdion/AIDS
+BLO012=Blood, Blood Forming Organs and Immune Mechanism=Hodgkin's Disease/Lymphoma 
+BLO013=Blood, Blood Forming Organs and Immune Mechanism=Injury Blood/Lymph/Spleel Other
+BLO014=Blood, Blood Forming Organs and Immune Mechanism=Iron Deficiency Anaemia 
+BLO015=Blood, Blood Forming Organs and Immune Mechanism=Leukaemia
+BLO016=Blood, Blood Forming Organs and Immune Mechanism=Limited Function/Disability
+BLO017=Blood, Blood Forming Organs and Immune Mechanism=Lymph Gland (s) Enlarged/Painful
+BLO018=Blood, Blood Forming Organs and Immune Mechanism=Lymphandenitis Acude
+BLO019=Blood, Blood Forming Organs and Immune Mechanism=Lymphandenitis Non-Specific 
+BLO020=Blood, Blood Forming Organs and Immune Mechanism=Malignant neoplasm blood other
+BLO021=Blood, Blood Forming Organs and Immune Mechanism=Purpura/Coagulation Defeect 
+BLO022=Blood, Blood Forming Organs and Immune Mechanism=Rupturd Spleen Traumacit
+BLO023=Blood, Blood Forming Organs and Immune Mechanism=Splenomegaly 
+BLO024=Blood, Blood Forming Organs and Immune Mechanism=Sympt/Complt Lymph/Immune Other
+BLO025=Blood, Blood Forming Organs and Immune Mechanism=Unexplained Abnormal White Cells
+
+CAV001=Cardiovascular=Acute Myocardian Infarction 
+CAV002=Cardiovascular=Atherosclerosis/PVD
+CAV003=Cardiovascular=Atrial Fibrillation/flutter
+CAV004=Cardiovascular=Cardiac Arrhythmia NOS
+CAV005=Cardiovascular=Cardiovascular Disease Other 
+CAV006=Cardiovascular=Cardiovascural Pain NOS
+CAV007=Cardiovascular=Cardiovascural Sympt/Complt Other
+CAV008=Cardiovascular=Cerebrovascural Disease 
+CAV009=Cardiovascular=Congenitan Anomaly Cardiovascular
+CAV010=Cardiovascular=Elevate Blood Pressure 
+CAV011=Cardiovascular=Fear cardiovasuscular disease Other
+CAV012=Cardiovascular=Fear of Heart Disease
+CAV013=Cardiovascular=Fear of Hypertension 
+CAV014=Cardiovascular=Haemorrhoids
+CAV015=Cardiovascular=Heart failure
+CAV016=Cardiovascular=Heart Pain 
+CAV017=Cardiovascular=Heart Disease Other
+CAV018=Cardiovascular=Heart value disease NOS
+CAV019=Cardiovascular=Heart/arterial murmur NOS
+CAV020=Cardiovascular=Hyper tension complicated
+CAV021=Cardiovascular=Hyper tension Uncomplicated
+CAV022=Cardiovascular=Infection of Circulatory System 
+CAV023=Cardiovascular=Irregular heartbeat Other  
+CAV024=Cardiovascular=Ischaemic Heart Disease w.angina 
+CAV025=Cardiovascular=Ischaemic Heart Disease w/o.angina
+CAV026=Cardiovascular=Limited Function/Disability(k)
+CAV027=Cardiovascular=Neoplasm Cardiovascular
+CAV028=Cardiovascular=Palpitations/awareness of heart
+CAV029=Cardiovascular=Paroxysmal Tachycardia
+CAV030=Cardiovascular=Phlevitis/Thrombo phlebitis
+CAV031=Cardiovascular=Posturam Hypotension 
+CAV032=Cardiovascular=Pransient Cerebral Ischaemia
+CAV033=Cardiovascular=Pressure/Tightness of heart
+CAV034=Cardiovascular=Prominent Veins
+CAV035=Cardiovascular=Pulmonary Embolism 
+CAV036=Cardiovascular=Pulmonary Heart Disease
+CAV037=Cardiovascular=Rheumatic Fever/Heart Disease
+CAV038=Cardiovascular=Risk Factor Cardiovascular discease
+CAV039=Cardiovascular=Storke/Cerebrovasular accident 
+CAV040=Cardiovascular=Swollen Ankles/Oedema
+CAV041=Cardiovascular=Varicose Veins of Leg 
+
+DIG001=Digestive=Abdominal Distension 
+DIG002=Digestive=Abdominal Mass NOS
+DIG003=Digestive=Abdominal Pain Epigastric
+DIG004=Digestive=Abdominal Pain Localized Other
+DIG005=Digestive=Abdominal Pain/Cramps General
+DIG006=Digestive=Change faeces/Bowel movements
+DIG007=Digestive=Congen-Amomaly Digestive System
+DIG008=Digestive=Consipation 
+DIG009=Digestive=Diarrhoea
+DIG010=Digestive=Digestive Symptom/Complaint Other
+DIG011=Digestive=Duodenal Ulcer
+DIG012=Digestive=Dyspepsia/indigestion
+DIG013=Digestive=Fear of Cancer of Digestive System
+DIG014=Digestive=Fear of Digestive Disease Other
+DIG015=Digestive=Flatulence/gas/belching
+DIG016=Digestive=Foreing Body Digestive System 
+DIG017=Digestive=Gastroentertis Presumet Infection 
+DIG018=Digestive=gastrointestinal Infection 
+DIG019=Digestive=Haematemesis/Vominting Blood
+DIG020=Digestive=Heard Burn 
+DIG021=Digestive=Hepatomegaly
+DIG022=Digestive=Incontinence of Bowel
+DIG023=Digestive=Indury Digestive System Other
+DIG024=Digestive=Jaundice
+DIG025=Digestive=Limited Function/Disability(d)
+DIG026=Digestive=Malignant Neoplasm Colom/Rectum
+DIG027=Digestive=Malignant Neoplasm Pancreas
+DIG028=Digestive=Malignant Neoplasm stomach
+DIG029=Digestive=Malig-Neoplasm Digest Other/NOS
+DIG030=Digestive=Memaena
+DIG031=Digestive=Mouth/Tongue/Lip/Symptom/Complt
+DIG032=Digestive=Mouth/Tongue/Lipdisease
+DIG033=Digestive=Mumps 
+DIG034=Digestive=Nausea
+DIG035=Digestive=Neoplasm Digest Benign/Uncertain
+DIG036=Digestive=Oesophagus Disease
+DIG037=Digestive=Perianal Itching 
+DIG038=Digestive=Rectal Bleeding
+DIG039=Digestive=Rectal/Anal Pain 
+DIG040=Digestive=Swallowing Problem 
+DIG041=Digestive=Teeth/Gum Disease
+DIG042=Digestive=Teeth/Gumsymptom/Complaint
+DIG043=Digestive=Viral Hepatitis
+DIG044=Digestive=Vomiting
+DIG045=Digestive=Abdominal Hernia Other
+DIG046=Digestive=Anal Fissure/Perianal Abscess
+DIG047=Digestive=Appendicitis 
+DIG048=Digestive=Cholecy Stitis/Cholelithiasis
+DIG049=Digestive=Chronic Enteritis Ulcertivecolitis 
+DIG050=Digestive=Disease Digestive System, Other 
+DIG051=Digestive=Diverticular Disease 
+DIG052=Digestive=Hiatus Hernia
+DIG053=Digestive=Inguinal Hermra  
+DIG054=Digestive=Irritable Bowel Syndrome
+DIG055=Digestive=Liver Disease NOS
+DIG056=Digestive=Peptic Ulcer Other
+DIG057=Digestive=Stomach Function Disorder
+DIG058=Digestive=Worms/Other Parasites
+EYE001=Eye=Blindness
+EYE002=Eye=Cataract
+EYE003=Eye=Eye/adnexa disease, other
+EYE004=Eye=Glaucoma
+EYE005=Eye=Strabismus
+EYE006=Eye=Blepharitis/stye/chalazion
+EYE007=Eye=Blocked lacrimal duct of infant
+EYE008=Eye=Congenital abnomal eye other
+EYE009=Eye=Conjunctivitis allergic
+EYE010=Eye=Conjunctivitis infectious
+EYE011=Eye=Contact lens symptom/complaint
+EYE012=Eye=Contusion/haemorrhage eys
+EYE013=Eye=Corneal ulcer
+EYE014=Eye=Detached retina
+EYE015=Eye=Eye appearance abnormal
+EYE016=Eye=Eye discharge
+EYE017=Eye=Eye infection/inflammation other
+EYE018=Eye=Eye movements abnormal 
+EYE019=Eye=Eye Pain
+EYE020=Eye=Eye sensation abnormal 
+EYE021=Eye=Eye symptom/complaint other
+EYE022=Eye=Eyelid symptom/complaint
+EYE023=Eye=Fear of eye disease
+EYE024=Eye=Foreign body in eye
+EYE025=Eye=Glasses symptom/complaint
+EYE026=Eye=Injury eye other 
+EYE027=Eye=Limited function/disability (f)
+EYE028=Eye=Macular degeneration
+EYE029=Eye=Neoplasm of eye/adnexa
+EYE030=Eye=Red eye
+EYE031=Eye=Refractive error
+EYE032=Eye=Retinopathy
+EYE033=Eye=Trachoma
+EYE034=Eye=Visual disturbance other
+EYE035=Eye=Visual floaters/spots
+EAR001=Ear=Acoustic Trauma 
+EAR002=Ear=Acute Otitis Media 
+EAR003=Ear=Bleeding Ear
+EAR004=Ear=Blugged Feeling Ear
+EAR005=Ear=Chronic Otitis Media
+EAR006=Ear=Concern with Appearance of Ears
+EAR007=Ear=Congenital Anomaly of Ear
+EAR008=Ear=Deafness 
+EAR009=Ear=Ear Discharge
+EAR010=Ear=Ear Indury Other 
+EAR011=Ear=Ear Symptom/Complaint Other
+EAR012=Ear=Ear/Mastoid Disease,Other
+EAR013=Ear=Earpain/Earche
+EAR014=Ear=Eustachian Salpingitis 
+EAR015=Ear=Excessive Ear wax
+EAR016=Ear=Fear of Ear Disease
+EAR017=Ear=Foeign Body in Ear
+EAR018=Ear=Hearing Complaing
+EAR019=Ear=Limited Function/Disability Ear
+EAR020=Ear=Neoplasm of Ear
+EAR021=Ear=Otitis Eherna 
+EAR022=Ear=Otosclerrosis
+EAR023=Ear=Perfoation ear drum
+EAR024=Ear=Presbyacusis 
+EAR025=Ear=Serous Otitis Media
+EAR026=Ear=Superfrcral indury ear
+EAR027=Ear=Tinnitus, Ringing, Buzzing Ear
+EAR028=Ear=Vertiginous Syndrome
+EnM001=Endocrine/metabolic and nutritional=Excessive thirst 
+EnM002=Endocrine/metabolic and nutritional=Excessice appetite
+EnM003=Endocrine/metabolic and nutritional=Loss of appetite 
+EnM004=Endocrine/metabolic and nutritional=Feeding problem of infant/child
+EnM005=Endocrine/metabolic and nutritional=Feeding problem of adult
+EnM006=Endocrine/metabolic and nutritional=Weight gain 
+EnM007=Endocrine/metabolic and nutritional=Weight loss 
+EnM008=Endocrine/metabolic and nutritional=Growth delay 
+EnM009=Endocrine/metabolic and nutritional=Dehydration 
+EnM010=Endocrine/metabolic and nutritional=Fear of cancer of endocrine system 
+EnM011=Endocrine/metabolic and nutritional=Limited function/disability(t)
+EnM012=Endocrine/metabolic and nutritional=Endocrine/met/sympt/complt other
+EnM013=Endocrine/metabolic and nutritional=Endocrine infection 
+EnM014=Endocrine/metabolic and nutritional=Malignant neoplasm thyroid
+EnM015=Endocrine/metabolic and nutritional=Benign neoplasm thyroid 
+EnM016=Endocrine/metabolic and nutritional=Neoplasm endocrime oth/unspecified 
+EnM017=Endocrine/metabolic and nutritional=Thyroglossal duct/cyst
+EnM018=Endocrine/metabolic and nutritional=Congenital anom endocrine/metab 
+EnM019=Endocrine/metabolic and nutritional=Goitre 
+EnM020=Endocrine/metabolic and nutritional=Obesity 
+EnM021=Endocrine/metabolic and nutritional=Overweight 
+EnM022=Endocrine/metabolic and nutritional=Hyperthyroidism/thyrotoxicosis 
+EnM023=Endocrine/metabolic and nutritional=Hypothyroidism/myxhodema
+EnM024=Endocrine/metabolic and nutritional=Hypognycaemia 
+EnM025=Endocrine/metabolic and nutritional=Diabetes insulin dependent
+EnM026=Endocrine/metabolic and nutritional=Diabetes non-insulin dependent
+EnM027=Endocrine/metabolic and nutritional=Vitamin/mutritional deficiency 
+EnM028=Endocrine/metabolic and nutritional=Gout
+EnM029=	Endocrine/metabolic and nutritional=Lipid disorder 
+EnM030=	Endocrine/metabolic and nutritional=Endocrine/metab/nutrit.dis.other
+
+F&G001=Female Genital=Abnormal cervix smear
+F&G002=Female Genital=Benign neoplasm breastfemale 
+F&G003=Female Genital=Benign neoplasm female genital
+F&G004=Female Genital=Cervical disease NOS 
+F&G005=Female Genital=Chlamydia infection genital(f)
+F&G006=Female Genital=Concern breast appearance female
+F&G007=Female Genital=Condylomata acuminata female
+F&G008=Female Genital=Congenital anomaly genital female
+F&G009=Female Genital=Fear genital/breast disease other (f)
+F&G010=Female Genital=Fear of breast cancer female
+F&G011=Female Genital=Fear of genital cancer female
+F&G012=Female Genital=Fear of sexual dysfunction female
+F&G013=Female Genital=Fear sexually transmitted disease(f)
+F&G014=Female Genital=Fibrocystic disease breast
+F&G015=Female Genital=Fibromyoma uterus
+F&G016=Female Genital=Genital candidiasis female
+F&G017=Female Genital=Genital disease female, other
+F&G018=Female Genital=Genital herpes female
+F&G019=Female Genital=Genital neoplasm oth/ unspecied (f)
+F&G020=Female Genital=Genital symptom/complt female oth.
+F&G021=Female Genital=Genital trichomoniasis female
+F&G022=Female Genital=Gonorrhoea female
+F&G023=Female Genital=Injury genital female
+F&G024=Female Genital=Limited function/disability(x)
+F&G025=Female Genital=Malignant neoplasm breast female
+F&G026=Female Genital=Malignant neoplasm cervix
+F&G027=Female Genital=Malignant neoplasm genital other (f)
+F&G028=Female Genital=Pelvicinflammatory disease
+F&G029=Female Genital=Premenstrual tension syndrome 
+F&G030=Female Genital=Syphilis female
+F&G031=Female Genital=Uterovaginal prolapse
+F&G032=Female Genital=Vaginitis/vulvitis NOS
+F&G033=Female Genital=Genital pain female
+F&G034=Female Genital=Menstrual pain 
+F&G035=Female Genital=Intermenstrual pain 
+F&G036=Female Genital=Painful intercourse female
+F&G037=Female Genital=Menstruation absent/scanty 
+F&G038=Female Genital=Menstruation excessive
+F&G039=Female Genital=Menstruation irregular/frequent
+F&G040=Female Genital=Intermenstrual bleeding 
+F&G041=Female Genital=Premenstrual symptom/complaint
+F&G042=Female Genital=Postponement ofmenstruation 
+F&G043=Female Genital=Menopausal aymptom/complaint
+F&G044=Female Genital=Postmenopausal bleeding
+F&G045=Female Genital=Psoticoital bleeding
+F&G046=Female Genital=Vaginal discharge
+F&G047=Female Genital=Vaginal symptom/complaint other
+F&G048=Female Genital=vulval symptom/complaint
+F&G049=Female Genital=Pelvis symptom/complaint female
+F&G050=Female Genital=Breast pain female
+F&G051=Female Genital=Breast lump/mass female 
+F&G052=Female Genital=Nipple symptom/complaint female
+F&G053=Female Genital=Breast symtom/complt.female other
+
+M&G001=Male Genital=Breast symptom/complaint male
+M&G002=Male Genital=Family planning male other
+M&G003=Male Genital=Impotence NOS 
+M&G004=Male Genital=Infertility/subfertility male
+M&G005=Male Genital=Pain in penis
+M&G006=Male Genital=Pain in testis/scrotum
+M&G007=Male Genital=Penis symptom/complaint other  
+M&G008=Male Genital=Prostate symptom/complaint 
+M&G009=Male Genital=Scrotum/testis sympt/complt. Other
+M&G010=Male Genital=Sexual function sympt./complt. (m)
+M&G011=Male Genital=Sterlization male
+M&G012=Male Genital=Urethral discharge 
+M&G013=Male Genital=Balanitis 
+M&G014=Male Genital=Benign prostatic hypertrophy
+M&G015=Male Genital=Benign/unspec. Neoplasm gen. (m)
+M&G016=Male Genital=Condylomata acuminata male
+M&G017=Male Genital=Congenital genl anomaly (m) other
+M&G018=Male Genital=Fear of genital cancer male
+M&G019=Male Genital=Fear of genital disease male other
+M&G020=Male Genital=Fear of sexual dysfunction male
+M&G021=Male Genital=Fear sexually fransmitted dis.male
+M&G022=Male Genital=Genital disease male, other
+M&G023=Male Genital=Genital herpes male
+M&G024=Male Genital=Genital sympt./complt.male other
+M&G025=Male Genital=Gonorrhoea male
+M&G026=Male Genital=Hydrocoele
+M&G027=Male Genital=Hypospadias
+M&G028=Male Genital=Injury male genital 
+M&G029=Male Genital=Limited function/disability (y)
+M&G030=Male Genital=Malign neoplasm male genital other
+M&G031=Male Genital=Malignant neoplasm prostate 
+M&G032=Male Genital=Orchitis/epididymitis 
+M&G033=Male Genital=Phimosis/redundant prepuce
+M&G034=Male Genital=Prostatitis/seminal vesiclitis
+M&G035=Male Genital=Syphilis male
+M&G036=Male Genital=Undescended testicle
+
+MSK001=Musculoskeletal=Acquired deformity of spine
+MSK002=Musculoskeletal=Ankle symptom/complaint
+MSK003=Musculoskeletal=Arm symptom/complaint
+MSK004=Musculoskeletal=Back Symptom/complaint
+MSK005=Musculoskeletal=Back syndrome
+MSK006=Musculoskeletal=back syndrome with radiating pain
+MSK007=Musculoskeletal=Bursitis/tendinitis/synovitis NOS
+MSK008=Musculoskeletal=Chest symptom/complaint
+MSK009=Musculoskeletal=Congenital anomaly musculoskeletal
+MSK010=Musculoskeletal=Dislocation/subluxation
+MSK011=Musculoskeletal=Elbow symptom/complaint
+MSK012=Musculoskeletal=Fear musculoskeltal disease other
+MSK013=Musculoskeletal=Fear of cancer musculoskeletal
+MSK014=Musculoskeletal=Flank/axilla symptom/complaint
+MSK015=Musculoskeletal=Foot/Toe symptom/complaint
+MSK016=Musculoskeletal=Fracture:femur
+MSK017=Musculoskeletal=Fracture:hank/foot bone
+MSK018=Musculoskeletal=Fracture:other
+MSK019=Musculoskeletal=Fracture:radius/ulna
+MSK020=Musculoskeletal=Fracture:tibia/fibula
+MSK021=Musculoskeletal=Hand/finger symptom/complaint
+MSK022=Musculoskeletal=Hip symptom/complaint
+MSK023=Musculoskeletal=Infections  musculoskeletal System
+MSK024=Musculoskeletal=Injury musuloskeletal NOS
+MSK025=Musculoskeletal=Jaw symptom/complaint
+MSK026=Musculoskeletal=Joint symptom/complaint
+MSK027=Musculoskeletal=Knee symptom/complaint
+MSK028=Musculoskeletal=Leg/thigh symptom/complaint
+MSK029=Musculoskeletal=Limited Function/disability(l)
+MSK030=Musculoskeletal=Low Back Symptom/complaint
+MSK031=Musculoskeletal=Malignant Neoplasm Musculoskeletal 
+MSK032=Musculoskeletal=Muscle Pain 
+MSK033=Musculoskeletal=Muscle Symptom/complaint NOS 
+MSK034=Musculoskeletal=Neck symptom/complain
+MSK035=Musculoskeletal=Neck syndrome
+MSK036=Musculoskeletal=Osteoarthrosis of hip
+MSK037=Musculoskeletal=Osteoarthrosis of knee
+MSK038=Musculoskeletal=Rheumatoid/seropositive arthritics
+MSK039=Musculoskeletal=Shoulder symptom/complaint 
+MSK040=Musculoskeletal=Sprain/strain of ankle
+MSK041=Musculoskeletal=Sprain/strain of joint NOS
+MSK042=Musculoskeletal=Sprain/strain of knee
+MSK043=Musculoskeletal=Sympt/complt Musculoskeletal other
+MSK044=Musculoskeletal=Wrist symptom/complaint
+MSK045=Musculoskeletal=Acquired deformity of limb
+MSK046=Musculoskeletal=Acute internal damage knee
+MSK047=Musculoskeletal=Musculoskeletal disease,other
+MSK048=Musculoskeletal=Neoplasm benign/unspec musculo.
+MSK049=Musculoskeletal=Osteoarthrosis other
+MSK050=Musculoskeletal=Osteochondrosis
+MSK051=Musculoskeletal=Osteoporosis
+MSK052=Musculoskeletal=Shouldersyndrome
+MSK053=Musculoskeletal=Tennis elbow
+NRL001=Neurological=Abnormal involuntary movements
+NRL002=Neurological=Benign neoplasm nervous system
+NRL003=Neurological=Carpal tunnel syndrome
+NRL004=Neurological=Cluster headache 
+NRL005=Neurological=Concussion 
+NRL006=Neurological=Congenital anomaly neurological 
+NRL007=Neurological=Convulsion/seizure
+NRL008=Neurological=Disturbance of smell/taste
+NRL009=Neurological=Epilepsy 
+NRL010=Neurological=Facial paralysis/bell's palsy
+NRL011=Neurological=Fear cancer neurological system
+NRL012=Neurological=Fear of neurological disease other
+NRL013=Neurological=Head injury other
+NRL014=Neurological=Headache
+NRL015=Neurological=Injury nervous system other
+NRL016=Neurological=Limited function/disability(n)
+NRL017=Neurological=Malignant neoplasm nervous system
+NRL018=Neurological=Meningitis/encephalitis
+NRL019=Neurological=Migraine 
+NRL020=Neurological=Multiple sclerosis 
+NRL021=Neurological=Neoplasm nervous system unspec. 
+NRL022=Neurological=Neurological infection other
+NRL023=Neurological=Neurological synptom/complt. other
+NRL024=Neurological=Pain face
+NRL025=Neurological=Paralysis/weakness
+NRL026=Neurological=Parkinsonism
+NRL027=Neurological=Peripheral neuritis/neuropathy 
+NRL028=Neurological=Poliomyelitis 
+NRL029=Neurological=Restless legs
+NRL030=Neurological=Sensation disturbance other
+NRL031=Neurological=Speech disorder
+NRL032=Neurological=Tetanus
+NRL033=Neurological=Tingling fingers/feet/toes
+NRL034=Neurological=Trige minal neuralgia
+NRL035=Neurological=Vertigo/dizziness
+NRL036=Neurological=Tension headache
+NRL037=Neurological=Neurological disease, other
+PRG001=Pregnancy,Childbearing,Family Planning=Question of pregnancy
+PRG002=Pregnancy,Childbearing,Family Planning=Fear of pregnancy
+PRG003=Pregnancy,Childbearing,Family Planning=Antepartum bleeding
+PRG004=Pregnancy,Childbearing,Family Planning=Pregnancy vomiting/nausea
+PRG005=Pregnancy,Childbearing,Family Planning=Contraception postcoital
+PRG006=Pregnancy,Childbearing,Family Planning=Contraception oral
+PRG007=Pregnancy,Childbearing,Family Planning=Contraception intrauterine
+PRG008=Pregnancy,Childbearing,Family Planning=Sterilization
+PRG009=Pregnancy,Childbearing,Family Planning=Contraception other
+PRG010=Pregnancy,Childbearing,Family Planning=Infertility/subfertility
+PRG011=Pregnancy,Childbearing,Family Planning=Post-partum bleeding
+PRG012=Pregnancy,Childbearing,Family Planning=Post-partum symptom/complaint oth.
+PRG013=Pregnancy,Childbearing,Family Planning=Breast/lactation symptom/complaint
+PRG014=Pregnancy,Childbearing,Family Planning=Concern body image in pregnancy
+PRG015=Pregnancy,Childbearing,Family Planning=Fear complications of pregnancy
+PRG016=Pregnancy,Childbearing,Family Planning=Limited function/disability(w)
+PRG017=Pregnancy,Childbearing,Family Planning=Abortion induced
+PRG018=Pregnancy,Childbearing,Family Planning=Abortion spontaneous
+PRG019=Pregnancy,Childbearing,Family Planning=Benign/unspec.neoplasm/pregnancy
+PRG020=Pregnancy,Childbearing,Family Planning=Breast disorder in pregnancy other
+PRG021=Pregnancy,Childbearing,Family Planning=Complicate labour/delivery stillbirth
+PRG022=Pregnancy,Childbearing,Family Planning=Complications of puerperium other
+PRG023=Pregnancy,Childbearing,Family Planning=Compolicate labour/delivery livebirth
+PRG024=Pregnancy,Childbearing,Family Planning=Congenital anomaly complicate preg.
+PRG025=Pregnancy,Childbearing,Family Planning=Disorder pregnancy/delivery,other
+PRG026=Pregnancy,Childbearing,Family Planning=Ectopic pregrancy 
+PRG027=Pregnancy,Childbearing,Family Planning=Gestational diabetes
+PRG028=Pregnancy,Childbearing,Family Planning=Infection complicating pregnancy
+PRG029=Pregnancy,Childbearing,Family Planning=Injury complicating pregnancy 
+PRG030=Pregnancy,Childbearing,Family Planning=Malignant neoplasm relate to preg.
+PRG031=Pregnancy,Childbearing,Family Planning=Pregnancy 
+PRG032=Pregnancy,Childbearing,Family Planning=Pregnancy high risk 
+PRG033=Pregnancy,Childbearing,Family Planning=Pregnancy symptom/complaint other
+PRG034=Pregnancy,Childbearing,Family Planning=Puerperal infection/sepsis
+PRG035=Pregnancy,Childbearing,Family Planning=Puerperal mastitis
+PRG036=Pregnancy,Childbearing,Family Planning=Toxaemia of pregnancy
+PRG037=Pregnancy,Childbearing,Family Planning=Uncomplicate labour/delivery live
+PRG038=Pregnancy,Childbearing,Family Planning=Uncomplicate labour/delivery still
+PRG039=Pregnancy,Childbearing,Family Planning=Unwanted pregnancy
+PSY001=Psychological=Acute alcoho abuse 
+PSY002=Psychological=Acute stress reaction
+PSY003=Psychological=Adolescent behav. Symptom/complt.
+PSY004=Psychological=Affective psychosis 
+PSY005=Psychological=Anorexia nervosa/bulimia 
+PSY006=Psychological=Anxiety disorder/anxiety state
+PSY007=Psychological=Bedwetting/enuresis 
+PSY008=Psychological=Child behaviour symptom/complaint
+PSY009=Psychological=Chronic alcohol abuse
+PSY010=Psychological=Dementia 
+PSY011=Psychological=Depressive disorder 
+PSY012=Psychological=Drug abuse 
+PSY013=Psychological=Eating problem in child
+PSY014=Psychological=Encopresis/bowel training problem
+PSY015=Psychological=Fear of mental disorder 
+PSY016=Psychological=Feeling anxious/nervous/tense
+PSY017=Psychological=Feeling depressed
+PSY018=Psychological=Feeling/behaving irritable/angry
+PSY019=Psychological=Hyperkinetic disorder
+PSY020=Psychological=Limited function/disability (p)
+PSY021=Psychological=Medication abuse
+PSY022=Psychological=Memory disturbance 
+PSY023=Psychological=Mental retardation 
+PSY024=Psychological=Neuraesthenia/surmenage
+PSY025=Psychological=Organic psychosis other
+PSY026=Psychological=Personality disorder 
+PSY027=Psychological=Phase of life problem adult 
+PSY028=Psychological=Phobia/compulsive disoder
+PSY029=Psychological=Post-traumatic stress disorder 
+PSY030=Psychological=Psychological symptom/complt other
+PSY031=Psychological=Psychosis NOS/other
+PSY032=Psychological=Schizophrenia 
+PSY033=Psychological=Senility, feeling/behaving old
+PSY034=Psychological=Sexual desire reduced 
+PSY035=Psychological=Sexual fulfilment reduced 
+PSY036=Psychological=Sexual preference concern
+PSY037=Psychological=Sleep disturbance
+PSY038=Psychological=Somatization disorder 
+PSY039=Psychological=Specific learning problem 
+PSY040=Psychological=Stammering/stuttering/tic
+PSY041=Psychological=Suicide/suicide attempt
+PSY042=Psychological=Tobacco abuse 
+PSY043=Psychological=Psychological disorders, other
+RES001=Respiratory=Acute bronchitis/bronchiolitis
+RES002=Respiratory=Allergic rhinitis
+RES003=Respiratory=Asthma
+RES004=Respiratory=Benign neoplasm respiratory
+RES005=Respiratory=Boil/abscess nose
+RES006=Respiratory=Breathing problem, other
+RES007=Respiratory=Chronic bronchitis
+RES008=Respiratory=Chronic obstructive pulmonary dis
+RES009=Respiratory=Congenital anomaly respiratory
+RES010=Respiratory=Cough
+RES011=Respiratory=Fear of cancer respiratory system
+RES012=Respiratory=Fear of respiratory disease other
+RES013=Respiratory=Foreign body nose/larynx/bronch
+RES014=Respiratory=Haemoptysis
+RES015=Respiratory=Hypertrophy tonsils/adenoids
+RES016=Respiratory=Hyperventilation syndrome
+RES017=Respiratory=Influenza
+RES018=Respiratory=Injury respiratory other
+RES019=Respiratory=Laryngitis/tracheitis acute
+RES020=Respiratory=Limited function/disability (r)
+RES021=Respiratory=Malignant neoplasm bronchus/lung
+RES022=Respiratory=Malinant neoplasm respiratory, other
+RES023=Respiratory=Neoplasm respiratory unspecified
+RES024=Respiratory=Nose bleed, epistaxis
+RES025=Respiratory=Nose symptom/complaint other
+RES026=Respiratory=Pain respiratory system
+RES027=Respiratory=Pleurisy/pleural effusion
+RES028=Respiratory=Pneumonia
+RES029=Respiratory=Respiratory disease other
+RES030=Respiratory=Respiratory infection other
+RES031=Respiratory=Respiratory symptom/complaint oth.
+RES032=Respiratory=Shortness of breath/dyspnoea
+RES033=Respiratory=Sinus symptom/complaint
+RES034=Respiratory=Sinusitis acute/chronic
+RES035=Respiratory=Sneezing/nasal congestion
+RES036=Respiratory=Sputum/phlegm abnormal
+RES037=Respiratory=Strep throat
+RES038=Respiratory=Throat symptom/complaint
+RES039=Respiratory=Tonsillitis acute
+RES040=Respiratory=Upper respiratory infection acute
+RES041=Respiratory=Voice symptom/complaint
+RES042=Respiratory=Wheezing
+RES043=Respiratory=Whooping cough
+SKI001=Skin=Abrasion/scratch/blister
+SKI002=Skin=Animal/humar bite 
+SKI003=Skin=Boil/carbuncle 
+SKI004=Skin=Bruise/contusion 
+SKI005=Skin=Burn/scald 
+SKI006=Skin=Congenital skin anomaly other
+SKI007=Skin=Corn/callosity 
+SKI008=Skin=Dermatophytosis 
+SKI009=Skin=Fear of cancer of skin
+SKI010=Skin=Fear of skin disease other
+SKI011=Skin=Foreign Body in skin
+SKI012=Skin=Haemangioma/lymphangioma 
+SKI013=Skin=Hair loss/baldness
+SKI014=Skin=Hair/scalp symptom/complaint 
+SKI015=Skin=Herpes simplex
+SKI016=Skin=Herpes zoster 
+SKI017=Skin=Impetigo 
+SKI018=Skin=Infectide finger/toe
+SKI019=Skin=Insect bite/sting 
+SKI020=Skin=Laceration/cut 
+SKI021=Skin=Limited function/disability(s)
+SKI022=Skin=Lipoma 
+SKI023=Skin=Lump/swelling localized
+SKI024=Skin=Lumpa/awellings generalized
+SKI025=Skin=Malignant neoplasm of skin
+SKI026=Skin=Moniliasis/candidiasis skin
+SKI027=Skin=Naevaus/mole
+SKI028=Skin=Nail symptom/complaint 
+SKI029=Skin=Neoplasm skin benign/unspecified
+SKI030=Skin=Pain/tenderness of skin
+SKI031=Skin=Pediculosis/skin infestation other
+SKI032=Skin=Pilonidal cyst/fistula
+SKI033=Skin=Pruritus
+SKI034=Skin=Rash generalized
+SKI035=Skin=Rash localized
+SKI036=Skin=Scabies/other acariasis 
+SKI037=Skin=Skin colour change
+SKI038=Skin=Skin infection other
+SKI039=Skin=Skin infection post-traumatic 
+SKI040=Skin=Skin injury other 
+SKI041=Skin=Skin symptom/complaint other 
+SKI042=Skin=Skin texture symptom/complaint 
+SKI043=Skin=Solar keratosis/sunburn 
+SKI044=Skin=Warts
+SKI045=Skin=Dermatitis seborrhoeic 
+SKI046=Skin=Dermatitis/atopic eczema 
+SKI047=Skin=Dermatitis contact/allergic 
+SKI048=Skin=Diaper rash 
+SKI049=Skin=Pityriasis rosea 
+SKI050=Skin=Psoriasis 
+SKI051=Skin=Sweat gland disease 
+SKI052=Skin=Sebaceous cyst 
+SKI053=Skin=Ingrowing nail 
+SKI054=Skin=Molluscum contagiosun 
+SKI055=Skin=Acne 
+SKI056=Skin=Chromic ulcer skin
+SKI057=Skin=Urticaria 
+SKI058=Skin=Skin disease other 
+URO001=Urological=Abnormal urine test NOS
+URO002=Urological=Benign neoplasm urinary tract
+URO003=Urological=Bladder symptom/complaint other
+URO004=Urological=Congenital anomaly urinary tract
+URO005=Urological=Cystitis/urinary infection other
+URO006=Urological=Dysuria/painful urination 
+URO007=Urological=Fear of cancer of urinary system 
+URO008=Urological=Fear of urinary disease other
+URO009=Urological=Glomerulonephritis/nephrosis
+URO010=Urological=Haematuria 
+URO011=Urological=Incontinence Urine 
+URO012=Urological=Injury urinary tract 
+URO013=Urological=Kindney symptom/complaint 
+URO014=Urological=Limited function/disability urinary 
+URO015=Urological=Malignant neoplasm of bladder
+URO016=Urological=Malignant Neoplasm of kidney
+URO017=Urological=Malignant neoplasm urinary other 
+URO018=Urological=Neoplasm urinary tract NOS
+URO019=Urological=Orthostatic albumin./proteinuria 
+URO020=Urological=Pyelonephritis/pyelitis 
+URO021=Urological=Urethritis 
+URO022=Urological=Urinary calculus 
+URO023=Urological=Urinary disease,other 
+URO024=Urological=Urinary frequency/urgency 
+URO025=Urological=Urinary retention 
+URO026=Urological=Urinary symptom/complaint other
+URO027=Urological=Urination problems other
+URO028=Urological=Urine symptom/complaint other
+
+
+

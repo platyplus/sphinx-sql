@@ -1,0 +1,1827 @@
+Version=5104
+EntÍte
+	Historique=5.0.0.81(MÈdecins du Mon;5.1.0.2(MÈdecins du Mond;5.0.0.64(MÈdecins du Mon;5.1.0.3(MÈdecins du Mond;5.1.0.4(MEDECINS DU MOND;
+	Langue=EN
+	Titre=METHADONE
+	StadePanneau=30
+	Traductions
+		Traduction
+			Langue=FR
+			Titre=ART VISIT
+		Fin
+	Fin
+Fin
+Questions
+	Question
+		LibellÈ=MDM code (Patient ID)
+		Variable=MDMcode
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=MDM code (Patient ID)
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=A00. Registration date
+		Variable=A00_RegistrationDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=A00. Registration date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Name
+		Variable=A01_PatientName
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=A01. Name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Fatherís name
+		Variable=A02_FatherName
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=A02. Fatherís name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Sex
+		Variable=A03_Sexe
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Male ; Female
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=A03. Sexe
+				ModalitÈs=Male ; Female ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Date of birth
+		Variable=A041_DateOfBirth
+		Type=8
+		MinNombre=3652
+		Format=jj/mm/aaaa
+		Consigne=The response must be more than 01/01/1910.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=A04. Date of birth
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Age
+		Variable=A05_Age
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=A05. Age
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Patient target
+		Variable=A07_PatientTarget
+		Type=7
+		FichierCodes=LIST_A3_Target.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=A07. Patient target
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medical care place
+		Variable=MMT_PlaceOfMedicalCare
+		Type=1
+		NbModalitÈs=5
+		ModalitÈs=Clinic ; HBC ; Outreach ; Hospital ; Specialist
+		PondÈrations= 0
+		Consigne=Mandatory response.
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				LibellÈ=Medical care place
+				ModalitÈs=Clinic ; mod-FR-3 ; mod-FR-4 ; Hospital ; mod-FR-5 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Visit Date
+		Variable=MMT_VisitDate
+		Type=8
+		MinNombre=32872
+		Format=jj/mm/aaaa
+		Consigne=The response must be more than 01/01/1990.ÄÅMandatory response.
+		Plan=1
+		Attributs=160
+		OptionsBasic=1
+		Traductions
+			Traduction
+				LibellÈ=Visit Date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=PLH
+		Variable=MMT_PLH
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Initial visit
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=MDM Staff 1
+		Variable=MMT_MDMStaff1
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LIST_A2_MDMstaff.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Methadone Nurse
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=MDM Staff 2
+		Variable=MMT_MDMStaff2
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LIST_A2_MDMstaff.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=MDM staff
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Height
+		Variable=A06a_Height
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=4
+		Format=###
+		Plan=1
+		Attributs=32
+		Basic=If (Not A06a_Height=0) and (C012_LbOrKg="Kg") thenÄÅC06_BMI=C011_BW/(A06a_Height*A06a_Height)ÄÅelseif (Not A06a_Height=0) and (C012_LbOrKg="Lb") thenÄÅC06_BMI=(C011_BW/2.2)/(A06a_Height*A06a_Height)ÄÅendifÄÅÄÅ
+		Traductions
+			Traduction
+				LibellÈ=Height
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=BW
+		Variable=MMT_BW
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Basic=Height_m=A06a_Height/100ÄÅHeight_m2=Height_m*Height_mÄÅIf (Not A06a_Height=0) and (C012_LbOrKg="Kg") thenÄÅC06_BMI=C011_BW/Height_m2ÄÅelseif (Not A06a_Height=0) and (C012_LbOrKg="Lb") thenÄÅC06_BMI=(C011_BW/2.2)/Height_m2ÄÅendifÄÅÄÅ
+		Traductions
+			Traduction
+				LibellÈ=C01. BW
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Lb / Kg
+		Variable=MMT_LbOrKg
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Lb ; Kg
+		PondÈrations= 0
+		Plan=1
+		Attributs=33056
+		VariableAutomatique=Identique
+		Traductions
+			Traduction
+				LibellÈ=C012. Lb / Kg
+				ModalitÈs=Lb ; Kg ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=BMI
+		Variable=MMT_BMI
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=4
+		Plan=1
+		Attributs=33056
+		Basic=Height_m=A06a_Height/100ÄÅHeight_m2=Height_m*Height_mÄÅIf (Not A06a_Height=0) and (MMT_LbOrKg="Kg") thenÄÅMMT_BMI=MMT_BW/Height_m2ÄÅelseif (Not A06a_Height=0) and (MMT_LbOrKg="Lb") thenÄÅMMT_BMI=(MMT_BW/2.2)/Height_m2ÄÅendifÄÅ
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				LibellÈ=C06. BMI
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Temperature
+		Variable=MMT_Temperature
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=4
+		Format=####
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=C05. Temperature
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=∞C/F
+		Variable=MMT_CorF
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=∞C ; ∞F
+		PondÈrations= 0
+		Plan=1
+		Attributs=33056
+		VariableAutomatique=Identique
+		Traductions
+			Traduction
+				LibellÈ=C051. ∞C/F
+				ModalitÈs=∞C ; ∞F ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=BP
+		Variable=MMT_BP
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=C04. BP
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=BP
+		Variable=MMT_BP1
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=C042. BP
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Pulse
+		Variable=MMT_Pulse
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=C03. Pulse
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=RR
+		Variable=MMT_RR
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=C02. RR
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Pupil Size:
+		Variable=MMT_PupilSize
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=C08. Pupil Site:
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=IP starting date :
+		Variable=MMT_IPStartingDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=G01. Patient partner has been tested
+				ModalitÈs=Yes ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=IP duration:
+		Variable=MMT_IPDuration
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=IP duration:
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dose prescribed at the end of IP
+		Variable=MMT_DosePrescribed
+		Type=7
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Dose prescribed at the end of IP
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=MP starting date
+		Variable=MMT_MPStartingDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=MP starting date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Current Methadone Dose
+		Variable=MMT_CurrentMMTDose
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Actual dose
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Start Date of Current Dose
+		Variable=MMT_StartDateOfCurrentDose
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Since
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Marital Status
+		Variable=A07a_MaritalStatus
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LIST_A4_MaritalStatus.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Marital Status
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Contact Name1
+		Variable=MMT_ContactName1
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=B03. Contact Name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Contact Name2
+		Variable=MMT_ContactName2
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=B03. Contact Name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Remark
+		Variable=MMT_Remark
+		Type=6
+		NbLignes=3
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=D03. Remark
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Treatment other than methadone
+		Variable=MMT_TreatmentOtherThanMethadone
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H01. Patient is taking medicines
+				ModalitÈs=Yes ; mod-FR-2 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=If yes, sepcify
+		Variable=MMT_IfYesSpecify
+		Type=2
+		NbModalitÈs=3
+		ModalitÈs=ART ; anti TB ; Others
+		MaxRÈponses=3
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=H02. Which medicines?
+				ModalitÈs=Anti-Retrovirals ; Anti-Tuberculosis ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Other
+		Variable=MMT_IfYesOther
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H026. Other
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=CurrentDrugUse
+		Variable=MMT_CurrentDrugUse
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=H01. Patient is taking medicines
+				ModalitÈs=Yes ; mod-FR-2 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Type of Drugs
+		Variable=MMT_TypeOfDrugs
+		Type=2
+		NbModalitÈs=7
+		ModalitÈs=Alcohol ; Amphetamine ; Benzodiazepine ; Cannabis ; Ecstasy ; Heroin ; Opium
+		MaxRÈponses=7
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=Type of Drugs
+				ModalitÈs=Alcohol ; Amphetamine ; Benzodiazepine ; Cannabis ; Ecstasy ; Heroin ; Opium ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Last Use
+		Variable=MMT_ALC_LastUse
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		OptionsBasic=1
+		Traductions
+			Traduction
+				LibellÈ=ALC Last Use
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Time/Day
+		Variable=MMT_ALC_Time
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=########
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=#Time/Day
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Days/Week
+		Variable=MMT_ALC_Days
+		Type=7
+		FichierCodes=Sys\Dic_Lists\CurrDrug_DaysWeek.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=MMT_AMP_Days
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Last Use
+		Variable=MMT_AMP_LastUse
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Last Use
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Time/Day
+		Variable=MMT_AMP_Time
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=########
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=#Time/Day
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Days/Week
+		Variable=MMT_AMP_Days
+		Type=7
+		FichierCodes=Sys\Dic_Lists\CurrDrug_DaysWeek.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=MMT_AMP_Days
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Way of Use
+		Variable=MMT_AMP_WayOfUse
+		Type=7
+		FichierCodes=Sys\Dic_Lists\WayOfUse.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Way of Use
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Last Use
+		Variable=MMT_BEN_LastUse
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		OptionsBasic=1
+		Traductions
+			Traduction
+				LibellÈ=BEN Last Use
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Time/Day
+		Variable=MMT_BEN_Time
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=########
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=#Time/Day
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Days/Week
+		Variable=MMT_BEN_Days
+		Type=7
+		FichierCodes=Sys\Dic_Lists\CurrDrug_DaysWeek.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=MMT_BEN_Days
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Way of Use
+		Variable=MMT_BEN_WayOfUse
+		Type=7
+		FichierCodes=Sys\Dic_Lists\WayOfUse.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		OptionsBasic=1
+		Traductions
+			Traduction
+				LibellÈ=Way of Use
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Last Use
+		Variable=MMT_CAN_LastUse
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Last Use
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Time/Day
+		Variable=MMT_CAN_Time
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=########
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=#Time/Day
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Days/Week
+		Variable=MMT_CAN_Days
+		Type=7
+		FichierCodes=Sys\Dic_Lists\CurrDrug_DaysWeek.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=MMT_CAN_Days
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Way of Use
+		Variable=MMT_CAN_WayOfUse
+		Type=7
+		FichierCodes=Sys\Dic_Lists\WayOfUse.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Way of Use
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Last Use
+		Variable=MMT_ECS_LastUse
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Last Use
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Time/Day
+		Variable=MMT_ECS_Time
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=########
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=#Time/Day
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Days/Week
+		Variable=MMT_ECS_Days
+		Type=7
+		FichierCodes=Sys\Dic_Lists\CurrDrug_DaysWeek.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=MMT_ECS_Days
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Way of Use
+		Variable=MMT_ECS_WayOfUse
+		Type=7
+		FichierCodes=Sys\Dic_Lists\WayOfUse.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Way of Use
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Last Use
+		Variable=MMT_HER_LastUse
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		OptionsBasic=1
+		Traductions
+			Traduction
+				LibellÈ=HER Last Use
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Time/Day
+		Variable=MMT_HER_Time
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=########
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=#Time/Day
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Days/Week
+		Variable=MMT_HER_Days
+		Type=7
+		FichierCodes=Sys\Dic_Lists\CurrDrug_DaysWeek.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=MMT_HER_Days
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Way of Use
+		Variable=MMT_HER_WayOfUse
+		Type=7
+		FichierCodes=Sys\Dic_Lists\WayOfUse.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		OptionsBasic=1
+		Traductions
+			Traduction
+				LibellÈ=Way of Use
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Last Use
+		Variable=MMT_OPI_LastUse
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		OptionsBasic=1
+		Traductions
+			Traduction
+				LibellÈ=OPI Last Use
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Time/Day
+		Variable=MMT_OPI_Time
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=########
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=#Time/Day
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=#Days/Week
+		Variable=MMT_OPI_Days
+		Type=7
+		FichierCodes=Sys\Dic_Lists\CurrDrug_DaysWeek.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=MMT_OPI_Days
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Way of Use
+		Variable=MMT_OPI_WayOfUse
+		Type=7
+		FichierCodes=Sys\Dic_Lists\WayOfUse.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		OptionsBasic=1
+		Traductions
+			Traduction
+				LibellÈ=Way of Use
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=If you inject, did you share needle or syringe:
+		Variable=MMT_ShareNeedleOrSyringe
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=F02. Did you share needle/syringe in last
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Psychiatric history:
+		Variable=MMT_Psychiatrichistory
+		Type=6
+		NbLignes=5
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=K01. TB history
+				ModalitÈs=Patient has been treated for TB before ; Patient is currently being evaluated for TB ; Patient is still on TB medication ; TB regimen contain RIF ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Withdrawal Signs
+		Variable=MMT_Symptoms_WithdrawalSigns
+		Type=2
+		NbModalitÈs=16
+		ModalitÈs=Nausea/vomiting ; Diarrhea ; Muscles/Joints pain ; Yawning ; Lacrimation ; Rhinorrhoea ; Anxiety ; Restlessness ; Excessive sweeting ; Piloerection ; Irritability ; Insomnia ; Drug seeking behaviour ; Dreamt of drug use ; Abdominal cramps ; Dysphoric mood
+		MaxRÈponses=16
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=M011. Constitutional
+				ModalitÈs=Fatigue ; Fever ; Visual problems(new) ; Weakness ; mod-FR-9 ; Weight loss ; mod-FR-11 ; mod-FR-12 ; mod-FR-10 ; Appetite loss ; mod-FR-13 ; mod-FR-14 ; mod-FR-15 ; mod-FR-16 ; Night sweats ; mod-FR-10 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Intoxication Signs
+		Variable=MMT_Symptoms_IntoxicationSigns
+		Type=2
+		NbModalitÈs=5
+		ModalitÈs=Pin point pupils ; Sleepiness ; Nodding ; Psychomotor slowing ; Respiratory depression
+		MaxRÈponses=5
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=N12. Other2
+				ModalitÈs=Normal ; Abnormal ; Not done ; mod-FR-4 ; mod-FR-5 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Other Side Effects
+		Variable=MMT_Symptoms_OtherSideEffects
+		Type=2
+		NbModalitÈs=3
+		ModalitÈs=Constipation ; Decrease salivation ; Sexual dysfunction
+		MaxRÈponses=3
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=N03. Lymph nodes
+				ModalitÈs=Normal ; Not done ; mod-FR-6 ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Hours of comfort with current dose (n.hours/24h) :
+		Variable=MMT_HoursOfComfortWithCurrentDose
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=M09. Additional comments
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Diagnosis
+		Variable=MMT_Diagnosis
+		Type=6
+		NbLignes=2
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=P01. Psychiatric Diagnosis
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Additional comments
+		Variable=MMT_AdditionalComments
+		Type=6
+		NbLignes=3
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Q05. Additional comments
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Treatment
+		Variable=Treatment
+		Type=6
+		NbLignes=2
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Treatment
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=MMT_M0111_MedicineName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Methadone_Medicines_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0111. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=MMT_M0112_Dosage
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0112. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=MMT_M0113_Frequency
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0113. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=MMT_M0114_NumberDays
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0114. Number days
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=MMT_M0121_MedicineName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Methadone_Medicines_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0121. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=MMT_M0122_Dosage
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0122. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=MMT_M0123_Frequency
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0123. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=MMT_M0124_NumberDays
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0124. Number days
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=MMT_M0131_MedicineName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Methadone_Medicines_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0131. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=MMT_M0132_Dosage
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0132. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=MMT_M0133_Frequency
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0133. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=MMT_M0134_NumberDays
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0134. Number days
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=MMT_M0211_MedicineName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0211. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=MMT_M0212_Dosage
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0212. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=MMT_M0213_Frequency
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0213. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=MMT_M0214_NumberDays
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0214. Number days
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=MMT_M0221_MedicineName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0221. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=MMT_M0222_Dosage
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0222. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=MMT_M0223_Frequency
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0223. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=MMT_M0224_NumberDays
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0224. Number days
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Medicine name
+		Variable=MMT_M0231_MedicineName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\Medicine_List.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0231. Medicine name
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Dosage
+		Variable=MMT_M0232_Dosage
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0232. Dosage
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Frequency
+		Variable=MMT_M0233_Frequency
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0233. Frequency
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Number days
+		Variable=MMT_M0234_NumberDays
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=R0234. Number days
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Plan of next visit
+		Variable=MMT_PlanOfNextVisit
+		Type=6
+		NbLignes=3
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Plan of next visit
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Is it adequate
+		Variable=MMT_IsItAdequate
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=S021. Refferal made today
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=If no, specify reason
+		Variable=MMT_IfNoSpecify
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=N011. If no, specify reason
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Plan to modify
+		Variable=MMT_PlanToModify
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=S021. Refferal made today
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=If yes, specify
+		Variable=MMT_Plan_IfYesSpecify
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=N021. If yes, specify
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Date of next visit
+		Variable=MMT_DateNextVisit
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=T3. Date of next visit
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=With
+		Variable=MMT_With
+		Type=2
+		NbModalitÈs=2
+		ModalitÈs=Methadone Nurse ; Methadone Doctor
+		MaxRÈponses=2
+		PondÈrations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				LibellÈ=S021. Refferal made today
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Refferal made today
+		Variable=MMT_Refferal
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=S021. Refferal made today
+				ModalitÈs=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=If yes
+		Variable=MMT_ReferralsMadeTodayYes
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=O031.If yes
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Conclusion
+		Variable=MMT_Conclusion
+		Type=6
+		NbLignes=4
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		OptionsBasic=1
+		Traductions
+			Traduction
+				LibellÈ=Conclusion2
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Verify patient
+		Variable=Verify
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				LibellÈ=Verify patient
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Last registration date
+		Variable=LastRegistrationDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=33056
+		VariableAutomatique=DateEnreg
+		Traductions
+			Traduction
+				LibellÈ=Last registration date
+			Fin
+		Fin
+	Fin
+	Question
+		LibellÈ=Key
+		Variable=Key
+		Type=6
+		NbLignes=2
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		OptionsBasic=1
+		Basic=Key = MDMcode & MMT_VisitDate
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				LibellÈ=Key
+			Fin
+		Fin
+	Fin
+Fin
+Titres
+	Titre
+		Type=0
+		LibellÈ=SOCIO-DEMOGRAPHIC DATA
+		PremiËre=1
+		Traductions
+			Traduction
+				LibellÈ=A. SOCIO-DEMOGRAPHIC DATA
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=VISIT_METHADONE NURSE
+		PremiËre=8
+		Traductions
+			Traduction
+				LibellÈ=B. VISIT
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Vital sign
+		PremiËre=13
+		Traductions
+			Traduction
+				LibellÈ=C. Vital sign
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Methadone History
+		PremiËre=24
+		Traductions
+			Traduction
+				LibellÈ=Methadone History
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Social Situation
+		PremiËre=30
+		Traductions
+			Traduction
+				LibellÈ=D. Social And Familial Situation
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Medications
+		PremiËre=34
+		Traductions
+			Traduction
+				LibellÈ=H. Medications
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Behaviour
+		PremiËre=37
+		Traductions
+			Traduction
+				LibellÈ=F. Behaviour
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Psychiatric History (use complete psychiatric assessment form if suspicion of current psychiatric disease)
+		PremiËre=67
+		Traductions
+			Traduction
+				LibellÈ=K. TB history
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Symptoms
+		PremiËre=68
+		Traductions
+			Traduction
+				LibellÈ=N. Physical Exam
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Diagnosis
+		PremiËre=72
+		Traductions
+			Traduction
+				LibellÈ=P. Assessment
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Treatment
+		PremiËre=74
+		Traductions
+			Traduction
+				LibellÈ=R. Treatment
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Psychiatric treatment
+		PremiËre=75
+		Traductions
+			Traduction
+				LibellÈ=R01. ART treatment
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Other treatment
+		PremiËre=87
+		Traductions
+			Traduction
+				LibellÈ=R02. Other treatment
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=Dosing of Methadone
+		PremiËre=100
+		Traductions
+			Traduction
+				LibellÈ=N. Dosing of Methadone
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=End of visit
+		PremiËre=104
+		Traductions
+			Traduction
+				LibellÈ=T. End of visit
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		LibellÈ=System Items
+		PremiËre=109
+		Traductions
+			Traduction
+				LibellÈ=System Items
+			Fin
+		Fin
+	Fin
+Fin
+Options
+	GroupesActifs=1
+	RenvoisActifs=1
+	ControlesActifs=1
+Fin

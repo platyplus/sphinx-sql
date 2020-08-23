@@ -1,0 +1,62 @@
+Result
+Positive
+Positive(Dilution)
+Negative
+Seen
+Not seen
+Not deficient
+Candida
+Gonorrhoea
+BV
+TV
+NR
+Indeterminate
+Normal
+Abnormal
+GC+TV
+GC+BV
+GC+Chlamydia
+TV+BV
+TV+Candida
+TV+Chlamydia
+BV+Candida
+BV+Chlamydia
+Candida+Chlamydia
+GC+TV+BV
+GC+TV+Candida
+GC+TV+Chlamydia
+GC+BV+Candida
+GC+BV+Chlamydia
+GC+Candida+Chlamydia
+TV+BV+Candida
+TV+BV+Chlamydia
+BV+Candida+Chlamydia
+GC+TV+BV+Candida
+GC+TV+BV+Chlamydia
+TV+BV+Candida+Chlamydia
+GC+BV+Candida+Chlamydia
+GC+TV+Candida+Chlamydia
+GC+TV+BV+C:dida+C:mydia
+Cryptococcus
+Cryptosporidiums
+Cyclospora
+Penicillosis
+Crypto+penicilosis
+Candida+Crypto+Penicillosis
+Candida+Crypto
+Acid Fast Bacilli
+Streptococcus
+Staphylococcus
+PTB
+EPTB
+Pleural effusion
+Pericardial effusion
+Fatty liver
+Hepatomegaly
+Splenomegaly
+Hepatospleenomegaly
+Hepatitis
+Calcium oxalate
+Triple phosphate
+Protein
+Aortic lymphadenopathy

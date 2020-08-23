@@ -1,0 +1,1464 @@
+version: 5104
+headers:
+  history: >-
+    5.0.0.81(Médecins du Mon;5.1.0.2(Médecins du Mond;5.0.0.64(Médecins du
+    Mon;5.1.0.4(MEDECINS DU MOND;
+  language: en
+  title: STI VISIT
+  pannelStage: 11
+  translations:
+    - language: fr
+      title: ART VISIT
+questions:
+  - label: MDM code (Patient ID)
+    variable: MDMcode
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: MDM code (Patient ID)
+  - label: Registration date
+    variable: A00_RegistrationDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: A00. Registration date
+  - label: Name
+    variable: A01_PatientName
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: A01. Name
+  - label: Father’s name
+    variable: A02_FatherName
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: A02. Father’s name
+  - label: Sex
+    variable: A03_Sexe
+    type: options
+    nbOptions: 2
+    options:
+      - Male
+      - Female
+    weights: 0
+    plan: true
+    attributes: 32
+    vb: A03_Sex = A03_Sexe
+    translations:
+      - label: A03. Sexe
+        options:
+          - Male
+          - Female
+  - label: Date of birth
+    variable: A041_DateOfBirth
+    type: date
+    min: 3652
+    format: jj/mm/aaaa
+    instructions: The response must be more than 01/01/1910.
+    plan: true
+    attributes: 160
+    translations:
+      - label: A04. Date of birth
+  - label: Age
+    variable: A05_Age
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    plan: true
+    attributes: 32
+    translations:
+      - label: A05. Age
+  - label: Patient target
+    variable: A07_PatientTarget
+    type: code
+    codesFile: 'M:/Myanmar_MDM_Clinic/Sys/Dic_Lists/LIST_A3_Target.dic'
+    nbCharCode: 25
+    instructions: Mandatory response.
+    plan: true
+    attributes: 161
+    translations:
+      - label: A07. Patient target
+  - label: Visit date
+    variable: STI_VisitDate
+    type: date
+    min: 32872
+    format: jj/mm/aaaa
+    instructions: "The response must be more than 01/01/1990.€\x81Mandatory response."
+    plan: true
+    attributes: 161
+    translations:
+      - label: Visit date
+  - label: MDM staff
+    variable: STI_MDMstaff
+    type: code
+    codesFile: Sys/Dic_Lists/LIST_A2_MDMstaff.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: MDM staff
+  - label: STI New Patient
+    variable: STI_NewPatient
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    instructions: Mandatory response.
+    plan: true
+    attributes: 161
+    translations:
+      - label: Initial visit
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Previous SIT Treated
+    variable: STI_Background_PreviousSITTreated
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: G01. Patient partner has been tested
+        options:
+          - 'Yes'
+          - mod-FR-2
+  - label: Symptoms
+    variable: STI_Symptoms
+    type: multipleOptions
+    nbOptions: 12
+    options:
+      - Score throat
+      - Vaginal Discharge
+      - Lower abdominal Pain
+      - Dysuria
+      - Genital ulcer
+      - Anal discharge
+      - Itchiness
+      - Swelling over genital area
+      - Genital warts
+      - Scrotal Swelling
+      - Urethral Discharge
+      - Other
+    maxResponses: 12
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: M011. Constitutional
+        options:
+          - mod-FR-13
+          - Fatigue
+          - Appetite loss
+          - Visual problems(new)
+          - Night sweats
+          - mod-FR-12
+          - Fever
+          - mod-FR-11
+          - Weight loss
+          - mod-FR-10
+          - mod-FR-14
+          - mod-FR-10
+  - label: Score throat
+    variable: STI_Symptoms_ScoreThroat
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Score throat
+  - label: VaginalDOpt
+    variable: STI_Symptoms_VaginalDOpt
+    type: multipleOptions
+    nbOptions: 3
+    options:
+      - Aboundant
+      - Foul Smell
+      - Colour
+    maxResponses: 3
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: M011. Constitutional
+        options:
+          - Night sweats
+          - Fever
+          - Fatigue
+  - label: VDischargeDescription
+    variable: STI_Symptoms_VDischarge
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    vbOptions: 1
+    translations:
+      - label: VDischargeDescription
+  - label: LowAbdoOpt
+    variable: STI_Symptoms_LowAbdoOpt
+    type: multipleOptions
+    nbOptions: 2
+    options:
+      - Fever
+      - Dyspareunia
+    maxResponses: 2
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: M011. Constitutional
+        options:
+          - Fatigue
+          - Fever
+  - label: LowAbdoPain
+    variable: STI_Symptoms_LowAbdoPain
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'M082. If other, specify'
+  - label: Dysuria
+    variable: STI_Symptoms_Dysuria
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'M042. If other, specify'
+  - label: UlcerOpt
+    variable: STI_Symptoms_UlcerOpt
+    type: multipleOptions
+    nbOptions: 4
+    options:
+      - Painful
+      - Single
+      - Multiple
+      - Vesicles
+    maxResponses: 4
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: M011. Constitutional
+        options:
+          - Fatigue
+          - Fever
+          - Night sweats
+          - mod-FR-4
+  - label: Ulcer
+    variable: STI_Symptoms_Ulcer
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'M032. If other, specify'
+  - label: Anal Discharge
+    variable: STI_Symptoms_AnalDischarge
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Anal Discharge
+  - label: ItchinessDescription
+    variable: STI_Symptoms_ItchinessDescription
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: ItchinessDuration
+  - label: Swelling
+    variable: STI_Symptoms_Swelling
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Swelling
+  - label: Warts
+    variable: STI_Symptoms_Warts
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'M072. If other, specify'
+  - label: Scrotal
+    variable: STI_Symptoms_Scrotal
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'M082. If other, specify'
+  - label: Urethral Discharge
+    variable: STI_Symptoms_UrethralDischarge
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Urethral Discharge
+  - label: Other
+    variable: STI_Symptoms_Other
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: K102_WeightLoss
+  - label: Comment
+    variable: STI_Symptoms_Comment
+    type: open
+    nbLines: 4
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Comment
+  - label: Physical Exam
+    variable: STI_PhysicalExam
+    type: multipleOptions
+    nbOptions: 16
+    options:
+      - Oral ulcer
+      - Pharyngitis
+      - Skin rash
+      - Tenderness over lower abdomen
+      - Vulva erythema
+      - Vaginal discharge
+      - Cervical discharge
+      - Adnexal tenderness
+      - Cervical motion tenderness
+      - Inguinal bubo
+      - Genital Ulcer
+      - Genital warts
+      - Urethral discharge
+      - Anal discharge
+      - Scrotal swelling
+      - Other
+    maxResponses: 16
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: M011. Constitutional
+        options:
+          - mod-FR-13
+          - mod-FR-14
+          - mod-FR-19
+          - Fatigue
+          - Fever
+          - Weight loss
+          - Appetite loss
+          - mod-FR-10
+          - Other
+          - mod-FR-16
+          - Weakness
+          - mod-FR-17
+          - mod-FR-16
+          - mod-FR-15
+          - mod-FR-11
+          - mod-FR-12
+  - label: Oral Ulcer Opt
+    variable: STI_PExam_OralUlcerOpt
+    type: multipleOptions
+    nbOptions: 3
+    options:
+      - Single
+      - Multiple
+      - Tenderness
+    maxResponses: 3
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: Oral Ulcer
+        options:
+          - Single
+          - Multiple
+          - Tenderness
+  - label: Pyaryngitis
+    variable: STI_PExam_Pyaryngitis
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Pyaryngitis
+  - label: Skin Rash
+    variable: STI_PExam_SkinRash
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: Skin Rash Opt
+  - label: Tenderness Over Lower Abdomen
+    variable: STI_PExam_TendernessOverLowerAbdomen
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: N012. Comment (if abnormal describe)
+  - label: Vulva
+    variable: STI_PExam_Vulva
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Vulva
+  - label: VaginalD
+    variable: STI_PExam_VaginalD
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: VaginalD
+  - label: CervicalD
+    variable: STI_PExam_CervicalD
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: CervicalDOpt
+  - label: Adnexal tenderness
+    variable: STI_PExam_AdnexalTenderness
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Adnexal tenderness
+  - label: Cervical motion tenderness
+    variable: STI_PExam_CervicalMotionTenderness
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Cervical motion tenderness
+  - label: Inguinal bubo
+    variable: STI_PExam_InguinalBubo
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Inguinal bubo
+  - label: GenitalUlcer
+    variable: STI_PExam_GenitalUlcer
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: GenitalUlcer
+  - label: Warts
+    variable: STI_PExam_Warts
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: WartsOpt
+  - label: Urethral discharge
+    variable: STI_PExam_UrethralDischarge
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Urethral discharge
+  - label: Anal discharge
+    variable: STI_PExam_AnalDischarge
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Anal discharge
+  - label: Scrotal
+    variable: STI_PExam_Scrotal
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: ScrotalOpt
+  - label: Other
+    variable: STI_PExam_Other
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: N13. Additional comments
+  - label: Comment
+    variable: STI_PExam_Comment
+    type: open
+    nbLines: 2
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Comment
+  - label: Pregnancy Test
+    variable: STI_Test_PregnancyTest
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R011. Allergy
+        options:
+          - Pen
+          - Sulfa
+  - label: Test
+    variable: STI_PExam_Test
+    type: multipleOptions
+    nbOptions: 9
+    options:
+      - Sniff Test
+      - pH
+      - Vaginal Smear
+      - Male urethral Smear
+      - Anal Smear
+      - Ulcer Smear
+      - Throat Swab
+      - Chlamydia Ag
+      - RPR
+    maxResponses: 9
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: Test
+        options:
+          - Sniff Test
+          - pH
+          - Vaginal Smear
+          - Male urethral Smear
+          - Anal Smear
+          - Ulcer Smear
+          - Throat Swab
+          - Chlamydia Ag
+          - RPR
+  - label: 'Sniff Test:'
+    variable: STI_Test_SniffTest
+    type: multipleOptions
+    nbOptions: 2
+    options:
+      - Smell +
+      - Smell --
+    maxResponses: 2
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: Do you want
+        options:
+          - To change Treatment Plan
+          - To contunue the Current treatment
+  - label: PH
+    variable: STI_Test_PH
+    type: multipleOptions
+    nbOptions: 2
+    options:
+      - <=4.5
+      - '>4.5'
+    maxResponses: 2
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: R011. Allergy
+        options:
+          - Pen
+          - Sulfa
+  - label: Urethral Smear
+    variable: STI_Test_UrethralSmear
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R011. Allergy
+        options:
+          - Pen
+          - Sulfa
+  - label: Vaginal Smear
+    variable: STI_Test_VaginalSmear
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Do you want
+        options:
+          - To change Treatment Plan
+          - To contunue the Current treatment
+  - label: Anal Smear
+    variable: STI_Test_AnalSmear
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Anal Smear
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Ulcer Smear
+    variable: STI_Test_UlcerSmear
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Ulcer Smear
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Throat Swab
+    variable: STI_Test_ThroatSwab
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Throat Swab
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Chlamydia
+    variable: STI_Test_Chlamydia
+    type: options
+    nbOptions: 2
+    options:
+      - Positive
+      - Negative
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Chlamydia
+        options:
+          - Positive
+          - Negative
+  - label: RPR
+    variable: STI_Test_RPR
+    type: options
+    nbOptions: 2
+    options:
+      - Positive
+      - Negative
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: RPR
+        options:
+          - Positive
+          - Negative
+  - label: RPR dil
+    variable: STI_Test_RPRDil
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '#####'
+    plan: true
+    attributes: 32
+    translations:
+      - label: RPR dil
+  - label: Other Investigation
+    variable: STI_Test_OtherInvestigation
+    type: open
+    nbLines: 2
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'R012. If other, specify'
+  - label: PresumptiveDiagnosis
+    variable: STI_PresumptiveDiagnosis
+    type: multipleOptions
+    nbOptions: 18
+    options:
+      - Gonococci
+      - Chlamydia trachomatis
+      - GC/CT (syndromic)
+      - Vaginal Candida
+      - PID
+      - Chancroid
+      - Genital Herpes
+      - LGV
+      - Genital Warts
+      - Bacterial Vaginosis
+      - Trichomonas vaginalis
+      - BV/TV (syndromic)
+      - Epididimits
+      - Genital Scabies
+      - Syphilis
+      - Molluscum
+      - Bartholin's Abscess
+      - Other
+    maxResponses: 18
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: P01. Patient status
+        options:
+          - 'Healthy, able to work'
+          - 'Sick, able to work'
+          - mod-FR-20
+          - mod-FR-4
+          - mod-FR-6
+          - mod-FR-7
+          - mod-FR-8
+          - mod-FR-9
+          - mod-FR-10
+          - mod-FR-11
+          - mod-FR-17
+          - mod-FR-21
+          - mod-FR-18
+          - mod-FR-19
+          - mod-FR-5
+          - mod-FR-20
+          - mod-FR-21
+          - mod-FR-16
+  - label: Other
+    variable: STI_PDiagnosis_Other
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: M043. Other
+  - label: M01. Lab
+    variable: STI_M01_Lab
+    type: multipleOptions
+    nbOptions: 2
+    options:
+      - MDM Lab
+      - Outside Lab
+    maxResponses: 2
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: P01. Patient status
+        options:
+          - 'Healthy, able to work'
+          - 'Sick, able to work'
+  - label: Do you want
+    variable: STI_Treatment_TreatmentPlan
+    type: options
+    nbOptions: 3
+    options:
+      - To change treatment plan
+      - To continue current treatment
+      - To stop treatment
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Do you want
+        options:
+          - To change Treatment Plan
+          - To contunue the Current treatment
+          - To stop treatment
+  - label: Allergy
+    variable: STI_Treatment_Allergy
+    type: multipleOptions
+    nbOptions: 3
+    options:
+      - Pen
+      - Sulfa
+      - Other
+    maxResponses: 3
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: R011. Allergy
+        options:
+          - Pen
+          - Sulfa
+          - Other
+  - label: 'If other, specify'
+    variable: STI_Treatment_AllergyOther
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'R012. If other, specify'
+  - label: Pregnant
+    variable: STI_Treatment_Pregnant
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R011. Allergy
+        options:
+          - Pen
+          - Sulfa
+  - label: Surgical Intervention
+    variable: STI_Treatment_SurgicalIntervention
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Surgical Intervention
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Medicine name
+    variable: STI_Treatment_MedicineName1
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0111. Medicine name
+  - label: Dosage
+    variable: STI_Treatment_Dosage1
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0112. Dosage
+  - label: Frequency
+    variable: STI_Treatment_Frequency1
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0113. Frequency
+  - label: Number days
+    variable: STI_Treatment_NumberDays1
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0114. Number days
+  - label: Medicine name
+    variable: STI_Treatment_MedicineName2
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0121. Medicine name
+  - label: Dosage
+    variable: STI_Treatment_Dosage2
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0122. Dosage
+  - label: Frequency
+    variable: STI_Treatment_Frequency2
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0123. Frequency
+  - label: Number days
+    variable: STI_Treatment_NumberDays2
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0124. Number days
+  - label: Medicine name
+    variable: STI_Treatment_MedicineName3
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0131. Medicine name
+  - label: Dosage
+    variable: STI_Treatment_Dosage3
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0132. Dosage
+  - label: Frequency
+    variable: STI_Treatment_Frequency3
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0133. Frequency
+  - label: Number days
+    variable: STI_Treatment_NumberDays3
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0134. Number days
+  - label: Medicine name
+    variable: STI_Treatment_MedicineName4
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0141. Medicine name
+  - label: Dosage
+    variable: STI_Treatment_Dosage4
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0142. Dosage
+  - label: Frequency
+    variable: STI_Treatment_Frequency4
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0143. Frequency
+  - label: Number days
+    variable: STI_Treatment_NumberDays4
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0144. Number days
+  - label: Medicine name
+    variable: STI_Treatment_MedicineName5
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0151. Medicine name
+  - label: Dosage
+    variable: STI_Treatment_Dosage5
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0152. Dosage
+  - label: Frequency
+    variable: STI_Treatment_Frequency5
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0153. Frequency
+  - label: Number days
+    variable: STI_Treatment_NumberDays5
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0154. Number days
+  - label: Medicine name
+    variable: STI_Treatment_MedicineName6
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0211. Medicine name
+  - label: Dosage
+    variable: STI_Treatment_Dosage6
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0212. Dosage
+  - label: Frequency
+    variable: STI_Treatment_Frequency6
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0213. Frequency
+  - label: Number days
+    variable: STI_Treatment_NumberDays6
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0214. Number days
+  - label: Medicine name
+    variable: STI_Treatment_MedicineName7
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0221. Medicine name
+  - label: Dosage
+    variable: STI_Treatment_Dosage7
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0222. Dosage
+  - label: Frequency
+    variable: STI_Treatment_Frequency7
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0223. Frequency
+  - label: Number days
+    variable: STI_Treatment_NumberDays7
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0224. Number days
+  - label: Medicine name
+    variable: STI_Treatment_MedicineName8
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0231. Medicine name
+  - label: Dosage
+    variable: STI_Treatment_Dosage8
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0232. Dosage
+  - label: Frequency
+    variable: STI_Treatment_Frequency8
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0233. Frequency
+  - label: Number days
+    variable: STI_Treatment_NumberDays8
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0234. Number days
+  - label: Medicine name
+    variable: STI_Treatment_MedicineName9
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0241. Medicine name
+  - label: Dosage
+    variable: STI_Treatment_Dosage9
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0242. Dosage
+  - label: Frequency
+    variable: STI_Treatment_Frequency9
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0243. Frequency
+  - label: Number days
+    variable: STI_Treatment_NumberDays9
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0244. Number days
+  - label: Medicine name
+    variable: STI_Treatment_MedicineName10
+    type: code
+    codesFile: Sys/Dic_Lists/Medicine_List.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0251. Medicine name
+  - label: Dosage
+    variable: STI_Treatment_Dosage10
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0252. Dosage
+  - label: Frequency
+    variable: STI_Treatment_Frequency10
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0253. Frequency
+  - label: Number days
+    variable: STI_Treatment_NumberDays10
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '###'
+    plan: true
+    attributes: 32
+    translations:
+      - label: R0254. Number days
+  - label: N03. Other treatment
+    variable: STI_N03_OtherTreatment
+    type: open
+    nbLines: 6
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: R03. Other treatment
+  - label: 'Referred to hospital or other structure:'
+    variable: STI_Referred
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Laboratory
+        options:
+          - MDM Lab
+          - Outside Lab
+  - label: STI/Condom use counseling
+    variable: STI_STI/Condom
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: M001. Complaints
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Partner treatment
+    variable: STI_PartnerTreatment
+    type: multipleOptions
+    nbOptions: 2
+    options:
+      - Partner treatment (empirical)
+      - Partner referral
+    maxResponses: 2
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: M001. Complaints
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Remark
+    variable: STI_Remark
+    type: open
+    nbLines: 3
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'S012. Plan: (Next visit)'
+  - label: Date of next visit
+    variable: STI_DateNextVisit
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: T3. Date of next visit
+  - label: Plan for next visit
+    variable: STI_PlanForNextVisit
+    type: open
+    nbLines: 3
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Plan for next visit
+  - label: Verify patient
+    variable: Verify
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    plan: true
+    attributes: 32
+    translations:
+      - label: Verify patient
+  - label: Last registration date
+    variable: LastRegistrationDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 33056
+    autoVariable: DateEnreg
+    translations:
+      - label: Last registration date
+  - label: STI Key
+    variable: Key
+    type: open
+    nbLines: 2
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vbOptions: 1
+    vb: "Key = MDMCode & STI_VisitDate€\x81"
+    autoVariable: Basic
+    translations:
+      - label: test
+titles:
+  - type: label
+    label: A. SOCIO-DEMOGRAPHIC DATA
+    first: 1
+    translations:
+      - label: A. SOCIO-DEMOGRAPHIC DATA
+  - type: label
+    label: VISIT
+    first: 8
+    translations:
+      - label: B. VISIT
+  - type: label
+    label: Symptoms
+    first: 12
+    translations:
+      - label: M. Review of symptoms
+  - type: label
+    label: Physical Examination
+    first: 29
+    translations:
+      - label: N. Physical Exam
+  - type: label
+    label: Test performed during the visit
+    first: 47
+    translations:
+      - label: Test performed during the visit
+  - type: label
+    label: Presumptive Diagnosis
+    first: 60
+    translations:
+      - label: M. Diagnosis
+  - type: label
+    label: Investigation ordered
+    first: 62
+    translations:
+      - label: N. Radiology
+  - type: label
+    label: Treatment
+    first: 63
+    translations:
+      - label: R. Treatment
+  - type: label
+    label: Medication
+    first: 68
+    translations:
+      - label: R01. ART treatment
+  - type: label
+    label: Referral
+    first: 109
+    translations:
+      - label: S. Investigation ordered
+  - type: label
+    label: System Items
+    first: 115
+    translations:
+      - label: System Items
+options:
+  groups: true
+  resend: true
+  controls: true

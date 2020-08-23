@@ -1,0 +1,11 @@
+Tox SideEff=Toxicity/side effects
+Preg=Pregnancy
+TreatFail=Treatment failure
+PoorAdhe=Poor adherence
+IllnessHos=Illness hospitalization
+DrugsOutOf=Drugs out of stock
+PatientLack=Patient lacks finances 
+PersonalDecision=Other patient personal decision
+PlannedRx=Planned Rx interruption
+Migration=Migration
+Other=Other

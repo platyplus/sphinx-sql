@@ -1,0 +1,1888 @@
+Version=5104
+EntÍte
+	Historique=5.0.0.81(MÈdecins du Mon;5.1.0.2(MÈdecins du Mond;5.1.0.3(MÈdecins du Mond;5.1.0.4(MEDECINS DU MOND;
+	Langue=FR
+	Titre=MDM Laboratory
+	StadePanneau=10
+Fin
+Questions
+	Question
+		LibellÈ=MDM code (Patient ID)
+		Variable=MDMcode
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=V_sexe = "1"ÄÅIf A03_Sexe In "Female" ThenÄÅV_sexe = "2"ÄÅEndIfÄÅif A07_PatientTarget In "DU" ThenÄÅ        V_PT="D"ÄÅ	elseÄÅ		if A07_PatientTarget In "DUP" ThenÄÅ			V_PT="P"ÄÅ			elseÄÅ				if A07_PatientTarget In "IDU" ThenÄÅ					V_PT="I"ÄÅ					elseÄÅ						if A07_PatientTarget In "IDUP" ThenÄÅ							V_PT="P"ÄÅ							elseÄÅ								if A07_PatientTarget In "MSM" ThenÄÅ									V_PT="M"ÄÅ									elseÄÅ										if A07_PatientTarget In "MSMP" ThenÄÅ											V_PT="P"ÄÅ											elseÄÅ												if A07_PatientTarget In "SW" ThenÄÅ													V_PT="S"ÄÅ													elseÄÅ														if A07_PatientTarget In "SWP" ThenÄÅ															V_PT="P"ÄÅ															elseÄÅ																if A07_PatientTarget In "CH" ThenÄÅ																	V_PT="C"ÄÅ																	elseÄÅ																		if A07_PatientTarget In "GP" ThenÄÅ																			V_PT="G"ÄÅ																			elseÄÅ																				if A07_PatientTarget In "Other Partner" Then ÄÅ																					V_PT="P"ÄÅ																					elseÄÅ																						if A07_PatientTarget In "Other High Risk Group" ThenÄÅ																							V_PT="O"ÄÅ																							elseÄÅ																								V=PT=""ÄÅ																						end ifÄÅ																				end ifÄÅ																		end ifÄÅ																endifÄÅ														endifÄÅ												endifÄÅ										endifÄÅ								endifÄÅ						endifÄÅ				endifÄÅ				ÄÅ		endifÄÅendifÄÅMDMcode = MDMlocation.Catcode(3) & V_PT & V_sexe & SerialNumber
+	Fin
+	Question
+		LibellÈ=A00. Registration date
+		Variable=A00_RegistrationDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=A01. Name
+		Variable=A01_PatientName
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=A02. Fatherís name
+		Variable=A02_FatherName
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=A03. Sex
+		Variable=A03_Sexe
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Male ; Female
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=A04. Date of birth
+		Variable=A041_DateOfBirth
+		Type=8
+		MinNombre=3652
+		Format=jj/mm/aaaa
+		Consigne=La rÈponse doit Ítre supÈrieure ‡ 01/01/1910.
+		Plan=1
+		Attributs=160
+	Fin
+	Question
+		LibellÈ=A042. Date of birth estimated
+		Variable=A042_DateOfBirthEstimated
+		Type=1
+		NbModalitÈs=1
+		ModalitÈs=Date of birth estimated
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=Age
+		Variable=A05_Age
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Format=###
+		Plan=1
+		Attributs=32
+		Basic=If  Not A041_DateOfBirth.EstNonRÈponse ThenÄÅ    A05_Age = (A00_RegistrationDate - A041_DateOfBirth) / 365ÄÅEndIf
+	Fin
+	Question
+		LibellÈ=A07. Patient target
+		Variable=A07_PatientTarget
+		Type=7
+		FichierCodes=D:\Lab data in Medical D-base 13-8-12\Sys\Dic_Lists\LIST_A3_Target.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=Majuscule(A07_PatientTarget)
+	Fin
+	Question
+		LibellÈ=Verify patient
+		Variable=Verify
+		Type=4
+		NbDÈcimales=2
+		TypeNombre=2
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=D00. MDM Staff
+		Variable=D00_MDMStaff
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LIST_A2_MDMstaff.dic
+		NbCarCode=25
+		Consigne=La rÈponse est obligatoire.
+		Plan=1
+		Attributs=161
+	Fin
+	Question
+		LibellÈ=D01. Test date
+		Variable=D01_TestDate
+		Type=8
+		Format=jj/mm/aaaa
+		Consigne=La rÈponse est obligatoire.
+		Plan=1
+		Attributs=161
+	Fin
+	Question
+		LibellÈ=D0201. MDM Lab?
+		Variable=D0201_MDMLab
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=D0201. Type of Test
+		Variable=D0201_TypeofTest
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0201_TypeofTest = D0201_TestName.CatCode(1)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0201. Test Name
+		Variable=D0201_TestName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TestName.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0201_TestName = D0201_LabSamplesCode.CatCode(2)
+	Fin
+	Question
+		LibellÈ=D0201. Type Of Sample
+		Variable=D0201_TypeOfSample
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TypeOfSample.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0201_TypeOfSample = D0201_LabSamplesCode.CatCode(3)
+	Fin
+	Question
+		LibellÈ=D0201. No Of Result
+		Variable=D0201_NoOfResult
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0201_NoOfSample = D0201_LabSamplesCode.CatCode(4)
+	Fin
+	Question
+		LibellÈ=D0201. Unit
+		Variable=D0201_Unit
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Unit.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0201_TypeOfTest = D0201_TestName.CatCode(1)
+	Fin
+	Question
+		LibellÈ=D0201. Results
+		Variable=D0201_Results
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Result.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0201_Results = D0201_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0201. Description
+		Variable=D0201_Description
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0201_Results = D0201_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0201. Normal Value
+		Variable=D0201_NormalValue
+		Type=6
+		FichierCodes=D:\Lab data in Medical D-base 13-8-12\Sys\Dic_Lists\LAB_TestName.txt
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0201_NormalValue = D0201_TestName.CatCode(2)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0202. MDM Lab?
+		Variable=D0202_MDMLab
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=D0202. Type of Test
+		Variable=D0202_TypeofTest
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0202_TypeofTest = D0202_TestName.CatCode(1)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0202. Test Name
+		Variable=D0202_TestName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TestName.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0202_TestName = D0202_LabSamplesCode.CatCode(2)
+	Fin
+	Question
+		LibellÈ=D0202. Type Of Sample
+		Variable=D0202_TypeOfSample
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TypeOfSample.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0202_TypeOfSample = D0202_LabSamplesCode.CatCode(3)
+	Fin
+	Question
+		LibellÈ=D0202. No Of Result
+		Variable=D0202_NoOfResult
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0202_NoOfSample = D0202_LabSamplesCode.CatCode(4)
+	Fin
+	Question
+		LibellÈ=D0202. Unit
+		Variable=D0202_Unit
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Unit.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0202_TypeOfTest = D0202_TestName.CatCode(1)
+	Fin
+	Question
+		LibellÈ=D0202. Results
+		Variable=D0202_Results
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Result.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0202_Results = D0202_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0202. Description
+		Variable=D0202_Description
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0202_Results = D0202_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0202. Normal Value
+		Variable=D0202_NormalValue
+		Type=6
+		FichierCodes=D:\Lab data in Medical D-base 13-8-12\Sys\Dic_Lists\LAB_TestName.txt
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0202_NormalValue = D0202_TestName.CatCode(2)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0203. MDM Lab?
+		Variable=D0203_MDMLab
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=D0203. Type of Test
+		Variable=D0203_TypeofTest
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0203_TypeofTest = D0203_TestName.CatCode(1)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0203. Test Name
+		Variable=D0203_TestName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TestName.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0203_TestName = D0203_LabSamplesCode.CatCode(2)
+	Fin
+	Question
+		LibellÈ=D0203. Type Of Sample
+		Variable=D0203_TypeOfSample
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TypeOfSample.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0203_TypeOfSample = D0203_LabSamplesCode.CatCode(3)
+	Fin
+	Question
+		LibellÈ=D0203. No Of Result
+		Variable=D0203_NoOfResult
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0203_NoOfSample = D0203_LabSamplesCode.CatCode(4)
+	Fin
+	Question
+		LibellÈ=D0203. Unit
+		Variable=D0203_Unit
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Unit.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0203_TypeOfTest = D0203_TestName.CatCode(1)
+	Fin
+	Question
+		LibellÈ=D0203. Results
+		Variable=D0203_Results
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Result.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0203_Results = D0203_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0203. Description
+		Variable=D0203_Description
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0203_Results = D0203_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0203. Normal Value
+		Variable=D0203_NormalValue
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0203_NormalValue = D0203_TestName.CatCode(2)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0204. MDM Lab?
+		Variable=D0204_MDMLab
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=D0204. Type of Test
+		Variable=D0204_TypeofTest
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0204_TypeofTest = D0204_TestName.CatCode(1)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0204. Test Name
+		Variable=D0204_TestName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TestName.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0204_TestName = D0204_LabSamplesCode.CatCode(2)
+	Fin
+	Question
+		LibellÈ=D0204. Type Of Sample
+		Variable=D0204_TypeOfSample
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TypeOfSample.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0204_TypeOfSample = D0204_LabSamplesCode.CatCode(3)
+	Fin
+	Question
+		LibellÈ=D0204. No Of Result
+		Variable=D0204_NoOfResult
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0204_NoOfSample = D0204_LabSamplesCode.CatCode(4)
+	Fin
+	Question
+		LibellÈ=D0204. Unit
+		Variable=D0204_Unit
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Unit.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0204_TypeOfTest = D0204_TestName.CatCode(1)
+	Fin
+	Question
+		LibellÈ=D0204. Results
+		Variable=D0204_Results
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Result.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0204_Results = D0204_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0204. Description
+		Variable=D0204_Description
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0204_Results = D0204_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0204. Normal Value
+		Variable=D0204_NormalValue
+		Type=6
+		FichierCodes=D:\Lab data in Medical D-base 13-8-12\Sys\Dic_Lists\LAB_TestName.txt
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0204_NormalValue = D0204_TestName.CatCode(2)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0205. MDM Lab?
+		Variable=D0205_MDMLab
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=D0205. Type of Test
+		Variable=D0205_TypeofTest
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0205_TypeofTest = D0205_TestName.CatCode(1)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0205. Test Name
+		Variable=D0205_TestName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TestName.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0205_TestName = D0205_LabSamplesCode.CatCode(2)
+	Fin
+	Question
+		LibellÈ=D0205. Type Of Sample
+		Variable=D0205_TypeOfSample
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TypeOfSample.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0205_TypeOfSample = D0205_LabSamplesCode.CatCode(3)
+	Fin
+	Question
+		LibellÈ=D0205. No Of Result
+		Variable=D0205_NoOfResult
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0205_NoOfSample = D0205_LabSamplesCode.CatCode(4)
+	Fin
+	Question
+		LibellÈ=D0205. Unit
+		Variable=D0205_Unit
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Unit.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0205_TypeOfTest = D0205_TestName.CatCode(1)
+	Fin
+	Question
+		LibellÈ=D0205. Results
+		Variable=D0205_Results
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Result.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0205_Results = D0205_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0205. Description
+		Variable=D0205_Description
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0205_Results = D0205_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0205. Normal Value
+		Variable=D0205_NormalValue
+		Type=6
+		FichierCodes=D:\Lab data in Medical D-base 13-8-12\Sys\Dic_Lists\LAB_TestName.txt
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0205_NormalValue = D0205_TestName.CatCode(2)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0206. MDM Lab?
+		Variable=D0206_MDMLab
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=D0206. Type of Test
+		Variable=D0206_TypeofTest
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0206_TypeofTest = D0206_TestName.CatCode(1)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0206. Test Name
+		Variable=D0206_TestName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TestName.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0206_TestName = D0206_LabSamplesCode.CatCode(2)
+	Fin
+	Question
+		LibellÈ=D0206. Type Of Sample
+		Variable=D0206_TypeOfSample
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TypeOfSample.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0206_TypeOfSample = D0206_LabSamplesCode.CatCode(3)
+	Fin
+	Question
+		LibellÈ=D0206. No Of Result
+		Variable=D0206_NoOfResult
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0206_NoOfSample = D0206_LabSamplesCode.CatCode(4)
+	Fin
+	Question
+		LibellÈ=D0206. Unit
+		Variable=D0206_Unit
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Unit.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0206_TypeOfTest = D0206_TestName.CatCode(1)
+	Fin
+	Question
+		LibellÈ=D0206. Results
+		Variable=D0206_Results
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Result.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0206_Results = D0206_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0206. Description
+		Variable=D0206_Description
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0206_Results = D0206_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0206. Normal Value
+		Variable=D0206_NormalValue
+		Type=6
+		FichierCodes=D:\Lab data in Medical D-base 13-8-12\Sys\Dic_Lists\LAB_TestName.txt
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0206_NormalValue = D0206_TestName.CatCode(2)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0207. MDM Lab?
+		Variable=D0207_MDMLab
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=D0207. Type of Test
+		Variable=D0207_TypeofTest
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0207_TypeofTest = D0207_TestName.CatCode(1)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0207. Test Name
+		Variable=D0207_TestName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TestName.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0207_TestName = D0207_LabSamplesCode.CatCode(2)
+	Fin
+	Question
+		LibellÈ=D0207. Type Of Sample
+		Variable=D0207_TypeOfSample
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TypeOfSample.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0207_TypeOfSample = D0207_LabSamplesCode.CatCode(3)
+	Fin
+	Question
+		LibellÈ=D0207. No Of Result
+		Variable=D0207_NoOfResult
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0207_NoOfSample = D0207_LabSamplesCode.CatCode(4)
+	Fin
+	Question
+		LibellÈ=D0207. Unit
+		Variable=D0207_Unit
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Unit.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0207_TypeOfTest = D0207_TestName.CatCode(1)
+	Fin
+	Question
+		LibellÈ=D0207. Results
+		Variable=D0207_Results
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Result.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0207_Results = D0207_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0207. Description
+		Variable=D0207_Description
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0207_Results = D0207_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0207. Normal Value
+		Variable=D0207_NormalValue
+		Type=6
+		FichierCodes=D:\Lab data in Medical D-base 13-8-12\Sys\Dic_Lists\LAB_TestName.txt
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0207_NormalValue = D0207_TestName.CatCode(2)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0208. MDM Lab?
+		Variable=D0208_MDMLab
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=D0208. Type of Test
+		Variable=D0208_TypeofTest
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0208_TypeofTest = D0208_TestName.CatCode(1)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0208. Test Name
+		Variable=D0208_TestName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TestName.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0208_TestName = D0208_LabSamplesCode.CatCode(2)
+	Fin
+	Question
+		LibellÈ=D0208. Type Of Sample
+		Variable=D0208_TypeOfSample
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TypeOfSample.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0208_TypeOfSample = D0208_LabSamplesCode.CatCode(3)
+	Fin
+	Question
+		LibellÈ=D0208. No Of Result
+		Variable=D0208_NoOfResult
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0208_NoOfSample = D0208_LabSamplesCode.CatCode(4)
+	Fin
+	Question
+		LibellÈ=D0208. Unit
+		Variable=D0208_Unit
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Unit.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0208_TypeOfTest = D0208_TestName.CatCode(1)
+	Fin
+	Question
+		LibellÈ=D0208. Results
+		Variable=D0208_Results
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Result.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0208_Results = D0208_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0208. Description
+		Variable=D0208_Description
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0208_Results = D0208_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0208. Normal Value
+		Variable=D0208_NormalValue
+		Type=6
+		FichierCodes=D:\Lab data in Medical D-base 13-8-12\Sys\Dic_Lists\LAB_TestName.txt
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0208_NormalValue = D0208_TestName.CatCode(2)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0209. MDM Lab?
+		Variable=D0209_MDMLab
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=D0209. Type of Test
+		Variable=D0209_TypeofTest
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0209_TypeofTest = D0209_TestName.CatCode(1)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0209. Test Name
+		Variable=D0209_TestName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TestName.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0209_TestName = D0209_LabSamplesCode.CatCode(2)
+	Fin
+	Question
+		LibellÈ=D0209. Type Of Sample
+		Variable=D0209_TypeOfSample
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TypeOfSample.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0209_TypeOfSample = D0209_LabSamplesCode.CatCode(3)
+	Fin
+	Question
+		LibellÈ=D0209. No Of Result
+		Variable=D0209_NoOfResult
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0209_NoOfSample = D0209_LabSamplesCode.CatCode(4)
+	Fin
+	Question
+		LibellÈ=D0209. Unit
+		Variable=D0209_Unit
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Unit.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0209_TypeOfTest = D0209_TestName.CatCode(1)
+	Fin
+	Question
+		LibellÈ=D0209. Results
+		Variable=D0209_Results
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Result.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0209_Results = D0209_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0209. Description
+		Variable=D0209_Description
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0209_Results = D0209_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0209. Normal Value
+		Variable=D0209_NormalValue
+		Type=6
+		FichierCodes=D:\Lab data in Medical D-base 13-8-12\Sys\Dic_Lists\LAB_TestName.txt
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0209_NormalValue = D0209_TestName.CatCode(2)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0210. MDM Lab?
+		Variable=D0210_MDMLab
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=D0210. Type of Test
+		Variable=D0210_TypeofTest
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0210_TypeofTest = D0210_TestName.CatCode(1)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0210. Test Name
+		Variable=D0210_TestName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TestName.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0210_TestName = D0210_LabSamplesCode.CatCode(2)
+	Fin
+	Question
+		LibellÈ=D0210. Type Of Sample
+		Variable=D0210_TypeOfSample
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TypeOfSample.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0210_TypeOfSample = D0210_LabSamplesCode.CatCode(3)
+	Fin
+	Question
+		LibellÈ=D0210. No Of Result
+		Variable=D0210_NoOfResult
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0210_NoOfSample = D0210_LabSamplesCode.CatCode(4)
+	Fin
+	Question
+		LibellÈ=D0210. Unit
+		Variable=D0210_Unit
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Unit.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0210_TypeOfTest = D0210_TestName.CatCode(1)
+	Fin
+	Question
+		LibellÈ=D0210. Results
+		Variable=D0210_Results
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Result.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0210_Results = D0210_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0210. Description
+		Variable=D0210_Description
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0210_Results = D0210_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0210. Normal Value
+		Variable=D0210_NormalValue
+		Type=6
+		FichierCodes=D:\Lab data in Medical D-base 13-8-12\Sys\Dic_Lists\LAB_TestName.txt
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0210_NormalValue = D0210_TestName.CatCode(2)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0211. MDM Lab?
+		Variable=D0211_MDMLab
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=D0211. Type of Test
+		Variable=D0211_TypeofTest
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0211_TypeofTest = D0211_TestName.CatCode(1)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0211. Test Name
+		Variable=D0211_TestName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TestName.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0211_TestName = D0211_LabSamplesCode.CatCode(2)
+	Fin
+	Question
+		LibellÈ=D0211. Type Of Sample
+		Variable=D0211_TypeOfSample
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TypeOfSample.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0211_TypeOfSample = D0211_LabSamplesCode.CatCode(3)
+	Fin
+	Question
+		LibellÈ=D0211. No Of Result
+		Variable=D0211_NoOfResult
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0211_NoOfSample = D0211_LabSamplesCode.CatCode(4)
+	Fin
+	Question
+		LibellÈ=D0211. Unit
+		Variable=D0211_Unit
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Unit.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0211_TypeOfTest = D0211_TestName.CatCode(1)
+	Fin
+	Question
+		LibellÈ=D0211. Results
+		Variable=D0211_Results
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Result.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0211_Results = D0211_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0211. Description
+		Variable=D0211_Description
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0211_Results = D0211_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0211. Normal Value
+		Variable=D0211_NormalValue
+		Type=6
+		FichierCodes=D:\Lab data in Medical D-base 13-8-12\Sys\Dic_Lists\LAB_TestName.txt
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0211_NormalValue = D0211_TestName.CatCode(2)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0212. MDM Lab?
+		Variable=D0212_MDMLab
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=D0212. Type of Test
+		Variable=D0212_TypeofTest
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0212_TypeofTest = D0212_TestName.CatCode(1)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0212. Test Name
+		Variable=D0212_TestName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TestName.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0212_TestName = D0212_LabSamplesCode.CatCode(2)
+	Fin
+	Question
+		LibellÈ=D0212. Type Of Sample
+		Variable=D0212_TypeOfSample
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TypeOfSample.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0212_TypeOfSample = D0212_LabSamplesCode.CatCode(3)
+	Fin
+	Question
+		LibellÈ=D0212. No Of Result
+		Variable=D0212_NoOfResult
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0212_NoOfSample = D0212_LabSamplesCode.CatCode(4)
+	Fin
+	Question
+		LibellÈ=D0212. Unit
+		Variable=D0212_Unit
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Unit.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0212_TypeOfTest = D0212_TestName.CatCode(1)
+	Fin
+	Question
+		LibellÈ=D0212. Results
+		Variable=D0212_Results
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Result.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0212_Results = D0212_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0212. Description
+		Variable=D0212_Description
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0212_Results = D0212_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0212. Normal Value
+		Variable=D0212_NormalValue
+		Type=6
+		FichierCodes=D:\Lab data in Medical D-base 13-8-12\Sys\Dic_Lists\LAB_TestName.txt
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0212_NormalValue = D0212_TestName.CatCode(2)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0213. MDM Lab?
+		Variable=D0213_MDMLab
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=D0213. Type of Test
+		Variable=D0213_TypeofTest
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0213_TypeofTest = D0213_TestName.CatCode(1)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0213. Test Name
+		Variable=D0213_TestName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TestName.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0213_TestName = D0213_LabSamplesCode.CatCode(2)
+	Fin
+	Question
+		LibellÈ=D0213. Type Of Sample
+		Variable=D0213_TypeOfSample
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TypeOfSample.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0213_TypeOfSample = D0213_LabSamplesCode.CatCode(3)
+	Fin
+	Question
+		LibellÈ=D0213. No Of Result
+		Variable=D0213_NoOfResult
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0213_NoOfSample = D0213_LabSamplesCode.CatCode(4)
+	Fin
+	Question
+		LibellÈ=D0213. Unit
+		Variable=D0213_Unit
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Unit.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0213_TypeOfTest = D0213_TestName.CatCode(1)
+	Fin
+	Question
+		LibellÈ=D0213. Results
+		Variable=D0213_Results
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Result.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0213_Results = D0213_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0213. Description
+		Variable=D0213_Description
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0213_Results = D0213_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0213. Normal Value
+		Variable=D0213_NormalValue
+		Type=6
+		FichierCodes=D:\Lab data in Medical D-base 13-8-12\Sys\Dic_Lists\LAB_TestName.txt
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0213_NormalValue = D0213_TestName.CatCode(2)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0214. MDM Lab?
+		Variable=D0214_MDMLab
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=D0214. Type of Test
+		Variable=D0214_TypeofTest
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0214_TypeofTest = D0214_TestName.CatCode(1)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0214. Test Name
+		Variable=D0214_TestName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TestName.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0214_TestName = D0214_LabSamplesCode.CatCode(2)
+	Fin
+	Question
+		LibellÈ=D0214. Type Of Sample
+		Variable=D0214_TypeOfSample
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TypeOfSample.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0214_TypeOfSample = D0214_LabSamplesCode.CatCode(3)
+	Fin
+	Question
+		LibellÈ=D0214. No Of Result
+		Variable=D0214_NoOfResult
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0214_NoOfSample = D0214_LabSamplesCode.CatCode(4)
+	Fin
+	Question
+		LibellÈ=D0214. Unit
+		Variable=D0214_Unit
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Unit.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0214_TypeOfTest = D0214_TestName.CatCode(1)
+	Fin
+	Question
+		LibellÈ=D0214. Results
+		Variable=D0214_Results
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Result.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0214_Results = D0214_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0214. Description
+		Variable=D0214_Description
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0214_Results = D0214_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0214. Normal Value
+		Variable=D0214_NormalValue
+		Type=6
+		FichierCodes=D:\Lab data in Medical D-base 13-8-12\Sys\Dic_Lists\LAB_TestName.txt
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0214_NormalValue = D0214_TestName.CatCode(2)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0215. MDM Lab?
+		Variable=D0215_MDMLab
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=D0215. Type of Test
+		Variable=D0215_TypeofTest
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0215_TypeofTest = D0215_TestName.CatCode(1)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0215. Test Name
+		Variable=D0215_TestName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TestName.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0215_TestName = D0215_LabSamplesCode.CatCode(2)
+	Fin
+	Question
+		LibellÈ=D0215. Type Of Sample
+		Variable=D0215_TypeOfSample
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TypeOfSample.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0215_TypeOfSample = D0215_LabSamplesCode.CatCode(3)
+	Fin
+	Question
+		LibellÈ=D0215. No Of Result
+		Variable=D0215_NoOfResult
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0215_NoOfSample = D0215_LabSamplesCode.CatCode(4)
+	Fin
+	Question
+		LibellÈ=D0215. Unit
+		Variable=D0215_Unit
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Unit.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0215_TypeOfTest = D0215_TestName.CatCode(1)
+	Fin
+	Question
+		LibellÈ=D0215. Results
+		Variable=D0215_Results
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Result.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0215_Results = D0215_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0215. Description
+		Variable=D0215_Description
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0215_Results = D0215_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0215. Normal Value
+		Variable=D0215_NormalValue
+		Type=6
+		FichierCodes=D:\Lab data in Medical D-base 13-8-12\Sys\Dic_Lists\LAB_TestName.txt
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0215_NormalValue = D0215_TestName.CatCode(2)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0216. MDM Lab?
+		Variable=D0216_MDMLab
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=D0216. Type of Test
+		Variable=D0216_TypeofTest
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0216_TypeofTest = D0216_TestName.CatCode(1)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0216. Test Name
+		Variable=D0216_TestName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TestName.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0216_TestName = D0216_LabSamplesCode.CatCode(2)
+	Fin
+	Question
+		LibellÈ=D0216. Type Of Sample
+		Variable=D0216_TypeOfSample
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TypeOfSample.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0216_TypeOfSample = D0216_LabSamplesCode.CatCode(3)
+	Fin
+	Question
+		LibellÈ=D0216. No Of Result
+		Variable=D0216_NoOfResult
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0216_NoOfSample = D0216_LabSamplesCode.CatCode(4)
+	Fin
+	Question
+		LibellÈ=D0216. Unit
+		Variable=D0216_Unit
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Unit.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0216_TypeOfTest = D0216_TestName.CatCode(1)
+	Fin
+	Question
+		LibellÈ=D0216. Results
+		Variable=D0216_Results
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Result.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0216_Results = D0216_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0216. Description
+		Variable=D0216_Description
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0216_Results = D0216_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0216. Normal Value
+		Variable=D0216_NormalValue
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0216_NormalValue = D0216_TestName.CatCode(2)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0217. MDM Lab?
+		Variable=D0217_MDMLab
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=D0217. Type of Test
+		Variable=D0217_TypeofTest
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0217_TypeofTest = D0217_TestName.CatCode(1)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0217. Test Name
+		Variable=D0217_TestName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TestName.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0217_TestName = D0217_LabSamplesCode.CatCode(2)
+	Fin
+	Question
+		LibellÈ=D0217. Type Of Sample
+		Variable=D0217_TypeOfSample
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TypeOfSample.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0217_TypeOfSample = D0217_LabSamplesCode.CatCode(3)
+	Fin
+	Question
+		LibellÈ=D0217. No Of Result
+		Variable=D0217_NoOfResult
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0217_NoOfSample = D0217_LabSamplesCode.CatCode(4)
+	Fin
+	Question
+		LibellÈ=D0217. Unit
+		Variable=D0217_Unit
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Unit.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0217_TypeOfTest = D0217_TestName.CatCode(1)
+	Fin
+	Question
+		LibellÈ=D0217. Results
+		Variable=D0217_Results
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Result.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0217_Results = D0217_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0217. Description
+		Variable=D0217_Description
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0217_Results = D0217_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0217. Normal Value
+		Variable=D0217_NormalValue
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0217_NormalValue = D0217_TestName.CatCode(2)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0218. MDM Lab?
+		Variable=D0218_MDMLab
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=D0218. Type of Test
+		Variable=D0218_TypeofTest
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0218_TypeofTest = D0218_TestName.CatCode(1)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0218. Test Name
+		Variable=D0218_TestName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TestName.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0218_TestName = D0218_LabSamplesCode.CatCode(2)
+	Fin
+	Question
+		LibellÈ=D0218. Type Of Sample
+		Variable=D0218_TypeOfSample
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TypeOfSample.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0218_TypeOfSample = D0218_LabSamplesCode.CatCode(3)
+	Fin
+	Question
+		LibellÈ=D0218. No Of Result
+		Variable=D0218_NoOfResult
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0218_NoOfSample = D0218_LabSamplesCode.CatCode(4)
+	Fin
+	Question
+		LibellÈ=D0218. Unit
+		Variable=D0218_Unit
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Unit.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0218_TypeOfTest = D0218_TestName.CatCode(1)
+	Fin
+	Question
+		LibellÈ=D0218. Results
+		Variable=D0218_Results
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Result.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0218_Results = D0218_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0218. Description
+		Variable=D0218_Description
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0218_Results = D0218_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0218. Normal Value
+		Variable=D0218_NormalValue
+		Type=6
+		FichierCodes=D:\Lab data in Medical D-base 13-8-12\Sys\Dic_Lists\LAB_TestName.txt
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0218_NormalValue = D0218_TestName.CatCode(2)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0219. MDM Lab?
+		Variable=D0219_MDMLab
+		Type=1
+		NbModalitÈs=2
+		ModalitÈs=Yes ; No
+		PondÈrations= 0
+		Plan=1
+		Attributs=32
+	Fin
+	Question
+		LibellÈ=D0219. Type of Test
+		Variable=D0219_TypeofTest
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=D0219_TypeofTest = D0219_TestName.CatCode(1)
+		VariableAutomatique=Basic
+	Fin
+	Question
+		LibellÈ=D0219. Test Name
+		Variable=D0219_TestName
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TestName.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0219_TestName = D0219_LabSamplesCode.CatCode(2)
+	Fin
+	Question
+		LibellÈ=D0219. Type Of Sample
+		Variable=D0219_TypeOfSample
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_TypeOfSample.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0219_TypeOfSample = D0219_LabSamplesCode.CatCode(3)
+	Fin
+	Question
+		LibellÈ=D0219. No Of Result
+		Variable=D0219_NoOfResult
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0219_NoOfSample = D0219_LabSamplesCode.CatCode(4)
+	Fin
+	Question
+		LibellÈ=D0219. Unit
+		Variable=D0219_Unit
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Unit.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0219_TypeOfTest = D0219_TestName.CatCode(1)
+	Fin
+	Question
+		LibellÈ=D0219. Results
+		Variable=D0219_Results
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LAB_Result.txt
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Basic=D0219_Results = D0219_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0219. Description
+		Variable=D0219_Description
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Basic=D0219_Results = D0219_LabSamplesCode.CatCode(5)
+	Fin
+	Question
+		LibellÈ=D0219. Normal Value
+		Variable=D0219_NormalValue
+		Type=6
+		FichierCodes=D:\Lab data in Medical D-base 13-8-12\Sys\Dic_Lists\LAB_TestName.txt
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+	Fin
+Fin
+Options
+Fin

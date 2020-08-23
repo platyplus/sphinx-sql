@@ -1,0 +1,851 @@
+version: 5104
+headers:
+  history: >-
+    5.0.0.81(Médecins du Mon;5.1.0.2(Médecins du Mond;5.0.0.64(Médecins du
+    Mon;5.1.0.4(MEDECINS DU MOND;
+  language: en
+  title: VCCT VISIT
+  pannelStage: 10
+  translations:
+    - language: fr
+      title: ART VISIT
+questions:
+  - label: MDM code
+    variable: MDMcode
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    instructions: Mandatory response
+    plan: true
+    attributes: 161
+    translations:
+      - label: MDM code (Patient ID)
+  - label: Registration date
+    variable: A00_RegistrationDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: A00. Registration date
+  - label: Name
+    variable: A01_PatientName
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: A01. Name
+  - label: Father’s name
+    variable: A02_FatherName
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: A02. Father’s name
+  - label: Sex
+    variable: A03_Sexe
+    type: options
+    nbOptions: 2
+    options:
+      - Male
+      - Female
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: A03. Sexe
+        options:
+          - Male
+          - Female
+  - label: Date of birth
+    variable: A041_DateOfBirth
+    type: date
+    min: 3652
+    format: jj/mm/aaaa
+    instructions: The response must be more than 01/01/1910.
+    plan: true
+    attributes: 160
+    translations:
+      - label: A04. Date of birth
+  - label: Age
+    variable: A05_Age
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    plan: true
+    attributes: 32
+    translations:
+      - label: A05. Age
+  - label: Visit date
+    variable: VCCT_VisitDate
+    type: date
+    min: 32872
+    format: jj/mm/aaaa
+    instructions: "The response must be more than 01/01/1990.€\x81Mandatory response."
+    plan: true
+    attributes: 161
+    translations:
+      - label: Visit date
+  - label: TB Patient?
+    variable: VCCT_TBPatient
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: TB Patient?
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Place Of Testing
+    variable: VCCT_PlaceOfTesting
+    type: code
+    codesFile: Sys/Dic_Lists/LIST_A2_MDMstaff.dic
+    nbCharCode: 25
+    instructions: Mandatory response.
+    plan: true
+    attributes: 161
+    translations:
+      - label: MDM staff
+  - label: Patient Target
+    variable: A07_PatientTarget
+    type: code
+    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/LIST_A3_Target.dic'
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: A07. Patient target
+  - label: Unsafe Sex in previous six weeks
+    variable: VCCT_UnsafeSexInPrevious6Wks
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: F01. Condom use for last sex
+        options:
+          - 'Yes'
+          - 'No'
+  - label: I/DU for
+    variable: VCCT_IDUsince
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '##'
+    plan: true
+    attributes: 32
+    translations:
+      - label: E01. I/DU since
+  - label: Drug use within last 1 year?
+    variable: VCCT_DrugUseWithinLast1Year
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Drug use within last 1 year?
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Type of drugs
+    variable: VCCT_TypeOfDrugs1
+    type: code
+    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/LIST_E_Drugs.dic'
+    nbCharCode: 25
+    format: '###'
+    instructions: The code has 3 characters.
+    plan: true
+    attributes: 33184
+    vb: Majuscule(VCCT_TypeOfDrugs1)
+    autoVariable: Basic
+    translations:
+      - label: E0311. Type of drugs
+  - label: Drug name
+    variable: VCCT_DrugName1
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: "If Not VCCT_TypeOfDrugs1 = \"OTH\" Then€\x81   VCCT_DrugName1 = VCCT_TypeOfDrugs1.CatCode(1)€\x81EndIf€\x81€\x81"
+    autoVariable: Basic
+    translations:
+      - label: E0311. Drug name
+  - label: Way of use
+    variable: VCCT_WayOfUse1
+    type: multipleOptions
+    nbOptions: 4
+    options:
+      - Injectable
+      - Snorting
+      - Smoking
+      - Swallowing
+    maxResponses: 4
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: E0312. Way of use
+        options:
+          - Injectable
+          - Snorting
+          - Smoking
+          - Swallowing
+  - label: Type of drugs
+    variable: VCCT_TypeOfDrugs2
+    type: code
+    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/LIST_E_Drugs.dic'
+    nbCharCode: 25
+    format: '###'
+    instructions: The code has 3 characters.
+    plan: true
+    attributes: 33184
+    vb: Majuscule(VCCT_TypeOfDrugs2)
+    autoVariable: Basic
+    translations:
+      - label: E0321. Type of drugs
+  - label: Drug name
+    variable: VCCT_DrugName2
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: "If Not VCCT_TypeOfDrugs2 = \"OTH\" Then€\x81   VCCT_DrugName2 = VCCT_TypeOfDrugs2.CatCode(1)€\x81EndIf€\x81€\x81"
+    autoVariable: Basic
+    translations:
+      - label: E0321. Drug name
+  - label: Way of use
+    variable: VCCT_WayOfUse2
+    type: multipleOptions
+    nbOptions: 4
+    options:
+      - Injectable
+      - Snorting
+      - Smoking
+      - Swallowing
+    maxResponses: 4
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: E0322. Way of use
+        options:
+          - Injectable
+          - Snorting
+          - Smoking
+          - Swallowing
+  - label: Type of drugs
+    variable: VCCT_TypeOfDrugs3
+    type: code
+    codesFile: 'D:/Myanmar_MDM_Clinic/Sys/Dic_Lists/LIST_E_Drugs.dic'
+    nbCharCode: 25
+    format: '###'
+    instructions: The code has 3 characters.
+    plan: true
+    attributes: 33184
+    vb: Majuscule(VCCT_TypeOfDrugs3)
+    autoVariable: Basic
+    translations:
+      - label: Type of drugs
+  - label: Drug Name
+    variable: VCCT_DrugName3
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    vb: "If Not VCCT_TypeOfDrugs3 = \"OTH\" Then€\x81   VCCT_DrugName3 = VCCT_TypeOfDrugs3.CatCode(1)€\x81EndIf€\x81€\x81"
+    autoVariable: Basic
+    translations:
+      - label: Drug Name
+  - label: Way of use
+    variable: VCCT_WayOfUse3
+    type: multipleOptions
+    nbOptions: 4
+    options:
+      - Injectable
+      - Snorting
+      - Smoking
+      - Swallowing
+    maxResponses: 4
+    weights: 0
+    instructions: More than one response can be selected.
+    plan: true
+    attributes: 160
+    translations:
+      - label: Way of use
+        options:
+          - Injectable
+          - Snorting
+          - Smoking
+          - Swallowing
+  - label: Have you injected drugs at any time in previous six weeks?
+    variable: VCCT_InjectedDrugsAtAnyTimeInPre6Wks
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Did you share needle/syringe in last month?
+        options:
+          - 'Yes'
+          - 'No'
+  - label: 'If yes, did you share needle/syringe in previous six weeks?'
+    variable: VCCT_ShareNeedleOrSyringeInPre6Wks
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: F02. Did you share needle/syringe in last
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Blood Transfusion in previous six weeks
+    variable: VCCT_BloodTransfusionInPre6Wks
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Blood Transfusion in Previous 6 Weeks
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Body Piercing and Tatttooing In previous six weeks
+    variable: VCCT_BodyPiercingTattooingInPre6Wks
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Body Piercing and Tatttooing In Previous 6 Weeks`
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Previous HIV Testing
+    variable: VCCT_PreviousHIVTesting
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Previous HIV Testing
+        options:
+          - 'Yes'
+          - 'No'
+  - label: 'If Yes,Previous HIV Testing Date'
+    variable: VCCT_PreviousHIVTestingDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: 'If Yes,Previous HIV Testing Date'
+  - label: Pre-test performed
+    variable: VCCT_PretestPerformed
+    type: options
+    nbOptions: 1
+    options:
+      - 'Yes'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: T2. Patient should return in
+        options:
+          - Other
+  - label: Pretest Date
+    variable: VCCT_PreTestDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: T3. Date of next visit
+  - label: HIV Test
+    variable: VCCT_HIVTest
+    type: options
+    nbOptions: 2
+    options:
+      - Accept
+      - Refused
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: HIV Test
+        options:
+          - Accept
+          - Refused
+  - label: '#HIV Blood Test in MDM'
+    variable: VCCT_HIVBloodTest
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    format: '##'
+    instructions: Mandatory response.
+    plan: true
+    attributes: 161
+    translations:
+      - label: T21. Other
+  - label: Post-test performed
+    variable: VCCT_PostTestPerformed
+    type: options
+    nbOptions: 1
+    options:
+      - 'Yes'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: T2. Patient should return in
+        options:
+          - Other
+  - label: Postest Date
+    variable: VCCT_PostTestDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: T3. Date of next visit
+  - label: Test Result
+    variable: VCCT_TestResult
+    type: options
+    nbOptions: 4
+    options:
+      - Positive
+      - Negative
+      - Inconclusive 1st time
+      - Inconclusive 2nd time
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: T2. Patient should return in
+        options:
+          - Other
+          - mod-FR-9
+          - mod-FR-3
+          - mod-FR-4
+  - label: Test Result from NHL
+    variable: VCCT_TestResultByNHL
+    type: options
+    nbOptions: 2
+    options:
+      - Positive
+      - Negative
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Test Result by NHL
+        options:
+          - Positive
+          - Negative
+  - label: NHL Date
+    variable: VCCT_NHLDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: NHL Date
+  - label: History of Syphilis
+    variable: VCCT_HistoryOfSyphilis
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: History of Syphilis
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Test for Syphilis In Current Visit
+    variable: VCCT_TestForSyphilisInCurrentVisit
+    type: options
+    nbOptions: 1
+    options:
+      - 'Yes'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Test for Syphilis
+        options:
+          - 'Yes'
+  - label: Current Syphilis ICT Test Result
+    variable: VCCT_CurrentICTTestResult
+    type: options
+    nbOptions: 2
+    options:
+      - Positive
+      - Negative
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: SyhilisICTTestResult
+        options:
+          - Positive
+          - Negative
+  - label: Current RPR Test Result
+    variable: VCCT_CurrentRPRTestResult
+    type: options
+    nbOptions: 2
+    options:
+      - Positive
+      - Negative
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: T2. Patient should return in
+        options:
+          - Other
+          - mod-FR-9
+  - label: RPR Positive Dilution
+    variable: VCCT_RPRPositiveDilution
+    type: code
+    codesFile: ../Myanmar_MDM_Clinic/Sys/Dic_Lists/LIST_VCCT_RPR_DILUTION.dic
+    nbCharCode: 25
+    plan: true
+    attributes: 32
+    translations:
+      - label: RPR Positive Dilution
+  - label: VCCT_1stTimeHIVTest
+    variable: VCCT_1stTimeHIVTest
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    plan: true
+    attributes: 33056
+    vbOptions: 1
+    vb: "If (VCCT_HIVBloodTest = 1) And (VCCT_HIVTest In \"Accept\") Then€\x81    VCCT_1stTimeHIVTest = 1€\x81EndIf€\x81"
+    autoVariable: Basic
+    translations:
+      - label: VCCT_1stTimeHIVTest
+  - label: VCCT_1stTimeHIVTestAndPositive
+    variable: VCCT_1stTimeHIVTestAndPositive
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    plan: true
+    attributes: 33056
+    vbOptions: 1
+    vb: "If (VCCT_HIVBloodTest = 1) And (VCCT_TestResult In \"Positive\") Then€\x81    VCCT_1stTimeHIVTestAndPositive = 1€\x81EndIf€\x81"
+    autoVariable: Basic
+    translations:
+      - label: VCCT_1stTimeHIVTestAndPositive
+  - label: Partner HIV Testing
+    variable: VCCT_PartnerHIVTesting
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Partner HIV Testing
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Date of Partner HIV Testing
+    variable: VCCT_DateOfPartnerHIVTesting
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: Date of Partner HIV Testing
+  - label: Know Your Partner HIV Status
+    variable: VCCT_KnowYourPartnerHIVStatus
+    type: options
+    nbOptions: 3
+    options:
+      - Positive
+      - Negative
+      - Unknown
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Know Your Partner HIV Status
+        options:
+          - Positive
+          - Negative
+          - Unknown
+  - label: >-
+      If you don't know partner's status,offer partner HIV testing and
+      counselling
+    variable: 'VCCT_IfYouDon''tKnow,OfferPartnerHTC'
+    type: options
+    nbOptions: 1
+    options:
+      - 'Yes'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: >-
+          If you don't know partner's status,offer partner HIV testing and
+          counselling
+        options:
+          - 'Yes'
+  - label: Patient should return in
+    variable: VCCT_PatientShouldReturnIn
+    type: options
+    nbOptions: 9
+    options:
+      - 1 wk
+      - 2 wks
+      - 3 wks
+      - 1 mth
+      - 6 wks
+      - 2 mths
+      - 3 mths
+      - 6 mths
+      - Other
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: T2. Patient should return in
+        options:
+          - 1 wk
+          - 2wks
+          - mod-FR-8
+          - 1 mth
+          - mod-FR-9
+          - 2 mths
+          - 3 mths
+          - 6 mths
+          - Other
+  - label: Other
+    variable: VCCT_EndOfVisitOther
+    type: open
+    nbLines: 1
+    nbCharLines: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: T21. Other
+  - label: Date of next visit
+    variable: VCCT_DateNextVisit
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: T3. Date of next visit
+  - label: Done for HIV Retesting
+    variable: VCCT_HIVRetesting
+    type: options
+    nbOptions: 2
+    options:
+      - 'Yes'
+      - 'No'
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Done for HIV Retesting
+        options:
+          - 'Yes'
+          - 'No'
+  - label: Date of HIV Retesting
+    variable: VCCT_HIVRetestingDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: Date of HIV Retesting
+  - label: Conclusion for HIV Retesting
+    variable: VCCT_HIVRetestingResult
+    type: options
+    nbOptions: 3
+    options:
+      - HIV Positive
+      - HIV Negative
+      - Inconclusive
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: Conclusion for HIV Retesting
+        options:
+          - HIV Positive
+          - HIV Negative
+          - Inconclusive
+  - label: NHL HIV Retesting Date
+    variable: VCCT_NHLHIVRetestingDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: NHL HIV Retesting Date
+  - label: NHL HIV Retesting Result
+    variable: VCCT_NHLHIVRetestingResult
+    type: options
+    nbOptions: 3
+    options:
+      - HIV Positive
+      - HIV Negative
+      - Inconclusive
+    weights: 0
+    plan: true
+    attributes: 32
+    translations:
+      - label: NHL HIV Retesting Result
+        options:
+          - HIV Positive
+          - HIV Negative
+          - Inconclusive
+  - label: Follow up visit date
+    variable: VCCT_Followupvisitdate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: Follow up visit date
+  - label: Verify patient
+    variable: Verify
+    type: number
+    nbDecimals: 2
+    numberType: 2
+    plan: true
+    attributes: 32
+    translations:
+      - label: Verify patient
+  - label: Last registration date
+    variable: LastRegistrationDate
+    type: date
+    format: jj/mm/aaaa
+    plan: true
+    attributes: 32
+    translations:
+      - label: Last registration date
+  - label: Key
+    variable: Key
+    type: open
+    nbLines: 2
+    nbCharLines: 0
+    plan: true
+    attributes: 33056
+    autoVariable: Basic
+    translations:
+      - label: Key
+titles:
+  - type: label
+    label: SOCIO-DEMOGRAPHIC DATA
+    first: 1
+    translations:
+      - label: SOCIO-DEMOGRAPHIC DATA
+  - type: label
+    label: VISIT
+    first: 7
+    translations:
+      - label: VISIT
+  - type: label
+    label: Behaviour
+    first: 11
+    translations:
+      - label: Behavior
+  - type: label
+    label: DU/IDU
+    first: 12
+    translations:
+      - label: DU/IDU
+  - type: label
+    label: Drug use
+    first: 14
+    translations:
+      - label: Drug use
+  - type: label
+    label: VCCT
+    first: 27
+    translations:
+      - label: VCCT
+  - type: label
+    label: Syphilis
+    first: 38
+    translations:
+      - label: Syphilis
+  - type: label
+    label: Partner
+    first: 45
+    translations:
+      - label: End of visit
+  - type: label
+    label: End of visit
+    first: 49
+    translations:
+      - label: End of visit
+  - type: label
+    label: HIV Verification Test
+    first: 52
+    translations:
+      - label: HIV Verification Test
+  - type: label
+    label: Follow up visit
+    first: 57
+    translations:
+      - label: Follow up visit
+  - type: label
+    label: System Items
+    first: 58
+    translations:
+      - label: System Items
+options:
+  controls: true

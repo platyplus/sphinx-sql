@@ -1,0 +1,1367 @@
+code=Diagnostics=Domaines=Types
+A01=Pain general/multiple sites=General and unspecified=Symptoms/Complaints
+A02=Chills=General and unspecified=Symptoms/Complaints
+A03=Fever=General and unspecified=Symptoms/Complaints
+A04=Weakness/tiredness general=General and unspecified=Symptoms/Complaints
+A05=Feeling ill=General and unspecified=Symptoms/Complaints
+A06=Fainting/syncope=General and unspecified=Symptoms/Complaints
+A07=Coma=General and unspecified=Symptoms/Complaints
+A08=Swelling=General and unspecified=Symptoms/Complaints
+A09=Sweating problem=General and unspecified=Symptoms/Complaints
+A10=Bleeding/haemorrhage NOS=General and unspecified=Symptoms/Complaints
+A11=Chest pain NOS=General and unspecified=Symptoms/Complaints
+A13=Concem/fear medical treatment=General and unspecified=Symptoms/Complaints
+A16=Irritable infant=General and unspecified=Symptoms/Complaints
+A18=Concern about appearance=General and unspecified=Symptoms/Complaints
+A20=Euthanasia request/discussion=General and unspecified=Symptoms/Complaints
+A21=Risk factor for malignancy=General and unspecified=Symptoms/Complaints
+A23=Risk factor NOS=General and unspecified=Symptoms/Complaints
+A25=Fear of death/dying=General and unspecified=Symptoms/Complaints
+A26=Fear of cancer NOS=General and unspecified=Symptoms/Complaints
+A27=Fear of other disease NOS=General and unspecified=Symptoms/Complaints
+A28=Limited function/disability NOS=General and unspecified=Symptoms/Complaints
+A29=General symptom/complaint other=General and unspecified=Symptoms/Complaints
+A30=Medical Exam/Eval-Complete=General and unspecified=Process Codes
+A31=Medical Examination/Health Evaluation-Partial/Pre-op check=General and unspecified=Process Codes
+A32=Sensitivity Test=General and unspecified=Process Codes
+A33=Microbiological/Iminunological Test=General and unspecified=Process Codes
+A34=Blood Test=General and unspecified=Process Codes
+A35=Urine Test=General and unspecified=Process Codes
+A36=Faeces Test=General and unspecified=Process Codes
+A37=Histological/Exfoliative Cytology=General and unspecified=Process Codes
+A38=Other Laboratory Test NEC=General and unspecified=Process Codes
+A39=Physical Function Test=General and unspecified=Process Codes
+A40=Diagnostic Endoscopy=General and unspecified=Process Codes
+A41=Diagnostic Radiology/Imaging=General and unspecified=Process Codes
+A42=Electrical Tracings=General and unspecified=Process Codes
+A43=Other Diagnostic Procedures=General and unspecified=Process Codes
+A44=Preventive Imunisations/Medications=General and unspecified=Process Codes
+A45=Observe/Educate/Advice/Diet=General and unspecified=Process Codes
+A46=Consult with Primary Care Provider=General and unspecified=Process Codes
+A47=Consultation with Specialist=General and unspecified=Process Codes
+A48=Clarification/Discuss Patient's RFE=General and unspecified=Process Codes
+A49=Other Preventive Procedures=General and unspecified=Process Codes
+A50=Medicat-Script/Reqst/Renew/Inject=General and unspecified=Process Codes
+A51=Incise/Drain/Flush/Aspirate=General and unspecified=Process Codes
+A52=Excise/Remove/Biopsy/Destruction/ Debride=General and unspecified=Process Codes
+A53=Instrument/Catheter/Intubate/Dilate=General and unspecified=Process Codes
+A54=Repair/Fixate-Suture/Cast/Prosthetic=General and unspecified=Process Codes
+A55=Local Injection/Infiltration=General and unspecified=Process Codes
+A56=Dress/Press/Compress/Tamponade=General and unspecified=Process Codes
+A57=Physical Medicine/Rehabilitation=General and unspecified=Process Codes
+A58=Therapeutic Counselling/Listening=General and unspecified=Process Codes
+A59=Other Therapeutic Procedure NEC=General and unspecified=Process Codes
+A60=Results Tests/Procedures=General and unspecified=Process Codes
+A61=Results Exam/Test/Record=General and unspecified=Process Codes
+A62=Administrative Procedure=General and unspecified=Process Codes
+A63=Follow-up Encounter Unspecified=General and unspecified=Process Codes
+A64=Encounter Initiated by Provider=General and unspecified=Process Codes
+A65=Encounter Initiated third person=General and unspecified=Process Codes
+A66=Refer to Other Provider (EXCL. M.D.)=General and unspecified=Process Codes
+A67=Referral to Physician/Specialist/ Clinic/Hospital=General and unspecified=Process Codes
+A68=Other Referrals NEC=General and unspecified=Process Codes
+A69=Other Reason for Encounter NEC=General and unspecified=Process Codes
+A70=Tuberculosis=General and unspecified=Infections
+A71=Measles=General and unspecified=Infections
+A72=Chickenpox=General and unspecified=Infections
+A73=Malaria=General and unspecified=Infections
+A74=Rubella=General and unspecified=Infections
+A75=Infectious mononucleosis=General and unspecified=Infections
+A76=Viral exanthem other=General and unspecified=Infections
+A77=Viral disease other/NOS=General and unspecified=Infections
+A78=Infectious disease other/NOS=General and unspecified=Infections
+A79=Malignancy NOS=General and unspecified=Neoplasms
+A80=Trauma/injury NOS=General and unspecified=Injuries
+A81=Multiple trauma/injuries=General and unspecified=Injuries
+A82=Secondary effect of trauma=General and unspecified=Injuries
+A84=Poisoning by medical agent=General and unspecified=Injuries
+A85=Adverse effect medical agent=General and unspecified=Injuries
+A86=Toxic effect non-medicinal substance=General and unspecified=Injuries
+A87=Complication of medical treatment=General and unspecified=Injuries
+A88=Adverse effect physical factor=General and unspecified=Injuries
+A89=Effect prosthetic device=General and unspecified=Injuries
+A90=Congenital anomaly OS/multiple=General and unspecified=Congenital anomalies 
+A91=Abnormal result investigation NOS=General and unspecified=Other diagnoses 
+A92=Allergy/allergic reaction NOS=General and unspecified=Other diagnoses 
+A93=Premature newbom=General and unspecified=Other diagnoses 
+A94=Perinatal morbidity other=General and unspecified=Other diagnoses 
+A95=Perinatal mortality=General and unspecified=Other diagnoses 
+A96=Death=General and unspecified=Other diagnoses 
+A97=No disease=General and unspecified=Other diagnoses 
+A98=Health maintenance/prevention=General and unspecified=Other diagnoses 
+A99=General disease NOS=General and unspecified=Other diagnoses 
+B02=Lymph gland(s) enlarged/painful=Blood, Blood Forming Organs and Immune Mechanism=Symptoms/Complaints
+B04=Blood symptom/complaint=Blood, Blood Forming Organs and Immune Mechanism=Symptoms/Complaints
+B25=Fearofaids/HIV=Blood, Blood Forming Organs and Immune Mechanism=Symptoms/Complaints
+B26=Fear cancer blood/lymph=Blood, Blood Forming Organs and Immune Mechanism=Symptoms/Complaints
+B27=Fear blood/lymph disease other=Blood, Blood Forming Organs and Immune Mechanism=Symptoms/Complaints
+B28=Limited function/disability=Blood, Blood Forming Organs and Immune Mechanism=Symptoms/Complaints
+B29=Sympt/compit lymph/immune other=Blood, Blood Forming Organs and Immune Mechanism=Symptoms/Complaints
+B30=Medical Exam/Eval-Complete=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B31=Medical Examination/Health Evaluation-Partial/Pre-op check=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B32=Sensitivity Test=Blood, Blood Forming Organs and Immune Mechanism=Procédures=Process Codes
+B33=Microbiological/Iminunological Test=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B34=Blood Test=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B35=Urine Test=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B36=Faeces Test=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B37=Histological/Exfoliative Cytology=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B38=Other Laboratory Test NEC=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B39=Physical Function Test=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B40=Diagnostic Endoscopy=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B41=Diagnostic Radiology/Imaging=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B42=Electrical Tracings=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B43=Other Diagnostic Procedures=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B44=Preventive Imunisations/Medications=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B45=Observe/Educate/Advice/Diet=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B46=Consult with Primary Care Provider=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B47=Consultation with Specialist=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B48=Clarification/Discuss Patient's RFE=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B49=Other Preventive Procedures=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B50=Medicat-Script/Reqst/Renew/Inject=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B51=Incise/Drain/Flush/Aspirate=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B52=Excise/Remove/Biopsy/Destruction/ Debride=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B53=Instrument/Catheter/Intubate/Dilate=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B54=Repair/Fixate-Suture/Cast/Prosthetic=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B55=Local Injection/Infiltration=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B56=Dress/Press/Compress/Tamponade=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B57=Physical Medicine/Rehabilitation=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B58=Therapeutic Counselling/Listening=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B59=Other Therapeutic Procedure NEC=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B60=Results Tests/Procedures=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B61=Results Exam/Test/Record=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B62=Administrative Procedure=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B63=Follow-up Encounter Unspecified=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B64=Encounter Initiated by Provider=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B65=Encounter Initiated third person=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B66=Refer to Other Provider (EXCL. M.D.)=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B67=Referral to Physician/Specialist/ Clinic/Hospital=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B68=Other Referrals NEC=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B69=Other Reason for Encounter NEC=Blood, Blood Forming Organs and Immune Mechanism=Process Codes
+B70=Lymphadenitis acute=Blood, Blood Forming Organs and Immune Mechanism=Infections
+B71=Lymphadenitis non-specific=Blood, Blood Forming Organs and Immune Mechanism=Infections
+B72=Hodgkm's disease/lymphoma=Blood, Blood Forming Organs and Immune Mechanism=Neoplasms
+B73=Leukaemia=Blood, Blood Forming Organs and Immune Mechanism=Neoplasms
+B74=Malignant neoplasm blood other=Blood, Blood Forming Organs and Immune Mechanism=Neoplasms
+B75=Benign/unspecified neoplasm blood=Blood, Blood Forming Organs and Immune Mechanism=Neoplasms
+B76=Ruptured spleen traumatic=Blood, Blood Forming Organs and Immune Mechanism=Injuries
+B77=Injury blood/lymph/spleen other=Blood, Blood Forming Organs and Immune Mechanism=Injuries
+B78=Hereditary haemolytic anaemia=Blood, Blood Forming Organs and Immune Mechanism=Congenital anomalies 
+B79=Congen-anom. blood/lymph other=Blood, Blood Forming Organs and Immune Mechanism=Congenital anomalies 
+B80=Iron deficiency anaemia=Blood, Blood Forming Organs and Immune Mechanism=Other diagnoses 
+B81=Anaemia. Vitamin B 12/folate def.=Blood, Blood Forming Organs and Immune Mechanism=Other diagnoses 
+B82=Anaemia other/unspecified=Blood, Blood Forming Organs and Immune Mechanism=Other diagnoses 
+B83=Purpura/coagulation defect=Blood, Blood Forming Organs and Immune Mechanism=Other diagnoses 
+B84=Unexplained abnormal white cells=Blood, Blood Forming Organs and Immune Mechanism=Other diagnoses 
+B87=Splenomegaly=Blood, Blood Forming Organs and Immune Mechanism=Other diagnoses 
+B90=fflV-infection/aids=Blood, Blood Forming Organs and Immune Mechanism=Other diagnoses 
+B99=Blood/lymph/spleen disease other=Blood, Blood Forming Organs and Immune Mechanism=Other diagnoses 
+D01=Abdominal pain/cramps general=Digestive=Symptoms/Complaints
+D02=Abdominal pain epigastric=Digestive=Symptoms/Complaints
+D03=Heartburn=Digestive=Symptoms/Complaints
+D04=Rectal/anal pain=Digestive=Symptoms/Complaints
+D05=Perianal itching=Digestive=Symptoms/Complaints
+D06=Abdominal pain localized other=Digestive=Symptoms/Complaints
+D07=Dyspepsia/indigestion=Digestive=Symptoms/Complaints
+D08=Flatulence/gas/belching=Digestive=Symptoms/Complaints
+D09=Nausea=Digestive=Symptoms/Complaints
+D10=Vomiting=Digestive=Symptoms/Complaints
+D11=Diarrhoea=Digestive=Symptoms/Complaints
+D12=Constipation=Digestive=Symptoms/Complaints
+D13=Jaundice=Digestive=Symptoms/Complaints
+D14=Haematemesis/vomiting blood=Digestive=Symptoms/Complaints 
+D15=Melaena=Digestive=Symptoms/Complaints
+D16=Rectal bleeding=Digestive=Symptoms/Complaints
+D17=Incontinence of bowel=Digestive=Symptoms/Complaints
+D18=Change faeces/bowel movements=Digestive=Symptoms/Complaints
+D19=Teeth/gum symptom/complaint=Digestive=Symptoms/Complaints
+D20=Mouth/tongue/lip symptom/complt.=Digestive=Symptoms/Complaints
+D21=Swallowing problem=Digestive=Symptoms/Complaints
+D23=Hepatomegaly=Digestive=Symptoms/Complaints
+D24=Abdominal mass NOS=Digestive=Symptoms/Complaints
+D25=Abdominal distension=Digestive=Symptoms/Complaints
+D26=Fear of cancer of digestive system=Digestive=Symptoms/Complaints
+D27=Fear of digestive disease other=Digestive=Symptoms/Complaints
+D28=Limited function/disability (d)=Digestive=Symptoms/Complaints
+D29=Digestive symptom/complaint other=Digestive=Symptoms/Complaints
+D30=Medical Exam/Eval-Complete=Digestive=Process Codes
+D31=Medical Examination/Health Evaluation-Partial/Pre-op check=Digestive=Process Codes
+D32=Sensitivity Test=Digestive=Process Codes
+D33=Microbiological/Iminunological Test=Digestive=Process Codes
+D34=Blood Test=Digestive=Process Codes
+D35=Urine Test=Digestive=Process Codes
+D36=Faeces Test=Digestive=Process Codes
+D37=Histological/Exfoliative Cytology=Digestive=Process Codes
+D38=Other Laboratory Test NEC=Digestive=Process Codes
+D39=Physical Function Test=Digestive=Process Codes
+D40=Diagnostic Endoscopy=Digestive=Process Codes
+D41=Diagnostic Radiology/Imaging=Digestive=Process Codes
+D42=Electrical Tracings=Digestive=Process Codes
+D43=Other Diagnostic Procedures=Digestive=Process Codes
+D44=Preventive Imunisations/Medications=Digestive=Process Codes
+D45=Observe/Educate/Advice/Diet=Digestive=Process Codes
+D46=Consult with Primary Care Provider=Digestive=Process Codes
+D47=Consultation with Specialist=Digestive=Process Codes
+D48=Clarification/Discuss Patient's RFE=Digestive=Process Codes
+D49=Other Preventive Procedures=Digestive=Process Codes
+D50=Medicat-Script/Reqst/Renew/Inject=Digestive=Process Codes
+D51=Incise/Drain/Flush/Aspirate=Digestive=Process Codes
+D52=Excise/Remove/Biopsy/Destruction/ Debride=Digestive=Process Codes
+D53=Instrument/Catheter/Intubate/Dilate=Digestive=Process Codes
+D54=Repair/Fixate-Suture/Cast/Prosthetic=Digestive=Process Codes
+D55=Local Injection/Infiltration=Digestive=Process Codes
+D56=Dress/Press/Compress/Tamponade=Digestive=Process Codes
+D57=Physical Medicine/Rehabilitation=Digestive=Process Codes
+D58=Therapeutic Counselling/Listening=Digestive=Process Codes
+D59=Other Therapeutic Procedure NEC=Digestive=Process Codes
+D60=Results Tests/Procedures=Digestive=Process Codes
+D61=Results Exam/Test/Record=Digestive=Process Codes
+D62=Administrative Procedure=Digestive=Process Codes
+D63=Follow-up Encounter Unspecified=Digestive=Process Codes
+D64=Encounter Initiated by Provider=Digestive=Process Codes
+D65=Encounter Initiated third person=Digestive=Process Codes
+D66=Refer to Other Provider (EXCL. M.D.)=Digestive=Process Codes
+D67=Referral to Physician/Specialist/ Clinic/Hospital=Digestive=Process Codes
+D68=Other Referrals NEC=Digestive=Process Codes
+D69=Other Reason for Encounter NEC=Digestive=Process Codes
+D70=Gastrointestinal infection=Digestive=Infections
+D71=Mumps=Digestive=Infections
+D72=Viral hepatitis=Digestive=Infections
+D73=Gastroenteritis presumed infection=Digestive=Infections
+D74=Malignant neoplasm stomach=Digestive=Neoplasms
+D75=Malignant neoplasm colon/rectum=Digestive=Neoplasms
+D76=Malignant neoplasm pancreas=Digestive=Neoplasms
+D77=Malig. neoplasm digest other/NOS=Digestive=Neoplasms
+D78=Neoplasm digest benign/uncertain=Digestive=Neoplasms
+D79=Foreign body digestive system=Digestive=Injuries
+D80=Injury digestive system other=Digestive=Injuries
+D81=Congen. anomaly digestive system=Digestive=Congenital anomalies 
+D82=Teeth/gum disease=Digestive=Other diagnoses 
+D83=Mouth/tongue/lip disease=Digestive=Other diagnoses 
+D84=Oesophagus disease=Digestive=Other diagnoses 
+D85=Duodenal ulcer=Digestive=Other diagnoses 
+D86=Peptic ulcer other=Digestive=Other diagnoses 
+D87=Stomach function disorder=Digestive=Other diagnoses 
+D88=Appendicitis=Digestive=Other diagnoses 
+D89=Inguinal hernia=Digestive=Other diagnoses 
+D90=Hiatus hernia=Digestive=Other diagnoses 
+D91=Abdominal hernia other=Digestive=Other diagnoses 
+D92=Diverticular disease=Digestive=Other diagnoses 
+D93=Irritable bowel syndrome=Digestive=Other diagnoses 
+D94=Chronic enteritis/ulcerative colitis=Digestive=Other diagnoses 
+D95=Anal fissure/perianal abscess=Digestive=Other diagnoses 
+D96=Worms/other parasites=Digestive=Other diagnoses 
+D97=Liver disease NOS=Digestive=Other diagnoses 
+D98=Cholecystitis/cholelithiasis=Digestive=Other diagnoses 
+D99=Disease digestive system, other=Digestive=Other diagnoses 
+F01=Eye pain=Eye=Symptoms/Complaints
+F02=Red eye=Eye=Symptoms/Complaints
+F03=Eye discharge=Eye=Symptoms/Complaints
+F04=Visual floaters/spots=Eye=Symptoms/Complaints
+F05=Visual disturbance other=Eye=Symptoms/Complaints
+F13=Eye sensation abnormal=Eye=Symptoms/Complaints
+F14=Eye movements abnormal=Eye=Symptoms/Complaints
+F15=Eye appearance abnormal=Eye=Symptoms/Complaints
+F16=Eyelid symptom/complaint=Eye=Symptoms/Complaints
+F17=Glasses symptom/complaint=Eye=Symptoms/Complaints
+F18=Contact lens symptom/complaint=Eye=Symptoms/Complaints
+F27=Fear of eye disease=Eye=Symptoms/Complaints
+F28=Limited function/disability (f)=Eye=Symptoms/Complaints
+F29=Eye symptom/complaint other=Eye=Symptoms/Complaints
+F30=Medical Exam/Eval-Complete=Eye=Process Codes
+F31=Medical Examination/Health Evaluation-Partial/Pre-op check=Eye=Process Codes
+F32=Sensitivity Test=Eye=Process Codes
+F33=Microbiological/Iminunological Test=Eye=Process Codes
+F34=Blood Test=Eye=Process Codes
+F35=Urine Test=Eye=Process Codes
+F36=Faeces Test=Eye=Process Codes
+F37=Histological/Exfoliative Cytology=Eye=Process Codes
+F38=Other Laboratory Test NEC=Eye=Process Codes
+F39=Physical Function Test=Eye=Process Codes
+F40=Diagnostic Endoscopy=Eye=Process Codes
+F41=Diagnostic Radiology/Imaging=Eye=Process Codes
+F42=Electrical Tracings=Eye=Process Codes
+F43=Other Diagnostic Procedures=Eye=Process Codes
+F44=Preventive Imunisations/Medications=Eye=Process Codes
+F45=Observe/Educate/Advice/Diet=Eye=Process Codes
+F46=Consult with Primary Care Provider=Eye=Process Codes
+F47=Consultation with Specialist=Eye=Process Codes
+F48=Clarification/Discuss Patient's RFE=Eye=Process Codes
+F49=Other Preventive Procedures=Eye=Process Codes
+F50=Medicat-Script/Reqst/Renew/Inject=Eye=Process Codes
+F51=Incise/Drain/Flush/Aspirate=Eye=Process Codes
+F52=Excise/Remove/Biopsy/Destruction/ Debride=Eye=Process Codes
+F53=Instrument/Catheter/Intubate/Dilate=Eye=Process Codes
+F54=Repair/Fixate-Suture/Cast/Prosthetic=Eye=Process Codes
+F55=Local Injection/Infiltration=Eye=Process Codes
+F56=Dress/Press/Compress/Tamponade=Eye=Process Codes
+F57=Physical Medicine/Rehabilitation=Eye=Process Codes
+F58=Therapeutic Counselling/Listening=Eye=Process Codes
+F59=Other Therapeutic Procedure NEC=Eye=Process Codes
+F60=Results Tests/Procedures=Eye=Process Codes
+F61=Results Exam/Test/Record=Eye=Process Codes
+F62=Administrative Procedure=Eye=Process Codes
+F63=Follow-up Encounter Unspecified=Eye=Process Codes
+F64=Encounter Initiated by Provider=Eye=Process Codes
+F65=Encounter Initiated third person=Eye=Process Codes
+F66=Refer to Other Provider (EXCL. M.D.)=Eye=Process Codes
+F67=Referral to Physician/Specialist/ Clinic/Hospital=Eye=Process Codes
+F68=Other Referrals NEC=Eye=Process Codes
+F69=Other Reason for Encounter NEC=Eye=Process Codes
+F70=Conjunctivitis infectious=Eye=Infections
+F71=Conjunctivitis allergic=Eye=Infections
+F72=Blepharitis/stye/chalazion=Eye=Infections
+F73=Eye infection/inflammation other=Eye=Infections
+F74=Neoplasm of eye/adnexa=Eye=Neoplasms
+F75=Contusion/haemorrhage eye=Eye=Injuries
+F76=Foreign body in eye=Eye=Injuries
+F79=Injury eye other=Eye=Injuries
+F80=Blocked lacrimal duct of infant=Eye=Congenital anomalies 
+F81=Congenital anomaly eye other=Eye=Congenital anomalies 
+F82=Detached retina=Eye=Other diagnoses 
+F83=Retinopathy=Eye=Other diagnoses 
+F84=Macular degeneration=Eye=Other diagnoses 
+F85=Comeal ulcer=Eye=Other diagnoses 
+F86=Trachoma=Eye=Other diagnoses 
+F91=Refractive error=Eye=Other diagnoses 
+F92=Cataract=Eye=Other diagnoses 
+F93=Glaucoma=Eye=Other diagnoses 
+F94=Blindness=Eye=Other diagnoses 
+F95=Strabismus=Eye=Other diagnoses 
+F99=Eye/adnexa disease, other=Eye=Other diagnoses 
+H01=Ear pain/earache=Ear=Symptoms/Complaints
+H02=Hearing complaint=Ear=Symptoms/Complaints
+H03=Tinnitus, ringing/buzzing ear=Ear=Symptoms/Complaints
+H04=Ear discharge=Ear=Symptoms/Complaints
+H05=Bleeding ear=Ear=Symptoms/Complaints
+H13=Plugged feeling ear=Ear=Symptoms/Complaints
+H15=Concern with appearance of ears=Ear=Symptoms/Complaints
+H27=Fear of ear disease=Ear=Symptoms/Complaints
+H28=Limited function/disability ear=Ear=Symptoms/Complaints
+H29=Ear symptom/complaint other=Ear=Symptoms/Complaints
+H30=Medical Exam/Eval-Complete=Ear=Process Codes
+H31=Medical Examination/Health Evaluation-Partial/Pre-op check=Ear=Process Codes
+H32=Sensitivity Test=Ear=Process Codes
+H33=Microbiological/Iminunological Test=Ear=Process Codes
+H34=Blood Test=Ear=Process Codes
+H35=Urine Test=Ear=Process Codes
+H36=Faeces Test=Ear=Process Codes
+H37=Histological/Exfoliative Cytology=Ear=Process Codes
+H38=Other Laboratory Test NEC=Ear=Process Codes
+H39=Physical Function Test=Ear=Process Codes
+H40=Diagnostic Endoscopy=Ear=Process Codes
+H41=Diagnostic Radiology/Imaging=Ear=Process Codes
+H42=Electrical Tracings=Ear=Process Codes
+H43=Other Diagnostic Procedures=Ear=Process Codes
+H44=Preventive Imunisations/Medications=Ear=Process Codes
+H45=Observe/Educate/Advice/Diet=Ear=Process Codes
+H46=Consult with Primary Care Provider=Ear=Process Codes
+H47=Consultation with Specialist=Ear=Process Codes
+H48=Clarification/Discuss Patient's RFE=Ear=Process Codes
+H49=Other Preventive Procedures=Ear=Process Codes
+H50=Medicat-Script/Reqst/Renew/Inject=Ear=Process Codes
+H51=Incise/Drain/Flush/Aspirate=Ear=Process Codes
+H52=Excise/Remove/Biopsy/Destruction/ Debride=Ear=Process Codes
+H53=Instrument/Catheter/Intubate/Dilate=Ear=Process Codes
+H54=Repair/Fixate-Suture/Cast/Prosthetic=Ear=Process Codes
+H55=Local Injection/Infiltration=Ear=Process Codes
+H56=Dress/Press/Compress/Tamponade=Ear=Process Codes
+H57=Physical Medicine/Rehabilitation=Ear=Process Codes
+H58=Therapeutic Counselling/Listening=Ear=Process Codes
+H59=Other Therapeutic Procedure NEC=Ear=Process Codes
+H60=Results Tests/Procedures=Ear=Process Codes
+H61=Results Exam/Test/Record=Ear=Process Codes
+H62=Administrative Procedure=Ear=Process Codes
+H63=Follow-up Encounter Unspecified=Ear=Process Codes
+H64=Encounter Initiated by Provider=Ear=Process Codes
+H65=Encounter Initiated third person=Ear=Process Codes
+H66=Refer to Other Provider (EXCL. M.D.)=Ear=Process Codes
+H67=Referral to Physician/Specialist/ Clinic/Hospital=Ear=Process Codes
+H68=Other Referrals NEC=Ear=Process Codes
+H69=Other Reason for Encounter NEC=Ear=Process Codes
+H70=Otitis extema=Ear=Infections
+H71=Acute otitis media/myringitis=Ear=Infections
+H72=Serous otitis media=Ear=Infections
+H73=Eustachian salpingitis=Ear=Infections
+H74=Chronic otitis media=Ear=Infections
+H75=Neoplasm of ear=Ear=Neoplasms
+H76=Foreign body in ear=Ear=Injuries
+H77=Perforation ear drum=Ear=Injuries
+H78=Superficial injury of ear=Ear=Injuries
+H79=Ear injury other=Ear=Injuries
+H80=Congenital anomaly of ear=Ear=Congenital anomalies 
+H81=Excessive ear wax=Ear=Other diagnoses 
+H82=Vertiginous syndrome=Ear=Other diagnoses 
+H83=Otosclerosis=Ear=Other diagnoses 
+H84=Presbyacusis=Ear=Other diagnoses 
+H85=Acoustic trauma=Ear=Other diagnoses 
+H86=Deafness=Ear=Other diagnoses 
+H99=Ear/mastoid disease, other=Ear=Other diagnoses 
+K01=Heart pain=Cardiovascular=Symptoms/Complaints
+K02=Pressure/tightness of heart=Cardiovascular=Symptoms/Complaints
+K03=Cardiovascular pain NOS=Cardiovascular=Symptoms/Complaints
+K04=Palpitations/awareness of heart=Cardiovascular=Symptoms/Complaints
+K05=Irregular heartbeat other=Cardiovascular=Symptoms/Complaints
+K06=Prominent veins=Cardiovascular=Symptoms/Complaints
+K07=Swollen ankles/oedema=Cardiovascular=Symptoms/Complaints
+K22=Risk factor cardiovascular disease=Cardiovascular=Symptoms/Complaints
+K24=Fear of heart disease=Cardiovascular=Symptoms/Complaints
+K25=Fear of hypertension=Cardiovascular=Symptoms/Complaints
+K27=Fear cardiovascular disease other=Cardiovascular=Symptoms/Complaints
+K28=Limited function/disability (k)=Cardiovascular=Symptoms/Complaints
+K29=Cardiovascular sympt./complt. other=Cardiovascular=Symptoms/Complaints
+K30=Medical Exam/Eval-Complete=Cardiovascular=Process Codes
+K31=Medical Examination/Health Evaluation-Partial/Pre-op check=Cardiovascular=Process Codes
+K32=Sensitivity Test=Cardiovascular=Process Codes
+K33=Microbiological/Iminunological Test=Cardiovascular=Process Codes
+K34=Blood Test=Cardiovascular=Process Codes
+K35=Urine Test=Cardiovascular=Process Codes
+K36=Faeces Test=Cardiovascular=Process Codes
+K37=Histological/Exfoliative Cytology=Cardiovascular=Process Codes
+K38=Other Laboratory Test NEC=Cardiovascular=Process Codes
+K39=Physical Function Test=Cardiovascular=Process Codes
+K40=Diagnostic Endoscopy=Cardiovascular=Process Codes
+K41=Diagnostic Radiology/Imaging=Cardiovascular=Process Codes
+K42=Electrical Tracings=Cardiovascular=Process Codes
+K43=Other Diagnostic Procedures=Cardiovascular=Process Codes
+K44=Preventive Imunisations/Medications=Cardiovascular=Process Codes
+K45=Observe/Educate/Advice/Diet=Cardiovascular=Process Codes
+K46=Consult with Primary Care Provider=Cardiovascular=Process Codes
+K47=Consultation with Specialist=Cardiovascular=Process Codes
+K48=Clarification/Discuss Patient's RFE=Cardiovascular=Process Codes
+K49=Other Preventive Procedures=Cardiovascular=Process Codes
+K50=Medicat-Script/Reqst/Renew/Inject=Cardiovascular=Process Codes
+K51=Incise/Drain/Flush/Aspirate=Cardiovascular=Process Codes
+K52=Excise/Remove/Biopsy/Destruction/ Debride=Cardiovascular=Process Codes
+K53=Instrument/Catheter/Intubate/Dilate=Cardiovascular=Process Codes
+K54=Repair/Fixate-Suture/Cast/Prosthetic=Cardiovascular=Process Codes
+K55=Local Injection/Infiltration=Cardiovascular=Process Codes
+K56=Dress/Press/Compress/Tamponade=Cardiovascular=Process Codes
+K57=Physical Medicine/Rehabilitation=Cardiovascular=Process Codes
+K58=Therapeutic Counselling/Listening=Cardiovascular=Process Codes
+K59=Other Therapeutic Procedure NEC=Cardiovascular=Process Codes
+K60=Results Tests/Procedures=Cardiovascular=Process Codes
+K61=Results Exam/Test/Record=Cardiovascular=Process Codes
+K62=Administrative Procedure=Cardiovascular=Process Codes
+K63=Follow-up Encounter Unspecified=Cardiovascular=Process Codes
+K64=Encounter Initiated by Provider=Cardiovascular=Process Codes
+K65=Encounter Initiated third person=Cardiovascular=Process Codes
+K66=Refer to Other Provider (EXCL. M.D.)=Cardiovascular=Process Codes
+K67=Referral to Physician/Specialist/ Clinic/Hospital=Cardiovascular=Process Codes
+K68=Other Referrals NEC=Cardiovascular=Process Codes
+K69=Other Reason for Encounter NEC=Cardiovascular=Process Codes
+K70=Infection of circulatory system=Cardiovascular=Infections
+K71=Rheumatic fever/heart disease=Cardiovascular=Infections
+K72=Neoplasm cardiovascular=Cardiovascular=Neoplasms
+K73=Congenital anomaly cardiovascular=Cardiovascular=Congenital anomalies 
+K74=Ischaemic heart disease w. angina=Cardiovascular=Other diagnoses 
+K75=Acute myocardial infarction=Cardiovascular=Other diagnoses 
+K76=Ischaemic heart disease w/o angina=Cardiovascular=Other diagnoses 
+K77=Heart failure=Cardiovascular=Other diagnoses 
+K78=Atrial fibrillation/flutter=Cardiovascular=Other diagnoses 
+K79=Paroxysmal tachycardia=Cardiovascular=Other diagnoses 
+K80=Cardiac arrhythmia NOS=Cardiovascular=Other diagnoses 
+K81=Heart/arterial murmur NOS=Cardiovascular=Other diagnoses 
+K82=Pulmonary heart disease=Cardiovascular=Other diagnoses 
+K83=Heart valve disease NOS=Cardiovascular=Other diagnoses 
+K84=Heart disease other=Cardiovascular=Other diagnoses 
+K85=Elevated blood pressure=Cardiovascular=Other diagnoses 
+K86=Hypertension uncomplicated=Cardiovascular=Other diagnoses 
+K87=Hypertension complicated=Cardiovascular=Other diagnoses 
+K88=Postural hypotension=Cardiovascular=Other diagnoses 
+K89=Transient cerebral ischaemia=Cardiovascular=Other diagnoses 
+K90=Stroke/cerebrovascular accident=Cardiovascular=Other diagnoses 
+K91=Cerebrovascular disease=Cardiovascular=Other diagnoses 
+K92=Atherosclerosis/PVD=Cardiovascular=Other diagnoses 
+K93=Pulmonary embolism=Cardiovascular=Other diagnoses 
+K94=Phlebitis/thrombopmebins=Cardiovascular=Other diagnoses 
+K95=Varicose veins of leg=Cardiovascular=Other diagnoses 
+K96=Haemorrhoids=Cardiovascular=Other diagnoses 
+K99=Cardiovascular disease other=Cardiovascular=Other diagnoses 
+L01=Neck symptom/complain=Musculoskeletal=Symptoms/Complaints
+L02=Back symptom/complaint=Musculoskeletal=Symptoms/Complaints
+L03=Low back symptom/complaint=Musculoskeletal=Symptoms/Complaints
+L04=Chest symptom/complaint=Musculoskeletal=Symptoms/Complaints
+L05=Flank/axilla symptom/complaint=Musculoskeletal=Symptoms/Complaints
+L07=Jaw symptom/complaint=Musculoskeletal=Symptoms/Complaints
+L08=Shoulder symptom/complaint=Musculoskeletal=Symptoms/Complaints
+L09=Arm symptom/complaint=Musculoskeletal=Symptoms/Complaints
+L10=Elbow symptom/complaint=Musculoskeletal=Symptoms/Complaints
+L11=Wrist symptom/complaint=Musculoskeletal=Symptoms/Complaints
+L12=Hand/finger symptom/complaint=Musculoskeletal=Symptoms/Complaints
+L13=Hip symptom/complaint=Musculoskeletal=Symptoms/Complaints
+L14=Leg/thigh symptom/complaint=Musculoskeletal=Symptoms/Complaints
+L15=Knee symptom/complaint=Musculoskeletal=Symptoms/Complaints
+L16=Ankle symptom/complaint=Musculoskeletal=Symptoms/Complaints
+L17=Foot/toe symptom/complaint=Musculoskeletal=Symptoms/Complaints
+L18=Muscle pain=Musculoskeletal=Symptoms/Complaints
+L19=Muscle symptom/complaint NOS=Musculoskeletal=Symptoms/Complaints
+L20=Joint symptom/complaint NOS=Musculoskeletal=Symptoms/Complaints
+L26=Fear of cancer musculoskeletal=Musculoskeletal=Symptoms/Complaints
+L27=Fear musculoskeletal disease other=Musculoskeletal=Symptoms/Complaints
+L28=Limited function/disability (1)=Musculoskeletal=Symptoms/Complaints
+L29=Sympt/compit. Musculoskeletal other=Musculoskeletal=Symptoms/Complaints
+L30=Medical Exam/Eval-Complete=Musculoskeletal=Process Codes
+L31=Medical Examination/Health Evaluation-Partial/Pre-op check=Musculoskeletal=Process Codes
+L32=Sensitivity Test=Musculoskeletal=Process Codes
+L33=Microbiological/Iminunological Test=Musculoskeletal=Process Codes
+L34=Blood Test=Musculoskeletal=Process Codes
+L35=Urine Test=Musculoskeletal=Process Codes
+L36=Faeces Test=Musculoskeletal=Process Codes
+L37=Histological/Exfoliative Cytology=Musculoskeletal=Process Codes
+L38=Other Laboratory Test NEC=Musculoskeletal=Process Codes
+L39=Physical Function Test=Musculoskeletal=Process Codes
+L40=Diagnostic Endoscopy=Musculoskeletal=Process Codes
+L41=Diagnostic Radiology/Imaging=Musculoskeletal=Process Codes
+L42=Electrical Tracings=Musculoskeletal=Process Codes
+L43=Other Diagnostic Procedures=Musculoskeletal=Process Codes
+L44=Preventive Imunisations/Medications=Musculoskeletal=Process Codes
+L45=Observe/Educate/Advice/Diet=Musculoskeletal=Process Codes
+L46=Consult with Primary Care Provider=Musculoskeletal=Process Codes
+L47=Consultation with Specialist=Musculoskeletal=Process Codes
+L48=Clarification/Discuss Patient's RFE=Musculoskeletal=Process Codes
+L49=Other Preventive Procedures=Musculoskeletal=Process Codes
+L50=Medicat-Script/Reqst/Renew/Inject=Musculoskeletal=Process Codes
+L51=Incise/Drain/Flush/Aspirate=Musculoskeletal=Process Codes
+L52=Excise/Remove/Biopsy/Destruction/ Debride=Musculoskeletal=Process Codes
+L53=Instrument/Catheter/Intubate/Dilate=Musculoskeletal=Process Codes
+L54=Repair/Fixate-Suture/Cast/Prosthetic=Musculoskeletal=Process Codes
+L55=Local Injection/Infiltration=Musculoskeletal=Process Codes
+L56=Dress/Press/Compress/Tamponade=Musculoskeletal=Process Codes
+L57=Physical Medicine/Rehabilitation=Musculoskeletal=Process Codes
+L58=Therapeutic Counselling/Listening=Musculoskeletal=Process Codes
+L59=Other Therapeutic Procedure NEC=Musculoskeletal=Process Codes
+L60=Results Tests/Procedures=Musculoskeletal=Process Codes
+L61=Results Exam/Test/Record=Musculoskeletal=Process Codes
+L62=Administrative Procedure=Musculoskeletal=Process Codes
+L63=Follow-up Encounter Unspecified=Musculoskeletal=Process Codes
+L64=Encounter Initiated by Provider=Musculoskeletal=Process Codes
+L65=Encounter Initiated third person=Musculoskeletal=Process Codes
+L66=Refer to Other Provider (EXCL. M.D.)=Musculoskeletal=Process Codes
+L67=Referral to Physician/Specialist/ Clinic/Hospital=Musculoskeletal=Process Codes
+L68=Other Referrals NEC=Musculoskeletal=Process Codes
+L69=Other Reason for Encounter NEC=Musculoskeletal=Process Codes
+L70=Infections musculoskeletal system=Musculoskeletal=Infections
+L71=Malignant neoplasm musculoskeletal=Musculoskeletal=Neoplasms
+L72=Fracture: radius/ulna=Musculoskeletal=Injuries
+L73=Fracture: tibia/fibula=Musculoskeletal=Injuries
+L74=Fracture: hand/foot bone=Musculoskeletal=Injuries
+L75=Fracture: femur=Musculoskeletal=Injuries
+L76=Fracture: other=Musculoskeletal=Injuries
+L77=Sprain/strain of ankle=Musculoskeletal=Injuries
+L78=Sprain/strain of knee=Musculoskeletal=Injuries
+L79=Sprain/strain of j oint NOS=Musculoskeletal=Injuries
+L80=Dislocation/subluxation=Musculoskeletal=Injuries
+L81=Injury musculoskeletal NOS=Musculoskeletal=Injuries
+L82=Congenital anomaly musculoskeletal=Musculoskeletal=Congenital anomalies 
+L83=Neck syndrome=Musculoskeletal=Other diagnoses 
+L84=Back syndrome w/o radiating pain=Musculoskeletal=Other diagnoses 
+L85=Acquired deformity of spine=Musculoskeletal=Other diagnoses 
+L86=Back syndrome with radiating pain=Musculoskeletal=Other diagnoses 
+L87=Bursitis/tendinitis/synovitis NOS=Musculoskeletal=Other diagnoses 
+L88=Rheumatoid/seropositive arthritis=Musculoskeletal=Other diagnoses 
+L89=Osteoarthrosis of hip=Musculoskeletal=Other diagnoses 
+L90=Osteoarthrosis of knee=Musculoskeletal=Other diagnoses 
+L91=Osteoarthrosis other=Musculoskeletal=Other diagnoses 
+L92=Shoulder syndrome=Musculoskeletal=Other diagnoses 
+L93=Tennis elbow=Musculoskeletal=Other diagnoses 
+L94=Osteochondrosis=Musculoskeletal=Other diagnoses 
+L95=Osteoporosis=Musculoskeletal=Other diagnoses 
+L96=Acute internal damage knee=Musculoskeletal=Injuries
+L97=Neoplasm benign/unspec musculo.=Musculoskeletal=Neoplasms
+L98=Acquired deformity of limb=Musculoskeletal=Other diagnoses 
+L99=Musculoskeletal disease, other=Musculoskeletal=Other diagnoses 
+N01=Headache=Neurological=Symptoms/Complaints
+N03=Pain face=Neurological=Symptoms/Complaints
+N04=Restless legs=Neurological=Symptoms/Complaints
+N05=Tingling fingers/feet/toes=Neurological=Symptoms/Complaints
+N06=Sensation disturbance other=Neurological=Symptoms/Complaints
+N07=Convulsion/seizure=Neurological=Symptoms/Complaints
+N08=Abnormal involuntary movements=Neurological=Symptoms/Complaints
+N16=Disturbance of smell/taste=Neurological=Symptoms/Complaints
+N17=Vertigo/dizziness=Neurological=Symptoms/Complaints
+N18=Paralysis/weakness=Neurological=Symptoms/Complaints
+N19=Speech disorder=Neurological=Symptoms/Complaints
+N26=Fear cancer neurological system=Neurological=Symptoms/Complaints
+N27=Fear of neurological disease other=Neurological=Symptoms/Complaints
+N28=Limited function/disability (n)=Neurological=Symptoms/Complaints
+N29=Neurological symptom/complt. other=Neurological=Symptoms/Complaints
+N30=Medical Exam/Eval-Complete=Neurological=Process Codes
+N31=Medical Examination/Health Evaluation-Partial/Pre-op check=Neurological=Process Codes
+N32=Sensitivity Test=Neurological=Process Codes
+N33=Microbiological/Iminunological Test=Neurological=Process Codes
+N34=Blood Test=Neurological=Process Codes
+N35=Urine Test=Neurological=Process Codes
+N36=Faeces Test=Neurological=Process Codes
+N37=Histological/Exfoliative Cytology=Neurological=Process Codes
+N38=Other Laboratory Test NEC=Neurological=Process Codes
+N39=Physical Function Test=Neurological=Process Codes
+N40=Diagnostic Endoscopy=Neurological=Process Codes
+N41=Diagnostic Radiology/Imaging=Neurological=Process Codes
+N42=Electrical Tracings=Neurological=Process Codes
+N43=Other Diagnostic Procedures=Neurological=Process Codes
+N44=Preventive Imunisations/Medications=Neurological=Process Codes
+N45=Observe/Educate/Advice/Diet=Neurological=Process Codes
+N46=Consult with Primary Care Provider=Neurological=Process Codes
+N47=Consultation with Specialist=Neurological=Process Codes
+N48=Clarification/Discuss Patient's RFE=Neurological=Process Codes
+N49=Other Preventive Procedures=Neurological=Process Codes
+N50=Medicat-Script/Reqst/Renew/Inject=Neurological=Process Codes
+N51=Incise/Drain/Flush/Aspirate=Neurological=Process Codes
+N52=Excise/Remove/Biopsy/Destruction/ Debride=Neurological=Process Codes
+N53=Instrument/Catheter/Intubate/Dilate=Neurological=Process Codes
+N54=Repair/Fixate-Suture/Cast/Prosthetic=Neurological=Process Codes
+N55=Local Injection/Infiltration=Neurological=Process Codes
+N56=Dress/Press/Compress/Tamponade=Neurological=Process Codes
+N57=Physical Medicine/Rehabilitation=Neurological=Process Codes
+N58=Therapeutic Counselling/Listening=Neurological=Process Codes
+N59=Other Therapeutic Procedure NEC=Neurological=Process Codes
+N60=Results Tests/Procedures=Neurological=Process Codes
+N61=Results Exam/Test/Record=Neurological=Process Codes
+N62=Administrative Procedure=Neurological=Process Codes
+N63=Follow-up Encounter Unspecified=Neurological=Process Codes
+N64=Encounter Initiated by Provider=Neurological=Process Codes
+N65=Encounter Initiated third person=Neurological=Process Codes
+N66=Refer to Other Provider (EXCL. M.D.)=Neurological=Process Codes
+N67=Referral to Physician/Specialist/ Clinic/Hospital=Neurological=Process Codes
+N68=Other Referrals NEC=Neurological=Process Codes
+N69=Other Reason for Encounter NEC=Neurological=Process Codes
+N70=Poliomyelitis=Neurological=Infections
+N71=Meningitis/encephalitis=Neurological=Infections
+N72=Tetanus=Neurological=Infections
+N73=Neurological infection other=Neurological=Infections
+N74=Malignant neoplasm nervous system=Neurological=Neoplasms
+N75=Benign neoplasm nervous system=Neurological=Neoplasms
+N76=Neoplasm nervous system unspec.=Neurological=Neoplasms
+N79=Concussion=Neurological=Injuries
+N80=Head injury other=Neurological=Injuries
+N81=Injury nervous system other=Neurological=Injuries
+N85=Congenital anomaly neurological=Neurological=Congenital anomalies 
+N86=Multiple sclerosis=Neurological=Other diagnoses 
+N87=Parkinsonism=Neurological=Other diagnoses 
+N88=Epilepsy=Neurological=Other diagnoses 
+N89=Migraine=Neurological=Other diagnoses 
+N90=Cluster headache=Neurological=Other diagnoses 
+N91=Facial paralysis/bell's palsy=Neurological=Other diagnoses 
+N92=Trigeminal neuralgia=Neurological=Other diagnoses 
+N93=Carpal tunnel syndrome=Neurological=Other diagnoses 
+N94=Peripheral neuritis/neuropathy=Neurological=Other diagnoses 
+N95=Tension headache=Neurological=Other diagnoses 
+N99=Neurological disease, other=Neurological=Other diagnoses 
+P01=Feeling anxious/nervous/tense=Psychological=Symptoms/Complaints
+P02=Acute stress reaction=Psychological=Symptoms/Complaints
+P03=Feeling depressed=Psychological=Symptoms/Complaints
+P04=Feeling/behaving irritable/angry=Psychological=Symptoms/Complaints
+P05=Senility, feeling/behaving old=Psychological=Symptoms/Complaints
+P06=Sleep disturbance=Psychological=Symptoms/Complaints
+P07=Sexual desire reduced=Psychological=Symptoms/Complaints
+P08=Sexual fulfilment reduced=Psychological=Symptoms/Complaints
+P09=Sexual preference concern=Psychological=Symptoms/Complaints
+P10=Stammering/stuttering/tic=Psychological=Symptoms/Complaints
+P11=Eating problem in child=Psychological=Symptoms/Complaints
+P12=Bedwetting/enuresis=Psychological=Symptoms/Complaints
+P13=Encopresis/bowel training problem=Psychological=Symptoms/Complaints
+P15=Chronic alcohol abuse=Psychological=Symptoms/Complaints
+P16=Acute alcohol abuse=Psychological=Symptoms/Complaints
+P17=Tobacco abuse=Psychological=Symptoms/Complaints
+P18=Medication abuse=Psychological=Symptoms/Complaints
+P19=Drug abuse=Psychological=Symptoms/Complaints
+P20=Memory disturbance=Psychological=Symptoms/Complaints
+P22=Child behaviour symptom/complaint=Psychological=Symptoms/Complaints
+P23=Adolescent behav. Symptom/complt.=Psychological=Symptoms/Complaints
+P24=Specific learning problem=Psychological=Symptoms/Complaints
+P25=Phase of life problem adult=Psychological=Symptoms/Complaints
+P27=Fear of mental disorder=Psychological=Symptoms/Complaints
+P28=Limited function/disability (p)=Psychological=Symptoms/Complaints
+P29=Psychological symptom/compit other=Psychological=Symptoms/Complaints
+P30=Medical Exam/Eval-Complete=Psychological=Process Codes
+P31=Medical Examination/Health Evaluation-Partial/Pre-op check=Psychological=Process Codes
+P32=Sensitivity Test=Psychological=Process Codes
+P33=Microbiological/Iminunological Test=Psychological=Process Codes
+P34=Blood Test=Psychological=Process Codes
+P35=Urine Test=Psychological=Process Codes
+P36=Faeces Test=Psychological=Process Codes
+P37=Histological/Exfoliative Cytology=Psychological=Process Codes
+P38=Other Laboratory Test NEC=Psychological=Process Codes
+P39=Physical Function Test=Psychological=Process Codes
+P40=Diagnostic Endoscopy=Psychological=Process Codes
+P41=Diagnostic Radiology/Imaging=Psychological=Process Codes
+P42=Electrical Tracings=Psychological=Process Codes
+P43=Other Diagnostic Procedures=Psychological=Process Codes
+P44=Preventive Imunisations/Medications=Psychological=Process Codes
+P45=Observe/Educate/Advice/Diet=Psychological=Process Codes
+P46=Consult with Primary Care Provider=Psychological=Process Codes
+P47=Consultation with Specialist=Psychological=Process Codes
+P48=Clarification/Discuss Patient's RFE=Psychological=Process Codes
+P49=Other Preventive Procedures=Psychological=Process Codes
+P50=Medicat-Script/Reqst/Renew/Inject=Psychological=Process Codes
+P51=Incise/Drain/Flush/Aspirate=Psychological=Process Codes
+P52=Excise/Remove/Biopsy/Destruction/ Debride=Psychological=Process Codes
+P53=Instrument/Catheter/Intubate/Dilate=Psychological=Process Codes
+P54=Repair/Fixate-Suture/Cast/Prosthetic=Psychological=Process Codes
+P55=Local Injection/Infiltration=Psychological=Process Codes
+P56=Dress/Press/Compress/Tamponade=Psychological=Process Codes
+P57=Physical Medicine/Rehabilitation=Psychological=Process Codes
+P58=Therapeutic Counselling/Listening=Psychological=Process Codes
+P59=Other Therapeutic Procedure NEC=Psychological=Process Codes
+P60=Results Tests/Procedures=Psychological=Process Codes
+P61=Results Exam/Test/Record=Psychological=Process Codes
+P62=Administrative Procedure=Psychological=Process Codes
+P63=Follow-up Encounter Unspecified=Psychological=Process Codes
+P64=Encounter Initiated by Provider=Psychological=Process Codes
+P65=Encounter Initiated third person=Psychological=Process Codes
+P66=Refer to Other Provider (EXCL. M.D.)=Psychological=Process Codes
+P67=Referral to Physician/Specialist/ Clinic/Hospital=Psychological=Process Codes
+p68=Other Referrals NEC=Psychological=Process Codes
+P69=Other Reason for Encounter NEC=Psychological=Process Codes
+P70=Dementia=Psychological=Other diagnoses 
+P71=Organic psychosis other=Psychological=Other diagnoses 
+P72=Schizophrenia=Psychological=Other diagnoses 
+P73=Affective psychosis=Psychological=Other diagnoses 
+P74=Anxiety disorder/anxiety state=Psychological=Other diagnoses 
+P75=Somatization disorder=Psychological=Other diagnoses 
+P76=Depressive disorder=Psychological=Other diagnoses 
+P77=Suicide/suicide attempt=Psychological=Other diagnoses 
+P78=Neuraesthenia/surmenage=Psychological=Other diagnoses 
+P79=Phobia/compulsive disorder=Psychological=Other diagnoses 
+P80=Personality disorder=Psychological=Other diagnoses 
+P81=HyperkAnetic disorder=Psychological=Other diagnoses 
+P82=Post-traumatic stress disorder=Psychological=Other diagnoses 
+P85=Mental retardation=Psychological=Other diagnoses 
+P86=Anorexia nervosa/bulimia=Psychological=Other diagnoses 
+P98=Psychosis NOS/other=Psychological=Other diagnoses 
+P99=Psychological disorders, other=Psychological=Other diagnoses 
+R01=Pain respiratory system=Respiratory=Symptoms/Complaints
+R02=Shortness of breath/dyspnoea=Respiratory=Symptoms/Complaints
+R03=Wheezing=Respiratory=Symptoms/Complaints
+R04=Breathing problem, other=Respiratory=Symptoms/Complaints
+R05=Cough=Respiratory=Symptoms/Complaints
+R06=Nose bleed/epistaxis=Respiratory=Symptoms/Complaints
+R07=Sneezing/nasal congestion=Respiratory=Symptoms/Complaints
+R08=Nose symptom/complaint other=Respiratory=Symptoms/Complaints
+R09=Sinus symptom/complaint=Respiratory=Symptoms/Complaints
+R21=Throat symptom/complaint=Respiratory=Symptoms/Complaints
+R23=Voice symptom/complaint=Respiratory=Symptoms/Complaints
+R24=Haemoptysis=Respiratory=Symptoms/Complaints
+R25=Sputum/phlegm abnormal=Respiratory=Symptoms/Complaints
+R26=Fear of cancer respiratory system=Respiratory=Symptoms/Complaints
+R27=Fear of respiratory disease, other=Respiratory=Symptoms/Complaints
+R28=Limited function/disability (r)=Respiratory=Symptoms/Complaints
+R29=Respiratory symptom/complaint oth.=Respiratory=Symptoms/Complaints
+R30=Medical Exam/Eval-Complete=Respiratory=Process Codes
+R31=Medical Examination/Health Evaluation-Partial/Pre-op check=Respiratory=Process Codes
+R32=Sensitivity Test=Respiratory=Process Codes
+R33=Microbiological/Iminunological Test=Respiratory=Process Codes
+R34=Blood Test=Respiratory=Process Codes
+R35=Urine Test=Respiratory=Process Codes
+R36=Faeces Test=Respiratory=Process Codes
+R37=Histological/Exfoliative Cytology=Respiratory=Process Codes
+R38=Other Laboratory Test NEC=Respiratory=Process Codes
+R39=Physical Function Test=Respiratory=Process Codes
+R40=Diagnostic Endoscopy=Respiratory=Process Codes
+R41=Diagnostic Radiology/Imaging=Respiratory=Process Codes
+R42=Electrical Tracings=Respiratory=Process Codes
+R43=Other Diagnostic Procedures=Respiratory=Process Codes
+R44=Preventive Imunisations/Medications=Respiratory=Process Codes
+R45=Observe/Educate/Advice/Diet=Respiratory=Process Codes
+R46=Consult with Primary Care Provider=Respiratory=Process Codes
+R47=Consultation with Specialist=Respiratory=Process Codes
+R48=Clarification/Discuss Patient's RFE=Respiratory=Process Codes
+R49=Other Preventive Procedures=Respiratory=Process Codes
+R50=Medicat-Script/Reqst/Renew/Inject=Respiratory=Process Codes
+R51=Incise/Drain/Flush/Aspirate=Respiratory=Process Codes
+R52=Excise/Remove/Biopsy/Destruction/ Debride=Respiratory=Process Codes
+R53=Instrument/Catheter/Intubate/Dilate=Respiratory=Process Codes
+R54=Repair/Fixate-Suture/Cast/Prosthetic=Respiratory=Process Codes
+R55=Local Injection/Infiltration=Respiratory=Process Codes
+R56=Dress/Press/Compress/Tamponade=Respiratory=Process Codes
+R57=Physical Medicine/Rehabilitation=Respiratory=Process Codes
+R58=Therapeutic Counselling/Listening=Respiratory=Process Codes
+R59=Other Therapeutic Procedure NEC=Respiratory=Process Codes
+R60=Results Tests/Procedures=Respiratory=Process Codes
+R61=Results Exam/Test/Record=Respiratory=Process Codes
+R62=Administrative Procedure=Respiratory=Process Codes
+R63=Follow-up Encounter Unspecified=Respiratory=Process Codes
+R64=Encounter Initiated by Provider=Respiratory=Process Codes
+R65=Encounter Initiated third person=Respiratory=Process Codes
+R66=Refer to Other Provider (EXCL. M.D.)=Respiratory=Process Codes
+R67=Referral to Physician/Specialist/ Clinic/Hospital=Respiratory=Process Codes
+R68=Other Referrals NEC=Respiratory=Process Codes
+R69=Other Reason for Encounter NEC=Respiratory=Process Codes
+R71=Whooping cough=Respiratory=Infections
+R72=Strep throat=Respiratory=Infections
+R73=Boil/abscess nose=Respiratory=Infections
+R74=Upper respiratory infection acute=Respiratory=Infections
+R75=Sinusitis acute/chronic=Respiratory=Infections
+R76=Tonsillitis acute=Respiratory=Infections
+R77=Laryngitis/tracheitis acute=Respiratory=Infections
+R78=Acute bronchitis/bronchiolitis=Respiratory=Infections
+R79=Chronic bronchitis=Respiratory=Infections
+R80=Influenza=Respiratory=Infections
+R81=Pneumonia=Respiratory=Infections
+R82=Pleurisy/pleural effusion=Respiratory=Infections
+R83=Respiratory infection other=Respiratory=Infections
+R84=Malignant neoplasm bronchus/lung=Respiratory=Neoplasms
+R85=Mahnant neoplasm respiratory, other=Respiratory=Neoplasms
+R86=Benign neoplasm respiratory=Respiratory=Neoplasms
+R87=Foreign body nose/larynx/bronch=Respiratory=Injuries
+R88=Injury respiratory other=Respiratory=Injuries
+R89=Congenital anomaly respiratory=Respiratory=Congenital anomalies 
+R90=Hypertrophy tonsils/adenoids=Respiratory=Other diagnoses 
+R92=Neoplasm respiratory unspecified=Respiratory=Neoplasms
+R95=Chronic obstructive pulmonary dis=Respiratory=Other diagnoses 
+R96=Asthma=Respiratory=Other diagnoses 
+R97=Allergic rhinitis=Respiratory=Other diagnoses 
+R98=Hyperventilation syndrome=Respiratory=Other diagnoses 
+R99=Respiratory disease other=Respiratory=Other diagnoses 
+S01=Pain/tenderness of skin=Skin=Symptoms/Complaints
+S02=Pruritus=Skin=Symptoms/Complaints
+S03=Warts=Skin=Infections
+S04=Lump/swelling localized=Skin=Symptoms/Complaints
+S05=Lumps/swellings generalized=Skin=Symptoms/Complaints
+S06=Rash localized=Skin=Symptoms/Complaints
+S07=Rash generalized=Skin=Symptoms/Complaints
+S08=Skin colour change=Skin=Symptoms/Complaints
+S09=Infected finger/toe=Skin=Infections
+S10=Boil/carbuncle=Skin=Infections
+S11=Skin infection post-traumatic=Skin=Infections
+S12=Insect bite/sting=Skin=Injuries
+S13=Animal/human bite=Skin=Injuries
+S14=Bum/scald=Skin=Injuries
+S15=Foreign body in sidn=Skin=Injuries
+S16=Bruise/contusion=Skin=Injuries
+S17=Abrasion/scratch/blister=Skin=Injuries
+S18=Laceration/cut=Skin=Injuries
+S19=Skin injury other=Skin=Injuries
+S20=Com/callosity=Skin=Symptoms/Complaints
+S21=Skin texture symptom/complaint=Skin=Symptoms/Complaints
+S22=Nail symptom/complaint=Skin=Symptoms/Complaints
+S23=Hair loss/baldness=Skin=Symptoms/Complaints
+S24=Hair/scalp symptom/complaint=Skin=Symptoms/Complaints
+S26=Fear of cancer of skin=Skin=Symptoms/Complaints
+S27=Fear of skin disease other=Skin=Symptoms/Complaints
+S28=Limited function/disability (s)=Skin=Symptoms/Complaints
+S29=Skin symptom/complaint other=Skin=Symptoms/Complaints
+S30=Medical Exam/Eval-Complete=Skin=Process Codes
+S31=Medical Examination/Health Evaluation-Partial/Pre-op check=Skin=Process Codes
+S32=Sensitivity Test=Skin=Process Codes
+S33=Microbiological/Iminunological Test=Skin=Process Codes
+S34=Blood Test=Skin=Process Codes
+S35=Urine Test=Skin=Process Codes
+S36=Faeces Test=Skin=Process Codes
+S37=Histological/Exfoliative Cytology=Skin=Process Codes
+S38=Other Laboratory Test NEC=Skin=Process Codes
+S39=Physical Function Test=Skin=Process Codes
+S40=Diagnostic Endoscopy=Skin=Process Codes
+S41=Diagnostic Radiology/Imaging=Skin=Process Codes
+S42=Electrical Tracings=Skin=Process Codes
+S43=Other Diagnostic Procedures=Skin=Process Codes
+S44=Preventive Imunisations/Medications=Skin=Process Codes
+S45=Observe/Educate/Advice/Diet=Skin=Process Codes
+S46=Consult with Primary Care Provider=Skin=Process Codes
+S47=Consultation with Specialist=Skin=Process Codes
+S48=Clarification/Discuss Patient's RFE=Skin=Process Codes
+S49=Other Preventive Procedures=Skin=Process Codes
+S50=Medicat-Script/Reqst/Renew/Inject=Skin=Process Codes
+S51=Incise/Drain/Flush/Aspirate=Skin=Process Codes
+S52=Excise/Remove/Biopsy/Destruction/ Debride=Skin=Process Codes
+S53=Instrument/Catheter/Intubate/Dilate=Skin=Process Codes
+S54=Repair/Fixate-Suture/Cast/Prosthetic=Skin=Process Codes
+S55=Local Injection/Infiltration=Skin=Process Codes
+S56=Dress/Press/Compress/Tamponade=Skin=Process Codes
+S57=Physical Medicine/Rehabilitation=Skin=Process Codes
+S58=Therapeutic Counselling/Listening=Skin=Process Codes
+S59=Other Therapeutic Procedure NEC=Skin=Process Codes
+S60=Results Tests/Procedures=Skin=Process Codes
+S61=Results Exam/Test/Record=Skin=Process Codes
+S62=Administrative Procedure=Skin=Process Codes
+S63=Follow-up Encounter Unspecified=Skin=Process Codes
+S64=Encounter Initiated by Provider=Skin=Process Codes
+S65=Encounter Initiated third person=Skin=Process Codes
+S66=Refer to Other Provider (EXCL. M.D.)=Skin=Process Codes
+S67=Referral to Physician/Specialist/ Clinic/Hospital=Skin=Process Codes
+S68=Other Referrals NEC=Skin=Process Codes
+S69=Other Reason for Encounter NEC=Skin=Process Codes
+S70=Herpes zoster=Skin=Infections
+S71=Herpes simplex=Skin=Infections
+S72=Scabies/other acariasis=Skin=Infections
+S73=Pediculosis/skm infestation other=Skin=Infections
+S74=Dermatophytosis=Skin=Infections
+S75=Moniliasis/candidiasis skin=Skin=Infections
+S76=Skin infection other=Skin=Infections
+S77=Malignant neoplasm of skin=Skin=Neoplasms
+S78=Lipoma=Skin=Neoplasms
+S79=Neoplasm skm benign/unspecified=Skin=Neoplasms
+S80=Solar keratosis/sunburn=Skin=Neoplasms
+S81=Haemangioma/lymphangioma=Skin=Congenital anomalies
+S82=Naevus/mole=Skin=Congenital anomalies
+S83=Congenital skin anomaly other=Skin=Congenital anomalies 
+S84=Impetigo=Skin=Other diagnoses 
+S85=Pilonidal cyst/fistula=Skin=Other diagnoses 
+S86=Dermatitis seborrhoeic=Skin=Other diagnoses 
+S87=Dermatitis/atopic eczema=Skin=Other diagnoses 
+S88=Dermatitis contact/allergic=Skin=Other diagnoses 
+S89=Diaper rash=Skin=Other diagnoses 
+S90=Pityriasis rosea=Skin=Other diagnoses 
+S91=Psoriasis=Skin=Other diagnoses 
+S92=Sweat gland disease=Skin=Other diagnoses 
+S93=Sebaceous cyst=Skin=Other diagnoses 
+S94=Ingrowing nail=Skin=Other diagnoses 
+S95=Molluscum contagiosum=Skin=Other diagnoses 
+S96=Acne=Skin=Other diagnoses 
+S97=Chronic ulcer skin=Skin=Other diagnoses 
+S98=Urticaria=Skin=Other diagnoses 
+S99=Skin disease, other=Skin=Other diagnoses 
+T01=Excessive thirst=Endocrine/Metabolic and Nutritional=Symptoms/Complaints
+T02=Excessive appetite=Endocrine/Metabolic and Nutritional=Symptoms/Complaints
+T03=Loss of appetite=Endocrine/Metabolic and Nutritional=Symptoms/Complaints
+T04=Feeding problem of infant/child=Endocrine/Metabolic and Nutritional=Symptoms/Complaints 
+T05=Feeding problem of adult=Endocrine/Metabolic and Nutritional=Symptoms/Complaints
+T07=Weight gain=Endocrine/Metabolic and Nutritional=Symptoms/Complaints
+T08=Weight loss=Endocrine/Metabolic and Nutritional=Symptoms/Complaints
+T10=Growth delay=Endocrine/Metabolic and Nutritional=Symptoms/Complaints
+T11=Dehydration=Endocrine/Metabolic and Nutritional=Symptoms/Complaints
+T26=Fear of cancer of endocrine system=Endocrine/Metabolic and Nutritional=Symptoms/Complaints
+T27=Fear endocrine/metabolic dis other=Endocrine/Metabolic and Nutritional=Symptoms/Complaints
+T28=Limited function/disability (t)=Endocrine/Metabolic and Nutritional=Symptoms/Complaints
+T29=Endocrine/met./sympt/compit other=Endocrine/Metabolic and Nutritional=Symptoms/Complaints
+T30=Medical Exam/Eval-Complete=Endocrine/Metabolic and Nutritional=Process Codes
+T31=Medical Examination/Health Evaluation-Partial/Pre-op check=Endocrine/Metabolic and Nutritional=Process Codes
+T32=Sensitivity Test=Endocrine/Metabolic and Nutritional=Process Codes
+T33=Microbiological/Iminunological Test=Endocrine/Metabolic and Nutritional=Process Codes
+T34=Blood Test=Endocrine/Metabolic and Nutritional=Process Codes
+T35=Urine Test=Endocrine/Metabolic and Nutritional=Process Codes
+T36=Faeces Test=Endocrine/Metabolic and Nutritional=Process Codes
+T37=Histological/Exfoliative Cytology=Endocrine/Metabolic and Nutritional=Process Codes
+T38=Other Laboratory Test NEC=Endocrine/Metabolic and Nutritional=Process Codes
+T39=Physical Function Test=Endocrine/Metabolic and Nutritional=Process Codes
+T40=Diagnostic Endoscopy=Endocrine/Metabolic and Nutritional=Process Codes
+T41=Diagnostic Radiology/Imaging=Endocrine/Metabolic and Nutritional=Process Codes
+T42=Electrical Tracings=Endocrine/Metabolic and Nutritional=Process Codes
+T43=Other Diagnostic Procedures=Endocrine/Metabolic and Nutritional=Process Codes
+T44=Preventive Imunisations/Medications=Endocrine/Metabolic and Nutritional=Process Codes
+T45=Observe/Educate/Advice/Diet=Endocrine/Metabolic and Nutritional=Process Codes
+T46=Consult with Primary Care Provider=Endocrine/Metabolic and Nutritional=Process Codes
+T47=Consultation with Specialist=Endocrine/Metabolic and Nutritional=Process Codes
+T48=Clarification/Discuss Patient's RFE=Endocrine/Metabolic and Nutritional=Process Codes
+T49=Other Preventive Procedures=Endocrine/Metabolic and Nutritional=Process Codes
+T50=Medicat-Script/Reqst/Renew/Inject=Endocrine/Metabolic and Nutritional=Process Codes
+T51=Incise/Drain/Flush/Aspirate=Endocrine/Metabolic and Nutritional=Process Codes
+T52=Excise/Remove/Biopsy/Destruction/ Debride=Endocrine/Metabolic and Nutritional=Process Codes
+T53=Instrument/Catheter/Intubate/Dilate=Endocrine/Metabolic and Nutritional=Process Codes
+T54=Repair/Fixate-Suture/Cast/Prosthetic=Endocrine/Metabolic and Nutritional=Process Codes
+T55=Local Injection/Infiltration=Endocrine/Metabolic and Nutritional=Process Codes
+T56=Dress/Press/Compress/Tamponade=Endocrine/Metabolic and Nutritional=Process Codes
+T57=Physical Medicine/Rehabilitation=Endocrine/Metabolic and Nutritional=Process Codes
+T58=Therapeutic Counselling/Listening=Endocrine/Metabolic and Nutritional=Process Codes
+T59=Other Therapeutic Procedure NEC=Endocrine/Metabolic and Nutritional=Process Codes
+T60=Results Tests/Procedures=Endocrine/Metabolic and Nutritional=Process Codes
+T61=Results Exam/Test/Record=Endocrine/Metabolic and Nutritional=Process Codes
+T62=Administrative Procedure=Endocrine/Metabolic and Nutritional=Process Codes
+T63=Follow-up Encounter Unspecified=Endocrine/Metabolic and Nutritional=Process Codes
+T64=Encounter Initiated by Provider=Endocrine/Metabolic and Nutritional=Process Codes
+T65=Encounter Initiated third person=Endocrine/Metabolic and Nutritional=Process Codes
+T66=Refer to Other Provider (EXCL. M.D.)=Endocrine/Metabolic and Nutritional=Process Codes
+T67=Referral to Physician/Specialist/ Clinic/Hospital=Endocrine/Metabolic and Nutritional=Process Codes
+T68=Other Referrals NEC=Endocrine/Metabolic and Nutritional=Process Codes
+T69=Other Reason for Encounter NEC=Endocrine/Metabolic and Nutritional=Process Codes
+T70=Endocrine infection=Endocrine/Metabolic and Nutritional=Infections
+T71=Malignant neoplasm thyroid=Endocrine/Metabolic and Nutritional=Neoplasms
+T72=Benign neoplasm thyroid=Endocrine/Metabolic and Nutritional=Neoplasms
+T73=Neoplasm endocrine oth/unspecified=Endocrine/Metabolic and Nutritional=Neoplasms
+T78=Thyroglossal duct/cyst=Endocrine/Metabolic and Nutritional=Congenital anomalies 
+T80=Congenital anom endocrine/metab.=Endocrine/Metabolic and Nutritional=Congenital anomalies 
+T81=Goitre=Endocrine/Metabolic and Nutritional=Other diagnoses 
+T82=Obesity=Endocrine/Metabolic and Nutritional=Other diagnoses 
+T83=Overweight=Endocrine/Metabolic and Nutritional=Other diagnoses 
+T85=Hyperthyroidism/thyrotoxicosis=Endocrine/Metabolic and Nutritional=Other diagnoses 
+T86=Hypothyroidism/myxoedema=Endocrine/Metabolic and Nutritional=Other diagnoses 
+T87=Hypoglycaemia=Endocrine/Metabolic and Nutritional=Other diagnoses 
+T89=Diabetes insulin dependent=Endocrine/Metabolic and Nutritional=Other diagnoses 
+T90=Diabetes non-insulin dependent=Endocrine/Metabolic and Nutritional=Other diagnoses 
+T91=Vitamin/nutritional deficiency=Endocrine/Metabolic and Nutritional=Other diagnoses 
+T92=Gout=Endocrine/Metabolic and Nutritional=Other diagnoses 
+T93=Lipid disorder=Endocrine/Metabolic and Nutritional=Other diagnoses 
+T99=Endocrine/metab/nutrit. dis. other=Endocrine/Metabolic and Nutritional=Other diagnoses 
+U01=Dysuria/painful urination=Urological =Symptoms/Complaints
+U02=Urinary frequency/urgency=Urological =Symptoms/Complaints
+U04= Incontinence urine=Urological =Symptoms/Complaints
+U05=Urination problems other=Urological =Symptoms/Complaints
+U06=Haematuria=Urological =Symptoms/Complaints
+U07=Urine symptom/complaint other=Urological =Symptoms/Complaints
+U08=Urinary retention=Urological =Symptoms/Complaints
+U13=Bladder symptom/complaint other=Urological =Symptoms/Complaints
+U14=Kidney symptom/complaint=Urological =Symptoms/Complaints
+U26=Fear of cancer of urinary system=Urological =Symptoms/Complaints
+U27=Fear of urinary disease other=Urological =Symptoms/Complaints
+U28=Limited function/disability urinary=Urological =Symptoms/Complaints
+U29=Urinary symptom/complaint other=Urological =Symptoms/Complaints
+U30=Medical Exam/Eval-Complete=Urological =Process Codes
+U31=Medical Examination/Health Evaluation-Partial/Pre-op check=Urological =Process Codes
+U32=Sensitivity Test=Urological =Process Codes
+U33=Microbiological/Iminunological Test=Urological =Process Codes
+U34=Blood Test=Urological =Process Codes
+U35=Urine Test=Urological =Process Codes
+U36=Faeces Test=Urological =Process Codes
+U37=Histological/Exfoliative Cytology=Urological =Process Codes
+U38=Other Laboratory Test NEC=Urological =Process Codes
+U39=Physical Function Test=Urological =Process Codes
+U40=Diagnostic Endoscopy=Urological =Process Codes
+U41=Diagnostic Radiology/Imaging=Urological =Process Codes
+U42=Electrical Tracings=Urological =Process Codes
+U43=Other Diagnostic Procedures=Urological =Process Codes
+U44=Preventive Imunisations/Medications=Urological =Process Codes
+U45=Observe/Educate/Advice/Diet=Urological =Process Codes
+U46=Consult with Primary Care Provider=Urological =Process Codes
+U47=Consultation with Specialist=Urological =Process Codes
+U48=Clarification/Discuss Patient's RFE=Urological =Process Codes
+U49=Other Preventive Procedures=Urological =Process Codes
+U50=Medicat-Script/Reqst/Renew/Inject=Urological =Process Codes
+U51=Incise/Drain/Flush/Aspirate=Urological =Process Codes
+U52=Excise/Remove/Biopsy/Destruction/ Debride=Urological =Process Codes
+U53=Instrument/Catheter/Intubate/Dilate=Urological =Process Codes
+U54=Repair/Fixate-Suture/Cast/Prosthetic=Urological =Process Codes
+U55=Local Injection/Infiltration=Urological =Process Codes
+U56=Dress/Press/Compress/Tamponade=Urological =Process Codes
+U57=Physical Medicine/Rehabilitation=Urological =Process Codes
+U58=Therapeutic Counselling/Listening=Urological =Process Codes
+U59=Other Therapeutic Procedure NEC=Urological =Process Codes
+U60=Results Tests/Procedures=Urological =Process Codes
+U61=Results Exam/Test/Record=Urological =Process Codes
+U62=Administrative Procedure=Urological =Process Codes
+U63=Follow-up Encounter Unspecified=Urological =Urological =Process Codes
+U64=Encounter Initiated by Provider=Urological =Process Codes
+U65=Encounter Initiated third person=Urological =Process Codes
+U66=Refer to Other Provider (EXCL. M.D.)=Urological =Process Codes
+U67=Referral to Physician/Specialist/ Clinic/Hospital=Urological =Process Codes
+U68=Other Referrals NEC=Urological =Process Codes
+U69=Other Reason for Encounter NEC=Urological =Process Codes
+U70=Pyelonephritis/pyelitis=Urological =Infections
+U71=Cystitis/urinary infection other=Urological =Infections
+U72=Urethritis=Urological =Infections
+U75=Malignant neoplasm of kidney=Urological =Neoplasms
+U76=Malignant neoplasm of bladder=Urological =Neoplasms
+U77=Malignant neoplasm urinary other=Urological =Neoplasms
+U78=Benign neoplasm urinary tract=Urological =Neoplasms
+U79=Neoplasm urinary tract NOS=Urological =Neoplasms
+U80=Injury urinary tract=Urological =Injuries
+U85=Congenital anomaly urinary tract=Urological =Other diagnoses 
+U88=Glomerulonephritis/nephrosis=Urological =Other diagnoses 
+U90=Orthostatic albumiiL/proteinuria=Urological =Other diagnoses 
+U95=Urinary calculus=Urological =Other diagnoses 
+U98=Abnormal urine test NOS=Urological =Other diagnoses 
+U99=Urinary disease, other=Urological =Other diagnoses 
+W01=Question of pregnancy=Pregnancy,Childbearing, Family Planning=Symptoms/Complaints
+W02=Fear of pregnancy=Pregnancy,Childbearing, Family Planning=Symptoms/Complaints
+W03=Antepartum bleeding=Pregnancy,Childbearing, Family Planning=Symptoms/Complaints
+W05=Pregnancy vomiting/nausea=Pregnancy,Childbearing, Family Planning=Symptoms/Complaints
+W10=Contraception postcoital=Pregnancy,Childbearing, Family Planning=Symptoms/Complaints
+W11=Contraception oral=Pregnancy,Childbearing, Family Planning=Symptoms/Complaints
+W12=Contraception intrauterine=Pregnancy,Childbearing, Family Planning=Symptoms/Complaints
+W13=Sterilization=Pregnancy,Childbearing, Family Planning=Symptoms/Complaints
+W14=Contraception other=Pregnancy,Childbearing, Family Planning=Symptoms/Complaints
+W15=Infertility/subfertility=Pregnancy,Childbearing, Family Planning=Symptoms/Complaints
+W17=Post-partum bleeding=Pregnancy,Childbearing, Family Planning=Symptoms/Complaints
+W18=Post-partum symptom/complaint oth.=Pregnancy,Childbearing, Family Planning=Symptoms/Complaints
+W19=Breast/lactation symptom/complaint=Pregnancy,Childbearing, Family Planning=Symptoms/Complaints
+W21=Concern body image in pregnancy=Pregnancy,Childbearing, Family Planning=Symptoms/Complaints
+W27=Fear complications of pregnancy=Pregnancy,Childbearing, Family Planning=Symptoms/Complaints
+W28=Limited function/disability (w)=Pregnancy,Childbearing, Family Planning=Symptoms/Complaints
+W29=Pregnancy symptom/complaint other=Pregnancy,Childbearing, Family Planning=Symptoms/Complaints
+W30=Medical Exam/Eval-Complete=Pregnancy,Childbearing, Family Planning=Process Codes
+W31=Medical Examination/Health Evaluation-Partial/Pre-op check=Pregnancy,Childbearing, Family Planning=Process Codes
+W32=Sensitivity Test=Pregnancy,Childbearing, Family Planning=Process Codes
+W33=Microbiological/Iminunological Test=Pregnancy,Childbearing, Family Planning=Process Codes
+W34=Blood Test=Pregnancy,Childbearing, Family Planning=Process Codes
+W35=Urine Test=Pregnancy,Childbearing, Family Planning=Process Codes
+W36=Faeces Test=Pregnancy,Childbearing, Family Planning=Process Codes
+W37=Histological/Exfoliative Cytology=Pregnancy,Childbearing, Family Planning=Process Codes
+W38=Other Laboratory Test NEC=Pregnancy,Childbearing, Family Planning=Process Codes
+W39=Physical Function Test=Pregnancy,Childbearing, Family Planning=Process Codes
+W40=Diagnostic Endoscopy=Pregnancy,Childbearing, Family Planning=Process Codes
+W41=Diagnostic Radiology/Imaging=Pregnancy,Childbearing, Family Planning=Process Codes
+W42=Electrical Tracings=Pregnancy,Childbearing, Family Planning=Process Codes
+W43=Other Diagnostic Procedures=Pregnancy,Childbearing, Family Planning=Process Codes
+W44=Preventive Imunisations/Medications=Pregnancy,Childbearing, Family Planning=Process Codes
+W45=Observe/Educate/Advice/Diet=Pregnancy,Childbearing, Family Planning=Process Codes
+W46=Consult with Primary Care Provider=Pregnancy,Childbearing, Family Planning=Process Codes
+W47=Consultation with Specialist=Pregnancy,Childbearing, Family Planning=Process Codes
+W48=Clarification/Discuss Patient's RFE=Pregnancy,Childbearing, Family Planning=Process Codes
+W49=Other Preventive Procedures=Pregnancy,Childbearing, Family Planning=Process Codes
+W50=Medicat-Script/Reqst/Renew/Inject=Pregnancy,Childbearing, Family Planning=Process Codes
+W51=Incise/Drain/Flush/Aspirate=Pregnancy,Childbearing, Family Planning=Process Codes
+W52=Excise/Remove/Biopsy/Destruction/ Debride=Pregnancy,Childbearing, Family Planning=Process Codes
+W53=Instrument/Catheter/Intubate/Dilate=Pregnancy,Childbearing, Family Planning=Process Codes
+W54=Repair/Fixate-Suture/Cast/Prosthetic=Pregnancy,Childbearing, Family Planning=Process Codes
+W55=Local Injection/Infiltration=Pregnancy,Childbearing, Family Planning=Process Codes
+W56=Dress/Press/Compress/Tamponade=Pregnancy,Childbearing, Family Planning=Process Codes
+W57=Physical Medicine/Rehabilitation=Pregnancy,Childbearing, Family Planning=Process Codes
+W58=Therapeutic Counselling/Listening=Pregnancy,Childbearing, Family Planning=Process Codes
+W59=Other Therapeutic Procedure NEC=Pregnancy,Childbearing, Family Planning=Process Codes
+W60=Results Tests/Procedures=Pregnancy,Childbearing, Family Planning=Process Codes
+W61=Results Exam/Test/Record=Pregnancy,Childbearing, Family Planning=Process Codes
+W62=Administrative Procedure=Pregnancy,Childbearing, Family Planning=Process Codes
+W63=Follow-up Encounter Unspecified=Pregnancy,Childbearing, Family Planning=Process Codes
+W64=Encounter Initiated by Provider=Pregnancy,Childbearing, Family Planning=Process Codes
+W65=Encounter Initiated third person=Pregnancy,Childbearing, Family Planning=Process Codes
+W66=Refer to Other Provider (EXCL. M.D.)=Pregnancy,Childbearing, Family Planning=Process Codes
+W67=Referral to Physician/Specialist/ Clinic/Hospital=Pregnancy,Childbearing, Family Planning=Process Codes
+W68=Other Referrals NEC=Pregnancy,Childbearing, Family Planning=Process Codes
+W69=Other Reason for Encounter NEC=Pregnancy,Childbearing, Family Planning=Process Codes
+W70=Puerperal infection/sepsis=Pregnancy,Childbearing, Family Planning=Infections
+W71= Infection complicating pregnancy=Pregnancy,Childbearing, Family Planning=Infections
+W72=Malignant neoplasm relate to preg.=Pregnancy,Childbearing, Family Planning=Neoplasms
+W73=Benign/unspec. neoplasm/pregnancy=Pregnancy,Childbearing, Family Planning=Neoplasms
+W75=Injury complicating pregnancy=Pregnancy,Childbearing, Family Planning=Injuries
+W76=Congenital anomaly complicate preg.=Pregnancy,Childbearing, Family Planning=Congenital anomalies 
+W78=Pregnancy=Pregnancy,Childbearing, Family Planning=Other diagnoses 
+W79=Unwanted pregnancy=Pregnancy,Childbearing, Family Planning=Other diagnoses 
+W80=Ectopic pregnancy=Pregnancy,Childbearing, Family Planning=Other diagnoses 
+W81=Toxaemia of pregnancy=Pregnancy,Childbearing, Family Planning=Other diagnoses 
+W82=Abortion spontaneous=Pregnancy,Childbearing, Family Planning=Other diagnoses 
+W83=Abortion induced=Pregnancy,Childbearing, Family Planning=Other diagnoses 
+W84=Pregnancy high risk=Pregnancy,Childbearing, Family Planning=Other diagnoses 
+W85=Gestational diabetes=Pregnancy,Childbearing, Family Planning=Other diagnoses 
+W90=Uncomplicate labour/delivery live=Pregnancy,Childbearing, Family Planning=Other diagnoses 
+W91=Uncomplicate labour/delivery still=Pregnancy,Childbearing, Family Planning=Other diagnoses 
+W92=Complicate labour/ delivery livebirth=Pregnancy,Childbearing, Family Planning=Other diagnoses 
+W93=Complicate labour/delivery stillbirth=Pregnancy,Childbearing, Family Planning=Other diagnoses 
+W94=Puerperal mastitis=Pregnancy,Childbearing, Family Planning=Other diagnoses 
+W95=Breast disorder in pregnancy other=Pregnancy,Childbearing, Family Planning=Other diagnoses 
+W96=Complications of puerperium other=Pregnancy,Childbearing, Family Planning=Other diagnoses 
+W99=Disorder pregnancy/delivery, other=Pregnancy,Childbearing, Family Planning=Other diagnoses 
+X01=Genital pain female=Female Genital=Symptoms/Complaints
+X02=Menstrual pain=Female Genital=Symptoms/Complaints
+X03=Intermenstrual pain=Female Genital=Symptoms/Complaints
+X04=Painful intercourse female=Female Genital=Symptoms/Complaints
+X05=Menstruation absent/scanty=Female Genital=Symptoms/Complaints
+X06=Menstruation excessive=Female Genital=Symptoms/Complaints
+X07=Menstruation irregular/frequent=Female Genital=Symptoms/Complaints
+X08=Intermenstrual bleeding=Female Genital=Symptoms/Complaints
+X09=Premenstrual symptom/complaint=Female Genital=Symptoms/Complaints
+X10=Postponement of menstruation=Female Genital=Symptoms/Complaints
+X11=Menopausal symptom/complaint=Female Genital=Symptoms/Complaints
+X12=Postmenopausal bleeding=Female Genital=Symptoms/Complaints
+X13=Postcoital bleeding=Female Genital=Symptoms/Complaints
+X14=Vaginal discharge=Female Genital=Symptoms/Complaints
+X15=Vaginal symptom/complaint other=Female Genital=Symptoms/Complaints
+X16=Vulval symptom/complaint=Female Genital=Symptoms/Complaints
+X17=Pelvis symptom/complaint female=Female Genital=Symptoms/Complaints
+X18=Breast pain female=Female Genital=Symptoms/Complaints
+X19=Breast lump/mass female=Female Genital=Symptoms/Complaints
+X20=Nipple symptom/complaint female=Female Genital=Symptoms/Complaints
+X21=Breast symptom/compit. female other=Female Genital=Symptoms/Complaints
+X22=Concern breast appearance female=Female Genital=Symptoms/Complaints
+X23=Fear sexually transmitted disease (f)=Female Genital=Symptoms/Complaints
+X24=Fear of sexual dysfunction female=Female Genital=Symptoms/Complaints
+X25=Fear of genital cancer female=Female Genital=Symptoms/Complaints
+X26=Fear of breast cancer female=Female Genital=Symptoms/Complaints
+X27=Fear genital/breast disease other (f)=Female Genital=Symptoms/Complaints
+X28=Limited function/disability (x)=Female Genital=Symptoms/Complaints
+X29=Genital symptom/compit female oth.=Female Genital=Symptoms/Complaints
+X30=Medical Exam/Eval-Complete=Female Genital=Process Codes
+X31=Medical Examination/Health Evaluation-Partial/Pre-op check=Female Genital=Process Codes
+X32=Sensitivity Test=Female Genital=Process Codes
+X33=Microbiological/Iminunological Test=Female Genital=Process Codes
+X34=Blood Test=Female Genital=Process Codes
+X35=Urine Test=Female Genital=Process Codes
+X36=Faeces Test=Female Genital=Process Codes
+X37=Histological/Exfoliative Cytology=Female Genital=Process Codes
+X38=Other Laboratory Test NEC=Female Genital=Process Codes
+X39=Physical Function Test=Female Genital=Process Codes
+X40=Diagnostic Endoscopy=Female Genital=Process Codes
+X41=Diagnostic Radiology/Imaging=Female Genital=Process Codes
+X42=Electrical Tracings=Female Genital=Process Codes
+X43=Other Diagnostic Procedures=Female Genital=Process Codes
+X44=Preventive Imunisations/Medications=Female Genital=Process Codes
+X45=Observe/Educate/Advice/Diet=Female Genital=Process Codes
+X46=Consult with Primary Care Provider=Female Genital=Process Codes
+X47=Consultation with Specialist=Female Genital=Process Codes
+X48=Clarification/Discuss Patient's RFE=Female Genital=Process Codes
+X49=Other Preventive Procedures=Female Genital=Process Codes
+X50=Medicat-Script/Reqst/Renew/Inject=Female Genital=Process Codes
+X51=Incise/Drain/Flush/Aspirate=Female Genital=Process Codes
+X52=Excise/Remove/Biopsy/Destruction/ Debride=Female Genital=Process Codes
+X53=Instrument/Catheter/Intubate/Dilate=Female Genital=Process Codes
+X54=Repair/Fixate-Suture/Cast/Prosthetic=Female Genital=Process Codes
+X55=Local Injection/Infiltration=Female Genital=Process Codes
+X56=Dress/Press/Compress/Tamponade=Female Genital=Process Codes
+X57=Physical Medicine/Rehabilitation=Female Genital=Process Codes
+X58=Therapeutic Counselling/Listening=Female Genital=Process Codes
+X59=Other Therapeutic Procedure NEC=Female Genital=Process Codes
+X60=Results Tests/Procedures=Female Genital=Process Codes
+X61=Results Exam/Test/Record=Female Genital=Process Codes
+X62=Administrative Procedure=Female Genital=Process Codes
+X63=Follow-up Encounter Unspecified=Female Genital=Process Codes
+X64=Encounter Initiated by Provider=Female Genital=Process Codes
+X65=Encounter Initiated third person=Female Genital=Process Codes
+X66=Refer to Other Provider (EXCL. M.D.)=Female Genital=Process Codes
+X67=Referral to Physician/Specialist/ Clinic/Hospital=Female Genital=Process Codes
+X68=Other Referrals NEC=Female Genital=Process Codes
+X69=Other Reason for Encounter NEC=Female Genital=Process Codes
+X70=Syphilis female=Female Genital=Infections
+X71=Gonorrhoea female=Female Genital=Infections
+X72=Genital candidiasis female=Female Genital=Infections
+X73=Genital trichomoniasis female=Female Genital=Infections
+X74=Pelvic inflammatory disease=Female Genital=Infections
+X75=Malignant neoplasm cervix=Female Genital=Neoplasms
+X76=Malignant neoplasm breast female=Female Genital=Neoplasms
+X77=Malignant neoplasm genital other (f)=Female Genital=Neoplasms
+X78=Fibromyoma uterus=Female Genital=Neoplasms
+X79=Benign neoplasm breast female=Female Genital=Neoplasms
+X80=Benign neoplasm female genital=Female Genital=Neoplasms
+X81=Genital neoplasm oth/unspecied (f)=Female Genital=Neoplasms
+X82=Injury genital female=Female Genital=Injuries
+X83=Congenital anomaly genital female=Female Genital=Congenital anomalies 
+X84=Vaginitis/vulvitis NOS=Female Genital=Other diagnoses 
+X85=Cervical disease NOS=Female Genital=Other diagnoses 
+X86=Abnormal cervix smear=Female Genital=Other diagnoses 
+X87=Uterovaginal prolapse=Female Genital=Other diagnoses 
+X88=Fibrocystic disease breast=Female Genital=Other diagnoses 
+X89=Premenstrual tension syndrome=Female Genital=Other diagnoses 
+X90=Genital herpes female=Female Genital=Infections
+X91=Condylomata acuminata female=Female Genital=Other diagnoses 
+X92=Chlamydia infection genital (1)=Female Genital=Other diagnoses 
+X99=Genital disease female, other=Female Genital=Other diagnoses 
+Y01=Pain in penis=Male Genital=Symptoms/Complaints
+Y02=Pain in testis/scrotum=Male Genital=Symptoms/Complaints
+Y03=Urethral discharge=Male Genital=Symptoms/Complaints
+Y04=Penis symptom/complaint other=Male Genital=Symptoms/Complaints
+Y05=Scrotum/testis sympt/complt. other=Male Genital=Symptoms/Complaints
+Y06=Prostate symptom/complaint=Male Genital=Symptoms/Complaints
+Y07=Impotence NOS=Male Genital=Symptoms/Complaints
+Y08=Sexual function sympt./complt.(m)=Male Genital=Symptoms/Complaints
+Y10=Infertility/subfertility male=Male Genital=Symptoms/Complaints
+Y13=Sterilization male=Male Genital=Symptoms/Complaints
+Y14=Family planning male other=Male Genital=Symptoms/Complaints
+Y16=Breast symptom/complaint male=Male Genital=Symptoms/Complaints
+Y24=Fear of sexual dysfunction male=Male Genital=Symptoms/Complaints
+Y25=Fear sexually transmitted dis. male=Male Genital=Symptoms/Complaints
+Y26=Fear of genital cancer male=Male Genital=Symptoms/Complaints
+Y27=Fear of genital disease male other=Male Genital=Symptoms/Complaints
+Y28=Limited function/disability (y)=Male Genital=Symptoms/Complaints
+Y29=Genital sympt./complt.male other=Male Genital=Symptoms/Complaints
+Y30=Medical Exam/Eval-Complete=Male Genital=Process Codes
+Y31=Medical Examination/Health Evaluation-Partial/Pre-op check=Male Genital=Process Codes
+Y32=Sensitivity Test=Male Genital=Process Codes
+Y33=Microbiological/Iminunological Test=Male Genital=Process Codes
+Y34=Blood Test=Male Genital=Process Codes
+Y35=Urine Test=Male Genital=Process Codes
+Y36=Faeces Test=Male Genital=Process Codes
+Y37=Histological/Exfoliative Cytology=Male Genital=Process Codes
+Y38=Other Laboratory Test NEC=Male Genital=Process Codes
+Y39=Physical Function Test=Male Genital=Process Codes
+Y40=Diagnostic Endoscopy=Male Genital=Process Codes
+Y41=Diagnostic Radiology/Imaging=Male Genital=Process Codes
+Y42=Electrical Tracings=Male Genital=Process Codes
+Y43=Other Diagnostic Procedures=Male Genital=Process Codes
+Y44=Preventive Imunisations/Medications=Male Genital=Process Codes
+Y45=Observe/Educate/Advice/Diet=Male Genital=Process Codes
+Y46=Consult with Primary Care Provider=Male Genital=Process Codes
+Y47=Consultation with Specialist=Male Genital=Process Codes
+Y48=Clarification/Discuss Patient's RFE=Male Genital=Process Codes
+Y49=Other Preventive Procedures=Male Genital=Process Codes
+Y50=Medicat-Script/Reqst/Renew/Inject=Male Genital=Process Codes
+Y51=Incise/Drain/Flush/Aspirate=Male Genital=Process Codes
+Y52=Excise/Remove/Biopsy/Destruction/ Debride=Male Genital=Process Codes
+Y53=Instrument/Catheter/Intubate/Dilate=Male Genital=Process Codes
+Y54=Repair/Fixate-Suture/Cast/Prosthetic=Male Genital=Process Codes
+Y55=Local Injection/Infiltration=Male Genital=Process Codes
+Y56=Dress/Press/Compress/Tamponade=Male Genital=Process Codes
+Y57=Physical Medicine/Rehabilitation=Male Genital=Process Codes
+Y58=Therapeutic Counselling/Listening=Male Genital=Process Codes
+Y59=Other Therapeutic Procedure NEC=Male Genital=Process Codes
+Y60=Results Tests/Procedures=Male Genital=Process Codes
+Y61=Results Exam/Test/Record=Male Genital=Process Codes
+Y62=Administrative Procedure=Male Genital=Process Codes
+Y63=Follow-up Encounter Unspecified=Male Genital=Process Codes
+Y64=Encounter Initiated by Provider=Male Genital=Process Codes
+Y65=Encounter Initiated third person=Male Genital=Process Codes
+Y66=Refer to Other Provider (EXCL. M.D.)=Male Genital=Process Codes
+Y67=Referral to Physician/Specialist/ Clinic/Hospital=Male Genital=Process Codes
+Y68=Other Referrals NEC=Male Genital=Process Codes
+Y69=Other Reason for Encounter NEC=Male Genital=Process Codes
+Y70=Syphilis male=Male Genital=Infections
+Y71=Gonorrhoea male=Male Genital=Infections
+Y72=Genital herpes male=Male Genital=Infections
+Y73=Prostatitis/seminal vesiculitis=Male Genital=Infections
+Y74=Orchitis/epididymitis=Male Genital=Infections
+Y75=Balanitis=Male Genital=Infections
+Y76=Condylomata acuminata male=Male Genital=Infections
+Y77=Malignant neoplasm prostate=Male Genital=Neoplasms
+Y78=Malign neoplasm male genital other=Male Genital=Neoplasms
+Y79=Benign/unspec. neoplasm gen. (m)=Male Genital=Neoplasms 
+Y80=Injury male genital=Male Genital=Injuries
+Y81=Phimosis/redundant prepuce=Male Genital=Congenital anomalies 
+Y82=Hypospadias=Male Genital=Congenital anomalies 
+Y83=Undescended testicle=Male Genital=Congenital anomalies 
+Y84=Congenital geni anomaly (m) other=Male Genital=Congenital anomalies 
+Y85=Benign prostatic hypertrophy=Male Genital=Other diagnoses  
+Y86=Hydrocoele=Male Genital=Other diagnoses 
+Y99=Genital disease male, other=Male Genital=Other diagnoses 
+Z01=Poverty/financial problem=Social Problems=Symptoms/Complaints
+Z02=Food/water problem=Social Problems=Symptoms/Complaints
+Z03=Housing/neighbourhood problem=Social Problems=Symptoms/Complaints
+Z04=Social Problems cultural problem=Social Problems=Symptoms/Complaints
+Z05=Work problem=Social Problems=Symptoms/Complaints
+Z06=Unemployment problem=Social Problems=Symptoms/Complaints
+Z07=Education problem=Social Problems=Symptoms/Complaints
+Z08=Social Problems welfare problem=Social Problems=Symptoms/Complaints
+Z09=Legal problem=Social Problems=Symptoms/Complaints
+Z10=Health care system problem=Social Problems=Symptoms/Complaints
+Z11=Compliance/being ill problem=Social Problems=Symptoms/Complaints
+Z12=Relationship problem with partner=Social Problems=Symptoms/Complaints
+Z13=Partner's behaviour problem=Social Problems=Symptoms/Complaints
+Z14=Partner illness problem=Social Problems=Symptoms/Complaints
+Z15=Loss/death of partner problem=Social Problems=Symptoms/Complaints
+Z16=Relationship problem with child=Social Problems=Symptoms/Complaints
+Z18=Illness problem with child=Social Problems=Symptoms/Complaints
+Z19=Loss/death of child problem=Social Problems=Symptoms/Complaints
+Z20=Relationship prob. parent/family=Social Problems=Symptoms/Complaints
+Z21=Behaviour problem parent/family=Social Problems=Symptoms/Complaints
+Z22=Illness problem parent/family=Social Problems=Symptoms/Complaints
+Z23=Loss/death parent/family member=Social Problems=Symptoms/Complaints
+Z24=Relationship problem friend=Social Problems=Symptoms/Complaints
+Z25=Assault/harmful event problem=Social Problems=Symptoms/Complaints
+Z27=Fear of a Social Problems problem=Social Problems=Symptoms/Complaints
+Z28=Limited function/disability (z)=Social Problems=Symptoms/Complaints
+Z29=Social Problems problem NOS=Social Problems=Symptoms/Complaints
+Z30=Medical Exam/Eval-Complete=Social Problems=Process Codes
+Z31=Medical Examination/Health Evaluation-Partial/Pre-op check=Social Problems=Process Codes
+Z32=Sensitivity Test=Social Problems=Process Codes
+Z33=Microbiological/Iminunological Test=Social Problems=Process Codes
+Z34=Blood Test=Social Problems=Process Codes
+Z35=Urine Test=Social Problems=Process Codes
+Z36=Faeces Test=Social Problems=Process Codes
+Z37=Histological/Exfoliative Cytology=Social Problems=Process Codes
+Z38=Other Laboratory Test NEC=Social Problems=Process Codes
+Z39=Physical Function Test=Social Problems=Process Codes
+Z40=Diagnostic Endoscopy=Social Problems=Process Codes
+Z41=Diagnostic Radiology/Imaging=Social Problems=Process Codes
+Z42=Electrical Tracings=Social Problems=Process Codes
+Z43=Other Diagnostic Procedures=Social Problems=Process Codes
+Z44=Preventive Imunisations/Medications=Social Problems=Process Codes
+Z45=Observe/Educate/Advice/Diet=Social Problems=Process Codes
+Z46=Consult with Primary Care Provider=Social Problems=Process Codes
+Z47=Consultation with Specialist=Social Problems=Process Codes
+Z48=Clarification/Discuss Patient's RFE=Social Problems=Process Codes
+Z49=Other Preventive Procedures=Social Problems=Process Codes
+Z50=Medicat-Script/Reqst/Renew/Inject=Social Problems=Process Codes
+Z51=Incise/Drain/Flush/Aspirate=Social Problems=Process Codes
+Z52=Excise/Remove/Biopsy/Destruction/ Debride=Social Problems=Process Codes
+Z53=Instrument/Catheter/Intubate/Dilate=Social Problems=Process Codes
+Z54=Repair/Fixate-Suture/Cast/Prosthetic=Social Problems=Process Codes
+Z55=Local Injection/Infiltration=Social Problems=Process Codes
+Z56=Dress/Press/Compress/Tamponade=Social Problems=Process Codes
+Z57=Physical Medicine/Rehabilitation=Social Problems=Process Codes
+Z58=Therapeutic Counselling/Listening=Social Problems=Process Codes
+Z59=Other Therapeutic Procedure NEC=Social Problems=Process Codes
+Z60=Results Tests/Procedures=Social Problems=Process Codes
+Z61=Results Exam/Test/Record=Social Problems=Process Codes
+Z62=Administrative Procedure=Social Problems=Process Codes
+Z63=Follow-up Encounter Unspecified=Social Problems=Process Codes
+Z64=Encounter Initiated by Provider=Social Problems=Process Codes
+Z65=Encounter Initiated third person=Social Problems=Process Codes
+Z66=Refer to Other Provider (EXCL. M.D.)=Social Problems=Process Codes
+Z67=Referral to Physician/Specialist/ Clinic/Hospital=Social Problems=Process Codes
+Z68=Other Referrals NEC=Social Problems=Process Codes
+Z69=Other Reason for Encounter NEC=Social Problems=Process Codes

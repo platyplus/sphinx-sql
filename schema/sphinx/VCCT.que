@@ -1,0 +1,1077 @@
+Version=5104
+Entête
+	Historique=5.0.0.81(Médecins du Mon;5.1.0.2(Médecins du Mond;5.0.0.64(Médecins du Mon;5.1.0.4(MEDECINS DU MOND;
+	Langue=EN
+	Titre=VCCT VISIT
+	StadePanneau=10
+	Traductions
+		Traduction
+			Langue=FR
+			Titre=ART VISIT
+		Fin
+	Fin
+Fin
+Questions
+	Question
+		Libellé=MDM code
+		Variable=MDMcode
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Consigne=Mandatory response
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				Libellé=MDM code (Patient ID)
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Registration date
+		Variable=A00_RegistrationDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=A00. Registration date
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Name
+		Variable=A01_PatientName
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=A01. Name
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Father’s name
+		Variable=A02_FatherName
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=A02. Father’s name
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Sex
+		Variable=A03_Sexe
+		Type=1
+		NbModalités=2
+		Modalités=Male ; Female
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=A03. Sexe
+				Modalités=Male ; Female ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Date of birth
+		Variable=A041_DateOfBirth
+		Type=8
+		MinNombre=3652
+		Format=jj/mm/aaaa
+		Consigne=The response must be more than 01/01/1910.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				Libellé=A04. Date of birth
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Age
+		Variable=A05_Age
+		Type=4
+		NbDécimales=2
+		TypeNombre=2
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=A05. Age
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Visit date
+		Variable=VCCT_VisitDate
+		Type=8
+		MinNombre=32872
+		Format=jj/mm/aaaa
+		Consigne=The response must be more than 01/01/1990.€Mandatory response.
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				Libellé=Visit date
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=TB Patient?
+		Variable=VCCT_TBPatient
+		Type=1
+		NbModalités=2
+		Modalités=Yes ; No
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=TB Patient?
+				Modalités=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Place Of Testing
+		Variable=VCCT_PlaceOfTesting
+		Type=7
+		FichierCodes=Sys\Dic_Lists\LIST_A2_MDMstaff.dic
+		NbCarCode=25
+		Consigne=Mandatory response.
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				Libellé=MDM staff
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Patient Target
+		Variable=A07_PatientTarget
+		Type=7
+		FichierCodes=D:\Myanmar_MDM_Clinic\Sys\Dic_Lists\LIST_A3_Target.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=A07. Patient target
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Unsafe Sex in previous six weeks
+		Variable=VCCT_UnsafeSexInPrevious6Wks
+		Type=1
+		NbModalités=2
+		Modalités=Yes ; No
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=F01. Condom use for last sex
+				Modalités=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=I/DU for
+		Variable=VCCT_IDUsince
+		Type=4
+		NbDécimales=2
+		TypeNombre=2
+		Format=##
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=E01. I/DU since
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Drug use within last 1 year?
+		Variable=VCCT_DrugUseWithinLast1Year
+		Type=1
+		NbModalités=2
+		Modalités=Yes ; No
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=Drug use within last 1 year?
+				Modalités=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Type of drugs
+		Variable=VCCT_TypeOfDrugs1
+		Type=7
+		FichierCodes=D:\Myanmar_MDM_Clinic\Sys\Dic_Lists\LIST_E_Drugs.dic
+		NbCarCode=25
+		Format=###
+		Consigne=The code has 3 characters.
+		Plan=1
+		Attributs=33184
+		Basic=Majuscule(VCCT_TypeOfDrugs1)
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				Libellé=E0311. Type of drugs
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Drug name
+		Variable=VCCT_DrugName1
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=If Not VCCT_TypeOfDrugs1 = "OTH" Then€   VCCT_DrugName1 = VCCT_TypeOfDrugs1.CatCode(1)€EndIf€€
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				Libellé=E0311. Drug name
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Way of use
+		Variable=VCCT_WayOfUse1
+		Type=2
+		NbModalités=4
+		Modalités=Injectable ; Snorting ; Smoking ; Swallowing
+		MaxRéponses=4
+		Pondérations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				Libellé=E0312. Way of use
+				Modalités=Injectable ; Snorting ; Smoking ; Swallowing ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Type of drugs
+		Variable=VCCT_TypeOfDrugs2
+		Type=7
+		FichierCodes=D:\Myanmar_MDM_Clinic\Sys\Dic_Lists\LIST_E_Drugs.dic
+		NbCarCode=25
+		Format=###
+		Consigne=The code has 3 characters.
+		Plan=1
+		Attributs=33184
+		Basic=Majuscule(VCCT_TypeOfDrugs2)
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				Libellé=E0321. Type of drugs
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Drug name
+		Variable=VCCT_DrugName2
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=If Not VCCT_TypeOfDrugs2 = "OTH" Then€   VCCT_DrugName2 = VCCT_TypeOfDrugs2.CatCode(1)€EndIf€€
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				Libellé=E0321. Drug name
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Way of use
+		Variable=VCCT_WayOfUse2
+		Type=2
+		NbModalités=4
+		Modalités=Injectable ; Snorting ; Smoking ; Swallowing
+		MaxRéponses=4
+		Pondérations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				Libellé=E0322. Way of use
+				Modalités=Injectable ; Snorting ; Smoking ; Swallowing ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Type of drugs
+		Variable=VCCT_TypeOfDrugs3
+		Type=7
+		FichierCodes=D:\Myanmar_MDM_Clinic\Sys\Dic_Lists\LIST_E_Drugs.dic
+		NbCarCode=25
+		Format=###
+		Consigne=The code has 3 characters.
+		Plan=1
+		Attributs=33184
+		Basic=Majuscule(VCCT_TypeOfDrugs3)
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				Libellé=Type of drugs
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Drug Name
+		Variable=VCCT_DrugName3
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		Basic=If Not VCCT_TypeOfDrugs3 = "OTH" Then€   VCCT_DrugName3 = VCCT_TypeOfDrugs3.CatCode(1)€EndIf€€
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				Libellé=Drug Name
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Way of use
+		Variable=VCCT_WayOfUse3
+		Type=2
+		NbModalités=4
+		Modalités=Injectable ; Snorting ; Smoking ; Swallowing
+		MaxRéponses=4
+		Pondérations= 0
+		Consigne=More than one response can be selected.
+		Plan=1
+		Attributs=160
+		Traductions
+			Traduction
+				Libellé=Way of use
+				Modalités=Injectable ; Snorting ; Smoking ; Swallowing ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Have you injected drugs at any time in previous six weeks?
+		Variable=VCCT_InjectedDrugsAtAnyTimeInPre6Wks
+		Type=1
+		NbModalités=2
+		Modalités=Yes ; No
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=Did you share needle/syringe in last month?
+				Modalités=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=If yes, did you share needle/syringe in previous six weeks?
+		Variable=VCCT_ShareNeedleOrSyringeInPre6Wks
+		Type=1
+		NbModalités=2
+		Modalités=Yes ; No
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=F02. Did you share needle/syringe in last
+				Modalités=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Blood Transfusion in previous six weeks
+		Variable=VCCT_BloodTransfusionInPre6Wks
+		Type=1
+		NbModalités=2
+		Modalités=Yes ; No
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=Blood Transfusion in Previous 6 Weeks
+				Modalités=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Body Piercing and Tatttooing In previous six weeks
+		Variable=VCCT_BodyPiercingTattooingInPre6Wks
+		Type=1
+		NbModalités=2
+		Modalités=Yes ; No
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=Body Piercing and Tatttooing In Previous 6 Weeks`
+				Modalités=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Previous HIV Testing
+		Variable=VCCT_PreviousHIVTesting
+		Type=1
+		NbModalités=2
+		Modalités=Yes ; No
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=Previous HIV Testing
+				Modalités=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=If Yes,Previous HIV Testing Date
+		Variable=VCCT_PreviousHIVTestingDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=If Yes,Previous HIV Testing Date
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Pre-test performed
+		Variable=VCCT_PretestPerformed
+		Type=1
+		NbModalités=1
+		Modalités=Yes
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=T2. Patient should return in
+				Modalités=Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Pretest Date
+		Variable=VCCT_PreTestDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=T3. Date of next visit
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=HIV Test
+		Variable=VCCT_HIVTest
+		Type=1
+		NbModalités=2
+		Modalités=Accept ; Refused
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=HIV Test
+				Modalités=Accept ; Refused ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=#HIV Blood Test in MDM
+		Variable=VCCT_HIVBloodTest
+		Type=4
+		NbDécimales=2
+		TypeNombre=2
+		Format=##
+		Consigne=Mandatory response.
+		Plan=1
+		Attributs=161
+		Traductions
+			Traduction
+				Libellé=T21. Other
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Post-test performed
+		Variable=VCCT_PostTestPerformed
+		Type=1
+		NbModalités=1
+		Modalités=Yes
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=T2. Patient should return in
+				Modalités=Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Postest Date
+		Variable=VCCT_PostTestDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=T3. Date of next visit
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Test Result
+		Variable=VCCT_TestResult
+		Type=1
+		NbModalités=4
+		Modalités=Positive ; Negative ; Inconclusive 1st time ; Inconclusive 2nd time
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=T2. Patient should return in
+				Modalités=Other ; mod-FR-9 ; mod-FR-3 ; mod-FR-4 ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Test Result from NHL
+		Variable=VCCT_TestResultByNHL
+		Type=1
+		NbModalités=2
+		Modalités=Positive ; Negative
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=Test Result by NHL
+				Modalités=Positive ; Negative ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=NHL Date
+		Variable=VCCT_NHLDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=NHL Date
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=History of Syphilis
+		Variable=VCCT_HistoryOfSyphilis
+		Type=1
+		NbModalités=2
+		Modalités=Yes ; No
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=History of Syphilis
+				Modalités=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Test for Syphilis In Current Visit
+		Variable=VCCT_TestForSyphilisInCurrentVisit
+		Type=1
+		NbModalités=1
+		Modalités=Yes
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=Test for Syphilis
+				Modalités=Yes ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Current Syphilis ICT Test Result
+		Variable=VCCT_CurrentICTTestResult
+		Type=1
+		NbModalités=2
+		Modalités=Positive ; Negative
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=SyhilisICTTestResult
+				Modalités=Positive ; Negative ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Current RPR Test Result
+		Variable=VCCT_CurrentRPRTestResult
+		Type=1
+		NbModalités=2
+		Modalités=Positive ; Negative
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=T2. Patient should return in
+				Modalités=Other ; mod-FR-9 ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=RPR Positive Dilution
+		Variable=VCCT_RPRPositiveDilution
+		Type=7
+		FichierCodes=..\Myanmar_MDM_Clinic\Sys\Dic_Lists\LIST_VCCT_RPR_DILUTION.dic
+		NbCarCode=25
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=RPR Positive Dilution
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=VCCT_1stTimeHIVTest
+		Variable=VCCT_1stTimeHIVTest
+		Type=4
+		NbDécimales=2
+		TypeNombre=2
+		Plan=1
+		Attributs=33056
+		OptionsBasic=1
+		Basic=If (VCCT_HIVBloodTest = 1) And (VCCT_HIVTest In "Accept") Then€    VCCT_1stTimeHIVTest = 1€EndIf€
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				Libellé=VCCT_1stTimeHIVTest
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=VCCT_1stTimeHIVTestAndPositive
+		Variable=VCCT_1stTimeHIVTestAndPositive
+		Type=4
+		NbDécimales=2
+		TypeNombre=2
+		Plan=1
+		Attributs=33056
+		OptionsBasic=1
+		Basic=If (VCCT_HIVBloodTest = 1) And (VCCT_TestResult In "Positive") Then€    VCCT_1stTimeHIVTestAndPositive = 1€EndIf€
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				Libellé=VCCT_1stTimeHIVTestAndPositive
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Partner HIV Testing
+		Variable=VCCT_PartnerHIVTesting
+		Type=1
+		NbModalités=2
+		Modalités=Yes ; No
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=Partner HIV Testing
+				Modalités=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Date of Partner HIV Testing
+		Variable=VCCT_DateOfPartnerHIVTesting
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=Date of Partner HIV Testing
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Know Your Partner HIV Status
+		Variable=VCCT_KnowYourPartnerHIVStatus
+		Type=1
+		NbModalités=3
+		Modalités=Positive ; Negative ; Unknown
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=Know Your Partner HIV Status
+				Modalités=Positive ; Negative ; Unknown ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=If you don't know partner's status,offer partner HIV testing and counselling
+		Variable=VCCT_IfYouDon'tKnow,OfferPartnerHTC
+		Type=1
+		NbModalités=1
+		Modalités=Yes
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=If you don't know partner's status,offer partner HIV testing and counselling
+				Modalités=Yes ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Patient should return in
+		Variable=VCCT_PatientShouldReturnIn
+		Type=1
+		NbModalités=9
+		Modalités=1 wk ; 2 wks ; 3 wks ; 1 mth ; 6 wks ; 2 mths ; 3 mths ; 6 mths ; Other
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=T2. Patient should return in
+				Modalités=1 wk ; 2wks ; mod-FR-8 ; 1 mth ; mod-FR-9 ; 2 mths ; 3 mths ; 6 mths ; Other ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Other
+		Variable=VCCT_EndOfVisitOther
+		Type=6
+		NbLignes=1
+		NbCarLigne=0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=T21. Other
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Date of next visit
+		Variable=VCCT_DateNextVisit
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=T3. Date of next visit
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Done for HIV Retesting
+		Variable=VCCT_HIVRetesting
+		Type=1
+		NbModalités=2
+		Modalités=Yes ; No
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=Done for HIV Retesting
+				Modalités=Yes ; No ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Date of HIV Retesting
+		Variable=VCCT_HIVRetestingDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=Date of HIV Retesting
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Conclusion for HIV Retesting
+		Variable=VCCT_HIVRetestingResult
+		Type=1
+		NbModalités=3
+		Modalités=HIV Positive ; HIV Negative ; Inconclusive
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=Conclusion for HIV Retesting
+				Modalités=HIV Positive ; HIV Negative ; Inconclusive ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=NHL HIV Retesting Date
+		Variable=VCCT_NHLHIVRetestingDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=NHL HIV Retesting Date
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=NHL HIV Retesting Result
+		Variable=VCCT_NHLHIVRetestingResult
+		Type=1
+		NbModalités=3
+		Modalités=HIV Positive ; HIV Negative ; Inconclusive
+		Pondérations= 0
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=NHL HIV Retesting Result
+				Modalités=HIV Positive ; HIV Negative ; Inconclusive ;
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Follow up visit date
+		Variable=VCCT_Followupvisitdate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=Follow up visit date
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Verify patient
+		Variable=Verify
+		Type=4
+		NbDécimales=2
+		TypeNombre=2
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=Verify patient
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Last registration date
+		Variable=LastRegistrationDate
+		Type=8
+		Format=jj/mm/aaaa
+		Plan=1
+		Attributs=32
+		Traductions
+			Traduction
+				Libellé=Last registration date
+			Fin
+		Fin
+	Fin
+	Question
+		Libellé=Key
+		Variable=Key
+		Type=6
+		NbLignes=2
+		NbCarLigne=0
+		Plan=1
+		Attributs=33056
+		VariableAutomatique=Basic
+		Traductions
+			Traduction
+				Libellé=Key
+			Fin
+		Fin
+	Fin
+Fin
+Titres
+	Titre
+		Type=0
+		Libellé=SOCIO-DEMOGRAPHIC DATA
+		Première=1
+		Traductions
+			Traduction
+				Libellé=SOCIO-DEMOGRAPHIC DATA
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		Libellé=VISIT
+		Première=7
+		Traductions
+			Traduction
+				Libellé=VISIT
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		Libellé=Behaviour
+		Première=11
+		Traductions
+			Traduction
+				Libellé=Behavior
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		Libellé=DU/IDU
+		Première=12
+		Traductions
+			Traduction
+				Libellé=DU/IDU
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		Libellé=Drug use
+		Première=14
+		Traductions
+			Traduction
+				Libellé=Drug use
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		Libellé=VCCT
+		Première=27
+		Traductions
+			Traduction
+				Libellé=VCCT
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		Libellé=Syphilis
+		Première=38
+		Traductions
+			Traduction
+				Libellé=Syphilis
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		Libellé=Partner
+		Première=45
+		Traductions
+			Traduction
+				Libellé=End of visit
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		Libellé=End of visit
+		Première=49
+		Traductions
+			Traduction
+				Libellé=End of visit
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		Libellé=HIV Verification Test
+		Première=52
+		Traductions
+			Traduction
+				Libellé=HIV Verification Test
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		Libellé=Follow up visit
+		Première=57
+		Traductions
+			Traduction
+				Libellé=Follow up visit
+			Fin
+		Fin
+	Fin
+	Titre
+		Type=0
+		Libellé=System Items
+		Première=58
+		Traductions
+			Traduction
+				Libellé=System Items
+			Fin
+		Fin
+	Fin
+Fin
+Options
+	ControlesActifs=1
+Fin

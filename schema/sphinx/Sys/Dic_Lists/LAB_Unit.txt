@@ -1,0 +1,18 @@
+Unit
+gm%
+g/dl
+g/L
+mg/dl
+cells/ml
+IU/ml
+sec
+U/L
+u/L
+IU/L
+umol/L
+mmol/L
+mm/1st hr
+mIU/L
+mIU/ml
+Cell/ul
+Cell/mm3
