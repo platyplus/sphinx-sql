@@ -81,6 +81,12 @@ export type SphinxForm = {
 };
 
 export type SphinxOptionsSet = Record<string, string[]>;
+
+export type SphinxConfig = {
+  options: SphinxOptionsSet;
+  forms: Record<string, SphinxForm>;
+};
+
 /* // TODO
 Strates
 	Strate

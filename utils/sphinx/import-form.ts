@@ -66,9 +66,23 @@ const dic: Record<string, string> = {
   "Numérique": "isNumber",
 };
 
+// TODO set as an option (from yaml file) as it is too specific to the MdM schema
+// ? define order of transformations?
+type CustomValueTransformer = {
+  removeRegexp?: string;
+  maps?: Record<string, string>;
+};
+
+const customValueTransormers: Record<string, CustomValueTransformer> = {
+  variable: {
+    removeRegexp: "^[^_]*_", // Remove any variable 'xyz_' prefix
+    maps: { cor_f: "c_or_f" },
+  },
+};
+
 const zeroOneToBoolean = (value: string) => value === "1";
 
-const valueTransformers: Record<string, (value: string) => any> = {
+const basicValueTransformers: Record<string, (value: string) => any> = {
   language: (value) => value.toLowerCase(),
   options: (value) =>
     value.split(";").map((item) => item.trim()).filter((item) => item.length),
@@ -81,12 +95,8 @@ const valueTransformers: Record<string, (value: string) => any> = {
     value.substring(
       value.lastIndexOf("\\") + 1,
     ),
-  variable: (value) => {
-    // ? Specific to MdM encoding. Set as a parameter somehow?
-    const underscore = value.indexOf("_");
-    if (underscore >= 0) value = value.substring(underscore + 1);
-    return snakeCase(value);
-  },
+  // ? Specific to MdM encoding. Set as a parameter somehow?
+  variable: (value) => snakeCase(value),
   type: (type) => {
     if (type === "0") return "label";
     if (type === "1") return "options";
@@ -101,14 +111,23 @@ const valueTransformers: Record<string, (value: string) => any> = {
 };
 
 const getValue = (key: string, value: string) => {
-  if (valueTransformers[key]) return valueTransformers[key](value);
+  /**
+   * * 1. remove regexp match (optional)
+   * * 2. execute basic tranformation, if any
+   * * 3. match mapped value (optional)
+   */
+  const custom = customValueTransormers[key];
+  if (custom?.removeRegexp) {
+    const re = new RegExp(custom.removeRegexp);
+    value = value.replace(re, "");
+  }
+  if (basicValueTransformers[key]) value = basicValueTransformers[key](value);
   else {
     try {
-      return JSON.parse(value);
-    } catch {
-      return value;
-    }
+      value = JSON.parse(value);
+    } catch {}
   }
+  return custom?.maps?.[value] || value;
 };
 
 const getKey = (key: string) => {
@@ -127,7 +146,7 @@ const getKeyValue = (line: string) => {
   return { key, value };
 };
 
-export const loadSphinxForm = async (fileName: string) => {
+export const importSphinxForm = async (fileName: string) => {
   const f = await Deno.open(fileName);
   const result = {} as SphinxForm;
   const arrayCounts: Record<number, number> = {};

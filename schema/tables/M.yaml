@@ -223,7 +223,7 @@ questions:
           - From - to -
           - '- and more'
   - label: °C/F
-    variable: cor_f
+    variable: c_or_f
     type: options
     nbOptions: 2
     options:

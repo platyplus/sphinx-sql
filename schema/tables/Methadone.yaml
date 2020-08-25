@@ -214,7 +214,7 @@ questions:
     translations:
       - label: C05. Temperature
   - label: °C/F
-    variable: cor_f
+    variable: c_or_f
     type: options
     nbOptions: 2
     options:
