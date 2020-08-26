@@ -1,1 +1,1 @@
-# Sphinx exporter
+# Sphinx sql exporter
