@@ -1,8 +1,8 @@
 import * as path from "https://deno.land/std/path/mod.ts";
 import { expandGlob } from "https://deno.land/std/fs/mod.ts";
 import { ensureDir, exists } from "https://deno.land/std/fs/mod.ts";
-import { merge } from "../deep-merge.ts";
-import { writeYamlFile, readYamlFile } from "../yaml.ts";
+import { merge } from "../data/mod.ts";
+import { writeYamlFile, readYamlFile } from "../io/yaml.ts";
 import { importSphinxForm } from "./import-form.ts";
 import { SphinxForm, SphinxOptionsSet, SphinxConfig } from "./types.ts";
 import { addOptionSet } from "./options-set.ts";

@@ -1,6 +1,6 @@
 import { readline } from "https://deno.land/x/readline/mod.ts";
 import { snakeCase } from "https://deno.land/x/case/mod.ts";
-import { set } from "../set-value.ts";
+import { set } from "../data/set-value.ts";
 import { SphinxForm } from "./types.ts";
 
 const arrayKeys = [

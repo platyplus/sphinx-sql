@@ -1,6 +1,5 @@
 import { Yargs, YargsType, Arguments } from "https://deno.land/x/yargs/deno.ts";
-import { generateConfig } from "./utils/sphinx/generate-config.ts";
-import { generateSqlSchema } from "./utils/sphinx/generate-sql.ts";
+import { generateConfig, generateSqlSchema } from "./utils/mod.ts";
 
 const scriptName = Deno.mainModule.substring(
   Deno.mainModule.lastIndexOf("/") + 1,

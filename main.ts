@@ -1,7 +1,9 @@
 import * as path from "https://deno.land/std/path/mod.ts";
-import { sphinxData } from "./utils/sphinx/load-data.ts";
-import { generateConfig } from "./utils/sphinx/generate-config.ts";
-import { generateSqlSchema } from "./utils/sphinx/generate-sql.ts";
+import {
+  sphinxData,
+  generateConfig,
+  generateSqlSchema,
+} from "./utils/mod.ts";
 
 const schemaPath = path.join(Deno.cwd(), "schema");
 const sphinxPath = path.join(schemaPath, "sphinx");

@@ -1,7 +1,7 @@
 import * as path from "https://deno.land/std/path/mod.ts";
 import { expandGlob } from "https://deno.land/std/fs/mod.ts";
 import { SphinxConfig, SphinxOptionsSet, SphinxForm } from "./types.ts";
-import { readYamlFile } from "../yaml.ts";
+import { readYamlFile } from "../io/yaml.ts";
 
 export const loadConfig = async (configPath: string): Promise<SphinxConfig> => {
   const optionsFile = path.join(configPath, "options.yaml");

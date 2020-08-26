@@ -11,7 +11,7 @@ import {
   getOptionSet,
   getOptionValue,
 } from "./options-set.ts";
-import { readYamlFile } from "../yaml.ts";
+import { readYamlFile } from "../io/yaml.ts";
 const closedQuestionValue = (
   question: SphinxQuestion,
   rawValue: Uint8Array,
