@@ -5,7 +5,8 @@ const scriptName = Deno.mainModule.substring(
   Deno.mainModule.lastIndexOf("/") + 1,
 );
 
-type ConfigFileUriArguments = Arguments & {
+type GlobalArguments = Arguments & { verbose: boolean };
+type ConfigFileUriArguments = GlobalArguments & {
   config: string;
   file: string;
   host: string;
@@ -51,7 +52,7 @@ Yargs()
       );
     },
     async (
-      { source, destination }: Arguments & {
+      { source, destination }: GlobalArguments & {
         source: string;
         destination: string;
       },
@@ -93,5 +94,16 @@ Yargs()
   )
   .strictCommands()
   .demandCommand(1)
+  .option("verbose", {
+    alias: "v",
+    type: "boolean",
+    default: false,
+    description: "Run with verbose logging",
+  })
+  .middleware(({ verbose }: YargsType & { verbose: boolean }) => {
+    // TODO set verbosity
+    // console.log("helloooo", verbose);
+  })
   .wrap(null)
+  .version("0.0.1")
   .parse(Deno.args);
