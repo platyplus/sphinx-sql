@@ -34,7 +34,6 @@ Yargs()
     "config [source] [destination]",
     "Create or update the configuration from Sphinx files",
     (yargs: YargsType) => {
-      // TODO not positional, but optional
       return yargs.positional("source", {
         describe: "The directory that contains the Sphinx questionnaire files",
         type: "string",
